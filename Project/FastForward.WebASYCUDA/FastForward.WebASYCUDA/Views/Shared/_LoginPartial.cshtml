@@ -1,0 +1,49 @@
+﻿<div class="main-log-panel">
+    @{
+        if (Session.Count > 0 && Session["UserID"].ToString() != null)
+        {
+            //using (Html.BeginForm("LogOff", "Login", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+            //{
+               // @Html.AntiForgeryToken()
+
+                <ul class="nav navbar-nav navbar-right login-ul main-logoff">
+                    <li>
+                                                @if (Session["UserName"].ToString().Length > 25)
+                                                {
+                                                    <a class="login-user-cls">@Session["UserName"].ToString().Trim().Substring(0,25)...</a>
+                                                }
+                                                else
+                                                {
+                                                    <a class="login-user-cls">@Session["UserName"].ToString().Trim()</a>
+                                                }
+                        
+                    </li>
+                    <li>
+                        <a class="logout-link-cls" href='@(Url.Action("LogOff", "Login"))'>Log off</a>
+                    </li>
+                </ul>
+            //}
+            <div class="user-det-panel row" style="display:none;">
+                <div class="det-box">
+                    <div class="det-cls"><div class="name">Id : </div> <div class="val">@Session["UserID"].ToString()</div></div>
+                    <div class="det-cls"><div class="name">Name :</div> <div class="val">@Session["UserName"].ToString()</div></div>
+                    <div class="det-cls"><div class="name">Company : </div> <div class="val">@Session["UserCompanyName"].ToString()</div></div>
+                    
+                </div>
+                <div class="img-box">
+                    <img class="user-image" src="~/Resources/Images/defaultuserimageM.jpg">
+                    @using (Html.BeginForm("MyAccount", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal my-account-form", role = "form" }))
+                    {
+                        <div class="form-group">
+                            <div class="my-acc-btn">
+                                <input type="submit" value="@Resources.Resource.MyAcntBtnTxt" class="btn btn-primary my-account-btn" />
+                            </div>
+                        </div>
+                    }
+                    </div>
+                    
+            </div>
+
+        }
+    }
+</div>

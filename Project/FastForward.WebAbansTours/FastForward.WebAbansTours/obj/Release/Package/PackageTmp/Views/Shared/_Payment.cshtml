@@ -1,0 +1,413 @@
+﻿@model FF.BusinessObjects.RecieptItemTBS
+@{
+    Layout = null;
+}
+<div class="golbal-page">
+    <div class="payment-container">
+        <div class="panel-sep">
+            <div class="panel panel-default">
+                <div class="panel panel-heading">@FF.Resources.Resource.txtPayment</div>
+                <div class="panel panel-body tab-content-cls">
+                        <div class="col-md-5 form-group border-panel">
+                            <div class="row">
+                                <div class="col-md-7 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPayMode</label>
+                                    <div class="col-lg-8">
+                                        @Html.DropDownListFor(m => m.Sird_pay_tp, new List<SelectListItem>(), "Select Pay Mode", new { @class = "form-control cus-typ-dropdown" })
+                                    </div>
+                                </div>
+                                <div class="col-md-5 form-group">
+                                    <label class="col-lg-3 control-label">@FF.Resources.Resource.txtAmount</label>
+                                    <div class="col-lg-9">
+                                        @Html.EditorFor(m => m.Sird_settle_amt, new { htmlAttributes = new { @class = "form-control with-search" } })
+                                        <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img  add-price-amount-btn" title="Add">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <table class="payment-table table">
+                                    <tr class="table-hed">
+                                        <th></th>
+                                        <th>@FF.Resources.Resource.txtPayTyp</th>
+                                        <th>@FF.Resources.Resource.txtBank</th>
+                                        <th>@FF.Resources.Resource.txtBranch</th>
+                                        <th>@FF.Resources.Resource.txtCardTyp</th>
+                                        <th>@FF.Resources.Resource.txtAmount</th>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-4 form-group border-panel">
+
+                            <div class="form-horizontal pay-mode-panel cheque-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtChkNo</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Cheque_ref_no", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtChkDt</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Cheque_dt", new { htmlAttributes = new { @class = "form-control chk-date" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtBank</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("cheque-bank", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            @Html.Hidden("Cheque_bnk_cd", null, new { htmlAttributes = new { @class = "form-control" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img chk-bnk-acc-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtBranch</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("Cheque_branch_cd", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img chk-bnk-branch-search" title="Search">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-horizontal pay-mode-panel crcd-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtCardNo</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Cred_crd_ref_no", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtCardTyp</label>
+                                        <div class="col-lg-12">
+                                            @Html.DropDownList("Cred-card-typ", new List<SelectListItem>(), "Select Type", new { @class = "form-control cred-crd-typ-dropdown" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtBank</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("Cred_crd_bank", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            @Html.Hidden("Cred_crd_bank_value", null, new { htmlAttributes = new { @class = "form-control" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img cred-crd-bnksearch" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtBatch</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Cred_crd_batch", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3 form-group">
+                                        <label class="col-md-5 control-label">@FF.Resources.Resource.txtOflne</label>
+                                        <div class="col-lg-12">
+                                            @Html.CheckBox("Cred_crd_ofline", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-5 control-label">@FF.Resources.Resource.txtOnlne</label>
+                                        <div class="col-lg-12">
+                                            @Html.CheckBox("Cred_crd_online", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtExp</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Cread-crd-expire-dt", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                @*<div class="row">
+                        <div class="col-md-6 form-group">
+                            <div class="col-lg-2">
+                                @Html.CheckBox("Cred_crd_promotion", new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPromo</label>
+                        </div>
+                        <div class="col-md-6 form-group">
+                            <label class="col-lg-9 control-label">@FF.Resources.Resource.txtPiriod : </label>
+                            <div class="col-lg-12">
+                                @Html.Editor("Cred_crd_promo-mnth-period", new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+
+                        </div>
+                    </div>*@
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtMidCd : </label>
+                                        <div class="col-lg-6">
+                                            <label class="col-lg-12 control-label mid-code-cls"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal pay-mode-panel lore-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtCardNo</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("Lore_crd_no", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img lore-cus-search" title="Search">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-5 control-label">@FF.Resources.Resource.txtCust</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label cust-display-lbl"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-5 control-label">@FF.Resources.Resource.txtBalpont</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label bal-point-display-lbl"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-5 control-label">@FF.Resources.Resource.txtLoyTyp</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label loy-typ-display-lbl"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-5 control-label">@FF.Resources.Resource.txtPntVal</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label pnt-val-display-lbl"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal pay-mode-panel bnk_slip-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtAccNo</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Cnk_slip_acc_no", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtDate</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Bnk_slip_acc_dte", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal pay-mode-panel debt-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtDebtCrdNo</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Debt_crd_no", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtBank</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Debt_bank_name", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img debt-bnksearch" title="Search">
+                                            @Html.Hidden("Debt_bank_cd", null, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal pay-mode-panel advan-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtRefNo</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("Advan_ref_no", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img advan-ref-no-srch" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtRefAmnt</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Advan_ref_amount", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-horizontal pay-mode-panel cred-note-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtRefNo</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("Cred_note_ref_no", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img cred-note-ref-no-srch" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtRefAmnt</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Cred_note_ref_amount", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-horizontal pay-mode-panel cash-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtDepBnk</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("Deposit_bank_cd", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img bnk-acc-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-9 control-label">@FF.Resources.Resource.txtBranch</label>
+                                        <div class="col-lg-12">
+                                            @Html.Editor("Deposit_branch_cd", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-horizontal pay-mode-panel gift-voucher-panel">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtGVONo</label>
+                                        <div class="col-lg-11">
+                                            @Html.Editor("Gift_vouche_no", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img gift-voucher-srch" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-6 control-label">@FF.Resources.Resource.txtCustCd</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label gift-cust-cd-lbl"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-6 control-label">@FF.Resources.Resource.txtCustName</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label gift-cust-name-lbl"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-6 control-label">@FF.Resources.Resource.txtAdd</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label gift-cust-add-lbl"></label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-6 control-label">@FF.Resources.Resource.txtMob</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label gift-cust-mob-lbl"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-6 control-label">@FF.Resources.Resource.txtBook</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label gift-cust-book-lbl"></label>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-6 control-label">@FF.Resources.Resource.txtCode</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label gift-cust-book-code-lbl"></label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-6 control-label">@FF.Resources.Resource.txtPref</label>
+                                        <div class="col-lg-12">
+                                            <label class="col-lg-4 control-label gift-cust-pref-lbl"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group vouchers-selection tbl-voucher-sele">
+                                        <table class="voucher-table table">
+                                            <tr class="table-hed">
+                                                <th></th>
+                                                <th>Book</th>
+                                                <th>Page</th>
+                                                <th>Amount</th>
+                                                <th>Code</th>
+                                                <th>Prefix</th>
+                                                <th>From</th>
+                                                <th>To</th>
+                                                <th style="display:none;">Customer Code</th>
+                                                <th style="display:none;">Customer Name</th>
+                                                <th style="display:none;">Address</th>
+                                                <th style="display:none;">Mobile</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2 form-group border-panel">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-md-12 control-label back-col-bod">Paid Amount</label>
+                                </div>
+                                <div class="amt-divs col-md-12">
+                                    <div class="col-md-2">Rs :</div><label class="col-md-5 control-label tot-paid-amount-val">0.00</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-md-12 control-label back-col-bod">Balance Amount</label>
+                                </div>
+                                <div class="amt-divs col-md-12">
+                                    <div class="col-md-2">Rs :</div><label class="col-md-5 control-label bal-amount-val">0.00</label>
+                                    <label class="col-md-4 control-label tot-amount-val"></label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    @*<div class="row">
+            <div class="col-md-6 form-group">
+                <label class="col-lg-4 control-label">@FF.Resources.Resource.txtRemarks</label>
+                <div class="col-lg-7">
+                    @Html.TextAreaFor(m => m.Sird_rmk, new { htmlAttributes = new { @class = "form-control" } })
+
+                </div>
+            </div>
+        </div>*@
+
+
+
+
+                </div>
+
+            </div>
+
+
+                    @*<ul class="rtabs">
+                        <li><a href="#view1">@FF.Resources.Resource.txtPayment</a></li>
+                    </ul>
+                    <div class="panel-container">
+                        <div id="view5" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                
+                            </div>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </div>

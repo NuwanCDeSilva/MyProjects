@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DS_Creditnotedata" targetNamespace="http://tempuri.org/DS_Creditnotedata.xsd" xmlns:mstns="http://tempuri.org/DS_Creditnotedata.xsd" xmlns="http://tempuri.org/DS_Creditnotedata.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DS_Creditnotedata" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DS_Creditnotedata" msprop:Generator_UserDSName="DS_Creditnotedata">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CreditData" msprop:Generator_TableClassName="CreditDataDataTable" msprop:Generator_TableVarName="tableCreditData" msprop:Generator_RowChangedName="CreditDataRowChanged" msprop:Generator_TablePropName="CreditData" msprop:Generator_RowDeletingName="CreditDataRowDeleting" msprop:Generator_RowChangingName="CreditDataRowChanging" msprop:Generator_RowEvHandlerName="CreditDataRowChangeEventHandler" msprop:Generator_RowDeletedName="CreditDataRowDeleted" msprop:Generator_RowClassName="CreditDataRow" msprop:Generator_UserTableName="CreditData" msprop:Generator_RowEvArgName="CreditDataRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="sih_inv_no" msprop:Generator_ColumnVarNameInTable="columnsih_inv_no" msprop:Generator_ColumnPropNameInRow="sih_inv_no" msprop:Generator_ColumnPropNameInTable="sih_inv_noColumn" msprop:Generator_UserColumnName="sih_inv_no" type="xs:string" minOccurs="0" />
+              <xs:element name="sih_dt" msprop:Generator_ColumnVarNameInTable="columnsih_dt" msprop:Generator_ColumnPropNameInRow="sih_dt" msprop:Generator_ColumnPropNameInTable="sih_dtColumn" msprop:Generator_UserColumnName="sih_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="sih_ref_doc" msprop:Generator_ColumnVarNameInTable="columnsih_ref_doc" msprop:Generator_ColumnPropNameInRow="sih_ref_doc" msprop:Generator_ColumnPropNameInTable="sih_ref_docColumn" msprop:Generator_UserColumnName="sih_ref_doc" type="xs:string" minOccurs="0" />
+              <xs:element name="sih_cus_name" msprop:Generator_ColumnVarNameInTable="columnsih_cus_name" msprop:Generator_ColumnPropNameInRow="sih_cus_name" msprop:Generator_ColumnPropNameInTable="sih_cus_nameColumn" msprop:Generator_UserColumnName="sih_cus_name" type="xs:string" minOccurs="0" />
+              <xs:element name="sih_cus_add1" msprop:Generator_ColumnVarNameInTable="columnsih_cus_add1" msprop:Generator_ColumnPropNameInRow="sih_cus_add1" msprop:Generator_ColumnPropNameInTable="sih_cus_add1Column" msprop:Generator_UserColumnName="sih_cus_add1" type="xs:string" minOccurs="0" />
+              <xs:element name="sih_cus_add2" msprop:Generator_ColumnVarNameInTable="columnsih_cus_add2" msprop:Generator_ColumnPropNameInRow="sih_cus_add2" msprop:Generator_ColumnPropNameInTable="sih_cus_add2Column" msprop:Generator_UserColumnName="sih_cus_add2" type="xs:string" minOccurs="0" />
+              <xs:element name="sih_remarks" msprop:Generator_ColumnVarNameInTable="columnsih_remarks" msprop:Generator_ColumnPropNameInRow="sih_remarks" msprop:Generator_ColumnPropNameInTable="sih_remarksColumn" msprop:Generator_UserColumnName="sih_remarks" type="xs:string" minOccurs="0" />
+              <xs:element name="sih_anal_7" msprop:Generator_ColumnVarNameInTable="columnsih_anal_7" msprop:Generator_ColumnPropNameInRow="sih_anal_7" msprop:Generator_ColumnPropNameInTable="sih_anal_7Column" msprop:Generator_UserColumnName="sih_anal_7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PAX" msprop:Generator_ColumnVarNameInTable="columnPAX" msprop:Generator_ColumnPropNameInRow="PAX" msprop:Generator_ColumnPropNameInTable="PAXColumn" msprop:Generator_UserColumnName="PAX" type="xs:int" minOccurs="0" />
+              <xs:element name="sih_currency" msprop:Generator_ColumnVarNameInTable="columnsih_currency" msprop:Generator_ColumnPropNameInRow="sih_currency" msprop:Generator_ColumnPropNameInTable="sih_currencyColumn" msprop:Generator_UserColumnName="sih_currency" type="xs:string" minOccurs="0" />
+              <xs:element name="ENQUIRYID" msprop:Generator_ColumnVarNameInTable="columnENQUIRYID" msprop:Generator_ColumnPropNameInRow="ENQUIRYID" msprop:Generator_ColumnPropNameInTable="ENQUIRYIDColumn" msprop:Generator_UserColumnName="ENQUIRYID" type="xs:string" minOccurs="0" />
+              <xs:element name="SIH_INV_TP" msprop:Generator_ColumnVarNameInTable="columnSIH_INV_TP" msprop:Generator_ColumnPropNameInRow="SIH_INV_TP" msprop:Generator_ColumnPropNameInTable="SIH_INV_TPColumn" msprop:Generator_UserColumnName="SIH_INV_TP" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,16 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Reporting</h2> 
+
+<div>
+
+    @using (Html.BeginForm("GenerateReport", "Reporting", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+    {
+        <input type="submit" value="Save" class="btn btn-default btn-default-style" />
+    }
+</div>
+ 

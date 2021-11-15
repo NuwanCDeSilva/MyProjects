@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsATS" targetNamespace="http://tempuri.org/dsATS.xsd" xmlns:mstns="http://tempuri.org/dsATS.xsd" xmlns="http://tempuri.org/dsATS.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsATS" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsATS" msprop:Generator_UserDSName="dsATS">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Param" msprop:Generator_TableClassName="ParamDataTable" msprop:Generator_TableVarName="tableParam" msprop:Generator_TablePropName="Param" msprop:Generator_RowDeletingName="ParamRowDeleting" msprop:Generator_RowChangingName="ParamRowChanging" msprop:Generator_RowEvHandlerName="ParamRowChangeEventHandler" msprop:Generator_RowDeletedName="ParamRowDeleted" msprop:Generator_UserTableName="Param" msprop:Generator_RowChangedName="ParamRowChanged" msprop:Generator_RowEvArgName="ParamRowChangeEvent" msprop:Generator_RowClassName="ParamRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company" msprop:Generator_ColumnVarNameInTable="columnCompany" msprop:Generator_ColumnPropNameInRow="Company" msprop:Generator_ColumnPropNameInTable="CompanyColumn" msprop:Generator_UserColumnName="Company" type="xs:string" minOccurs="0" />
+              <xs:element name="User" msprop:Generator_ColumnVarNameInTable="columnUser" msprop:Generator_ColumnPropNameInRow="User" msprop:Generator_ColumnPropNameInTable="UserColumn" msprop:Generator_UserColumnName="User" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="isth_doc_no" msprop:Generator_ColumnVarNameInTable="columnisth_doc_no" msprop:Generator_ColumnPropNameInRow="isth_doc_no" msprop:Generator_ColumnPropNameInTable="isth_doc_noColumn" msprop:Generator_UserColumnName="isth_doc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="isth_dt" msprop:Generator_ColumnVarNameInTable="columnisth_dt" msprop:Generator_ColumnPropNameInRow="isth_dt" msprop:Generator_ColumnPropNameInTable="isth_dtColumn" msprop:Generator_UserColumnName="isth_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="istd_line_no" msprop:Generator_ColumnVarNameInTable="columnistd_line_no" msprop:Generator_ColumnPropNameInRow="istd_line_no" msprop:Generator_ColumnPropNameInTable="istd_line_noColumn" msprop:Generator_UserColumnName="istd_line_no" type="xs:int" minOccurs="0" />
+              <xs:element name="istd_entry_no" msprop:Generator_ColumnVarNameInTable="columnistd_entry_no" msprop:Generator_ColumnPropNameInRow="istd_entry_no" msprop:Generator_ColumnPropNameInTable="istd_entry_noColumn" msprop:Generator_UserColumnName="istd_entry_no" type="xs:string" minOccurs="0" />
+              <xs:element name="CIF" msprop:Generator_ColumnVarNameInTable="columnCIF" msprop:Generator_ColumnPropNameInRow="CIF" msprop:Generator_ColumnPropNameInTable="CIFColumn" msprop:Generator_UserColumnName="CIF" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CID" msprop:Generator_ColumnVarNameInTable="columnCID" msprop:Generator_ColumnPropNameInRow="CID" msprop:Generator_ColumnPropNameInTable="CIDColumn" msprop:Generator_UserColumnName="CID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EIC" msprop:Generator_ColumnVarNameInTable="columnEIC" msprop:Generator_ColumnPropNameInRow="EIC" msprop:Generator_ColumnPropNameInTable="EICColumn" msprop:Generator_UserColumnName="EIC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PAL" msprop:Generator_ColumnVarNameInTable="columnPAL" msprop:Generator_ColumnPropNameInRow="PAL" msprop:Generator_ColumnPropNameInTable="PALColumn" msprop:Generator_UserColumnName="PAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="VAT" msprop:Generator_ColumnVarNameInTable="columnVAT" msprop:Generator_ColumnPropNameInRow="VAT" msprop:Generator_ColumnPropNameInTable="VATColumn" msprop:Generator_UserColumnName="VAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="XID" msprop:Generator_ColumnVarNameInTable="columnXID" msprop:Generator_ColumnPropNameInRow="XID" msprop:Generator_ColumnPropNameInTable="XIDColumn" msprop:Generator_UserColumnName="XID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CE_x0026_S" msprop:Generator_ColumnVarNameInTable="_columnCE_S" msprop:Generator_ColumnPropNameInRow="_CE_S" msprop:Generator_ColumnPropNameInTable="_CE_SColumn" msprop:Generator_UserColumnName="CE&amp;S" type="xs:decimal" minOccurs="0" />
+              <xs:element name="NBT" msprop:Generator_ColumnVarNameInTable="columnNBT" msprop:Generator_ColumnPropNameInRow="NBT" msprop:Generator_ColumnPropNameInTable="NBTColumn" msprop:Generator_UserColumnName="NBT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="istd_diff_amt" msprop:Generator_ColumnVarNameInTable="columnistd_diff_amt" msprop:Generator_ColumnPropNameInRow="istd_diff_amt" msprop:Generator_ColumnPropNameInTable="istd_diff_amtColumn" msprop:Generator_UserColumnName="istd_diff_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="istd_cost_stl_amt" msprop:Generator_ColumnVarNameInTable="columnistd_cost_stl_amt" msprop:Generator_ColumnPropNameInRow="istd_cost_stl_amt" msprop:Generator_ColumnPropNameInTable="istd_cost_stl_amtColumn" msprop:Generator_UserColumnName="istd_cost_stl_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="LatestDate" msprop:Generator_ColumnVarNameInTable="columnLatestDate" msprop:Generator_ColumnPropNameInRow="LatestDate" msprop:Generator_ColumnPropNameInTable="LatestDateColumn" msprop:Generator_UserColumnName="LatestDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cuh_file_no" msprop:Generator_ColumnVarNameInTable="columncuh_file_no" msprop:Generator_ColumnPropNameInRow="cuh_file_no" msprop:Generator_ColumnPropNameInTable="cuh_file_noColumn" msprop:Generator_UserColumnName="cuh_file_no" type="xs:string" minOccurs="0" />
+              <xs:element name="istd_assess_no" msprop:Generator_ColumnVarNameInTable="columnistd_assess_no" msprop:Generator_ColumnPropNameInRow="istd_assess_no" msprop:Generator_ColumnPropNameInTable="istd_assess_noColumn" msprop:Generator_UserColumnName="istd_assess_no" type="xs:string" minOccurs="0" />
+              <xs:element name="cif2" msprop:Generator_ColumnVarNameInTable="columncif2" msprop:Generator_ColumnPropNameInRow="cif2" msprop:Generator_ColumnPropNameInTable="cif2Column" msprop:Generator_UserColumnName="cif2" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ishd_doc_no" msprop:Generator_ColumnVarNameInTable="columnishd_doc_no" msprop:Generator_ColumnPropNameInRow="ishd_doc_no" msprop:Generator_ColumnPropNameInTable="ishd_doc_noColumn" msprop:Generator_UserColumnName="ishd_doc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="ishd_stl_dt" msprop:Generator_ColumnVarNameInTable="columnishd_stl_dt" msprop:Generator_ColumnPropNameInRow="ishd_stl_dt" msprop:Generator_ColumnPropNameInTable="ishd_stl_dtColumn" msprop:Generator_UserColumnName="ishd_stl_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cuh_cusdec_entry_no" msprop:Generator_ColumnVarNameInTable="columncuh_cusdec_entry_no" msprop:Generator_ColumnPropNameInRow="cuh_cusdec_entry_no" msprop:Generator_ColumnPropNameInTable="cuh_cusdec_entry_noColumn" msprop:Generator_UserColumnName="cuh_cusdec_entry_no" type="xs:string" minOccurs="0" />
+              <xs:element name="cuh_cusdec_entry_dt" msprop:Generator_ColumnVarNameInTable="columncuh_cusdec_entry_dt" msprop:Generator_ColumnPropNameInRow="cuh_cusdec_entry_dt" msprop:Generator_ColumnPropNameInTable="cuh_cusdec_entry_dtColumn" msprop:Generator_UserColumnName="cuh_cusdec_entry_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="istd_cost_claim_amt" msprop:Generator_ColumnVarNameInTable="columnistd_cost_claim_amt" msprop:Generator_ColumnPropNameInRow="istd_cost_claim_amt" msprop:Generator_ColumnPropNameInTable="istd_cost_claim_amtColumn" msprop:Generator_UserColumnName="istd_cost_claim_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="istd_cost_unclaim_amt" msprop:Generator_ColumnVarNameInTable="columnistd_cost_unclaim_amt" msprop:Generator_ColumnPropNameInRow="istd_cost_unclaim_amt" msprop:Generator_ColumnPropNameInTable="istd_cost_unclaim_amtColumn" msprop:Generator_UserColumnName="istd_cost_unclaim_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="cuh_office_of_entry" msprop:Generator_ColumnVarNameInTable="columncuh_office_of_entry" msprop:Generator_ColumnPropNameInRow="cuh_office_of_entry" msprop:Generator_ColumnPropNameInTable="cuh_office_of_entryColumn" msprop:Generator_UserColumnName="cuh_office_of_entry" type="xs:string" minOccurs="0" />
+              <xs:element name="ASTDOC" msprop:Generator_ColumnVarNameInTable="columnASTDOC" msprop:Generator_ColumnPropNameInRow="ASTDOC" msprop:Generator_ColumnPropNameInTable="ASTDOCColumn" msprop:Generator_UserColumnName="ASTDOC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

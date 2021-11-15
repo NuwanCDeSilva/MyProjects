@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsHPArrears" targetNamespace="http://tempuri.org/dsHPArrears.xsd" xmlns:mstns="http://tempuri.org/dsHPArrears.xsd" xmlns="http://tempuri.org/dsHPArrears.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsHPArrears" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsHPArrears" msprop:Generator_UserDSName="dsHPArrears">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="HPArrears" msprop:Generator_TableClassName="HPArrearsDataTable" msprop:Generator_TableVarName="tableHPArrears" msprop:Generator_RowChangedName="HPArrearsRowChanged" msprop:Generator_TablePropName="HPArrears" msprop:Generator_RowDeletingName="HPArrearsRowDeleting" msprop:Generator_RowChangingName="HPArrearsRowChanging" msprop:Generator_RowEvHandlerName="HPArrearsRowChangeEventHandler" msprop:Generator_RowDeletedName="HPArrearsRowDeleted" msprop:Generator_RowClassName="HPArrearsRow" msprop:Generator_UserTableName="HPArrears" msprop:Generator_RowEvArgName="HPArrearsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HRL_COM" msprop:Generator_ColumnVarNameInTable="columnHRL_COM" msprop:Generator_ColumnPropNameInRow="HRL_COM" msprop:Generator_ColumnPropNameInTable="HRL_COMColumn" msprop:Generator_UserColumnName="HRL_COM" type="xs:string" minOccurs="0" />
+              <xs:element name="HRL_ACC_NO" msprop:Generator_ColumnVarNameInTable="columnHRL_ACC_NO" msprop:Generator_ColumnPropNameInRow="HRL_ACC_NO" msprop:Generator_ColumnPropNameInTable="HRL_ACC_NOColumn" msprop:Generator_UserColumnName="HRL_ACC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="HRL_DT" msprop:Generator_ColumnVarNameInTable="columnHRL_DT" msprop:Generator_ColumnPropNameInRow="HRL_DT" msprop:Generator_ColumnPropNameInTable="HRL_DTColumn" msprop:Generator_UserColumnName="HRL_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HRL_ARS" msprop:Generator_ColumnVarNameInTable="columnHRL_ARS" msprop:Generator_ColumnPropNameInRow="HRL_ARS" msprop:Generator_ColumnPropNameInTable="HRL_ARSColumn" msprop:Generator_UserColumnName="HRL_ARS" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GLB_HP_RECEIPT_PAYTYPE" msprop:Generator_TableClassName="GLB_HP_RECEIPT_PAYTYPEDataTable" msprop:Generator_TableVarName="tableGLB_HP_RECEIPT_PAYTYPE" msprop:Generator_RowChangedName="GLB_HP_RECEIPT_PAYTYPERowChanged" msprop:Generator_TablePropName="GLB_HP_RECEIPT_PAYTYPE" msprop:Generator_RowDeletingName="GLB_HP_RECEIPT_PAYTYPERowDeleting" msprop:Generator_RowChangingName="GLB_HP_RECEIPT_PAYTYPERowChanging" msprop:Generator_RowEvHandlerName="GLB_HP_RECEIPT_PAYTYPERowChangeEventHandler" msprop:Generator_RowDeletedName="GLB_HP_RECEIPT_PAYTYPERowDeleted" msprop:Generator_RowClassName="GLB_HP_RECEIPT_PAYTYPERow" msprop:Generator_UserTableName="GLB_HP_RECEIPT_PAYTYPE" msprop:Generator_RowEvArgName="GLB_HP_RECEIPT_PAYTYPERowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HPR_MODE" msprop:Generator_ColumnVarNameInTable="columnHPR_MODE" msprop:Generator_ColumnPropNameInRow="HPR_MODE" msprop:Generator_ColumnPropNameInTable="HPR_MODEColumn" msprop:Generator_UserColumnName="HPR_MODE" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_REF" msprop:Generator_ColumnVarNameInTable="columnHPR_REF" msprop:Generator_ColumnPropNameInRow="HPR_REF" msprop:Generator_ColumnPropNameInTable="HPR_REFColumn" msprop:Generator_UserColumnName="HPR_REF" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_BANK" msprop:Generator_ColumnVarNameInTable="columnHPR_BANK" msprop:Generator_ColumnPropNameInRow="HPR_BANK" msprop:Generator_ColumnPropNameInTable="HPR_BANKColumn" msprop:Generator_UserColumnName="HPR_BANK" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_DATE" msprop:Generator_ColumnVarNameInTable="columnHPR_DATE" msprop:Generator_ColumnPropNameInRow="HPR_DATE" msprop:Generator_ColumnPropNameInTable="HPR_DATEColumn" msprop:Generator_UserColumnName="HPR_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HPR_AMT" msprop:Generator_ColumnVarNameInTable="columnHPR_AMT" msprop:Generator_ColumnPropNameInRow="HPR_AMT" msprop:Generator_ColumnPropNameInTable="HPR_AMTColumn" msprop:Generator_UserColumnName="HPR_AMT" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GLB_HP_RECEIPT_PAYMENTS" msprop:Generator_TableClassName="GLB_HP_RECEIPT_PAYMENTSDataTable" msprop:Generator_TableVarName="tableGLB_HP_RECEIPT_PAYMENTS" msprop:Generator_RowChangedName="GLB_HP_RECEIPT_PAYMENTSRowChanged" msprop:Generator_TablePropName="GLB_HP_RECEIPT_PAYMENTS" msprop:Generator_RowDeletingName="GLB_HP_RECEIPT_PAYMENTSRowDeleting" msprop:Generator_RowChangingName="GLB_HP_RECEIPT_PAYMENTSRowChanging" msprop:Generator_RowEvHandlerName="GLB_HP_RECEIPT_PAYMENTSRowChangeEventHandler" msprop:Generator_RowDeletedName="GLB_HP_RECEIPT_PAYMENTSRowDeleted" msprop:Generator_RowClassName="GLB_HP_RECEIPT_PAYMENTSRow" msprop:Generator_UserTableName="GLB_HP_RECEIPT_PAYMENTS" msprop:Generator_RowEvArgName="GLB_HP_RECEIPT_PAYMENTSRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HPR_DESC" msprop:Generator_ColumnVarNameInTable="columnHPR_DESC" msprop:Generator_ColumnPropNameInRow="HPR_DESC" msprop:Generator_ColumnPropNameInTable="HPR_DESCColumn" msprop:Generator_UserColumnName="HPR_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_AMT" msprop:Generator_ColumnVarNameInTable="columnHPR_AMT" msprop:Generator_ColumnPropNameInRow="HPR_AMT" msprop:Generator_ColumnPropNameInTable="HPR_AMTColumn" msprop:Generator_UserColumnName="HPR_AMT" type="xs:double" minOccurs="0" />
+              <xs:element name="HPR_ECD" msprop:Generator_ColumnVarNameInTable="columnHPR_ECD" msprop:Generator_ColumnPropNameInRow="HPR_ECD" msprop:Generator_ColumnPropNameInTable="HPR_ECDColumn" msprop:Generator_UserColumnName="HPR_ECD" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GLB_HP_RECEIPT_PRINT" msprop:Generator_TableClassName="GLB_HP_RECEIPT_PRINTDataTable" msprop:Generator_TableVarName="tableGLB_HP_RECEIPT_PRINT" msprop:Generator_RowChangedName="GLB_HP_RECEIPT_PRINTRowChanged" msprop:Generator_TablePropName="GLB_HP_RECEIPT_PRINT" msprop:Generator_RowDeletingName="GLB_HP_RECEIPT_PRINTRowDeleting" msprop:Generator_RowChangingName="GLB_HP_RECEIPT_PRINTRowChanging" msprop:Generator_RowEvHandlerName="GLB_HP_RECEIPT_PRINTRowChangeEventHandler" msprop:Generator_RowDeletedName="GLB_HP_RECEIPT_PRINTRowDeleted" msprop:Generator_RowClassName="GLB_HP_RECEIPT_PRINTRow" msprop:Generator_UserTableName="GLB_HP_RECEIPT_PRINT" msprop:Generator_RowEvArgName="GLB_HP_RECEIPT_PRINTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HPR_LOC" msprop:Generator_ColumnVarNameInTable="columnHPR_LOC" msprop:Generator_ColumnPropNameInRow="HPR_LOC" msprop:Generator_ColumnPropNameInTable="HPR_LOCColumn" msprop:Generator_UserColumnName="HPR_LOC" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_DATE" msprop:Generator_ColumnVarNameInTable="columnHPR_DATE" msprop:Generator_ColumnPropNameInRow="HPR_DATE" msprop:Generator_ColumnPropNameInTable="HPR_DATEColumn" msprop:Generator_UserColumnName="HPR_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HPR_ACC" msprop:Generator_ColumnVarNameInTable="columnHPR_ACC" msprop:Generator_ColumnPropNameInRow="HPR_ACC" msprop:Generator_ColumnPropNameInTable="HPR_ACCColumn" msprop:Generator_UserColumnName="HPR_ACC" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_NAME" msprop:Generator_ColumnVarNameInTable="columnHPR_NAME" msprop:Generator_ColumnPropNameInRow="HPR_NAME" msprop:Generator_ColumnPropNameInTable="HPR_NAMEColumn" msprop:Generator_UserColumnName="HPR_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_HVAL" msprop:Generator_ColumnVarNameInTable="columnHPR_HVAL" msprop:Generator_ColumnPropNameInRow="HPR_HVAL" msprop:Generator_ColumnPropNameInTable="HPR_HVALColumn" msprop:Generator_UserColumnName="HPR_HVAL" type="xs:double" minOccurs="0" />
+              <xs:element name="HPR_RECNO" msprop:Generator_ColumnVarNameInTable="columnHPR_RECNO" msprop:Generator_ColumnPropNameInRow="HPR_RECNO" msprop:Generator_ColumnPropNameInTable="HPR_RECNOColumn" msprop:Generator_UserColumnName="HPR_RECNO" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_MODEL" msprop:Generator_ColumnVarNameInTable="columnHPR_MODEL" msprop:Generator_ColumnPropNameInRow="HPR_MODEL" msprop:Generator_ColumnPropNameInTable="HPR_MODELColumn" msprop:Generator_UserColumnName="HPR_MODEL" type="xs:string" minOccurs="0" />
+              <xs:element name="HPR_SERIAL" msprop:Generator_ColumnVarNameInTable="columnHPR_SERIAL" msprop:Generator_ColumnPropNameInRow="HPR_SERIAL" msprop:Generator_ColumnPropNameInTable="HPR_SERIALColumn" msprop:Generator_UserColumnName="HPR_SERIAL" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="compnyDetails" msprop:Generator_TableClassName="compnyDetailsDataTable" msprop:Generator_TableVarName="tablecompnyDetails" msprop:Generator_TablePropName="compnyDetails" msprop:Generator_RowDeletingName="compnyDetailsRowDeleting" msprop:Generator_RowChangingName="compnyDetailsRowChanging" msprop:Generator_RowEvHandlerName="compnyDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="compnyDetailsRowDeleted" msprop:Generator_UserTableName="compnyDetails" msprop:Generator_RowChangedName="compnyDetailsRowChanged" msprop:Generator_RowEvArgName="compnyDetailsRowChangeEvent" msprop:Generator_RowClassName="compnyDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MC_DESC" msprop:Generator_ColumnVarNameInTable="columnMC_DESC" msprop:Generator_ColumnPropNameInRow="MC_DESC" msprop:Generator_ColumnPropNameInTable="MC_DESCColumn" msprop:Generator_UserColumnName="MC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_ADD1" msprop:Generator_ColumnVarNameInTable="columnMC_ADD1" msprop:Generator_ColumnPropNameInRow="MC_ADD1" msprop:Generator_ColumnPropNameInTable="MC_ADD1Column" msprop:Generator_UserColumnName="MC_ADD1" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_ADD2" msprop:Generator_ColumnVarNameInTable="columnMC_ADD2" msprop:Generator_ColumnPropNameInRow="MC_ADD2" msprop:Generator_ColumnPropNameInTable="MC_ADD2Column" msprop:Generator_UserColumnName="MC_ADD2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BranchDetails" msprop:Generator_TableClassName="BranchDetailsDataTable" msprop:Generator_TableVarName="tableBranchDetails" msprop:Generator_TablePropName="BranchDetails" msprop:Generator_RowDeletingName="BranchDetailsRowDeleting" msprop:Generator_RowChangingName="BranchDetailsRowChanging" msprop:Generator_RowEvHandlerName="BranchDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="BranchDetailsRowDeleted" msprop:Generator_UserTableName="BranchDetails" msprop:Generator_RowChangedName="BranchDetailsRowChanged" msprop:Generator_RowEvArgName="BranchDetailsRowChangeEvent" msprop:Generator_RowClassName="BranchDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPC_DESC" msprop:Generator_ColumnVarNameInTable="columnMPC_DESC" msprop:Generator_ColumnPropNameInRow="MPC_DESC" msprop:Generator_ColumnPropNameInTable="MPC_DESCColumn" msprop:Generator_UserColumnName="MPC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_ADD_1" msprop:Generator_ColumnVarNameInTable="columnMPC_ADD_1" msprop:Generator_ColumnPropNameInRow="MPC_ADD_1" msprop:Generator_ColumnPropNameInTable="MPC_ADD_1Column" msprop:Generator_UserColumnName="MPC_ADD_1" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_ADD_2" msprop:Generator_ColumnVarNameInTable="columnMPC_ADD_2" msprop:Generator_ColumnPropNameInRow="MPC_ADD_2" msprop:Generator_ColumnPropNameInTable="MPC_ADD_2Column" msprop:Generator_UserColumnName="MPC_ADD_2" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

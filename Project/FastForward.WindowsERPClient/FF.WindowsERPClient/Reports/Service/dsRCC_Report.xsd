@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsRCC_Report" targetNamespace="http://tempuri.org/dsRCC_Report.xsd" xmlns:mstns="http://tempuri.org/dsRCC_Report.xsd" xmlns="http://tempuri.org/dsRCC_Report.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.FF.WindowsERPClient.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.OracleClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsRCC_Report" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsRCC_Report" msprop:Generator_UserDSName="dsRCC_Report">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="INT_RCC" msprop:Generator_TableClassName="INT_RCCDataTable" msprop:Generator_TableVarName="tableINT_RCC" msprop:Generator_RowChangedName="INT_RCCRowChanged" msprop:Generator_TablePropName="INT_RCC" msprop:Generator_RowDeletingName="INT_RCCRowDeleting" msprop:Generator_RowChangingName="INT_RCCRowChanging" msprop:Generator_RowEvHandlerName="INT_RCCRowChangeEventHandler" msprop:Generator_RowDeletedName="INT_RCCRowDeleted" msprop:Generator_RowClassName="INT_RCCRow" msprop:Generator_UserTableName="INT_RCC" msprop:Generator_RowEvArgName="INT_RCCRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="INR_NO" msprop:Generator_ColumnVarNameInTable="columnINR_NO" msprop:Generator_ColumnPropNameInRow="INR_NO" msprop:Generator_ColumnPropNameInTable="INR_NOColumn" msprop:Generator_UserColumnName="INR_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_COM_CD" msprop:Generator_ColumnVarNameInTable="columnINR_COM_CD" msprop:Generator_ColumnPropNameInRow="INR_COM_CD" msprop:Generator_ColumnPropNameInTable="INR_COM_CDColumn" msprop:Generator_UserColumnName="INR_COM_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_LOC_CD" msprop:Generator_ColumnVarNameInTable="columnINR_LOC_CD" msprop:Generator_ColumnPropNameInRow="INR_LOC_CD" msprop:Generator_ColumnPropNameInTable="INR_LOC_CDColumn" msprop:Generator_UserColumnName="INR_LOC_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_DT" msprop:Generator_ColumnVarNameInTable="columnINR_DT" msprop:Generator_ColumnPropNameInRow="INR_DT" msprop:Generator_ColumnPropNameInTable="INR_DTColumn" msprop:Generator_UserColumnName="INR_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_IS_MANUAL" msprop:Generator_ColumnVarNameInTable="columnINR_IS_MANUAL" msprop:Generator_ColumnPropNameInRow="INR_IS_MANUAL" msprop:Generator_ColumnPropNameInTable="INR_IS_MANUALColumn" msprop:Generator_UserColumnName="INR_IS_MANUAL" type="xs:int" minOccurs="0" />
+              <xs:element name="INR_MANUAL_REF" msprop:Generator_ColumnVarNameInTable="columnINR_MANUAL_REF" msprop:Generator_ColumnPropNameInRow="INR_MANUAL_REF" msprop:Generator_ColumnPropNameInTable="INR_MANUAL_REFColumn" msprop:Generator_UserColumnName="INR_MANUAL_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_TP" msprop:Generator_ColumnVarNameInTable="columnINR_TP" msprop:Generator_ColumnPropNameInRow="INR_TP" msprop:Generator_ColumnPropNameInTable="INR_TPColumn" msprop:Generator_UserColumnName="INR_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_SUB_TP" msprop:Generator_ColumnVarNameInTable="columnINR_SUB_TP" msprop:Generator_ColumnPropNameInRow="INR_SUB_TP" msprop:Generator_ColumnPropNameInTable="INR_SUB_TPColumn" msprop:Generator_UserColumnName="INR_SUB_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_AGENT" msprop:Generator_ColumnVarNameInTable="columnINR_AGENT" msprop:Generator_ColumnPropNameInRow="INR_AGENT" msprop:Generator_ColumnPropNameInTable="INR_AGENTColumn" msprop:Generator_UserColumnName="INR_AGENT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_COL_METHOD" msprop:Generator_ColumnVarNameInTable="columnINR_COL_METHOD" msprop:Generator_ColumnPropNameInRow="INR_COL_METHOD" msprop:Generator_ColumnPropNameInTable="INR_COL_METHODColumn" msprop:Generator_UserColumnName="INR_COL_METHOD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_INV_NO" msprop:Generator_ColumnVarNameInTable="columnINR_INV_NO" msprop:Generator_ColumnPropNameInRow="INR_INV_NO" msprop:Generator_ColumnPropNameInTable="INR_INV_NOColumn" msprop:Generator_UserColumnName="INR_INV_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ACC_NO" msprop:Generator_ColumnVarNameInTable="columnINR_ACC_NO" msprop:Generator_ColumnPropNameInRow="INR_ACC_NO" msprop:Generator_ColumnPropNameInTable="INR_ACC_NOColumn" msprop:Generator_UserColumnName="INR_ACC_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_INV_DT" msprop:Generator_ColumnVarNameInTable="columnINR_INV_DT" msprop:Generator_ColumnPropNameInRow="INR_INV_DT" msprop:Generator_ColumnPropNameInTable="INR_INV_DTColumn" msprop:Generator_UserColumnName="INR_INV_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_OTH_DOC_NO" msprop:Generator_ColumnVarNameInTable="columnINR_OTH_DOC_NO" msprop:Generator_ColumnPropNameInRow="INR_OTH_DOC_NO" msprop:Generator_ColumnPropNameInTable="INR_OTH_DOC_NOColumn" msprop:Generator_UserColumnName="INR_OTH_DOC_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_OTH_DOC_DT" msprop:Generator_ColumnVarNameInTable="columnINR_OTH_DOC_DT" msprop:Generator_ColumnPropNameInRow="INR_OTH_DOC_DT" msprop:Generator_ColumnPropNameInTable="INR_OTH_DOC_DTColumn" msprop:Generator_UserColumnName="INR_OTH_DOC_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_CUST_CD" msprop:Generator_ColumnVarNameInTable="columnINR_CUST_CD" msprop:Generator_ColumnPropNameInRow="INR_CUST_CD" msprop:Generator_ColumnPropNameInTable="INR_CUST_CDColumn" msprop:Generator_UserColumnName="INR_CUST_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_CUST_NAME" msprop:Generator_ColumnVarNameInTable="columnINR_CUST_NAME" msprop:Generator_ColumnPropNameInRow="INR_CUST_NAME" msprop:Generator_ColumnPropNameInTable="INR_CUST_NAMEColumn" msprop:Generator_UserColumnName="INR_CUST_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ADDR" msprop:Generator_ColumnVarNameInTable="columnINR_ADDR" msprop:Generator_ColumnPropNameInRow="INR_ADDR" msprop:Generator_ColumnPropNameInTable="INR_ADDRColumn" msprop:Generator_UserColumnName="INR_ADDR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_TEL" msprop:Generator_ColumnVarNameInTable="columnINR_TEL" msprop:Generator_ColumnPropNameInRow="INR_TEL" msprop:Generator_ColumnPropNameInTable="INR_TELColumn" msprop:Generator_UserColumnName="INR_TEL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ITM" msprop:Generator_ColumnVarNameInTable="columnINR_ITM" msprop:Generator_ColumnPropNameInRow="INR_ITM" msprop:Generator_ColumnPropNameInTable="INR_ITMColumn" msprop:Generator_UserColumnName="INR_ITM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_SER" msprop:Generator_ColumnVarNameInTable="columnINR_SER" msprop:Generator_ColumnPropNameInRow="INR_SER" msprop:Generator_ColumnPropNameInTable="INR_SERColumn" msprop:Generator_UserColumnName="INR_SER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_WARR" msprop:Generator_ColumnVarNameInTable="columnINR_WARR" msprop:Generator_ColumnPropNameInRow="INR_WARR" msprop:Generator_ColumnPropNameInTable="INR_WARRColumn" msprop:Generator_UserColumnName="INR_WARR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_DEF_CD" msprop:Generator_ColumnVarNameInTable="columnINR_DEF_CD" msprop:Generator_ColumnPropNameInRow="INR_DEF_CD" msprop:Generator_ColumnPropNameInTable="INR_DEF_CDColumn" msprop:Generator_UserColumnName="INR_DEF_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_DEF" msprop:Generator_ColumnVarNameInTable="columnINR_DEF" msprop:Generator_ColumnPropNameInRow="INR_DEF" msprop:Generator_ColumnPropNameInTable="INR_DEFColumn" msprop:Generator_UserColumnName="INR_DEF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_CONDITION" msprop:Generator_ColumnVarNameInTable="columnINR_CONDITION" msprop:Generator_ColumnPropNameInRow="INR_CONDITION" msprop:Generator_ColumnPropNameInTable="INR_CONDITIONColumn" msprop:Generator_UserColumnName="INR_CONDITION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ACCESSORIES" msprop:Generator_ColumnVarNameInTable="columnINR_ACCESSORIES" msprop:Generator_ColumnPropNameInRow="INR_ACCESSORIES" msprop:Generator_ColumnPropNameInTable="INR_ACCESSORIESColumn" msprop:Generator_UserColumnName="INR_ACCESSORIES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_EASY_LOC" msprop:Generator_ColumnVarNameInTable="columnINR_EASY_LOC" msprop:Generator_ColumnPropNameInRow="INR_EASY_LOC" msprop:Generator_ColumnPropNameInTable="INR_EASY_LOCColumn" msprop:Generator_UserColumnName="INR_EASY_LOC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_INSP_BY" msprop:Generator_ColumnVarNameInTable="columnINR_INSP_BY" msprop:Generator_ColumnPropNameInRow="INR_INSP_BY" msprop:Generator_ColumnPropNameInTable="INR_INSP_BYColumn" msprop:Generator_UserColumnName="INR_INSP_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_REM1" msprop:Generator_ColumnVarNameInTable="columnINR_REM1" msprop:Generator_ColumnPropNameInRow="INR_REM1" msprop:Generator_ColumnPropNameInTable="INR_REM1Column" msprop:Generator_UserColumnName="INR_REM1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_DEF_REM" msprop:Generator_ColumnVarNameInTable="columnINR_DEF_REM" msprop:Generator_ColumnPropNameInRow="INR_DEF_REM" msprop:Generator_ColumnPropNameInTable="INR_DEF_REMColumn" msprop:Generator_UserColumnName="INR_DEF_REM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_IS_JB_OPEN" msprop:Generator_ColumnVarNameInTable="columnINR_IS_JB_OPEN" msprop:Generator_ColumnPropNameInRow="INR_IS_JB_OPEN" msprop:Generator_ColumnPropNameInTable="INR_IS_JB_OPENColumn" msprop:Generator_UserColumnName="INR_IS_JB_OPEN" type="xs:int" minOccurs="0" />
+              <xs:element name="INR_JB_NO" msprop:Generator_ColumnVarNameInTable="columnINR_JB_NO" msprop:Generator_ColumnPropNameInRow="INR_JB_NO" msprop:Generator_ColumnPropNameInTable="INR_JB_NOColumn" msprop:Generator_UserColumnName="INR_JB_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_OPEN_BY" msprop:Generator_ColumnVarNameInTable="columnINR_OPEN_BY" msprop:Generator_ColumnPropNameInRow="INR_OPEN_BY" msprop:Generator_ColumnPropNameInTable="INR_OPEN_BYColumn" msprop:Generator_UserColumnName="INR_OPEN_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_JB_REM" msprop:Generator_ColumnVarNameInTable="columnINR_JB_REM" msprop:Generator_ColumnPropNameInRow="INR_JB_REM" msprop:Generator_ColumnPropNameInTable="INR_JB_REMColumn" msprop:Generator_UserColumnName="INR_JB_REM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_IS_REPAIRED" msprop:Generator_ColumnVarNameInTable="columnINR_IS_REPAIRED" msprop:Generator_ColumnPropNameInRow="INR_IS_REPAIRED" msprop:Generator_ColumnPropNameInTable="INR_IS_REPAIREDColumn" msprop:Generator_UserColumnName="INR_IS_REPAIRED" type="xs:int" minOccurs="0" />
+              <xs:element name="INR_REPAIR_STUS" msprop:Generator_ColumnVarNameInTable="columnINR_REPAIR_STUS" msprop:Generator_ColumnPropNameInRow="INR_REPAIR_STUS" msprop:Generator_ColumnPropNameInTable="INR_REPAIR_STUSColumn" msprop:Generator_UserColumnName="INR_REPAIR_STUS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_REM2" msprop:Generator_ColumnVarNameInTable="columnINR_REM2" msprop:Generator_ColumnPropNameInRow="INR_REM2" msprop:Generator_ColumnPropNameInTable="INR_REM2Column" msprop:Generator_UserColumnName="INR_REM2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_IS_RETURNED" msprop:Generator_ColumnVarNameInTable="columnINR_IS_RETURNED" msprop:Generator_ColumnPropNameInRow="INR_IS_RETURNED" msprop:Generator_ColumnPropNameInTable="INR_IS_RETURNEDColumn" msprop:Generator_UserColumnName="INR_IS_RETURNED" type="xs:int" minOccurs="0" />
+              <xs:element name="INR_RETURN_DT" msprop:Generator_ColumnVarNameInTable="columnINR_RETURN_DT" msprop:Generator_ColumnPropNameInRow="INR_RETURN_DT" msprop:Generator_ColumnPropNameInTable="INR_RETURN_DTColumn" msprop:Generator_UserColumnName="INR_RETURN_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_RET_CONDITION" msprop:Generator_ColumnVarNameInTable="columnINR_RET_CONDITION" msprop:Generator_ColumnPropNameInRow="INR_RET_CONDITION" msprop:Generator_ColumnPropNameInTable="INR_RET_CONDITIONColumn" msprop:Generator_UserColumnName="INR_RET_CONDITION" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_HOLLOGRAM_NO" msprop:Generator_ColumnVarNameInTable="columnINR_HOLLOGRAM_NO" msprop:Generator_ColumnPropNameInRow="INR_HOLLOGRAM_NO" msprop:Generator_ColumnPropNameInTable="INR_HOLLOGRAM_NOColumn" msprop:Generator_UserColumnName="INR_HOLLOGRAM_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_IS_REPLACE" msprop:Generator_ColumnVarNameInTable="columnINR_IS_REPLACE" msprop:Generator_ColumnPropNameInRow="INR_IS_REPLACE" msprop:Generator_ColumnPropNameInTable="INR_IS_REPLACEColumn" msprop:Generator_UserColumnName="INR_IS_REPLACE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_IS_RESELL" msprop:Generator_ColumnVarNameInTable="columnINR_IS_RESELL" msprop:Generator_ColumnPropNameInRow="INR_IS_RESELL" msprop:Generator_ColumnPropNameInTable="INR_IS_RESELLColumn" msprop:Generator_UserColumnName="INR_IS_RESELL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_IS_RET" msprop:Generator_ColumnVarNameInTable="columnINR_IS_RET" msprop:Generator_ColumnPropNameInRow="INR_IS_RET" msprop:Generator_ColumnPropNameInTable="INR_IS_RETColumn" msprop:Generator_UserColumnName="INR_IS_RET" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_IS_DISPOSE" msprop:Generator_ColumnVarNameInTable="columnINR_IS_DISPOSE" msprop:Generator_ColumnPropNameInRow="INR_IS_DISPOSE" msprop:Generator_ColumnPropNameInTable="INR_IS_DISPOSEColumn" msprop:Generator_UserColumnName="INR_IS_DISPOSE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_ACKNOLEDGE_DT" msprop:Generator_ColumnVarNameInTable="columnINR_ACKNOLEDGE_DT" msprop:Generator_ColumnPropNameInRow="INR_ACKNOLEDGE_DT" msprop:Generator_ColumnPropNameInTable="INR_ACKNOLEDGE_DTColumn" msprop:Generator_UserColumnName="INR_ACKNOLEDGE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_IS_COMPLETE" msprop:Generator_ColumnVarNameInTable="columnINR_IS_COMPLETE" msprop:Generator_ColumnPropNameInRow="INR_IS_COMPLETE" msprop:Generator_ColumnPropNameInTable="INR_IS_COMPLETEColumn" msprop:Generator_UserColumnName="INR_IS_COMPLETE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_COMPLETE_DT" msprop:Generator_ColumnVarNameInTable="columnINR_COMPLETE_DT" msprop:Generator_ColumnPropNameInRow="INR_COMPLETE_DT" msprop:Generator_ColumnPropNameInTable="INR_COMPLETE_DTColumn" msprop:Generator_UserColumnName="INR_COMPLETE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_COMPLETE_BY" msprop:Generator_ColumnVarNameInTable="columnINR_COMPLETE_BY" msprop:Generator_ColumnPropNameInRow="INR_COMPLETE_BY" msprop:Generator_ColumnPropNameInTable="INR_COMPLETE_BYColumn" msprop:Generator_UserColumnName="INR_COMPLETE_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_REM3" msprop:Generator_ColumnVarNameInTable="columnINR_REM3" msprop:Generator_ColumnPropNameInRow="INR_REM3" msprop:Generator_ColumnPropNameInTable="INR_REM3Column" msprop:Generator_UserColumnName="INR_REM3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_CLOSURE_TP" msprop:Generator_ColumnVarNameInTable="columnINR_CLOSURE_TP" msprop:Generator_ColumnPropNameInRow="INR_CLOSURE_TP" msprop:Generator_ColumnPropNameInTable="INR_CLOSURE_TPColumn" msprop:Generator_UserColumnName="INR_CLOSURE_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_STAGE" msprop:Generator_ColumnVarNameInTable="columnINR_STAGE" msprop:Generator_ColumnPropNameInRow="INR_STAGE" msprop:Generator_ColumnPropNameInTable="INR_STAGEColumn" msprop:Generator_UserColumnName="INR_STAGE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_STUS" msprop:Generator_ColumnVarNameInTable="columnINR_STUS" msprop:Generator_ColumnPropNameInRow="INR_STUS" msprop:Generator_ColumnPropNameInTable="INR_STUSColumn" msprop:Generator_UserColumnName="INR_STUS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_CRE_BY" msprop:Generator_ColumnVarNameInTable="columnINR_CRE_BY" msprop:Generator_ColumnPropNameInRow="INR_CRE_BY" msprop:Generator_ColumnPropNameInTable="INR_CRE_BYColumn" msprop:Generator_UserColumnName="INR_CRE_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_CRE_DT" msprop:Generator_ColumnVarNameInTable="columnINR_CRE_DT" msprop:Generator_ColumnPropNameInRow="INR_CRE_DT" msprop:Generator_ColumnPropNameInTable="INR_CRE_DTColumn" msprop:Generator_UserColumnName="INR_CRE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_MOD_BY" msprop:Generator_ColumnVarNameInTable="columnINR_MOD_BY" msprop:Generator_ColumnPropNameInRow="INR_MOD_BY" msprop:Generator_ColumnPropNameInTable="INR_MOD_BYColumn" msprop:Generator_UserColumnName="INR_MOD_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_MOD_DT" msprop:Generator_ColumnVarNameInTable="columnINR_MOD_DT" msprop:Generator_ColumnPropNameInRow="INR_MOD_DT" msprop:Generator_ColumnPropNameInTable="INR_MOD_DTColumn" msprop:Generator_UserColumnName="INR_MOD_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_SESSION_ID" msprop:Generator_ColumnVarNameInTable="columnINR_SESSION_ID" msprop:Generator_ColumnPropNameInRow="INR_SESSION_ID" msprop:Generator_ColumnPropNameInTable="INR_SESSION_IDColumn" msprop:Generator_UserColumnName="INR_SESSION_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ANAL1" msprop:Generator_ColumnVarNameInTable="columnINR_ANAL1" msprop:Generator_ColumnPropNameInRow="INR_ANAL1" msprop:Generator_ColumnPropNameInTable="INR_ANAL1Column" msprop:Generator_UserColumnName="INR_ANAL1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ANAL2" msprop:Generator_ColumnVarNameInTable="columnINR_ANAL2" msprop:Generator_ColumnPropNameInRow="INR_ANAL2" msprop:Generator_ColumnPropNameInTable="INR_ANAL2Column" msprop:Generator_UserColumnName="INR_ANAL2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ANAL3" msprop:Generator_ColumnVarNameInTable="columnINR_ANAL3" msprop:Generator_ColumnPropNameInRow="INR_ANAL3" msprop:Generator_ColumnPropNameInTable="INR_ANAL3Column" msprop:Generator_UserColumnName="INR_ANAL3" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_ANAL4" msprop:Generator_ColumnVarNameInTable="columnINR_ANAL4" msprop:Generator_ColumnPropNameInRow="INR_ANAL4" msprop:Generator_ColumnPropNameInTable="INR_ANAL4Column" msprop:Generator_UserColumnName="INR_ANAL4" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_ANAL5" msprop:Generator_ColumnVarNameInTable="columnINR_ANAL5" msprop:Generator_ColumnPropNameInRow="INR_ANAL5" msprop:Generator_ColumnPropNameInTable="INR_ANAL5Column" msprop:Generator_UserColumnName="INR_ANAL5" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_ANAL6" msprop:Generator_ColumnVarNameInTable="columnINR_ANAL6" msprop:Generator_ColumnPropNameInRow="INR_ANAL6" msprop:Generator_ColumnPropNameInTable="INR_ANAL6Column" msprop:Generator_UserColumnName="INR_ANAL6" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_ANAL7" msprop:Generator_ColumnVarNameInTable="columnINR_ANAL7" msprop:Generator_ColumnPropNameInRow="INR_ANAL7" msprop:Generator_ColumnPropNameInTable="INR_ANAL7Column" msprop:Generator_UserColumnName="INR_ANAL7" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_IN_STUS" msprop:Generator_ColumnVarNameInTable="columnINR_IN_STUS" msprop:Generator_ColumnPropNameInRow="INR_IN_STUS" msprop:Generator_ColumnPropNameInTable="INR_IN_STUSColumn" msprop:Generator_UserColumnName="INR_IN_STUS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_OUT_STUS" msprop:Generator_ColumnVarNameInTable="columnINR_OUT_STUS" msprop:Generator_ColumnPropNameInRow="INR_OUT_STUS" msprop:Generator_ColumnPropNameInTable="INR_OUT_STUSColumn" msprop:Generator_UserColumnName="INR_OUT_STUS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_IS_EXTERNAL" msprop:Generator_ColumnVarNameInTable="columnINR_IS_EXTERNAL" msprop:Generator_ColumnPropNameInRow="INR_IS_EXTERNAL" msprop:Generator_ColumnPropNameInTable="INR_IS_EXTERNALColumn" msprop:Generator_UserColumnName="INR_IS_EXTERNAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_SERIAL_ID" msprop:Generator_ColumnVarNameInTable="columnINR_SERIAL_ID" msprop:Generator_ColumnPropNameInRow="INR_SERIAL_ID" msprop:Generator_ColumnPropNameInTable="INR_SERIAL_IDColumn" msprop:Generator_UserColumnName="INR_SERIAL_ID" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_IS_REQ" msprop:Generator_ColumnVarNameInTable="columnINR_IS_REQ" msprop:Generator_ColumnPropNameInRow="INR_IS_REQ" msprop:Generator_ColumnPropNameInTable="INR_IS_REQColumn" msprop:Generator_UserColumnName="INR_IS_REQ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_APP_DT" msprop:Generator_ColumnVarNameInTable="columnINR_APP_DT" msprop:Generator_ColumnPropNameInRow="INR_APP_DT" msprop:Generator_ColumnPropNameInTable="INR_APP_DTColumn" msprop:Generator_UserColumnName="INR_APP_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_APP_BY" msprop:Generator_ColumnVarNameInTable="columnINR_APP_BY" msprop:Generator_ColumnPropNameInRow="INR_APP_BY" msprop:Generator_ColumnPropNameInTable="INR_APP_BYColumn" msprop:Generator_UserColumnName="INR_APP_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_REJ_DT" msprop:Generator_ColumnVarNameInTable="columnINR_REJ_DT" msprop:Generator_ColumnPropNameInRow="INR_REJ_DT" msprop:Generator_ColumnPropNameInTable="INR_REJ_DTColumn" msprop:Generator_UserColumnName="INR_REJ_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INR_REJ_BY" msprop:Generator_ColumnVarNameInTable="columnINR_REJ_BY" msprop:Generator_ColumnPropNameInRow="INR_REJ_BY" msprop:Generator_ColumnPropNameInTable="INR_REJ_BYColumn" msprop:Generator_UserColumnName="INR_REJ_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_DISP_REM1" msprop:Generator_ColumnVarNameInTable="columnINR_DISP_REM1" msprop:Generator_ColumnPropNameInRow="INR_DISP_REM1" msprop:Generator_ColumnPropNameInTable="INR_DISP_REM1Column" msprop:Generator_UserColumnName="INR_DISP_REM1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_DISP_REM2" msprop:Generator_ColumnVarNameInTable="columnINR_DISP_REM2" msprop:Generator_ColumnPropNameInRow="INR_DISP_REM2" msprop:Generator_ColumnPropNameInTable="INR_DISP_REM2Column" msprop:Generator_UserColumnName="INR_DISP_REM2" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_DISP_REM3" msprop:Generator_ColumnVarNameInTable="columnINR_DISP_REM3" msprop:Generator_ColumnPropNameInRow="INR_DISP_REM3" msprop:Generator_ColumnPropNameInTable="INR_DISP_REM3Column" msprop:Generator_UserColumnName="INR_DISP_REM3" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_IS_MISPLACE" msprop:Generator_ColumnVarNameInTable="columnINR_IS_MISPLACE" msprop:Generator_ColumnPropNameInRow="INR_IS_MISPLACE" msprop:Generator_ColumnPropNameInTable="INR_IS_MISPLACEColumn" msprop:Generator_UserColumnName="INR_IS_MISPLACE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_DISP_NO" msprop:Generator_ColumnVarNameInTable="columnINR_DISP_NO" msprop:Generator_ColumnPropNameInRow="INR_DISP_NO" msprop:Generator_ColumnPropNameInTable="INR_DISP_NOColumn" msprop:Generator_UserColumnName="INR_DISP_NO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INR_ACCEPT_PENDING" msprop:Generator_ColumnVarNameInTable="columnINR_ACCEPT_PENDING" msprop:Generator_ColumnPropNameInRow="INR_ACCEPT_PENDING" msprop:Generator_ColumnPropNameInTable="INR_ACCEPT_PENDINGColumn" msprop:Generator_UserColumnName="INR_ACCEPT_PENDING" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INR_LOC_DESN" msprop:Generator_ColumnVarNameInTable="columnINR_LOC_DESN" msprop:Generator_ColumnPropNameInRow="INR_LOC_DESN" msprop:Generator_ColumnPropNameInTable="INR_LOC_DESNColumn" msprop:Generator_UserColumnName="INR_LOC_DESN" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_AGT_NAME" msprop:Generator_ColumnVarNameInTable="columnINR_AGT_NAME" msprop:Generator_ColumnPropNameInRow="INR_AGT_NAME" msprop:Generator_ColumnPropNameInTable="INR_AGT_NAMEColumn" msprop:Generator_UserColumnName="INR_AGT_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_COLMETHOD_DESC" msprop:Generator_ColumnVarNameInTable="columnINR_COLMETHOD_DESC" msprop:Generator_ColumnPropNameInRow="INR_COLMETHOD_DESC" msprop:Generator_ColumnPropNameInTable="INR_COLMETHOD_DESCColumn" msprop:Generator_UserColumnName="INR_COLMETHOD_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_COND_DESC" msprop:Generator_ColumnVarNameInTable="columnINR_COND_DESC" msprop:Generator_ColumnPropNameInRow="INR_COND_DESC" msprop:Generator_ColumnPropNameInTable="INR_COND_DESCColumn" msprop:Generator_UserColumnName="INR_COND_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_DEF_DESC" msprop:Generator_ColumnVarNameInTable="columnINR_DEF_DESC" msprop:Generator_ColumnPropNameInRow="INR_DEF_DESC" msprop:Generator_ColumnPropNameInTable="INR_DEF_DESCColumn" msprop:Generator_UserColumnName="INR_DEF_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_ACC_DESC" msprop:Generator_ColumnVarNameInTable="columnINR_ACC_DESC" msprop:Generator_ColumnPropNameInRow="INR_ACC_DESC" msprop:Generator_ColumnPropNameInTable="INR_ACC_DESCColumn" msprop:Generator_UserColumnName="INR_ACC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_REASON_DESN" msprop:Generator_ColumnVarNameInTable="columnINR_REASON_DESN" msprop:Generator_ColumnPropNameInRow="INR_REASON_DESN" msprop:Generator_ColumnPropNameInTable="INR_REASON_DESNColumn" msprop:Generator_UserColumnName="INR_REASON_DESN" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_RETCOND_DESC" msprop:Generator_ColumnVarNameInTable="columnINR_RETCOND_DESC" msprop:Generator_ColumnPropNameInRow="INR_RETCOND_DESC" msprop:Generator_ColumnPropNameInTable="INR_RETCOND_DESCColumn" msprop:Generator_UserColumnName="INR_RETCOND_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_CLOSURE" msprop:Generator_ColumnVarNameInTable="columnINR_CLOSURE" msprop:Generator_ColumnPropNameInRow="INR_CLOSURE" msprop:Generator_ColumnPropNameInTable="INR_CLOSUREColumn" msprop:Generator_UserColumnName="INR_CLOSURE" type="xs:string" minOccurs="0" />
+              <xs:element name="INR_WAR_PERIOD" msprop:Generator_ColumnVarNameInTable="columnINR_WAR_PERIOD" msprop:Generator_ColumnPropNameInRow="INR_WAR_PERIOD" msprop:Generator_ColumnPropNameInTable="INR_WAR_PERIODColumn" msprop:Generator_UserColumnName="INR_WAR_PERIOD" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowClassName="paramRow" msprop:Generator_UserTableName="param" msprop:Generator_RowEvArgName="paramRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="fromdate" msprop:Generator_ColumnVarNameInTable="columnfromdate" msprop:Generator_ColumnPropNameInRow="fromdate" msprop:Generator_ColumnPropNameInTable="fromdateColumn" msprop:Generator_UserColumnName="fromdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="todate" msprop:Generator_ColumnVarNameInTable="columntodate" msprop:Generator_ColumnPropNameInRow="todate" msprop:Generator_ColumnPropNameInTable="todateColumn" msprop:Generator_UserColumnName="todate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="comp" msprop:Generator_ColumnVarNameInTable="columncomp" msprop:Generator_ColumnPropNameInRow="comp" msprop:Generator_ColumnPropNameInTable="compColumn" msprop:Generator_UserColumnName="comp" type="xs:string" minOccurs="0" />
+              <xs:element name="compaddr" msprop:Generator_ColumnVarNameInTable="columncompaddr" msprop:Generator_ColumnPropNameInRow="compaddr" msprop:Generator_ColumnPropNameInTable="compaddrColumn" msprop:Generator_UserColumnName="compaddr" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RCC_JOB_DTL" msprop:Generator_TableClassName="RCC_JOB_DTLDataTable" msprop:Generator_TableVarName="tableRCC_JOB_DTL" msprop:Generator_TablePropName="RCC_JOB_DTL" msprop:Generator_RowDeletingName="RCC_JOB_DTLRowDeleting" msprop:Generator_RowChangingName="RCC_JOB_DTLRowChanging" msprop:Generator_RowEvHandlerName="RCC_JOB_DTLRowChangeEventHandler" msprop:Generator_RowDeletedName="RCC_JOB_DTLRowDeleted" msprop:Generator_UserTableName="RCC_JOB_DTL" msprop:Generator_RowChangedName="RCC_JOB_DTLRowChanged" msprop:Generator_RowEvArgName="RCC_JOB_DTLRowChangeEvent" msprop:Generator_RowClassName="RCC_JOB_DTLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RCC_NO" msprop:Generator_ColumnVarNameInTable="columnRCC_NO" msprop:Generator_ColumnPropNameInRow="RCC_NO" msprop:Generator_ColumnPropNameInTable="RCC_NOColumn" msprop:Generator_UserColumnName="RCC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="WIP_CLS_DT" msprop:Generator_ColumnVarNameInTable="columnWIP_CLS_DT" msprop:Generator_ColumnPropNameInRow="WIP_CLS_DT" msprop:Generator_ColumnPropNameInTable="WIP_CLS_DTColumn" msprop:Generator_UserColumnName="WIP_CLS_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="JOB_OPEN_DT" msprop:Generator_ColumnVarNameInTable="columnJOB_OPEN_DT" msprop:Generator_ColumnPropNameInRow="JOB_OPEN_DT" msprop:Generator_ColumnPropNameInTable="JOB_OPEN_DTColumn" msprop:Generator_UserColumnName="JOB_OPEN_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DT_DIFF_JOB_WIP" msprop:Generator_ColumnVarNameInTable="columnDT_DIFF_JOB_WIP" msprop:Generator_ColumnPropNameInRow="DT_DIFF_JOB_WIP" msprop:Generator_ColumnPropNameInTable="DT_DIFF_JOB_WIPColumn" msprop:Generator_UserColumnName="DT_DIFF_JOB_WIP" type="xs:short" minOccurs="0" />
+              <xs:element name="JOB_NO" msprop:Generator_ColumnVarNameInTable="columnJOB_NO" msprop:Generator_ColumnPropNameInRow="JOB_NO" msprop:Generator_ColumnPropNameInTable="JOB_NOColumn" msprop:Generator_UserColumnName="JOB_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="WARR_ST_DT" msprop:Generator_ColumnVarNameInTable="columnWARR_ST_DT" msprop:Generator_ColumnPropNameInRow="WARR_ST_DT" msprop:Generator_ColumnPropNameInTable="WARR_ST_DTColumn" msprop:Generator_UserColumnName="WARR_ST_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INV_NO" msprop:Generator_ColumnVarNameInTable="columnINV_NO" msprop:Generator_ColumnPropNameInRow="INV_NO" msprop:Generator_ColumnPropNameInTable="INV_NOColumn" msprop:Generator_UserColumnName="INV_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="INV_TOT" msprop:Generator_ColumnVarNameInTable="columnINV_TOT" msprop:Generator_ColumnPropNameInRow="INV_TOT" msprop:Generator_ColumnPropNameInTable="INV_TOTColumn" msprop:Generator_UserColumnName="INV_TOT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INV_NET" msprop:Generator_ColumnVarNameInTable="columnINV_NET" msprop:Generator_ColumnPropNameInRow="INV_NET" msprop:Generator_ColumnPropNameInTable="INV_NETColumn" msprop:Generator_UserColumnName="INV_NET" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INV_TAX" msprop:Generator_ColumnVarNameInTable="columnINV_TAX" msprop:Generator_ColumnPropNameInRow="INV_TAX" msprop:Generator_ColumnPropNameInTable="INV_TAXColumn" msprop:Generator_UserColumnName="INV_TAX" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="RCC_JOB_DTL1" msprop:Generator_TableClassName="RCC_JOB_DTL1DataTable" msprop:Generator_TableVarName="tableRCC_JOB_DTL1" msprop:Generator_TablePropName="RCC_JOB_DTL1" msprop:Generator_RowDeletingName="RCC_JOB_DTL1RowDeleting" msprop:Generator_RowChangingName="RCC_JOB_DTL1RowChanging" msprop:Generator_RowEvHandlerName="RCC_JOB_DTL1RowChangeEventHandler" msprop:Generator_RowDeletedName="RCC_JOB_DTL1RowDeleted" msprop:Generator_UserTableName="RCC_JOB_DTL1" msprop:Generator_RowChangedName="RCC_JOB_DTL1RowChanged" msprop:Generator_RowEvArgName="RCC_JOB_DTL1RowChangeEvent" msprop:Generator_RowClassName="RCC_JOB_DTL1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RCC_NO" msprop:Generator_ColumnVarNameInTable="columnRCC_NO" msprop:Generator_ColumnPropNameInRow="RCC_NO" msprop:Generator_ColumnPropNameInTable="RCC_NOColumn" msprop:Generator_UserColumnName="RCC_NO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

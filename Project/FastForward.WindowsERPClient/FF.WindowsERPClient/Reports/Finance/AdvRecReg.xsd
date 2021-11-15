@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="AdvRecReg" targetNamespace="http://tempuri.org/AdvRecReg.xsd" xmlns:mstns="http://tempuri.org/AdvRecReg.xsd" xmlns="http://tempuri.org/AdvRecReg.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="AdvRecReg" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="AdvRecReg" msprop:Generator_UserDSName="AdvRecReg">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AdvRecReg" msprop:Generator_TableClassName="AdvRecRegDataTable" msprop:Generator_TableVarName="tableAdvRecReg" msprop:Generator_RowChangedName="AdvRecRegRowChanged" msprop:Generator_TablePropName="_AdvRecReg" msprop:Generator_RowDeletingName="AdvRecRegRowDeleting" msprop:Generator_RowChangingName="AdvRecRegRowChanging" msprop:Generator_RowEvHandlerName="AdvRecRegRowChangeEventHandler" msprop:Generator_RowDeletedName="AdvRecRegRowDeleted" msprop:Generator_RowClassName="AdvRecRegRow" msprop:Generator_UserTableName="AdvRecReg" msprop:Generator_RowEvArgName="AdvRecRegRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="RP_USER" msprop:Generator_ColumnVarNameInTable="columnRP_USER" msprop:Generator_ColumnPropNameInRow="RP_USER" msprop:Generator_ColumnPropNameInTable="RP_USERColumn" msprop:Generator_UserColumnName="RP_USER" type="xs:string" minOccurs="0" />
+              <xs:element name="RP_REC_NO" msprop:Generator_ColumnVarNameInTable="columnRP_REC_NO" msprop:Generator_ColumnPropNameInRow="RP_REC_NO" msprop:Generator_ColumnPropNameInTable="RP_REC_NOColumn" msprop:Generator_UserColumnName="RP_REC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="RP_MAN_REF" msprop:Generator_ColumnVarNameInTable="columnRP_MAN_REF" msprop:Generator_ColumnPropNameInRow="RP_MAN_REF" msprop:Generator_ColumnPropNameInTable="RP_MAN_REFColumn" msprop:Generator_UserColumnName="RP_MAN_REF" type="xs:string" minOccurs="0" />
+              <xs:element name="RP_REC_DT" msprop:Generator_ColumnVarNameInTable="columnRP_REC_DT" msprop:Generator_ColumnPropNameInRow="RP_REC_DT" msprop:Generator_ColumnPropNameInTable="RP_REC_DTColumn" msprop:Generator_UserColumnName="RP_REC_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RP_REF_DT" msprop:Generator_ColumnVarNameInTable="columnRP_REF_DT" msprop:Generator_ColumnPropNameInRow="RP_REF_DT" msprop:Generator_ColumnPropNameInTable="RP_REF_DTColumn" msprop:Generator_UserColumnName="RP_REF_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RP_INV_NO" msprop:Generator_ColumnVarNameInTable="columnRP_INV_NO" msprop:Generator_ColumnPropNameInRow="RP_INV_NO" msprop:Generator_ColumnPropNameInTable="RP_INV_NOColumn" msprop:Generator_UserColumnName="RP_INV_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="RP_CUST_NAME" msprop:Generator_ColumnVarNameInTable="columnRP_CUST_NAME" msprop:Generator_ColumnPropNameInRow="RP_CUST_NAME" msprop:Generator_ColumnPropNameInTable="RP_CUST_NAMEColumn" msprop:Generator_UserColumnName="RP_CUST_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="RP_REF_AMT" msprop:Generator_ColumnVarNameInTable="columnRP_REF_AMT" msprop:Generator_ColumnPropNameInRow="RP_REF_AMT" msprop:Generator_ColumnPropNameInTable="RP_REF_AMTColumn" msprop:Generator_UserColumnName="RP_REF_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RP_NO_DAYS" msprop:Generator_ColumnVarNameInTable="columnRP_NO_DAYS" msprop:Generator_ColumnPropNameInRow="RP_NO_DAYS" msprop:Generator_ColumnPropNameInTable="RP_NO_DAYSColumn" msprop:Generator_UserColumnName="RP_NO_DAYS" type="xs:int" minOccurs="0" />
+              <xs:element name="RP_CAT" msprop:Generator_ColumnVarNameInTable="columnRP_CAT" msprop:Generator_ColumnPropNameInRow="RP_CAT" msprop:Generator_ColumnPropNameInTable="RP_CATColumn" msprop:Generator_UserColumnName="RP_CAT" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowClassName="paramRow" msprop:Generator_UserTableName="param" msprop:Generator_RowEvArgName="paramRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="fromdate" msprop:Generator_ColumnVarNameInTable="columnfromdate" msprop:Generator_ColumnPropNameInRow="fromdate" msprop:Generator_ColumnPropNameInTable="fromdateColumn" msprop:Generator_UserColumnName="fromdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="todate" msprop:Generator_ColumnVarNameInTable="columntodate" msprop:Generator_ColumnPropNameInRow="todate" msprop:Generator_ColumnPropNameInTable="todateColumn" msprop:Generator_UserColumnName="todate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="comp" msprop:Generator_ColumnVarNameInTable="columncomp" msprop:Generator_ColumnPropNameInRow="comp" msprop:Generator_ColumnPropNameInTable="compColumn" msprop:Generator_UserColumnName="comp" type="xs:string" minOccurs="0" />
+              <xs:element name="compaddr" msprop:Generator_ColumnVarNameInTable="columncompaddr" msprop:Generator_ColumnPropNameInRow="compaddr" msprop:Generator_ColumnPropNameInTable="compaddrColumn" msprop:Generator_UserColumnName="compaddr" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

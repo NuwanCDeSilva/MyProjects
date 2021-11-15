@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsPO" targetNamespace="http://tempuri.org/dsPO.xsd" xmlns:mstns="http://tempuri.org/dsPO.xsd" xmlns="http://tempuri.org/dsPO.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsPO" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsPO" msprop:Generator_UserDSName="dsPO">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PO_ALLOC" msprop:Generator_TableClassName="PO_ALLOCDataTable" msprop:Generator_TableVarName="tablePO_ALLOC" msprop:Generator_TablePropName="PO_ALLOC" msprop:Generator_RowDeletingName="PO_ALLOCRowDeleting" msprop:Generator_RowChangingName="PO_ALLOCRowChanging" msprop:Generator_RowEvHandlerName="PO_ALLOCRowChangeEventHandler" msprop:Generator_RowDeletedName="PO_ALLOCRowDeleted" msprop:Generator_UserTableName="PO_ALLOC" msprop:Generator_RowChangedName="PO_ALLOCRowChanged" msprop:Generator_RowEvArgName="PO_ALLOCRowChangeEvent" msprop:Generator_RowClassName="PO_ALLOCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="POH_COM" msprop:Generator_ColumnVarNameInTable="columnPOH_COM" msprop:Generator_ColumnPropNameInRow="POH_COM" msprop:Generator_ColumnPropNameInTable="POH_COMColumn" msprop:Generator_UserColumnName="POH_COM" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_DESC" msprop:Generator_ColumnVarNameInTable="columnMC_DESC" msprop:Generator_ColumnPropNameInRow="MC_DESC" msprop:Generator_ColumnPropNameInTable="MC_DESCColumn" msprop:Generator_UserColumnName="MC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_IT_POWERED" msprop:Generator_ColumnVarNameInTable="columnMC_IT_POWERED" msprop:Generator_ColumnPropNameInRow="MC_IT_POWERED" msprop:Generator_ColumnPropNameInTable="MC_IT_POWEREDColumn" msprop:Generator_UserColumnName="MC_IT_POWERED" type="xs:string" minOccurs="0" />
+              <xs:element name="POH_PROFIT_CD" msprop:Generator_ColumnVarNameInTable="columnPOH_PROFIT_CD" msprop:Generator_ColumnPropNameInRow="POH_PROFIT_CD" msprop:Generator_ColumnPropNameInTable="POH_PROFIT_CDColumn" msprop:Generator_UserColumnName="POH_PROFIT_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_DESC" msprop:Generator_ColumnVarNameInTable="columnMPC_DESC" msprop:Generator_ColumnPropNameInRow="MPC_DESC" msprop:Generator_ColumnPropNameInTable="MPC_DESCColumn" msprop:Generator_UserColumnName="MPC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POH_SUPP" msprop:Generator_ColumnVarNameInTable="columnPOH_SUPP" msprop:Generator_ColumnPropNameInRow="POH_SUPP" msprop:Generator_ColumnPropNameInTable="POH_SUPPColumn" msprop:Generator_UserColumnName="POH_SUPP" type="xs:string" minOccurs="0" />
+              <xs:element name="MBE_NAME" msprop:Generator_ColumnVarNameInTable="columnMBE_NAME" msprop:Generator_ColumnPropNameInRow="MBE_NAME" msprop:Generator_ColumnPropNameInTable="MBE_NAMEColumn" msprop:Generator_UserColumnName="MBE_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="POH_DOC_NO" msprop:Generator_ColumnVarNameInTable="columnPOH_DOC_NO" msprop:Generator_ColumnPropNameInRow="POH_DOC_NO" msprop:Generator_ColumnPropNameInTable="POH_DOC_NOColumn" msprop:Generator_UserColumnName="POH_DOC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="POH_DT" msprop:Generator_ColumnVarNameInTable="columnPOH_DT" msprop:Generator_ColumnPropNameInRow="POH_DT" msprop:Generator_ColumnPropNameInTable="POH_DTColumn" msprop:Generator_UserColumnName="POH_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="POAL_ITM_CD" msprop:Generator_ColumnVarNameInTable="columnPOAL_ITM_CD" msprop:Generator_ColumnPropNameInRow="POAL_ITM_CD" msprop:Generator_ColumnPropNameInTable="POAL_ITM_CDColumn" msprop:Generator_UserColumnName="POAL_ITM_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="MI_SHORTDESC" msprop:Generator_ColumnVarNameInTable="columnMI_SHORTDESC" msprop:Generator_ColumnPropNameInRow="MI_SHORTDESC" msprop:Generator_ColumnPropNameInTable="MI_SHORTDESCColumn" msprop:Generator_UserColumnName="MI_SHORTDESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MI_LONGDESC" msprop:Generator_ColumnVarNameInTable="columnMI_LONGDESC" msprop:Generator_ColumnPropNameInRow="MI_LONGDESC" msprop:Generator_ColumnPropNameInTable="MI_LONGDESCColumn" msprop:Generator_UserColumnName="MI_LONGDESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POAL_LOCA" msprop:Generator_ColumnVarNameInTable="columnPOAL_LOCA" msprop:Generator_ColumnPropNameInRow="POAL_LOCA" msprop:Generator_ColumnPropNameInTable="POAL_LOCAColumn" msprop:Generator_UserColumnName="POAL_LOCA" type="xs:string" minOccurs="0" />
+              <xs:element name="ML_LOC_DESC" msprop:Generator_ColumnVarNameInTable="columnML_LOC_DESC" msprop:Generator_ColumnPropNameInRow="ML_LOC_DESC" msprop:Generator_ColumnPropNameInTable="ML_LOC_DESCColumn" msprop:Generator_UserColumnName="ML_LOC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POAL_ITM_STUS" msprop:Generator_ColumnVarNameInTable="columnPOAL_ITM_STUS" msprop:Generator_ColumnPropNameInRow="POAL_ITM_STUS" msprop:Generator_ColumnPropNameInTable="POAL_ITM_STUSColumn" msprop:Generator_UserColumnName="POAL_ITM_STUS" type="xs:string" minOccurs="0" />
+              <xs:element name="POAL_QTY" msprop:Generator_ColumnVarNameInTable="columnPOAL_QTY" msprop:Generator_ColumnPropNameInRow="POAL_QTY" msprop:Generator_ColumnPropNameInTable="POAL_QTYColumn" msprop:Generator_UserColumnName="POAL_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="POAL_BAL_QTY" msprop:Generator_ColumnVarNameInTable="columnPOAL_BAL_QTY" msprop:Generator_ColumnPropNameInRow="POAL_BAL_QTY" msprop:Generator_ColumnPropNameInTable="POAL_BAL_QTYColumn" msprop:Generator_UserColumnName="POAL_BAL_QTY" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

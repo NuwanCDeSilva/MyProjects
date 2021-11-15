@@ -1,0 +1,11 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\FastForward.SCMPDA.dll.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\FastForward.SCMPDA.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\FastForward.SCMPDA.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\AjaxControlToolkit.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\bin\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\obj\Debug\FastForward.SCMPDA.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\obj\Debug\FastForward.SCMPDA.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.SCMPDA\FastForward.SCMPDA\FastForward.SCMPDA\obj\Debug\FastForward.SCMPDA.pdb

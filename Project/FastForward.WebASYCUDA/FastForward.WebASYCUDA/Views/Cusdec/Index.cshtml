@@ -1,0 +1,281 @@
+﻿@model FF.BusinessObjects.Asycuda.ASY_CUSDEC_MODEL
+@{
+    ViewBag.Title = Resources.Resource.AsycudaCusDecTitle;
+}
+
+<div class="index-body">
+    <div class="jumbotron">
+        @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+        {
+            @*<div class="form-group">
+                    <div class="col-md-2">
+                        @Resources.Resource.DocDatabase
+                    </div>
+                    <div class="col-md-3">
+                        @Html.DropDownListFor(m => m.DBModelList.Add_db_id, new List<SelectListItem>(), Resources.Resource.DrpDwnSelectDb, new { @class = "form-control database-select" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        @Resources.Resource.DocGroup
+                    </div>
+                    <div class="col-md-3">
+                        @Html.DropDownListFor(m => m.DocGrpList.Adg_grup_id, new List<SelectListItem>(), Resources.Resource.DrpDwnSelectGrp, new { @class = "form-control group-select" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        @Resources.Resource.DocType
+                    </div>
+                    <div class="col-md-3">
+                        @Html.DropDownListFor(m => m.DocTypeList.Adt_tp_id, new List<SelectListItem>(), Resources.Resource.DrpDwnSelectTyp, new { @class = "form-control type-select" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-2">
+                        @Resources.Resource.DocNumber
+                    </div>
+                    <div class="col-md-3">
+                        @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-3 col-lg-offset-2">
+                        <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+
+                    </div>
+                </div>*@
+            <div class="row">
+                <fieldset>
+                    <legend>MANIFEST</legend>
+                    <div style="display:none">
+                        @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                        @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "1" })
+                        @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "1" })
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            BL Master
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                        </div>
+                        <div class="col-md-1">
+                            <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        }
+        <div class="row">
+            <fieldset>
+                <legend>CUSDEC</legend>
+                <div class="row">
+                    @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                    {
+                        <div style="display:none">
+                            @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "2" })
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                EX Bond
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                    @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                    {
+                        <div style="display:none">
+                            @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "3" })
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                RE Bond
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                    @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                    {
+                        <div style="display:none">
+                            @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "4" })
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                TO Bond
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </fieldset>
+        </div>
+        <div class="row">
+            <fieldset>
+                <legend>BOI</legend>
+                @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                {
+                    <div style="display:none">
+                        @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                        @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "3" })
+                        @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "5" })
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-2">
+                            BOI
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                        </div>
+                        <div class="col-md-3">
+                            @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                        </div>
+                        <div class="col-md-1">
+                            <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                        </div>
+                    </div>
+                }
+            </fieldset>
+        </div>
+        <div class="row">
+            <fieldset>
+                <legend>DIRECTDUTY</legend>
+                <div class="row">
+                    @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                    {
+                        <div style="display:none">
+                            @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "4" })
+                            @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "6" })
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                Long Room
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                    @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                    {
+                        <div style="display:none">
+                            @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "4" })
+                            @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "7" })
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                Air Freight
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                    @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                    {
+                        <div style="display:none">
+                            @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "4" })
+                            @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "8" })
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                Export
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div class="row">
+                    @using (Html.BeginForm("GenarateXml", "Cusdec", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal download-xml-form", role = "form" }))
+                    {
+                        <div style="display:none">
+                            @Html.TextBoxFor(m => m.DBModelList.Add_db_id, new { @class = "form-control", Value = "2" })
+                            @Html.TextBoxFor(m => m.DocGrpList.Adg_grup_id, new { @class = "form-control", Value = "4" })
+                            @Html.TextBoxFor(m => m.DocTypeList.Adt_tp_id, new { @class = "form-control", Value = "9" })
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-2">
+                                Motor Vehicle
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-3">
+                                @Html.TextBoxFor(m => m.Doc_Number_To, new { @class = "form-control", @placeholder = Resources.Resource.EmpTxtDocNum })
+                            </div>
+                            <div class="col-md-1">
+                                <input type="submit" value=@Resources.Resource.GenarateBtnTxt class="btn btn-primary download-btn" />
+                            </div>
+                        </div>
+                    }
+                </div>
+            </fieldset>
+        </div>
+
+
+    </div>
+</div>

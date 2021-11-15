@@ -1,0 +1,197 @@
+﻿@model PagedList.IPagedList<FF.BusinessObjects.ToursNew.DriverAllocationHome>
+@using PagedList.Mvc;
+@{
+    ViewBag.Title = "Home Page";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+    string pc = (string)Session["UserDefProf"];
+    var hidefields = System.Web.Configuration.WebConfigurationManager.AppSettings[pc];
+    if (hidefields == null)
+    {
+        hidefields = "false";
+    }
+}
+<link href="~/Content/PagedList.css?@val" rel="stylesheet" type="text/css" />
+@section Scripts {
+    <script src="~/Scripts/Common/Home.js?@val"></script>
+}
+
+
+@using (Html.BeginForm(new { @class = "form-horizontal" }))
+{
+    <div class="row">
+        <div class="col-md-6">
+            <p class="col-md-6">
+                @Html.DropDownList("SearchField", new List<SelectListItem>() {
+              new SelectListItem() {
+                  Text = "Vehicle No",
+                  Value = "Vehicle No"
+              },
+              new SelectListItem() {
+                  Text = "Model",
+                  Value = "Model"
+              },
+              new SelectListItem() {
+                  Text = "Category",
+                  Value = "Category"
+              },
+              new SelectListItem() {
+                  Text = "System Id",
+                  Value = "System Id"
+              },
+          }, "-- Select Field --", new { @class = "form-control" })
+            </p>
+            <p class="col-md-6">
+                @Html.Editor("SearchString", new { htmlAttributes = new { @class = "form-control with-search" } })
+                <input type="submit" value="Search" class="btn btn-info btn-xs" />
+            </p>
+        </div>
+        @if (@ViewBag.Regexp=="true")
+        {
+              <div class="col-md-1">
+            <p class="col-lg-12">
+                <a class="fleet-alert-reg" href="#"><span class="glyphicon glyphicon-envelope" style="color:#cc1717;font-size:large"></span></a>
+            </p>
+        </div>
+        }
+        @if (@ViewBag.LisExp == "true")
+        {
+            <div class="col-md-1">
+                <p class="col-lg-12">
+                    <a class="fleet-alert-lis" href="#"><span class="glyphicon glyphicon-envelope" style="color:#550909;font-size:large"></span></a>
+                </p>
+            </div>
+        }
+    </div>
+}
+
+<div class="row enq-tracker-tbl">
+
+    <table class="table table-striped table-hover pending-all-enq">
+        <tr class="enq-hed">
+            <th>Vehicle No</th>
+            <th>Model</th>
+            <th>Category</th>
+            <th>Reservation No</th>
+            <th>Starting Date</th>
+            <th>Ending Date</th>
+            <th>Reallocation</th>
+            <th>Cancel</th>
+            <th>SMS(Driver)</th>
+            <th>SMS(Custormer)</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mstf_regno)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mstf_model)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mstf_veh_tp)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.gce_enq_id)
+                </td>
+                <td>@String.Format("{0:d}", item.mfd_frm_dt)</td>
+                <td>@String.Format("{0:d}", item.mfd_to_dt)</td>
+                <td class="text-align-cls"><a href="/DriverAllocation/Index?EnqID=@item.mstf_regno"><span class="glyphicon glyphicon-book" style="font-size: large; color: green"></span></a></td>
+                <td class="text-align-cls"><a href="/DriverAllocation/Index?EnqID=@item.mstf_regno"><span class="glyphicon glyphicon-remove" style="font-size: large; color: green"></span></a></td>
+                <td class="text-align-cls"><a class="send-sms-driver" href="#" data-enq-id="@item.gce_enq_id"><span class="glyphicon glyphicon-comment" style="font-size: large; color: green"></span></a></td>
+                <td class="text-align-cls"><a class="send-sms-cust" href="#" data-enq-id="@item.gce_enq_id"><span class="glyphicon glyphicon-comment" style="font-size: large; color: green"></span></a></td>
+            </tr>
+        }
+
+
+    </table>
+</div>
+<div class="pageination-footer home-page-paging">
+    <div class="pageination-from">
+        Page @ViewBag.Currentpage of @ViewBag.pagecount
+    </div>
+    <div class="pageination-page">
+        @*@Html.PagedListPager(Model, page => Url.Action("Index", new { x }))*@
+        @{
+            var currentPage = ViewBag.Currentpage;
+            var pagecutoff = 10;
+            var prevPosition = currentPage - pagecutoff;
+            var nextPosition = currentPage + pagecutoff;
+            var count = 0;
+            if (@ViewBag.pagecount >= 10)
+            {
+                count = 10;
+            }
+            else
+            {
+                count = @ViewBag.pagecount;
+            }
+            if (currentPage > count && count > 0)
+            {
+                <a href="@Url.Action("Index2", "Home", new { page = 1 })"><< </a>
+                <a href="@Url.Action("Index2", "Home", new { page = prevPosition })">< </a>
+            }
+            Int32 num = 0;
+            if (count > 0)
+            {
+                Int32 start = currentPage / count;
+                num = start * count + 1;
+            }
+            Int32 limit = num + count;
+            if (limit > @ViewBag.pagecount)
+            {
+                limit = @ViewBag.pagecount;
+            }
+            for (var x = num; x <= limit; x++)
+            {
+
+
+                //if (x != currentPage)
+                //{
+                //    if (x >= prevPosition && x <= nextPosition)
+                //    {
+                //        var linkToPage = x == prevPosition ? currentPage - 1 : x == nextPosition ? currentPage + 1 : x;
+                //     //   var linkText = x == prevPosition ? "<< prev" : x == nextPosition ? "next >>" :x;
+
+                //        //pagingControls += "<li><a href='#' onclick='pager.showPage(" + linkToPage + "); return false;'>" + linkText + "</a></li>";
+                //    }
+                //}
+                //else
+                //{
+                //    //pagingControls += "<li>" + i + "</li>";
+                //}
+
+                //if (x >= prevPosition && x <= nextPosition)
+                //{
+
+                //}
+                //else
+                //{
+                if (count > 0)
+                {
+                    if (x == currentPage)
+                    {
+                        <a class="active-page" href="@Url.Action("Index2", "Home", new { page = x })">@x </a>
+                    }
+                    else
+                    {
+                        <a href="@Url.Action("Index2", "Home", new { page = x })">@x </a>
+                    }
+                }
+                // }
+
+            }
+            if (currentPage != @ViewBag.pagecount && count > 0)
+            {
+                var nextPage = nextPosition;
+                if (nextPosition > @ViewBag.pagecount)
+                {
+                    nextPage = @ViewBag.pagecount;
+                }
+                <a href="@Url.Action("Index2", "Home", new { page = nextPage })">></a>
+                <a href="@Url.Action("Index2", "Home", new { page = @ViewBag.pagecount })">>></a>
+            }
+        }
+    </div>
+</div>

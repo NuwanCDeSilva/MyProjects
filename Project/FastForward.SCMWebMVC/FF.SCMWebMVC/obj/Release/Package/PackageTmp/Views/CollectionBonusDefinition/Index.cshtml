@@ -1,0 +1,194 @@
+﻿@{
+    ViewBag.Title = "Collection Bonus Definition";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/CollectionBonusDefinition.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Collection Bonus Percentage Definition</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+                <div class="panel panel-heading"></div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Circular Code</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="circode" name="circode" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  circular-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Commencing Date</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="startdate" name="startdate" class="form-control with-search" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Location Category</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownList("pccat", new List<SelectListItem>(), "Select Category", new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Target No Of Accounts</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="taccount" name="taccount" class="form-control with-search">
+                                    </div>                                   
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Bonus percentage</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="bonusp" name="bonusp" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Manager start date</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="shstartdate" name="shstartdate" class="form-control with-search" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="col-lg-8 control-label">Before</label>
+                                    <div class="col-md-2">
+                                        <input type="radio" id="chkBefore" name="chkvaloption" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="col-lg-8 control-label">After</label>
+                                    <div class="col-md-2">
+                                        <input type="radio" id="chkAfter" name="chkvaloption" class="form-control" checked>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-lg-4 control-label"><b>Showroom Available Years</b></label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">From</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="fromdate" name="fromdate" class="form-control with-search" >
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">To</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="todate" name="todate" class="form-control with-search" >
+                                    </div>
+                                </div>
+                                </div>
+                            <div class="row">
+                                <label class="col-lg-4 control-label"><b>Arrears Percentage</b></label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">From Value</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="arrfpercentage" name="arrfpercentage" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">To Value</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="arrtpercentage" name="arrtpercentage" class="form-control with-search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-lg-4 control-label"><b>Per A/C value</b></label>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">From Value</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="accfbalance" name="accfbalance" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">To Value</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="acctbalance" name="acctbalance" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="col-md-1">
+                                        <img src="~/Resources/Images/arrow_down.png" class="search-img add-acc">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="col-lg-4 control-label"><b>Channel</b></label>
+                                @*<div class="col-md-1">
+                            <label class="col-lg-10 control-label">With Balane</label>
+                            <input type="checkbox" id="chkop1" name="chkop1" />
+                        </div>*@
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-3 row item-range-scroll3">
+                                       @* <div class="panel panel-heading">
+                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
+                                @*<div class="col-md-3">@Html.CheckBox("chkmultiple")</div>
+    <div class="normal-font">Multiple</div>*@
+                                            @*</div>
+    </div>*@
+                                        <div class="panel panel-body company-tbl">
+                                            <table class="compny-display-tbl table">
+                                                <tr class="table-hed">
+                                                    <th>@Html.CheckBox("chkAllCompany")</th>
+                                                    <th>Code</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="comm-comm-list-div-scroll">
+                                            <table class="table table-striped table-hover acc-data-row">
+                                                <tr>
+                                                    <th style="color: black; font-size: x-small">Circular Code</th>
+                                                    <th style="color: black; font-size: x-small">Commencing Date</th>
+                                                    <th style="color: black; font-size: x-small">Location Category</th>
+                                                    <th style="color: black; font-size: x-small">Target No Of Accounts</th>
+                                                    <th style="color: black; font-size: x-small">Bonus percentage</th>
+                                                    <th style="color: black; font-size: x-small">Showroom Available From</th>
+                                                    <th style="color: black; font-size: x-small">Showroom Available To</th>
+                                                    <th style="color: black; font-size: x-small">Arrears Percentage From</th>
+                                                    <th style="color: black; font-size: x-small">Arrears Percentage To</th>
+                                                    <th style="color: black; font-size: x-small">Per A/C value From</th>
+                                                    <th style="color: black; font-size: x-small">Per A/C value To</th>
+                                                    <th style="color: black; font-size: x-small">Channel</th>
+                                                    <th style="color: black; font-size: x-small">Manager start date</th>
+                                                    <th style="color: black; font-size: x-small">Showroom Create Status</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</div>
+

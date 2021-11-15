@@ -1,0 +1,461 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-color: #fff;
+    color: #333;
+    font-family: "Tahoma",Verdana,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 12px;
+    line-height: 1.42857;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.container.body-content {
+    min-height: 538px;
+}1
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+/* start adding by nuwan*/
+/*login page design*/
+.main-login .panel-footer {
+    text-align: center;
+    background-color: #b3d9ff;
+}
+
+
+.btn-primary {
+    background-color: #337ab7;
+    border-color: #2e6da4;
+    color: #fff;
+}
+
+.row.error-msg div{
+    background-color: rgb(242, 222, 222);
+    border-color: rgb(235, 204, 209);
+    color: red;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+    padding-top: 6px;
+    text-align:center;
+    font-size:14px;
+}
+.main-login .panel-heading {
+    margin-bottom: 20px;
+    background-color: #b3d9ff;
+}
+.row.notice-msg div {
+    background-color: #ffff66;
+    border-color: rgb(235, 204, 209);
+    color: black;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+    padding-top: 6px;
+    text-align:center;
+    font-size:14px;
+}
+.main-login {
+    margin-top:45px;
+}
+.main-login .panel-default {
+    border-color: #b3d9ff;
+}
+.row.navbar.navbar-inverse.navbar-fixed-top.error-msg {
+
+    background-color: rgb(242, 222, 222);
+    border-color: rgb(235, 204, 209);
+    color: red;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+    padding-top: 6px;
+}
+.row.navbar.navbar-inverse.navbar-fixed-top.notice-msg {
+
+    background-color: #ffff66;
+    border-color: rgb(235, 204, 209);
+    color: #66ccff;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+    padding-top: 6px;
+}
+.company-logo img{
+   width:105px;
+   height:48px;
+}
+ul.login-ul li {
+    font-size:14px;
+}
+ul.login-ul li a.login-user-cls {
+    cursor:pointer;
+}
+
+footer.home-view-footer {
+    font-size: 12px;
+    padding-top:5px;
+    text-align: center;
+    background-color:#b3d9ff;
+    height:30px;
+    border-top-color:black;
+    border-top: ridge ;
+}
+.noscriptmsg div {
+    text-align:center;
+    font-size:14px;
+    background-color:red;
+    color:white;
+}
+.load-company > img {
+    margin-left: -24px;
+    margin-top: -5px;
+    width: 40px;
+}
+.refresh-head-div {
+    text-align:center;
+}
+.container.container-main-login {
+
+    max-width: 1024px;
+}
+
+form.form-horizontal.login-form {
+    padding-left: 5%;
+}
+/*logi page design end*/
+
+/*acount details panel design*/
+/*.container div#spinner
+{
+    display: none;
+    width:100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background:url(../Resources/Images/spinner.gif) no-repeat center #fff;
+    text-align:center;
+    padding:10px;
+    font:normal 16px Tahoma, Geneva, sans-serif;
+    border:1px solid #666;
+    margin-left: -50px;
+    margin-top: -50px;
+    z-index:2;
+    overflow: auto;
+}*/
+
+*.container div#spinner >img {
+    left: 41%;
+    position: absolute;
+    top: 38%;
+    width: 75px;
+    z-index: 24;
+    display:none;
+}
+
+.navbar-main-page {
+    background-color: #b3d9ff;
+    border: medium none #b3d9ff;
+}
+.navbar-main-page .nav.navbar-nav.menu-item a {
+    color: #000000;
+}
+.navbar-main-page .nav.navbar-nav.menu-item a:hover {
+    color: #ffffff;
+}
+.navbar-brand.main-title {
+    color:#000000;
+    font-weight:lighter;
+}
+.nav.navbar-nav.navbar-right.login-ul.main-logoff a {
+    font-size:0.8em;
+    color:#000000;
+    font-weight:bold;
+}
+.nav.navbar-nav.navbar-right.login-ul.main-logoff a:hover {
+    color:#ffffff;
+}
+.user-det-panel {
+    background: #ffffff none repeat scroll 0 0;
+    border-color: #b3d9ff;
+    border-style: solid;
+    height: 330%;
+    left: 76%;
+    position: absolute;
+    top: 100%;
+    width: 20%;
+    z-index: 100;
+    font-size:10px;
+}
+.navbar-brand {
+    float: left;
+    font-size: 16px;
+    line-height: 20px;
+    padding: 15px;
+}
+.user-det-panel .user-image {
+    height: 56%;
+    margin-left: 5px;
+    margin-top: 5px;
+    position: relative;
+    width: 40%;
+}
+
+
+.my-acc-btn .btn.btn-primary.my-account-btn {
+    font-size: 10px;
+    margin-left: 20px;
+    position: relative;
+    top: 15px;
+    width: 85px;
+}
+
+.user-det-panel .img-box {
+    float:right;
+    position: absolute;
+}
+
+.user-det-panel .det-box {
+    float:right;
+     margin-top: 10px;
+}
+.user-det-panel .det-box .det-cls{
+   
+}
+.user-det-panel .det-box {
+    width: 135px;
+}
+
+.det-box .name {
+    float: left;
+}
+
+.det-box .val {
+    font-weight:bold;
+}
+/*acccount details panel design end*/
+
+
+/*home page design*/
+.index-body {
+    padding-top: 10px;
+}
+
+hr {
+    margin-bottom: 0;
+}
+.jumbotron {
+    background-color:#b3d9ff;
+}
+
+
+.jumbotron {
+    color: inherit;
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 2.14286;
+}
+.form-control {
+    height:28px;
+    font-size:12px;
+}
+/*error message design*/
+.navbar-fixed-top.navbar-main-page .main-pge-msg {
+    display:none;
+    background-color: rgb(242, 222, 222);
+    border-color: rgb(235, 204, 209);
+    color: red;
+    margin-bottom: 4px;
+    padding-bottom: 8px;
+    padding-top: 6px;
+    text-align:center;
+    font-size:13px;
+}
+
+.after-log .row.navbar.navbar-inverse.navbar-fixed-top.error-msg {
+    margin-top: 50px;
+    padding-bottom: 0;
+}
+.after-log .row.navbar.navbar-inverse.navbar-fixed-top.notice-msg {
+
+    margin-top: 50px;
+    padding-bottom: 0;
+}
+/*end error message design*/
+
+.error-page {
+    font-family: "Algerian",cursive;
+}
+.error-page.wrap{
+	margin:0 auto;
+	width:100%;
+	}
+.error-page .logo h1{
+	font-size:200px;
+	color:black;
+	text-align:center;
+    margin-top:150px;
+	margin-bottom:1px;
+	text-shadow:1px 1px 6px #555;
+    font-family: "Metal Macabre",cursive;
+	}	
+.error-page .logo p{
+	color:#0086b3;
+	font-size:20px;
+	margin-top:1px;
+	text-align:center;
+}	
+.error-page .logo p span{
+	color:lightgreen;
+}	
+	
+.error-page .sub a{
+	color:yellow;
+	background:#06afd8;
+	text-decoration:none;
+	padding:5px;
+	font-size:13px;
+	font-family: arial, serif;
+	font-weight:bold;
+	}
+.download-xml-form select {
+    font-size:11px;
+}
+.download-xml-form .form-control select {
+    height: 32px;
+}
+/*home page design end*/
+
+
+/*start search popup design*/
+    .modal-dialog {
+        /*width: 680px;*/
+        width:51%;
+        padding-top: 115px;
+    }
+    #myModalContent {
+        height: 242px;
+        overflow-y: scroll;
+        width:100%;
+    }
+    #myModal .modal-content .Title {
+        background-color: #b3d9ff;
+        border-radius: 5px;
+        clear: both;
+        height: 30px;
+        width: 100%;
+    } 
+   
+    #myModal .modal-content .alignright {
+	    background-image: url("../Resources/Images/close.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        float: right;
+        height: 25px;
+        margin-right: -11px;
+        margin-top: -9px;
+        text-align: center;
+        width: 25px;
+    }
+    #myModal .modal-content .alignright:hover{
+	    cursor:pointer;
+    }
+    #myModal .modal-content .alignleft {
+        float: left;
+    }
+    #myModalContent table tr.coloured {
+        background-color: #ededed;
+    }
+    #myModal .modal-content .search-field {
+        clear: both;
+        height: 35px;
+        padding-top: 10px;
+    }
+    #myModal .modal-content  .left-align {
+        float:left;
+        margin-left: 7px;
+    }
+    #myModal .modal-content  .right-align {
+        float:right;
+        margin-right: 5px;
+    }
+     #myModal .modal-content .search-field .left-align.seach-key-title {
+        padding-right: 8px;
+    }
+    #myModal .modal-content .search-field .left-align.seach-key-type {
+        padding-right:8px;
+    }
+    
+    #myModalContent .table-responsive {
+        font-size: 10px;
+    }
+    #myModalContent .table-responsive table tr td, div#myModalContent  div.table-responsive table.table thead tr th {
+        border:1px solid black;
+        border-color:#3E81F6;
+    }
+    #myModal .modal-content .cls-pge-footer {
+        clear:both;
+        width:100%;
+    }
+    #myModal .modal-content .cls-page-num {
+         margin-left: 7px;
+        float:left;
+        width:auto;
+    }
+    #myModal .modal-content .cls-pge-cunt {
+        padding-right: 8px;
+        float:right;
+        width:auto;
+    }
+
+    .no-js #loader { display: none;  }
+    .js #loader { display: block; position: absolute; left: 100px; top: 0; }
+    #myModal .se-pre-con {
+	    background: #fff url("../Resources/Images/Preloader.gif") no-repeat scroll center center;
+        height: 48px;
+        left: 45%;
+        position: fixed;
+        top: 55%;
+        width: 48px;
+        z-index: 9999;
+        display:none;
+    }
+     .cls-pge-footer.pagination {
+        border-radius: 4px;
+        display: inline-block;
+        margin: 7px 0;
+        padding-left: 0;
+    }
+   .cls-pages #paging .pagination {
+        border-radius: 4px;
+        display: inline-block;
+        margin: 0;
+        padding-left: 0;
+    }
+    #ui-datepicker-div {
+        font-size: 10px;
+    }
+    /*end search popup design*/
+/*end adding*/
+.description {
+    width: 75%;
+}
+.animation {
+    /*margin-left: 178px;*/
+}
+.jumbotron {
+    text-align: center;
+}

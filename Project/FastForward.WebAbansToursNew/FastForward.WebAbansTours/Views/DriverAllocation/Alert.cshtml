@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Alert";
+}
+
+
+@section Scripts{
+    <script src="~/Scripts/Common/fleet2.js"></script>
+    <script src="~/Scripts/Common/Fleet.js"></script>
+}
+<div class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> Successful Submission!!...
+</div>
+<script>
+    //Lobibox.alert("Submit Complete");
+   // setSuccesssMsg("Submit Complete");
+    confirm("Submit Complete");
+    setTimeout(function () {
+        $(".alert").alert('close');
+    }, 2000);
+   // document.location.reload("FleetDefinition/Index");
+    window.location.href = "/DriverAllocation/Index";
+</script>

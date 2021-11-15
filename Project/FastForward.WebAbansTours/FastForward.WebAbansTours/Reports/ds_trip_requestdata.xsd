@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_trip_requestdata" targetNamespace="http://tempuri.org/ds_trip_requestdata.xsd" xmlns:mstns="http://tempuri.org/ds_trip_requestdata.xsd" xmlns="http://tempuri.org/ds_trip_requestdata.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_trip_requestdata" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_trip_requestdata" msprop:Generator_UserDSName="ds_trip_requestdata">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="TripRequestData" msprop:Generator_TableClassName="TripRequestDataDataTable" msprop:Generator_TableVarName="tableTripRequestData" msprop:Generator_TablePropName="TripRequestData" msprop:Generator_RowDeletingName="TripRequestDataRowDeleting" msprop:Generator_RowChangingName="TripRequestDataRowChanging" msprop:Generator_RowEvHandlerName="TripRequestDataRowChangeEventHandler" msprop:Generator_RowDeletedName="TripRequestDataRowDeleted" msprop:Generator_UserTableName="TripRequestData" msprop:Generator_RowChangedName="TripRequestDataRowChanged" msprop:Generator_RowEvArgName="TripRequestDataRowChangeEvent" msprop:Generator_RowClassName="TripRequestDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gce_enq_id" msprop:Generator_ColumnVarNameInTable="columngce_enq_id" msprop:Generator_ColumnPropNameInRow="gce_enq_id" msprop:Generator_ColumnPropNameInTable="gce_enq_idColumn" msprop:Generator_UserColumnName="gce_enq_id" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_com" msprop:Generator_ColumnVarNameInTable="columngce_com" msprop:Generator_ColumnPropNameInRow="gce_com" msprop:Generator_ColumnPropNameInTable="gce_comColumn" msprop:Generator_UserColumnName="gce_com" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_pc" msprop:Generator_ColumnVarNameInTable="columngce_pc" msprop:Generator_ColumnPropNameInRow="gce_pc" msprop:Generator_ColumnPropNameInTable="gce_pcColumn" msprop:Generator_UserColumnName="gce_pc" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_dt" msprop:Generator_ColumnVarNameInTable="columngce_dt" msprop:Generator_ColumnPropNameInRow="gce_dt" msprop:Generator_ColumnPropNameInTable="gce_dtColumn" msprop:Generator_UserColumnName="gce_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="gce_cus_cd" msprop:Generator_ColumnVarNameInTable="columngce_cus_cd" msprop:Generator_ColumnPropNameInRow="gce_cus_cd" msprop:Generator_ColumnPropNameInTable="gce_cus_cdColumn" msprop:Generator_UserColumnName="gce_cus_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_name" msprop:Generator_ColumnVarNameInTable="columngce_name" msprop:Generator_ColumnPropNameInRow="gce_name" msprop:Generator_ColumnPropNameInTable="gce_nameColumn" msprop:Generator_UserColumnName="gce_name" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_add1" msprop:Generator_ColumnVarNameInTable="columngce_add1" msprop:Generator_ColumnPropNameInRow="gce_add1" msprop:Generator_ColumnPropNameInTable="gce_add1Column" msprop:Generator_UserColumnName="gce_add1" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_add2" msprop:Generator_ColumnVarNameInTable="columngce_add2" msprop:Generator_ColumnPropNameInRow="gce_add2" msprop:Generator_ColumnPropNameInTable="gce_add2Column" msprop:Generator_UserColumnName="gce_add2" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_mob" msprop:Generator_ColumnVarNameInTable="columngce_mob" msprop:Generator_ColumnPropNameInRow="gce_mob" msprop:Generator_ColumnPropNameInTable="gce_mobColumn" msprop:Generator_UserColumnName="gce_mob" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_expect_dt" msprop:Generator_ColumnVarNameInTable="columngce_expect_dt" msprop:Generator_ColumnPropNameInRow="gce_expect_dt" msprop:Generator_ColumnPropNameInTable="gce_expect_dtColumn" msprop:Generator_UserColumnName="gce_expect_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="gce_frm_tn" msprop:Generator_ColumnVarNameInTable="columngce_frm_tn" msprop:Generator_ColumnPropNameInRow="gce_frm_tn" msprop:Generator_ColumnPropNameInTable="gce_frm_tnColumn" msprop:Generator_UserColumnName="gce_frm_tn" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_to_tn" msprop:Generator_ColumnVarNameInTable="columngce_to_tn" msprop:Generator_ColumnPropNameInRow="gce_to_tn" msprop:Generator_ColumnPropNameInTable="gce_to_tnColumn" msprop:Generator_UserColumnName="gce_to_tn" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_veh_tp" msprop:Generator_ColumnVarNameInTable="columngce_veh_tp" msprop:Generator_ColumnPropNameInRow="gce_veh_tp" msprop:Generator_ColumnPropNameInTable="gce_veh_tpColumn" msprop:Generator_UserColumnName="gce_veh_tp" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_fleet" msprop:Generator_ColumnVarNameInTable="columngce_fleet" msprop:Generator_ColumnPropNameInRow="gce_fleet" msprop:Generator_ColumnPropNameInTable="gce_fleetColumn" msprop:Generator_UserColumnName="gce_fleet" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_driver" msprop:Generator_ColumnVarNameInTable="columngce_driver" msprop:Generator_ColumnPropNameInRow="gce_driver" msprop:Generator_ColumnPropNameInTable="gce_driverColumn" msprop:Generator_UserColumnName="gce_driver" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_guess" msprop:Generator_ColumnVarNameInTable="columngce_guess" msprop:Generator_ColumnPropNameInRow="gce_guess" msprop:Generator_ColumnPropNameInTable="gce_guessColumn" msprop:Generator_UserColumnName="gce_guess" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_frm_add" msprop:Generator_ColumnVarNameInTable="columngce_frm_add" msprop:Generator_ColumnPropNameInRow="gce_frm_add" msprop:Generator_ColumnPropNameInTable="gce_frm_addColumn" msprop:Generator_UserColumnName="gce_frm_add" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_to_add" msprop:Generator_ColumnVarNameInTable="columngce_to_add" msprop:Generator_ColumnPropNameInRow="gce_to_add" msprop:Generator_ColumnPropNameInTable="gce_to_addColumn" msprop:Generator_UserColumnName="gce_to_add" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_no_pass" msprop:Generator_ColumnVarNameInTable="columngce_no_pass" msprop:Generator_ColumnPropNameInRow="gce_no_pass" msprop:Generator_ColumnPropNameInTable="gce_no_passColumn" msprop:Generator_UserColumnName="gce_no_pass" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_ret_dt" msprop:Generator_ColumnVarNameInTable="columngce_ret_dt" msprop:Generator_ColumnPropNameInRow="gce_ret_dt" msprop:Generator_ColumnPropNameInTable="gce_ret_dtColumn" msprop:Generator_UserColumnName="gce_ret_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="gce_frm_contry" msprop:Generator_ColumnVarNameInTable="columngce_frm_contry" msprop:Generator_ColumnPropNameInRow="gce_frm_contry" msprop:Generator_ColumnPropNameInTable="gce_frm_contryColumn" msprop:Generator_UserColumnName="gce_frm_contry" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_dest_contry" msprop:Generator_ColumnVarNameInTable="columngce_dest_contry" msprop:Generator_ColumnPropNameInRow="gce_dest_contry" msprop:Generator_ColumnPropNameInTable="gce_dest_contryColumn" msprop:Generator_UserColumnName="gce_dest_contry" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_fly_no" msprop:Generator_ColumnVarNameInTable="columngce_fly_no" msprop:Generator_ColumnPropNameInRow="gce_fly_no" msprop:Generator_ColumnPropNameInTable="gce_fly_noColumn" msprop:Generator_UserColumnName="gce_fly_no" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_fly_date" msprop:Generator_ColumnVarNameInTable="columngce_fly_date" msprop:Generator_ColumnPropNameInRow="gce_fly_date" msprop:Generator_ColumnPropNameInTable="gce_fly_dateColumn" msprop:Generator_UserColumnName="gce_fly_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="gce_tr_code" msprop:Generator_ColumnVarNameInTable="columngce_tr_code" msprop:Generator_ColumnPropNameInRow="gce_tr_code" msprop:Generator_ColumnPropNameInTable="gce_tr_codeColumn" msprop:Generator_UserColumnName="gce_tr_code" type="xs:string" minOccurs="0" />
+              <xs:element name="fromdate" msprop:Generator_ColumnVarNameInTable="columnfromdate" msprop:Generator_ColumnPropNameInRow="fromdate" msprop:Generator_ColumnPropNameInTable="fromdateColumn" msprop:Generator_UserColumnName="fromdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="todate" msprop:Generator_ColumnVarNameInTable="columntodate" msprop:Generator_ColumnPropNameInRow="todate" msprop:Generator_ColumnPropNameInTable="todateColumn" msprop:Generator_UserColumnName="todate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="gce_enq_tp" msprop:Generator_ColumnVarNameInTable="columngce_enq_tp" msprop:Generator_ColumnPropNameInRow="gce_enq_tp" msprop:Generator_ColumnPropNameInTable="gce_enq_tpColumn" msprop:Generator_UserColumnName="gce_enq_tp" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

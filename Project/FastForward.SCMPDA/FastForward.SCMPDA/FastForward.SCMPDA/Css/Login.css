@@ -1,0 +1,81 @@
+﻿body {
+    font-size: 12px;
+    font-family: Tahoma;
+    margin: 0;
+    width: 100%;
+}
+
+.main-login {
+    border: 1px solid;
+    width: 200px;
+}
+
+.login-pge-lbl {
+    float: left;
+    width: 60px;
+}
+
+.logincopyrightlabel {
+    font-size: 10px;
+    text-align: center;
+    background-color: #8FA5DE;
+}
+
+.defaultpanelheader {
+    text-align: center;
+    background-color: #8FA5DE;
+}
+
+.btn-primary {
+    background-color: #ffffcc;
+    border: 1px solid #003399;
+    color: #003399;
+    font-family: "trebuchet ms",helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.login-body {
+    padding: 6px;
+}
+
+.login-pge-txt {
+    height: 14px;
+    width: 105px;
+}
+
+#ddlcompany {
+    height: 19px;
+    width: 111px;
+}
+
+#btnlogin {
+    float: inherit;
+}
+
+.login-pge-txt, .login-pge-drop {
+    font-size: 10px;
+}
+
+#ddlcompany option {
+    width: 115px;
+}
+
+.btn-log-cont {
+    margin-right: 17px;
+    text-align: right;
+}
+
+.log-bdy {
+    margin: 0 auto;
+    text-align: left;
+    width: 200px;
+}
+#marqueecontainer {
+    height: 100px;
+    overflow: hidden;
+    padding: 2px 2px 2px 4px;
+    position: relative;
+    width: 200px;
+    text-align: center;
+}

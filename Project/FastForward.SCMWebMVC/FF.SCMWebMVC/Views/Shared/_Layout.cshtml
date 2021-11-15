@@ -1,0 +1,108 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SCM WEB</title>
+    @{
+
+        var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+    }
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/Site.css?@val" rel="stylesheet" />
+    <link href="~/Content/lightbox.css" rel="stylesheet" />
+    <link href="~/Content/responsive-tabs.css" rel="stylesheet" />
+    @RenderSection("style", required: false)
+
+</head>
+<body>
+            @Html.Partial("_LoginPartial")
+
+    <div class="container body-content">
+        @RenderBody()
+        <div id='myModal' class='modal fade in'>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="se-pre-con"></div>
+                    <div class="Title panel-heading">
+                        <div class="alignleft serch-panel-title">Document search</div>
+                        <div class="alignright close-btn"></div>
+                    </div>
+                    <div class="search-field">
+                        <div class="left-align">
+                            <div class="left-align seach-key-title">Search by key :</div>
+                            <div class="right-align">
+                                <select class="filter-key-cls form-control" name="Key">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="right-align">
+                            <div class="left-align seach-key-type">Search by word : </div>
+                            <div class="right-align">@Html.TextBox("KeyWord")</div>
+                        </div>
+                    </div>
+
+                    <div id='myModalContent'>
+
+                        <div class="container">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="coloured"></tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="pagination cls-pge-footer">
+                        <div class="cls-page-num">
+                            <div class="left-align">Page :</div>
+                            <div class="right-align cls-pages"><div id="paging"></div></div>
+                        </div>
+                        <div class="cls-pge-cunt">
+                            <div class="left-align">
+                                Number per page :
+                            </div>
+                            <div class="right-align">
+                                <select name="Key" class="cls-select-page-cont">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="500">500</option>
+                                    <option value="1000">1000</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="datepicker"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="page-loadin"><img src="~/Resources/Images/ajaxload.gif"></div>
+
+        <hr />
+        <div class="footer">
+            <p> &copy;@DateTime.Now.Year Sirius Technologies Service (Pvt) Ltd </p>
+        </div>
+    </div>
+    <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/Common/jquery-ui.js"></script>
+    <script src="~/Scripts/Common/lightbox.js"></script>
+    <script src="~/Scripts/Common/responsive-tabs.js"></script>
+    <script src="~/Scripts/Common/jquery.bootpag.min.js"></script>
+    <script src="~/Scripts/Common/CommonSearch.js?@val"></script>
+    <script src="~/Scripts/Common/Site.js?@val"></script>
+    @RenderSection("scripts", required: false)
+  
+            
+</body>
+</html>

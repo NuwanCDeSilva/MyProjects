@@ -1,0 +1,149 @@
+﻿
+.commonPageCss
+{
+   font-family: Verdana;
+   font-size: 11px;
+}
+
+ .tabPanelCss
+{
+   font-family: Verdana;
+   font-size: 11px;  
+   width:100%; 
+ }
+
+ .commonCTRLCss
+{
+   font-family:Verdana;
+   font-size: 11px;
+}
+
+ .ucMainDiVCss
+{
+     float:left;
+     width:100%;
+     font-family: Verdana;
+     font-size: 11px;
+     padding:5px 10px 5px;
+}
+
+   .TabContainer
+        {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .MainDivCss
+        {
+            float: left;
+            width: 100%;
+            padding-left: 25px;
+            padding-right: 25px;
+            font-family: Verdana;
+            font-size: 11px;
+        }
+        .SubDivCss
+        {
+            float: left;
+            width: 50%;
+        }
+        .innerLeftDivCss
+        {
+            float: left;
+            width: 30%;
+            padding-bottom: 2px;
+            padding-top: 2px;
+            vertical-align:bottom;
+        }
+        .innerRightDivCss
+        {
+            float: left;
+            width: 50%;
+            padding-bottom: 2px;
+            padding-top: 2px;
+        }
+        .commonDDLCss
+        {
+            font-family: Verdana;
+            font-size: 11px;
+        }
+        .numericFieldCss
+        {
+            width: 30px;
+            text-align: right;
+        }
+        
+        /*-------------------- Common Search User Control CSS -------------------------------------*/
+        
+         .modalBackground
+    {
+        background-color: #CCCCFF;
+        filter: alpha(opacity=40);
+        opacity: 0.5;
+    }
+    
+    .ModalWindow
+    {
+        border: solid 1px #c0c0c0;
+        background: #f0f0f0;
+        padding: 0px 0px 0px 0px;
+        position: absolute;
+        top: -1000px;
+    }
+    
+    .popUpHeader
+    {
+        background-color: Navy;
+        color: White;
+        width: 100%;
+        height: 20px;
+        float: left;
+    }
+    
+    .subPanelCss
+    {
+        padding: 0px 10px 0px 10px;
+    }
+    
+    .numericInput
+    {
+      text-align : right;               
+    }
+        
+    .uctxt 
+    { 
+        text-transform:uppercase; 
+    }    
+
+
+
+/*-- 15/10/2012 --*/
+
+.modalBackground
+    {
+        background-color: #CCCCFF;
+        filter: alpha(opacity=40);
+        opacity: 0.5;
+    }
+    
+    .ModalWindow
+    {
+        border: solid 1px #c0c0c0;
+        background: #f0f0f0;
+        padding: 0px 0px 0px 0px;
+        position: absolute;
+        top: -1000px;
+    }
+    
+    .popUpHeader
+    {
+        background-color: Navy;
+        color: White;
+        width: 100%;
+        height: 20px;
+        float: left;
+    }
+    
+    .subPanelCss
+    {
+        padding: 0px 10px 0px 10px;
+    }

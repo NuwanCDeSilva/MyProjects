@@ -1,0 +1,302 @@
+﻿@model FF.BusinessObjects.QUO_COST_HDR
+@{
+    ViewBag.Title = "Quotation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/DataEntry.js?@val"></script>
+    <script src="~/Scripts/Common/Quotation.js?@val"></script>
+}
+
+
+<div class="qutation-vw-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Quotation</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-qtatn-clear-data" />
+                <input type="submit" value="Save" class="btn btn-default btn-default-style btn-qtatn-save-data" />
+                <input type="submit" value="Reset" class="btn btn-default btn-default-style btn-qtatn-enq-reset" />
+                <input type="submit" value="Approve" class="btn btn-default btn-default-style btn-qtatn-enq-approve" />
+                <input type="submit" value="Genarate PO" class="btn btn-default btn-default-style btn-qtatn-genarate-po" />
+                <input type="submit" value="Print" class="btn btn-default btn-default-style btn-print-qtatn-sheet" />
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("Quotation", "Quotation", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-qutation-det", role = "form", @id = "quotation-crte-frm" }))
+    {
+        <div class="demopage">
+            <div class="container1">
+                <div class="panel-sep">
+
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Quotation</div>
+                            <div class="panel panel-body tab-content-cls">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Client</label>
+                                            <div class="col-md-8">
+                                                @Html.EditorFor(model => model.QCH_CUS_CD, new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                                <img src="~/Resources/Images/Search-icon.png" class="search-img qch-cuscd-search" title="Search">
+                                                <img src="~/Resources/Images/Add-cust.png" class="search-img qch-cuscd-add" title="Create Customer">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Date</label>
+                                            <div class="col-md-8">
+                                                @Html.EditorFor(model => model.QCH_DT, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Enquiry Id</label>
+                                            <div class="col-md-8">
+                                                @if (ViewBag.enqId != null)
+                                                {
+                                                    @Html.EditorFor(model => model.QCH_OTH_DOC, new { htmlAttributes = new { @class = "form-control with-search", Value = @ViewBag.enqId } })
+                                                }
+                                                else
+                                                {
+                                                    @Html.EditorFor(model => model.QCH_OTH_DOC, new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                }
+
+                                                <img src="~/Resources/Images/Search-icon.png" class="search-img costsheet-enq-search" title="Search">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">REF</label>
+                                            <div class="col-md-8">
+                                                @Html.EditorFor(model => model.QCH_REF, new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Quotation Status</label>
+                                            <label class="col-md-8 control-label cost-sheet-status">---</label>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Total PAX</label>
+                                            <div class="col-md-8">
+                                                @Html.EditorFor(model => model.QCH_TOT_PAX, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Quotation Number</label>
+                                            <label class="col-md-8 control-label cost-sheet-number">---</label>
+                                        </div>
+                                        <div class="col-md-6 send-cus-sms">
+                                            <label class="col-md-4 control-label">Send SMS to Customer</label>
+                                            <div class="col-md-4">
+                                                @Html.CheckBox("SendSmsCus", new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Charges</div>
+                            <div class="panel panel-body tab-content-cls">
+                                <div class="row">
+                                    <div class="col-md-2 form-group">
+                                        <label class="col-md-12 control-label">Service</label>
+                                        <div class="col-md-12">
+                                            @Html.DropDownList("CostService", new List<SelectListItem>(), "-Select-", new { @class = "form-control service-dropdown" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        <label class="col-md-12 control-label">Charge Code</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostChargCode", new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img chrg-data-cd-search" title="Search">
+                                            @Html.Hidden("ServiceByCus")
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        <label class="col-md-12 control-label">Currency</label>
+                                        <div class="col-md-12">
+                                            <div class="col-md-7">
+                                                @Html.DropDownList("CostCurrency", new List<SelectListItem>(), "-Select-", new { @class = "form-control currency-dropdown", @readonly = "readonly", @disabled = "disabled" })
+                                            </div>
+                                            <label class="col-md-4 currancy-rate-amt">0.00</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">PAX</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostPax", new { htmlAttributes = new { @class = "form-control required-field", @Placeholder = "0" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">FARE</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostFare", new { htmlAttributes = new { @class = "form-control required-field", @Placeholder = "0.00" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">TAX</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostTax", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @Placeholder = "0.00" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Total</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostTotal", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0.00", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Markup</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostMarkup", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0%" } })
+                                            @Html.Editor("CostMarkupAmount", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0.00" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Total LKR</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostTotalLkr", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @Placeholder = "0.00" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        <label class="col-md-12 control-label">Remarks</label>
+                                        <div class="col-md-12">
+                                            @Html.TextArea("CostRemarks", new { @class = "form-control addres-set required-field", maxLength = "200" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label"></label>
+                                        <div class="col-md-12">
+                                            <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img  add-cost-charg-data" title="Add">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <input type="submit" value="View Summery" class="btn btn-default btn-default-style btn-qtatn-summary" />
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-11">
+                                        <table class="cost-sheet-table table">
+                                            <tr class="table-hed">
+                                                <th>Service</th>
+                                                <th style="display:none;">CategoryCode</th>
+                                                <th>Charge</th>
+                                                <th>Description</th>
+                                                <th>Service By</th>
+                                                <th>Currency</th>
+                                                <th>PAX</th>
+                                                <th>Unit Cost</th>
+                                                <th>Tax</th>
+                                                <th>Total Cost</th>
+                                                <th>Markup %</th>
+                                                <th>Markup Amt</th>
+                                                <th>Total Cost(LKR)</th>
+                                                <th>Remark</th>
+                                                <th></th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <div class="col-md-8">
+                                        </div>
+                                        <div class="col-md-4">
+                                            Total FARE
+                                            @Html.Editor("totalFare", new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0.00", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2">
+                                        Total TAX
+                                        @Html.Editor("totalTax", new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0.00", @readonly = "readonly" } })
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        Total Cost
+                                        @Html.Editor("totalCost", new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0.00", @readonly = "readonly" } })
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        Total Amount(LkR)
+                                        @Html.Editor("totalCostLKR", new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0.00", @readonly = "readonly" } })
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 form-group">
+                                    </div>
+                                    <div class="col-md-3">
+                                        Markup
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        @Html.EditorFor(model => model.QCH_MARKUP, new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0%" } })
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        @Html.EditorFor(model => model.QCH_MARKUP_AMT, new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0.00" } })
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 form-group">
+                                    </div>
+                                    <div class="col-md-3">
+                                        Total AF Markup
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        @Html.EditorFor(model => model.QCH_TOT_VALUE, new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0.00", @readonly = "readonly" } })
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        @Html.Editor("groupText", new { htmlAttributes = new { @class = "form-control", @Value = "Abans GRP RTE", @disabled = "disabled" } })
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-5 form-group">
+                                    </div>
+                                    <div class="col-md-3">
+                                        Quote Per PAX
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        @Html.Editor("QuotePerPax", new { htmlAttributes = new { @class = "form-control text-left-align", @Placeholder = "0.00", @readonly = "readonly" } })
+                                    </div>
+                                    <div class="col-md-2 form-group">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="customer-create-popup">
+        @Html.Partial("~/Views/Shared/_Customer.cshtml")
+    </div>
+    <div class="summery-popup">
+        <div id="dialog-message" title="Charge Summary">
+            <span class="ui-state-default"><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 0 0;"></span></span>
+            <div class="charge-content" style="margin-left: 23px;">
+                
+            </div>
+        </div>
+    </div>
+</div>

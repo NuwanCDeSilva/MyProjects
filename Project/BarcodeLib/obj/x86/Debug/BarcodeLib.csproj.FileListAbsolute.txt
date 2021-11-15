@@ -1,0 +1,5 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\BarcodeLib\bin\x86\Debug\BarcodeLib.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\BarcodeLib\bin\x86\Debug\BarcodeLib.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\BarcodeLib\obj\x86\Debug\BarcodeLib.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\BarcodeLib\obj\x86\Debug\BarcodeLib.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\BarcodeLib\obj\x86\Debug\BarcodeLib.pdb

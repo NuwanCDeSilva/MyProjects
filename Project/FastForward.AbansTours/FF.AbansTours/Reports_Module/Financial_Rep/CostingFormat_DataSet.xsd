@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CostingFormat_DataSet" targetNamespace="http://tempuri.org/CostingFormat_DataSet.xsd" xmlns:mstns="http://tempuri.org/CostingFormat_DataSet.xsd" xmlns="http://tempuri.org/CostingFormat_DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CostingFormat_DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="CostingFormat_DataSet" msprop:Generator_UserDSName="CostingFormat_DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Costing_format" msprop:Generator_TableClassName="Costing_formatDataTable" msprop:Generator_TableVarName="tableCosting_format" msprop:Generator_TablePropName="Costing_format" msprop:Generator_RowDeletingName="Costing_formatRowDeleting" msprop:Generator_RowChangingName="Costing_formatRowChanging" msprop:Generator_RowEvHandlerName="Costing_formatRowChangeEventHandler" msprop:Generator_RowDeletedName="Costing_formatRowDeleted" msprop:Generator_UserTableName="Costing_format" msprop:Generator_RowChangedName="Costing_formatRowChanged" msprop:Generator_RowEvArgName="Costing_formatRowChangeEvent" msprop:Generator_RowClassName="Costing_formatRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="QCH_COST_NO" msprop:Generator_ColumnVarNameInTable="columnQCH_COST_NO" msprop:Generator_ColumnPropNameInRow="QCH_COST_NO" msprop:Generator_ColumnPropNameInTable="QCH_COST_NOColumn" msprop:Generator_UserColumnName="QCH_COST_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="QCD_CAT" msprop:Generator_ColumnVarNameInTable="columnQCD_CAT" msprop:Generator_ColumnPropNameInRow="QCD_CAT" msprop:Generator_ColumnPropNameInTable="QCD_CATColumn" msprop:Generator_UserColumnName="QCD_CAT" type="xs:string" minOccurs="0" />
+              <xs:element name="QCD_SUB_CATE" msprop:Generator_ColumnVarNameInTable="columnQCD_SUB_CATE" msprop:Generator_ColumnPropNameInRow="QCD_SUB_CATE" msprop:Generator_ColumnPropNameInTable="QCD_SUB_CATEColumn" msprop:Generator_UserColumnName="QCD_SUB_CATE" type="xs:string" minOccurs="0" />
+              <xs:element name="QCD_DESC" msprop:Generator_ColumnVarNameInTable="columnQCD_DESC" msprop:Generator_ColumnPropNameInRow="QCD_DESC" msprop:Generator_ColumnPropNameInTable="QCD_DESCColumn" msprop:Generator_UserColumnName="QCD_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="QCD_TAX" msprop:Generator_ColumnVarNameInTable="columnQCD_TAX" msprop:Generator_ColumnPropNameInRow="QCD_TAX" msprop:Generator_ColumnPropNameInTable="QCD_TAXColumn" msprop:Generator_UserColumnName="QCD_TAX" type="xs:double" minOccurs="0" />
+              <xs:element name="QCD_TOT_COST" msprop:Generator_ColumnVarNameInTable="columnQCD_TOT_COST" msprop:Generator_ColumnPropNameInRow="QCD_TOT_COST" msprop:Generator_ColumnPropNameInTable="QCD_TOT_COSTColumn" msprop:Generator_UserColumnName="QCD_TOT_COST" type="xs:double" minOccurs="0" />
+              <xs:element name="QCD_TOT_LOCAL" msprop:Generator_ColumnVarNameInTable="columnQCD_TOT_LOCAL" msprop:Generator_ColumnPropNameInRow="QCD_TOT_LOCAL" msprop:Generator_ColumnPropNameInTable="QCD_TOT_LOCALColumn" msprop:Generator_UserColumnName="QCD_TOT_LOCAL" type="xs:double" minOccurs="0" />
+              <xs:element name="QCD_UNIT_COST" msprop:Generator_ColumnVarNameInTable="columnQCD_UNIT_COST" msprop:Generator_ColumnPropNameInRow="QCD_UNIT_COST" msprop:Generator_ColumnPropNameInTable="QCD_UNIT_COSTColumn" msprop:Generator_UserColumnName="QCD_UNIT_COST" type="xs:double" minOccurs="0" />
+              <xs:element name="QCD_RMK" msprop:Generator_ColumnVarNameInTable="columnQCD_RMK" msprop:Generator_ColumnPropNameInRow="QCD_RMK" msprop:Generator_ColumnPropNameInTable="QCD_RMKColumn" msprop:Generator_UserColumnName="QCD_RMK" type="xs:string" minOccurs="0" />
+              <xs:element name="QCH_TOT_COST" msprop:Generator_ColumnVarNameInTable="columnQCH_TOT_COST" msprop:Generator_ColumnPropNameInRow="QCH_TOT_COST" msprop:Generator_ColumnPropNameInTable="QCH_TOT_COSTColumn" msprop:Generator_UserColumnName="QCH_TOT_COST" type="xs:double" minOccurs="0" />
+              <xs:element name="QCH_TOT_COST_LOCAL" msprop:Generator_ColumnVarNameInTable="columnQCH_TOT_COST_LOCAL" msprop:Generator_ColumnPropNameInRow="QCH_TOT_COST_LOCAL" msprop:Generator_ColumnPropNameInTable="QCH_TOT_COST_LOCALColumn" msprop:Generator_UserColumnName="QCH_TOT_COST_LOCAL" type="xs:double" minOccurs="0" />
+              <xs:element name="QCH_MARKUP" msprop:Generator_ColumnVarNameInTable="columnQCH_MARKUP" msprop:Generator_ColumnPropNameInRow="QCH_MARKUP" msprop:Generator_ColumnPropNameInTable="QCH_MARKUPColumn" msprop:Generator_UserColumnName="QCH_MARKUP" type="xs:double" minOccurs="0" />
+              <xs:element name="QCH_TOT_VALUE" msprop:Generator_ColumnVarNameInTable="columnQCH_TOT_VALUE" msprop:Generator_ColumnPropNameInRow="QCH_TOT_VALUE" msprop:Generator_ColumnPropNameInTable="QCH_TOT_VALUEColumn" msprop:Generator_UserColumnName="QCH_TOT_VALUE" type="xs:double" minOccurs="0" />
+              <xs:element name="QCH_TOT_PAX" msprop:Generator_ColumnVarNameInTable="columnQCH_TOT_PAX" msprop:Generator_ColumnPropNameInRow="QCH_TOT_PAX" msprop:Generator_ColumnPropNameInTable="QCH_TOT_PAXColumn" msprop:Generator_UserColumnName="QCH_TOT_PAX" type="xs:double" minOccurs="0" />
+              <xs:element name="QCD_AF_MARKUP" msprop:Generator_ColumnVarNameInTable="columnQCD_AF_MARKUP" msprop:Generator_ColumnPropNameInRow="QCD_AF_MARKUP" msprop:Generator_ColumnPropNameInTable="QCD_AF_MARKUPColumn" msprop:Generator_UserColumnName="QCD_AF_MARKUP" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

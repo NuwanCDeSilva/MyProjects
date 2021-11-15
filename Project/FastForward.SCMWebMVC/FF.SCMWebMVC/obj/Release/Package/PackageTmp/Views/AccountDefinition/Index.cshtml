@@ -1,0 +1,53 @@
+﻿@{
+    ViewBag.Title = "Account Definition";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts {
+   <script src="~/Scripts/Common/AccountDefinition.js?@val"></script>
+   <script src="~/Scripts/Common/TemplateManager.js?@val"></script>
+    }
+    @section style{
+       <link href="~/Content/AccountDefinition.css?@val" rel="stylesheet" />
+    <link href="~/Content/TemplateManager.css?@val" rel="stylesheet" />
+    }
+    <div class="row">
+        <div class="op-btns">
+            <div class="col-md-6">
+                <div class="page-title">Account Definition</div>
+            </div>
+            <div class="col-md-6" style="width:540px">
+                <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+                <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+                <input type="button" value="Ammend" class="btn btn-default btn-default-style btn-view-data" />
+            </div>
+        </div>
+    </div>
+        <div class="demopage">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">Account Details</div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <form id="account-deffrm">
+                        <input type="text" name="accountcode" class="form-control template-uniq-class" value="" id="account-code">
+                        <div class="col-sm-1 fixsearchwidth"><img class="srch-icon rch-creacc-no plus" src="~/Resources/Images/Account/search.png" alt="" width="20" height="20"></div>
+                        <button class="btn btn-default btn-default-style addtemplate">Add Template</button>
+                        <div class="template-item">
+
+                        </div>
+                    </form>
+                    <div class="modal fade main-modal" id="TemplateManager">
+                        <div class="modal-dialog-template">
+
+                            <!-- Modal content-->
+                            <div class="modal-content">
+                                @Html.Partial("_TemplateManager")
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

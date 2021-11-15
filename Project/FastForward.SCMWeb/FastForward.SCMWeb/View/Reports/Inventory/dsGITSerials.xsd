@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsGITSerials" targetNamespace="http://tempuri.org/dsGITSerials.xsd" xmlns:mstns="http://tempuri.org/dsGITSerials.xsd" xmlns="http://tempuri.org/dsGITSerials.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsGITSerials" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsGITSerials" msprop:Generator_UserDSName="dsGITSerials">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GIT_SERIAL" msprop:Generator_TableClassName="GIT_SERIALDataTable" msprop:Generator_TableVarName="tableGIT_SERIAL" msprop:Generator_TablePropName="GIT_SERIAL" msprop:Generator_RowDeletingName="GIT_SERIALRowDeleting" msprop:Generator_RowChangingName="GIT_SERIALRowChanging" msprop:Generator_RowEvHandlerName="GIT_SERIALRowChangeEventHandler" msprop:Generator_RowDeletedName="GIT_SERIALRowDeleted" msprop:Generator_UserTableName="GIT_SERIAL" msprop:Generator_RowChangedName="GIT_SERIALRowChanged" msprop:Generator_RowEvArgName="GIT_SERIALRowChangeEvent" msprop:Generator_RowClassName="GIT_SERIALRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DOC_NO" msprop:Generator_ColumnVarNameInTable="columnDOC_NO" msprop:Generator_ColumnPropNameInRow="DOC_NO" msprop:Generator_ColumnPropNameInTable="DOC_NOColumn" msprop:Generator_UserColumnName="DOC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEM_CODE" msprop:Generator_ColumnVarNameInTable="columnITEM_CODE" msprop:Generator_ColumnPropNameInRow="ITEM_CODE" msprop:Generator_ColumnPropNameInTable="ITEM_CODEColumn" msprop:Generator_UserColumnName="ITEM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="SERIAL_NO" msprop:Generator_ColumnVarNameInTable="columnSERIAL_NO" msprop:Generator_ColumnPropNameInRow="SERIAL_NO" msprop:Generator_ColumnPropNameInTable="SERIAL_NOColumn" msprop:Generator_UserColumnName="SERIAL_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITS_ITM_LINE" msprop:Generator_ColumnVarNameInTable="columnITS_ITM_LINE" msprop:Generator_ColumnPropNameInRow="ITS_ITM_LINE" msprop:Generator_ColumnPropNameInTable="ITS_ITM_LINEColumn" msprop:Generator_UserColumnName="ITS_ITM_LINE" type="xs:short" minOccurs="0" />
+              <xs:element name="ITS_BATCH_LINE" msprop:Generator_ColumnVarNameInTable="columnITS_BATCH_LINE" msprop:Generator_ColumnPropNameInRow="ITS_BATCH_LINE" msprop:Generator_ColumnPropNameInTable="ITS_BATCH_LINEColumn" msprop:Generator_UserColumnName="ITS_BATCH_LINE" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

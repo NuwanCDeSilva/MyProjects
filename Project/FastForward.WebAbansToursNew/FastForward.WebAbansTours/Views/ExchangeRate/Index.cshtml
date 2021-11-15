@@ -1,0 +1,144 @@
+﻿@model FF.BusinessObjects.MasterExchangeRate
+
+@{
+    ViewBag.Title = "ExchangeRate";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/ExchangeRate.js?@val"></script>
+}
+<div class="add-emp-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Exchange Rate</div>
+            </div>
+            <div class="col-md-8">
+                <input type="button" value="Clear" class="btn btn-default btn-default-style btn-exg-clear-data" />
+                <input type="button" value="Save" class="btn btn-default btn-default-style btn-exg-save-data" />
+            </div>
+        </div>
+    </div>
+
+    @using (Html.BeginForm("CreateExchangeRate", "ExchangeRate", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-exg-rate-det", role = "form", @id = "exg-rate-crte-frm" }))
+    {
+        <div class="demopage">
+            <div class="container1">
+                <div class="panel-sep">
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Exchange Rate History</div>
+
+                            <div class="panel panel-body tab-content-cls">
+                                <div class="row">
+                                    <div class="col-md-3 form-group">
+
+                                        <div class="col-md-12">
+                                            <div class="row">
+                                                <label class="col-md-4 control-label">From Currency</label>
+                                                <div class="col-md-8">
+                                                    @Html.Editor("Search_frm_currency", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img frm-exg-currency-search" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="col-md-4 control-label">To Currency</label>
+                                                <div class="col-md-8">
+                                                    @Html.Editor("Search_to_currency", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img to-exg-currency-search" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="col-md-4 control-label">Date</label>
+                                                <div class="col-md-8">
+                                                    @Html.Editor("Search_to_date", new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                        <img class="arrow-right btn-exg-search-data" style="width:35px;margin-top: 25px;" src="/Resources/Images/rightarrow.png">
+                                    </div>
+                                    <div class="col-md-8" style="height:120px; overflow-x:hidden;overflow-y:auto">
+
+                                        <table class="exg-table table">
+                                            <tr class="table-hed">
+                                                <th>From Currency</th>
+                                                <th>To Currency</th>
+                                                <th>Validate From</th>
+                                                <th>Validate To</th>
+                                                <th>Sell Rate</th>
+                                                <th>Buy Rate</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Exchange Rate Adding</div>
+
+                            <div class="panel panel-body tab-content-cls">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <label class="col-md-4 control-label">From Currency</label>
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(model => model.Mer_cur, new { htmlAttributes = new { @class = "form-control with-search required-field", @readonly = "readonly" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img exg-frm-currency-search" title="Search">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="col-md-4 control-label">To Currency</label>
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(model => model.Mer_to_cur, new { htmlAttributes = new { @class = "form-control with-search required-field", @readonly = "readonly" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img exg-to-currency-search" title="Search">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="col-md-4 control-label">Validate From</label>
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(model => model.Mer_vad_from, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="col-md-4 control-label">Validate To</label>
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(model => model.Mer_vad_to, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <label class="col-md-4 control-label">Buying Rate</label>
+                                                    <div class="col-md-8">
+                                                        @Html.EditorFor(model => model.Mer_bnkbuy_rt, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-3">
+                                                    <label class="col-md-4 control-label">Selling Rate</label>
+                                                    <div class="col-md-8">
+                                                        @Html.EditorFor(model => model.Mer_bnksel_rt, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       
+    }
+
+
+    </div>

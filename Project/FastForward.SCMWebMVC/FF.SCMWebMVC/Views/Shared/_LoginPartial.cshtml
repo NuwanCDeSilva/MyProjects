@@ -1,0 +1,123 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="common-details-cls">
+        <ul class="contet-view">
+            <li class="user-cls">
+                @if (Session.Count > 0 && Session["UserID"].ToString() != null)
+                {
+                    <div class="text-field">
+                        User :
+                    </div>
+                    <div class="val-field">
+                        @Session["UserID"].ToString()
+                    </div>
+                }
+            </li>
+            <li class="user-cls">
+                @if (Session.Count > 0 && Session["UserDefProf"].ToString() != null)
+                {
+                    <div class="text-field">
+                        PC :
+                    </div>
+                    <div class="val-field">
+                        @Session["UserDefProf"].ToString()
+                    </div>
+                }
+            </li>
+            <li class="user-cls">
+                @if (Session.Count > 0 && Session["UserCompanyCode"].ToString() != null)
+                {
+                    <div class="text-field">
+                        COM :
+                    </div>
+                    <div class="val-field">
+                        @Session["UserCompanyCode"].ToString()
+                    </div>
+                }
+            </li>
+            <li class="user-cls">
+                <div class="text-field">
+                    Log Off :
+                </div>
+                <div class="val-field">
+                    <a class="logout-link-cls" href='@(Url.Action("LogOff", "Login"))'><i class="fa fa-power-off" aria-hidden="true"></i>Log off</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container main-menu">
+        <!-- header -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#multi-level-dropdown">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/"><span class="glyphicon glyphicon-home"></span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="multi-level-dropdown">
+            <ul class="nav navbar-nav">
+                @*@{
+                    if (Session["Menu"] != null)
+                    {
+                        @Html.Raw(Session["Menu"].ToString())
+                    }
+                }*@
+
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-1">Genaral</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Commission Definition", "Index", "CommissionDefinition")</li>
+                        <li>@Html.ActionLink("Commission Process", "Index", "CommissionProcess")</li>
+                        <li>@Html.ActionLink("Targets Definitions", "Index", "TargetDefintion")</li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-1">Bonus</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Product Bonus Definition", "Index", "ProductBonusDefinition")</li>
+                        <li>@Html.ActionLink("Product Bonus Process", "Index", "ProductBonusProcess")</li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-1">Collect</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Process Arrears", "Index", "ProcessArreas")</li>
+                        <li>@Html.ActionLink("Handing Over Accounts", "Index", "HandingOverAccounts")</li>
+                        <li>@Html.ActionLink("Bonus Adjustment", "Index", "CollectionBonusAdjustments")</li>
+                        <li>@Html.ActionLink("CalCulation Adjustment", "Index", "CalculationAdjesment")</li>
+                        <li>@Html.ActionLink("Bonus Calculation", "Index", "BonusCalculation")</li>
+                        
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-1">Master</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Manager Creation", "Index", "ManagerCreation")</li>
+                        <li>@Html.ActionLink("Grace Period qualified amount", "Index", "GPQualifiedAmount")</li>
+                        <li>@Html.ActionLink("Disregard Amount", "Index", "DisregardAmount")</li>
+                        <li>@Html.ActionLink("Arrears Release Scheme", "Index", "ArrearsReleaseScheme")</li>
+                        <li>@Html.ActionLink("Collection Bonus Definition", "Index", "CollectionBonusDefinition")</li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-1">Report</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Collection Bonus Details Report", "Index", "Collectionbonusreport")</li>
+                        <li>@Html.ActionLink("Collection bonus manager voucher", "Index", "CollectionBonusVoucher")</li>
+                        <li>@Html.ActionLink("Product Bonus Details Report", "Index", "ProductBonusDetailReport")</li>
+                    </ul>
+                </li>
+                <li class="dropdown-submenu">
+                    <a href="#" tabindex="-1">Account</a>
+                    <ul class="dropdown-menu">
+                        <li>@Html.ActionLink("Account Definition", "Index", "AccountDefinition")</li>
+                        <li>@Html.ActionLink("Payment Request", "Index", "PaymentRequest")</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+

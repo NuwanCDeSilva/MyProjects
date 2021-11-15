@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Curr_Month_Due" targetNamespace="http://tempuri.org/Curr_Month_Due.xsd" xmlns:mstns="http://tempuri.org/Curr_Month_Due.xsd" xmlns="http://tempuri.org/Curr_Month_Due.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Curr_Month_Due" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Curr_Month_Due" msprop:Generator_UserDSName="Curr_Month_Due">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_UserTableName="param" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="period" msdata:Caption="todate" msprop:Generator_ColumnVarNameInTable="columnperiod" msprop:Generator_ColumnPropNameInRow="period" msprop:Generator_ColumnPropNameInTable="periodColumn" msprop:Generator_UserColumnName="period" type="xs:string" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="scheme" msprop:Generator_ColumnVarNameInTable="columnscheme" msprop:Generator_ColumnPropNameInRow="scheme" msprop:Generator_ColumnPropNameInTable="schemeColumn" msprop:Generator_UserColumnName="scheme" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CURR_MONTH_DUE" msprop:Generator_TableClassName="CURR_MONTH_DUEDataTable" msprop:Generator_TableVarName="tableCURR_MONTH_DUE" msprop:Generator_TablePropName="CURR_MONTH_DUE" msprop:Generator_RowDeletingName="CURR_MONTH_DUERowDeleting" msprop:Generator_UserTableName="CURR_MONTH_DUE" msprop:Generator_RowChangingName="CURR_MONTH_DUERowChanging" msprop:Generator_RowEvHandlerName="CURR_MONTH_DUERowChangeEventHandler" msprop:Generator_RowDeletedName="CURR_MONTH_DUERowDeleted" msprop:Generator_RowEvArgName="CURR_MONTH_DUERowChangeEvent" msprop:Generator_RowChangedName="CURR_MONTH_DUERowChanged" msprop:Generator_RowClassName="CURR_MONTH_DUERow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COM_CODE" msprop:Generator_ColumnVarNameInTable="columnCOM_CODE" msprop:Generator_ColumnPropNameInRow="COM_CODE" msprop:Generator_ColumnPropNameInTable="COM_CODEColumn" msprop:Generator_UserColumnName="COM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="COM_DESC" msprop:Generator_ColumnVarNameInTable="columnCOM_DESC" msprop:Generator_ColumnPropNameInRow="COM_DESC" msprop:Generator_ColumnPropNameInTable="COM_DESCColumn" msprop:Generator_UserColumnName="COM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POWERED_BY" msprop:Generator_ColumnVarNameInTable="columnPOWERED_BY" msprop:Generator_ColumnPropNameInRow="POWERED_BY" msprop:Generator_ColumnPropNameInTable="POWERED_BYColumn" msprop:Generator_UserColumnName="POWERED_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="LOC_CODE" msprop:Generator_ColumnVarNameInTable="columnLOC_CODE" msprop:Generator_ColumnPropNameInRow="LOC_CODE" msprop:Generator_ColumnPropNameInTable="LOC_CODEColumn" msprop:Generator_UserColumnName="LOC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="LOC_DESC" msprop:Generator_ColumnVarNameInTable="columnLOC_DESC" msprop:Generator_ColumnPropNameInRow="LOC_DESC" msprop:Generator_ColumnPropNameInTable="LOC_DESCColumn" msprop:Generator_UserColumnName="LOC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="SCHEME" msprop:Generator_ColumnVarNameInTable="columnSCHEME" msprop:Generator_ColumnPropNameInRow="SCHEME" msprop:Generator_ColumnPropNameInTable="SCHEMEColumn" msprop:Generator_UserColumnName="SCHEME" type="xs:string" minOccurs="0" />
+              <xs:element name="ACC_NO" msprop:Generator_ColumnVarNameInTable="columnACC_NO" msprop:Generator_ColumnPropNameInRow="ACC_NO" msprop:Generator_ColumnPropNameInTable="ACC_NOColumn" msprop:Generator_UserColumnName="ACC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="RECIEVABLE_AMT" msprop:Generator_ColumnVarNameInTable="columnRECIEVABLE_AMT" msprop:Generator_ColumnPropNameInRow="RECIEVABLE_AMT" msprop:Generator_ColumnPropNameInTable="RECIEVABLE_AMTColumn" msprop:Generator_UserColumnName="RECIEVABLE_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="RECIEVED_AMT" msprop:Generator_ColumnVarNameInTable="columnRECIEVED_AMT" msprop:Generator_ColumnPropNameInRow="RECIEVED_AMT" msprop:Generator_ColumnPropNameInTable="RECIEVED_AMTColumn" msprop:Generator_UserColumnName="RECIEVED_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CURR_AMT" msprop:Generator_ColumnVarNameInTable="columnCURR_AMT" msprop:Generator_ColumnPropNameInRow="CURR_AMT" msprop:Generator_ColumnPropNameInTable="CURR_AMTColumn" msprop:Generator_UserColumnName="CURR_AMT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

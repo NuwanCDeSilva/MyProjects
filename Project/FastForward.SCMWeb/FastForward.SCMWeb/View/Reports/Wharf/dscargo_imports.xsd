@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dscargo_imports" targetNamespace="http://tempuri.org/dscargo_imports.xsd" xmlns:mstns="http://tempuri.org/dscargo_imports.xsd" xmlns="http://tempuri.org/dscargo_imports.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dscargo_imports" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dscargo_imports" msprop:Generator_UserDSName="dscargo_imports">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CargoImports" msprop:Generator_TableClassName="CargoImportsDataTable" msprop:Generator_TableVarName="tableCargoImports" msprop:Generator_RowChangedName="CargoImportsRowChanged" msprop:Generator_TablePropName="CargoImports" msprop:Generator_RowDeletingName="CargoImportsRowDeleting" msprop:Generator_RowChangingName="CargoImportsRowChanging" msprop:Generator_RowEvHandlerName="CargoImportsRowChangeEventHandler" msprop:Generator_RowDeletedName="CargoImportsRowDeleted" msprop:Generator_RowClassName="CargoImportsRow" msprop:Generator_UserTableName="CargoImports" msprop:Generator_RowEvArgName="CargoImportsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="cuh_consi_name" msprop:Generator_ColumnVarNameInTable="columncuh_consi_name" msprop:Generator_ColumnPropNameInRow="cuh_consi_name" msprop:Generator_ColumnPropNameInTable="cuh_consi_nameColumn" msprop:Generator_UserColumnName="cuh_consi_name" type="xs:string" minOccurs="0" />
+              <xs:element name="cuh_consi_addr" msprop:Generator_ColumnVarNameInTable="columncuh_consi_addr" msprop:Generator_ColumnPropNameInRow="cuh_consi_addr" msprop:Generator_ColumnPropNameInTable="cuh_consi_addrColumn" msprop:Generator_UserColumnName="cuh_consi_addr" type="xs:string" minOccurs="0" />
+              <xs:element name="cuh_decl_name" msprop:Generator_ColumnVarNameInTable="columncuh_decl_name" msprop:Generator_ColumnPropNameInRow="cuh_decl_name" msprop:Generator_ColumnPropNameInTable="cuh_decl_nameColumn" msprop:Generator_UserColumnName="cuh_decl_name" type="xs:string" minOccurs="0" />
+              <xs:element name="cuh_decl_addr" msprop:Generator_ColumnVarNameInTable="columncuh_decl_addr" msprop:Generator_ColumnPropNameInRow="cuh_decl_addr" msprop:Generator_ColumnPropNameInTable="cuh_decl_addrColumn" msprop:Generator_UserColumnName="cuh_decl_addr" type="xs:string" minOccurs="0" />
+              <xs:element name="cuh_vessel" msprop:Generator_ColumnVarNameInTable="columncuh_vessel" msprop:Generator_ColumnPropNameInRow="cuh_vessel" msprop:Generator_ColumnPropNameInTable="cuh_vesselColumn" msprop:Generator_UserColumnName="cuh_vessel" type="xs:string" minOccurs="0" />
+              <xs:element name="cuh_voyage_dt" msprop:Generator_ColumnVarNameInTable="columncuh_voyage_dt" msprop:Generator_ColumnPropNameInRow="cuh_voyage_dt" msprop:Generator_ColumnPropNameInTable="cuh_voyage_dtColumn" msprop:Generator_UserColumnName="cuh_voyage_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cuh_doc_no" msprop:Generator_ColumnVarNameInTable="columncuh_doc_no" msprop:Generator_ColumnPropNameInRow="cuh_doc_no" msprop:Generator_ColumnPropNameInTable="cuh_doc_noColumn" msprop:Generator_UserColumnName="cuh_doc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="CUH_DT" msprop:Generator_ColumnVarNameInTable="columnCUH_DT" msprop:Generator_ColumnPropNameInRow="CUH_DT" msprop:Generator_ColumnPropNameInTable="CUH_DTColumn" msprop:Generator_UserColumnName="CUH_DT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="CusdecCommon" msprop:Generator_TableClassName="CusdecCommonDataTable" msprop:Generator_TableVarName="tableCusdecCommon" msprop:Generator_RowChangedName="CusdecCommonRowChanged" msprop:Generator_TablePropName="CusdecCommon" msprop:Generator_RowDeletingName="CusdecCommonRowDeleting" msprop:Generator_RowChangingName="CusdecCommonRowChanging" msprop:Generator_RowEvHandlerName="CusdecCommonRowChangeEventHandler" msprop:Generator_RowDeletedName="CusdecCommonRowDeleted" msprop:Generator_RowClassName="CusdecCommonRow" msprop:Generator_UserTableName="CusdecCommon" msprop:Generator_RowEvArgName="CusdecCommonRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="rcsc_auth_by" msprop:Generator_ColumnVarNameInTable="columnrcsc_auth_by" msprop:Generator_ColumnPropNameInRow="rcsc_auth_by" msprop:Generator_ColumnPropNameInTable="rcsc_auth_byColumn" msprop:Generator_UserColumnName="rcsc_auth_by" type="xs:string" minOccurs="0" />
+              <xs:element name="rcsc_submit_by" msprop:Generator_ColumnVarNameInTable="columnrcsc_submit_by" msprop:Generator_ColumnPropNameInRow="rcsc_submit_by" msprop:Generator_ColumnPropNameInTable="rcsc_submit_byColumn" msprop:Generator_UserColumnName="rcsc_submit_by" type="xs:string" minOccurs="0" />
+              <xs:element name="rcsc_id_no" msprop:Generator_ColumnVarNameInTable="columnrcsc_id_no" msprop:Generator_ColumnPropNameInRow="rcsc_id_no" msprop:Generator_ColumnPropNameInTable="rcsc_id_noColumn" msprop:Generator_UserColumnName="rcsc_id_no" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Containers" msprop:Generator_TableClassName="ContainersDataTable" msprop:Generator_TableVarName="tableContainers" msprop:Generator_TablePropName="Containers" msprop:Generator_RowDeletingName="ContainersRowDeleting" msprop:Generator_RowChangingName="ContainersRowChanging" msprop:Generator_RowEvHandlerName="ContainersRowChangeEventHandler" msprop:Generator_RowDeletedName="ContainersRowDeleted" msprop:Generator_UserTableName="Containers" msprop:Generator_RowChangedName="ContainersRowChanged" msprop:Generator_RowEvArgName="ContainersRowChangeEvent" msprop:Generator_RowClassName="ContainersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Ibc_desc" msprop:Generator_ColumnVarNameInTable="columnIbc_desc" msprop:Generator_ColumnPropNameInRow="Ibc_desc" msprop:Generator_ColumnPropNameInTable="Ibc_descColumn" msprop:Generator_UserColumnName="Ibc_desc" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

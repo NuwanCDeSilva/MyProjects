@@ -1,0 +1,322 @@
+﻿@model FF.BusinessObjects.TR_LOGSHEET_HDR
+
+@{
+    ViewBag.Title = "Log Sheet";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/jquery-ui-timepicker-addon.js?@val"></script>
+    <script src="~/Scripts/Common/LogSheet.js?@val"></script>
+}
+
+<div class="log-sheet-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Log Sheet</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-log-sheet-clear" />
+                <input type="submit" value="Save" class="btn btn-default btn-default-style btn-log-sheet-save" />
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("GetEnquiry", "CostEnquiry", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "frm-logsheet" }))
+    {
+        <div class="demopage">
+            <div class="container1">
+                <div class="panel-sep">
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Log Sheet</div>
+                            <div class="panel panel-body">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Company
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_COM, new { htmlAttributes = new { @class = "form-control with-search required-field", @readonly = "readonly" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img log-com-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            PC
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_PC, new { htmlAttributes = new { @class = "form-control required-field", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Log Sheet No
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_LOG_NO, new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            @Html.HiddenFor(m => m.TLH_SEQ)
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img log-num-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Date
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_DT, new { htmlAttributes = new { @class = "form-control", @readonly = "readony" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Enquiry ID
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_REQ_NO, new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img enq-id-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Customer Code
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_CUS_CD, new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img log-cus-search" title="Search">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Start Date
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_ST_DT, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            End Date
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_ED_DT, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Driver Code
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_DRI_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", @readonly = "readonly" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img dri-cd-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Guest
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_GUST, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Fleet
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_FLEET, new { htmlAttributes = new { @class = "form-control with-search required-field", @readonly = "readonly" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img fleet-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Remark
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_RMK, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Invoice Mileage
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_INV_MIL, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Driver Mileage
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_DRI_MIL, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Meter In
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_MET_IN, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="col-md-4">
+                                            Meter Out
+                                        </div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(m => m.TLH_MET_OUT, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="panel-sep">
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Costing Sheet</div>
+                            <div class="panel panel-body tab-content-cls">
+                                <div class="row">
+                                    <div class="col-md-3 form-group">
+                                        <div class="col-md-3"><input type="radio" class="travel-type" name="travel-type" id="travel-type" value="T">Travels</div>
+                                        <div class="col-md-4"><input type="radio" class="travel-type" name="travel-type" id="travel-type" value="M">Miscellaneous</div>
+                                    </div>
+                                    <div class="col-md-9 form-group">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-2 form-group">
+                                        <label class="col-md-12 control-label">Charge Code</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("CostChargCode", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img chrg-data-cd-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        <label class="col-md-12 control-label">Description</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("description", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Qty</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("quantity", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Rate Type</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("rtetype", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Unit Rate</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("unitrte", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0.00" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Unit Amount</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("unitamount", new { htmlAttributes = new { @class = "form-control", @readonly="readonly",@Placeholder = "0.00" } })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Tax</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("tax", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0%", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Dis Rate</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("disrate", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0%" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label">Dis Amount</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("disamount", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0.00" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-2 form-group">
+                                        <label class="col-md-12 control-label">Total</label>
+                                        <div class="col-md-12">
+                                            @Html.Editor("totalval", new { htmlAttributes = new { @class = "form-control", @Placeholder = "0.00", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <div class="col-md-12 check-grp">
+                                            @Html.CheckBox("isdriver", new { @class = "left-align" })<div class="right-align">
+                                                    Is Driver 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12  check-grp">
+                                            @Html.CheckBox("iscustomer", new { @class = "left-align" }) <div class="right-align">
+                                                    Is Customer
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                        <label class="col-md-12 control-label"></label>
+                                        <div class="col-md-12">
+                                            <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img  add-log-charg-data" title="Add">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-11">
+                                        <table class="log-charge-table table">
+                                            <tr class="table-hed">
+                                                <th>Charge Code</th>
+                                                <th>Description</th>
+                                                <th>Qty</th>
+                                                <th>Rate Type</th>
+                                                <th>Unit Rate</th>
+                                                <th>Unit Amount</th>
+                                                <th>Tax</th>
+                                                <th>Dis Rate</th>
+                                                <th>Dis Amount</th>
+                                                <th>Tatal</th>
+                                                <th>Is Customer</th>
+                                                <th>Is Driver</th>
+                                                <th></th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="col-md-1 form-group">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+</div>

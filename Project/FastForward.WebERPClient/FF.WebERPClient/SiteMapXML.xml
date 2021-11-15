@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Home>
+  <MenuItem url="" title="System"  description="">
+    <MenuItem url="" title="Security"  description="">
+      <MenuSubItem url="~/System_Modules/Security/SystemUserCreation.aspx" title="User Creation"  description="" ></MenuSubItem>
+      <MenuSubItem url="~/System_Modules/Security/RoleCreation.aspx" title="Role Creation"  description=""></MenuSubItem>
+      <MenuSubItem url="~/System_Modules/Security/SystemOptionRegistration.aspx" title="System Option Registration"  description=""></MenuSubItem>
+      <MenuSubItem url="~/System_Modules/Security/SystemUserAssign.aspx" title="System User Assign"  description=""></MenuSubItem>
+      <MenuSubItem url="" title="System Option Privillages"  description=""></MenuSubItem>
+    </MenuItem>
+    <MenuItem url="" title="Administration"  description="">
+      <MenuSubItem url="" title="Password Change"  description=""></MenuSubItem>
+      <MenuSubItem url="" title="Date Activation"  description=""></MenuSubItem>
+      <MenuSubItem url="" title="Log-Off"  description=""></MenuSubItem>
+    </MenuItem>
+    <MenuItem url="" title="Audit"  description="">
+      <MenuSubItem url="" title="Stock Verification"  description=""></MenuSubItem>
+      <MenuSubItem url="" title="Physical Cash Verification"  description=""></MenuSubItem>
+    </MenuItem>
+  </MenuItem>
+  <MenuItem url="" title="General"  description="">
+    <MenuItem url="" title="Organization Setup"  description="">
+      <MenuSubItem url="" title="Company Creation"  description=""></MenuSubItem>
+      <MenuSubItem url="" title="Operation Admin Team Creation"  description=""></MenuSubItem>
+      <MenuSubItem url="" title="SBU Creation"  description=""></MenuSubItem>
+    </MenuItem>
+    <MenuItem url="" title="Sales Unit Setup"  description="">
+      <MenuSubItem url="" title="Sales Team Structure"  description=""></MenuSubItem>
+      <MenuSubItem url="" title="Sales Target"  description=""></MenuSubItem>
+    </MenuItem>
+  </MenuItem>
+  <MenuItem url="" title="Sales"  description="">
+    <MenuItem url="" title="Invoice / Cash Memo"  description=""></MenuItem>
+  </MenuItem>
+  <MenuItem url="" title="Hire Purchase"  description=""></MenuItem>
+  <MenuItem url="" title="Inventory"  description=""></MenuItem>
+</Home>
+
+
+

@@ -1,0 +1,326 @@
+﻿
+.small-icon-cls,.small-icon-cls-disable{
+    width:15px;
+    margin-left:10px;
+}
+.small-icon-cls:hover {
+    cursor:pointer;
+}
+#TemplateManager .select-row-template{
+    color:blue;
+}
+#TemplateManager .select-row-template:hover{
+    cursor:pointer;
+    text-decoration:underline;
+}
+
+#TemplateManager body, #TemplateManagerh5{
+    font-family: sans-serif;
+    font-size: 13px;
+}
+
+#TemplateManager .final-modal {
+    height: 255px;
+    overflow: auto;
+}
+
+.small-icon-cls {
+    margin-right:10px;
+}
+
+#TemplateManager .modal-header .close {
+    margin-top: -20px;
+}
+
+#TemplateManager .margin-none{
+    margin:0px !important;
+}
+
+#TemplateManager .modal-content-my{
+    height: 350px !important;
+}
+
+#TemplateManager .checkbox-m>label{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#TemplateManager .modal-body-m{
+    padding-top: 10px;
+    padding-bottom: 0px;
+}
+
+#TemplateManager .label-with-error{
+    margin-right: 10px;
+    width: 15px;
+    height: 15px;
+}
+
+#TemplateManager .table-content{
+    height: 255px;
+}
+
+#TemplateManager .form-control-m{
+    height: 24px;
+    font-size: 12px;
+    width: 50%;
+    display: inline-block;
+}
+#TemplateManager .full-width{
+    width: 100%;
+}
+
+#TemplateManager .bt-set{
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#TemplateManager .content-scroll{
+    height: 150px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+#TemplateManager .headding{
+    font-family: Arial;
+    font-size: 12px;
+    background: #3f51b540;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding: 5px;
+}
+#TemplateManager .pb-8{
+    margin-bottom: 8px;
+}
+
+#TemplateManager .btn-footer-al{
+    margin-bottom: 10px;
+}
+
+#TemplateManager .btn-margin-r10{
+    margin-right: 10px;
+}
+#TemplateManager .control-label{
+    font-size: 13px;
+    text-align: left !important;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+#TemplateManager .padding-top-none{
+    padding-top: 0px !important;
+}
+#TemplateManager .header-m{
+    min-height: 16.43px;
+    padding: 5px 15px;
+    border-bottom: 1px solid #e5e5e5;
+    background: #75507b;
+    color: #fff;
+}
+#TemplateManager .label-with-img {
+    margin-right: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+#TemplateManager .header-m>.close{
+color:#fff;
+}
+
+#TemplateManager .pageNavigation-con{
+    margin-top: 20px;
+}
+#TemplateManager .main-modal>.modal-dialog>.modal-content>.modal-header>.modal-title{
+    font-weight: 600;
+    font-family: Arial;
+    letter-spacing: 0.3px;
+    font-size: 12px;
+}
+#TemplateManager  .no-padding{
+     padding-left: 0px;
+     padding-right: 0px;
+ }
+#TemplateManager .float-right{
+    float: right;
+}
+
+#TemplateManager .float-left {
+float:left;
+}
+
+#TemplateManager .input-common-width {
+    float: left;
+    width: 180px;
+    margin-bottom: 4px;
+}
+#TemplateManager .ptop_none {
+padding-top:0px;
+}
+#TemplateManager .p-5 {
+padding:5px;
+}
+
+#TemplateManager .pd-left {
+    padding-left: 40px;
+}
+
+#TemplateManager .align-field  {
+   position:relative;
+   display:block;
+   float:left;
+   /*width:100%;*/
+   margin-left:3px;
+}
+
+#TemplateManager .modal-body-m>.table-content>.table > thead > tr > th {
+    font-weight: bold;
+    font-family: arial;
+    font-size: 12px;
+    padding: 2px 10px;
+}
+
+#TemplateManager .clearfix{
+    clear: both;
+}
+
+#TemplateManager .pageNavigation>.pagination{
+    margin: 0px;
+}
+
+#TemplateManager .pageNavigation{
+    width: 80%;
+    display: inline-block;
+    float: left;
+    font-family: sans-serif;
+    font-size: 12px;
+}
+
+#TemplateManager .pagination > li > a,#TemplateManager  .pagination > li > span{
+    padding: 2px 12px;
+
+}
+#TemplateManager .count-box {
+    height: 26px;
+    padding: 3px 4px;
+    margin-top: 4px;
+}
+
+#TemplateManager .table-content{
+    overflow: auto;
+}
+
+#TemplateManager .btn-min{
+    padding: 2px 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 3px;
+}
+
+#TemplateManager .page-count-label{
+    margin-right: 10px;
+    font-size: 12px;
+    font-family: sans-serif;
+    line-height: 28px;
+    margin-bottom:0px;
+}
+#TemplateManager .search-box-m{
+    display: inline;
+    width: 60%;
+    float: left;
+    height: 28px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+#TemplateManager .group-btn-m>.btn{
+    padding: 3px 12px;
+}
+
+#TemplateManager .m-table > tbody > tr > td{
+    padding: 0px 5px;
+    font-size: 12px;
+    font-family: sans-serif;
+}
+#TemplateManager .img-btn{
+    width: 20px;
+    height: 20px;
+    float: left;
+    padding: 2px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#TemplateManager .img-btn img{
+    width: 100%;
+}
+#TemplateManager .group-btn-m{
+    padding-bottom: 6px;
+    width: 40px;
+    display: inline-block;
+}
+
+#TemplateManager .ov-y-hidden{
+    /*overflow-y: hidden !important;*/
+}
+
+#TemplateManager .checkbox-top{
+    position: relative;
+    display: inline-block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+#TemplateManager .edit-textvalue {
+    float: left;
+    margin-right: 5px;
+    width: 150px;
+    margin-bottom: 4px;
+}
+
+#TemplateManager .modal-dialog-template .modal-content {
+    height: 400PX;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+#TemplateManager .modal-dialog-template .modal-content {
+    height: 400PX;
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
+}
+ #TemplateManager .bt2{
+	display: inline-block;
+    float: right;
+	margin-top: 1px;
+}
+
+#TemplateManager .sec-label {
+    width: 140px;
+    display: inline;
+    float: left;
+}
+
+.temp-name{
+    margin-left: 40px;
+    margin-bottom: 4px;
+}
+#TemplateManager .no-display{
+    display:none;
+}
+#TemplateManager .form-control.fixed-width {
+    width: 70px;
+    float: left;
+}

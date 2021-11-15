@@ -1,0 +1,84 @@
+﻿@model List<FF.BusinessObjects.ToursNew.ST_SATIS_QUEST>
+
+@{
+    ViewBag.Title = "Customer Feedback";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/Feedback.js?@val"></script>
+}
+<div class="feedbk-hed-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                @*<div class="page-title">Customer Feedback</div>*@
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-fb-clear-data" />
+                <input type="submit" value="Save" class="btn btn-default btn-default-style btn-fb-save-data" />
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("SaveFeedback", "Feedback", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-feedback-det", role = "form", @id = "feedback-crte-frm" }))
+    {
+        <div class="demopage">
+            <div class="container1">
+                <div class="panel-sep">
+
+                    <div class="row panel-sep">
+                        <div class="col-md-4">
+                            <div class="col-md-4">
+                                Enquiry Id
+                            </div>
+                            <div class="col-md-6">
+                                @Html.Editor("EnqId", new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                <img src="~/Resources/Images/Search-icon.png" class="search-img feed-enq-search" title="Search">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading"></div>
+                            <div class="panel panel-body tab-content-cls feedbk-panel">
+                                @{
+        Int32 i = 1;
+        foreach (var qus in Model)
+        {
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="col-md-5 qus-cls"> @i <b>)</b> <b>@Html.DisplayFor(modelItem => qus.SSQ_QUEST)</b></div>
+                                <div class="col-md-7">
+                                    @if (qus.SSQ_TYPE == "Radio")
+                                    {
+                                        <div class="col-md-12">
+                                            @foreach (var answer in qus.SSQ_SATIS_VAL)
+                                            {
+                                                <div class="col-md-2 set-border-def border-set-ans-@answer.SSV_GRADE">
+                                                    <input class="col-md-2" type="radio" name="@qus.SSQ_SEQ" id="@qus.SSQ_SEQ-@answer.SSV_GRADE" value="@qus.SSQ_SEQ-@answer.SSV_SEQ-@answer.SSV_GRADE"><label class="col-md-10" for="@qus.SSQ_SEQ-@answer.SSV_GRADE"><b>@answer.SSV_DESC</b></label>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        var id = qus.SSQ_SEQ.ToString();
+                                        @Html.TextArea(id, null, new { @class = "form-control txt-area-cmt" })
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                                    <br>
+                                    i++;
+        }
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    }
+</div>

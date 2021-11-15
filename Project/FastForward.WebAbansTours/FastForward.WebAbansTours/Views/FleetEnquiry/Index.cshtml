@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Fleet Enquiry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    
+    <script src="~/Scripts/Common/FleetEnquiry.js"></script>
+<script src="~/Scripts/canvasjs.min.js"></script>
+}
+
+<div class="cost-enqi-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Fleet Tracker</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-fleet-enq-clear" />
+                <input type="submit" value="View" class="btn btn-default btn-default-style btn-fleet-enq-view" />
+            </div>
+        </div>
+    </div>
+      
+   <div class="demopage">
+            <div class="container1">
+                <div class="panel-sep">
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Fleet Tracker</div>
+                            <div class="panel panel-body">
+                               <div class="row">
+                                 <div class="col-md-4">
+                                    <div class="row">
+                                             <div class="col-md-4">
+                                                 From Date
+                                             </div>
+                                             <div class="col-md-8">
+                                                 @Html.Editor("FrmDate", new { htmlAttributes = new { @class = "form-control" } })
+                                             </div>
+                                         </div>
+                                         <div class="row">
+                                             <div class="col-md-4">
+                                                 To Date
+                                             </div>
+                                             <div class="col-md-8">
+                                                 @Html.Editor("ToDate", new { htmlAttributes = new { @class = "form-control" } })
+                                             </div>
+                                         </div>
+                                    </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div class="panel-sep">
+                    <div class="row">
+                        <div id="chartContainer" style="height: 300px; width: 100%;"></div>
+                       </div>
+                </div>
+
+            </div>
+        </div>
+</div>

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ServiceSales" targetNamespace="http://tempuri.org/ServiceSales.xsd" xmlns:mstns="http://tempuri.org/ServiceSales.xsd" xmlns="http://tempuri.org/ServiceSales.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ServiceSales" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ServiceSales" msprop:Generator_UserDSName="ServiceSales">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GLB_SERVICE_GP" msprop:Generator_TableClassName="GLB_SERVICE_GPDataTable" msprop:Generator_TableVarName="tableGLB_SERVICE_GP" msprop:Generator_TablePropName="GLB_SERVICE_GP" msprop:Generator_RowDeletingName="GLB_SERVICE_GPRowDeleting" msprop:Generator_RowChangingName="GLB_SERVICE_GPRowChanging" msprop:Generator_RowEvHandlerName="GLB_SERVICE_GPRowChangeEventHandler" msprop:Generator_RowDeletedName="GLB_SERVICE_GPRowDeleted" msprop:Generator_UserTableName="GLB_SERVICE_GP" msprop:Generator_RowChangedName="GLB_SERVICE_GPRowChanged" msprop:Generator_RowEvArgName="GLB_SERVICE_GPRowChangeEvent" msprop:Generator_RowClassName="GLB_SERVICE_GPRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gsg_company" msprop:Generator_ColumnVarNameInTable="columngsg_company" msprop:Generator_ColumnPropNameInRow="gsg_company" msprop:Generator_ColumnPropNameInTable="gsg_companyColumn" msprop:Generator_UserColumnName="gsg_company" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_company_desc" msprop:Generator_ColumnVarNameInTable="columngsg_company_desc" msprop:Generator_ColumnPropNameInRow="gsg_company_desc" msprop:Generator_ColumnPropNameInTable="gsg_company_descColumn" msprop:Generator_UserColumnName="gsg_company_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_powered_by" msprop:Generator_ColumnVarNameInTable="columngsg_powered_by" msprop:Generator_ColumnPropNameInRow="gsg_powered_by" msprop:Generator_ColumnPropNameInTable="gsg_powered_byColumn" msprop:Generator_UserColumnName="gsg_powered_by" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_pc" msprop:Generator_ColumnVarNameInTable="columngsg_pc" msprop:Generator_ColumnPropNameInRow="gsg_pc" msprop:Generator_ColumnPropNameInTable="gsg_pcColumn" msprop:Generator_UserColumnName="gsg_pc" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_pc_desc" msprop:Generator_ColumnVarNameInTable="columngsg_pc_desc" msprop:Generator_ColumnPropNameInRow="gsg_pc_desc" msprop:Generator_ColumnPropNameInTable="gsg_pc_descColumn" msprop:Generator_UserColumnName="gsg_pc_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_job_no" msprop:Generator_ColumnVarNameInTable="columngsg_job_no" msprop:Generator_ColumnPropNameInRow="gsg_job_no" msprop:Generator_ColumnPropNameInTable="gsg_job_noColumn" msprop:Generator_UserColumnName="gsg_job_no" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_job_type" msprop:Generator_ColumnVarNameInTable="columngsg_job_type" msprop:Generator_ColumnPropNameInRow="gsg_job_type" msprop:Generator_ColumnPropNameInTable="gsg_job_typeColumn" msprop:Generator_UserColumnName="gsg_job_type" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_job_type_des" msprop:Generator_ColumnVarNameInTable="columngsg_job_type_des" msprop:Generator_ColumnPropNameInRow="gsg_job_type_des" msprop:Generator_ColumnPropNameInTable="gsg_job_type_desColumn" msprop:Generator_UserColumnName="gsg_job_type_des" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_job_cate" msprop:Generator_ColumnVarNameInTable="columngsg_job_cate" msprop:Generator_ColumnPropNameInRow="gsg_job_cate" msprop:Generator_ColumnPropNameInTable="gsg_job_cateColumn" msprop:Generator_UserColumnName="gsg_job_cate" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_job_cate_des" msprop:Generator_ColumnVarNameInTable="columngsg_job_cate_des" msprop:Generator_ColumnPropNameInRow="gsg_job_cate_des" msprop:Generator_ColumnPropNameInTable="gsg_job_cate_desColumn" msprop:Generator_UserColumnName="gsg_job_cate_des" type="xs:string" minOccurs="0" />
+              <xs:element name="gsg_labou_income" msprop:Generator_ColumnVarNameInTable="columngsg_labou_income" msprop:Generator_ColumnPropNameInRow="gsg_labou_income" msprop:Generator_ColumnPropNameInTable="gsg_labou_incomeColumn" msprop:Generator_UserColumnName="gsg_labou_income" type="xs:double" minOccurs="0" />
+              <xs:element name="GSG_OTHER_INC" msprop:Generator_ColumnVarNameInTable="columnGSG_OTHER_INC" msprop:Generator_ColumnPropNameInRow="GSG_OTHER_INC" msprop:Generator_ColumnPropNameInTable="GSG_OTHER_INCColumn" msprop:Generator_UserColumnName="GSG_OTHER_INC" type="xs:double" minOccurs="0" />
+              <xs:element name="GSG_COST" msprop:Generator_ColumnVarNameInTable="columnGSG_COST" msprop:Generator_ColumnPropNameInRow="GSG_COST" msprop:Generator_ColumnPropNameInTable="GSG_COSTColumn" msprop:Generator_UserColumnName="GSG_COST" type="xs:double" minOccurs="0" />
+              <xs:element name="GSG_INV" msprop:Generator_ColumnVarNameInTable="columnGSG_INV" msprop:Generator_ColumnPropNameInRow="GSG_INV" msprop:Generator_ColumnPropNameInTable="GSG_INVColumn" msprop:Generator_UserColumnName="GSG_INV" type="xs:string" minOccurs="0" />
+              <xs:element name="GSG_DATE" msprop:Generator_ColumnVarNameInTable="columnGSG_DATE" msprop:Generator_ColumnPropNameInRow="GSG_DATE" msprop:Generator_ColumnPropNameInTable="GSG_DATEColumn" msprop:Generator_UserColumnName="GSG_DATE" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

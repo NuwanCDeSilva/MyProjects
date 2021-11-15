@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsAllSecurityUsers" targetNamespace="http://tempuri.org/dsAllSecurityUsers.xsd" xmlns:mstns="http://tempuri.org/dsAllSecurityUsers.xsd" xmlns="http://tempuri.org/dsAllSecurityUsers.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsAllSecurityUsers" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsAllSecurityUsers" msprop:Generator_UserDSName="dsAllSecurityUsers">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SecUsers" msprop:Generator_TableClassName="SecUsersDataTable" msprop:Generator_TableVarName="tableSecUsers" msprop:Generator_TablePropName="SecUsers" msprop:Generator_RowDeletingName="SecUsersRowDeleting" msprop:Generator_RowChangingName="SecUsersRowChanging" msprop:Generator_RowEvHandlerName="SecUsersRowChangeEventHandler" msprop:Generator_RowDeletedName="SecUsersRowDeleted" msprop:Generator_UserTableName="SecUsers" msprop:Generator_RowChangedName="SecUsersRowChanged" msprop:Generator_RowEvArgName="SecUsersRowChangeEvent" msprop:Generator_RowClassName="SecUsersRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SE_USR_ID" msprop:Generator_ColumnVarNameInTable="columnSE_USR_ID" msprop:Generator_ColumnPropNameInRow="SE_USR_ID" msprop:Generator_ColumnPropNameInTable="SE_USR_IDColumn" msprop:Generator_UserColumnName="SE_USR_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_USR_PW" msprop:Generator_ColumnVarNameInTable="columnSE_USR_PW" msprop:Generator_ColumnPropNameInRow="SE_USR_PW" msprop:Generator_ColumnPropNameInTable="SE_USR_PWColumn" msprop:Generator_UserColumnName="SE_USR_PW" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_USR_NAME" msprop:Generator_ColumnVarNameInTable="columnSE_USR_NAME" msprop:Generator_ColumnPropNameInRow="SE_USR_NAME" msprop:Generator_ColumnPropNameInTable="SE_USR_NAMEColumn" msprop:Generator_UserColumnName="SE_USR_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_USR_DESC" msprop:Generator_ColumnVarNameInTable="columnSE_USR_DESC" msprop:Generator_ColumnPropNameInRow="SE_USR_DESC" msprop:Generator_ColumnPropNameInTable="SE_USR_DESCColumn" msprop:Generator_UserColumnName="SE_USR_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_USR_CAT" msprop:Generator_ColumnVarNameInTable="columnSE_USR_CAT" msprop:Generator_ColumnPropNameInRow="SE_USR_CAT" msprop:Generator_ColumnPropNameInTable="SE_USR_CATColumn" msprop:Generator_UserColumnName="SE_USR_CAT" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_DEPT_ID" msprop:Generator_ColumnVarNameInTable="columnSE_DEPT_ID" msprop:Generator_ColumnPropNameInRow="SE_DEPT_ID" msprop:Generator_ColumnPropNameInTable="SE_DEPT_IDColumn" msprop:Generator_UserColumnName="SE_DEPT_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_EMP_ID" msprop:Generator_ColumnVarNameInTable="columnSE_EMP_ID" msprop:Generator_ColumnPropNameInRow="SE_EMP_ID" msprop:Generator_ColumnPropNameInTable="SE_EMP_IDColumn" msprop:Generator_UserColumnName="SE_EMP_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_DOMAIN_ID" msprop:Generator_ColumnVarNameInTable="columnSE_DOMAIN_ID" msprop:Generator_ColumnPropNameInRow="SE_DOMAIN_ID" msprop:Generator_ColumnPropNameInTable="SE_DOMAIN_IDColumn" msprop:Generator_UserColumnName="SE_DOMAIN_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_ISADHOC" msprop:Generator_ColumnVarNameInTable="columnSE_ISADHOC" msprop:Generator_ColumnPropNameInRow="SE_ISADHOC" msprop:Generator_ColumnPropNameInTable="SE_ISADHOCColumn" msprop:Generator_UserColumnName="SE_ISADHOC" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_ISDOMAIN" msprop:Generator_ColumnVarNameInTable="columnSE_ISDOMAIN" msprop:Generator_ColumnPropNameInRow="SE_ISDOMAIN" msprop:Generator_ColumnPropNameInTable="SE_ISDOMAINColumn" msprop:Generator_UserColumnName="SE_ISDOMAIN" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_ISWINAUTHEND" msprop:Generator_ColumnVarNameInTable="columnSE_ISWINAUTHEND" msprop:Generator_ColumnPropNameInRow="SE_ISWINAUTHEND" msprop:Generator_ColumnPropNameInTable="SE_ISWINAUTHENDColumn" msprop:Generator_UserColumnName="SE_ISWINAUTHEND" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_NOOFDAYS" msprop:Generator_ColumnVarNameInTable="columnSE_NOOFDAYS" msprop:Generator_ColumnPropNameInRow="SE_NOOFDAYS" msprop:Generator_ColumnPropNameInTable="SE_NOOFDAYSColumn" msprop:Generator_UserColumnName="SE_NOOFDAYS" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_MINDAYS" msprop:Generator_ColumnVarNameInTable="columnSE_MINDAYS" msprop:Generator_ColumnPropNameInRow="SE_MINDAYS" msprop:Generator_ColumnPropNameInTable="SE_MINDAYSColumn" msprop:Generator_UserColumnName="SE_MINDAYS" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_SESSIONPERIOD" msprop:Generator_ColumnVarNameInTable="columnSE_SESSIONPERIOD" msprop:Generator_ColumnPropNameInRow="SE_SESSIONPERIOD" msprop:Generator_ColumnPropNameInTable="SE_SESSIONPERIODColumn" msprop:Generator_UserColumnName="SE_SESSIONPERIOD" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_ISCHANGE_PW" msprop:Generator_ColumnVarNameInTable="columnSE_ISCHANGE_PW" msprop:Generator_ColumnPropNameInRow="SE_ISCHANGE_PW" msprop:Generator_ColumnPropNameInTable="SE_ISCHANGE_PWColumn" msprop:Generator_UserColumnName="SE_ISCHANGE_PW" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_PW_EXPIRE" msprop:Generator_ColumnVarNameInTable="columnSE_PW_EXPIRE" msprop:Generator_ColumnPropNameInRow="SE_PW_EXPIRE" msprop:Generator_ColumnPropNameInTable="SE_PW_EXPIREColumn" msprop:Generator_UserColumnName="SE_PW_EXPIRE" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_PW_MUSTCHANGE" msprop:Generator_ColumnVarNameInTable="columnSE_PW_MUSTCHANGE" msprop:Generator_ColumnPropNameInRow="SE_PW_MUSTCHANGE" msprop:Generator_ColumnPropNameInTable="SE_PW_MUSTCHANGEColumn" msprop:Generator_UserColumnName="SE_PW_MUSTCHANGE" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_ACT" msprop:Generator_ColumnVarNameInTable="columnSE_ACT" msprop:Generator_ColumnPropNameInRow="SE_ACT" msprop:Generator_ColumnPropNameInTable="SE_ACTColumn" msprop:Generator_UserColumnName="SE_ACT" type="xs:int" minOccurs="0" />
+              <xs:element name="SE_CRE_BY" msprop:Generator_ColumnVarNameInTable="columnSE_CRE_BY" msprop:Generator_ColumnPropNameInRow="SE_CRE_BY" msprop:Generator_ColumnPropNameInTable="SE_CRE_BYColumn" msprop:Generator_UserColumnName="SE_CRE_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_CRE_DT" msprop:Generator_ColumnVarNameInTable="columnSE_CRE_DT" msprop:Generator_ColumnPropNameInRow="SE_CRE_DT" msprop:Generator_ColumnPropNameInTable="SE_CRE_DTColumn" msprop:Generator_UserColumnName="SE_CRE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SE_MOD_BY" msprop:Generator_ColumnVarNameInTable="columnSE_MOD_BY" msprop:Generator_ColumnPropNameInRow="SE_MOD_BY" msprop:Generator_ColumnPropNameInTable="SE_MOD_BYColumn" msprop:Generator_UserColumnName="SE_MOD_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_MOD_DT" msprop:Generator_ColumnVarNameInTable="columnSE_MOD_DT" msprop:Generator_ColumnPropNameInRow="SE_MOD_DT" msprop:Generator_ColumnPropNameInTable="SE_MOD_DTColumn" msprop:Generator_UserColumnName="SE_MOD_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SE_SESSION_ID" msprop:Generator_ColumnVarNameInTable="columnSE_SESSION_ID" msprop:Generator_ColumnPropNameInRow="SE_SESSION_ID" msprop:Generator_ColumnPropNameInTable="SE_SESSION_IDColumn" msprop:Generator_UserColumnName="SE_SESSION_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_EMAIL" msprop:Generator_ColumnVarNameInTable="columnSE_EMAIL" msprop:Generator_ColumnPropNameInRow="SE_EMAIL" msprop:Generator_ColumnPropNameInTable="SE_EMAILColumn" msprop:Generator_UserColumnName="SE_EMAIL" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_MOB" msprop:Generator_ColumnVarNameInTable="columnSE_MOB" msprop:Generator_ColumnPropNameInRow="SE_MOB" msprop:Generator_ColumnPropNameInTable="SE_MOBColumn" msprop:Generator_UserColumnName="SE_MOB" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_PHONE" msprop:Generator_ColumnVarNameInTable="columnSE_PHONE" msprop:Generator_ColumnPropNameInRow="SE_PHONE" msprop:Generator_ColumnPropNameInTable="SE_PHONEColumn" msprop:Generator_UserColumnName="SE_PHONE" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_SUN_ID" msprop:Generator_ColumnVarNameInTable="columnSE_SUN_ID" msprop:Generator_ColumnPropNameInRow="SE_SUN_ID" msprop:Generator_ColumnPropNameInTable="SE_SUN_IDColumn" msprop:Generator_UserColumnName="SE_SUN_ID" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_PW_CHNG_BY" msprop:Generator_ColumnVarNameInTable="columnSE_PW_CHNG_BY" msprop:Generator_ColumnPropNameInRow="SE_PW_CHNG_BY" msprop:Generator_ColumnPropNameInTable="SE_PW_CHNG_BYColumn" msprop:Generator_UserColumnName="SE_PW_CHNG_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="SE_PW_CHNG_DT" msprop:Generator_ColumnVarNameInTable="columnSE_PW_CHNG_DT" msprop:Generator_ColumnPropNameInRow="SE_PW_CHNG_DT" msprop:Generator_ColumnPropNameInTable="SE_PW_CHNG_DTColumn" msprop:Generator_UserColumnName="SE_PW_CHNG_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SE_EMP_CD" msprop:Generator_ColumnVarNameInTable="columnSE_EMP_CD" msprop:Generator_ColumnPropNameInRow="SE_EMP_CD" msprop:Generator_ColumnPropNameInTable="SE_EMP_CDColumn" msprop:Generator_UserColumnName="SE_EMP_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="SEC_COM_CD" msprop:Generator_ColumnVarNameInTable="columnSEC_COM_CD" msprop:Generator_ColumnPropNameInRow="SEC_COM_CD" msprop:Generator_ColumnPropNameInTable="SEC_COM_CDColumn" msprop:Generator_UserColumnName="SEC_COM_CD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="paras" msprop:Generator_TableClassName="parasDataTable" msprop:Generator_TableVarName="tableparas" msprop:Generator_TablePropName="paras" msprop:Generator_RowDeletingName="parasRowDeleting" msprop:Generator_RowChangingName="parasRowChanging" msprop:Generator_RowEvHandlerName="parasRowChangeEventHandler" msprop:Generator_RowDeletedName="parasRowDeleted" msprop:Generator_UserTableName="paras" msprop:Generator_RowChangedName="parasRowChanged" msprop:Generator_RowEvArgName="parasRowChangeEvent" msprop:Generator_RowClassName="parasRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="User" msprop:Generator_ColumnVarNameInTable="columnUser" msprop:Generator_ColumnPropNameInRow="User" msprop:Generator_ColumnPropNameInTable="UserColumn" msprop:Generator_UserColumnName="User" type="xs:string" minOccurs="0" />
+              <xs:element name="FUser" msprop:Generator_ColumnVarNameInTable="columnFUser" msprop:Generator_ColumnPropNameInRow="FUser" msprop:Generator_ColumnPropNameInTable="FUserColumn" msprop:Generator_UserColumnName="FUser" type="xs:string" minOccurs="0" />
+              <xs:element name="FCom" msprop:Generator_ColumnVarNameInTable="columnFCom" msprop:Generator_ColumnPropNameInRow="FCom" msprop:Generator_ColumnPropNameInTable="FComColumn" msprop:Generator_UserColumnName="FCom" type="xs:string" minOccurs="0" />
+              <xs:element name="FFromDate" msprop:Generator_ColumnVarNameInTable="columnFFromDate" msprop:Generator_ColumnPropNameInRow="FFromDate" msprop:Generator_ColumnPropNameInTable="FFromDateColumn" msprop:Generator_UserColumnName="FFromDate" type="xs:string" minOccurs="0" />
+              <xs:element name="FTodate" msprop:Generator_ColumnVarNameInTable="columnFTodate" msprop:Generator_ColumnPropNameInRow="FTodate" msprop:Generator_ColumnPropNameInTable="FTodateColumn" msprop:Generator_UserColumnName="FTodate" type="xs:string" minOccurs="0" />
+              <xs:element name="FDeparment" msprop:Generator_ColumnVarNameInTable="columnFDeparment" msprop:Generator_ColumnPropNameInRow="FDeparment" msprop:Generator_ColumnPropNameInTable="FDeparmentColumn" msprop:Generator_UserColumnName="FDeparment" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

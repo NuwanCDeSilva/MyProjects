@@ -1,0 +1,80 @@
+﻿@model FF.BusinessObjects.LoginUser
+
+@{
+    ViewBag.Title = Resources.Resource.LoginTitle;
+}
+
+<div class="container container-main-login">
+        <div class="messages">
+                @if (@ViewBag.ErrorMsg != null)
+                {
+                    <div class=" row navbar navbar-inverse navbar-fixed-top error-msg">
+                            <div class="col-md-5 col-md-offset-3 ">
+                                @ViewBag.ErrorMsg
+                            </div>
+                    </div>
+                }
+                else if (@ViewBag.Notice != null)
+                {
+                    <div class="row navbar navbar-inverse navbar-fixed-top notice-msg">
+                            <div class="col-md-5 col-md-offset-3 ">
+                                @ViewBag.Notice
+                            </div>
+                    </div>
+                }
+                else
+                {
+
+                }
+        </div>
+        <div class="row main-login">
+            <div class="col-md-5 col-md-offset-3 ">
+                <section id="loginForm" class="panel panel-default">
+                    <div id="spinner">
+                        <img src="~/Resources/Images/spinner.gif">
+                    </div>
+                    <div class="panel-heading">
+                        <div class="company-logo"><img src="~/Resources/Images/AsycudaWorldLogo.gif" alt="Asycuda"> </div>
+                    </div>
+                    @using (Html.BeginForm("Login", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal login-form", role = "form" }))
+                    {
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">@Resources.Resource.UserName</label>
+                            <div class="col-md-7">
+                                @Html.TextBoxFor(m => m.User_name, new { @class = "form-control user_name_cls", @placeholder = "User Name" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">@Resources.Resource.Password </label>
+                            <div class="col-md-7">
+                                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">@Resources.Resource.Company </label>
+                            <div class="col-md-7">
+                                @Html.DropDownListFor(m => m.Mst_com.Mc_cd, new List<SelectListItem>(), "Select Company", new { @class = "form-control company-dropdown" })
+                                @Html.HiddenFor(m => m.Mst_com.Mc_desc, new { @class = "form-control company-description" })
+                            </div>
+                            <noscript class="col-md-1 refresh-head-div">
+                                <style type="text/css">
+                                    .pagecontainer {
+                                        display: none;
+                                    }
+                                </style>
+                                    <div class="load-company"><img src="~/Resources/Images/refresh.jpg" alt="Load Company"> </div>
+                            </noscript>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-offset-3 col-md-10">
+                                <input type="submit" value=@Resources.Resource.LoginBtnTxt class="btn btn-primary login-btn" />
+                            </div>
+                        </div>
+                    }
+                    <div class="panel-footer">&copy;@DateTime.Now.Year @Resources.Resource.ReservedText</div>
+                </section>
+            </div>
+        </div>
+</div>

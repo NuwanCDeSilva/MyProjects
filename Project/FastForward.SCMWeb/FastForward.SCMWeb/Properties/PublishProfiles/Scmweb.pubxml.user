@@ -1,0 +1,4257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_PublishTargetUrl>C:\inetpub\wwwroot\SCMWEB</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/AjaxControlToolkit.dll">
+      <publishTime>04/20/2011 21:38:34</publishTime>
+    </File>
+    <File Include="bin/FastForward.SCMWeb.dll">
+      <publishTime>12/18/2018 15:44:10</publishTime>
+    </File>
+    <File Include="bin/FastMember.dll">
+      <publishTime>09/22/2013 16:46:48</publishTime>
+    </File>
+    <File Include="bin/FF.BusinessObjects.dll">
+      <publishTime>12/18/2018 15:43:39</publishTime>
+    </File>
+    <File Include="bin/FF.Interfaces.dll">
+      <publishTime>12/18/2018 15:43:41</publishTime>
+    </File>
+    <File Include="bin/Microsoft.QualityTools.Testing.Fakes.dll">
+      <publishTime>11/01/2014 00:46:48</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/08/2013 15:15:08</publishTime>
+    </File>
+    <File Include="bin/Neodynamic.SDK.WebClientPrint.dll">
+      <publishTime>12/12/2013 09:31:40</publishTime>
+    </File>
+    <File Include="bin/Temp/ADMIN.pdf">
+      <publishTime>04/26/2018 15:12:01</publishTime>
+    </File>
+    <File Include="bin/View/ADMIN/CR.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/ADMIN/CR.rpt">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Audit/rptAllSecurityUsers.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Audit/rptAllSecurityUsers1.cs">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Container_volume.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Container_volume.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/costing_sheet_report.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/costing_sheet_report.rpt">
+      <publishTime>11/06/2018 14:07:06</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/costing_sheet_report_ABE.cs">
+      <publishTime>02/07/2018 10:30:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/costing_sheet_report_ABE.rpt">
+      <publishTime>11/06/2018 14:07:06</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/CusDecEntryDetails.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/CusDecEntryDetails.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/CusDecEntryReq.cs">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/CusDecEntryReq.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/CustomAssesment.cs">
+      <publishTime>10/30/2018 16:31:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/CustomAssesment.rpt">
+      <publishTime>11/07/2018 08:32:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Import_Schedule.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Import_Schedule.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Import_Schedule_New.cs">
+      <publishTime>02/07/2018 10:30:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Import_Schedule_New.rpt">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/LC_Details_Bankwise_Report.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/LC_Details_Bankwise_Report.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Order_Status_Report.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Order_Status_Report.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/profitability_report.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/profitability_report.rpt">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptCostInformation.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptCostInformation.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptImpCostAnalys.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptImpCostAnalys.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptImportRegister.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptImportRegister.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptShipmentStatus.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptShipmentStatus.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptSLPARegister.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/rptSLPARegister.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Shipment_Schedule.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Shipment_Schedule.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Shipping_Invoice_Report.cs">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Shipping_Invoice_Report.rpt">
+      <publishTime>04/18/2018 10:49:53</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Total_Imports.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/Total_Imports.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/TRNoteRequest.cs">
+      <publishTime>03/26/2018 10:49:52</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Imports/TRNoteRequest.rpt">
+      <publishTime>11/14/2018 10:14:54</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/AALcourier.cs">
+      <publishTime>03/20/2018 10:01:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/AALcourier.rpt">
+      <publishTime>03/20/2018 10:01:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/abscourier.cs">
+      <publishTime>03/20/2018 09:28:09</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/abscourier.rpt">
+      <publishTime>03/20/2018 09:28:06</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/AgeMonitoring.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/AgeMonitoring.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/AllocationDetails.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/AllocationDetails.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/CatScatwiseItemAge.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/CatScatwiseItemAge.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/CatwiseItemAge.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/CatwiseItemAge.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ConsignmentMovement.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ConsignmentMovement.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/cr_locationdetails.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/cr_locationdetails.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Current_Availability_Against_BL.cs">
+      <publishTime>05/15/2018 16:21:35</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Current_Availability_Against_BL.rpt">
+      <publishTime>05/15/2018 16:21:35</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/curr_age_report.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/curr_age_report.rpt">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/dailyWHStock.cs">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/dailyWHStock.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/excess_stock_report.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/excess_stock_report.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/InventoryStatements.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/InventoryStatements1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/InventoryStatementsTr3.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/InventoryStatementsTr3.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_ABE.rpt">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_ABE1.cs">
+      <publishTime>01/17/2018 15:16:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Consign.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Consign.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_ADJ_ABE.cs">
+      <publishTime>01/17/2018 15:16:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_ADJ_ABE.rpt">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN.rpt">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_AAL.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_AAL.rpt">
+      <publishTime>03/19/2018 11:06:28</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_ABE.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_ABE.rpt">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_AOA.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_AOA.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_ARL.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_ARL.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_SGL.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Inward_Docs_Full_GRN_SGL.rpt">
+      <publishTime>12/09/2017 08:57:07</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ItemBufferStatus.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ItemBufferStatus.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Itemconditionreport.rpt">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Itemconditionreport1.cs">
+      <publishTime>03/21/2018 08:36:38</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ItemwiseTransDetList.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ItemwiseTransDetList.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Item_Canibalise_Print.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Item_Canibalise_Print.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/item_profile.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/item_profile.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ItmBrndwiseItemAge.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ItmBrndwiseItemAge.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Last_No_Seq_Rep.cs">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Last_No_Seq_Rep.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/LocwiseItemAge.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/LocwiseItemAge.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/MoveCostDetail.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/MoveCostDetail.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial.cs">
+      <publishTime>07/06/2018 12:07:38</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial.rpt">
+      <publishTime>07/06/2018 12:07:38</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_cost.cs">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_cost.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_det.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_det.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_ser.cs">
+      <publishTime>03/15/2018 09:14:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_ser.rpt">
+      <publishTime>03/15/2018 09:14:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_ser_cost.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_ser_cost.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_sum.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_sum.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_summary.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Movement_audit_trial_summary.rpt">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/MRNPrint.cs">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/MRNPrint.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/MRN_Status.cs">
+      <publishTime>08/27/2018 09:48:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/MRN_Status.rpt">
+      <publishTime>08/27/2018 09:48:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs.cs">
+      <publishTime>02/22/2018 13:27:42</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs.rpt">
+      <publishTime>02/22/2018 13:27:42</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docsx.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docsx.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_AODOUTNEW.rpt">
+      <publishTime>03/20/2018 08:34:29</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_AODOUTNEW1.cs">
+      <publishTime>03/20/2018 08:34:29</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_DO.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_DO.rpt">
+      <publishTime>05/21/2018 09:30:18</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_DO_ABE.cs">
+      <publishTime>01/17/2018 15:16:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_DO_ABE.rpt">
+      <publishTime>09/26/2018 11:31:04</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_AAL.cs">
+      <publishTime>02/07/2018 10:30:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_AAL.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE.cs">
+      <publishTime>01/18/2018 10:15:13</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE.rpt">
+      <publishTime>01/18/2018 10:15:13</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE_OUTN.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE_OUTN.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE_OUTP.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE_OUTP.rpt">
+      <publishTime>07/30/2018 08:50:43</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE_PRN.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ABE_PRN.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_AOA_OUTP.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_AOA_OUTP.rpt">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ARL.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ARL.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ARL_EXP_Details.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_ARL_EXP_Details.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_IN_SGL_.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_IN_SGL_.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_SGL.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full_SGL.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full__AEC.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Outward_Docs_Full__AEC.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Pending_Entry_Details.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Pending_Entry_Details.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/PurchaseRequest.cs">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/PurchaseRequest.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RCCReport.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RCCReport.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RepWarrantyCard_AOA.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RepWarrantyCard_AOA.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RepWarrantyCard_AOA1.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RepWarrantyCard_AOA1.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RepWarrantyCard_AOA2.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RepWarrantyCard_AOA2.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_Order.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_Order.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN.cs">
+      <publishTime>12/09/2017 08:57:07</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN_AAL.cs">
+      <publishTime>02/07/2018 10:30:22</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN_AAL.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN_ABE.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN_ABE.rpt">
+      <publishTime>06/28/2018 16:14:41</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN_ABL_N.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_OrderN_ABL_N.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_Order_ARL.cs">
+      <publishTime>04/24/2018 16:20:50</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Rep_Pur_Order_ARL.rpt">
+      <publishTime>04/24/2018 16:20:50</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RequistionNote.cs">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/RequistionNote.rpt">
+      <publishTime>04/18/2018 10:49:53</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ReservationDetail.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ReservationDetail.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ReservationItems.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ReservationItems.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ReservationSummary.cs">
+      <publishTime>12/18/2018 10:31:47</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ReservationSummary.rpt">
+      <publishTime>07/09/2018 08:13:58</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptLocalpurchaseCostDetail.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptLocalpurchaseCostDetail.rpt">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptPOGRNPending.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptPOGRNPending.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptPurchaseorderSummery_Detail.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptPurchaseorderSummery_Detail.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptPurchaseorderSummery_Summery.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptPurchaseorderSummery_Summery.rpt">
+      <publishTime>10/30/2018 16:31:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptValueAddition.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rptValueAddition.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rpt_Bond_Balance_Report1.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rpt_Bond_Balance_Report1.rpt">
+      <publishTime>04/18/2018 10:49:53</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rpt_GLB_Git_Document.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/rpt_GLB_Git_Document.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/SerialMovement.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/SerialMovement.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Serial_History.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Serial_History.rpt">
+      <publishTime>09/18/2018 11:16:56</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/serial_items.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/serial_items.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Statement_Of_Accounts.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Statement_Of_Accounts.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockAge.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockAge.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockAgeSerial.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockAgeSerial.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockBalanceWithSerialAge.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockBalanceWithSerialAge.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockBalanceWithSerialAgeOld.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockBalanceWithSerialAgeOld.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockLedger.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StockLedger.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_Balance.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_Balance.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_BalanceCatWise.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_BalanceCatWise.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_BalanceCost.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_BalanceCost.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_BalanceSerialAs_at.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/Stock_BalanceSerialAs_at.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StuswiseItemAge.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/StuswiseItemAge.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ToBondStatus.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ToBondStatus.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ToBondStatus_Old.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/ToBondStatus_Old.rpt">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_abl.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_abl.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_abl_new.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_abl_new.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_mobile.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_mobile.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_SGL.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Inventory/WarrPrint_SGL.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Purchasing/ItemWiseStationeryRequirements.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Purchasing/ItemWiseStationeryRequirements.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Purchasing/Purchase_Returns_Report.cs">
+      <publishTime>07/06/2018 12:07:38</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Purchasing/Purchase_Returns_Report.rpt">
+      <publishTime>07/06/2018 12:07:38</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Purchasing/SupplierPrices.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Purchasing/SupplierPrices.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding1.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding_new.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding_new1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding_PC.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding_PC1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding_PC_new.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Age_Debtor_Outstanding_PC_new1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ApprovalNote.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ApprovalNote.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ApprovalNoteInvoiceWise.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ApprovalNoteInvoiceWise.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/BOQ_Details_Rpt.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/BOQ_Details_Rpt.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CollectionDetails.cs">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CollectionDetails.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CreditCardPaymentSummary.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CreditCardPaymentSummary.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CreditCardPayReceipt.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CreditCardPayReceipt.rpt">
+      <publishTime>04/24/2018 16:20:50</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CustomerEntryReport.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/CustomerEntryReport.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement1.cs">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement1.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs_PC.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs_PC1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs_PC_Meeting.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs_PC_Meeting1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs_PC_with_comm.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_Outs_PC_with_comm1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_PC.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DebtorSettlement_PC1.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DeliveredSalesReport.cs">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/DeliveredSalesReport.rpt">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Delivered_Sales_GRN.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Delivered_Sales_GRN1.cs">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Discount_Report.cs">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Discount_Report.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/excecutivewisesales.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/excecutivewisesales.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report1.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report1.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report2.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report2.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report_cost.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Forward_Sales_Report_cost.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/GP_Analysis_Report.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/GP_Analysis_Report.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/GP_Detail_Repl.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/GP_Detail_Repl.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/GP_Detail_Repl2.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/GP_Detail_Repl2.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/InvoiceAuto.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/InvoiceAuto.rpt">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/InvoiceFullPrints.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/InvoiceFullPrints.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/pcdetails.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/pcdetails.rpt">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Quotation_RepPrint.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Quotation_RepPrint1.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_AOA.cs">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_AOA.rpt">
+      <publishTime>07/23/2018 11:52:37</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_n.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_n.rpt">
+      <publishTime>07/23/2018 11:52:37</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_SGL.cs">
+      <publishTime>07/23/2018 11:52:37</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_SGL.rpt">
+      <publishTime>07/23/2018 11:52:37</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_SGL_Old.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReceiptPrints_SGL_Old.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP.rpt">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP_lrp_rp.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP_lrp_rp.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP_lrp_rpAECy.cs">
+      <publishTime>08/27/2018 09:48:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP_lrp_rpAECy.rpt">
+      <publishTime>08/27/2018 09:48:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP_lrp_rp_new.rpt">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Rep_INV_DP_lrp_rp_new1.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReturnChequeDetail.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/ReturnChequeDetail.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Reversal_serial.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Reversal_serial.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/rptSaleOrderstatusReport.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/rptSaleOrderstatusReport.rpt">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/rpt_PendingDeliveryReportNew.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/rpt_PendingDeliveryReportNew.rpt">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/rpt_PendingSalesReportNew.cs">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/rpt_PendingSalesReportNew.rpt">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_AAL.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_AAL.rpt">
+      <publishTime>03/20/2018 08:34:29</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_ABE.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_ABE.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_AEC.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_AEC.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_SGL.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesInv_SGL.rpt">
+      <publishTime>11/06/2018 14:07:06</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesReconcilation.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesReconcilation.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesReversalDetails.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SalesReversalDetails.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Sales_Inv_AIS.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Sales_Inv_AIS.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/sales_order.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/sales_order.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Sales_Order_Summary.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Sales_Order_Summary.rpt">
+      <publishTime>04/18/2018 10:49:53</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Sales__Inv_ABT.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Sales__Inv_ABT.rpt">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SelloutDetails.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SelloutDetails.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SRN.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SRN.rpt">
+      <publishTime>08/27/2018 09:48:24</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SRN_AAL.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SRN_AAL.rpt">
+      <publishTime>03/15/2018 09:14:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SRN_ABE.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/SRN_ABE.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Valuation_Dtl.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Sales/Valuation_Dtl.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Approved_MRN_Summary.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Approved_MRN_Summary.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Courier_Dailly_Summary.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Courier_Dailly_Summary.rpt">
+      <publishTime>05/21/2018 09:30:18</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Dispatch_Req_Detail_Report.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Dispatch_Req_Detail_Report.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Dispatch_Req_Detail_Report_AAL.cs">
+      <publishTime>02/22/2018 13:27:42</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Dispatch_Req_Detail_Report_AAL.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Dispatch_Req_Report.cs">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Dispatch_Req_Report.rpt">
+      <publishTime>06/22/2018 16:30:57</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Dispatch_Detail_Report.cs">
+      <publishTime>04/18/2018 11:41:06</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Dispatch_Detail_Report.rpt">
+      <publishTime>04/18/2018 11:41:06</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Pick_Plan.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Pick_Plan.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/ITEM_PICK_PLAN_AAL.cs">
+      <publishTime>03/21/2018 08:36:38</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/ITEM_PICK_PLAN_AAL.rpt">
+      <publishTime>03/26/2018 10:49:53</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Pick_Plan_sum.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Pick_Plan_sum.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Pick_Plan_sum_AAL.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Item_Pick_Plan_sum_AAL.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Stock_Verification.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Warehouse/Stock_Verification.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ASTAccount.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ASTAccount.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ASTReport.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ASTReport.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ATSReportII.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ATSReportII.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/cargo_imports.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/cargo_imports.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/custom_val_declear.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/custom_val_declear.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/custom_workingsheet.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/custom_workingsheet.rpt">
+      <publishTime>05/30/2018 08:30:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/cus_ele.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/cus_ele.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/CVWharf Working Sheet new.cs">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/CVWharf Working Sheet new.rpt">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/EntryClearingClrUser.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/EntryClearingClrUser.rpt">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/EntryClearingCompany.cs">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/EntryClearingCompany.rpt">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/EntryClearingShipping.cs">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/EntryClearingShipping.rpt">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/Exbond2.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/Exbond2.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclaration.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclaration.rpt">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationII.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationII.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationIII.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationIII.rpt">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSheet.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSheet.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSheetother.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSheetother.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSheetRebond.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSheetRebond.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSubReport.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/GoodsDeclarationSubReport.rpt">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/Rebond2.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/Rebond2.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/rpt_Bond_Balance_Report.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/rpt_Bond_Balance_Report.rpt">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ShipmentTracker.cs">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/ShipmentTracker.rpt">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/Tobond2.cs">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="bin/View/Reports/Wharf/Tobond2.rpt">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="bin/Web.config">
+      <publishTime>12/18/2018 15:44:20</publishTime>
+    </File>
+    <File Include="bin/Web.Debug.config">
+      <publishTime>11/23/2017 16:44:11</publishTime>
+    </File>
+    <File Include="bin/Web.Release.config">
+      <publishTime>11/23/2017 16:44:11</publishTime>
+    </File>
+    <File Include="Common/template.html">
+      <publishTime>11/23/2017 16:44:11</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_cs.cab">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_da.cab">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_de.cab">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_en.cab">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_es.cab">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_fi.cab">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_fr.cab">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_hu.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_it.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_ja.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_ko.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_nb.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_nl.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_pl.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_pt.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_ru.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_sk.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_sv.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_th.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_tr.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_zh_CN.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/ActiveXControls/PrintControl_res_zh_TW.cab">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allInOne.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_cs.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_da.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_de.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_en.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_es.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_fi.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_fr.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_hu.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_it.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_ja.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_ko.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_nb.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_nl.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_pl.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_pt.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_ru.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_sk.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_sv.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_th.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_tr.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_zh_CN.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/allStrings_zh_TW.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/css/cedefault.css">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/css/default.css">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/css/exception.css">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/css/prompting.css">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/html/calendar.html">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/html/calendarbottom.html">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/html/calendartop.html">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/buttonl.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/buttonm.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/buttonr.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive100.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive150.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive200.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive250.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive300.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive350.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive400.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortActive50.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover100.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover150.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover200.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover250.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover300.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover350.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover400.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortHover50.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortInactive100.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortInactive150.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortInactive200.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortInactive250.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortInactive300.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortInactive400.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/DownArrowSortInactive50.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive100.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive150.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive200.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive250.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive300.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive350.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive400.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortActive50.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover100.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover150.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover200.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover250.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover300.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover350.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover400.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortHover50.gif">
+      <publishTime>11/23/2017 16:44:13</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortInactive100.gif">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortInactive150.gif">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortInactive200.gif">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortInactive250.gif">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortInactive300.gif">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortInactive400.gif">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/images/isort/UpArrowSortInactive50.gif">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/calendar.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/calendar_param.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/api.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ArgumentNormalizer.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/bobjcallback.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ButtonList.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Calendar.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Colors.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/common.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/crv.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Dialogs.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/dom.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/encoding.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/event.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/GroupTree.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/GroupTreeListener.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/GroupTreeNode.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/html.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/allInOne.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/allInOneBG.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/arrow_button_depressed.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/arrow_button_hover.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/breadcrumbSep.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/calendar.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/catalyst.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/clearValues.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/clear_x.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/closePanel.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/delete.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/drill_cursor.cur">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/export.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/filledCircle.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/first.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/grouptree_toggle.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/hollowCircle.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/last.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/leftTriangle.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/line.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/logo.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/magnify.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/min.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/next.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/open_parameter_arrow.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/panelHeaderBG.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/panelNavigatorItemHL.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/panelNavigatorItemSelectedBG.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/panel_toggle.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/param_datafetching.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/param_dirty.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/param_info.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/param_run.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/param_warning.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/plus.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/prev.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/print.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/refresh.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/rightTriangle.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/search.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/separator.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/StackedTab.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/style.css">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_background.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_buttongroup_background.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_buttongroup_left.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_buttongroup_right.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_button_depressed.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_button_hover.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_menuarrow_depressed.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_menuarrow_hover.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_pagenav_buttons.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/toolbar_separator_icon.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/undo.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/up.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/images/WarningPopupTriangle.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ImageSprites.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/initDhtmlLib.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/IOAdapters.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/LeftPanel.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/OptionalParameterUI.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/OptionalParameterValueRow.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/PanelHeader.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/PanelNavigator.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/PanelNavigatorItem.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Parameter.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ParameterController.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ParameterDialog.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ParameterInfoRow.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ParameterPanel.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ParameterPanelToolbar.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ParameterUI.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ParameterValueRow.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/PromptPage.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/RangeField.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ReportAlbum.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ReportPage.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ReportView.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Separator.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/SharedWidgetHolder.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/SignalDisposer.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/StackedPanel.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/StackedTab.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/StateManager.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Statusbar.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_cs.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_da.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_de.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_en.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_es.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_fi.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_fr.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_hu.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_it.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_ja.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_ko.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_nb.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_nl.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_pl.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_pt.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_ru.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_sk.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_sv.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_th.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_tr.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_zh_CN.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/strings_zh_TW.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/TextCombo.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/TextField.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Toolbar.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ToolPanel.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/Viewer.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ViewerFlexParameterAdapter.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/ViewerListener.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewer/WarningPopup.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/crviewerinclude.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/bolist.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/calendar.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/dialog.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/dom.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/empty.html">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/borders.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/help.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/loading.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/lov.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/min.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/plus.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/print.css">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/print_fe.css">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/prompt.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/resizepattern.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/bolist.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/button.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/buttonIcons.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/critical_icon.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/dialogelements.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/dialogframe.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/dialogframeleftright.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/dialogframetopbottom.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/dialogtitle.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/down.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/iconsep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/information_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/left.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/menus.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/node.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/progress.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/resize.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/right.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/scroll_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/sep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/sep_solid.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/style.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/style.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/style_fe.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/tabs.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/up.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/wait01.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/wait02.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_coloredline/warning_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/bolist.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/button.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/buttonIcons.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/critical_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/dialogelements.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/dialogframe.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/dialogframeleftright.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/dialogframetopbottom.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/dialogtitle.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/down.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/iconsep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/information_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/left.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/menus.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/node.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/progress.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/resize.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/right.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/scroll_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/sep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/sep_solid.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/style.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/style.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/style_fe.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/tabs.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/up.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/wait01.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/wait02.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_corporate/warning_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/bolist.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/button.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/buttonIcons.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/critical_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/dialogelements.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/dialogframe.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/dialogframeleftright.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/dialogframetopbottom.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/dialogtitle.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/down.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/iconsep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/information_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/left.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/menus.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/node.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/progress.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/resize.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/right.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/scroll_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/sep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/sep_solid.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/style.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/style.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/style_fe.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/tabs.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/up.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/wait01.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/wait02.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_default/warning_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/background_field.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/background_menusel.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/bolist.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/button.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/buttonIcons.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/critical_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/critical_icon.png">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/dialogelements.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/dialogframe.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/dialogframeleftright.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/dialogframetopbottom.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/dialogtitle.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/down.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/hgrab.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/horiz_tabs.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/iconsep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/information_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/left.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/menuitem_check.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/menus.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/node.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/panemenu.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/panetitle.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/progress.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/resize.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/right.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/scroll_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/sep.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/sep_solid.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/style.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/style.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/style_fe.css">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/tabs.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/toolbar_elements.png">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/up.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/vgrab.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/wait01.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/wait02.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/skin_standard/warning_icon.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/swap.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/transp.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/images/tree.gif">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/cs/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/da/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/de/labels.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/en/labels.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/es/labels.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/fi/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/fr/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/hu/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/it/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/ja/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/ko/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/nb/labels.js">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/nl/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/pl/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/pt/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/ru/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/sk/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/sv/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/th/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/tr/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/zh_CN/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/language/zh_TW/labels.js">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/lov.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/menu.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/palette.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/prompttree.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/psheet.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/andorwidget.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/basicDialog.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/blockWhileWait.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/bolist.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/borderswidget.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/buttons.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/calendar.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/checktree.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/default.html">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/dim.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/dim_close.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/dim_o.gif">
+      <publishTime>11/23/2017 16:44:16</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/dim_open.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/empty.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/eventsDialog.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/fieldswidget.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/format.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/framezone.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/grabber.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/iconlistpopupwidget.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/iconscrollmenuwidget.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/imgtabs.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/inconwidget.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/infowidget.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/lov.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/measure.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/measure_o.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/menu.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/navigation.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/palettes.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/pane.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/parent_dialog.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/progressBar.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/prompttree.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/qualif.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/scrolltabs.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/simplelist.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/skinIntl.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/tabs.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/textcombowidget.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/tooltipwidget.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/treeicons.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/treeview.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/unv_close.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/unv_o.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/unv_open.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/samples/waitDialog.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/treeview.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/validator/default.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/validator/validator_res.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dhtmllib/waitdialog.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/dt_param.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/external/date.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/FlexParameterBridge.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/KeyDownEvent.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/log4javascript/log4javascript.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/log4javascript/log4javascript_stub.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/log4javascript/log4javascript_stub_uncompressed.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/log4javascript/log4javascript_uncompressed.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/log4javascript/main.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/3rdParty.txt">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Async.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Base.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Color.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Controls.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/DateTime.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/DOM.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/DragAndDrop.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Format.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Iter.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/License.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Logging.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/LoggingPane.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/MochiKit.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/MockDOM.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/New.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Signal.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Sortable.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Style.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Test.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/Visual.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/MochiKit/__package__.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/previewerror.js">
+      <publishTime>11/23/2017 16:44:15</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/prompts.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/prompts_param.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/js/swfobject/swfobject.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/parameterUIController-compressed.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/processindicator.js">
+      <publishTime>11/23/2017 16:44:12</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/promptengine-compressed.js">
+      <publishTime>11/23/2017 16:44:14</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/css/promptengine2.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/css/promptengine_default.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/html/calendar.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/html/calendarbottom.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/html/calendartop.html">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/addallfield.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/addallfield_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/addfield.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/addfield_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/back.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/background_field.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/back_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/button.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/button_left_normal.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/button_middle_normal.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/button_right_normal.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/calendar.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/cfilter.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/cfilter_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/dialogelements.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/dialogtitle.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/error.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/errormsg.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/filter.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/filter_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/forward.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/forward_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/info.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/infomsg.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/minus.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/next.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/next_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/plus.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/prev.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/prev_over.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/resize.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/transp.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/warning.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/images/warningmsg.gif">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/initDhtmlLib.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_calendar.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_calendar2.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_prompts.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_prompts2.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_cs.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_da.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_de.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_en.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_es.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_fi.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_fr.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_hu.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_it.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_ja.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_ko.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_nb.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_nl.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_pl.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_pt.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_ru.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_sk.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_sv.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_th.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_tr.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_zh_CN.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/prompting/js/promptengine_strings_zh_TW.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/urlreporting/activexviewer.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="crystalreportviewers13/urlreporting/appletviewer.js">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/bootstrap.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/bootstrap.min.css">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Css/images/ui-bg_glass_55_fbf9ee_1x400.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-bg_glass_65_ffffff_1x400.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-bg_glass_75_dadada_1x400.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-bg_glass_75_e6e6e6_1x400.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-bg_glass_95_fef1ec_1x400.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-bg_highlight-soft_75_cccccc_1x100.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-icons_222222_256x240.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-icons_2e83ff_256x240.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-icons_454545_256x240.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-icons_888888_256x240.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/images/ui-icons_cd0a0a_256x240.png">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/jquery-ui-timepicker-addon.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/jquery-ui.min.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/jquery-ui.structure.min.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/jquery-ui.theme.min.css">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Css/LoginCss.css">
+      <publishTime>11/23/2017 16:44:17</publishTime>
+    </File>
+    <File Include="Css/style.css">
+      <publishTime>10/20/2018 10:45:43</publishTime>
+    </File>
+    <File Include="Email/resetPassword.html">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Email/successMsg.html">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Error.aspx">
+      <publishTime>11/23/2017 16:44:11</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff2">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="ForgotPassword.aspx">
+      <publishTime>02/01/2018 14:07:54</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/23/2017 16:44:11</publishTime>
+    </File>
+    <File Include="images/banners/Abans.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/Adminsolutions_avatar-white.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/FastForward.jpg">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/FFNew-125x41.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/FFNew.jpg">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/hidden_progress_bar.gif">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/img_not_available.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/lg-abans.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/banners/SupplyChain-banner.jpg">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/Active.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/addicon.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/ajax-loader.gif">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/calendar.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/calender.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/close.gif">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/downloadarrowicon.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/error.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/FemaleDefaultImage-54a3f5cd0fc33dfb34b39fc5fbd1a84c.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/notice.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/right_arrow_icon.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/searchicon.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/specialsearch2icon.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/success.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/icons/warning.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/login/bg.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/login/gradient.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/login/pass-icon.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="images/login/user-icon.png">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/bootstrap.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/bootstrap.min.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/jquery-1.4.2.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/jquery-1.7.2.min.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/jquery-ui-1.8.1.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/jquery-ui-timepicker-addon.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/jquery-ui.min.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/jquery.min.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/jquery.toastmessage.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/print_report.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/Sales.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Js/UserValidation.js">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Login.aspx">
+      <publishTime>03/26/2018 10:49:52</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>11/23/2017 16:44:11</publishTime>
+    </File>
+    <File Include="ResetPassword.aspx">
+      <publishTime>11/23/2017 16:44:11</publishTime>
+    </File>
+    <File Include="Services/Base.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="Temp/ADMIN.pdf">
+      <publishTime>04/26/2018 15:12:01</publishTime>
+    </File>
+    <File Include="UserControls/MonthYearPicker.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="UserControls/SerSearch.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="UserControls/ucCustomer.ascx">
+      <publishTime>01/03/2018 09:11:41</publishTime>
+    </File>
+    <File Include="UserControls/ucHirerachyDetails.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="UserControls/ucInScan.ascx">
+      <publishTime>06/22/2018 08:10:52</publishTime>
+    </File>
+    <File Include="UserControls/ucItemSerialView1.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="UserControls/ucLoactionSearch.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="UserControls/ucOutScan.ascx">
+      <publishTime>06/22/2018 08:10:52</publishTime>
+    </File>
+    <File Include="UserControls/ucPaymodes.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="UserControls/ucProfitCenterSearch.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="UserControls/ucTransportMethode.ascx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/Additional/BackDate.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/Additional/CustomClearEntryUpdate.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/Additional/ScannedSerials.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/Additional/SerialPicker.aspx">
+      <publishTime>02/22/2018 13:27:41</publishTime>
+    </File>
+    <File Include="View/Additional/WarrentyAmend.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/ADMIN/CommonSearchRoles.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/ADMIN/DataSetCustomer.xsc">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/ADMIN/DataSetCustomer.xss">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/ADMIN/Home.aspx">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/ADMIN/PasswordSecurityPolicy.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/ADMIN/Report.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/ADMIN/RoleCreate.aspx">
+      <publishTime>11/23/2017 16:44:18</publishTime>
+    </File>
+    <File Include="View/ADMIN/TestPageForUS.aspx">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/ADMIN/TestPrint.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/ADMIN/UserPasswordChange.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/ADMIN/User_Creation.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/ADMIN/WebForm1.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/AdminSite.Master">
+      <publishTime>05/15/2018 16:21:35</publishTime>
+    </File>
+    <File Include="View/Enquiries/Imports/ContainerEnquiry.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Imports/CostProfitabilityAssistant.aspx">
+      <publishTime>09/18/2018 11:16:56</publishTime>
+    </File>
+    <File Include="View/Enquiries/Imports/CostProfitabilityAssistantView.aspx">
+      <publishTime>02/01/2018 14:07:54</publishTime>
+    </File>
+    <File Include="View/Enquiries/Imports/DemurrageTracker.aspx">
+      <publishTime>02/01/2018 14:07:54</publishTime>
+    </File>
+    <File Include="View/Enquiries/Imports/ShipmentTracker.aspx">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="View/Enquiries/Inventory/AODTracker.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Inventory/CustomsEntryProgressViewer.aspx">
+      <publishTime>02/01/2018 14:07:54</publishTime>
+    </File>
+    <File Include="View/Enquiries/Inventory/InventoryTracker.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Inventory/ModelsSpecificationsViewer.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Inventory/SerialTracker.aspx">
+      <publishTime>09/18/2018 11:16:56</publishTime>
+    </File>
+    <File Include="View/Enquiries/Inventory/SlowMovingInventoryViewer.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Inventory/StockLedger.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Sales/PriceEnquiry.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Sales/SalesTracker.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/WareHouse/ScanDocumentTracker.aspx">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="View/Enquiries/WareHouse/WarehouseStatisticsV.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/Enquiries/Wharf/CustomsReimbursementTracker/CustomsReimbursementTracker.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/FixedAsset/DepriciationHistory.aspx">
+      <publishTime>08/27/2018 09:48:23</publishTime>
+    </File>
+    <File Include="View/MasterFiles/AssetManagement/AssetMaster.aspx">
+      <publishTime>06/22/2018 08:10:52</publishTime>
+    </File>
+    <File Include="View/MasterFiles/AssetManagement/AssetParameters.aspx">
+      <publishTime>08/27/2018 09:48:23</publishTime>
+    </File>
+    <File Include="View/MasterFiles/AssetManagement/FixedAsset.aspx">
+      <publishTime>05/30/2018 08:30:26</publishTime>
+    </File>
+    <File Include="View/MasterFiles/FleetManagement/FleetMaster.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/MasterFiles/FleetManagement/Route/Routes.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Imports/CostStucture.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/BufferAllocationSetup.aspx">
+      <publishTime>10/30/2018 16:31:55</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/ItemAllocationSetup.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/ItemCannibalizedComponentSetup.aspx">
+      <publishTime>07/23/2018 11:52:36</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/ItemCategorization.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/ItemProfile.aspx">
+      <publishTime>07/23/2018 11:52:35</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/ItemTaxStructure.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/KITComponentSetup.aspx">
+      <publishTime>06/28/2018 16:14:41</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/Model Specifications Setup.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Inventory/ModelCreation.aspx">
+      <publishTime>08/27/2018 09:48:23</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/AgentDefinition.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/BankAccounts.aspx">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/BankFacilityDefinition.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/CustomerCreation.aspx">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/ExchangeRateDefinition.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/HsCodeDefinition.aspx">
+      <publishTime>01/18/2018 10:15:13</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/KITItemSetup.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/PrefixMaster.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Operational/SupplierCreation.aspx">
+      <publishTime>10/30/2018 16:31:55</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Organization/BrandManager.aspx">
+      <publishTime>11/23/2017 16:44:19</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Organization/CostCenterDefinition.aspx">
+      <publishTime>01/03/2018 09:11:41</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Organization/EmployeeMaster.aspx">
+      <publishTime>03/29/2018 15:26:17</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Organization/LocationMaster.aspx">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Organization/OrganizationDefinition.aspx">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Supplier/SupplierProfile.aspx">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/MasterFiles/Warehouse/BinSetup.aspx">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Audit/Audit_Viwer.aspx">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Audit/dsAllSecurityUsers.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Audit/dsAllSecurityUsers.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Barcode/Sticker.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Barcode/Sticker.xss">
+      <publishTime>01/08/2018 10:14:07</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/costing_sheet.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/costing_sheet.xss">
+      <publishTime>11/06/2018 14:07:06</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dscostInformation.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dscostInformation.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsCusDecEntryDetails.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsCusDecEntryDetails.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dSet_Imports.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dSet_Imports.xss">
+      <publishTime>11/14/2018 10:14:54</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsImpCostingAnalys.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsImpCostingAnalys.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsimportRegister.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsimportRegister.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsProfitability.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsProfitability.xss">
+      <publishTime>12/19/2017 08:31:51</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsShipmentStatus.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsShipmentStatus.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsShippingInvoice.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsShippingInvoice.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsSLPARegister.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/dsSLPARegister.xss">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/ImportReportViewer1.aspx">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/Imports_Rep.aspx">
+      <publishTime>11/07/2018 08:32:27</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/Shipment_dtl.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Imports/Shipment_dtl.xss">
+      <publishTime>11/14/2018 10:14:54</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/curr_age.xsc">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/curr_age.xss">
+      <publishTime>05/30/2018 08:30:26</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsDailyWHStock.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsDailyWHStock.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsExcessStock.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsExcessStock.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsGITReconcilation.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsGITReconcilation.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsGITSerials.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsGITSerials.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsInventory.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsInventory.xss">
+      <publishTime>05/30/2018 08:30:26</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsItemCanibalise.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsItemCanibalise.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsLiability.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsLiability.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsLocalPurchaseCostDetail.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsLocalPurchaseCostDetail.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsLOPO.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsLOPO.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsOutDoc.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsOutDoc.xss">
+      <publishTime>03/19/2018 11:06:28</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsPending_Entry_Details.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsPending_Entry_Details.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsPurchaseOrderSummery.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsPurchaseOrderSummery.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsRCC_Report.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsRCC_Report.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/DsReservationItem.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/DsReservationItem.xss">
+      <publishTime>07/23/2018 11:52:37</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsSerial_History.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsSerial_History.xss">
+      <publishTime>09/18/2018 11:16:56</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsValueAddition.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsValueAddition.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsWarranty.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/dsWarranty.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_abs_courie.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_abs_courie.xss">
+      <publishTime>03/13/2018 09:14:10</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_alloc_det.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_alloc_det.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_FIXA_GrnDepre_details.xsc">
+      <publishTime>06/28/2018 16:14:41</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_FIXA_GrnDepre_details.xss">
+      <publishTime>06/28/2018 16:14:41</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_Inventory.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_Inventory.xss">
+      <publishTime>08/27/2018 09:48:23</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_itemprdetails.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_itemprdetails.xss">
+      <publishTime>06/28/2018 16:14:41</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_requision_note.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_requision_note.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_serial_items.xsc">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/ds_serial_items.xss">
+      <publishTime>11/23/2017 16:44:21</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/InventoryReportViewer.aspx">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/Inv_Rep.aspx">
+      <publishTime>11/14/2018 10:14:54</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/Last_No_Seq.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/Last_No_Seq.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/locationdetails.xsc">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/locationdetails.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/mrnprint.xsc">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/mrnprint.xss">
+      <publishTime>11/23/2017 16:44:22</publishTime>
+    </File>
+    <File Include="View/Reports/Inventory/RepWarrantyCard_AOA1.rpt">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="View/Reports/Mis/Mis_Rep.aspx">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="View/Reports/Purchasing/dsPurchaseReturns.xsc">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="View/Reports/Purchasing/dsPurchaseReturns.xss">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="View/Reports/Purchasing/Pur_Rep.aspx">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="View/Reports/ReportsMainPage.aspx">
+      <publishTime>11/23/2017 16:44:20</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/AgeDebtorOuts.xsc">
+      <publishTime>11/23/2017 16:44:23</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/AgeDebtorOuts.xss">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/DebtorSettlement.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/DebtorSettlement.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsCustomer_Entry.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsCustomer_Entry.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsDeliveredSales.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsDeliveredSales.xss">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsDiscount_Report.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsDiscount_Report.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsFWSales.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsFWSales.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsGP_Analysis.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsGP_Analysis.xss">
+      <publishTime>05/30/2018 08:30:27</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsGP_Analysis_Brand.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsGP_Analysis_Brand.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsInvoice.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsInvoice.xss">
+      <publishTime>10/20/2018 10:45:43</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsReceiptPrint.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsReceiptPrint.xss">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSales.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSales.xss">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSalesOrderStatus.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSalesOrderStatus.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSalesRep.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSalesRep.xss">
+      <publishTime>05/30/2018 08:30:27</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dssales_order.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dssales_order.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSellOut.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSellOut.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSRN.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsSRN.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsValuation.xsc">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/dsValuation.xss">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ds_coldata.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ds_coldata.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ds_pcdetails.xsc">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ds_pcdetails.xss">
+      <publishTime>11/23/2017 16:44:24</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ForwardSales.xsc">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ForwardSales.xss">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/InvoiceHalfPrint.xsc">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/InvoiceHalfPrint.xss">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/Quotation_Print.xsc">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/Quotation_Print.xss">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ReversalDataSource.xsc">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/ReversalDataSource.xss">
+      <publishTime>11/23/2017 16:44:25</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/SalesReportViewer.aspx">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/SalesReversalDetailsTbl.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/SalesReversalDetailsTbl.xss">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/Sales_Rep.aspx">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Sales/Sal_Rep.aspx">
+      <publishTime>07/06/2018 12:07:38</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsDispatchReqDetals.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsDispatchReqDetals.xss">
+      <publishTime>02/22/2018 13:27:42</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsDispatchReqSummary.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsDispatchReqSummary.xss">
+      <publishTime>06/22/2018 16:30:57</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsItemDispatchDetails.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsItemDispatchDetails.xss">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsStockVerification.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/dsStockVerification.xss">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/Pick_Plan.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/Pick_Plan.xss">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/warehouse.aspx">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Warehouse/WarehouseReportViewer.aspx">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/custom_ele.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/custom_ele.xss">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/cust_working.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/cust_working.xss">
+      <publishTime>07/06/2018 12:07:38</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/cus_val_dec.xsc">
+      <publishTime>11/23/2017 16:44:26</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/cus_val_dec.xss">
+      <publishTime>12/18/2018 10:31:45</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/dsATS.xsc">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/dsATS.xss">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/dscargo_imports.xsc">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/dscargo_imports.xss">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/dsGoodsDeclaration.xsc">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/dsGoodsDeclaration.xss">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/WharfAndCustoms.aspx">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="View/Reports/Wharf/WharfReportsViewer.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/CreditCardAcknow.aspx">
+      <publishTime>04/24/2018 16:20:50</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/CreditCardReconcilation.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/CreditNote.aspx">
+      <publishTime>06/22/2018 08:10:53</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/DebitNote.aspx">
+      <publishTime>06/22/2018 08:10:53</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/PenaltyChargeProcess.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/ReceiptEntry.aspx">
+      <publishTime>10/03/2018 10:57:48</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/ReturnCheque.aspx">
+      <publishTime>03/13/2018 09:14:11</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/SunAutomation.aspx">
+      <publishTime>05/21/2018 09:30:18</publishTime>
+    </File>
+    <File Include="View/Transaction/Finance/SunUpload.aspx">
+      <publishTime>06/22/2018 08:10:53</publishTime>
+    </File>
+    <File Include="View/Transaction/Forecasting/SalesForecasting.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Forecasting/SalesTarget.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Imports/BL/BillOfLading.aspx">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="View/Transaction/Imports/CostSheet/CostSheet.aspx">
+      <publishTime>06/28/2018 16:14:41</publishTime>
+    </File>
+    <File Include="View/Transaction/Imports/CusdecAssessments/CusdecAssessments.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Transaction/Imports/DGCAccountSettlements/DGCAccountSettlements.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Transaction/Imports/OrderFinancing/OrderFinancing.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Transaction/Imports/OrderPlan/OrderPlan.aspx">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="View/Transaction/Imports/PI/PerformaInvoice.aspx">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/AODDocumentAmendment.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/BinToBinTransfer.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ChangeItemStatus.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ConsignmentStock/ConsignmentReceiveNote.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ConsignmentStock/ConsignmentReturnNote.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/CusdecEntryRequest.aspx">
+      <publishTime>11/06/2018 14:07:06</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/DeliveryOrder.aspx">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/DispatchPlan.aspx">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/DisposalEntry.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/DisposalEntryNew.aspx">
+      <publishTime>06/22/2018 08:10:53</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/DisposalEntryOld.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/DistributionApproval.aspx">
+      <publishTime>09/26/2018 11:31:04</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/Files/Tax.xls">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/FixAssetOrAdhocRequestAndApprove.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/GoodsReceivedNote.aspx">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/InterCompanyInWardEntry.aspx">
+      <publishTime>03/13/2018 09:14:12</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/InternalAssetItemIssue.aspx">
+      <publishTime>11/23/2017 16:44:27</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ItemSplitting.aspx">
+      <publishTime>07/23/2018 11:52:37</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/MaterialRequisitionNote.aspx">
+      <publishTime>09/18/2018 11:16:57</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/MaterialRequisitionNoteApprovals.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ProductAssemble.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ProductConditionUpdateEntry.aspx">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ProductionIssue.aspx">
+      <publishTime>09/18/2018 11:16:57</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/ProductionPlan.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/PurchaseReturnNote.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/StockAdjustment.aspx">
+      <publishTime>06/22/2018 08:10:53</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/StockDepreciation.aspx">
+      <publishTime>06/22/2018 08:10:53</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/StockTransferOutwardEntry.aspx">
+      <publishTime>10/20/2018 10:45:44</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/StockVerification.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/TechnicianAllocation.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/WarrantyOperation/DirectWarrantyAuthorization.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Inventory/WarrantyOperation/DirectWarrantyPrinting.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/LocalPurchasing/PurchaseOrder.aspx">
+      <publishTime>06/22/2018 08:10:53</publishTime>
+    </File>
+    <File Include="View/Transaction/LocalPurchasing/PurchaseRequestNote.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Transaction/LocalPurchasing/SupplierQuotation.aspx">
+      <publishTime>02/01/2018 14:07:55</publishTime>
+    </File>
+    <File Include="View/Transaction/Pricing/AdditionalParameters.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Pricing/PriceDefinition.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/BillofQuantities.aspx">
+      <publishTime>07/23/2018 11:52:37</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/BillOfQuantitiesNew.aspx">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/CustomerQuotation.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/ReservationApproval.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/ReservationCancellation.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/ReservationRequest.aspx">
+      <publishTime>01/09/2018 13:14:05</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/SalesInvoice/SalesInvoice.aspx">
+      <publishTime>04/24/2018 16:49:58</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/SalesInvoice/SalesInvoiceOld.aspx">
+      <publishTime>09/18/2018 11:16:57</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/SalesOrder.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/SalesOrderNew.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/SalesOrderRequest.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/SalesOrderWeb.aspx">
+      <publishTime>03/13/2018 09:14:12</publishTime>
+    </File>
+    <File Include="View/Transaction/Sales/SalesReversal.aspx">
+      <publishTime>10/30/2018 16:31:55</publishTime>
+    </File>
+    <File Include="View/Transaction/Services/ServiceWorkingProcess.aspx">
+      <publishTime>11/23/2017 16:44:28</publishTime>
+    </File>
+    <File Include="View/Transaction/Wharf/Cusdec.aspx">
+      <publishTime>12/18/2018 10:31:46</publishTime>
+    </File>
+    <File Include="View/Transaction/Wharf/CusdecBOI.aspx">
+      <publishTime>02/22/2018 13:27:42</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>12/18/2018 15:44:20</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,31 @@
+﻿@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+    {
+    @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li>
+            @if (Session["UserName"].ToString().Length > 25)
+            {
+                <a class="login-user-cls">@Session["UserName"].ToString().Trim().Substring(0, 25)...</a>
+            }
+            else
+            {
+                <a class="login-user-cls">@Session["UserName"].ToString().Trim()</a>
+            }
+
+
+        </li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-right">
+
+         <li><a class="logout-link-cls" href='@(Url.Action("LogOff", "Login"))'>Log off</a></li>
+    </ul>
+}

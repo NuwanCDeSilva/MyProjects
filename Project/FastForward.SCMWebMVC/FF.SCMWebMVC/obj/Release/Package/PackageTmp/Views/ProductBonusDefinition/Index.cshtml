@@ -1,0 +1,696 @@
+﻿@{
+    ViewBag.Title = "Product Bonus Definition";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/ProductBonusDefinition.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Product Bonus Definition</div>
+    </div>
+    <div class="col-md-6">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-bonus-save-data" />
+        <input type="button" value="Excel" class="btn btn-default btn-default-style btn-excel-upload-data" />
+        <input type="button" value="Print" class="btn btn-default btn-default-style btn-excel-print-data" />
+    </div>
+</div>
+
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading"></div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="col-md-3 row item-range-scroll2">
+                            <div class="panel panel-heading">
+                                <div class="col-md-6">Company</div>
+                                <div class="col-md-6">
+                                    @*<div class="col-md-3">@Html.CheckBox("chkmultiple")</div>
+                                        <div class="normal-font">Multiple</div>*@
+                                </div>
+                            </div>
+                            <div class="panel panel-body company-tbl">
+                                <table class="compny-display-tbl table">
+                                    <tr class="table-hed">
+                                        <th>@Html.CheckBox("chkAllCompany")</th>
+                                        <th>Code</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-9 row">
+                            <div class="col-md-4">
+                                <label class="col-lg-3 control-label">Code</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="bonuscode" name="bonuscode" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  bonus-search">
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label class="col-lg-3 control-label">F/Sale Limit</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="fwdsalelimit" name="fwdsalelimit" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 row">
+                            <div class="col-md-4">
+                                <label class="col-lg-3 control-label">Areas Limit</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="areaslimit" name="areaslimit" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-lg-3 control-label">Outst Limit</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="outstanlimit" name="outstanlimit" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-lg-3 control-label">O/Dt Limit</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="outstandtlimit" name="outstandtlimit" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 row">
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Qty Base</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="radqtybase" name="calcmethod" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Value Base</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="radvalbase" name="calcmethod" class="form-control" checked>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">GP Base</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="radgpbase" name="calcmethod" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Combine ITM</label>
+                                <div class="col-md-2">
+                                    <input type="checkbox" id="chkcomitm" name="chkcomitm" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-lg-3 control-label">Rept.Period</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="totcommqty" name="totcommqty" class="form-control" value="0">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 row">
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Invoice</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="radinvoice" name="salesmethod" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Delivered</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="radeliverd" name="salesmethod" class="form-control" checked>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">With Reversal</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="radwithreversal" name="salesmethod" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Active</label>
+                                <div class="col-md-2">
+                                    <input type="checkbox" id="active" name="active" checked="checked" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <label class="col-lg-3 control-label">Circ No</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="manualcirno" name="manualcirno" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-9 row">
+                            <div class="col-md-4">
+                                <label class="col-lg-5 control-label">Con/Max Disc/Rate</label>
+                                <div class="col-md-7">
+                                    <input type="text" id="maxdiscrate" name="maxdiscrate" value="100" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">PB/PL Include</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="withpbpl" name="withpbpl" checked="checked" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">PB/PL Exclude</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="withoutpbpl" name="withpbpl" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Pro.Cir Include</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="withprom" name="promo" checked="checked" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-lg-10 control-label">Pro.Cir Exclude</label>
+                                <div class="col-md-2">
+                                    <input type="radio" id="withoutprom" name="promo" class="form-control">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-9 row">
+                        <div class="col-md-6">
+                            <div class="col-md-12">
+                                <textarea id="remark" name="remark" class="form-control" placeholder="Remark"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="col-lg-10 control-label">Re-rep Consider</label>
+                            <div class="col-md-2">
+                                <input type="radio" id="isrereportall" name="rerep" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="col-lg-10 control-label">Re-rep Month</label>
+                            <div class="col-md-2">
+                                <input type="radio" id="isrereport" name="rerep" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <label class="col-lg-10 control-label">Re-rep Not Consider</label>
+                            <div class="col-md-2">
+                                <input type="radio" id="norereport" name="rerep" class="form-control" checked>
+                            </div>
+                        </div>
+
+                        <div class="col-md-3">
+                            <label class="col-lg-3 control-label">From</label>
+                            <div class="col-md-9">
+                                <input type="text" id="fromdt" name="fromdt" class="form-control" readonly>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="col-lg-3 control-label">Expire</label>
+                            <div class="col-md-9">
+                                <input type="text" id="date" name="date" class="form-control" readonly>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">
+                Loc/PC Definition
+            </div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="col-md-12 row">
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Channel</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="chanel" name="chanel" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  channel-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">S/Chnl</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="schannel" name="schannel" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  schannel-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Region</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="region" name="region" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  region-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Zone</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="zone" name="zone" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  zone-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">PC</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="pc" name="pc" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  pc-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <img src="~/Resources/Images/arrow_down.png" class="search-img add-bonus-loc">
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group item-range-scroll22">
+                            <table class="bonus-loc-table table">
+                                <tr class="table-hed">
+                                    <th>Company</th>
+                                    <th>Channel</th>
+                                    <th>Sub Chanl</th>
+                                    <th>Region</th>
+                                    <th>Zone</th>
+                                    <th>PC</th>
+                                    <th>Remove</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">
+                Item/Pay Definition
+            </div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="col-md-12 row">
+                            <div class="col-md-2">
+                                <label class="col-md-2 control-label">Item</label>
+                                <div class="col-md-1">
+                                    <input type="checkbox" id="itemall" name="itemall" class="form-control with-search">
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="text" id="itemcode" name="itemcode" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  itemcode-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Cat1</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="cat1" name="cat1" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  cat1-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Cat2</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="cat2" name="cat2" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  cat2-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Brand</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="brand" name="brand" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  brand-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Model</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="model" name="model" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  model-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">PB</label>
+                                <div class="col-md-9">
+                                    @Html.DropDownList("PriceBook", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">PL</label>
+                                <div class="col-md-9">
+                                    @Html.DropDownList("PriceLevel", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">P/Circular</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="pricecircular" name="pricecircular" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  pricecircular-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                @*<label class="col-md-3 control-label">Custormer</label>*@
+                                <label class="col-md-3 control-label">Customer</label>  @*Addd by udesh 15-Oct-2018*@
+                                <div class="col-md-9">
+                                    <input type="text" id="custormer" name="custormer" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  custormer-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">HP/Sche</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="hpscheme" name="hpscheme" class="form-control with-search">
+                                    @*<img src="~/Resources/Images/Search-icon.png" class="search-img  hpscheme-search">*@
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Sal/Type</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="invtype" name="invtype" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  salestype-search">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Pay/Mode</label>
+                                <div class="col-md-9">
+                                    @Html.DropDownList("paymode", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 row">
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">P/SubTp</label>
+                                <div class="col-md-9">
+                                    @Html.DropDownList("paymodesub", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                    @*<input type="text" id="paymodesub" name="paymodesub" class="form-control with-search">*@
+                                    @*<img src="~/Resources/Images/Search-icon.png" class="search-img  paymodesub-search">*@
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">SlabBase</label>
+                                <div class="col-md-9">
+                                    @*<input type="text" id="slabbaseon" name="slabbaseon" class="form-control">*@
+                                    @Html.DropDownList("slabbaseon", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">From(val)</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="fromval" name="fromval" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">To(val)</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="toval" name="toval" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Marks</label>
+                                <div class="col-md-9">
+                                    <input type="text" id="marks" name="marks" class="form-control ">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-3 control-label">Targ/Base</label>
+                                <div class="col-md-9">
+                                    @*<input type="text" id="slabbaseon" name="slabbaseon" class="form-control">*@
+                                    @Html.DropDownList("targetbase", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-6 control-label">Combine No</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="combineno" name="combineno" class="form-control" value="1">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="col-md-6 control-label">Tot Comb/Qty</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="totcombqty" name="totcombqty" class="form-control" value="1">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                @*<label class="col-md-3 control-label">Multy</label>*@ @*Commented by Udesh 26-Oct-2018*@ 
+                                <label class="col-md-3 control-label">Is Allowed Multiple</label>@*Added by Udesh 26-Oct-2018*@                                
+                                <div class="col-md-4">
+                                    <input type="checkbox" id="chkmulty" name="chkmulty" class="form-control ">
+                                </div>
+
+                                <div class="col-md-4">
+                                    <img src="~/Resources/Images/arrow_down.png" class="search-img add-bonus-item with-search">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12 form-group item-range-scroll">
+                            <table class="bonus-item-table table">
+                                <tr class="table-hed">
+                                    <th>Item</th>
+                                    <th>Cat1</th>
+                                    <th>Cat2</th>
+                                    <th>Brand</th>
+                                    <th>Model</th>
+                                    <th>PB</th>
+                                    <th>PL</th>
+                                    <th>Circular</th>
+                                    @*<th>Custormer</th>*@
+                                    <th>Customer</th> @*Addd by udesh 15-Oct-2018*@
+                                    <th>HP/Sch</th>
+                                    <th>Sale Type</th>
+                                    <th>Pay Mode</th>
+                                    <th>Sub Type</th>
+                                    <th>Targ/Base</th>
+                                    <th>Slab</th>
+                                    <th>From Val</th>
+                                    <th>To Val</th>
+                                    <th>Marks</th>
+                                    <th>Comb/No</th>
+                                    <th>Opt</th>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<div class="modal fade my-popup-div" id="PricelevelPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="cus-title">Price Level Details</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 form-group item-range-scroll">
+                    <table class="pricelevel-box table">
+                        <tr class="table-hed">
+                            <th>Price Level</th>
+                            <th>Select</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-default-style btn-cus-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+@*dilshan*@
+<div class="modal fade my-popup-div" id="SubTPPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="cus-title">Sub Type Details</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 form-group item-range-scroll">
+                    <table class="subtype-box table">
+                        <tr class="table-hed">
+                            <th>Sub Type</th>
+                            <th>Select</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-default-style btn-cus-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+@*end*@
+<div class="modal fade my-popup-div" id="PaymentMethodPopup" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="cus-title">Payment Method Details</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 form-group item-range-scroll">
+                    <table class="paymethod-box table">
+                        <tr class="table-hed">
+                            <th>Payment Method</th>
+                            <th>Select</th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-md-1"></div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-default-style btn-pay-close" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="modal fade my-popup-div" id="exclupload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="container1">
+                @using (Html.BeginForm("BindExceldata", "ProductBonusDefinition", FormMethod.Post, new { enctype = "multipart/form-data", @id = "imp-data" }))
+                {
+                    <div class="panel-container">
+                        <div id="view1" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-md-3 control-label">Upload File</label>
+                                        <div class="col-md-3">
+                                            <input type="file" name="UploadedFile" id="UploadedFile" class="form-control-file" required />
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="button" value="Upload" class="btn btn-xs btn-default imprt-cd-data" />
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="button" value="Close" class="btn btn-xs btn-default cls-excel-popup" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade my-popup-div" id="exclupload2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="container1">
+                @using (Html.BeginForm("BindExceldata2", "ProductBonusDefinition", FormMethod.Post, new { enctype = "multipart/form-data", @id = "imp-data2" }))
+                {
+                    <div class="panel-container">
+                        <div id="view1" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-md-3 control-label">Upload File</label>
+                                        <div class="col-md-3">
+                                            <input type="file" name="UploadedFile" id="UploadedFile" class="form-control-file" required />
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="button" value="Upload" class="btn btn-xs btn-default upload-all-data" />
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="button" value="Close" class="btn btn-xs btn-default cls-excel-popup2" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>
+
+@* Excel Validator Modal Added by Dulaj 2018/Sep/14 *@
+<div class="modal fade my-popup-div" id="excluploadErr" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="container1">
+                <div class="panel-body">
+                    <h6>Excel Error</h6>
+                    <div class="row">
+                        <div class="col-md-10 form-group item-range-scroll">
+                            <div id="excelErrtable">
+                            </div>
+                        </div>
+                    </div>
+                    @*<input type="button" value="Close" class="btn btn-xs btn-default close-excel-err-popup" style="float:right" />*@
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default btn-default-style btn-cus-close" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+@*<div class="modal fade my-popup-div" id="allprodupload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="container1">
+    @using (Html.BeginForm("BindExceldata2", "ProductBonusDefinition", FormMethod.Post, new { enctype = "multipart/form-data", @id = "imp-data2" }))
+                    {
+                        <div class="panel-container">
+                            <div id="view1" class="tab-content-cls">
+                                <div class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label class="col-md-3 control-label">Upload File</label>
+                                            <div class="col-md-3">
+                                                <input type="file" name="UploadedallFile" id="UploadedallFile" class="form-control-file" required />
+                                            </div>
+                                            <div class="col-md-1">
+                                                <input type="button" value="Upload" class="btn btn-xs btn-default upload-all-data" />
+                                            </div>
+                                            <div class="col-md-1">
+                                                <input type="button" value="Close" class="btn btn-xs btn-default cls-allexcel-popup" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+    }
+                </div>
+            </div>
+        </div>
+
+    </div>*@

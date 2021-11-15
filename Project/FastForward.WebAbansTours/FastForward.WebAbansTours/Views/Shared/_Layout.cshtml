@@ -1,0 +1,280 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    @{
+        var title = Session["UserCompanyName"].ToString();
+        if (Session.Count > 0 && Session["Title"].ToString() != null)
+        {
+            title = Session["Title"].ToString();
+        }
+
+    }
+    @{
+
+        var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+    }
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon"
+          type="image/png"
+          href="~/Resources/Images/faicon.png">
+    <title>@ViewBag.Title - @title</title>
+    @*@Styles.Render("~/Content/css")*@
+    @*@Scripts.Render("~/bundles/modernizr")*@
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    @*<link href="~/Content/themes/theme-2/Site-theme-2.css?@val" rel="stylesheet" />*@
+    <link href="~/Content/Site.css?@val" rel="stylesheet" />
+    <link href="~/Content/lightbox.css" rel="stylesheet" />
+    <link href="~/Content/responsive-tabs.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui.css" rel="stylesheet" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="common-details-cls">
+            <ul class="contet-view">
+                @{
+                    <li class="sbu-cls">
+
+                        @if (Session.Count > 0 && Session["UserSubChannl"].ToString() != null)
+                        {
+                            <div class="text-field">
+                                SBU :
+                            </div>
+                            <div class="val-field">
+                                @Session["UserSubChannl"].ToString()
+                            </div>
+                        }
+
+                    </li>
+                    <li class="pc-cls">
+                        @if (Session.Count > 0 && Session["UserDefProf"].ToString() != null)
+                        {
+                            <div class="text-field">
+                                Profit Center :
+                            </div>
+                            <div class="val-field">
+                                @Session["UserDefProf"].ToString()
+                            </div>
+                        }
+                    </li>
+                    <li class="user-cls">
+                        @if (Session.Count > 0 && Session["UserID"].ToString() != null)
+                        {
+                            <div class="text-field">
+                                User :
+                            </div>
+                            <div class="val-field">
+                                @Session["UserID"].ToString()
+                            </div>
+                        }
+                    </li>
+                    <li class="date-cls">
+                        <div class="text-field">
+                            Login :
+                        </div>
+                        @if (Session.Count > 0 && Session["LoginDateTime"].ToString() != null)
+                        {
+                            <div class="val-field">
+                                @Convert.ToDateTime(Session["LoginDateTime"]).ToString("d")
+                            </div>
+                            <div>
+                                <div id="Timer" class="val-field">@Convert.ToDateTime(Session["LoginDateTime"]).ToString("HH:mm") </div>
+                                <script>
+                                    //startTime();
+                                    //function startTime() {
+                                    //    var today = new Date();
+                                    //    var h = today.getHours();
+                                    //    var m = today.getMinutes();
+                                    //    var s = today.getSeconds();
+                                    //    m = checkTime(m);
+                                    //    s = checkTime(s);
+                                    //    document.getElementById('Timer').innerHTML =
+                                    //    h + ":" + m + ":" + s;
+                                    //    var t = setTimeout(startTime, 500);
+                                    //}
+                                    //function checkTime(i) {
+                                    //    if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+                                    //    return i;
+                                    //}
+                                </script>
+
+                            </div>
+                        }
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="container main-menu">
+            <!-- header -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#multi-level-dropdown">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">@title</a>
+            </div>
+            <!-- menus -->
+            <div class="collapse navbar-collapse" id="multi-level-dropdown">
+                <ul class="nav navbar-nav">
+                    @{
+                        if (Session["Menu"] != null)
+                        {
+                            @Html.Raw(Session["Menu"].ToString())
+                        }
+                    }
+
+                </ul>
+                @*<ul class="nav navbar-nav">
+                    <li class="bar-line">@Html.ActionLink("System", "", "")</li>
+                    <li class="dropdown bar-line">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Master Data Setup<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#" tabindex="-1">Operational</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Customer Creation", "Index", "DataEntry")</li>
+                                    <li>@Html.ActionLink("Employee Creation", "Index", "Employee")</li>
+                                    <li>@Html.ActionLink("Fleet Creation", "Index", "FleetDefinition")</li>
+                                    <li>@Html.ActionLink("Charge Code Creation", "Index", "ChargeCodeDef")</li>
+                                    <li>@Html.ActionLink("Exchange Rate", "Index", "ExchangeRate")</li>
+                                    <li>@Html.ActionLink("Check In Out", "Index", "CheckInOut")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown bar-line">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Transaction<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">
+                                <a href="#" tabindex="-1">Genaral</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Driver Allocation", "Index", "DriverAllocation")</li>
+                                    <li>@Html.ActionLink("Transport Enquiry Management", "Index", "TransportEnquiry")</li>
+                                    <li>@Html.ActionLink("Tours Enquiry Management", "Index", "EnquiryManagement")</li>
+                                    <li>@Html.ActionLink("Log Sheet", "Index", "LogSheet")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" tabindex="-1">Sales</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Invoicing", "Index", "Invoicing")</li>
+                                </ul>
+                            </li>
+                            <li class="dropdown-submenu">
+                                <a href="#" tabindex="-1">Finance</a>
+                                <ul class="dropdown-menu">
+                                    <li>@Html.ActionLink("Costing Sheet", "Index", "CostingSheet")</li>
+                                    <li>@Html.ActionLink("Receipt Entry", "Index", "ReceiptEntry")</li>
+                                    <li>@Html.ActionLink("Sun Upload", "Index", "AccountsUploads")</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="dropdown bar-line last">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Enquiry<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Cost and Profitability Tracker", "Index", "CostEnquiry")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown bar-line last">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Reports<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li class="dropdown-submenu">@Html.ActionLink("Sales", "SalesReports", "Reporting")</li>*@
+                @*<li class="dropdown-submenu">@Html.ActionLink("Reports 2", "#", "Reporting")</li>*@
+                @*</ul>
+                        </li>
+                    </ul>*@
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <div id='myModal' class='modal fade in'>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="se-pre-con"></div>
+                    <div class="Title panel-heading">
+                        <div class="alignleft serch-panel-title">Document search</div>
+                        <div class="alignright close-btn"></div>
+                    </div>
+                    <div class="search-field">
+                        <div class="left-align">
+                            <div class="left-align seach-key-title">Search by key :</div>
+                            <div class="right-align">
+                                <select class="filter-key-cls form-control" name="Key" >
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="right-align">
+                            <div class="left-align seach-key-type">Search by word : </div>
+                            <div class="right-align">@Html.TextBox("KeyWord")</div>
+                        </div>
+                    </div>
+
+                    <div id='myModalContent'>
+
+                        <div class="container">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="coloured"></tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="pagination cls-pge-footer">
+                        <div class="cls-page-num">
+                            <div class="left-align">Page :</div>
+                            <div class="right-align cls-pages"><div id="paging"></div></div>
+                        </div>
+                        <div class="cls-pge-cunt">
+                            <div class="left-align">
+                                Number per page :
+                            </div>
+                            <div class="right-align">
+                                <select name="Key" class="cls-select-page-cont">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="500">500</option>
+                                    <option value="1000">1000</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="datepicker"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="page-loadin"><img src="~/Resources/Images/ajaxload.gif"></div>
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - @FF.Resources.Resource.ReservedText</p>
+        </footer>
+    </div>
+    
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <script src="~/Scripts/Common/lightbox.js"></script>
+    <script src="~/Scripts/Common/responsive-tabs.js"></script>
+    <script src="~/Scripts/Common/jquery-ui.js"></script>
+    <script src="~/Scripts/Common/Site.js?@val"></script>
+    <script src="~/Scripts/Common/jquery.bootpag.min.js"></script>
+    <script src="~/Scripts/Common/CommonSearch.js?@val"></script>
+    @*<script src="~/Scripts/Common/Payment.js?@val"></script>*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

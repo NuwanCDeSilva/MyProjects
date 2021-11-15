@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastForward.SCMWeb", "FastForward.SCMWeb\FastForward.SCMWeb.csproj", "{51E4E39E-5A6E-479D-92CC-45AE06269B03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.Interfaces", "..\FastForward.Services\FF.Interfaces\FF.Interfaces.csproj", "{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.BusinessObjects", "..\FastForward.Services\FF.BusinessObjects\FF.BusinessObjects.csproj", "{2D8AB82F-4AF2-49E7-8B34-41496020C590}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{86E8947E-4CC3-4466-A81B-2185D00C1508}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.200:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\FastForward.Services\\FF.Interfaces\\FF.Interfaces.csproj
+		SccProjectName1 = ../FastForward.Services/FF.Interfaces
+		SccLocalPath1 = ..\\FastForward.Services\\FF.Interfaces
+		SccProjectUniqueName2 = ..\\FastForward.Services\\FF.BusinessObjects\\FF.BusinessObjects.csproj
+		SccProjectName2 = ../FastForward.Services/FF.BusinessObjects
+		SccLocalPath2 = ..\\FastForward.Services\\FF.BusinessObjects
+		SccProjectUniqueName3 = FastForward.SCMWeb\\FastForward.SCMWeb.csproj
+		SccProjectName3 = FastForward.SCMWeb
+		SccLocalPath3 = FastForward.SCMWeb
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51E4E39E-5A6E-479D-92CC-45AE06269B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51E4E39E-5A6E-479D-92CC-45AE06269B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51E4E39E-5A6E-479D-92CC-45AE06269B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51E4E39E-5A6E-479D-92CC-45AE06269B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

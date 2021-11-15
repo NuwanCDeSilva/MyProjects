@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Manager Creation";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/ManagerCreation.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Manager Creation</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading"></div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Manager</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="Manager" name="Manager" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  mgr-search">
+                                </div>
+                                <div class="col-md-8">
+                                    <input type="text" id="Mgrname" name="Mgrname" class="form-control hidden">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Profit Center</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="location" name="location" class="form-control with-search" readonly >
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  loc-search">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Bonus Cal. Method</label>
+                                <div class="col-md-8">
+                                    @Html.DropDownList("calmethod", new List<SelectListItem> { new SelectListItem { Value = "0", Text = "--Select--" }, new SelectListItem { Value = "Profit center wise", Text = "Profit center wise" }, new SelectListItem { Value = "Manager wise", Text = "Manager wise" }, new SelectListItem { Value = "Manager and Profit center category wise", Text = "Manager and Profit center category wise" } }, null, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">PC Category</label>
+                                <div class="col-md-8">
+                                    @Html.DropDownList("pccat", new List<SelectListItem>(), "Select Category", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">1st Acc. Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="fdate" name="fdate" class="form-control" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">SR Cal. Date</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="srdate" name="srdate" class="form-control" disabled>                                   
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Bonus Month</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="bmonthdate" name="bmonthdate" class="form-control" disabled>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Main Profit Center</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="mainlocation" name="mainlocation" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  mloc-search">
+                                </div>
+                            </div>
+                            @*<div class="col-md-1">
+                                <label class="col-lg-4 control-label">Active</label>
+                                <input type="checkbox" id="chkop2" name="chkop2" />
+                            </div>*@
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-11">
+                                <img src="~/Resources/Images/arrow_down.png" class="search-img add-acc pull-right">
+                            </div>
+                            @*<div class="col-md-1">
+                                <label class="col-lg-10 control-label">With Balane</label>
+                                <input type="checkbox" id="chkop1" name="chkop1" />
+                            </div>*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">Details </div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="comm-comm-list-div-scroll">
+                                <table class="table table-striped table-hover acc-data-row">
+                                    <tr>
+                                        <th style="color: black; font-size: x-small">Profit Center</th>
+                                        <th style="color: black; font-size: x-small">Mgr Code</th>
+                                        <th style="color: black; font-size: x-small">Mgr Name</th>
+                                        <th style="color: black; font-size: x-small">Bonus Method</th>
+                                        <th style="color: black; font-size: x-small">PC Cate</th>
+                                        <th style="color: black; font-size: x-small">SR Calc Date</th>
+                                        <th style="color: black; font-size: x-small">Bonus Month</th>
+                                        <th style="color: black; font-size: x-small">1st Acc Create</th>
+                                        <th style="color: black; font-size: x-small">Main Profit Center</th>
+                                        <th style="color: black; font-size: x-small">Active</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,42 @@
+﻿@{
+    ViewBag.Title = "Collection Bonus Details Report";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/Collectionbonusreport.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Collection Bonus Details Report</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data" />
+        <input type="button" value="Detail" class="btn btn-default btn-default-style btn-detail-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+                <div class="panel panel-heading"></div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6"> 
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-2 control-label">Date</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="rdate" name="rdate" class="form-control with-search" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</div>
+

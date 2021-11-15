@@ -1,0 +1,17 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.Service.Financial.exe.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.Service.Financial.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.Service.Financial.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.BusinessLogicLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\EPPlus.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.BusinessLogicLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.DataAccessLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\bin\Debug\EPPlus.xml
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\obj\x86\Debug\FF.Service.Financial.ProjectInstaller.resources
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\obj\x86\Debug\FF.Service.Financial.csproj.GenerateResource.Cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\obj\x86\Debug\FF.Service.Financial.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.Financial\obj\x86\Debug\FF.Service.Financial.pdb

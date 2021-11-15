@@ -1,0 +1,40 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+@{
+    ViewBag.Title = "Not Found";
+    Layout = "";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@FF.Resources.Resource.LoginTitle</title>
+    <!-- Custom Theme files -->
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- Custom Theme files -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Login form web template, Sign up Web Templates, Flat Web Templates, Login signup Responsive web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+  
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Common/Login.js"></script>
+    <!--Google Fonts-->
+</head>
+<body>
+    <!--header start here-->
+    <div class="wrap container error-page">
+        <div class="logo">
+            <h1>404</h1>
+            <p>Sorry This was dead link - Page not Found</p>
+            <div class="sub">
+                <p><a href="/Cusdec/Index">Go Back</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p> &copy;@DateTime.Now.Year @FF.Resources.Resource.ReservedText </p>
+    </div>
+</body>
+</html>

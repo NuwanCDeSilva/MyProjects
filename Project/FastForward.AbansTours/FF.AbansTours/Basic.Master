@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Basic.master.cs" Inherits="FF.AbansTours.Basic" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head id="Head1" runat="server">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+
+    <link rel="shortcut icon" href="~/images/webIcon.png">
+    <link href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="fonts/font-awesome-4/css/font-awesome.min.css">
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+    <style type="text/css">
+        .auto-style1 {
+            color: #FF0000;
+        }
+
+        .btn {
+            -webkit-border-radius: 11;
+            -moz-border-radius: 11;
+            border-radius: 8px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 15px;
+            background: #8e42a1;
+            padding: 7px 7px 7px 7px;
+            text-decoration: none;
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <style type="text/css">
+        .auto-style1 {
+            color: #FF0000;
+        }
+
+        .btn {
+            -webkit-border-radius: 11;
+            -moz-border-radius: 11;
+            border-radius: 8px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 15px;
+            background: #8e42a1;
+            padding: 7px 7px 7px 7px;
+            text-decoration: none;
+        }
+    </style>
+    <form id="form1" runat="server">
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+        </div>
+        <div class="clear">
+        </div>
+        <div class="footer">
+        </div>
+    </form>
+    <script type="text/javascript" src="../../js/jquery.js"></script>
+    <script type="text/javascript" src="../../js/behaviour/voice-commands.js"></script>
+    <script type="text/javascript" src="../../js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="../../js/jquery.flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="../../js/jquery.flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="../../js/jquery.flot/jquery.flot.labels.js"></script>
+</body>
+</html>

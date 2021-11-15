@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="PDAWeb.master.cs" Inherits="FastForward.SCMPDA.PDAWeb" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <%--<link href="Css/bootstrap.css" rel="stylesheet" />--%>
+    <%--<link href="Css/style.css?0000050" rel="stylesheet" />--%>
+    <link href="Css/Common.css?000004" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div class="main-form-body">
+
+
+        <form id="form1" runat="server">
+
+            <asp:UpdatePanel ID="main" runat="server">
+                <ContentTemplate>
+                    <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+
+                    <div class="panel panel-info">
+
+                        <div class="panel-heading fontsize12 logincopyrightlabel">
+                            SCMII BARCODE SYSTEM
+                            <asp:Label ID="lbljob" runat="server"></asp:Label>
+                        </div>
+
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+                                    </asp:ContentPlaceHolder>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel-footer panelfootermargin">
+                            <div class="row">
+                                <div class="col-sm-12">
+
+                                    <div class="col-sm-12">
+                                        <div class="row">
+
+                                            <div class="col-sm-12 labelText1 masterlabelmargin">
+
+                                                <asp:Label ID="lbluser" runat="server"></asp:Label>
+                                                |
+                                            <asp:Label ID="lbllocation" runat="server"></asp:Label>
+                                                |
+                                            <asp:LinkButton ID="lbtnhome" runat="server" OnClick="lbtnhome_Click" Text="Home" ToolTip="Home">
+                                            <%--<span class="glyphicon glyphicon-home" aria-hidden="true"></span>--%>
+                                            </asp:LinkButton>
+
+                                                |
+                                            <asp:LinkButton ID="lbtnlogout" runat="server" OnClick="lbtnlogout_Click" Text="LogOut" ToolTip="LogOut">
+                                           <%-- <span class="glyphicon glyphicon-log-out" aria-hidden="true"></span>--%>
+                                            </asp:LinkButton>
+
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-sm-12 labelText1 masterlabelmargin">
+                                                    <asp:Label ID="lbllp" runat="server" Visible="false"></asp:Label>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </form>
+    </div>
+    <script src="<%=Request.ApplicationPath%>js/jquery-1.11.3.min.js"></script>
+    <%--<script src="<%=Request.ApplicationPath%>js/bootstrap.min.js"></script>--%>
+</body>
+</html>

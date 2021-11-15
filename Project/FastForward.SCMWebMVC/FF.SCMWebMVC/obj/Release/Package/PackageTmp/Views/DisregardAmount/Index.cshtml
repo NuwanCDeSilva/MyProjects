@@ -1,0 +1,179 @@
+﻿@{
+    ViewBag.Title = "Disregard Amount";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/DisregardAmount.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Disregard Amount</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+            <div class="panel panel-default row">
+                <div class="panel panel-default row col-md-6">
+                    <div class="panel panel-heading">Disregard parameters</div>
+                    <div class="panel-container">
+                        <div class="panel panel-body tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-lg-4 control-label">Circular Code</label>
+                                        <div class="col-md-8">
+                                            <input type="text" id="circode" name="circode" class="form-control with-search">
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img  circular-search">
+                                        </div>
+                                    </div>
+                                    @*<div class="col-md-4">
+                                <label class="col-lg-3 control-label">Rate</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="percentage" name="percentage" class="form-control">
+                                </div>
+
+                            </div>*@
+                                    <div class="col-md-6">
+                                        <label class="col-lg-4 control-label">Base</label>
+                                        <div class="col-md-8">
+                                            @Html.DropDownList("base", new List<SelectListItem> { new SelectListItem { Value = "0", Text = "--Select--" }, new SelectListItem { Value = "Receivable balance", Text = "Receivable balance" } }, null, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-lg-4 control-label">Amount From</label>
+                                        <div class="col-md-8">
+                                            <input type="text" id="valuefrom" name="valuefrom" class="form-control with-search">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-lg-4 control-label">Rate</label>
+                                        <div class="col-md-2">
+                                            <input type="checkbox" id="rate" name="rate" checked="checked" class="form-control">
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <label class="col-lg-4 control-label">Amount To</label>
+                                        <div class="col-md-8">
+                                            <input type="text" id="valueto" name="valueto" class="form-control with-search">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label class="col-lg-4 control-label">Rate/Value</label>
+                                        <div class="col-md-8">
+                                            <input type="text" id="percentage" name="percentage" class="form-control">
+                                        </div>
+                                        <div class="col-md-1">
+                                            <img src="~/Resources/Images/arrow_down.png" class="search-img add-acc">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    @*<div class="col-md-1">
+                                <label class="col-lg-10 control-label">With Balane</label>
+                                <input type="checkbox" id="chkop1" name="chkop1" />
+                            </div>*@
+                                </div>
+                                <div class="form-horizontal">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="comm-comm-list-div-scroll">
+                                                <table class="table table-striped table-hover acc-data-row">
+                                                    <tr>
+                                                        <th align="center" style="color: black; font-size: x-small">Circular Code</th>
+                                                        @*<th align="center" style="color: black; font-size: x-small">Profit Center</th>*@
+                                                        <th align="center" style="color: black; font-size: x-small">Amount From</th>
+                                                        <th align="center" style="color: black; font-size: x-small">Amount To</th>
+                                                        <th align="center" style="color: black; font-size: x-small">Rate/Value</th>
+                                                        <th align="center" style="color: black; font-size: x-small">Base</th>
+                                                        <th align="center" style="color: black; font-size: x-small; display: none">Rate</th>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div class="panel panel-default row col-md-6">
+            <div class="panel panel-heading">Assign Profit Center</div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="col-lg-4 control-label">Channel</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="chanel" name="chanel" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  channel-search">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="col-lg-4 control-label">Profit Center</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="location" name="location" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  loc-search">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="col-lg-4 control-label">Month From</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="mnthfrom" name="mnthfrom" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <label class="col-lg-4 control-label">Month To</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="mnthto" name="mnthto" class="form-control">
+                                </div>
+                                <div class="col-md-1">
+                                    <img src="~/Resources/Images/arrow_down.png" class="search-img add-accnew">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            @*<div class="col-md-1">
+                                <label class="col-lg-10 control-label">With Balane</label>
+                                <input type="checkbox" id="chkop1" name="chkop1" />
+                            </div>*@
+                        </div>
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="comm-comm-list-div-scroll">
+                                        <table class="table table-striped table-hover acc-data-rownew">
+                                            <tr>
+                                                <th style="color: black; font-size: x-small">Circular Code</th>
+                                                <th style="color: black; font-size: x-small">Channel</th>
+                                                <th style="color: black; font-size: x-small">Profit Center</th>
+                                                <th style="color: black; font-size: x-small">Month From</th>
+                                                <th style="color: black; font-size: x-small">Month To</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+

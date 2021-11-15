@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ReversalDataSource" targetNamespace="http://tempuri.org/ReversalDataSource.xsd" xmlns:mstns="http://tempuri.org/ReversalDataSource.xsd" xmlns="http://tempuri.org/ReversalDataSource.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ReversalDataSource" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ReversalDataSource" msprop:Generator_UserDSName="ReversalDataSource">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ReversalSerial" msprop:Generator_TableClassName="ReversalSerialDataTable" msprop:Generator_TableVarName="tableReversalSerial" msprop:Generator_RowChangedName="ReversalSerialRowChanged" msprop:Generator_TablePropName="ReversalSerial" msprop:Generator_RowDeletingName="ReversalSerialRowDeleting" msprop:Generator_RowChangingName="ReversalSerialRowChanging" msprop:Generator_RowEvHandlerName="ReversalSerialRowChangeEventHandler" msprop:Generator_RowDeletedName="ReversalSerialRowDeleted" msprop:Generator_RowClassName="ReversalSerialRow" msprop:Generator_UserTableName="ReversalSerial" msprop:Generator_RowEvArgName="ReversalSerialRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tus_base_doc_no" msprop:Generator_ColumnVarNameInTable="columntus_base_doc_no" msprop:Generator_ColumnPropNameInRow="tus_base_doc_no" msprop:Generator_ColumnPropNameInTable="tus_base_doc_noColumn" msprop:Generator_UserColumnName="tus_base_doc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="tus_itm_cd" msprop:Generator_ColumnVarNameInTable="columntus_itm_cd" msprop:Generator_ColumnPropNameInRow="tus_itm_cd" msprop:Generator_ColumnPropNameInTable="tus_itm_cdColumn" msprop:Generator_UserColumnName="tus_itm_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="tus_ser_1" msprop:Generator_ColumnVarNameInTable="columntus_ser_1" msprop:Generator_ColumnPropNameInRow="tus_ser_1" msprop:Generator_ColumnPropNameInTable="tus_ser_1Column" msprop:Generator_UserColumnName="tus_ser_1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ReturnApproval" msprop:Generator_TableClassName="ReturnApprovalDataTable" msprop:Generator_TableVarName="tableReturnApproval" msprop:Generator_RowChangedName="ReturnApprovalRowChanged" msprop:Generator_TablePropName="ReturnApproval" msprop:Generator_RowDeletingName="ReturnApprovalRowDeleting" msprop:Generator_RowChangingName="ReturnApprovalRowChanging" msprop:Generator_RowEvHandlerName="ReturnApprovalRowChangeEventHandler" msprop:Generator_RowDeletedName="ReturnApprovalRowDeleted" msprop:Generator_RowClassName="ReturnApprovalRow" msprop:Generator_UserTableName="ReturnApproval" msprop:Generator_RowEvArgName="ReturnApprovalRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tus_ser_1" msprop:Generator_ColumnVarNameInTable="columntus_ser_1" msprop:Generator_ColumnPropNameInRow="tus_ser_1" msprop:Generator_ColumnPropNameInTable="tus_ser_1Column" msprop:Generator_UserColumnName="tus_ser_1" type="xs:string" minOccurs="0" />
+              <xs:element name="Tus_itm_model" msprop:Generator_ColumnVarNameInTable="columnTus_itm_model" msprop:Generator_ColumnPropNameInRow="Tus_itm_model" msprop:Generator_ColumnPropNameInTable="Tus_itm_modelColumn" msprop:Generator_UserColumnName="Tus_itm_model" type="xs:string" minOccurs="0" />
+              <xs:element name="tus_base_doc_no" msprop:Generator_ColumnVarNameInTable="columntus_base_doc_no" msprop:Generator_ColumnPropNameInRow="tus_base_doc_no" msprop:Generator_ColumnPropNameInTable="tus_base_doc_noColumn" msprop:Generator_UserColumnName="tus_base_doc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="InvDate" msprop:Generator_ColumnVarNameInTable="columnInvDate" msprop:Generator_ColumnPropNameInRow="InvDate" msprop:Generator_ColumnPropNameInTable="InvDateColumn" msprop:Generator_UserColumnName="InvDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CusName" msprop:Generator_ColumnVarNameInTable="columnCusName" msprop:Generator_ColumnPropNameInRow="CusName" msprop:Generator_ColumnPropNameInTable="CusNameColumn" msprop:Generator_UserColumnName="CusName" type="xs:string" minOccurs="0" />
+              <xs:element name="ReasonForReturn" msprop:Generator_ColumnVarNameInTable="columnReasonForReturn" msprop:Generator_ColumnPropNameInRow="ReasonForReturn" msprop:Generator_ColumnPropNameInTable="ReasonForReturnColumn" msprop:Generator_UserColumnName="ReasonForReturn" type="xs:string" minOccurs="0" />
+              <xs:element name="IsStock" msprop:Generator_ColumnVarNameInTable="columnIsStock" msprop:Generator_ColumnPropNameInRow="IsStock" msprop:Generator_ColumnPropNameInTable="IsStockColumn" msprop:Generator_UserColumnName="IsStock" type="xs:string" minOccurs="0" />
+              <xs:element name="AppUser" msprop:Generator_ColumnVarNameInTable="columnAppUser" msprop:Generator_ColumnPropNameInRow="AppUser" msprop:Generator_ColumnPropNameInTable="AppUserColumn" msprop:Generator_UserColumnName="AppUser" type="xs:string" minOccurs="0" />
+              <xs:element name="tus_itm_cd" msprop:Generator_ColumnVarNameInTable="columntus_itm_cd" msprop:Generator_ColumnPropNameInRow="tus_itm_cd" msprop:Generator_ColumnPropNameInTable="tus_itm_cdColumn" msprop:Generator_UserColumnName="tus_itm_cd" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

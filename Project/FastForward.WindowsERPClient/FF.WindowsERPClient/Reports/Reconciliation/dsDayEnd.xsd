@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsDayEnd" targetNamespace="http://tempuri.org/dsDayEnd.xsd" xmlns:mstns="http://tempuri.org/dsDayEnd.xsd" xmlns="http://tempuri.org/dsDayEnd.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsDayEnd" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsDayEnd" msprop:Generator_UserDSName="dsDayEnd">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_UserTableName="param" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="circularno" msdata:Caption="profitcenter" msprop:Generator_ColumnVarNameInTable="columncircularno" msprop:Generator_ColumnPropNameInRow="circularno" msprop:Generator_ColumnPropNameInTable="circularnoColumn" msprop:Generator_UserColumnName="circularno" type="xs:string" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="dayend" msprop:Generator_TableClassName="dayendDataTable" msprop:Generator_TableVarName="tabledayend" msprop:Generator_TablePropName="dayend" msprop:Generator_RowDeletingName="dayendRowDeleting" msprop:Generator_RowChangingName="dayendRowChanging" msprop:Generator_RowEvHandlerName="dayendRowChangeEventHandler" msprop:Generator_RowDeletedName="dayendRowDeleted" msprop:Generator_UserTableName="dayend" msprop:Generator_RowChangedName="dayendRowChanged" msprop:Generator_RowEvArgName="dayendRowChangeEvent" msprop:Generator_RowClassName="dayendRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="com" msprop:Generator_ColumnVarNameInTable="columncom" msprop:Generator_ColumnPropNameInRow="com" msprop:Generator_ColumnPropNameInTable="comColumn" msprop:Generator_UserColumnName="com" type="xs:string" minOccurs="0" />
+              <xs:element name="pc" msprop:Generator_ColumnVarNameInTable="columnpc" msprop:Generator_ColumnPropNameInRow="pc" msprop:Generator_ColumnPropNameInTable="pcColumn" msprop:Generator_UserColumnName="pc" type="xs:string" minOccurs="0" />
+              <xs:element name="min_trans" msprop:Generator_ColumnVarNameInTable="columnmin_trans" msprop:Generator_ColumnPropNameInRow="min_trans" msprop:Generator_ColumnPropNameInTable="min_transColumn" msprop:Generator_UserColumnName="min_trans" type="xs:string" minOccurs="0" />
+              <xs:element name="max_trans" msprop:Generator_ColumnVarNameInTable="columnmax_trans" msprop:Generator_ColumnPropNameInRow="max_trans" msprop:Generator_ColumnPropNameInTable="max_transColumn" msprop:Generator_UserColumnName="max_trans" type="xs:string" minOccurs="0" />
+              <xs:element name="dayendtime" msprop:Generator_ColumnVarNameInTable="columndayendtime" msprop:Generator_ColumnPropNameInRow="dayendtime" msprop:Generator_ColumnPropNameInTable="dayendtimeColumn" msprop:Generator_UserColumnName="dayendtime" type="xs:string" minOccurs="0" />
+              <xs:element name="remark" msprop:Generator_ColumnVarNameInTable="columnremark" msprop:Generator_ColumnPropNameInRow="remark" msprop:Generator_ColumnPropNameInTable="remarkColumn" msprop:Generator_UserColumnName="remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

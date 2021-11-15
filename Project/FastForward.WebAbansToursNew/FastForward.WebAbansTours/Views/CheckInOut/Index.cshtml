@@ -1,0 +1,117 @@
+﻿@model FF.BusinessObjects.ToursNew.MST_CHKINOUT
+
+@{
+    ViewBag.Title = "Check In Out";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/jquery-ui-timepicker-addon.js?@val"></script>
+    <script src="~/Scripts/Common/CheckInOut.js?@val"></script>
+}
+<div class="chk-inout-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Check In Out</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-chk-clear-data" />
+                <input type="submit" value="Save" class="btn btn-default btn-default-style btn-chk-save-data" />
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("CreateCheck", "CreateCheck", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-chk-det", role = "form", @id = "checkin-frm" }))
+    {
+
+        <div class="demopage">
+            <div class="container1">
+                <div class="row">
+                    <div class="row">
+                        <div class="col-md-6 form-group">
+                            <div class="col-md-12">
+                                <label class="col-md-2 control-label">Enquiry Id</label>
+                                <div class="col-md-4">
+                                    @Html.EditorFor(model => model.CHK_ENQ_ID, new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img chkenq-id-search" title="Search">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="panel-sep col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel panel-heading">Check Out</div>
+                                <div class="panel panel-body">
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Check Out KM</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.CHK_OUT_KM, new { htmlAttributes = new { @class = "form-control required-field" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Check Out Date/Time</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.CHK_OUT_DTE, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Check Out Fuel</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.CHK_OUT_FUEL, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-sep col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel panel-heading">Check In</div>
+                                <div class="panel panel-body">
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Check In Date/TIme</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.CHK_IN_DTE, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Check In KM</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.CHK_IN_KM, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Check In Fuel</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.CHK_IN_FUEL, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Other Charges</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.CHK_OTH_CHRG, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <label class="col-md-3 control-label">Remarks</label>
+                                        <div class="col-md-8">
+                                            @Html.TextAreaFor(model => model.CHK_RMKS, new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="row">
+        <div class="panel-sep col-md-12">
+            @Html.Partial("~/Views/Shared/_ImageUploads.cshtml")
+        </div>
+    </div>
+</div>

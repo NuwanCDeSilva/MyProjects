@@ -1,0 +1,17 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.Service.CustService.exe.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.Service.CustService.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.Service.CustService.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.BusinessLogicLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\EPPlus.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.BusinessLogicLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.DataAccessLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\bin\Debug\EPPlus.xml
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\obj\x86\Debug\FF.Service.CustService.ProjectInstaller.resources
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\obj\x86\Debug\FF.Service.CustService.csproj.GenerateResource.Cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\obj\x86\Debug\FF.Service.CustService.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Service.CustService\obj\x86\Debug\FF.Service.CustService.pdb

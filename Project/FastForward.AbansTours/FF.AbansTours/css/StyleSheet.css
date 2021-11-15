@@ -1,0 +1,420 @@
+﻿body {
+}
+
+
+.table0 {
+    border-width: 0px !important;
+    margin: 0px !important;
+}
+
+    .table0 tr {
+        border-width: 0px !important;
+        width: auto !important;
+    }
+
+    .table0 td {
+        border-width: 0px !important;
+        width: auto !important;
+        text-align: center !important;
+    }
+
+    .table0 input {
+        margin-right: 5px !important;
+        margin-top: 2px !important;
+    }
+
+.textaling {
+    text-align: center !important;
+}
+
+.textalingright {
+    text-align: right !important;
+}
+
+.textalingleft {
+    text-align: left !important;
+}
+
+
+.displayinlineblock {
+    display: inline-block !important;
+}
+
+.imageicon {
+    /*width: 100%;*/
+    height: 100%;
+    padding-bottom: 7px;
+    padding-left: 2px;
+}
+
+.imageicon2 {
+    /*width: 100%;*/
+    margin-bottom: 5px;
+}
+
+.padding0 {
+    padding: 0px !important;
+}
+
+.padding1 {
+    padding-left: 2px !important;
+    padding-bottom: 0px !important;
+    padding-top: 0px !important;
+    padding-right: 5px !important;
+}
+
+.padding2 {
+    padding-left: 2px !important;
+    padding-bottom: 5px !important;
+    padding-top: 2px !important;
+    padding-right: 0px !important;
+}
+
+.padding3 {
+    padding-left: 30px !important;
+    padding-bottom: 10px !important;
+    padding-top: 2px !important;
+    padding-right: 0px !important;
+}
+
+    .padding3 input {
+    width: 80px;
+}
+
+.padding4 {
+    padding-left: 0px !important;
+    padding-bottom: 10px !important;
+    padding-top: 2px !important;
+    padding-right: 30px !important;
+}
+
+.padding5 {
+    padding-left: 0px !important;
+    padding-bottom: 10px !important;
+    padding-top: 2px !important;
+    padding-right: 10px !important;
+}
+
+.paddingleft0 {
+    padding-left: 0px !important;
+}
+
+.paddingright0 {
+    padding-right: 0px !important;
+}
+
+.paddingright30 {
+    padding-right: 30px !important;
+}
+
+.displayinline {
+    display: inline-block !important;
+}
+
+.textbox {
+}
+
+.pannelheading {
+    font-size: medium;
+    font-weight: 600;
+}
+
+.rowmargin0 {
+    margin: 0px !important;
+}
+
+.ajax__validatorcallout div, .ajax__validatorcallout td {
+    background-color: rgb(247,247,247) !important;
+    border-color: rgb(235, 235, 228) !important;
+    color: Red !important;
+    font-weight: 600;
+}
+
+.ajax__validatorcallout_callout_table {
+    background-color: Black !important;
+}
+
+
+/*-------------------------*/
+
+
+.abnmaincontainer {
+    width: 100%;
+    height: 20px;
+}
+
+.abncontainer {
+    width: 100%;
+    height: 100%;
+    border-color: rgb(173,173,173);
+    background-color: White;
+}
+
+.absubcontainer1 {
+    display: inline-block;
+    float: left;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.absubcontainer2 {
+    display: inline-block !important;
+    float: left;
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.mainspec {
+    width: 100%;
+    height: 5px;
+    background-color: White;
+}
+
+/*Rukshan*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#page-wrap {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#header {
+    height: 15px;
+    width: 100%;
+    margin: 20px 0;
+    background: #222;
+    text-align: center;
+    color: white;
+    font: bold 40px Helvetica, Sans-Serif;
+    text-decoration: uppercase;
+    letter-spacing: 20px;
+    padding: 8px 0px;
+}
+
+
+#meta {
+    margin-top: 1px;
+    width: 300px;
+    height: 150px;
+    float: right;
+}
+
+    #meta td {
+        text-align: right;
+    }
+
+        #meta td.meta-head {
+            text-align: left;
+            background: #eee;
+        }
+
+        #meta td textarea {
+            width: 100%;
+            height: 20px;
+            text-align: right;
+        }
+
+#image {
+    height: 82px;
+    width: 202px;
+}
+
+.container {
+    border: solid 1px Orange;
+    height: auto;
+    width: auto;
+    display: none;
+}
+
+.RowStyle {
+    height: 50px;
+}
+
+.AlternateRowStyle {
+    height: 50px;
+}
+/*end rukshan*/
+
+.panel-body1 {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.EntyCell {
+    background-color: BEIGE;
+}
+
+.TotalLine {
+    background-color: MISTYROSE;
+}
+
+.hight1 {
+    height: 27px !important;
+}
+
+.hight2 {
+    height: 25px !important;
+}
+
+.ddlhight1 {
+    height: 20px;
+}
+
+.cpHeader {
+    color: white;
+    background-color: #719DDB;
+    font: bold 11px auto "Trebuchet MS", Verdana;
+    font-size: 12px;
+    cursor: pointer;
+    width: 450px;
+    height: 18px;
+    padding: 4px;
+}
+
+.cpBody {
+    background-color: #DCE4F9;
+    font: normal 11px auto Verdana, Arial;
+    border: 1px gray;
+    width: 450px;
+    padding: 4px;
+    padding-top: 7px;
+}
+
+.ModalPopup {
+    width: 372px;
+    height: 226px;
+    background: rgb(217, 217, 217);
+    -moz-box-shadow: 0px 8px 46px 16px rgb(128,128,128);
+    -webkit-box-shadow: 0px 8px 46px 16px rgb(128,128,128);
+    box-shadow: 0px 8px 46px 16px rgb(128,128,128);
+}
+
+.myGridViewRowStyle {
+    background-color: AZURE;
+    padding: 0px 0px 0px 0px;
+    height: 3px;
+}
+
+.div_text_shadow {
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    background-color: rgb(120, 120, 120);
+    text-shadow: rgb(0, 0, 0) 2px 5px 4px;
+}
+
+.confirModelHeader {
+    border: 1px rgb(8, 8, 8) solid;
+    background: rgb(126, 126, 126);
+    color: rgb(25,25,25);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    text-align: center;
+    line-height: 3em;
+}
+
+.confirModelBody {
+    border: 1px rgb(8, 8, 8) solid;
+    background: rgb(226, 226, 226);
+    color: rgb(25,25,25);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: inherit;
+    font-style: inherit;
+    text-decoration: inherit;
+    text-align: center;
+    line-height: 3em;
+}
+/*float*/
+.floatRight {
+    float: right;
+}
+.width700 {
+    width: 700px;
+}
+.width1000 {
+    width: 1000px;
+}
+.width10 {
+    width: 10%;
+}
+
+.width6 {
+    width: 6%;
+}
+.panelscollbar {
+    overflow-y: scroll;
+}
+.height40 {
+    height: 44px;
+}
+.height5 {
+    height: 5px;
+}
+.height450 {
+    height: 450px;
+}
+.height350 {
+    height: 350px;
+}
+.paddingtopbottom0 {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+#MainContent_ValidatorCalloutExtender3_popupTable {
+    left: -200px !important;
+}
+
+#MainContent_ValidatorCalloutExtender4_popupTable {
+    left: -200px !important;
+}
+
+#MainContent_ValidatorCalloutExtender5_popupTable {
+    left: -200px !important;
+}
+
+.Scroll {
+    overflow-y: scroll;
+    height: 200px;
+    overflow: auto;
+}
+
+.tablemod td {
+    padding: 5px !important;
+}
+
+.divWaiting {
+    position: absolute;
+    background-color: #FAFAFA;
+    z-index: 2147483647 !important;
+    opacity: 0.8;
+    overflow: hidden;
+    text-align: center;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    padding-top: 20%;
+}
+
+.WatermarkCss {
+color:silver !important;
+width: 100% !important;
+}
+
+.textAlign {
+    text-align: right;
+}
+
+.fontsize30 {
+    font-size: 30px !important;
+    /*color: #7E1974;*/
+}
+

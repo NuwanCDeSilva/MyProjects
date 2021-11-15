@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - @Resources.Resource.ApplicationTitle</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/jquery.toastmessage-min.css" rel="stylesheet" />
+</head>
+<body>
+    <noscript class="row">
+        <style type="text/css">
+            .pagecontainer {
+                display: none;
+            }
+        </style>
+        <div class="noscriptmsg">
+            <div class="col-md-5 col-md-offset-3 ">
+                You don't have javascript enabled.
+            </div>
+        </div>
+    </noscript>
+    @{
+        if (Session.Count > 0 && Session["UserID"].ToString() != null)
+        {
+            <div class="navbar navbar-inverse navbar-fixed-top navbar-main-page">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        @Html.ActionLink(Resources.Resource.ApplicationName, "Index", "Home", new { area = "" }, new { @class = "navbar-brand main-title" })
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav menu-item">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("Cusdec", "Index", "Cusdec")</li>
+                            <li>@Html.ActionLink("About", "About", "Home")</li>
+                        </ul>
+                        @Html.Partial("_LoginPartial")
+                    </div>
+                </div>
+                <div class="main-pge-msg">
+                    <div class="error-msg">
+                        @{string messageErr = TempData["Error"] as string;}
+                        @if (!String.IsNullOrEmpty(messageErr))
+                        {
+                            <p>@messageErr</p>
+                        }
+                        
+                    </div>
+                    <div class="notice-msg">
+                       @{string messageNot = TempData["Notice"] as string;}
+                        @if (!String.IsNullOrEmpty(messageNot))
+                        {
+                            <p>@messageNot</p>
+                        }
+                    </div>
+                    
+                </div>
+            </div>
+        }
+}
+    
+    <div class="container body-content">
+        @RenderBody()
+        <!-- modal placeholder-->
+    @{
+        if (Session.Count > 0 && Session["UserID"].ToString() != null)
+        {
+        <div id='myModal' class='modal fade in'>
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="se-pre-con"></div>
+                    <div class="Title panel-heading">
+                        <div class="alignleft">Document search</div>
+                        <div class="alignright close-btn"></div>
+                    </div>
+                    <div class="search-field">
+                        <div class="left-align">
+                            <div class="left-align seach-key-title">Search by key :</div>
+                            <div class="right-align">
+                                <select class="filter-key-cls" name="Key">
+                                    <option>Select</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="right-align">
+                            <div class="left-align seach-key-type">Search by word : </div>
+                            <div class="right-align">@Html.TextBox("KeyWord")</div>
+                        </div>
+                    </div>
+
+                    <div id='myModalContent'>
+                            
+                        <div class="container">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr class="coloured"></tr>
+                                    </thead>
+                                    <tbody>
+                                       
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        </div>
+
+                    </div>
+                    <div class="pagination cls-pge-footer">
+                        <div class="cls-page-num">
+                        <div class="left-align">Page :</div> 
+                        <div class="right-align cls-pages"><div id="paging"></div></div>
+                        </div>
+                        <div class="cls-pge-cunt">
+                            <div class="left-align">
+                            Number per page : 
+                                </div>
+                            <div class="right-align">
+                                <select name="Key" class="cls-select-page-cont">
+                                    <option value="10">10</option>
+                                    <option value="25">25</option>
+                                    <option value="50">50</option>
+                                    <option value="100">100</option>
+                                    <option value="500">500</option>
+                                    <option value="1000">1000</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="datepicker"></div>
+                </div>
+            </div>
+            
+        </div>
+
+        }
+    }
+    </div>
+        @{
+            if (Session.Count > 0 && Session["UserID"].ToString() != null)
+            {
+                <hr />
+                <footer class="home-view-footer">
+                    <p>&copy;@DateTime.Now.Year @Resources.Resource.ReservedText</p>
+                </footer>
+            }
+}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    
+    <script src="~/Scripts/jquery-1.10.2.js"></script>
+    @*@Scripts.Render("~/bundles/jquery")*@
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/jquery.validate.js")
+    @Scripts.Render("~/Scripts/Common/CommonSearch.js")
+    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    @Scripts.Render("~/Scripts/Common/jquery.bootpag.min.js")
+    <script src="~/Scripts/Common/jquery.toastmessage-min.js"></script>
+    @Scripts.Render("~/Scripts/Common/Site.js")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

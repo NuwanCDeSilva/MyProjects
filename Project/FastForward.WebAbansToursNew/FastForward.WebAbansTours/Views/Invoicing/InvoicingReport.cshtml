@@ -1,0 +1,32 @@
+﻿@model FastForward.WebAbansTours.Models.PrintModel
+
+@{
+    ViewBag.Title = "Invoicing Report";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/InvoicingReport.js?@val"></script>
+}
+@section Styles {
+    <link href="@Url.Content("~/Content/Menu.css")" rel="stylesheet" type="text/css" />
+}
+<div class="costing-report-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-1">
+                
+            </div>
+            <div class="col-md-6">
+                <div class="page-title">Invoicing Report</div>
+            </div>
+            <div class="col-md-3"><input type="submit" value="Back" class="btn btn-default btn-default-style btn-frm-back" />
+                <input type="submit" value="Print" class="btn btn-default btn-default-style btn-print-repot" /></div>
+            
+        </div>
+    </div>
+    <input value="@Model.invoiceNo" style="display:none;" class="txt-inv-id">
+    <iframe src="@Model.ReportPath" id="iframe" style="width:75%; height:525px; border:none; margin-left:130px;"></iframe>
+</div>

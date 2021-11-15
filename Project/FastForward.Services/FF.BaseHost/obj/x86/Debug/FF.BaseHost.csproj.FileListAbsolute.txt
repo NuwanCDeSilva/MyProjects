@@ -1,0 +1,16 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.BusinessLogicLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\EPPlus.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.BusinessLogicLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.DataAccessLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\EPPlus.xml
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\obj\x86\Debug\FF.BaseHost.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\obj\x86\Debug\FF.BaseHost.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\obj\x86\Debug\FF.BaseHost.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.BaseHost.exe.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.BaseHost.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BaseHost\bin\Debug\FF.BaseHost.pdb

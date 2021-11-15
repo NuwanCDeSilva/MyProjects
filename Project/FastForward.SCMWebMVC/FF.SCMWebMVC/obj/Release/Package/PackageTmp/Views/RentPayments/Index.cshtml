@@ -1,0 +1,282 @@
+﻿@{
+    ViewBag.Title = "Product Bonus Definition";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/RentPayments.js?@val"></script>
+}
+
+@section style{
+    <link href="~/Content/RentPayments.css" rel="stylesheet" />
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Schedule Payment Setup</div>
+    </div>
+    <div class="col-md-6">
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+        <input type="button" value="Approve" class="btn btn-default btn-default-style btn-approve-data" />
+    </div>
+    @using (Html.BeginForm("RentPayments", "SAVE_RENT_PAYMENT_DETAILS", FormMethod.Post, new { enctype = "multipart/form-data", @id = "rentdetails-frm" }))
+    {
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">
+            </div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-md-4 control-label">Schedule ID</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="rentdts" name="rentdts" class="form-control with-search" >
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  rendshd-search">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-md-4 control-label">Payment Type</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="paymenttype" name="paymenttype" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  payment-type-search">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="col-md-3">
+                                    <input type="radio" id="terminatewithdate" name="terminatetype" value="terminatewithdate" class="form-control ">
+                                </div>
+                                <label class="col-md-9 control-label">Terminate With Date</label>
+                            </div>
+                            <div class="col-md-2">
+                            </div>
+
+                            <div class="col-md-3"></div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-md-4 control-label">Payment Subtype</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="paymensubttype" name="paymensubttype" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img payment-subtype-search">
+                                </div>
+                            </div>
+
+                            <div class="col-md-2">
+                                <div class="col-md-3">
+                                    <input type="radio" id="stoppaymentwithdate" value="stoppaymentwithdate" name="terminatetype" class="form-control ">
+                                </div>
+                                <label class="col-md-9 control-label">Stop Payment With Date</label>
+                            </div>
+                            <div class="col-md-2">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+                                <label class="col-md-4 control-label">Profit Center</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="pft" name="pft" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  pft-search">
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label class="col-md-3 control-label">Location Address 01</label>
+                                <input type="text" id="addresse1" name="addresse1" class="form-control with-search ">
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label class="col-md-3 control-label">Location Address 02</label>
+                                <input type="text" id="addresse2" name="addresse2" class="form-control with-search ">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label class="col-md-3 control-label">Sq Feets</label>
+                                <input type="number" id="sqfeet" name="sqfeet" class="form-control with-search">
+                            </div>
+                            <div class="col-md-5 classmargingleft">
+                                <label class="col-md-3 control-label">District</label>
+                                <input type="text" id="district" name="district" class="form-control with-search">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label class="col-md-3 control-label">Remark</label>
+                                <textarea id="remark" name="remark" class="form-control" placeholder="Remark"></textarea>
+                            </div>
+                            <div class="col-md-5 classmargingleft">
+                                <label class="col-md-3 control-label">Provision</label>
+                                <input type="text" id="provision" name="provision" class="form-control with-search">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label class="col-md-3 control-label">Credit Account</label>
+                                <input type="number" id="creditacc" name="creditacc" class="form-control with-search ">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label class="col-md-3 control-label">Debit Account</label>
+                                <input type="number" id="debitacc" name="debitacc" class="form-control with-search ">
+                            </div>
+                        </div>
+                        <div class="row">
+
+                            <div class="col-md-7">
+                                <label class="col-md-3 control-label">Agreement Ref</label>
+                                <input type="text" id="agreementref" name="agreementref" class="form-control with-search ">
+                            </div>
+                            <div class="col-md-5">
+                                <div class="col-md-2 classmargingleft">
+                                    <label class="control-label">Rent Period</label>
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" id="rentfromdate" name="date" class="form-control" readonly>
+                                </div>
+                                <div class="col-md-1">
+                                    to
+                                </div>
+                                <div class="col-md-4">
+                                    <input type="text" id="renttodate" name="date" class="form-control" readonly>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+@using (Html.BeginForm("OwnerDetailsManagement", "RentPayments", FormMethod.Post, new { enctype = "multipart/form-data", @id = "schownerdet-frm" }))
+    {
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">Owner </div>
+        <div class="panel panel-body">
+            <div class="col-md-11 dynamiccolumns">
+            </div>
+            <div class="col-md-1"><button class='btn btn-primary btn-xs addtoownertable'>Add</button></div>
+        </div>
+    </div>
+
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">
+            Land Owners Details
+        </div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                @*deleted form-horizontal*@
+                <div class="row">
+                    <div class="col-md-12 form-group item-range-scroll22">
+                        <div id="serial">
+                            <table class="bonus-loc-table table" id="ownerdetailstbl"></table>
+                        </div>
+                        <hr>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">
+        </div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                <div class="form-horizontal">
+
+
+
+                    <div class="col-md-12">
+                        <div class="col-md-1">
+
+                        </div>
+
+                        <div class="col-md-2">
+                            Advanced Amount
+                        </div>
+
+                        <div class="col-md-2">
+                            <input type="text" id="advancedamt" name="advancedamt" class="form-control with-search">
+                            <img src="/Resources/Images/Search-icon.png" class="search-img  advancedamt-search" style="display:none">
+                        </div>
+
+                        <div class="col-md-1">
+
+                        </div>
+                        <div class="col-md-1">
+                            Advanced Period
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" id="advancefromdate" name="date" class="form-control" readonly>
+                        </div>
+                        <div class="col-md-1">
+                            to
+                        </div>
+                        <div class="col-md-2">
+                            <input type="text" id="advancetodate" name="date" class="form-control" readonly>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">
+        </div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                @*deleted form-horizontal*@
+                <div class="row">
+                    <span class="glyphicon glyphicon-plus glyphiconiconlarge dynamicadd"></span>
+                    <span class="glyphicon glyphicon-minus glyphiconiconlarge dynamicremove"></span>
+                </div>
+                <div id="dynamicinstallements">
+
+                </div>
+                <input type="button" class="btn btn-primary btn-xs" id="addtoshedule" value="Add to scheudle" />
+
+            </div>
+        </div>
+    </div>
+
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">
+        </div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                @*deleted form-horizontal*@
+                <div class="row">
+                    <div class="col-md-12 form-group item-range-scroll22">
+                        <table class="bonus-loc-table table" id="schedule_table">
+                            <tr class="table-hed">
+                                <th class="hideclass"></th>
+                                <th class="hideclass"></th>
+                                <th>No</th>
+                                <th>Due Date</th>
+                                <th>Rent</th>
+                                <th>Advanced</th>
+                                <th>Net Payment</th>
+                                <th>Paid</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

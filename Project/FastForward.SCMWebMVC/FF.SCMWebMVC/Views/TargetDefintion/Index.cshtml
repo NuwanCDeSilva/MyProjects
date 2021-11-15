@@ -1,0 +1,135 @@
+﻿@{
+    ViewBag.Title = "Target Definition";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/TargetDefinition.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Commission Target Definition</div>
+    </div>
+    <div class="col-md-6" style="width:625px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-show-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading"></div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Circular Code</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="commcode" name="commcode" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  commission-search">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Month</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="month" name="month" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Employee</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="exc_cd" name="exc_cd" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  empcode-search">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Target</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="target" name="target" class="form-control with-search">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">From Percentage</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="fperc" name="fperc" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">To Percentage</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="tperc" name="tperc" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Exec Commi</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="execomm" name="execomm" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Manager</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="manager" name="manager" class="form-control with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img  manager-search">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Manager Comm</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="managercomm" name="managercomm" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-4 control-label">Brand</label>
+                                <div class="col-md-8">
+                                    <input type="text" id="brand" name="brand" class="form-control with-search">
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img search-brand-cd">
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <img src="~/Resources/Images/arrow_down.png" class="search-img add-data">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">Target Details</div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="comm-comm-list-div-scroll">
+                                <table class="table table-striped table-hover target-data-row">
+                                    <tr>
+                                        <th style="color: black; font-size: x-small"></th>
+                                        <th style="color: black; font-size: x-small">Doc No</th>
+                                        <th style="color: black; font-size: x-small">Exec Code</th>
+                                        <th style="color: black; font-size: x-small">Month</th>
+                                        <th style="color: black; font-size: x-small">From</th>
+                                        <th style="color: black; font-size: x-small">To</th>
+                                        <th style="color: black; font-size: x-small">Target</th>
+                                        <th style="color: black; font-size: x-small">Commission</th>
+                                        <th style="color: black; font-size: x-small">Manager</th>
+                                        <th style="color: black; font-size: x-small">Commission</th>
+                                        <th style="color: black; font-size: x-small">Brand</th>
+                                        <th></th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

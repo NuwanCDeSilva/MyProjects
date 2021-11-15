@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Other Party Payment Confirmation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/OtherPartyPaymentConf.js?@val"></script>
+    <script src="~/Scripts/Common/Payment.js?@val"></script>
+}
+<div class="other-pay-conf-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Other Party Payment Confirmation</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style paymet-conf-clear-data" />
+                <input type="submit" value="Save" class="btn btn-default btn-default-style paymet-conf-save-data" />
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("SavePayments", "OtherPartyPaymentConf", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-oth-party-pay-det", role = "form", @id = "other-party-pay-frm" }))
+    {
+
+        <div class="demopage">
+            <div class="container1">
+                <div class="row">
+                    <div class="panel-sep col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Other Party Details</div>
+                            <div class="panel panel-body">
+                                <div class="col-md-6 form-group">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label class="col-lg-3 control-label">Other Party</label>
+                                            <div class="col-md-9">
+                                                @Html.Editor("Other Party", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                <img src="~/Resources/Images/Search-icon.png" class="search-img othparty-search" title="Search">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label class="col-lg-3 control-label">Customer</label>
+                                            <div class="col-md-9">
+                                                @Html.Editor("Customer", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                <img src="~/Resources/Images/Search-icon.png" class="search-img cus-cd-search" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label class="col-lg-3 control-label">Date From</label>
+                                            <div class="col-md-9">
+                                                @Html.Editor("DateFrom", new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label class="col-lg-3 control-label">Date To</label>
+                                            <div class="col-md-9">
+                                                @Html.Editor("DateTo", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                <img class="arrow-down-img load-receipt-data" title="Add" src="~/Resources/Images/arrow_down.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel-sep col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Payment Details</div>
+                            <div class="panel panel-body">
+                                <div class="paymeny-tbl-body">
+                                    <table class="other-party-payment table">
+                                        <tr class="table-hed">
+                                            <th></th>
+                                            <th>Enquiry Id</th>
+                                            <th>Receipt No</th>
+                                            <th>Custome Code</th>
+                                            <th>Name</th>
+                                            <th>Payment Party</th>
+                                            <th>Amount</th>
+                                            <th>To Be Paid</th>
+                                            <th>Pay Amount</th>
+                                        </tr>
+                                        <tbody id="othrpty-paydtl-tbl"></tbody>
+                                    </table>
+                                </div>
+                                <div class="row">
+                                        <div class="col-md-10 form-group">
+                                        </div>
+                                        <div class="col-md-2 form-group">
+                                            <label class="col-md-4 control-label">Total Paid</label>
+                                            <label class="col-md-4 control-label total-paid-amt">:0.00</label>
+                                            
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel-sep col-md-12">
+                        @Html.Partial("~/Views/Shared/_Payment.cshtml")
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+

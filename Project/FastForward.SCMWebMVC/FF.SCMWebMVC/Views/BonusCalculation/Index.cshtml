@@ -1,0 +1,620 @@
+﻿@{
+    ViewBag.Title = "Bonus Calculation";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/BonusCalculation.js?@val"></script>
+<script src="~/Scripts/Common/PageSript.js"></script>
+}
+@section style{
+    <link href="~/Content/smartpaginator.css" rel="stylesheet" />
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Bonus Calculation</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data" />
+        <input type="button" value="Finalz" class="btn btn-default btn-default-style btn-finl-data" />
+        <input type="button" value="Excel" class="btn btn-default btn-default-style btn-excel-upload" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading"></div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            @*<div class="col-md-3">
+                                <label class="col-lg-6 control-label">Party Code</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="partycode" name="partycode" class="form-control  with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img party-search">
+                                </div>
+                            </div>*@
+
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Manager</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="manager" name="manager" class="form-control  with-search" readonly>
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img manager-search">
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Month</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="monthdate" name="monthdate" class="form-control">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Effect.Month</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="effectdate" name="effectdate" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-6 control-label">Category</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="category" name="category" class="form-control" readonly>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-6 control-label">Profit Center</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="pc" name="pc" class="form-control" readonly>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">Details</div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                <div class="form-horizontal">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="comm-comm-list-div-scroll">
+                                <table class="table table-striped table-hover adj-data-row">
+                                    <tr>
+                                        <th style="color: black; font-size: x-small">Manager</th>
+                                        <th style="color: black; font-size: x-small">Profit Center</th>
+                                        <th style="color: black; font-size: x-small">Month</th>
+                                        <th>Edit</th>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div id="green" style="margin: auto;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">Final Due Figures</div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Curr. Month Due</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="currmonthdue" name="currmonthdue" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Curr. Month Due Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="currmonthdueadj" name="currmonthdueadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Prev. Month Arrears</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="prevarre" name="prevarre" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Prev. Month Arrears Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="premontharreadj" name="premontharreadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label" style="color:red">Total.Due</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="duetotal" name="duetotal" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">Final Adjestments and Arrears Figures</div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Curr. Month Arrears</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="currmonarr" name="currmonarr" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Curr. Month Arrears Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="currmonarradj" name="currmonarradj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Grace Period Sett</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="gracepersett" name="gracepersett" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Grace Period Sett Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="gracepersettadj" name="gracepersettadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">DG 1 month</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="arrerelschadj" name="arrerelschadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Service</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="serprobaccadj" name="serprobaccadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Dispute</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="disputecorre" name="disputecorre" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Diriya</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="diriyaadj" name="diriyaadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">LOD</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="lodadj" name="lodadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Showroom Computer</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="shopcomadj" name="shopcomadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Other Adjustments</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="adj" name="adj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Handing Over</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="handover" name="handover" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Short Remittance</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="shortremitt" name="shortremitt" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Issue Cheques Return</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="issuechqret" name="issuechqret" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Not Consider</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="grapernotqlyamt" name="grapernotqlyamt" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Disregard Amt</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="disregartamt" name="disregartamt" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Total Adjustments</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="totaladj" name="totaladj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Net Arrears</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="netarramt" name="netarramt" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label" style="color:red">Arrears Percentage</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="arrper" name="arrper" class="form-control numberalign" style="background:yellow" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">Final Remittance Figures</div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Month.Remit</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="totremitted" name="totremitted" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Month.Remit.Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="totremadj" name="totremadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Supp. Collections</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="suppcollec" name="suppcollec" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Supp. Collections Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="suppcollecadj" name="suppcollecadj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Grace Collection</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="grpercoll" name="grpercoll" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Grace Collection Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="grpercolladj" name="grpercolladj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Prev. Month Supp.Coll</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="premonsupcoll" name="premonsupcoll" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Prev. Month Supp. Coll. Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="premonsupcolladj" name="premonsupcolladj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Prev. Month Grace Coll</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="premongrcoll" name="premongrcoll" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Prev Month Grace Coll Adj</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="premongrcolladj" name="premongrcolladj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label" style="color:red">Net Remittance</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="netremittance" name="netremittance" class="form-control numberalign" style="background:yellow" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">Bonus Calculation</div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Receiveble Balance</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="totrecbal" name="totrecbal" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Active A/Cs</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="activeaccounts" name="activeaccounts" class="form-control numberalign with-search">
+                                    <img src="~/Resources/Images/arrowup.png" class="search-img closaccchange-click">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Target Accounts</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="targetnoofaccounts" name="targetnoofaccounts" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Per A/C Average</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="avgperacc" name="avgperacc" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Period in operation</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="periodinop" name="periodinop" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Category</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="category2" name="category2" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label" style="color:red">Bonus(%)</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="bonuspers" name="bonuspers" class="form-control numberalign" style="background:yellow" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label" style="color:red">Bonus Amount</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="bonusamt" name="bonusamt" class="form-control numberalign" style="background:yellow" readonly>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">Deductions/Refunds</div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Dispu.Corr.Dedu.Refunds</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="dispbnsrefded" name="dispbnsrefded" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Gross Bonus</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="totalgrosscollbns" name="totalgrosscollbns" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">EPF Contribution</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="epfcontr" name="epfcontr" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">ESD Contribution</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="esdcontri" name="esdcontri" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Acc Dept Deductions</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="accdeptdeduct" name="accdeptdeduct" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Remark</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="accdeptdeducremark" name="accdeptdeducremark" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Acc Dept Refunds</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="accdeptrefund" name="accdeptrefund" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Remark</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="accdeptrefuremark" name="accdeptrefuremark" class="form-control numberalign">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Inv Dept Deductions</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="invdeptdeduct" name="invdeptdeduct" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Remark</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="invdeptdeducremark" name="invdeptdeducremark" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Inv Dept Refunds</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="invdeptrefund" name="invdeptrefund" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Remark</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="invdeptrefuremark" name="invdeptrefuremark" class="form-control numberalign">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Crd Dept Deductions</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="creddeptdeduct" name="creddeptdeduct" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Remark</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="creddeptdeducremark" name="creddeptdeducremark" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Crd Dept Refunds</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="creddeptrefund" name="creddeptrefund" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Remark</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="creddeptrefuremark" name="creddeptrefuremark" class="form-control numberalign">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Spe.Amt-Dedu+Refunds</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="othadj" name="othadj" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label">Special Remark</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="spcremark" name="spcremark" class="form-control numberalign">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label"> Net.Bonus</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="totalnetbns" name="totalnetbns" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-lg-6 control-label"> Voucher No</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="voucherno" name="voucherno" class="form-control numberalign" readonly>
+                                </div>
+                            </div>
+                            @*<div class="col-md-3">
+                                <label class="col-lg-6 control-label">Adjestment</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="adj" name="adj" class="form-control numberalign" readonly>
+                                </div>
+                            </div>*@
+                        </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+</div>
+<div class="modal fade my-popup-div" id="exclupload" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="container1">
+                @using (Html.BeginForm("BindExceldata", "BonusCalculation", FormMethod.Post, new { enctype = "multipart/form-data", @id = "imp-data" }))
+                {
+                    <div class="panel-container">
+                        <div id="view1" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-md-3 control-label">Upload File</label>
+                                        <div class="col-md-3">
+                                            <input type="file" name="UploadedFile" id="UploadedFile" class="form-control-file" required />
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="button" value="Upload" class="btn btn-xs btn-default imprt-cd-data" />
+                                        </div>
+                                        <div class="col-md-1">
+                                            <input type="button" value="Close" class="btn btn-xs btn-default cls-excel-popup" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+
+            </div>
+        </div>
+    </div>
+
+</div>

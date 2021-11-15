@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Cust_Acknowledgement" targetNamespace="http://tempuri.org/Cust_Acknowledgement.xsd" xmlns:mstns="http://tempuri.org/Cust_Acknowledgement.xsd" xmlns="http://tempuri.org/Cust_Acknowledgement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Cust_Acknowledgement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Cust_Acknowledgement" msprop:Generator_UserDSName="Cust_Acknowledgement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CUST_ACK" msprop:Generator_TableClassName="CUST_ACKDataTable" msprop:Generator_TableVarName="tableCUST_ACK" msprop:Generator_TablePropName="CUST_ACK" msprop:Generator_RowDeletingName="CUST_ACKRowDeleting" msprop:Generator_UserTableName="CUST_ACK" msprop:Generator_RowChangingName="CUST_ACKRowChanging" msprop:Generator_RowEvHandlerName="CUST_ACKRowChangeEventHandler" msprop:Generator_RowDeletedName="CUST_ACKRowDeleted" msprop:Generator_RowEvArgName="CUST_ACKRowChangeEvent" msprop:Generator_RowChangedName="CUST_ACKRowChanged" msprop:Generator_RowClassName="CUST_ACKRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ACK_USER" msprop:Generator_ColumnVarNameInTable="columnACK_USER" msprop:Generator_ColumnPropNameInRow="ACK_USER" msprop:Generator_ColumnPropNameInTable="ACK_USERColumn" msprop:Generator_UserColumnName="ACK_USER" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_ACCNO" msprop:Generator_ColumnVarNameInTable="columnACK_ACCNO" msprop:Generator_ColumnPropNameInRow="ACK_ACCNO" msprop:Generator_ColumnPropNameInTable="ACK_ACCNOColumn" msprop:Generator_UserColumnName="ACK_ACCNO" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_CREATE_DT" msprop:Generator_ColumnVarNameInTable="columnACK_CREATE_DT" msprop:Generator_ColumnPropNameInRow="ACK_CREATE_DT" msprop:Generator_ColumnPropNameInTable="ACK_CREATE_DTColumn" msprop:Generator_UserColumnName="ACK_CREATE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ACK_CUST_CD" msprop:Generator_ColumnVarNameInTable="columnACK_CUST_CD" msprop:Generator_ColumnPropNameInRow="ACK_CUST_CD" msprop:Generator_ColumnPropNameInTable="ACK_CUST_CDColumn" msprop:Generator_UserColumnName="ACK_CUST_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_CUST_NAME" msprop:Generator_ColumnVarNameInTable="columnACK_CUST_NAME" msprop:Generator_ColumnPropNameInRow="ACK_CUST_NAME" msprop:Generator_ColumnPropNameInTable="ACK_CUST_NAMEColumn" msprop:Generator_UserColumnName="ACK_CUST_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_CUST_ADD1" msprop:Generator_ColumnVarNameInTable="columnACK_CUST_ADD1" msprop:Generator_ColumnPropNameInRow="ACK_CUST_ADD1" msprop:Generator_ColumnPropNameInTable="ACK_CUST_ADD1Column" msprop:Generator_UserColumnName="ACK_CUST_ADD1" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_CUST_ADD2" msprop:Generator_ColumnVarNameInTable="columnACK_CUST_ADD2" msprop:Generator_ColumnPropNameInRow="ACK_CUST_ADD2" msprop:Generator_ColumnPropNameInTable="ACK_CUST_ADD2Column" msprop:Generator_UserColumnName="ACK_CUST_ADD2" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_GUAR1_NAME" msprop:Generator_ColumnVarNameInTable="columnACK_GUAR1_NAME" msprop:Generator_ColumnPropNameInRow="ACK_GUAR1_NAME" msprop:Generator_ColumnPropNameInTable="ACK_GUAR1_NAMEColumn" msprop:Generator_UserColumnName="ACK_GUAR1_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_GUAR1_ADD1" msprop:Generator_ColumnVarNameInTable="columnACK_GUAR1_ADD1" msprop:Generator_ColumnPropNameInRow="ACK_GUAR1_ADD1" msprop:Generator_ColumnPropNameInTable="ACK_GUAR1_ADD1Column" msprop:Generator_UserColumnName="ACK_GUAR1_ADD1" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_GUAR1_ADD2" msprop:Generator_ColumnVarNameInTable="columnACK_GUAR1_ADD2" msprop:Generator_ColumnPropNameInRow="ACK_GUAR1_ADD2" msprop:Generator_ColumnPropNameInTable="ACK_GUAR1_ADD2Column" msprop:Generator_UserColumnName="ACK_GUAR1_ADD2" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_GUAR2_NAME" msprop:Generator_ColumnVarNameInTable="columnACK_GUAR2_NAME" msprop:Generator_ColumnPropNameInRow="ACK_GUAR2_NAME" msprop:Generator_ColumnPropNameInTable="ACK_GUAR2_NAMEColumn" msprop:Generator_UserColumnName="ACK_GUAR2_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_GUAR2_ADD1" msprop:Generator_ColumnVarNameInTable="columnACK_GUAR2_ADD1" msprop:Generator_ColumnPropNameInRow="ACK_GUAR2_ADD1" msprop:Generator_ColumnPropNameInTable="ACK_GUAR2_ADD1Column" msprop:Generator_UserColumnName="ACK_GUAR2_ADD1" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_GUAR2_ADD2" msprop:Generator_ColumnVarNameInTable="columnACK_GUAR2_ADD2" msprop:Generator_ColumnPropNameInRow="ACK_GUAR2_ADD2" msprop:Generator_ColumnPropNameInTable="ACK_GUAR2_ADD2Column" msprop:Generator_UserColumnName="ACK_GUAR2_ADD2" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_ITEM_CD" msprop:Generator_ColumnVarNameInTable="columnACK_ITEM_CD" msprop:Generator_ColumnPropNameInRow="ACK_ITEM_CD" msprop:Generator_ColumnPropNameInTable="ACK_ITEM_CDColumn" msprop:Generator_UserColumnName="ACK_ITEM_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_ITEM_DESC" msprop:Generator_ColumnVarNameInTable="columnACK_ITEM_DESC" msprop:Generator_ColumnPropNameInRow="ACK_ITEM_DESC" msprop:Generator_ColumnPropNameInTable="ACK_ITEM_DESCColumn" msprop:Generator_UserColumnName="ACK_ITEM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_HIRE_VAL" msprop:Generator_ColumnVarNameInTable="columnACK_HIRE_VAL" msprop:Generator_ColumnPropNameInRow="ACK_HIRE_VAL" msprop:Generator_ColumnPropNameInTable="ACK_HIRE_VALColumn" msprop:Generator_UserColumnName="ACK_HIRE_VAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ACK_DIRIYA_VAL" msprop:Generator_ColumnVarNameInTable="columnACK_DIRIYA_VAL" msprop:Generator_ColumnPropNameInRow="ACK_DIRIYA_VAL" msprop:Generator_ColumnPropNameInTable="ACK_DIRIYA_VALColumn" msprop:Generator_UserColumnName="ACK_DIRIYA_VAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ACK_LOC_CD" msprop:Generator_ColumnVarNameInTable="columnACK_LOC_CD" msprop:Generator_ColumnPropNameInRow="ACK_LOC_CD" msprop:Generator_ColumnPropNameInTable="ACK_LOC_CDColumn" msprop:Generator_UserColumnName="ACK_LOC_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_LOC_DESC" msprop:Generator_ColumnVarNameInTable="columnACK_LOC_DESC" msprop:Generator_ColumnPropNameInRow="ACK_LOC_DESC" msprop:Generator_ColumnPropNameInTable="ACK_LOC_DESCColumn" msprop:Generator_UserColumnName="ACK_LOC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ACK_PRINT_ADD_TP" msprop:Generator_ColumnVarNameInTable="columnACK_PRINT_ADD_TP" msprop:Generator_ColumnPropNameInRow="ACK_PRINT_ADD_TP" msprop:Generator_ColumnPropNameInTable="ACK_PRINT_ADD_TPColumn" msprop:Generator_UserColumnName="ACK_PRINT_ADD_TP" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

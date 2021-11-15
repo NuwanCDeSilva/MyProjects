@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_invoice_charges" targetNamespace="http://tempuri.org/ds_invoice_charges.xsd" xmlns:mstns="http://tempuri.org/ds_invoice_charges.xsd" xmlns="http://tempuri.org/ds_invoice_charges.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_invoice_charges" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_invoice_charges" msprop:Generator_UserDSName="ds_invoice_charges">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="InvoiceData" msprop:Generator_TableClassName="InvoiceDataDataTable" msprop:Generator_TableVarName="tableInvoiceData" msprop:Generator_RowChangedName="InvoiceDataRowChanged" msprop:Generator_TablePropName="InvoiceData" msprop:Generator_RowDeletingName="InvoiceDataRowDeleting" msprop:Generator_RowChangingName="InvoiceDataRowChanging" msprop:Generator_RowEvHandlerName="InvoiceDataRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceDataRowDeleted" msprop:Generator_RowClassName="InvoiceDataRow" msprop:Generator_UserTableName="InvoiceData" msprop:Generator_RowEvArgName="InvoiceDataRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gce_name" msprop:Generator_ColumnVarNameInTable="columngce_name" msprop:Generator_ColumnPropNameInRow="gce_name" msprop:Generator_ColumnPropNameInTable="gce_nameColumn" msprop:Generator_UserColumnName="gce_name" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_add1" msprop:Generator_ColumnVarNameInTable="columngce_add1" msprop:Generator_ColumnPropNameInRow="gce_add1" msprop:Generator_ColumnPropNameInTable="gce_add1Column" msprop:Generator_UserColumnName="gce_add1" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_add2" msprop:Generator_ColumnVarNameInTable="columngce_add2" msprop:Generator_ColumnPropNameInRow="gce_add2" msprop:Generator_ColumnPropNameInTable="gce_add2Column" msprop:Generator_UserColumnName="gce_add2" type="xs:string" minOccurs="0" />
+              <xs:element name="sch_itm_cd" msprop:Generator_ColumnVarNameInTable="columnsch_itm_cd" msprop:Generator_ColumnPropNameInRow="sch_itm_cd" msprop:Generator_ColumnPropNameInTable="sch_itm_cdColumn" msprop:Generator_UserColumnName="sch_itm_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="sch_tot_amt" msprop:Generator_ColumnVarNameInTable="columnsch_tot_amt" msprop:Generator_ColumnPropNameInRow="sch_tot_amt" msprop:Generator_ColumnPropNameInTable="sch_tot_amtColumn" msprop:Generator_UserColumnName="sch_tot_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="sch_curr" msprop:Generator_ColumnVarNameInTable="columnsch_curr" msprop:Generator_ColumnPropNameInRow="sch_curr" msprop:Generator_ColumnPropNameInTable="sch_currColumn" msprop:Generator_UserColumnName="sch_curr" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_guess" msprop:Generator_ColumnVarNameInTable="columngce_guess" msprop:Generator_ColumnPropNameInRow="gce_guess" msprop:Generator_ColumnPropNameInTable="gce_guessColumn" msprop:Generator_UserColumnName="gce_guess" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_cre_by" msprop:Generator_ColumnVarNameInTable="columngce_cre_by" msprop:Generator_ColumnPropNameInRow="gce_cre_by" msprop:Generator_ColumnPropNameInTable="gce_cre_byColumn" msprop:Generator_UserColumnName="gce_cre_by" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_dt" msprop:Generator_ColumnVarNameInTable="columngce_dt" msprop:Generator_ColumnPropNameInRow="gce_dt" msprop:Generator_ColumnPropNameInTable="gce_dtColumn" msprop:Generator_UserColumnName="gce_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="gce_cus_cd" msprop:Generator_ColumnVarNameInTable="columngce_cus_cd" msprop:Generator_ColumnPropNameInRow="gce_cus_cd" msprop:Generator_ColumnPropNameInTable="gce_cus_cdColumn" msprop:Generator_UserColumnName="gce_cus_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="sch_invoiced_no" msprop:Generator_ColumnVarNameInTable="columnsch_invoiced_no" msprop:Generator_ColumnPropNameInRow="sch_invoiced_no" msprop:Generator_ColumnPropNameInTable="sch_invoiced_noColumn" msprop:Generator_UserColumnName="sch_invoiced_no" type="xs:string" minOccurs="0" />
+              <xs:element name="tld_chr_cd" msprop:Generator_ColumnVarNameInTable="columntld_chr_cd" msprop:Generator_ColumnPropNameInRow="tld_chr_cd" msprop:Generator_ColumnPropNameInTable="tld_chr_cdColumn" msprop:Generator_UserColumnName="tld_chr_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="tld_chr_desc" msprop:Generator_ColumnVarNameInTable="columntld_chr_desc" msprop:Generator_ColumnPropNameInRow="tld_chr_desc" msprop:Generator_ColumnPropNameInTable="tld_chr_descColumn" msprop:Generator_UserColumnName="tld_chr_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="tld_tot" msprop:Generator_ColumnVarNameInTable="columntld_tot" msprop:Generator_ColumnPropNameInRow="tld_tot" msprop:Generator_ColumnPropNameInTable="tld_totColumn" msprop:Generator_UserColumnName="tld_tot" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Invdate" msprop:Generator_ColumnVarNameInTable="columnInvdate" msprop:Generator_ColumnPropNameInRow="Invdate" msprop:Generator_ColumnPropNameInTable="InvdateColumn" msprop:Generator_UserColumnName="Invdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="taxno" msprop:Generator_ColumnVarNameInTable="columntaxno" msprop:Generator_ColumnPropNameInRow="taxno" msprop:Generator_ColumnPropNameInTable="taxnoColumn" msprop:Generator_UserColumnName="taxno" type="xs:string" minOccurs="0" />
+              <xs:element name="sch_itm_tax_amt" msprop:Generator_ColumnVarNameInTable="columnsch_itm_tax_amt" msprop:Generator_ColumnPropNameInRow="sch_itm_tax_amt" msprop:Generator_ColumnPropNameInTable="sch_itm_tax_amtColumn" msprop:Generator_UserColumnName="sch_itm_tax_amt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="gce_ref" msprop:Generator_ColumnVarNameInTable="columngce_ref" msprop:Generator_ColumnPropNameInRow="gce_ref" msprop:Generator_ColumnPropNameInTable="gce_refColumn" msprop:Generator_UserColumnName="gce_ref" type="xs:string" minOccurs="0" />
+              <xs:element name="gce_tr_code" msprop:Generator_ColumnVarNameInTable="columngce_tr_code" msprop:Generator_ColumnPropNameInRow="gce_tr_code" msprop:Generator_ColumnPropNameInTable="gce_tr_codeColumn" msprop:Generator_UserColumnName="gce_tr_code" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

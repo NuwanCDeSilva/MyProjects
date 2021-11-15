@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFinalReminder" targetNamespace="http://tempuri.org/dsFinalReminder.xsd" xmlns:mstns="http://tempuri.org/dsFinalReminder.xsd" xmlns="http://tempuri.org/dsFinalReminder.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFinalReminder" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsFinalReminder" msprop:Generator_UserDSName="dsFinalReminder">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FinalReminder" msprop:Generator_TableClassName="FinalReminderDataTable" msprop:Generator_TableVarName="tableFinalReminder" msprop:Generator_RowChangedName="FinalReminderRowChanged" msprop:Generator_TablePropName="FinalReminder" msprop:Generator_RowDeletingName="FinalReminderRowDeleting" msprop:Generator_RowChangingName="FinalReminderRowChanging" msprop:Generator_RowEvHandlerName="FinalReminderRowChangeEventHandler" msprop:Generator_RowDeletedName="FinalReminderRowDeleted" msprop:Generator_RowClassName="FinalReminderRow" msprop:Generator_UserTableName="FinalReminder" msprop:Generator_RowEvArgName="FinalReminderRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hrl_dt" msprop:Generator_ColumnVarNameInTable="columnhrl_dt" msprop:Generator_ColumnPropNameInRow="hrl_dt" msprop:Generator_ColumnPropNameInTable="hrl_dtColumn" msprop:Generator_UserColumnName="hrl_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="hrl_ars" msprop:Generator_ColumnVarNameInTable="columnhrl_ars" msprop:Generator_ColumnPropNameInRow="hrl_ars" msprop:Generator_ColumnPropNameInTable="hrl_arsColumn" msprop:Generator_UserColumnName="hrl_ars" type="xs:decimal" minOccurs="0" />
+              <xs:element name="hrl_rnt" msprop:Generator_ColumnVarNameInTable="columnhrl_rnt" msprop:Generator_ColumnPropNameInRow="hrl_rnt" msprop:Generator_ColumnPropNameInTable="hrl_rntColumn" msprop:Generator_UserColumnName="hrl_rnt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="hrl_bal" msprop:Generator_ColumnVarNameInTable="columnhrl_bal" msprop:Generator_ColumnPropNameInRow="hrl_bal" msprop:Generator_ColumnPropNameInTable="hrl_balColumn" msprop:Generator_UserColumnName="hrl_bal" type="xs:decimal" minOccurs="0" />
+              <xs:element name="hpa_acc_no" msprop:Generator_ColumnVarNameInTable="columnhpa_acc_no" msprop:Generator_ColumnPropNameInRow="hpa_acc_no" msprop:Generator_ColumnPropNameInTable="hpa_acc_noColumn" msprop:Generator_UserColumnName="hpa_acc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="mbe_name" msprop:Generator_ColumnVarNameInTable="columnmbe_name" msprop:Generator_ColumnPropNameInRow="mbe_name" msprop:Generator_ColumnPropNameInTable="mbe_nameColumn" msprop:Generator_UserColumnName="mbe_name" type="xs:string" minOccurs="0" />
+              <xs:element name="htc_acc_no" msprop:Generator_ColumnVarNameInTable="columnhtc_acc_no" msprop:Generator_ColumnPropNameInRow="htc_acc_no" msprop:Generator_ColumnPropNameInTable="htc_acc_noColumn" msprop:Generator_UserColumnName="htc_acc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="htc_adr_tp" msprop:Generator_ColumnVarNameInTable="columnhtc_adr_tp" msprop:Generator_ColumnPropNameInRow="htc_adr_tp" msprop:Generator_ColumnPropNameInTable="htc_adr_tpColumn" msprop:Generator_UserColumnName="htc_adr_tp" type="xs:string" minOccurs="0" />
+              <xs:element name="mc_cd" msprop:Generator_ColumnVarNameInTable="columnmc_cd" msprop:Generator_ColumnPropNameInRow="mc_cd" msprop:Generator_ColumnPropNameInTable="mc_cdColumn" msprop:Generator_UserColumnName="mc_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="sad_itm_cd" msprop:Generator_ColumnVarNameInTable="columnsad_itm_cd" msprop:Generator_ColumnPropNameInRow="sad_itm_cd" msprop:Generator_ColumnPropNameInTable="sad_itm_cdColumn" msprop:Generator_UserColumnName="sad_itm_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="mbe_add1" msprop:Generator_ColumnVarNameInTable="columnmbe_add1" msprop:Generator_ColumnPropNameInRow="mbe_add1" msprop:Generator_ColumnPropNameInTable="mbe_add1Column" msprop:Generator_UserColumnName="mbe_add1" type="xs:string" minOccurs="0" />
+              <xs:element name="mbe_add2" msprop:Generator_ColumnVarNameInTable="columnmbe_add2" msprop:Generator_ColumnPropNameInRow="mbe_add2" msprop:Generator_ColumnPropNameInTable="mbe_add2Column" msprop:Generator_UserColumnName="mbe_add2" type="xs:string" minOccurs="0" />
+              <xs:element name="hrl_due_dt" msprop:Generator_ColumnVarNameInTable="columnhrl_due_dt" msprop:Generator_ColumnPropNameInRow="hrl_due_dt" msprop:Generator_ColumnPropNameInTable="hrl_due_dtColumn" msprop:Generator_UserColumnName="hrl_due_dt" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowClassName="paramRow" msprop:Generator_UserTableName="param" msprop:Generator_RowEvArgName="paramRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="reminddate" msprop:Generator_ColumnVarNameInTable="columnreminddate" msprop:Generator_ColumnPropNameInRow="reminddate" msprop:Generator_ColumnPropNameInTable="reminddateColumn" msprop:Generator_UserColumnName="reminddate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Remark" msprop:Generator_ColumnVarNameInTable="columnRemark" msprop:Generator_ColumnPropNameInRow="Remark" msprop:Generator_ColumnPropNameInTable="RemarkColumn" msprop:Generator_UserColumnName="Remark" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="compnyDetails" msprop:Generator_TableClassName="compnyDetailsDataTable" msprop:Generator_TableVarName="tablecompnyDetails" msprop:Generator_RowChangedName="compnyDetailsRowChanged" msprop:Generator_TablePropName="compnyDetails" msprop:Generator_RowDeletingName="compnyDetailsRowDeleting" msprop:Generator_RowChangingName="compnyDetailsRowChanging" msprop:Generator_RowEvHandlerName="compnyDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="compnyDetailsRowDeleted" msprop:Generator_RowClassName="compnyDetailsRow" msprop:Generator_UserTableName="compnyDetails" msprop:Generator_RowEvArgName="compnyDetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MC_DESC" msprop:Generator_ColumnVarNameInTable="columnMC_DESC" msprop:Generator_ColumnPropNameInRow="MC_DESC" msprop:Generator_ColumnPropNameInTable="MC_DESCColumn" msprop:Generator_UserColumnName="MC_DESC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="BranchDetails" msprop:Generator_TableClassName="BranchDetailsDataTable" msprop:Generator_TableVarName="tableBranchDetails" msprop:Generator_TablePropName="BranchDetails" msprop:Generator_RowDeletingName="BranchDetailsRowDeleting" msprop:Generator_RowChangingName="BranchDetailsRowChanging" msprop:Generator_RowEvHandlerName="BranchDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="BranchDetailsRowDeleted" msprop:Generator_UserTableName="BranchDetails" msprop:Generator_RowChangedName="BranchDetailsRowChanged" msprop:Generator_RowEvArgName="BranchDetailsRowChangeEvent" msprop:Generator_RowClassName="BranchDetailsRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DataColumn1" msprop:Generator_ColumnVarNameInTable="columnDataColumn1" msprop:Generator_ColumnPropNameInRow="DataColumn1" msprop:Generator_ColumnPropNameInTable="DataColumn1Column" msprop:Generator_UserColumnName="DataColumn1" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

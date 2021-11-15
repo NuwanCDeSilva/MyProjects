@@ -1,0 +1,443 @@
+﻿@model FF.BusinessObjects.MasterBusinessEntity
+
+@{
+    ViewBag.Title = FF.Resources.Resource.txtCustomers;
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/DataEntry.js?@val"></script>
+    <script src="~/Scripts/Common/DataEntryAlt.js"></script>
+}
+@Html.Partial("~/Views/Shared/_Customer.cshtml")
+@*<div class="container1 op-btns">
+        <div class="col-md-12">
+            <input type="submit" value="Clear" class="btn btn-default btn-clear-data" />
+            <input type="submit" value="Create" class="btn btn-default btn-save-data" />
+    </div>
+</div>
+@using (Html.BeginForm("CustomerCreation", "DataEntry", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-cust-det", role = "form",@id="customer-crte-frm" }))
+            {
+<div id="demopage">
+    
+    
+        <div class="container1">
+            <div class="panel-sep">
+                <ul class="rtabs">
+                    <li><a href="#view5">@FF.Resources.Resource.txtCustCrea</a></li>
+                </ul>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtCusTyp</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.Mbe_cate, new List<SelectListItem>(), "Select Type", new { @class = "form-control cus-typ-dropdown" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtCusCd</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cd, new { htmlAttributes = new { @class = "form-control with-search", maxlength = "20" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img cus-cd-search" title="Search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtNic</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_nic, new { htmlAttributes = new { @class = "form-control", maxlength = "12" } })
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtBrNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_br_no, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPasNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_pp_no, new { htmlAttributes = new { @class = "form-control", maxlength = "10" } })
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtMoNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_mob, new { htmlAttributes = new { @class = "form-control", maxlength = "12" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDlNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_dl_no, new { htmlAttributes = new { @class = "form-control", maxlength = "10" } })
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPrefLan</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.Mbe_cust_lang, new List<SelectListItem>(), "Select Language", new { @class = "form-control pref-lang-dropdown" })
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="row">
+                                <div class="form-group  col-md-2">
+                                    <label>@FF.Resources.Resource.txtPrefNotAlt</label>
+                                </div>
+                                <div class="form-group  col-md-2">
+                                    <label class="col-lg-1 control-label">@FF.Resources.Resource.txtSms</label>
+                                    <div class="col-lg-4">
+                                        @Html.EditorFor(model => model.Mbe_agre_send_sms, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="form-group  col-md-2">
+                                    <label class="col-lg-2 control-label">@FF.Resources.Resource.txtEmail</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_agre_send_email, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep">
+                <ul class="rtabs">
+                    <li><a href="#view6">@FF.Resources.Resource.txtPerDet</a></li>
+                </ul>
+                <div class="panel-container">
+
+                    <div id="view6" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtTitle </label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.MBE_TIT, new List<SelectListItem>(), "Select Title", new { @class = "form-control title-dropdown" })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtSex </label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.Mbe_sex, new List<SelectListItem>(), "Select Sex", new { @class = "form-control sex-dropdown" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtIni </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MBE_INI, new { htmlAttributes = new { @class = "form-control", maxlength = "100" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDOB </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_dob, new { htmlAttributes = new { @class = "form-control",@readonly="readonly" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtFName </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MBE_FNAME, new { htmlAttributes = new { @class = "form-control", maxlength = "100" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtSurName </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MBE_SNAME, new { htmlAttributes = new { @class = "form-control", maxlength = "100" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtNmeInFul </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_name, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="_isExsit" id="MainContent__isExsit" />
+            <input type="hidden" name="_isGroup" id="MainContent__isGroup" />
+            <input type="hidden" name="_isFromOther" id="MainContent__isFromOther" />
+            <div class="panel-sep">
+                <ul class="rtabs no-width">
+                    <li><a href="#view1">@FF.Resources.Resource.txtPermenent</a></li>
+                    <li><a href="#view2">@FF.Resources.Resource.txtPresent</a></li>
+                    <li><a href="#view3">@FF.Resources.Resource.txtWkPlace</a></li>
+                    <li><a href="#view4">@FF.Resources.Resource.txtTxDet</a></li>
+                </ul>
+                <div class="panel-container">
+                    <div id="view1" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtAdd </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_add1, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label"> </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_add2, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtTown </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_town_cd, new { htmlAttributes = new { @class = "form-control with-search", maxlength = "50" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img per-town-search" title="Search">
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDist </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_distric_cd, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPsCd </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_postal_cd, new { htmlAttributes = new { @class = "form-control", maxlength = "10" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtProvin </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_province_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtCnty </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_country_cd, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPh</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_tel, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtEml</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_email, new { htmlAttributes = new { @class = "form-control", maxlength = "50" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="view2" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtAdd </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_add1, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label"></label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_add2, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtTown </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_town_cd, new { htmlAttributes = new { @class = "form-control with-search", maxlength = "50" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img pre-town-search" title="Search">
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDist </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_distric_cd, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPsCd </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_postal_cd, new { htmlAttributes = new { @class = "form-control", maxlength = "10" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtProvin </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_province_cd, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtCnty </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_country_cd, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPh</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_cr_tel, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="view3" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtNme </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_com_name, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtAdd </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_add1, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label"></label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_add2, new { htmlAttributes = new { @class = "form-control", maxlength = "200" } })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDepat </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_dept, new { htmlAttributes = new { @class = "form-control", maxlength = "50" } })
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPh</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_tel, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDesig </label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_designation, new { htmlAttributes = new { @class = "form-control", maxlength = "50" } })
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtFax</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_fax, new { htmlAttributes = new { @class = "form-control", maxlength = "10" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtEmail</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_wr_email, new { htmlAttributes = new { @class = "form-control", maxlength = "50" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="view4" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="form-group  col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtVatCus</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_is_tax, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="form-group  col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtVatExmp</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_tax_ex, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group  col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtVatRegNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_tax_no, new { htmlAttributes = new { @class = "form-control", maxlength = "60" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group  col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtSvatCus</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_is_svat, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group  col-md-6">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtSvatRegNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.Mbe_svat_no, new { htmlAttributes = new { @class = "form-control", maxlength = "20" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+}*@

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="BarcodeDataSet" targetNamespace="http://tempuri.org/BarcodeDataSet.xsd" xmlns:mstns="http://tempuri.org/BarcodeDataSet.xsd" xmlns="http://tempuri.org/BarcodeDataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="BarcodeDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="BarcodeDataSet" msprop:Generator_UserDSName="BarcodeDataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_RowClassName="DataTable1Row" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Encodevalue" msprop:Generator_ColumnVarNameInTable="columnEncodevalue" msprop:Generator_ColumnPropNameInRow="Encodevalue" msprop:Generator_ColumnPropNameInTable="EncodevalueColumn" msprop:Generator_UserColumnName="Encodevalue" type="xs:string" minOccurs="0" />
+              <xs:element name="Companyname" msprop:Generator_ColumnVarNameInTable="columnCompanyname" msprop:Generator_ColumnPropNameInRow="Companyname" msprop:Generator_ColumnPropNameInTable="CompanynameColumn" msprop:Generator_UserColumnName="Companyname" type="xs:string" minOccurs="0" />
+              <xs:element name="price" msprop:Generator_ColumnVarNameInTable="columnprice" msprop:Generator_ColumnPropNameInRow="price" msprop:Generator_ColumnPropNameInTable="priceColumn" msprop:Generator_UserColumnName="price" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Itemname" msprop:Generator_ColumnVarNameInTable="columnItemname" msprop:Generator_ColumnPropNameInRow="Itemname" msprop:Generator_ColumnPropNameInTable="ItemnameColumn" msprop:Generator_UserColumnName="Itemname" type="xs:string" minOccurs="0" />
+              <xs:element name="expirdate" msprop:Generator_ColumnVarNameInTable="columnexpirdate" msprop:Generator_ColumnPropNameInRow="expirdate" msprop:Generator_ColumnPropNameInTable="expirdateColumn" msprop:Generator_UserColumnName="expirdate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

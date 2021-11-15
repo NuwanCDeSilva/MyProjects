@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_log_sheetrequest" targetNamespace="http://tempuri.org/ds_log_sheetrequest.xsd" xmlns:mstns="http://tempuri.org/ds_log_sheetrequest.xsd" xmlns="http://tempuri.org/ds_log_sheetrequest.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_log_sheetrequest" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_log_sheetrequest" msprop:Generator_UserDSName="ds_log_sheetrequest">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="LogSheetData" msprop:Generator_TableClassName="LogSheetDataDataTable" msprop:Generator_TableVarName="tableLogSheetData" msprop:Generator_RowChangedName="LogSheetDataRowChanged" msprop:Generator_TablePropName="LogSheetData" msprop:Generator_RowDeletingName="LogSheetDataRowDeleting" msprop:Generator_RowChangingName="LogSheetDataRowChanging" msprop:Generator_RowEvHandlerName="LogSheetDataRowChangeEventHandler" msprop:Generator_RowDeletedName="LogSheetDataRowDeleted" msprop:Generator_RowClassName="LogSheetDataRow" msprop:Generator_UserTableName="LogSheetData" msprop:Generator_RowEvArgName="LogSheetDataRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="tlh_fleet" msprop:Generator_ColumnVarNameInTable="columntlh_fleet" msprop:Generator_ColumnPropNameInRow="tlh_fleet" msprop:Generator_ColumnPropNameInTable="tlh_fleetColumn" msprop:Generator_UserColumnName="tlh_fleet" type="xs:string" minOccurs="0" />
+              <xs:element name="tlh_met_in" msprop:Generator_ColumnVarNameInTable="columntlh_met_in" msprop:Generator_ColumnPropNameInRow="tlh_met_in" msprop:Generator_ColumnPropNameInTable="tlh_met_inColumn" msprop:Generator_UserColumnName="tlh_met_in" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tlh_met_out" msprop:Generator_ColumnVarNameInTable="columntlh_met_out" msprop:Generator_ColumnPropNameInRow="tlh_met_out" msprop:Generator_ColumnPropNameInTable="tlh_met_outColumn" msprop:Generator_UserColumnName="tlh_met_out" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tlh_dt" msprop:Generator_ColumnVarNameInTable="columntlh_dt" msprop:Generator_ColumnPropNameInRow="tlh_dt" msprop:Generator_ColumnPropNameInTable="tlh_dtColumn" msprop:Generator_UserColumnName="tlh_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tld_chr_desc" msprop:Generator_ColumnVarNameInTable="columntld_chr_desc" msprop:Generator_ColumnPropNameInRow="tld_chr_desc" msprop:Generator_ColumnPropNameInTable="tld_chr_descColumn" msprop:Generator_UserColumnName="tld_chr_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="tlh_dri_mil" msprop:Generator_ColumnVarNameInTable="columntlh_dri_mil" msprop:Generator_ColumnPropNameInRow="tlh_dri_mil" msprop:Generator_ColumnPropNameInTable="tlh_dri_milColumn" msprop:Generator_UserColumnName="tlh_dri_mil" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tlh_inv_mil" msprop:Generator_ColumnVarNameInTable="columntlh_inv_mil" msprop:Generator_ColumnPropNameInRow="tlh_inv_mil" msprop:Generator_ColumnPropNameInTable="tlh_inv_milColumn" msprop:Generator_UserColumnName="tlh_inv_mil" type="xs:decimal" minOccurs="0" />
+              <xs:element name="tld_tot" msprop:Generator_ColumnVarNameInTable="columntld_tot" msprop:Generator_ColumnPropNameInRow="tld_tot" msprop:Generator_ColumnPropNameInTable="tld_totColumn" msprop:Generator_UserColumnName="tld_tot" type="xs:decimal" minOccurs="0" />
+              <xs:element name="fromdate" msprop:Generator_ColumnVarNameInTable="columnfromdate" msprop:Generator_ColumnPropNameInRow="fromdate" msprop:Generator_ColumnPropNameInTable="fromdateColumn" msprop:Generator_UserColumnName="fromdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="todate" msprop:Generator_ColumnVarNameInTable="columntodate" msprop:Generator_ColumnPropNameInRow="todate" msprop:Generator_ColumnPropNameInTable="todateColumn" msprop:Generator_UserColumnName="todate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tlh_log_no" msprop:Generator_ColumnVarNameInTable="columntlh_log_no" msprop:Generator_ColumnPropNameInRow="tlh_log_no" msprop:Generator_ColumnPropNameInTable="tlh_log_noColumn" msprop:Generator_UserColumnName="tlh_log_no" type="xs:string" minOccurs="0" />
+              <xs:element name="TRCODE" msprop:Generator_ColumnVarNameInTable="columnTRCODE" msprop:Generator_ColumnPropNameInRow="TRCODE" msprop:Generator_ColumnPropNameInTable="TRCODEColumn" msprop:Generator_UserColumnName="TRCODE" type="xs:string" minOccurs="0" />
+              <xs:element name="DRIVER" msprop:Generator_ColumnVarNameInTable="columnDRIVER" msprop:Generator_ColumnPropNameInRow="DRIVER" msprop:Generator_ColumnPropNameInTable="DRIVERColumn" msprop:Generator_UserColumnName="DRIVER" type="xs:string" minOccurs="0" />
+              <xs:element name="tld_chr_cd" msprop:Generator_ColumnVarNameInTable="columntld_chr_cd" msprop:Generator_ColumnPropNameInRow="tld_chr_cd" msprop:Generator_ColumnPropNameInTable="tld_chr_cdColumn" msprop:Generator_UserColumnName="tld_chr_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="tlh_st_dt" msprop:Generator_ColumnVarNameInTable="columntlh_st_dt" msprop:Generator_ColumnPropNameInRow="tlh_st_dt" msprop:Generator_ColumnPropNameInTable="tlh_st_dtColumn" msprop:Generator_UserColumnName="tlh_st_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="tlh_ed_dt" msprop:Generator_ColumnVarNameInTable="columntlh_ed_dt" msprop:Generator_ColumnPropNameInRow="tlh_ed_dt" msprop:Generator_ColumnPropNameInTable="tlh_ed_dtColumn" msprop:Generator_UserColumnName="tlh_ed_dt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ParentCode" msprop:Generator_ColumnVarNameInTable="columnParentCode" msprop:Generator_ColumnPropNameInRow="ParentCode" msprop:Generator_ColumnPropNameInTable="ParentCodeColumn" msprop:Generator_UserColumnName="ParentCode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

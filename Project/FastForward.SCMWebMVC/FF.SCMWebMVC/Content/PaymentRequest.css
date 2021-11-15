@@ -1,0 +1,217 @@
+﻿.difference{
+    border-style: outset none double none  ; 
+    text-align: right;
+    padding-right: 14px;
+}
+.right-align{
+    text-align:right;
+} 
+
+img.add-account:hover ,img.srch-req-no:hover{
+    cursor: pointer;
+}
+img.remove-account:hover ,img.remove-temp-val:hover,.add-field-data:hover{
+    cursor: pointer;
+}
+
+.clearfix {
+clear:both;
+}
+
+.panel.panel-default.row {
+    padding-top: 0px;
+    margin-top:20px
+}
+
+.form-control {
+    width: 100%;
+    margin-bottom: 3px;
+}
+
+.margintop5 {
+margin-top:5px !important;
+}
+
+.plus {
+margin-bottom:5px;
+}
+.no-padding {
+    padding: 0px !important;
+}
+
+.new-acc-col{
+    height: 85px;
+    overflow-y: auto;
+}
+
+.btn-upload-data {
+    height: 22px;
+    text-align: center;
+    line-height: 14px;
+}
+
+legend {
+    font-size: 15px;
+    font-weight: 600;
+    padding: 15px;
+}
+
+.btn-xext-previous {
+margin-left:10px;
+}
+.col-sm-1.fixsearchwidth {
+    width: 32px;
+}
+.new-acc-col .table {
+    font-family: arial, sans-serif;
+    /*border-collapse: collapse;*/
+    width: 100%;
+}
+
+.new-acc-col td,new-acc-col th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 2px;
+}
+
+.new-acc-col tr:nth-child(even) {
+    background-color: #dddddd;
+}
+.acc-total{
+    float:left;
+}
+
+.new-acc-col .right-align{
+    text-align:right;
+}
+.center-align{
+    text-align:center;
+}
+.fix-width-table{
+    width:10%;
+}
+.text_align-center{
+    text-align:center;
+}
+.srch-icon:hover{
+    cursor:pointer;
+}
+.withsearch.form-control {
+    width: 160px;
+    float: left;
+}
+.seach-dyn-srch.srch-icon {
+    float: right;
+}
+.new-acc-col {
+    margin-top: 20px;
+}
+
+.pending-item-table {
+    height: 150px;
+    overflow-y: scroll;
+}
+.pending-item-table {
+    font-size:11px;
+}
+.pending-item-table table{
+    /*height: 150px;*/
+}
+.pending-item-table table th.grd-data{
+    width: 130px;
+}
+.pending-item-table table th.grd-slct{
+    width: 50px;
+}
+.pending-item-table table th.grd-crd{
+    width: 50px;
+}
+.pending-item-table table th.grd-itmslct
+{
+    color:blue;
+}
+.pending-item-table table th.grd-itmslct:hover{
+    cursor:pointer;
+    text-decoration:underline;
+    color:lightblue;
+}
+table.acc-detail-tbl tr.new-row{
+    color:brown;
+}
+table.acc-detail-tbl td.AccountNo:hover{
+    color:blue;
+    text-decoration:underline;
+    cursor:pointer;
+}
+
+#myModalRejReq .modal-content {
+    width: 330px;
+    height: 182px;
+    font-size:11px;
+}
+#RejectReason {
+    width: 310px;
+}
+.btn.btn-default.btn-default-style.btn-rejectapp-data {
+    margin-left: 241px;
+}
+
+#myModalRejReq  .modal-dialog {
+    width: 680px;
+    width: 30%;
+    padding-top: 117px;
+}
+#myModalRejReq .rejreq-no {
+    font-size: 13px;
+    text-align: left;
+    font-weight: bold;
+}
+.chkbx-fld.form-control.input-common-width {
+    width: 25px;
+}
+.grid-dhr-clm,.grid-tax-clm,.po-dhr-clm {
+    color: rebeccapurple;
+    font-size: 12px;
+    background-color: lavender;
+}
+.debitor-name,.cred-name{
+    font-weight:bold;
+}
+.grid-tax-clm .grd-data{
+    width:150px;
+}
+.grid-tax-clm .grd-slct{
+    width:25px;
+}
+.itm-tax-table {
+    height: 85px;
+    overflow-y: scroll;
+    width: 400px;
+}
+.add-tax-data:hover{
+    cursor:pointer;
+}
+.grid-tax-clm .grd-crd{
+    width:100px;
+}
+.po-dhr-clm .po-grd-data{
+     width:100px;
+}
+.po-dhr-clm .po-grd-crd{
+    width:60px;
+}
+.po-dhr-clm .po-grd-slct{
+    width:50px;
+}
+.po-det-disp .closebtn {
+    font-size: 13px;
+    color: red;
+    font-weight: bold; 
+    text-align: center;
+}
+.po-det-disp .closebtn:hover{
+    cursor:pointer;
+}
+.pending-item-table tr{
+    height:10px;
+}

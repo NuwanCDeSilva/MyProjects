@@ -1,0 +1,406 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="AdminSite.master.cs" Inherits="FastForward.SCMWeb.View.AdminSite" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Css/bootstrap.css" rel="stylesheet" />
+
+    <link href="../Css/style.css" rel="stylesheet" />
+
+    <style>
+        .username {
+            margin-top: 5px;
+            color: purple;
+        }
+
+        .logoutPopup {
+            float: right;
+            padding-right: 0px;
+        }
+    </style>
+  
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+      
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+            <script>
+                function SaveConfirmlog() {
+
+                    var selectedvalue = confirm("Are you sure to logout from the system?");
+                    if (selectedvalue) {
+                        document.getElementById('<%=txtSavelconformmessageValue.ClientID %>').value = "Yes";
+                  } else {
+                      document.getElementById('<%=txtSavelconformmessageValue.ClientID %>').value = "No";
+                  }
+              };
+    </script>
+            <asp:HiddenField ID="txtSavelconformmessageValue" runat="server" />
+        <asp:ScriptManager ID="ScriptManager1" AsyncPostBackTimeout="10000" runat="server"></asp:ScriptManager>
+        <asp:TextBox ID="txtVal" runat="server" Visible="false"></asp:TextBox>
+        <div class="container-fluid paddingRight15  paddingLeft5">
+            <div class="row" runat="server" id="DivTitle">
+                <div class="col-sm-12">
+                    <div class="page-header height30 marginLeftRight5">
+                        <div class="row">
+                            <div class="col-sm-6 fontsize16">
+
+                                <asp:LinkButton ID="lbtnHome" CausesValidation="false" runat="server" OnClick="lbtnHome_Click">
+                                                    Supply Chain Management System          
+                                </asp:LinkButton>
+                            </div>
+                            <asp:Panel runat="server" ID="divLive" Visible="false">
+                                <div class="col-sm-1 width40">
+                                    <asp:Image ID="lmglive" ImageUrl="~/images/icons/Active.png" runat="server" />
+
+                                </div>
+                            </asp:Panel>
+                            <asp:Panel runat="server" ID="divlive2" Visible="false">
+                                <div class="col-sm-2 paddingRight0 fontsize16">
+                                    Live Environment
+                                </div>
+                            </asp:Panel>
+                            <asp:Panel runat="server" ID="divlive3" Visible="false">
+                                <div class="col-sm-2 paddingRight0 fontsize16">
+                                    Parallel Run
+                                    
+                                </div>
+                            </asp:Panel>
+
+
+                            <div class="col-sm-3 paddingtop ">
+                                <div class="col-sm-8 username">
+                                    <asp:Label runat="server" ID="lblUSerID1"></asp:Label>
+                                    <asp:Label runat="server" ID="lblUserNm"></asp:Label>
+                                </div>
+                                <div class="col-sm-4 dropdown logoutPopup">
+                                    <a id="dLabel" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+
+                                        <%--<asp:Image ID="Image1" ImageUrl="~/images/banners/Adminsolutions_avatar-white.png" runat="server" />--%>
+
+                                    </a>
+                                          <div class="col-sm-2">
+                                                        <%--<asp:Button ID="Button2" CssClass="btn btn-danger btn-sm" runat="server" Font-Bold="true" Text="Logout" OnClientClick="SaveConfirmlog()" OnClick="m_System_Exit_Click" />--%>
+                                                    <asp:LinkButton ID="logOut" CausesValidation="false" runat="server" Text="Logout"  Font-Bold="true"  CssClass="floatRight btn-danger btn-sm" OnClientClick="SaveConfirmlog()" OnClick="m_System_Exit_Click">
+                                    
+                                            </asp:LinkButton>
+                                                    </div>
+
+                                   <%-- <div class="dropdown-menu menupopup2" aria-labelledby="dLabel">
+                                        <div class="panel panel-default ">
+                                            <div class="panel-body">
+
+                                                <div class="row">
+                                                    <div class="col-sm-5">
+                                                        <asp:Image ID="Image2" ImageUrl="~/images/icons/FemaleDefaultImage-54a3f5cd0fc33dfb34b39fc5fbd1a84c.png" runat="server" />
+                                                    </div>
+
+                                                    <div class="col-sm-7">
+                                                        <div class="row">
+                                                            <div class="col-sm-5 labelText1">
+                                                                User ID -
+                                                            </div>
+                                                            <div class="col-sm-4 labelText1">
+                                                                <asp:Label runat="server" ID="lbluserrId"></asp:Label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                            <div class="col-sm-12 height5">
+                                                            </div>
+                                                        </div>
+                                                        <div class="row">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-sm-12 height10">
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                            <div class="panel-footer">
+                                                <div class="row">
+
+                                                    <div class="col-sm-7">
+                                                        <asp:Button ID="Button1" CssClass="btn btn-primary  btn-sm" runat="server" Text="My Account" />
+
+
+
+                                                    </div>
+                                                    <div class="col-sm-2">
+                                                        <asp:Button ID="Button2" CssClass="btn btn-default btn-sm" runat="server" Text="LogOut" OnClick="m_System_Exit_Click" />
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>--%>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" runat="server" id="DivMenu">
+                <div class="col-sm-6">
+                    <div class="marginLeftRight5">
+                        <asp:UpdatePanel runat="server">
+                            <ContentTemplate>
+                                <asp:Menu ID="mnMainMenu" runat="server" Orientation="Horizontal" StaticDisplayLevels="1"
+                                    StaticEnableDefaultPopOutImage="false"
+                                    DynamicEnableDefaultPopOutImage="true"
+                                    MaximumDynamicDisplayLevels="10"
+                                    EnableViewState="false"
+                                    CssClass="nav navbar-fix-top"
+                                    StaticMenuStyle-CssClass="nav navbar-nav"
+                                    StaticSelectedStyle-CssClass="active"
+                                    DynamicMenuStyle-CssClass="dropdown-menu"
+                                    IncludeStyleBlock="true"
+                                    SkipLinkText=""
+                                    RenderingMode="List"
+                                    DynamicPopOutImageTextFormatString="Expand {0}">
+                                </asp:Menu>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                    </div>
+                </div>
+                <div class="col-sm-6 Paddingtop">
+                    <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                        <ContentTemplate>
+                            <div class="col-sm-12 paddingRight0">
+
+                                <div class="col-sm-3 paddingLeft0 paddingRight0">
+                                    <div class="col-sm-5 labelText1 paddingLeft0">
+                                        Company : 
+                                    </div>
+                                    <div class="col-sm-7 labelText1 paddingRight5 paddingLeft5">
+                                        <asp:LinkButton ID="tssCom" OnClick="LinkButtonCom_Click" runat="server">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </asp:LinkButton>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 paddingRight0">
+                                    <div class="col-sm-5 labelText1" runat="server" id="divSbu">
+                                        SBU : 
+                                    </div>
+                                    <div class="col-sm-7 labelText1 paddingRight5 paddingLeft5">
+                                        <asp:LinkButton ID="lbtnSbu" runat="server" OnClick="lbtnSbu_Click" Text="">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true">
+                                            </span>
+                                        </asp:LinkButton>
+                                    </div>
+                                </div>
+
+
+
+
+                                <div class="col-sm-3 paddingLeft0 paddingRight0">
+                                    <div class="col-sm-5 labelText1 paddingLeft0">
+                                        Location : 
+                                    </div>
+                                    <div class="col-sm-7 labelText1 paddingRight5 paddingLeft5">
+                                        <asp:LinkButton ID="tsslLoc" OnClick="LinkButtonLoc_Click" runat="server">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </asp:LinkButton>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-3 paddingLeft0 paddingRight0">
+                                    <div class="col-sm-7 labelText1 paddingLeft0 paddingRight5">
+                                        Profit Center :  
+                                    </div>
+                                    <div class="col-sm-5 labelText1 paddingRight5 paddingLeft5">
+                                        <asp:LinkButton ID="tsslPC" runat="server" OnClick="LinkButtonPro_Click">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </asp:LinkButton>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <asp:ContentPlaceHolder ID="BodyContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <asp:UpdatePanel runat="server">
+            <ContentTemplate>
+                <asp:Button ID="Button3" runat="server" Text="Button" Style="display: none;" />
+                <asp:ModalPopupExtender ID="UserPopoup" runat="server" Enabled="True" TargetControlID="Button3"
+                    PopupControlID="testPanel" CancelControlID="btnClose" PopupDragHandleControlID="PopupHeader" Drag="true" BackgroundCssClass="modalBackground">
+                </asp:ModalPopupExtender>
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+        <%-- Style="display: none"--%>
+        <asp:Panel runat="server" ID="testPanel" DefaultButton="ImageSearch" Style="display: none;">
+            <div runat="server" id="test" class="panel panel-primary Mheight">
+
+                <asp:Label ID="Label1" runat="server" Text="Label" Visible="false"></asp:Label>
+                <%--<asp:ScriptManagerProxy ID="ScriptManagerProxy3" runat="server"></asp:ScriptManagerProxy>
+            <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                <ContentTemplate>--%>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <asp:LinkButton ID="btnClose" runat="server">
+                             <span class="glyphicon glyphicon-remove" aria-hidden="true">Close</span>
+                        </asp:LinkButton>
+                        <%--<span>Commen Search</span>--%>
+                        <div class="col-sm-11">
+                        </div>
+                        <div class="col-sm-1">
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-sm-12">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 height5">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="col-sm-2 labelText1">
+                                    Search by key
+                                </div>
+                                <asp:ScriptManagerProxy ID="ScriptManagerProxy10" runat="server"></asp:ScriptManagerProxy>
+                                <asp:UpdatePanel ID="UpdatePanel10" runat="server">
+                                    <ContentTemplate>
+                                        <div class="col-sm-3 paddingRight5">
+                                            <asp:DropDownList ID="cmbSearchbykey" runat="server" class="form-control">
+                                            </asp:DropDownList>
+                                        </div>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                                <div class="col-sm-2 labelText1">
+                                    Search by word
+                                </div>
+
+
+
+                                <div class="col-sm-4 paddingRight5">
+                                    <asp:TextBox ID="txtSearchbyword" CausesValidation="false" placeholder="Search by word" class="form-control" AutoPostBack="true" runat="server" OnTextChanged="txtSearchbyword_TextChanged"></asp:TextBox>
+                                </div>
+
+
+                                <asp:ScriptManagerProxy ID="ScriptManagerProxy9" runat="server"></asp:ScriptManagerProxy>
+                                <asp:UpdatePanel ID="UpdatePanel9" runat="server">
+                                    <ContentTemplate>
+                                        <div class="col-sm-1 paddingLeft0">
+                                            <asp:LinkButton ID="ImageSearch" runat="server" OnClick="btnSearch_Click">
+                                     <span class="glyphicon glyphicon-search" aria-hidden="true"  ></span>
+                                            </asp:LinkButton>
+                                        </div>
+                                    </ContentTemplate>
+
+                                    <Triggers>
+                                        <asp:AsyncPostBackTrigger ControlID="txtSearchbyword" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 height5">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12 height5">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <asp:ScriptManagerProxy ID="ScriptManagerProxy3" runat="server"></asp:ScriptManagerProxy>
+                                <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+                                    <ContentTemplate>
+                                        <asp:GridView ID="dvResultUser" CausesValidation="false" runat="server" OnSelectedIndexChanged="dvResultUser_SelectedIndexChanged" AllowPaging="True" OnPageIndexChanging="dvResultUser_PageIndexChanging" GridLines="None" CssClass="table table-hover table-striped" PageSize="7" PagerStyle-CssClass="cssPager">
+                                            <Columns>
+                                                <asp:ButtonField Text="select" CommandName="Select" ItemStyle-Width="10" />
+
+                                            </Columns>
+                                        </asp:GridView>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <%-- </ContentTemplate>
+                <Triggers>
+                    <asp:AsyncPostBackTrigger ControlID="txtSearchbyword" />
+                </Triggers>
+
+            </asp:UpdatePanel>--%>
+            </div>
+        </asp:Panel>
+        <asp:UpdatePanel ID="UpdatePanel25" runat="server">
+            <ContentTemplate>
+                <asp:Button ID="Button7" runat="server" Text="Button" Style="display: none;" />
+                <asp:ModalPopupExtender ID="SbuPopup" runat="server" Enabled="True" TargetControlID="Button7"
+                    PopupControlID="pnlSBU" PopupDragHandleControlID="PopupHeader" Drag="true" BackgroundCssClass="modalBackground">
+                </asp:ModalPopupExtender>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+
+        <asp:Panel ID="pnlSBU" runat="server" align="center">
+            <asp:Label ID="Label5" runat="server" Text="Label" Visible="false"></asp:Label>
+            <asp:ScriptManagerProxy ID="ScriptManagerProxy11" runat="server"></asp:ScriptManagerProxy>
+            <asp:UpdatePanel ID="UpdatePanel26" runat="server">
+                <ContentTemplate>
+                    <div class="panel panel-danger">
+                        <div class="panel-heading">
+                            <span>Login session has expired!</span>
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <asp:Label ID="lblSbuMsg1" runat="server"></asp:Label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <asp:Button ID="btnExpired" runat="server" CausesValidation="false" class="btn btn-primary" OnClick="btnLoginExpired_Click" Text="Ok" />
+                            </div>
+                        </div>
+                    </div>
+                </ContentTemplate>
+            </asp:UpdatePanel>
+        </asp:Panel>
+
+    </form>
+
+    <script src="<%=Request.ApplicationPath%>Js/jquery.min.js"></script>
+    <script src="<%=Request.ApplicationPath%>Js/bootstrap.min.js"></script>
+    <script src="<%=Request.ApplicationPath%>Js/jquery.toastmessage.js"></script>
+
+    <script src="<%=Request.ApplicationPath%>Js/jquery-ui.min.js"></script>
+    <script src="<%=Request.ApplicationPath%>Js/jquery-ui-timepicker-addon.js"></script>
+    <link href="<%=Request.ApplicationPath%>Css/jquery-ui-timepicker-addon.css" rel="stylesheet" />
+
+
+</body>
+</html>

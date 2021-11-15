@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsCashComDef" targetNamespace="http://tempuri.org/dsCashComDef.xsd" xmlns:mstns="http://tempuri.org/dsCashComDef.xsd" xmlns="http://tempuri.org/dsCashComDef.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString (Settings)" PropertyReference="ApplicationSettings.FF.WindowsERPClient.Properties.Settings.GlobalReference.Default.ConnectionString" Provider="System.Data.OracleClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString1 (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.FF.WindowsERPClient.Properties.Settings.GlobalReference.Default.ConnectionString1" Provider="Oracle.ManagedDataAccess.Client" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsCashComDef" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsCashComDef" msprop:Generator_UserDSName="dsCashComDef">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SAR_CASH_COMM_DET" msprop:Generator_TableClassName="SAR_CASH_COMM_DETDataTable" msprop:Generator_TableVarName="tableSAR_CASH_COMM_DET" msprop:Generator_TablePropName="SAR_CASH_COMM_DET" msprop:Generator_RowDeletingName="SAR_CASH_COMM_DETRowDeleting" msprop:Generator_RowChangingName="SAR_CASH_COMM_DETRowChanging" msprop:Generator_RowEvHandlerName="SAR_CASH_COMM_DETRowChangeEventHandler" msprop:Generator_RowDeletedName="SAR_CASH_COMM_DETRowDeleted" msprop:Generator_UserTableName="SAR_CASH_COMM_DET" msprop:Generator_RowChangedName="SAR_CASH_COMM_DETRowChanged" msprop:Generator_RowEvArgName="SAR_CASH_COMM_DETRowChangeEvent" msprop:Generator_RowClassName="SAR_CASH_COMM_DETRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SCCD_SEQ" msprop:Generator_ColumnVarNameInTable="columnSCCD_SEQ" msprop:Generator_ColumnPropNameInRow="SCCD_SEQ" msprop:Generator_ColumnPropNameInTable="SCCD_SEQColumn" msprop:Generator_UserColumnName="SCCD_SEQ" type="xs:decimal" />
+              <xs:element name="SCCD_LINE" msprop:Generator_ColumnVarNameInTable="columnSCCD_LINE" msprop:Generator_ColumnPropNameInRow="SCCD_LINE" msprop:Generator_ColumnPropNameInTable="SCCD_LINEColumn" msprop:Generator_UserColumnName="SCCD_LINE" type="xs:decimal" />
+              <xs:element name="SCCD_CD" msprop:Generator_ColumnVarNameInTable="columnSCCD_CD" msprop:Generator_ColumnPropNameInRow="SCCD_CD" msprop:Generator_ColumnPropNameInTable="SCCD_CDColumn" msprop:Generator_UserColumnName="SCCD_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_SALE_TP" msprop:Generator_ColumnVarNameInTable="columnSCCD_SALE_TP" msprop:Generator_ColumnPropNameInRow="SCCD_SALE_TP" msprop:Generator_ColumnPropNameInTable="SCCD_SALE_TPColumn" msprop:Generator_UserColumnName="SCCD_SALE_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_PTY_TP" msprop:Generator_ColumnVarNameInTable="columnSCCD_PTY_TP" msprop:Generator_ColumnPropNameInRow="SCCD_PTY_TP" msprop:Generator_ColumnPropNameInTable="SCCD_PTY_TPColumn" msprop:Generator_UserColumnName="SCCD_PTY_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_PTY_CD" msprop:Generator_ColumnVarNameInTable="columnSCCD_PTY_CD" msprop:Generator_ColumnPropNameInRow="SCCD_PTY_CD" msprop:Generator_ColumnPropNameInTable="SCCD_PTY_CDColumn" msprop:Generator_UserColumnName="SCCD_PTY_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_FROM_DT" msprop:Generator_ColumnVarNameInTable="columnSCCD_FROM_DT" msprop:Generator_ColumnPropNameInRow="SCCD_FROM_DT" msprop:Generator_ColumnPropNameInTable="SCCD_FROM_DTColumn" msprop:Generator_UserColumnName="SCCD_FROM_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SCCD_TO_DT" msprop:Generator_ColumnVarNameInTable="columnSCCD_TO_DT" msprop:Generator_ColumnPropNameInRow="SCCD_TO_DT" msprop:Generator_ColumnPropNameInTable="SCCD_TO_DTColumn" msprop:Generator_UserColumnName="SCCD_TO_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SCCD_PB" msprop:Generator_ColumnVarNameInTable="columnSCCD_PB" msprop:Generator_ColumnPropNameInRow="SCCD_PB" msprop:Generator_ColumnPropNameInTable="SCCD_PBColumn" msprop:Generator_UserColumnName="SCCD_PB" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_PB_LVL" msprop:Generator_ColumnVarNameInTable="columnSCCD_PB_LVL" msprop:Generator_ColumnPropNameInRow="SCCD_PB_LVL" msprop:Generator_ColumnPropNameInTable="SCCD_PB_LVLColumn" msprop:Generator_UserColumnName="SCCD_PB_LVL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_BRD" msprop:Generator_ColumnVarNameInTable="columnSCCD_BRD" msprop:Generator_ColumnPropNameInRow="SCCD_BRD" msprop:Generator_ColumnPropNameInTable="SCCD_BRDColumn" msprop:Generator_UserColumnName="SCCD_BRD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_MAIN_CAT" msprop:Generator_ColumnVarNameInTable="columnSCCD_MAIN_CAT" msprop:Generator_ColumnPropNameInRow="SCCD_MAIN_CAT" msprop:Generator_ColumnPropNameInTable="SCCD_MAIN_CATColumn" msprop:Generator_UserColumnName="SCCD_MAIN_CAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_CAT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CAT" msprop:Generator_ColumnPropNameInRow="SCCD_CAT" msprop:Generator_ColumnPropNameInTable="SCCD_CATColumn" msprop:Generator_UserColumnName="SCCD_CAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_ITM" msprop:Generator_ColumnVarNameInTable="columnSCCD_ITM" msprop:Generator_ColumnPropNameInRow="SCCD_ITM" msprop:Generator_ColumnPropNameInTable="SCCD_ITMColumn" msprop:Generator_UserColumnName="SCCD_ITM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_SER" msprop:Generator_ColumnVarNameInTable="columnSCCD_SER" msprop:Generator_ColumnPropNameInRow="SCCD_SER" msprop:Generator_ColumnPropNameInTable="SCCD_SERColumn" msprop:Generator_UserColumnName="SCCD_SER" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_PRO" msprop:Generator_ColumnVarNameInTable="columnSCCD_PRO" msprop:Generator_ColumnPropNameInRow="SCCD_PRO" msprop:Generator_ColumnPropNameInTable="SCCD_PROColumn" msprop:Generator_UserColumnName="SCCD_PRO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="15" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_CASH_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CASH_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_CASH_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_CASH_COMMColumn" msprop:Generator_UserColumnName="SCCD_CASH_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CASH_COMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CASH_COMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CASH_COMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CASH_COMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CASH_COMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_CC_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_CC_COMMColumn" msprop:Generator_UserColumnName="SCCD_CC_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_COMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_COMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CC_COMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CC_COMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CC_COMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_PRO_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_PRO_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_CC_PRO_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_CC_PRO_COMMColumn" msprop:Generator_UserColumnName="SCCD_CC_PRO_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_PRO_COMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_PRO_COMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CC_PRO_COMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CC_PRO_COMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CC_PRO_COMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CHQ_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CHQ_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_CHQ_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_CHQ_COMMColumn" msprop:Generator_UserColumnName="SCCD_CHQ_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CHQ_COMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CHQ_COMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CHQ_COMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CHQ_COMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CHQ_COMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_GV_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_GV_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_GV_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_GV_COMMColumn" msprop:Generator_UserColumnName="SCCD_GV_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_GV_COMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_GV_COMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_GV_COMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_GV_COMM_RTColumn" msprop:Generator_UserColumnName="SCCD_GV_COMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_DBC_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_DBC_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_DBC_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_DBC_COMMColumn" msprop:Generator_UserColumnName="SCCD_DBC_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_DBC_COMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_DBC_COMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_DBC_COMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_DBC_COMM_RTColumn" msprop:Generator_UserColumnName="SCCD_DBC_COMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_OTH_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_OTH_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_OTH_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_OTH_COMMColumn" msprop:Generator_UserColumnName="SCCD_OTH_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_OTH_COMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_OTH_COMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_OTH_COMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_OTH_COMM_RTColumn" msprop:Generator_UserColumnName="SCCD_OTH_COMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_IS_EXEC_COMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_IS_EXEC_COMM" msprop:Generator_ColumnPropNameInRow="SCCD_IS_EXEC_COMM" msprop:Generator_ColumnPropNameInTable="SCCD_IS_EXEC_COMMColumn" msprop:Generator_UserColumnName="SCCD_IS_EXEC_COMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_EXEC_TP" msprop:Generator_ColumnVarNameInTable="columnSCCD_EXEC_TP" msprop:Generator_ColumnPropNameInRow="SCCD_EXEC_TP" msprop:Generator_ColumnPropNameInTable="SCCD_EXEC_TPColumn" msprop:Generator_UserColumnName="SCCD_EXEC_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_EXEC_CD" msprop:Generator_ColumnVarNameInTable="columnSCCD_EXEC_CD" msprop:Generator_ColumnPropNameInRow="SCCD_EXEC_CD" msprop:Generator_ColumnPropNameInTable="SCCD_EXEC_CDColumn" msprop:Generator_UserColumnName="SCCD_EXEC_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCD_CASH_ECOMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CASH_ECOMM" msprop:Generator_ColumnPropNameInRow="SCCD_CASH_ECOMM" msprop:Generator_ColumnPropNameInTable="SCCD_CASH_ECOMMColumn" msprop:Generator_UserColumnName="SCCD_CASH_ECOMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CASH_ECOMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CASH_ECOMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CASH_ECOMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CASH_ECOMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CASH_ECOMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_ECOMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_ECOMM" msprop:Generator_ColumnPropNameInRow="SCCD_CC_ECOMM" msprop:Generator_ColumnPropNameInTable="SCCD_CC_ECOMMColumn" msprop:Generator_UserColumnName="SCCD_CC_ECOMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_ECOMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_ECOMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CC_ECOMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CC_ECOMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CC_ECOMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_PRO_ECOMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_PRO_ECOMM" msprop:Generator_ColumnPropNameInRow="SCCD_CC_PRO_ECOMM" msprop:Generator_ColumnPropNameInTable="SCCD_CC_PRO_ECOMMColumn" msprop:Generator_UserColumnName="SCCD_CC_PRO_ECOMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CC_PRO_ECOMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CC_PRO_ECOMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CC_PRO_ECOMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CC_PRO_ECOMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CC_PRO_ECOMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CHQ_ECOMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_CHQ_ECOMM" msprop:Generator_ColumnPropNameInRow="SCCD_CHQ_ECOMM" msprop:Generator_ColumnPropNameInTable="SCCD_CHQ_ECOMMColumn" msprop:Generator_UserColumnName="SCCD_CHQ_ECOMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_CHQ_ECOMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_CHQ_ECOMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_CHQ_ECOMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_CHQ_ECOMM_RTColumn" msprop:Generator_UserColumnName="SCCD_CHQ_ECOMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_GV_ECOMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_GV_ECOMM" msprop:Generator_ColumnPropNameInRow="SCCD_GV_ECOMM" msprop:Generator_ColumnPropNameInTable="SCCD_GV_ECOMMColumn" msprop:Generator_UserColumnName="SCCD_GV_ECOMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_GV_ECOMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_GV_ECOMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_GV_ECOMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_GV_ECOMM_RTColumn" msprop:Generator_UserColumnName="SCCD_GV_ECOMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_DBC_ECOMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_DBC_ECOMM" msprop:Generator_ColumnPropNameInRow="SCCD_DBC_ECOMM" msprop:Generator_ColumnPropNameInTable="SCCD_DBC_ECOMMColumn" msprop:Generator_UserColumnName="SCCD_DBC_ECOMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_DBC_ECOMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_DBC_ECOMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_DBC_ECOMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_DBC_ECOMM_RTColumn" msprop:Generator_UserColumnName="SCCD_DBC_ECOMM_RT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_OTH_ECOMM" msprop:Generator_ColumnVarNameInTable="columnSCCD_OTH_ECOMM" msprop:Generator_ColumnPropNameInRow="SCCD_OTH_ECOMM" msprop:Generator_ColumnPropNameInTable="SCCD_OTH_ECOMMColumn" msprop:Generator_UserColumnName="SCCD_OTH_ECOMM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCCD_OTH_ECOMM_RT" msprop:Generator_ColumnVarNameInTable="columnSCCD_OTH_ECOMM_RT" msprop:Generator_ColumnPropNameInRow="SCCD_OTH_ECOMM_RT" msprop:Generator_ColumnPropNameInTable="SCCD_OTH_ECOMM_RTColumn" msprop:Generator_UserColumnName="SCCD_OTH_ECOMM_RT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SAR_CASH_COMM_HDR" msprop:Generator_TableClassName="SAR_CASH_COMM_HDRDataTable" msprop:Generator_TableVarName="tableSAR_CASH_COMM_HDR" msprop:Generator_TablePropName="SAR_CASH_COMM_HDR" msprop:Generator_RowDeletingName="SAR_CASH_COMM_HDRRowDeleting" msprop:Generator_RowChangingName="SAR_CASH_COMM_HDRRowChanging" msprop:Generator_RowEvHandlerName="SAR_CASH_COMM_HDRRowChangeEventHandler" msprop:Generator_RowDeletedName="SAR_CASH_COMM_HDRRowDeleted" msprop:Generator_UserTableName="SAR_CASH_COMM_HDR" msprop:Generator_RowChangedName="SAR_CASH_COMM_HDRRowChanged" msprop:Generator_RowEvArgName="SAR_CASH_COMM_HDRRowChangeEvent" msprop:Generator_RowClassName="SAR_CASH_COMM_HDRRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SCCH_SEQ" msprop:Generator_ColumnVarNameInTable="columnSCCH_SEQ" msprop:Generator_ColumnPropNameInRow="SCCH_SEQ" msprop:Generator_ColumnPropNameInTable="SCCH_SEQColumn" msprop:Generator_UserColumnName="SCCH_SEQ" type="xs:decimal" />
+              <xs:element name="SCCH_CD" msprop:Generator_ColumnVarNameInTable="columnSCCH_CD" msprop:Generator_ColumnPropNameInRow="SCCH_CD" msprop:Generator_ColumnPropNameInTable="SCCH_CDColumn" msprop:Generator_UserColumnName="SCCH_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCH_SALE_TP" msprop:Generator_ColumnVarNameInTable="columnSCCH_SALE_TP" msprop:Generator_ColumnPropNameInRow="SCCH_SALE_TP" msprop:Generator_ColumnPropNameInTable="SCCH_SALE_TPColumn" msprop:Generator_UserColumnName="SCCH_SALE_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCH_CIRCULAR" msprop:Generator_ColumnVarNameInTable="columnSCCH_CIRCULAR" msprop:Generator_ColumnPropNameInRow="SCCH_CIRCULAR" msprop:Generator_ColumnPropNameInTable="SCCH_CIRCULARColumn" msprop:Generator_UserColumnName="SCCH_CIRCULAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCH_DESC" msprop:Generator_ColumnVarNameInTable="columnSCCH_DESC" msprop:Generator_ColumnPropNameInRow="SCCH_DESC" msprop:Generator_ColumnPropNameInTable="SCCH_DESCColumn" msprop:Generator_UserColumnName="SCCH_DESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCH_CRE_BY" msprop:Generator_ColumnVarNameInTable="columnSCCH_CRE_BY" msprop:Generator_ColumnPropNameInRow="SCCH_CRE_BY" msprop:Generator_ColumnPropNameInTable="SCCH_CRE_BYColumn" msprop:Generator_UserColumnName="SCCH_CRE_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SCCH_CRE_DT" msprop:Generator_ColumnVarNameInTable="columnSCCH_CRE_DT" msprop:Generator_ColumnPropNameInRow="SCCH_CRE_DT" msprop:Generator_ColumnPropNameInTable="SCCH_CRE_DTColumn" msprop:Generator_UserColumnName="SCCH_CRE_DT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_UserTableName="param" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="fromdate" msprop:Generator_ColumnVarNameInTable="columnfromdate" msprop:Generator_ColumnPropNameInRow="fromdate" msprop:Generator_ColumnPropNameInTable="fromdateColumn" msprop:Generator_UserColumnName="fromdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="todate" msprop:Generator_ColumnVarNameInTable="columntodate" msprop:Generator_ColumnPropNameInRow="todate" msprop:Generator_ColumnPropNameInTable="todateColumn" msprop:Generator_UserColumnName="todate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="comp" msprop:Generator_ColumnVarNameInTable="columncomp" msprop:Generator_ColumnPropNameInRow="comp" msprop:Generator_ColumnPropNameInTable="compColumn" msprop:Generator_UserColumnName="comp" type="xs:string" minOccurs="0" />
+              <xs:element name="compaddr" msprop:Generator_ColumnVarNameInTable="columncompaddr" msprop:Generator_ColumnPropNameInRow="compaddr" msprop:Generator_ColumnPropNameInTable="compaddrColumn" msprop:Generator_UserColumnName="compaddr" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HPR_PROMOT_COM_HDR" msprop:Generator_TableClassName="HPR_PROMOT_COM_HDRDataTable" msprop:Generator_TableVarName="tableHPR_PROMOT_COM_HDR" msprop:Generator_RowChangedName="HPR_PROMOT_COM_HDRRowChanged" msprop:Generator_TablePropName="HPR_PROMOT_COM_HDR" msprop:Generator_RowDeletingName="HPR_PROMOT_COM_HDRRowDeleting" msprop:Generator_RowChangingName="HPR_PROMOT_COM_HDRRowChanging" msprop:Generator_RowEvHandlerName="HPR_PROMOT_COM_HDRRowChangeEventHandler" msprop:Generator_RowDeletedName="HPR_PROMOT_COM_HDRRowDeleted" msprop:Generator_RowClassName="HPR_PROMOT_COM_HDRRow" msprop:Generator_UserTableName="HPR_PROMOT_COM_HDR" msprop:Generator_RowEvArgName="HPR_PROMOT_COM_HDRRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HPCH_SEQ" msprop:Generator_ColumnVarNameInTable="columnHPCH_SEQ" msprop:Generator_ColumnPropNameInRow="HPCH_SEQ" msprop:Generator_ColumnPropNameInTable="HPCH_SEQColumn" msprop:Generator_UserColumnName="HPCH_SEQ" type="xs:long" />
+              <xs:element name="HPCH_CIRCULAR" msprop:Generator_ColumnVarNameInTable="columnHPCH_CIRCULAR" msprop:Generator_ColumnPropNameInRow="HPCH_CIRCULAR" msprop:Generator_ColumnPropNameInTable="HPCH_CIRCULARColumn" msprop:Generator_UserColumnName="HPCH_CIRCULAR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HPCH_COM" msprop:Generator_ColumnVarNameInTable="columnHPCH_COM" msprop:Generator_ColumnPropNameInRow="HPCH_COM" msprop:Generator_ColumnPropNameInTable="HPCH_COMColumn" msprop:Generator_UserColumnName="HPCH_COM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HPCH_APP" msprop:Generator_ColumnVarNameInTable="columnHPCH_APP" msprop:Generator_ColumnPropNameInRow="HPCH_APP" msprop:Generator_ColumnPropNameInTable="HPCH_APPColumn" msprop:Generator_UserColumnName="HPCH_APP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HPCH_ACT" msprop:Generator_ColumnVarNameInTable="columnHPCH_ACT" msprop:Generator_ColumnPropNameInRow="HPCH_ACT" msprop:Generator_ColumnPropNameInTable="HPCH_ACTColumn" msprop:Generator_UserColumnName="HPCH_ACT" type="xs:short" minOccurs="0" />
+              <xs:element name="HPCH_FROM_DT" msprop:Generator_ColumnVarNameInTable="columnHPCH_FROM_DT" msprop:Generator_ColumnPropNameInRow="HPCH_FROM_DT" msprop:Generator_ColumnPropNameInTable="HPCH_FROM_DTColumn" msprop:Generator_UserColumnName="HPCH_FROM_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HPCH_TO_DT" msprop:Generator_ColumnVarNameInTable="columnHPCH_TO_DT" msprop:Generator_ColumnPropNameInRow="HPCH_TO_DT" msprop:Generator_ColumnPropNameInTable="HPCH_TO_DTColumn" msprop:Generator_UserColumnName="HPCH_TO_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HPCH_CRE_BY" msprop:Generator_ColumnVarNameInTable="columnHPCH_CRE_BY" msprop:Generator_ColumnPropNameInRow="HPCH_CRE_BY" msprop:Generator_ColumnPropNameInTable="HPCH_CRE_BYColumn" msprop:Generator_UserColumnName="HPCH_CRE_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HPCH_CRE_DT" msprop:Generator_ColumnVarNameInTable="columnHPCH_CRE_DT" msprop:Generator_ColumnPropNameInRow="HPCH_CRE_DT" msprop:Generator_ColumnPropNameInTable="HPCH_CRE_DTColumn" msprop:Generator_UserColumnName="HPCH_CRE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="HPCH_MOD_BY" msprop:Generator_ColumnVarNameInTable="columnHPCH_MOD_BY" msprop:Generator_ColumnPropNameInRow="HPCH_MOD_BY" msprop:Generator_ColumnPropNameInTable="HPCH_MOD_BYColumn" msprop:Generator_UserColumnName="HPCH_MOD_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="HPCH_MOD_DT" msprop:Generator_ColumnVarNameInTable="columnHPCH_MOD_DT" msprop:Generator_ColumnPropNameInRow="HPCH_MOD_DT" msprop:Generator_ColumnPropNameInTable="HPCH_MOD_DTColumn" msprop:Generator_UserColumnName="HPCH_MOD_DT" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HPR_PROMOT_COM_ITM" msprop:Generator_TableClassName="HPR_PROMOT_COM_ITMDataTable" msprop:Generator_TableVarName="tableHPR_PROMOT_COM_ITM" msprop:Generator_RowChangedName="HPR_PROMOT_COM_ITMRowChanged" msprop:Generator_TablePropName="HPR_PROMOT_COM_ITM" msprop:Generator_RowDeletingName="HPR_PROMOT_COM_ITMRowDeleting" msprop:Generator_RowChangingName="HPR_PROMOT_COM_ITMRowChanging" msprop:Generator_RowEvHandlerName="HPR_PROMOT_COM_ITMRowChangeEventHandler" msprop:Generator_RowDeletedName="HPR_PROMOT_COM_ITMRowDeleted" msprop:Generator_RowClassName="HPR_PROMOT_COM_ITMRow" msprop:Generator_UserTableName="HPR_PROMOT_COM_ITM" msprop:Generator_RowEvArgName="HPR_PROMOT_COM_ITMRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="hpci_brnd" msprop:Generator_ColumnVarNameInTable="columnhpci_brnd" msprop:Generator_ColumnPropNameInRow="hpci_brnd" msprop:Generator_ColumnPropNameInTable="hpci_brndColumn" msprop:Generator_UserColumnName="hpci_brnd" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="hpci_tp" msprop:Generator_ColumnVarNameInTable="columnhpci_tp" msprop:Generator_ColumnPropNameInRow="hpci_tp" msprop:Generator_ColumnPropNameInTable="hpci_tpColumn" msprop:Generator_UserColumnName="hpci_tp" type="xs:string" minOccurs="0" />
+              <xs:element name="hpci_cd" msprop:Generator_ColumnVarNameInTable="columnhpci_cd" msprop:Generator_ColumnPropNameInRow="hpci_cd" msprop:Generator_ColumnPropNameInTable="hpci_cdColumn" msprop:Generator_UserColumnName="hpci_cd" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HPR_PROMOT_COM_PTY" msprop:Generator_TableClassName="HPR_PROMOT_COM_PTYDataTable" msprop:Generator_TableVarName="tableHPR_PROMOT_COM_PTY" msprop:Generator_RowChangedName="HPR_PROMOT_COM_PTYRowChanged" msprop:Generator_TablePropName="HPR_PROMOT_COM_PTY" msprop:Generator_RowDeletingName="HPR_PROMOT_COM_PTYRowDeleting" msprop:Generator_RowChangingName="HPR_PROMOT_COM_PTYRowChanging" msprop:Generator_RowEvHandlerName="HPR_PROMOT_COM_PTYRowChangeEventHandler" msprop:Generator_RowDeletedName="HPR_PROMOT_COM_PTYRowDeleted" msprop:Generator_RowClassName="HPR_PROMOT_COM_PTYRow" msprop:Generator_UserTableName="HPR_PROMOT_COM_PTY" msprop:Generator_RowEvArgName="HPR_PROMOT_COM_PTYRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="code" msprop:Generator_ColumnVarNameInTable="columncode" msprop:Generator_ColumnPropNameInRow="code" msprop:Generator_ColumnPropNameInTable="codeColumn" msprop:Generator_UserColumnName="code" type="xs:string" minOccurs="0" />
+              <xs:element name="description" msprop:Generator_ColumnVarNameInTable="columndescription" msprop:Generator_ColumnPropNameInRow="description" msprop:Generator_ColumnPropNameInTable="descriptionColumn" msprop:Generator_UserColumnName="description" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HPR_PROMOT_COM_SCH" msprop:Generator_TableClassName="HPR_PROMOT_COM_SCHDataTable" msprop:Generator_TableVarName="tableHPR_PROMOT_COM_SCH" msprop:Generator_RowChangedName="HPR_PROMOT_COM_SCHRowChanged" msprop:Generator_TablePropName="HPR_PROMOT_COM_SCH" msprop:Generator_RowDeletingName="HPR_PROMOT_COM_SCHRowDeleting" msprop:Generator_RowChangingName="HPR_PROMOT_COM_SCHRowChanging" msprop:Generator_RowEvHandlerName="HPR_PROMOT_COM_SCHRowChangeEventHandler" msprop:Generator_RowDeletedName="HPR_PROMOT_COM_SCHRowDeleted" msprop:Generator_RowClassName="HPR_PROMOT_COM_SCHRow" msprop:Generator_UserTableName="HPR_PROMOT_COM_SCH" msprop:Generator_RowEvArgName="HPR_PROMOT_COM_SCHRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HPCS_SCH_CD" msprop:Generator_ColumnVarNameInTable="columnHPCS_SCH_CD" msprop:Generator_ColumnPropNameInRow="HPCS_SCH_CD" msprop:Generator_ColumnPropNameInTable="HPCS_SCH_CDColumn" msprop:Generator_UserColumnName="HPCS_SCH_CD" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Hpcs_from_qty" msprop:Generator_ColumnVarNameInTable="columnHpcs_from_qty" msprop:Generator_ColumnPropNameInRow="Hpcs_from_qty" msprop:Generator_ColumnPropNameInTable="Hpcs_from_qtyColumn" msprop:Generator_UserColumnName="Hpcs_from_qty" type="xs:int" minOccurs="0" />
+              <xs:element name="HPCS_TO_QTY" msprop:Generator_ColumnVarNameInTable="columnHPCS_TO_QTY" msprop:Generator_ColumnPropNameInRow="HPCS_TO_QTY" msprop:Generator_ColumnPropNameInTable="HPCS_TO_QTYColumn" msprop:Generator_UserColumnName="HPCS_TO_QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="Hpcs_com_rt" msprop:Generator_ColumnVarNameInTable="columnHpcs_com_rt" msprop:Generator_ColumnPropNameInRow="Hpcs_com_rt" msprop:Generator_ColumnPropNameInTable="Hpcs_com_rtColumn" msprop:Generator_UserColumnName="Hpcs_com_rt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Hpcs_com_amt" msprop:Generator_ColumnVarNameInTable="columnHpcs_com_amt" msprop:Generator_ColumnPropNameInRow="Hpcs_com_amt" msprop:Generator_ColumnPropNameInTable="Hpcs_com_amtColumn" msprop:Generator_UserColumnName="Hpcs_com_amt" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="HPR_PROMOT_COM_DET" msprop:Generator_TableClassName="HPR_PROMOT_COM_DETDataTable" msprop:Generator_TableVarName="tableHPR_PROMOT_COM_DET" msprop:Generator_TablePropName="HPR_PROMOT_COM_DET" msprop:Generator_RowDeletingName="HPR_PROMOT_COM_DETRowDeleting" msprop:Generator_RowChangingName="HPR_PROMOT_COM_DETRowChanging" msprop:Generator_RowEvHandlerName="HPR_PROMOT_COM_DETRowChangeEventHandler" msprop:Generator_RowDeletedName="HPR_PROMOT_COM_DETRowDeleted" msprop:Generator_UserTableName="HPR_PROMOT_COM_DET" msprop:Generator_RowChangedName="HPR_PROMOT_COM_DETRowChanged" msprop:Generator_RowEvArgName="HPR_PROMOT_COM_DETRowChangeEvent" msprop:Generator_RowClassName="HPR_PROMOT_COM_DETRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="HPCD_FROM_QTY" msprop:Generator_ColumnVarNameInTable="columnHPCD_FROM_QTY" msprop:Generator_ColumnPropNameInRow="HPCD_FROM_QTY" msprop:Generator_ColumnPropNameInTable="HPCD_FROM_QTYColumn" msprop:Generator_UserColumnName="HPCD_FROM_QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="HPCD_TO_QTY" msprop:Generator_ColumnVarNameInTable="columnHPCD_TO_QTY" msprop:Generator_ColumnPropNameInRow="HPCD_TO_QTY" msprop:Generator_ColumnPropNameInTable="HPCD_TO_QTYColumn" msprop:Generator_UserColumnName="HPCD_TO_QTY" type="xs:int" minOccurs="0" />
+              <xs:element name="HPCD_COM_AMT" msprop:Generator_ColumnVarNameInTable="columnHPCD_COM_AMT" msprop:Generator_ColumnPropNameInRow="HPCD_COM_AMT" msprop:Generator_ColumnPropNameInTable="HPCD_COM_AMTColumn" msprop:Generator_UserColumnName="HPCD_COM_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="HPCD_COM_RT" msprop:Generator_ColumnVarNameInTable="columnHPCD_COM_RT" msprop:Generator_ColumnPropNameInRow="HPCD_COM_RT" msprop:Generator_ColumnPropNameInTable="HPCD_COM_RTColumn" msprop:Generator_UserColumnName="HPCD_COM_RT" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:HPR_PROMOT_COM_HDR" />
+      <xs:field xpath="mstns:HPCH_SEQ" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,77 @@
+﻿@model FF.BusinessObjects.LoginUser
+
+@{
+    ViewBag.Title = @FF.Resources.Resource.LoginTitle;
+    Layout = "";
+}
+@{
+
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <!-- Custom Theme files -->
+    <link href="~/Content/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="~/Content/lightbox.css" rel="stylesheet" />
+    <link rel="icon"
+          type="image/png"
+          href="~/Resources/Images/faicon.png">
+    <!-- Custom Theme files -->
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Abans tours product,Sirus technology,Sri lanka,World travel,Nuwan De Silva" />
+    <!--Google Fonts-->
+    @*<link href='http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>*@
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/Common/Login.js?@val"></script>
+    <script src="~/Scripts/Common/lightbox.js"></script>
+
+    <!--Google Fonts-->
+</head>
+<body>
+    <!--header start here-->
+    <div class="login">
+        <div class="login-main">
+            <div class="login-top">
+                <img src="../Resources/images/head-img.png" alt="" />
+                <h1>Login </h1>
+
+                @using (Html.BeginForm("Login", "Login", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal login-form", role = "form" }))
+                {
+
+
+
+                    <p> @Html.TextBoxFor(m => m.User_name, new { @class = "form-control user_name_cls", @placeholder = "User Name" })</p>
+
+                    <p> @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })</p>
+
+                    <p> @Html.DropDownListFor(m => m.Mst_com.Mc_cd, new List<SelectListItem>(), "Select Company", new { @class = "form-control company-dropdown" })</p>
+                    @Html.HiddenFor(m => m.Mst_com.Mc_desc, new { @class = "form-control company-description" })
+                    <div class="login-bottom">
+
+                        <div class="login-para">
+                            <p><a href="#"> Forgot Password </a></p>
+                            <input type="submit" value=@FF.Resources.Resource.LoginBtnTxt class="btn btn-primary login-btn" />
+                        </div>
+                        <div class="clear"> </div>
+                    </div>
+
+
+                }
+
+
+            </div>
+        </div>
+        <div class="imagelog page-loadin"><img src="~/Resources/Images/ajaxload.gif"></div>
+    </div>
+    <div class="footer">
+        <p> &copy;@DateTime.Now.Year @FF.Resources.Resource.ReservedText </p>
+    </div>
+   
+    <!--header end here-->
+</body>
+</html>

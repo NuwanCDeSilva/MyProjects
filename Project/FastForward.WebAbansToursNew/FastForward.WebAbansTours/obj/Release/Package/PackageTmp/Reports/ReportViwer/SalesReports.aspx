@@ -1,0 +1,9 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="SalesReports.aspx.cs" MasterPageFile="~/Views/Shared/ReportSite.Master"  Inherits="FastForward.WebAbansTours.Reports.ReportViwer.DailySales" %>
+
+ <%@ Register assembly="CrystalDecisions.Web, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" namespace="CrystalDecisions.Web" tagprefix="CR" %>
+
+ <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+     <CR:CrystalReportViewer ID="SalesReport"   runat="server"  HasCrystalLogo="False"
+    AutoDataBind="True"  Height="50px"  EnableParameterPrompt="false" EnableDatabaseLogonPrompt="false" ToolPanelWidth="200px" 
+    Width="350px" ToolPanelView="None" />
+</asp:Content>

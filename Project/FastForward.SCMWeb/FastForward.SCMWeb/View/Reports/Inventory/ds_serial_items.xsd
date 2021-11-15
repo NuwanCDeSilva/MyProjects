@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_serial_items" targetNamespace="http://tempuri.org/ds_serial_items.xsd" xmlns:mstns="http://tempuri.org/ds_serial_items.xsd" xmlns="http://tempuri.org/ds_serial_items.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_serial_items" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_serial_items" msprop:Generator_UserDSName="ds_serial_items">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="serial_items" msprop:Generator_TableClassName="serial_itemsDataTable" msprop:Generator_TableVarName="tableserial_items" msprop:Generator_RowChangedName="serial_itemsRowChanged" msprop:Generator_TablePropName="serial_items" msprop:Generator_RowDeletingName="serial_itemsRowDeleting" msprop:Generator_RowChangingName="serial_itemsRowChanging" msprop:Generator_RowEvHandlerName="serial_itemsRowChangeEventHandler" msprop:Generator_RowDeletedName="serial_itemsRowDeleted" msprop:Generator_RowClassName="serial_itemsRow" msprop:Generator_UserTableName="serial_items" msprop:Generator_RowEvArgName="serial_itemsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="its_itm_cd" msprop:Generator_ColumnVarNameInTable="columnits_itm_cd" msprop:Generator_ColumnPropNameInRow="its_itm_cd" msprop:Generator_ColumnPropNameInTable="its_itm_cdColumn" msprop:Generator_UserColumnName="its_itm_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="its_ser_1" msprop:Generator_ColumnVarNameInTable="columnits_ser_1" msprop:Generator_ColumnPropNameInRow="its_ser_1" msprop:Generator_ColumnPropNameInTable="its_ser_1Column" msprop:Generator_UserColumnName="its_ser_1" type="xs:string" minOccurs="0" />
+              <xs:element name="its_ser_2" msprop:Generator_ColumnVarNameInTable="columnits_ser_2" msprop:Generator_ColumnPropNameInRow="its_ser_2" msprop:Generator_ColumnPropNameInTable="its_ser_2Column" msprop:Generator_UserColumnName="its_ser_2" type="xs:string" minOccurs="0" />
+              <xs:element name="ith_doc_date" msprop:Generator_ColumnVarNameInTable="columnith_doc_date" msprop:Generator_ColumnPropNameInRow="ith_doc_date" msprop:Generator_ColumnPropNameInTable="ith_doc_dateColumn" msprop:Generator_UserColumnName="ith_doc_date" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ith_doc_no" msprop:Generator_ColumnVarNameInTable="columnith_doc_no" msprop:Generator_ColumnPropNameInRow="ith_doc_no" msprop:Generator_ColumnPropNameInTable="ith_doc_noColumn" msprop:Generator_UserColumnName="ith_doc_no" type="xs:string" minOccurs="0" />
+              <xs:element name="ith_oth_docno" msprop:Generator_ColumnVarNameInTable="columnith_oth_docno" msprop:Generator_ColumnPropNameInRow="ith_oth_docno" msprop:Generator_ColumnPropNameInTable="ith_oth_docnoColumn" msprop:Generator_UserColumnName="ith_oth_docno" type="xs:string" minOccurs="0" />
+              <xs:element name="ith_oth_loc" msprop:Generator_ColumnVarNameInTable="columnith_oth_loc" msprop:Generator_ColumnPropNameInRow="ith_oth_loc" msprop:Generator_ColumnPropNameInTable="ith_oth_locColumn" msprop:Generator_UserColumnName="ith_oth_loc" type="xs:string" minOccurs="0" />
+              <xs:element name="its_itm_stus" msprop:Generator_ColumnVarNameInTable="columnits_itm_stus" msprop:Generator_ColumnPropNameInRow="its_itm_stus" msprop:Generator_ColumnPropNameInTable="its_itm_stusColumn" msprop:Generator_UserColumnName="its_itm_stus" type="xs:string" minOccurs="0" />
+              <xs:element name="its_warr_no" msprop:Generator_ColumnVarNameInTable="columnits_warr_no" msprop:Generator_ColumnPropNameInRow="its_warr_no" msprop:Generator_ColumnPropNameInTable="its_warr_noColumn" msprop:Generator_UserColumnName="its_warr_no" type="xs:string" minOccurs="0" />
+              <xs:element name="item_descrip" msprop:Generator_ColumnVarNameInTable="columnitem_descrip" msprop:Generator_ColumnPropNameInRow="item_descrip" msprop:Generator_ColumnPropNameInTable="item_descripColumn" msprop:Generator_UserColumnName="item_descrip" type="xs:string" minOccurs="0" />
+              <xs:element name="item_model" msprop:Generator_ColumnVarNameInTable="columnitem_model" msprop:Generator_ColumnPropNameInRow="item_model" msprop:Generator_ColumnPropNameInTable="item_modelColumn" msprop:Generator_UserColumnName="item_model" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_loc_desc" msprop:Generator_ColumnVarNameInTable="columnml_loc_desc" msprop:Generator_ColumnPropNameInRow="ml_loc_desc" msprop:Generator_ColumnPropNameInTable="ml_loc_descColumn" msprop:Generator_UserColumnName="ml_loc_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="ITB_BASE_REF_NO" msprop:Generator_ColumnVarNameInTable="columnITB_BASE_REF_NO" msprop:Generator_ColumnPropNameInRow="ITB_BASE_REF_NO" msprop:Generator_ColumnPropNameInTable="ITB_BASE_REF_NOColumn" msprop:Generator_UserColumnName="ITB_BASE_REF_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITH_JOB_NO" msprop:Generator_ColumnVarNameInTable="columnITH_JOB_NO" msprop:Generator_ColumnPropNameInRow="ITH_JOB_NO" msprop:Generator_ColumnPropNameInTable="ITH_JOB_NOColumn" msprop:Generator_UserColumnName="ITH_JOB_NO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowClassName="paramRow" msprop:Generator_UserTableName="param" msprop:Generator_RowEvArgName="paramRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DocNo" msprop:Generator_ColumnVarNameInTable="columnDocNo" msprop:Generator_ColumnPropNameInRow="DocNo" msprop:Generator_ColumnPropNameInTable="DocNoColumn" msprop:Generator_UserColumnName="DocNo" type="xs:string" minOccurs="0" />
+              <xs:element name="ITH_OTH_LOC" msprop:Generator_ColumnVarNameInTable="columnITH_OTH_LOC" msprop:Generator_ColumnPropNameInRow="ITH_OTH_LOC" msprop:Generator_ColumnPropNameInTable="ITH_OTH_LOCColumn" msprop:Generator_UserColumnName="ITH_OTH_LOC" type="xs:string" minOccurs="0" />
+              <xs:element name="ITH_OTH_DOCNO" msprop:Generator_ColumnVarNameInTable="columnITH_OTH_DOCNO" msprop:Generator_ColumnPropNameInRow="ITH_OTH_DOCNO" msprop:Generator_ColumnPropNameInTable="ITH_OTH_DOCNOColumn" msprop:Generator_UserColumnName="ITH_OTH_DOCNO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITH_DOC_DATE" msprop:Generator_ColumnVarNameInTable="columnITH_DOC_DATE" msprop:Generator_ColumnPropNameInRow="ITH_DOC_DATE" msprop:Generator_ColumnPropNameInTable="ITH_DOC_DATEColumn" msprop:Generator_UserColumnName="ITH_DOC_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="User" msprop:Generator_ColumnVarNameInTable="columnUser" msprop:Generator_ColumnPropNameInRow="User" msprop:Generator_ColumnPropNameInTable="UserColumn" msprop:Generator_UserColumnName="User" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="Company" msprop:Generator_ColumnVarNameInTable="columnCompany" msprop:Generator_ColumnPropNameInRow="Company" msprop:Generator_ColumnPropNameInTable="CompanyColumn" msprop:Generator_UserColumnName="Company" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="All_Due_Sum" targetNamespace="http://tempuri.org/All_Due_Sum.xsd" xmlns:mstns="http://tempuri.org/All_Due_Sum.xsd" xmlns="http://tempuri.org/All_Due_Sum.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="All_Due_Sum" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="All_Due_Sum" msprop:Generator_UserDSName="All_Due_Sum">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_UserTableName="param" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="period" msdata:Caption="todate" msprop:Generator_ColumnVarNameInTable="columnperiod" msprop:Generator_ColumnPropNameInRow="period" msprop:Generator_ColumnPropNameInTable="periodColumn" msprop:Generator_UserColumnName="period" type="xs:string" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="scheme" msprop:Generator_ColumnVarNameInTable="columnscheme" msprop:Generator_ColumnPropNameInRow="scheme" msprop:Generator_ColumnPropNameInTable="schemeColumn" msprop:Generator_UserColumnName="scheme" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ALL_DUE_SUM" msprop:Generator_TableClassName="ALL_DUE_SUMDataTable" msprop:Generator_TableVarName="tableALL_DUE_SUM" msprop:Generator_TablePropName="ALL_DUE_SUM" msprop:Generator_RowDeletingName="ALL_DUE_SUMRowDeleting" msprop:Generator_UserTableName="ALL_DUE_SUM" msprop:Generator_RowChangingName="ALL_DUE_SUMRowChanging" msprop:Generator_RowEvHandlerName="ALL_DUE_SUMRowChangeEventHandler" msprop:Generator_RowDeletedName="ALL_DUE_SUMRowDeleted" msprop:Generator_RowEvArgName="ALL_DUE_SUMRowChangeEvent" msprop:Generator_RowChangedName="ALL_DUE_SUMRowChanged" msprop:Generator_RowClassName="ALL_DUE_SUMRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COM_CODE" msprop:Generator_ColumnVarNameInTable="columnCOM_CODE" msprop:Generator_ColumnPropNameInRow="COM_CODE" msprop:Generator_ColumnPropNameInTable="COM_CODEColumn" msprop:Generator_UserColumnName="COM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="COM_DESC" msprop:Generator_ColumnVarNameInTable="columnCOM_DESC" msprop:Generator_ColumnPropNameInRow="COM_DESC" msprop:Generator_ColumnPropNameInTable="COM_DESCColumn" msprop:Generator_UserColumnName="COM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POWERED_BY" msprop:Generator_ColumnVarNameInTable="columnPOWERED_BY" msprop:Generator_ColumnPropNameInRow="POWERED_BY" msprop:Generator_ColumnPropNameInTable="POWERED_BYColumn" msprop:Generator_UserColumnName="POWERED_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="LOC_CODE" msprop:Generator_ColumnVarNameInTable="columnLOC_CODE" msprop:Generator_ColumnPropNameInRow="LOC_CODE" msprop:Generator_ColumnPropNameInTable="LOC_CODEColumn" msprop:Generator_UserColumnName="LOC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="LOC_DESC" msprop:Generator_ColumnVarNameInTable="columnLOC_DESC" msprop:Generator_ColumnPropNameInRow="LOC_DESC" msprop:Generator_ColumnPropNameInTable="LOC_DESCColumn" msprop:Generator_UserColumnName="LOC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ACC_NO" msprop:Generator_ColumnVarNameInTable="columnACC_NO" msprop:Generator_ColumnPropNameInRow="ACC_NO" msprop:Generator_ColumnPropNameInTable="ACC_NOColumn" msprop:Generator_UserColumnName="ACC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SCHEME" msprop:Generator_ColumnVarNameInTable="columnSCHEME" msprop:Generator_ColumnPropNameInRow="SCHEME" msprop:Generator_ColumnPropNameInTable="SCHEMEColumn" msprop:Generator_UserColumnName="SCHEME" type="xs:string" minOccurs="0" />
+              <xs:element name="REPORT_DATE" msprop:Generator_ColumnVarNameInTable="columnREPORT_DATE" msprop:Generator_ColumnPropNameInRow="REPORT_DATE" msprop:Generator_ColumnPropNameInTable="REPORT_DATEColumn" msprop:Generator_UserColumnName="REPORT_DATE" type="xs:string" minOccurs="0" />
+              <xs:element name="MONTH_DUE" msprop:Generator_ColumnVarNameInTable="columnMONTH_DUE" msprop:Generator_ColumnPropNameInRow="MONTH_DUE" msprop:Generator_ColumnPropNameInTable="MONTH_DUEColumn" msprop:Generator_UserColumnName="MONTH_DUE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ARREARS" msprop:Generator_ColumnVarNameInTable="columnARREARS" msprop:Generator_ColumnPropNameInRow="ARREARS" msprop:Generator_ColumnPropNameInTable="ARREARSColumn" msprop:Generator_UserColumnName="ARREARS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="OVER_PAY" msprop:Generator_ColumnVarNameInTable="columnOVER_PAY" msprop:Generator_ColumnPropNameInRow="OVER_PAY" msprop:Generator_ColumnPropNameInTable="OVER_PAYColumn" msprop:Generator_UserColumnName="OVER_PAY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ALL_DUE" msprop:Generator_ColumnVarNameInTable="columnALL_DUE" msprop:Generator_ColumnPropNameInRow="ALL_DUE" msprop:Generator_ColumnPropNameInTable="ALL_DUEColumn" msprop:Generator_UserColumnName="ALL_DUE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SCHEME_DESC" msprop:Generator_ColumnVarNameInTable="columnSCHEME_DESC" msprop:Generator_ColumnPropNameInRow="SCHEME_DESC" msprop:Generator_ColumnPropNameInTable="SCHEME_DESCColumn" msprop:Generator_UserColumnName="SCHEME_DESC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

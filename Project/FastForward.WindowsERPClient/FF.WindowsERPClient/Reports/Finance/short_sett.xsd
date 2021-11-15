@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="short_sett" targetNamespace="http://tempuri.org/short_sett.xsd" xmlns:mstns="http://tempuri.org/short_sett.xsd" xmlns="http://tempuri.org/short_sett.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="short_sett" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="short_sett" msprop:Generator_UserDSName="short_sett">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_UserTableName="param" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="period" msdata:Caption="todate" msprop:Generator_ColumnVarNameInTable="columnperiod" msprop:Generator_ColumnPropNameInRow="period" msprop:Generator_ColumnPropNameInTable="periodColumn" msprop:Generator_UserColumnName="period" type="xs:string" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="SHORT_SETT" msprop:Generator_TableClassName="SHORT_SETTDataTable" msprop:Generator_TableVarName="tableSHORT_SETT" msprop:Generator_TablePropName="SHORT_SETT" msprop:Generator_RowDeletingName="SHORT_SETTRowDeleting" msprop:Generator_UserTableName="SHORT_SETT" msprop:Generator_RowChangingName="SHORT_SETTRowChanging" msprop:Generator_RowEvHandlerName="SHORT_SETTRowChangeEventHandler" msprop:Generator_RowDeletedName="SHORT_SETTRowDeleted" msprop:Generator_RowEvArgName="SHORT_SETTRowChangeEvent" msprop:Generator_RowChangedName="SHORT_SETTRowChanged" msprop:Generator_RowClassName="SHORT_SETTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GRDD_COM" msprop:Generator_ColumnVarNameInTable="columnGRDD_COM" msprop:Generator_ColumnPropNameInRow="GRDD_COM" msprop:Generator_ColumnPropNameInTable="GRDD_COMColumn" msprop:Generator_UserColumnName="GRDD_COM" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_DESC" msprop:Generator_ColumnVarNameInTable="columnMC_DESC" msprop:Generator_ColumnPropNameInRow="MC_DESC" msprop:Generator_ColumnPropNameInTable="MC_DESCColumn" msprop:Generator_UserColumnName="MC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_IT_POWERED" msprop:Generator_ColumnVarNameInTable="columnMC_IT_POWERED" msprop:Generator_ColumnPropNameInRow="MC_IT_POWERED" msprop:Generator_ColumnPropNameInTable="MC_IT_POWEREDColumn" msprop:Generator_UserColumnName="MC_IT_POWERED" type="xs:string" minOccurs="0" />
+              <xs:element name="GRDD_PC" msprop:Generator_ColumnVarNameInTable="columnGRDD_PC" msprop:Generator_ColumnPropNameInRow="GRDD_PC" msprop:Generator_ColumnPropNameInTable="GRDD_PCColumn" msprop:Generator_UserColumnName="GRDD_PC" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_DESC" msprop:Generator_ColumnVarNameInTable="columnMPC_DESC" msprop:Generator_ColumnPropNameInRow="MPC_DESC" msprop:Generator_ColumnPropNameInTable="MPC_DESCColumn" msprop:Generator_UserColumnName="MPC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="GRDD_MONTH" msprop:Generator_ColumnVarNameInTable="columnGRDD_MONTH" msprop:Generator_ColumnPropNameInRow="GRDD_MONTH" msprop:Generator_ColumnPropNameInTable="GRDD_MONTHColumn" msprop:Generator_UserColumnName="GRDD_MONTH" type="xs:short" minOccurs="0" />
+              <xs:element name="GRDD_WEEK" msprop:Generator_ColumnVarNameInTable="columnGRDD_WEEK" msprop:Generator_ColumnPropNameInRow="GRDD_WEEK" msprop:Generator_ColumnPropNameInTable="GRDD_WEEKColumn" msprop:Generator_UserColumnName="GRDD_WEEK" type="xs:short" minOccurs="0" />
+              <xs:element name="DETAILS" msprop:Generator_ColumnVarNameInTable="columnDETAILS" msprop:Generator_ColumnPropNameInRow="DETAILS" msprop:Generator_ColumnPropNameInTable="DETAILSColumn" msprop:Generator_UserColumnName="DETAILS" type="xs:string" minOccurs="0" />
+              <xs:element name="GRDD_DOC_VAL" msprop:Generator_ColumnVarNameInTable="columnGRDD_DOC_VAL" msprop:Generator_ColumnPropNameInRow="GRDD_DOC_VAL" msprop:Generator_ColumnPropNameInTable="GRDD_DOC_VALColumn" msprop:Generator_UserColumnName="GRDD_DOC_VAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="GRDD_IS_REALIZED" msprop:Generator_ColumnVarNameInTable="columnGRDD_IS_REALIZED" msprop:Generator_ColumnPropNameInRow="GRDD_IS_REALIZED" msprop:Generator_ColumnPropNameInTable="GRDD_IS_REALIZEDColumn" msprop:Generator_UserColumnName="GRDD_IS_REALIZED" type="xs:string" minOccurs="0" />
+              <xs:element name="GRDS_SET_MONTH" msprop:Generator_ColumnVarNameInTable="columnGRDS_SET_MONTH" msprop:Generator_ColumnPropNameInRow="GRDS_SET_MONTH" msprop:Generator_ColumnPropNameInTable="GRDS_SET_MONTHColumn" msprop:Generator_UserColumnName="GRDS_SET_MONTH" type="xs:short" minOccurs="0" />
+              <xs:element name="GRDS_SET_WEEK" msprop:Generator_ColumnVarNameInTable="columnGRDS_SET_WEEK" msprop:Generator_ColumnPropNameInRow="GRDS_SET_WEEK" msprop:Generator_ColumnPropNameInTable="GRDS_SET_WEEKColumn" msprop:Generator_UserColumnName="GRDS_SET_WEEK" type="xs:short" minOccurs="0" />
+              <xs:element name="GRDS_SET_DT" msprop:Generator_ColumnVarNameInTable="columnGRDS_SET_DT" msprop:Generator_ColumnPropNameInRow="GRDS_SET_DT" msprop:Generator_ColumnPropNameInTable="GRDS_SET_DTColumn" msprop:Generator_UserColumnName="GRDS_SET_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GRDS_REM" msprop:Generator_ColumnVarNameInTable="columnGRDS_REM" msprop:Generator_ColumnPropNameInRow="GRDS_REM" msprop:Generator_ColumnPropNameInTable="GRDS_REMColumn" msprop:Generator_UserColumnName="GRDS_REM" type="xs:string" minOccurs="0" />
+              <xs:element name="GRDS_USER" msprop:Generator_ColumnVarNameInTable="columnGRDS_USER" msprop:Generator_ColumnPropNameInRow="GRDS_USER" msprop:Generator_ColumnPropNameInTable="GRDS_USERColumn" msprop:Generator_UserColumnName="GRDS_USER" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

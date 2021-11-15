@@ -1,0 +1,394 @@
+﻿@model FF.BusinessObjects.GEN_CUST_ENQ
+@{
+    ViewBag.Title = "Enquiry Management";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts{
+
+    <script src="~/Scripts/Common/Enquiry.js?@val"></script>
+    <script src="~/Scripts/Common/jquery-ui-timepicker-addon.js"></script>
+    <script src="~/Scripts/Common/DataEntry.js?@val"></script>
+}
+
+
+@using (Html.BeginForm("SaveToursEnqData", "EnquiryManagement", new { ReturnUrl = ViewBag.ReturnUrl, enctype = "multipart/form-data" }, FormMethod.Post, new { @class = "form-horizontal frm-cust-det", role = "form", @id = "enq-crte-frm" }))
+{
+    <input type="hidden" id="GCE_ENQ_ID" name="GCE_ENQ_ID" />
+           @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+           @Html.HiddenFor(model => model.GCE_SEQ)
+       <div class="container1 op-btns">
+        <div class="col-md-6">
+            <div class="page-title">Tours Enquiry Management</div>
+        </div>
+
+        <div class="col-md-6 button-cls">
+            <input type="button" value="Clear" class="btn btn-default btn-default-style btn-Enq-clear-data" />
+            <input type="button" value="Create" class="btn btn-default btn-default-style btn-Enq-Create" />
+        </div>
+    </div>
+    <div class="demopage">
+        <div class="container1">
+            <div class="panel-sep col-md-7">
+                <div class="panel panel-heading">Custormer Details</div>
+                <div class="panel-container">
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqCusCode</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_CUS_CD, new { htmlAttributes = new { @class = "form-control with-search", required = "required" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img cus-cd-search2">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqCusMobile</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_MOB, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @maxlength = "12" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqCusNic</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_NIC, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @id = "GCE_NIC", @maxlength = "12" } })
+                                        <img src="~/Resources/Images/History.png" class="history-img-for-enq  history-trans-enq-data-for-nic" title="History" style="width:22px">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqCusName</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_NAME, new { htmlAttributes = new { @class = "form-control with-search", required = "required" } })
+                                        <img src="~/Resources/Images/Add-cust.png" class="add-cust-img  add-customer-data" title="New Customer" style="width:22px">
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqCusAddress</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_ADD1, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.txtEmail</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_EMAIL, new { htmlAttributes = new { @class = "form-control with-search", required = "required", type = "email" } })
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label"></label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_ADD2, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep col-md-5">
+                <div class="panel panel-heading">Pending Enquiries</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="partialView_enq">
+                            </div>
+                            <div class="row" style="height:105px; overflow-x:hidden;overflow-y:auto">
+
+                                <table class="table table-striped">
+                                    <tr class="table-hed">
+                                        <th>Select</th>
+                                        <th>Enq ID</th>
+                                        <th>Name</th>
+                                        <th>Mobile</th>
+                                        <th>Enquiry</th>
+                                    </tr>
+                                    @foreach (var list in ViewBag.pendingList)
+                                    {
+
+                                        <tr class="show-enq-data">
+                                            <td><a href="#" class="select-to-pending-cancel" data-list-id="@list.GCE_ENQ_ID" data-list-status="@list.GCE_STUS" data-list-reason="@list.GCE_ENQ" data-list-cuscd="@list.GCE_CUS_CD" data-list-mob="@list.GCE_MOB" data-list-nic="@list.GCE_NIC" data-list-name="@list.GCE_NAME" data-list-add1="@list.GCE_ADD1" data-list-add2="@list.GCE_ADD2" data-list-email="@list.GCE_EMAIL" data-list-concd="@list.GCE_CONT_CD" data-list-gname="@list.GCE_GUESS" data-list-gmob="@list.GCE_CONT_MOB" data-list-gemail="@list.GCE_CONT_EMAIL" data-list-flyno="@list.GCE_FLY_NO" data-list-flydate="@list.GCE_FLY_DATE">Select</a></td>
+                                            <td>@list.GCE_ENQ_ID</td>
+                                            <td>@list.GCE_NAME</td>
+                                            <td>@list.GCE_MOB</td>
+                                            <td>@list.GCE_ENQ</td>
+                                        </tr>
+                                    }
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep col-md-6">
+                <div class="panel panel-heading">Tour Information</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqfrmCountry</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_FRM_CONTRY, new { htmlAttributes = new { @class = "form-control with-search", required = "required" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img cus-country-search">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqnoPax</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_NO_PASS, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @maxlength = "3" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqDes</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_DEST_CONTRY, new { htmlAttributes = new { @class = "form-control with-search", required = "required" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img cus-des-country-search">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep col-md-6">
+                <div class="panel panel-heading">Contact/Guess Details</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqgussCode</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_CONT_CD, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @Value = "CASH", @readonly = "readonly" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img guss-cus-cd-search">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqgussName</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_GUESS, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @maxlength = "25" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqgussMob</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_CONT_MOB, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @maxlength = "12" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">@FF.Resources.Resource.EnqgussEmail</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.GCE_CONT_EMAIL, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @type = "email" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">NIC</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="Mbe_nic" name="Mbe_nic" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">PP Number</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="Mbe_pp_number" name="Mbe_pp_number" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">BR Number</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="Mbe_br_number" name="Mbe_br_number" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-md-4 control-label">Address</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="Mbe_address" name="Mbe_address" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row"></div>
+            <div class="panel-sep col-md-12">
+                <div class="panel panel-heading">Service Details</div>
+                <div class="panel-container">
+
+                    <div id="view2" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">@FF.Resources.Resource.EnqFacility</label>
+                                    <div class="col-md-9">
+                                        @Html.DropDownList("GCS_FAC", new List<SelectListItem>(), "Select Type", new { @class = "form-control ", name = "GCS_FAC" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">@FF.Resources.Resource.EnqService</label>
+                                    <div class="col-md-9">
+                                        @Html.DropDownList("GCS_SERVICE", new List<SelectListItem>(), "Select Type", new { @class = "form-control getreq", name = "GCS_SERVICE" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">@FF.Resources.Resource.EnqPro</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="GCS_SER_PROVIDER" name="GCS_SER_PROVIDER" class="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">@FF.Resources.Resource.EnqUnit</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="GCS_UNITS" name="GCS_UNITS" class="form-control getunits" readonly />
+                                    </div>
+                                </div>
+                               
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">Expected Date</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.GCE_EXPECT_DT, new { htmlAttributes = new { @class = "form-control"} })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">Executive</label>
+                                    <div class="col-md-9">
+                                        @Html.DropDownListFor(model => model.GCE_EX_CD, new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">Flight No</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.GCE_FLY_NO, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">Flight Date</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.GCE_FLY_DATE, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-md-3 control-label">@FF.Resources.Resource.EnqComments</label>
+                                    <div class="col-md-9">
+                                        <textarea id="GCS_COMMENT" name="GCS_COMMENT" class="form-control"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="trans-detail-panel-set">
+                                <div class="row">
+                                    <div class="panel panel-heading">@FF.Resources.Resource.txtPckUpDetls</div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqPickFrm</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="GCS_PICK_FRM" name="GCS_PICK_FRM" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqPickTown</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="GCE_FRM_TN" name="GCS_PICK_TN" class="form-control with-search" readonly />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img pick-town-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqDate</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="GCS_EXP_DT" name="GCS_EXP_DT" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqTime</label>
+                                        <div class="col-md-9">
+                                            <input type="time" id="GCS_EXP_TIME" name="GCS_EXP_TIME" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel panel-heading">@FF.Resources.Resource.txtDrpDetls</div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqDropTo</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="GCS_DROP" name="GCS_DROP" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqDropTown</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="GCE_TO_TN" name="GCS_DROP_TN" class="form-control with-search" readonly />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img drop-town-search" title="Search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqDate</label>
+                                        <div class="col-md-9">
+                                            <input type="text" id="GCS_DROP_DT" name="GCS_DROP_DT" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-md-3 control-label">@FF.Resources.Resource.EnqTime</label>
+                                        <div class="col-md-9">
+                                            <input type="time" id="GCS_DROP_TIME" name="GCS_DROP_TIME" class="form-control" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+    </div>
+
+
+}
+<div class="panel-sep col-md-12">
+    @Html.Partial("~/Views/Shared/_ImageUploads.cshtml")
+</div>
+    <div class="customer-create-popup">
+        @Html.Partial("~/Views/Shared/_Customer.cshtml")
+    </div>
+
+    <div class="modal fade" id="enqmodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Pending Cancel</h4>
+                </div>
+                <div class="modal-body ">
+                    <div class="col-md-12 enq-pen-can">
+
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>

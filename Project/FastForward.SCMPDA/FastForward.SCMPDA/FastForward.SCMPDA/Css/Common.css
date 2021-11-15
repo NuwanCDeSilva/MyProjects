@@ -1,0 +1,219 @@
+﻿body {
+    font-size: 12px;
+    font-family: Tahoma;
+    margin: 0;
+    width: 100%;
+}
+.logincopyrightlabel {
+    font-size: 12px;
+    text-align: center;
+    background-color: #8FA5DE;
+}
+.panelfootermargin{
+    font-size: 12px;
+    text-align: center;
+    background-color: #8FA5DE;
+}
+.main-form-body{
+    margin: 0 auto;
+    min-height: 220px;
+    text-align: left;
+    width: 300px;
+}
+.panel-body.lodby-panel {
+    min-height: 160px;
+}
+.defaultpanelheader{
+    font-weight:bold;
+    text-align:center;
+}
+
+.login-pge-lbl-lp {
+    float: left;
+    width: 90px;
+}
+.login-pge-drop-lp,.def-lbl-drop,.cre-jb-cls,.doc-tp-drpm,.chg-lb-drp-ch ,.doc-tp-drp{
+    font-size: 12px;
+    height: 19px;
+    width: 130px;
+}
+.btn-info {
+    background-color: #ffffcc;
+    border: 1px solid #003399;
+    color: #003399;
+    font-family: "trebuchet ms",helvetica,sans-serif;
+    font-size: 11px;
+    font-weight: bold;
+}
+.panel-body {
+  min-height: 150px;
+    padding-bottom: 10px;
+    padding-top: 6px;
+    padding-left: 2px;
+}
+.select-lb-btn {
+    padding-left: 166px;
+    padding-top: 5px;
+}
+.def-lbl-txt{
+    float: left;
+    width: 90px;
+}
+.def-buttn-blk.def-btn-h {
+    padding-top: 5px;
+    text-align: center;
+}
+.button-scan-item {
+    margin-left: 88px;
+    margin-top: 6px;
+    width: 122px;
+}
+.button-scan-item :hover {
+    cursor:pointer;
+}
+.cre-jb-sel-doc,.to-lbl-cls {
+    float: left;
+    width: 110px;
+}
+.btn-cre-jb-cont {
+    padding-left: 66px;
+    padding-top: 10px;
+}
+.to-loc-txt {
+    height: 15px;
+    width: 124px;
+}
+#BodyContent_lblalert{
+      color: red;
+}
+.hide{
+    display:none;
+}
+.button-create-job {
+    width: 125px;
+}
+.button-create-job-bk {
+    width: 46px;
+}
+.curjb-sele {
+    float: left;
+    width: 108px;
+}
+.button-cur-job {
+    padding-left: 52px;
+    padding-top: 8px;
+}
+.chg-lb {
+    float: left;
+    width: 112px;
+}
+.chg-lb-dv {
+    padding-top: 6px;
+}
+.set-tb-pad{
+    padding: 4px;
+}
+.grp-btn-al {
+    padding-top: 5px;
+    text-align: center;
+}
+.label-chk-all,.label-chk-rgh {
+    float: left;
+    
+}
+.label-chk-all{
+    width:75px;
+}
+.doc-vew-dv {
+    background-color: #c4df67;
+    height:15px;
+}
+#BodyContent_dvcreatejobnumber,#BodyContent_dvoutjobs{
+    font-size:11px;
+}
+.lbltxt-set {
+    float: left;
+    padding-bottom: 3px;
+    width: 70px;
+}
+.txt-wdth-set {
+    float: left;
+    height: 13px;
+    width: 135px;
+    font-size: 10px;
+}
+.drp-width-set {
+    width: 138px;
+    font-size: 10px;
+}
+.scn-bth {
+    background-color: #afafaf;
+    margin-bottom: 4px;
+    margin-top: 5px;
+}
+.set-height-sp {
+    margin-top: 8px;
+    width: 145px;
+}
+#BodyContent_divalert {
+    clear: both;
+    margin-top: 6px;
+    width: 275px;
+}
+.set-height {
+    margin-bottom: 3px;
+    clear: both;
+}
+.set-in-row {
+    margin-top: 5px;
+}
+.alert.alert-success {
+    background-color: #4de393;
+    clear: both;
+}
+#BodyContent_lstscnserial{
+    background-color:#E37B47;
+}
+.panelscoll.itm-pnl {
+    overflow-x: scroll;
+    width: 295px;
+    min-height: 100px;
+}
+.panelscoll.itm-pnl.ignore-width {
+    overflow-x:initial;
+}
+#BodyContent_dvscanjobs{
+    font-size: 10px;
+}
+.display-bx 
+{
+    background-color: #c89175;
+    height: 15px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+}
+.display-bx div {
+    float: left;
+    width: 128px;
+}
+.settings-panel-body .btn-info{
+    margin-top: 10px;
+    width: 155px;
+}
+
+.panel-body.settings-panel-body {
+    text-align: center;
+}
+.panel-body.location-body {
+    font-size: 11px;
+}
+.out-loc-chk{
+    margin-left:10px;
+    color:#000EDF;
+}
+.badge.stk-cls {
+    color: #c700d5;
+}
+.panel-heading.defaultpanelheader > div {
+    float: right;
+}

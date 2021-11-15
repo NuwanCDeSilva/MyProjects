@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_BER" targetNamespace="http://tempuri.org/ds_BER.xsd" xmlns:mstns="http://tempuri.org/ds_BER.xsd" xmlns="http://tempuri.org/ds_BER.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_BER" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_BER" msprop:Generator_UserDSName="ds_BER">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="BER_REQUEST" msprop:Generator_TableClassName="BER_REQUESTDataTable" msprop:Generator_TableVarName="tableBER_REQUEST" msprop:Generator_RowChangedName="BER_REQUESTRowChanged" msprop:Generator_TablePropName="BER_REQUEST" msprop:Generator_RowDeletingName="BER_REQUESTRowDeleting" msprop:Generator_RowChangingName="BER_REQUESTRowChanging" msprop:Generator_RowEvHandlerName="BER_REQUESTRowChangeEventHandler" msprop:Generator_RowDeletedName="BER_REQUESTRowDeleted" msprop:Generator_RowClassName="BER_REQUESTRow" msprop:Generator_UserTableName="BER_REQUEST" msprop:Generator_RowEvArgName="BER_REQUESTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="REF_NO" msprop:Generator_ColumnVarNameInTable="columnREF_NO" msprop:Generator_ColumnPropNameInRow="REF_NO" msprop:Generator_ColumnPropNameInTable="REF_NOColumn" msprop:Generator_UserColumnName="REF_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_DATE" msprop:Generator_ColumnVarNameInTable="columnREF_DATE" msprop:Generator_ColumnPropNameInRow="REF_DATE" msprop:Generator_ColumnPropNameInTable="REF_DATEColumn" msprop:Generator_UserColumnName="REF_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="REF_NAME" msprop:Generator_ColumnVarNameInTable="columnREF_NAME" msprop:Generator_ColumnPropNameInRow="REF_NAME" msprop:Generator_ColumnPropNameInTable="REF_NAMEColumn" msprop:Generator_UserColumnName="REF_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_ADD1" msprop:Generator_ColumnVarNameInTable="columnREF_ADD1" msprop:Generator_ColumnPropNameInRow="REF_ADD1" msprop:Generator_ColumnPropNameInTable="REF_ADD1Column" msprop:Generator_UserColumnName="REF_ADD1" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_ADD2" msprop:Generator_ColumnVarNameInTable="columnREF_ADD2" msprop:Generator_ColumnPropNameInRow="REF_ADD2" msprop:Generator_ColumnPropNameInTable="REF_ADD2Column" msprop:Generator_UserColumnName="REF_ADD2" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_ITEMCODE" msprop:Generator_ColumnVarNameInTable="columnREF_ITEMCODE" msprop:Generator_ColumnPropNameInRow="REF_ITEMCODE" msprop:Generator_ColumnPropNameInTable="REF_ITEMCODEColumn" msprop:Generator_UserColumnName="REF_ITEMCODE" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_ITEMDESC" msprop:Generator_ColumnVarNameInTable="columnREF_ITEMDESC" msprop:Generator_ColumnPropNameInRow="REF_ITEMDESC" msprop:Generator_ColumnPropNameInTable="REF_ITEMDESCColumn" msprop:Generator_UserColumnName="REF_ITEMDESC" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_ITEM_MODEL" msprop:Generator_ColumnVarNameInTable="columnREF_ITEM_MODEL" msprop:Generator_ColumnPropNameInRow="REF_ITEM_MODEL" msprop:Generator_ColumnPropNameInTable="REF_ITEM_MODELColumn" msprop:Generator_UserColumnName="REF_ITEM_MODEL" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_SERIAL" msprop:Generator_ColumnVarNameInTable="columnREF_SERIAL" msprop:Generator_ColumnPropNameInRow="REF_SERIAL" msprop:Generator_ColumnPropNameInTable="REF_SERIALColumn" msprop:Generator_UserColumnName="REF_SERIAL" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_PURDATE" msprop:Generator_ColumnVarNameInTable="columnREF_PURDATE" msprop:Generator_ColumnPropNameInRow="REF_PURDATE" msprop:Generator_ColumnPropNameInTable="REF_PURDATEColumn" msprop:Generator_UserColumnName="REF_PURDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="REF_WARRNO" msprop:Generator_ColumnVarNameInTable="columnREF_WARRNO" msprop:Generator_ColumnPropNameInRow="REF_WARRNO" msprop:Generator_ColumnPropNameInTable="REF_WARRNOColumn" msprop:Generator_UserColumnName="REF_WARRNO" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_INVOICENO" msprop:Generator_ColumnVarNameInTable="columnREF_INVOICENO" msprop:Generator_ColumnPropNameInRow="REF_INVOICENO" msprop:Generator_ColumnPropNameInTable="REF_INVOICENOColumn" msprop:Generator_UserColumnName="REF_INVOICENO" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_OTHERPARTYNAME" msprop:Generator_ColumnVarNameInTable="columnREF_OTHERPARTYNAME" msprop:Generator_ColumnPropNameInRow="REF_OTHERPARTYNAME" msprop:Generator_ColumnPropNameInTable="REF_OTHERPARTYNAMEColumn" msprop:Generator_UserColumnName="REF_OTHERPARTYNAME" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_OTHERPARTYADD" msprop:Generator_ColumnVarNameInTable="columnREF_OTHERPARTYADD" msprop:Generator_ColumnPropNameInRow="REF_OTHERPARTYADD" msprop:Generator_ColumnPropNameInTable="REF_OTHERPARTYADDColumn" msprop:Generator_UserColumnName="REF_OTHERPARTYADD" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_REMARKS" msprop:Generator_ColumnVarNameInTable="columnREF_REMARKS" msprop:Generator_ColumnPropNameInRow="REF_REMARKS" msprop:Generator_ColumnPropNameInTable="REF_REMARKSColumn" msprop:Generator_UserColumnName="REF_REMARKS" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_COM_CODE" msprop:Generator_ColumnVarNameInTable="columnREF_COM_CODE" msprop:Generator_ColumnPropNameInRow="REF_COM_CODE" msprop:Generator_ColumnPropNameInTable="REF_COM_CODEColumn" msprop:Generator_UserColumnName="REF_COM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_COM_NAME" msprop:Generator_ColumnVarNameInTable="columnREF_COM_NAME" msprop:Generator_ColumnPropNameInRow="REF_COM_NAME" msprop:Generator_ColumnPropNameInTable="REF_COM_NAMEColumn" msprop:Generator_UserColumnName="REF_COM_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_PC_CODE" msprop:Generator_ColumnVarNameInTable="columnREF_PC_CODE" msprop:Generator_ColumnPropNameInRow="REF_PC_CODE" msprop:Generator_ColumnPropNameInTable="REF_PC_CODEColumn" msprop:Generator_UserColumnName="REF_PC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_TYPE" msprop:Generator_ColumnVarNameInTable="columnREF_TYPE" msprop:Generator_ColumnPropNameInRow="REF_TYPE" msprop:Generator_ColumnPropNameInTable="REF_TYPEColumn" msprop:Generator_UserColumnName="REF_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="REF_JOBNO" msprop:Generator_ColumnVarNameInTable="columnREF_JOBNO" msprop:Generator_ColumnPropNameInRow="REF_JOBNO" msprop:Generator_ColumnPropNameInTable="REF_JOBNOColumn" msprop:Generator_UserColumnName="REF_JOBNO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

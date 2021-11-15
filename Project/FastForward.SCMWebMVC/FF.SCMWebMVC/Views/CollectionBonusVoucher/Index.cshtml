@@ -1,0 +1,48 @@
+﻿@{
+    ViewBag.Title = "Collection bonus manager voucher";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/CollectionBonusVoucher.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Collection bonus manager voucher</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+                <div class="panel panel-heading"></div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="col-lg-2 control-label">Profit Center</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="location" name="location" class="form-control with-search" readonly>
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  loc-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="col-lg-2 control-label">Month</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="mnthfrom" name="mnthfrom" class="form-control" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+    </div>
+
+</div>
+

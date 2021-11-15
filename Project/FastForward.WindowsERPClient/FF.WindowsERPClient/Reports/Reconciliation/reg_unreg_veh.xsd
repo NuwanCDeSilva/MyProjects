@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="reg_unreg_veh" targetNamespace="http://tempuri.org/reg_unreg_veh.xsd" xmlns:mstns="http://tempuri.org/reg_unreg_veh.xsd" xmlns="http://tempuri.org/reg_unreg_veh.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="reg_unreg_veh" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="reg_unreg_veh" msprop:Generator_UserDSName="reg_unreg_veh">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_UserTableName="param" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="period" msprop:Generator_ColumnVarNameInTable="columnperiod" msprop:Generator_ColumnPropNameInRow="period" msprop:Generator_ColumnPropNameInTable="periodColumn" msprop:Generator_UserColumnName="period" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="REG_UNREG" msprop:Generator_TableClassName="REG_UNREGDataTable" msprop:Generator_TableVarName="tableREG_UNREG" msprop:Generator_TablePropName="REG_UNREG" msprop:Generator_RowDeletingName="REG_UNREGRowDeleting" msprop:Generator_UserTableName="REG_UNREG" msprop:Generator_RowChangingName="REG_UNREGRowChanging" msprop:Generator_RowEvHandlerName="REG_UNREGRowChangeEventHandler" msprop:Generator_RowDeletedName="REG_UNREGRowDeleted" msprop:Generator_RowEvArgName="REG_UNREGRowChangeEvent" msprop:Generator_RowChangedName="REG_UNREGRowChanged" msprop:Generator_RowClassName="REG_UNREGRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SVRT_COM" msprop:Generator_ColumnVarNameInTable="columnSVRT_COM" msprop:Generator_ColumnPropNameInRow="SVRT_COM" msprop:Generator_ColumnPropNameInTable="SVRT_COMColumn" msprop:Generator_UserColumnName="SVRT_COM" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_DESC" msprop:Generator_ColumnVarNameInTable="columnMC_DESC" msprop:Generator_ColumnPropNameInRow="MC_DESC" msprop:Generator_ColumnPropNameInTable="MC_DESCColumn" msprop:Generator_UserColumnName="MC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_IT_POWERED" msprop:Generator_ColumnVarNameInTable="columnMC_IT_POWERED" msprop:Generator_ColumnPropNameInRow="MC_IT_POWERED" msprop:Generator_ColumnPropNameInTable="MC_IT_POWEREDColumn" msprop:Generator_UserColumnName="MC_IT_POWERED" type="xs:string" minOccurs="0" />
+              <xs:element name="SVRT_PC" msprop:Generator_ColumnVarNameInTable="columnSVRT_PC" msprop:Generator_ColumnPropNameInRow="SVRT_PC" msprop:Generator_ColumnPropNameInTable="SVRT_PCColumn" msprop:Generator_UserColumnName="SVRT_PC" type="xs:string" minOccurs="0" />
+              <xs:element name="PC_DESC" msprop:Generator_ColumnVarNameInTable="columnPC_DESC" msprop:Generator_ColumnPropNameInRow="PC_DESC" msprop:Generator_ColumnPropNameInTable="PC_DESCColumn" msprop:Generator_UserColumnName="PC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="SAH_ACC_NO" msprop:Generator_ColumnVarNameInTable="columnSAH_ACC_NO" msprop:Generator_ColumnPropNameInRow="SAH_ACC_NO" msprop:Generator_ColumnPropNameInTable="SAH_ACC_NOColumn" msprop:Generator_UserColumnName="SAH_ACC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SAH_INV_NO" msprop:Generator_ColumnVarNameInTable="columnSAH_INV_NO" msprop:Generator_ColumnPropNameInRow="SAH_INV_NO" msprop:Generator_ColumnPropNameInTable="SAH_INV_NOColumn" msprop:Generator_UserColumnName="SAH_INV_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SAH_DT" msprop:Generator_ColumnVarNameInTable="columnSAH_DT" msprop:Generator_ColumnPropNameInRow="SAH_DT" msprop:Generator_ColumnPropNameInTable="SAH_DTColumn" msprop:Generator_UserColumnName="SAH_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CUSTOMER" msprop:Generator_ColumnVarNameInTable="columnCUSTOMER" msprop:Generator_ColumnPropNameInRow="CUSTOMER" msprop:Generator_ColumnPropNameInTable="CUSTOMERColumn" msprop:Generator_UserColumnName="CUSTOMER" type="xs:string" minOccurs="0" />
+              <xs:element name="SRVT_ITM_CD" msprop:Generator_ColumnVarNameInTable="columnSRVT_ITM_CD" msprop:Generator_ColumnPropNameInRow="SRVT_ITM_CD" msprop:Generator_ColumnPropNameInTable="SRVT_ITM_CDColumn" msprop:Generator_UserColumnName="SRVT_ITM_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="SVRT_MODEL" msprop:Generator_ColumnVarNameInTable="columnSVRT_MODEL" msprop:Generator_ColumnPropNameInRow="SVRT_MODEL" msprop:Generator_ColumnPropNameInTable="SVRT_MODELColumn" msprop:Generator_UserColumnName="SVRT_MODEL" type="xs:string" minOccurs="0" />
+              <xs:element name="SVRT_ENGINE" msprop:Generator_ColumnVarNameInTable="columnSVRT_ENGINE" msprop:Generator_ColumnPropNameInRow="SVRT_ENGINE" msprop:Generator_ColumnPropNameInTable="SVRT_ENGINEColumn" msprop:Generator_UserColumnName="SVRT_ENGINE" type="xs:string" minOccurs="0" />
+              <xs:element name="SVRT_CHASSIS" msprop:Generator_ColumnVarNameInTable="columnSVRT_CHASSIS" msprop:Generator_ColumnPropNameInRow="SVRT_CHASSIS" msprop:Generator_ColumnPropNameInTable="SVRT_CHASSISColumn" msprop:Generator_UserColumnName="SVRT_CHASSIS" type="xs:string" minOccurs="0" />
+              <xs:element name="SVRT_VEH_REG_NO" msprop:Generator_ColumnVarNameInTable="columnSVRT_VEH_REG_NO" msprop:Generator_ColumnPropNameInRow="SVRT_VEH_REG_NO" msprop:Generator_ColumnPropNameInTable="SVRT_VEH_REG_NOColumn" msprop:Generator_UserColumnName="SVRT_VEH_REG_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SRVT_RMV_STUS" msprop:Generator_ColumnVarNameInTable="columnSRVT_RMV_STUS" msprop:Generator_ColumnPropNameInRow="SRVT_RMV_STUS" msprop:Generator_ColumnPropNameInTable="SRVT_RMV_STUSColumn" msprop:Generator_UserColumnName="SRVT_RMV_STUS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,508 @@
+﻿@model FF.BusinessObjects.ToursNew.mst_fleet
+@{
+    ViewBag.Title = "Fleet Creation";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts{
+    <script src="~/Scripts/Common/fleet2.js?@val"></script>
+    <script src="~/Scripts/Common/Fleet.js?@val"></script>
+}
+
+
+
+@using (Html.BeginForm("FleetCreation", "FleetDefinition", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-fleet-det", role = "form", @id = "fleet-crte-frm" }))
+{
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Fleet Creation</div>
+            </div>
+            <div class="col-md-8">
+                <input type="button" value="Clear" class="btn btn-default btn-default-style  btn-fleet-clear-data" />
+                <input type="button" value="Create" class="btn btn-default btn-default-style  btn-fleet-Add-data" />
+                <input type="button" value="Agreement" class="btn btn-default btn-default-style  btn-fleet-Print" />
+                <input type="button" value="Invoice" class="btn btn-default btn-default-style  btn-fleet-Invoice" />
+                <input type="button" value="Uploads" class="btn btn-default btn-default-style  btn-fleet-docupload" data-toggle="modal" data-target="#myImageUploadModal" />
+            </div>
+        </div>
+    </div>
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    @Html.HiddenFor(model => model.MSTF_SEQ)
+    <div class="demopage">
+        <div class="container1">
+            <div class="panel-default col-md-12">
+                <div class="panel panel-heading">Vehicle Characteristic</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVRegNo</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_REGNO, new { htmlAttributes = new { @class = "form-control with-search required-field", required = "required" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img reg-no-search">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVStatus</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(m => m.MSTF_ACT, new List<SelectListItem>(), "Select", new { @class = "form-control fleet-status-dropdown" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">Vehicle Type</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(m => m.MSTF_VEH_TP, new List<SelectListItem>(), "Select Type", new { @class = "form-control fleet-vehtyp-dropdown" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVModel</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_MODEL, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_MODEL, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVBrand</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_BRD, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_BRD, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVECapacity</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_ENGIN_CAP, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_ENGIN_CAP, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVFType</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(m => m.MSTF_FUAL_TP, new List<SelectListItem>(), "Select Type", new { @class = "form-control fleet-fueltyp-dropdown" })
+                                        @Html.ValidationMessageFor(model => model.MSTF_FUAL_TP, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVNoSeats</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_NOOF_SEAT, new { htmlAttributes = new { @class = "form-control required-field", required = "required", type = "number" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_NOOF_SEAT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetVSCode</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_SIPP_CD, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_SIPP_CD, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">Fleet Cost(Month)</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_COST, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">Procurement Type </label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownListFor(m => m.MSTF_REASON, new List<SelectListItem>(), "Select Type", new { @class = "form-control fleet-fueltyp-dropdown" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">Hiring Deposit</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_HIRING_DEPOSITE, new { htmlAttributes = new { @class = "form-control required-field", type = "text" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_HIRING_DEPOSITE, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">Agreement Start Date</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_FROM_DT, new { htmlAttributes = new { @class = "form-control required-field", required = "required", type = "text" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_FROM_DT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-4 form-group">
+                                    <label class="col-lg-4 control-label">End Date</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_TO_DT, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_TO_DT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-sep col-md-12 hiring-data">
+                <div class="panel panel-heading">Hiring Details</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+
+                                <div class="col-md-3 form-group">
+                                    <label class="col-lg-4 control-label"> Mileage</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_PRO_MILGE, new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-3 form-group">
+                                    <label class="col-lg-4 control-label">Full Day</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_ADD_FULL_DAY, new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 form-group">
+                                    <label class="col-lg-4 control-label">Half Day</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_ADD_HALF_DAY, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_ADD_HALF_DAY, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3 form-group">
+                                    <label class="col-lg-4 control-label">Airport Return</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_ADD_AIR_RET, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_ADD_AIR_RET, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep col-md-6">
+                <div class="panel panel-heading">Owner Details</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">@FF.Resources.Resource.fleetOwner</label>
+                                    <div class="col-md-9">
+                                        @Html.DropDownListFor(m => m.MSTF_OWN, new List<SelectListItem>(), "Select", new { @class = "form-control fleet-source-dropdown" })
+                                        @Html.ValidationMessageFor(model => model.MSTF_OWN, "", new { @class = "text-danger" })
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">@FF.Resources.Resource.fleetOwName</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.MSTF_OWN_NM, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_OWN_CONT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">@FF.Resources.Resource.fleetOwContact</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.MSTF_OWN_CONT, new { htmlAttributes = new { @class = "form-control required-field", required = "required", type = "text" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_OWN_CONT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">@FF.Resources.Resource.fleetOwEmail</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.MSTF_OWN_EMAIL, new { htmlAttributes = new { @class = "form-control required-field", required = "required", type = "email", placeholder = "example@mail.ru" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_OWN_EMAIL, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">NIC</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.MSTF_OWN_NIC, new { htmlAttributes = new { @class = "form-control required-field", required = "required", type = "text" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_OWN_NIC, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">Address 1</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.MSTF_OWN_ADD1, new { htmlAttributes = new { @class = "form-control required-field", required = "required", type = "text" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_OWN_ADD1, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">Address 2</label>
+                                    <div class="col-md-9">
+                                        @Html.EditorFor(model => model.MSTF_OWN_ADD2, new { htmlAttributes = new { @class = "form-control required-field", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_OWN_ADD2, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panel-sep col-md-6" style="height:135px">
+                <div class="panel panel-heading">Allocate </div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label class="col-md-3 control-label">@FF.Resources.Resource.fleetAllocSbu</label>
+                                    <div class="col-md-6">
+                                        <input type="text" id="profitcenter" name="profitcenter" class="form-control with-search" readonly />
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img profit-center-search">
+                                        <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img add-prof-cen-data">
+                                    </div>
+                                    <div class="col-md-6">
+                                        @*<input type="button" style="display:none;" value="Add" class="btn btn-default btn-default-style add-prof-cen-data" />*@
+
+                                    </div>
+
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-12 form-group table-wrap">
+                                        <table class="profit-center-table pc-change">
+                                            <tr class="table-hed">
+                                                <th>@FF.Resources.Resource.txtSbu</th>
+                                                <th>@FF.Resources.Resource.txtOper</th>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep col-md-6">
+                <div class="panel panel-heading">Driver Allocation</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-7 form-group">
+                                    <label class="col-lg-5 control-label">@FF.Resources.Resource.fleetDriver</label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="MFD_DRI" name="MFD_DRI" class="form-control with-search" readonly />
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img driver-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">@FF.Resources.Resource.fleetDFrom</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="MFD_FRM_DT" name="MFD_FRM_DT" class="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-3 control-label">@FF.Resources.Resource.fleetDTo</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="MFD_TO_DT" name="MFD_TO_DT" class="form-control" />
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="row" style="height:170px; overflow-x:hidden;overflow-y:auto">
+                                <table class="vehicle-allocation-table table">
+                                    <tr class="table-hed">
+                                        <th>Vehicle No</th>
+                                        <th>Driver</th>
+                                        <th>From Date</th>
+                                        <th>To Date</th>
+                                        <th>Allocation Id</th>
+                                        <th>Operation</th>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep col-md-6">
+                <div class="panel panel-heading">Service & Maintaince</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-12 form-group">
+                                    <label class="col-lg-5 control-label">@FF.Resources.Resource.fleetLSMeter</label>
+                                    <div class="col-md-7">
+                                        @Html.EditorFor(model => model.MSTF_LST_SERMET, new { htmlAttributes = new { @class = "form-control required-field", type = "text", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_LST_SERMET, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label class="col-lg-5 control-label">@FF.Resources.Resource.fleetIExDT</label>
+                                    <div class="col-md-7">
+                                        @Html.EditorFor(model => model.MSTF_INSU_EXP, new { htmlAttributes = new { @class = "form-control", required = "required", type = "text" } })
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-12 form-group">
+                                    <label class="col-lg-5 control-label">@FF.Resources.Resource.fleetInBy</label>
+                                    <div class="col-md-7">
+                                        @Html.EditorFor(model => model.MSTF_INSU_COM, new { htmlAttributes = new { @class = "form-control with-search required-field", required = "required", @readonly = "readonly" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img ins-by-search">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label class="col-lg-5 control-label">@FF.Resources.Resource.fleetRExDT</label>
+                                    <div class="col-md-7">
+                                        @Html.EditorFor(model => model.MSTF_REG_EXP, new { htmlAttributes = new { @class = "form-control", required = "required", type = "text" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_REG_EXP, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12 form-group">
+                                    <label class="col-lg-6 control-label">@FF.Resources.Resource.fleetIsLease</label>
+                                    <div class="col-md-6">
+                                        <input type="radio" name="MSTF_IS_LEASE" id="MSTF_IS_LEASE" value="1">Yes
+                                        <input type="radio" name="MSTF_IS_LEASE" id="MSTF_IS_LEASE" value="0">No
+                                        @Html.ValidationMessageFor(model => model.MSTF_IS_LEASE, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-sep col-md-6">
+                <div class="panel panel-heading">Other Details</div>
+                <div class="panel-container">
+
+                    <div id="view5" class="tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetDate</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_DT, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_DT, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetSMeter</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_ST_METER, new { htmlAttributes = new { @class = "form-control", type = "text", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_ST_METER, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetTBRegNo</label>
+                                    <div class="col-md-8">
+                                        @Html.EditorFor(model => model.MSTF_TOU_REGNO, new { htmlAttributes = new { @class = "form-control", required = "required" } })
+                                        @Html.ValidationMessageFor(model => model.MSTF_TOU_REGNO, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.fleetComments</label>
+                                    <div class="col-md-8">
+                                        @Html.TextAreaFor(model => model.MSTF_COMMENTS, new { @class = "form-control" })
+                                        @Html.ValidationMessageFor(model => model.MSTF_COMMENTS, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+
+}
+<div class="modal fade" tabindex="-1" id="myImageUploadModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Documents</h4>
+            </div>
+            <div class="modal-body">
+                @Html.Partial("~/Views/Shared/_ImageUploads.cshtml")
+            </div>
+            <div class="modal-footer" style="margin-top:120px">
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+<div class="modal fade my-popup-div" id="fleetinvoice" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="cus-title">Fleet Invoice</h4>
+            </div>
+            <div class="row form-horizontal margin-set-pop">
+                <div class="col-md-3 form-group">
+                    <label class="col-md-12 control-label">From Date</label>
+                    <div class="col-md-12">
+                        @Html.Editor("fdate", new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label class="col-md-12 control-label">Type</label>
+                    <div class="col-md-12">
+                        @Html.Editor("tdate", new { htmlAttributes = new { @class = "form-control" } })
+                    </div>
+                </div>
+                <div class="col-md-3 form-group">
+                    <label class="col-md-12 control-label">Charges</label>
+                    <div class="col-md-12">
+                        @Html.Editor("chg", new { htmlAttributes = new { @class = "form-control with-search" } })
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default btn-default-style btn-get-fleet-print" data-dismiss="modal">Print</button>
+            </div>
+        </div>
+    </div>
+</div>

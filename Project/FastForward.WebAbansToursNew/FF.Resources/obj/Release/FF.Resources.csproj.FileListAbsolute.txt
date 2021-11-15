@@ -1,0 +1,11 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\bin\Release\FF.Resources.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\bin\Release\FF.Resources.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\bin\Release\PagedList.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\bin\Release\PagedList.Mvc.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\bin\Release\PagedList.xml
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\bin\Release\PagedList.Mvc.xml
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\obj\Release\FF.Resources.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\obj\Release\FF.Resources.Resource.resources
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\obj\Release\FF.Resources.csproj.GenerateResource.Cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\obj\Release\FF.Resources.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.WebAbansToursNew\FF.Resources\obj\Release\FF.Resources.pdb

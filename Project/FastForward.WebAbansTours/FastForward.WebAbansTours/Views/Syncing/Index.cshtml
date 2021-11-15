@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="demopage">
+    <div class="container1">
+        @using (Html.BeginForm("SaveExcelData", "Syncing", FormMethod.Post, new { enctype = "multipart/form-data", @id = "imp-data" }))
+        {
+            <div class="panel-container">
+                <div id="view1" class="tab-content-cls">
+                    <div class="form-horizontal">
+                        
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label class="col-md-3 control-label">Upload File</label>
+                                <div class="col-md-3">
+                                    <input type="file" name="UploadedFile" id="UploadedFile" class="form-control-file" required />
+                                </div>
+                                <div class="col-md-1">
+                                    <input type="submit" value="Submit" class="btn btn-xs btn-default imprt-cd-data" />
+                                </div>
+                               
+                                    <div class="col-md-4 alert alert-success">
+                                        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                        <strong>@Session["DataAdd"]</strong>
+                                    </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+      
+    </div>
+</div>

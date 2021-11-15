@@ -1,0 +1,631 @@
+﻿@model FF.BusinessObjects.GEN_CUST_ENQ
+
+@{
+    ViewBag.Title = FF.Resources.Resource.TransEnqMangTitle;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+    string pc = (string)Session["UserDefProf"];
+    var hidefields = System.Web.Configuration.WebConfigurationManager.AppSettings[pc];
+    if (hidefields == null)
+    {
+        hidefields = "false";
+    }
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/jquery-ui-timepicker-addon.js?@val"></script>
+    <script src="~/Scripts/Common/Payment.js?@val"></script>
+    <script src="~/Scripts/Common/TransportEnquiry.js?@val"></script>
+    <script src="~/Scripts/Common/DataEntry.js"></script>
+}
+<div class="trans-enq-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Transport Enquiry Management</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default-style btn-clear-trans-data" />
+                <input type="submit" value="Send SMS" class="btn btn-default-style btn-send-sms" />
+                <input type="submit" value="Create" class="btn btn-default-style btn-save-trans-data" />
+                <input type="submit" value="Print" class="btn btn-default-style btn-print-trans-data" />
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("EnquiryCreation", "TransportEnquiry", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-trans-enq-det", role = "form", @id = "trans-enq-frm" }))
+    {
+
+        <div class="demopage">
+            <div class="container1">
+                <div class="row">
+                    <div class="panel-sep col-md-6">
+                    </div>
+                    <div class="panel-sep col-md-6">
+                        <div class="col-md-5 form-group">
+                            <label class="col-md-4 control-label">@FF.Resources.Resource.txtEnqId</label>
+                            <div class="col-md-8">
+                                @Html.EditorFor(model => model.GCE_ENQ_ID, new { htmlAttributes = new { @class = "form-control with-search", maxLength = "20", required = "required" } })
+                                <img src="~/Resources/Images/Search-icon.png" class="search-img trans-enq-search" title="Search">
+                                @Html.HiddenFor(model => model.GCE_SEQ, new { Value = "0" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel-sep col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">@FF.Resources.Resource.txtCusDet</div>
+                            <div class="panel panel-body">
+                                <div class="row">
+                                    <div class="container1 op-btns other-option">
+                                        <div class="col-md-12">
+                                            <img src="~/Resources/Images/Add-cust.png" class="add-cust-img  add-customer-data" title="New Customer">
+                                            <img src="~/Resources/Images/History.png" class="history-img  history-trans-enq-data" title="History">
+
+                                            @*<input type="button" value="History" class="btn btn-default btn-default-style " />
+                                                <input type="button" value="New Customer" class="btn btn-default btn-default-style  add-customer-data" style="margin-left:5px" />*@
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtCd</label>
+                                        <div class="col-md-11">
+                                            @Html.EditorFor(model => model.GCE_CUS_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxLength = "20", required = "required" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img cus-cd-trans-enq-search" title="Search">
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtMob</label>
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.GCE_MOB, new { htmlAttributes = new { @class = "form-control", maxLength = "15", } })
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-5 form-group">
+                                        <label class="col-lg-10 control-label">@FF.Resources.Resource.txtNicNo</label>
+                                        <div class="col-md-12">
+                                            @Html.EditorFor(model => model.GCE_NIC, new { htmlAttributes = new { @class = "form-control", maxLength = "12", } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtNme</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_NAME, new { htmlAttributes = new { @class = "form-control", maxLength = "200", } })
+                                        </div>
+                                    </div>
+                                    @{
+        if (hidefields == "true")
+        {
+            <div class="col-md-6 form-group">
+                <label class="col-lg-3 control-label">Type</label>
+                <div class="col-md-9">
+                    @Html.DropDownListFor(model => model.GCE_CUS_TYPE, new List<SelectListItem>
+                                                { new SelectListItem { Value = "PREPAID", Text = "Prepaid" },
+                                                new SelectListItem { Value = "FIT", Text = "FIT" },
+                                                new SelectListItem { Value = "WEB", Text = "Website" },
+                                                new SelectListItem { Value = "DIR", Text = "Direct" } },
+                                                "Select", new { @class = "form-control cus-typ-dropdown" })
+                </div>
+            </div>
+        }
+                                    }
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-lg-2 control-label">@FF.Resources.Resource.txtAdd</label>
+                                        <div class="col-md-5">
+                                            @Html.EditorFor(model => model.GCE_ADD1, new { htmlAttributes = new { @class = "form-control", maxLength = "200", } })
+                                        </div>
+                                        <div class="col-md-5">
+                                            @Html.EditorFor(model => model.GCE_ADD2, new { htmlAttributes = new { @class = "form-control", maxLength = "200", } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        @*<ul class="rtabs">
+                                <li><a href="#view1">@FF.Resources.Resource.txtCusDet</a></li>
+                            </ul>
+                            <div class="panel-container">
+                                <div id="view5" class="tab-content-cls">
+                                    <div class="form-horizontal">
+
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                    <div class="panel-sep col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">@FF.Resources.Resource.txtReqDet</div>
+                            <div class="panel panel-body">
+                                <table class="pending-trans-enqui table">
+                                    <tr class="table-hed">
+                                        <th></th>
+                                        <th>@FF.Resources.Resource.txtCusCd</th>
+                                        <th>@FF.Resources.Resource.txtSysId</th>
+                                        <th>@FF.Resources.Resource.txtManRef</th>
+                                        <th>@FF.Resources.Resource.txtExpDte</th>
+                                    </tr>
+                                    <tbody id="enq-all-tbl"></tbody>
+                                </table>
+                                <div class="col-md-12 text-center">
+                                    <ul class="pagination pagination-lg pager" id="myPager"></ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        @*<ul class="rtabs">
+                                <li><a href="#view2">@FF.Resources.Resource.txtReqDet</a></li>
+                            </ul>
+                            <div class="panel-container">
+                                <div id="view2" class="tab-content-cls">
+                                    <div class="form-horizontal">
+
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="panel-sep col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">@FF.Resources.Resource.txtTrpDet</div>
+                            <div class="panel panel-body">
+                                <div class="row">
+                                    @{
+        if (hidefields == "false")
+        {
+            <div class="col-md-6">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtTrpTyp</label>
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.GCE_ENQ_SUB_TP, new List<SelectListItem> { new SelectListItem { Value = "D", Text = "Droped" }, new SelectListItem { Value = "P", Text = "Picked Up" }, new SelectListItem { Value = "TR", Text = "Transport" }, new SelectListItem { Value = "TO", Text = "Tours" } }, "Select", new { @class = "form-control cus-typ-dropdown" })
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-6 hide">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtTrpTyp</label>
+                <div class="col-md-8">
+                    @Html.DropDownListFor(model => model.GCE_ENQ_SUB_TP, new List<SelectListItem> { new SelectListItem { Value = "D", Text = "Droped" }, new SelectListItem { Value = "P", Text = "Picked Up" }, new SelectListItem { Value = "TR", Text = "Transport" }, new SelectListItem { Value = "TO", Text = "Tours" } }, "Select", new { @class = "form-control cus-typ-dropdown" })
+                </div>
+            </div>
+        }
+                                    }
+
+                                    <div class="col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtNumOfPassen</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_NO_PASS, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    @*</div>
+                                        <div class="row">*@
+                                    <div class="col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtReqVehiTyp</label>
+                                        <div class="col-md-8">
+                                            @Html.DropDownListFor(model => model.GCE_VEH_TP, new List<SelectListItem> { new SelectListItem { Value = "CAR", Text = "CAR" }, new SelectListItem { Value = "VAN", Text = "VAN" }, new SelectListItem { Value = "BUS", Text = "BUS" } }, "Select", new { @class = "form-control cus-typ-dropdown" })
+                                        </div>
+                                    </div>
+                                    @{
+        if (hidefields == "false")
+        {
+            <div class="col-md-6">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtNumOfReqVehi</label>
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.GCE_REQ_NO_VEH, new { htmlAttributes = new { @class = "form-control required-field" } })
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-6 hide">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtNumOfReqVehi</label>
+                <div class="col-md-8">
+                    @Html.EditorFor(model => model.GCE_REQ_NO_VEH, new { htmlAttributes = new { @class = "form-control required-field", @Value = "1" } })
+                </div>
+            </div>
+        }
+                                    }
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <div class="panel panel-default">
+                                            <div class="panel panel-heading">Pickup Location</div>
+                                            <div class="panel panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtTown</label>
+                                                        <div class="col-md-8">
+                                                            @Html.EditorFor(model => model.GCE_FRM_TN, new { htmlAttributes = new { @class = "form-control with-search required-field", maxLength = "50" } })
+                                                            <img src="~/Resources/Images/Search-icon.png" class="search-img pick-town-search" title="Search">
+                                                        </div>
+                                                    </div>
+                                                    @{
+        if (1 == 1)
+        {
+            <div class="col-md-12">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtAdd</label>
+                <div class="col-md-8">
+                    @Html.TextAreaFor(model => model.GCE_FRM_ADD, new { @class = "form-control addres-set", maxLength = "200" })
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-12 hide">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtAdd</label>
+                <div class="col-md-8">
+                    @Html.TextAreaFor(model => model.GCE_FRM_ADD, new { @class = "form-control addres-set", maxLength = "200" })
+                </div>
+            </div>
+        }
+                                                    }
+                                                    <div class="col-md-12">
+                                                        <label class="col-md-4 control-label">Pick Date</label>
+                                                        <div class="col-md-8">
+                                                            @Html.EditorFor(model => model.GCE_EXPECT_DT, new { htmlAttributes = new { @class = "form-control" } })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        @*<ul class="rtabs">
+                                                <li><a href="#view5">@FF.Resources.Resource.txtPckUpDetls</a></li>
+                                            </ul>
+                                            <div id="view5" class="tab-content-cls">
+                                                <div class="form-horizontal">
+
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+
+                                        <div class="panel panel-default">
+                                            <div class="panel panel-heading">Drop Location</div>
+                                            <div class="panel panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtTown</label>
+                                                        <div class="col-md-8">
+                                                            @Html.EditorFor(model => model.GCE_TO_TN, new { htmlAttributes = new { @class = "form-control with-search required-field", maxLength = "50" } })
+                                                            <img src="~/Resources/Images/Search-icon.png" class="search-img drop-town-search" title="Search">
+                                                        </div>
+                                                    </div>
+                                                    @{
+        if (1 == 1)
+        {
+            <div class="col-md-12">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtAdd</label>
+                <div class="col-md-8">
+                    @Html.TextAreaFor(model => model.GCE_TO_ADD, new { @class = "form-control addres-set", maxLength = "200" })
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-md-12 hide">
+                <label class="col-md-4 control-label">@FF.Resources.Resource.txtAdd</label>
+                <div class="col-md-8">
+                    @Html.TextAreaFor(model => model.GCE_TO_ADD, new { @class = "form-control addres-set", maxLength = "200" })
+                </div>
+            </div>
+        }
+                                                    }
+                                                    <div class="col-md-12">
+                                                        <label class="col-md-4 control-label">Drop Date</label>
+                                                        <div class="col-md-8">
+                                                            @Html.EditorFor(model => model.GCE_RET_DT, new { htmlAttributes = new { @class = "form-control" } })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @*<ul class="rtabs">
+                                                <li><a href="#view6">@FF.Resources.Resource.txtDrpDetls</a></li>
+                                            </ul>
+                                            <div id="view6" class="tab-content-cls">
+                                                <div class="form-horizontal">
+
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtCntPer</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_CONT_CD, new { htmlAttributes = new { @class = "form-control with-search", maxLength = "50" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img guss-cus-cd-search">
+                                        </div>
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.EnqgussName</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_GUESS, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @maxlength = "25" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtCntMob</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_CONT_MOB, new { htmlAttributes = new { @class = "form-control", maxLength = "10" } })
+                                        </div>
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.EnqgussEmail</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_CONT_EMAIL, new { htmlAttributes = new { @class = "form-control with-search", required = "required", @type = "email" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">NIC</label>
+                                        <div class="col-md-8">
+                                            <input type="text" id="Mbe_nic" name="Mbe_nic" class="form-control" />
+                                        </div>
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">Flight No</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_FLY_NO, new { htmlAttributes = new { @class = "form-control", maxLength = "50" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">Flight Date</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_FLY_DATE, new { htmlAttributes = new { @class = "form-control", maxLength = "10" } })
+                                        </div>
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtRefNum</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_REF, new { htmlAttributes = new { @class = "form-control", maxLength = "50" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtRemks</label>
+                                        <div class="col-md-8">
+                                            @Html.TextAreaFor(model => model.GCE_ENQ, new { @class = "form-control trans-enq-remark required-field", maxLength = "500" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                        @*<ul class="rtabs">
+                                <li><a href="#view4">@FF.Resources.Resource.txtTrpDet</a></li>
+                            </ul>
+                            <div class="panel-container">
+                                <div id="view4" class="tab-content-cls">
+                                    <div class="form-horizontal">
+
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+                    <div class="panel-sep col-md-6">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Vehicle Allocation</div>
+                            <div class="panel panel-body">
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtReqDte</label>
+                                        <div class="col-md-8">
+                                            @*@Html.EditorFor("Req_dt", new { htmlAttributes = new { @class = "form-control" } })*@
+                                            @Html.Editor("Req_dt", new { htmlAttributes = new { @class = "form-control"} })
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-md-4 control-label">@FF.Resources.Resource.txtRetDte</label>
+                                        <div class="col-md-8">
+                                            @*@Html.EditorFor("Ret_dt", new { htmlAttributes = new { @class = "form-control" } })*@
+                                            @Html.Editor("Ret_dt", new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtSerBy</label>
+                                        <div class="col-md-8">
+                                            @Html.DropDownListFor(model => model.GEN_CUST_ENQSER.GCS_SER_PROVIDER, new List<SelectListItem> { new SelectListItem { Value = "Internal", Text = "Internal" }, new SelectListItem { Value = "External", Text = "External" } }, "Select", new { @class = "form-control cus-typ-dropdown" })
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtVehi</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_FLEET, new { htmlAttributes = new { @class = "form-control with-search", maxLength = "10" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img trans-vehicle-search" title="Search">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDriver</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.GCE_DRIVER, new { htmlAttributes = new { @class = "form-control with-search", maxLength = "20" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img trans-driver-search" title="Search">
+                                        </div>
+
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtNme</label>
+                                        <div class="col-md-8">
+                                            @Html.Editor("drivername", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="panel-sep col-md-6">
+                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDriCont</label>
+                                        <div class="col-md-8">
+                                            @Html.Editor("drivercontact", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="panel-sep col-md-12">
+                                        <div class="panel panel-default">
+                                            <div class="panel panel-heading">
+                                                <div class="col-md-4">@FF.Resources.Resource.txtChrgs</div>
+
+
+                                            </div>
+                                            <div class="panel panel-body">
+                                                <div class="row">
+                                                    <div class="col-md-4">
+                                                        <label class="col-lg-4 control-label">Transport</label>
+                                                        <div class="col-md-8">
+                                                            <input type="radio" id="radtype1" name="radtype" checked="checked" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="col-lg-4 control-label">Other</label>
+                                                        <div class="col-md-8">
+                                                            <input type="radio" id="radtype2" name="radtype" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtCrgCd</label>
+                                                        <div class="col-md-8">
+                                                            @Html.Editor("ChargCode", new { htmlAttributes = new { @class = "form-control with-search", maxLength = "50" } })
+                                                            <img src="~/Resources/Images/Search-icon.png" class="search-img charg-cde-search" title="Search">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtUniRte</label>
+                                                        <div class="col-md-8">
+                                                            @Html.Editor("UnitRate", new { htmlAttributes = new { @class = "form-control with-search", maxLength = "50" } })
+                                                            <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img add-price-amount-trans" title="Add">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-6">
+                                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDis</label>
+                                                        <div class="col-md-3">
+                                                            @Html.Editor("DiscountRate", new { htmlAttributes = new { @class = "form-control", maxLength = "3" } })
+                                                        </div>
+                                                        <div class="col-md-5">
+                                                            @Html.Editor("DiscountAmount", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="col-lg-4 control-label">@FF.Resources.Resource.txtAmount</label>
+                                                        <div class="col-md-8">
+                                                            @Html.Editor("FinalDiscountedAmount", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col-md-3">
+                                                        <label class="col-lg-6 control-label">Items</label>
+                                                        <div class="col-md-6">
+                                                            @Html.Editor("Items", new { htmlAttributes = new { @class = "form-control", maxLength = "3", @Value = "1" } })
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-5">
+                                                        <label class="col-lg-4 control-label">Extra Charges :</label>
+                                                        <label class="col-lg-4 control-label extra-charges">0.00</label>
+                                                    </div>
+                                                    <div class="col-md-4">
+                                                        <label class="col-lg-4 control-label">Tax  :</label>
+                                                        <label class="col-lg-2 control-label tax-charges">0.00</label>
+                                                        <label class="col-lg-2 control-label">%</label>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="panel panel-default">
+                                                        <div class="panel panel-heading">@FF.Resources.Resource.txtChrgItm</div>
+                                                        <div class="panel panel-body">
+                                                            <table class="charg-enq-tbl table">
+                                                                <tr class="table-hed">
+                                                                    <th>@FF.Resources.Resource.txtCrgCd</th>
+                                                                    <th>@FF.Resources.Resource.txtUniRte</th>
+                                                                    <th>@FF.Resources.Resource.txtDis</th>
+                                                                    <th>Tax Amount</th>
+                                                                    <th>@FF.Resources.Resource.txtAmount</th>
+                                                                    <th></th>
+                                                                </tr>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    @*<ul class="rtabs">
+                                                            <li><a href="#view7">@FF.Resources.Resource.txtChrgItm</a></li>
+                                                        </ul>
+                                                        <div id="view7" class="tab-content-cls">
+                                                            <div class="form-horizontal">
+
+                                                            </div>
+                                                        </div>*@
+                                                </div>
+                                                <div class="row">
+                                                    <label class="col-md-1 control-label">@FF.Resources.Resource.txtTotal</label>
+                                                    <div class="col-md-3">
+                                                        @Html.Editor("TotalAmount", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+
+                                        @*<ul class="rtabs">
+                                                <li><a href="#view7">@FF.Resources.Resource.txtChrgs</a></li>
+                                            </ul>
+                                            <div id="view7" class="tab-content-cls">
+                                                <div class="form-horizontal">
+
+                                                </div>
+                                            </div>*@
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        @*<ul class="rtabs">
+                                <li><a href="#view3">@FF.Resources.Resource.txtVehiAllow</a></li>
+                            </ul>
+                            <div class="panel-container">
+                                <div id="view3" class="tab-content-cls">
+                                    <div class="form-horizontal">
+
+
+                                    </div>
+                                </div>
+                            </div>*@
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    }
+
+    <div class="customer-create-popup">
+        @Html.Partial("~/Views/Shared/_Customer.cshtml")
+    </div>
+</div>

@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mrnprint" targetNamespace="http://tempuri.org/mrnprint.xsd" xmlns:mstns="http://tempuri.org/mrnprint.xsd" xmlns="http://tempuri.org/mrnprint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mrnprint" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="mrnprint" msprop:Generator_UserDSName="mrnprint">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="MRN_PRINT" msprop:Generator_TableClassName="MRN_PRINTDataTable" msprop:Generator_TableVarName="tableMRN_PRINT" msprop:Generator_RowChangedName="MRN_PRINTRowChanged" msprop:Generator_TablePropName="MRN_PRINT" msprop:Generator_RowDeletingName="MRN_PRINTRowDeleting" msprop:Generator_RowChangingName="MRN_PRINTRowChanging" msprop:Generator_RowEvHandlerName="MRN_PRINTRowChangeEventHandler" msprop:Generator_RowDeletedName="MRN_PRINTRowDeleted" msprop:Generator_RowClassName="MRN_PRINTRow" msprop:Generator_UserTableName="MRN_PRINT" msprop:Generator_RowEvArgName="MRN_PRINTRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ITR_COM" msprop:Generator_ColumnVarNameInTable="columnITR_COM" msprop:Generator_ColumnPropNameInRow="ITR_COM" msprop:Generator_ColumnPropNameInTable="ITR_COMColumn" msprop:Generator_UserColumnName="ITR_COM" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_DESC" msprop:Generator_ColumnVarNameInTable="columnMC_DESC" msprop:Generator_ColumnPropNameInRow="MC_DESC" msprop:Generator_ColumnPropNameInTable="MC_DESCColumn" msprop:Generator_UserColumnName="MC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_IT_POWERED" msprop:Generator_ColumnVarNameInTable="columnMC_IT_POWERED" msprop:Generator_ColumnPropNameInRow="MC_IT_POWERED" msprop:Generator_ColumnPropNameInTable="MC_IT_POWEREDColumn" msprop:Generator_UserColumnName="MC_IT_POWERED" type="xs:string" minOccurs="0" />
+              <xs:element name="ITR_REQ_NO" msprop:Generator_ColumnVarNameInTable="columnITR_REQ_NO" msprop:Generator_ColumnPropNameInRow="ITR_REQ_NO" msprop:Generator_ColumnPropNameInTable="ITR_REQ_NOColumn" msprop:Generator_UserColumnName="ITR_REQ_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITR_DT" msprop:Generator_ColumnVarNameInTable="columnITR_DT" msprop:Generator_ColumnPropNameInRow="ITR_DT" msprop:Generator_ColumnPropNameInTable="ITR_DTColumn" msprop:Generator_UserColumnName="ITR_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ITR_EXP_DT" msprop:Generator_ColumnVarNameInTable="columnITR_EXP_DT" msprop:Generator_ColumnPropNameInRow="ITR_EXP_DT" msprop:Generator_ColumnPropNameInTable="ITR_EXP_DTColumn" msprop:Generator_UserColumnName="ITR_EXP_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ITR_REF" msprop:Generator_ColumnVarNameInTable="columnITR_REF" msprop:Generator_ColumnPropNameInRow="ITR_REF" msprop:Generator_ColumnPropNameInTable="ITR_REFColumn" msprop:Generator_UserColumnName="ITR_REF" type="xs:string" minOccurs="0" />
+              <xs:element name="ITR_NOTE" msprop:Generator_ColumnVarNameInTable="columnITR_NOTE" msprop:Generator_ColumnPropNameInRow="ITR_NOTE" msprop:Generator_ColumnPropNameInTable="ITR_NOTEColumn" msprop:Generator_UserColumnName="ITR_NOTE" type="xs:string" minOccurs="0" />
+              <xs:element name="ITR_CRE_BY" msprop:Generator_ColumnVarNameInTable="columnITR_CRE_BY" msprop:Generator_ColumnPropNameInRow="ITR_CRE_BY" msprop:Generator_ColumnPropNameInTable="ITR_CRE_BYColumn" msprop:Generator_UserColumnName="ITR_CRE_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="ITR_CRE_DT" msprop:Generator_ColumnVarNameInTable="columnITR_CRE_DT" msprop:Generator_ColumnPropNameInRow="ITR_CRE_DT" msprop:Generator_ColumnPropNameInTable="ITR_CRE_DTColumn" msprop:Generator_UserColumnName="ITR_CRE_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ITR_MOD_BY" msprop:Generator_ColumnVarNameInTable="columnITR_MOD_BY" msprop:Generator_ColumnPropNameInRow="ITR_MOD_BY" msprop:Generator_ColumnPropNameInTable="ITR_MOD_BYColumn" msprop:Generator_UserColumnName="ITR_MOD_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="ITR_MOD_DT" msprop:Generator_ColumnVarNameInTable="columnITR_MOD_DT" msprop:Generator_ColumnPropNameInRow="ITR_MOD_DT" msprop:Generator_ColumnPropNameInTable="ITR_MOD_DTColumn" msprop:Generator_UserColumnName="ITR_MOD_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ITR_LOC" msprop:Generator_ColumnVarNameInTable="columnITR_LOC" msprop:Generator_ColumnPropNameInRow="ITR_LOC" msprop:Generator_ColumnPropNameInTable="ITR_LOCColumn" msprop:Generator_UserColumnName="ITR_LOC" type="xs:string" minOccurs="0" />
+              <xs:element name="ML_LOC_DESC" msprop:Generator_ColumnVarNameInTable="columnML_LOC_DESC" msprop:Generator_ColumnPropNameInRow="ML_LOC_DESC" msprop:Generator_ColumnPropNameInTable="ML_LOC_DESCColumn" msprop:Generator_UserColumnName="ML_LOC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ITR_ISSUE_FROM" msprop:Generator_ColumnVarNameInTable="columnITR_ISSUE_FROM" msprop:Generator_ColumnPropNameInRow="ITR_ISSUE_FROM" msprop:Generator_ColumnPropNameInTable="ITR_ISSUE_FROMColumn" msprop:Generator_UserColumnName="ITR_ISSUE_FROM" type="xs:string" minOccurs="0" />
+              <xs:element name="ML_LOC_DESC1" msprop:Generator_ColumnVarNameInTable="columnML_LOC_DESC1" msprop:Generator_ColumnPropNameInRow="ML_LOC_DESC1" msprop:Generator_ColumnPropNameInTable="ML_LOC_DESC1Column" msprop:Generator_UserColumnName="ML_LOC_DESC1" type="xs:string" minOccurs="0" />
+              <xs:element name="ITRI_ITM_CD" msprop:Generator_ColumnVarNameInTable="columnITRI_ITM_CD" msprop:Generator_ColumnPropNameInRow="ITRI_ITM_CD" msprop:Generator_ColumnPropNameInTable="ITRI_ITM_CDColumn" msprop:Generator_UserColumnName="ITRI_ITM_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="MI_SHORTDESC" msprop:Generator_ColumnVarNameInTable="columnMI_SHORTDESC" msprop:Generator_ColumnPropNameInRow="MI_SHORTDESC" msprop:Generator_ColumnPropNameInTable="MI_SHORTDESCColumn" msprop:Generator_UserColumnName="MI_SHORTDESC" type="xs:string" minOccurs="0" />
+              <xs:element name="SIH" msprop:Generator_ColumnVarNameInTable="columnSIH" msprop:Generator_ColumnPropNameInRow="SIH" msprop:Generator_ColumnPropNameInTable="SIHColumn" msprop:Generator_UserColumnName="SIH" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FS" msprop:Generator_ColumnVarNameInTable="columnFS" msprop:Generator_ColumnPropNameInRow="FS" msprop:Generator_ColumnPropNameInTable="FSColumn" msprop:Generator_UserColumnName="FS" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITRI_QTY" msprop:Generator_ColumnVarNameInTable="columnITRI_QTY" msprop:Generator_ColumnPropNameInRow="ITRI_QTY" msprop:Generator_ColumnPropNameInTable="ITRI_QTYColumn" msprop:Generator_UserColumnName="ITRI_QTY" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

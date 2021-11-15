@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsFixedAsset" targetNamespace="http://tempuri.org/dsFixedAsset.xsd" xmlns:mstns="http://tempuri.org/dsFixedAsset.xsd" xmlns="http://tempuri.org/dsFixedAsset.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsFixedAsset" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsFixedAsset" msprop:Generator_UserDSName="dsFixedAsset">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Fixed_Asset" msprop:Generator_TableClassName="Fixed_AssetDataTable" msprop:Generator_TableVarName="tableFixed_Asset" msprop:Generator_TablePropName="Fixed_Asset" msprop:Generator_RowDeletingName="Fixed_AssetRowDeleting" msprop:Generator_UserTableName="Fixed_Asset" msprop:Generator_RowChangingName="Fixed_AssetRowChanging" msprop:Generator_RowEvHandlerName="Fixed_AssetRowChangeEventHandler" msprop:Generator_RowDeletedName="Fixed_AssetRowDeleted" msprop:Generator_RowEvArgName="Fixed_AssetRowChangeEvent" msprop:Generator_RowChangedName="Fixed_AssetRowChanged" msprop:Generator_RowClassName="Fixed_AssetRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="FA_USER" msprop:Generator_ColumnVarNameInTable="columnFA_USER" msprop:Generator_ColumnPropNameInRow="FA_USER" msprop:Generator_ColumnPropNameInTable="FA_USERColumn" msprop:Generator_UserColumnName="FA_USER" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_PO_DT" msprop:Generator_ColumnVarNameInTable="columnFA_PO_DT" msprop:Generator_ColumnPropNameInRow="FA_PO_DT" msprop:Generator_ColumnPropNameInTable="FA_PO_DTColumn" msprop:Generator_UserColumnName="FA_PO_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="FA_PO_NO" msprop:Generator_ColumnVarNameInTable="columnFA_PO_NO" msprop:Generator_ColumnPropNameInRow="FA_PO_NO" msprop:Generator_ColumnPropNameInTable="FA_PO_NOColumn" msprop:Generator_UserColumnName="FA_PO_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_SUP" msprop:Generator_ColumnVarNameInTable="columnFA_SUP" msprop:Generator_ColumnPropNameInRow="FA_SUP" msprop:Generator_ColumnPropNameInTable="FA_SUPColumn" msprop:Generator_UserColumnName="FA_SUP" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_ITM" msprop:Generator_ColumnVarNameInTable="columnFA_ITM" msprop:Generator_ColumnPropNameInRow="FA_ITM" msprop:Generator_ColumnPropNameInTable="FA_ITMColumn" msprop:Generator_UserColumnName="FA_ITM" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_MODEL" msprop:Generator_ColumnVarNameInTable="columnFA_MODEL" msprop:Generator_ColumnPropNameInRow="FA_MODEL" msprop:Generator_ColumnPropNameInTable="FA_MODELColumn" msprop:Generator_UserColumnName="FA_MODEL" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_DESC" msprop:Generator_ColumnVarNameInTable="columnFA_DESC" msprop:Generator_ColumnPropNameInRow="FA_DESC" msprop:Generator_ColumnPropNameInTable="FA_DESCColumn" msprop:Generator_UserColumnName="FA_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_INV" msprop:Generator_ColumnVarNameInTable="columnFA_INV" msprop:Generator_ColumnPropNameInRow="FA_INV" msprop:Generator_ColumnPropNameInTable="FA_INVColumn" msprop:Generator_UserColumnName="FA_INV" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_LOC" msprop:Generator_ColumnVarNameInTable="columnFA_LOC" msprop:Generator_ColumnPropNameInRow="FA_LOC" msprop:Generator_ColumnPropNameInTable="FA_LOCColumn" msprop:Generator_UserColumnName="FA_LOC" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_SUB_CD" msprop:Generator_ColumnVarNameInTable="columnFA_SUB_CD" msprop:Generator_ColumnPropNameInRow="FA_SUB_CD" msprop:Generator_ColumnPropNameInTable="FA_SUB_CDColumn" msprop:Generator_UserColumnName="FA_SUB_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_GRN_NO" msprop:Generator_ColumnVarNameInTable="columnFA_GRN_NO" msprop:Generator_ColumnPropNameInRow="FA_GRN_NO" msprop:Generator_ColumnPropNameInTable="FA_GRN_NOColumn" msprop:Generator_UserColumnName="FA_GRN_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_DO_NO" msprop:Generator_ColumnVarNameInTable="columnFA_DO_NO" msprop:Generator_ColumnPropNameInRow="FA_DO_NO" msprop:Generator_ColumnPropNameInTable="FA_DO_NOColumn" msprop:Generator_UserColumnName="FA_DO_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_SER" msprop:Generator_ColumnVarNameInTable="columnFA_SER" msprop:Generator_ColumnPropNameInRow="FA_SER" msprop:Generator_ColumnPropNameInTable="FA_SERColumn" msprop:Generator_UserColumnName="FA_SER" type="xs:string" minOccurs="0" />
+              <xs:element name="FA_NET_VAL" msprop:Generator_ColumnVarNameInTable="columnFA_NET_VAL" msprop:Generator_ColumnPropNameInRow="FA_NET_VAL" msprop:Generator_ColumnPropNameInTable="FA_NET_VALColumn" msprop:Generator_UserColumnName="FA_NET_VAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FA_VAT" msprop:Generator_ColumnVarNameInTable="columnFA_VAT" msprop:Generator_ColumnPropNameInRow="FA_VAT" msprop:Generator_ColumnPropNameInTable="FA_VATColumn" msprop:Generator_UserColumnName="FA_VAT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FA_VAL" msprop:Generator_ColumnVarNameInTable="columnFA_VAL" msprop:Generator_ColumnPropNameInRow="FA_VAL" msprop:Generator_ColumnPropNameInTable="FA_VALColumn" msprop:Generator_UserColumnName="FA_VAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="FA_FIXED" msprop:Generator_ColumnVarNameInTable="columnFA_FIXED" msprop:Generator_ColumnPropNameInRow="FA_FIXED" msprop:Generator_ColumnPropNameInTable="FA_FIXEDColumn" msprop:Generator_UserColumnName="FA_FIXED" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

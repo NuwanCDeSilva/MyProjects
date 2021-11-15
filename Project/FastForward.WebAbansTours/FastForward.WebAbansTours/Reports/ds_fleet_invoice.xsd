@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ds_fleet_invoice" targetNamespace="http://tempuri.org/ds_fleet_invoice.xsd" xmlns:mstns="http://tempuri.org/ds_fleet_invoice.xsd" xmlns="http://tempuri.org/ds_fleet_invoice.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ds_fleet_invoice" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ds_fleet_invoice" msprop:Generator_UserDSName="ds_fleet_invoice">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="FleetInvoice" msprop:Generator_TableClassName="FleetInvoiceDataTable" msprop:Generator_TableVarName="tableFleetInvoice" msprop:Generator_TablePropName="FleetInvoice" msprop:Generator_RowDeletingName="FleetInvoiceRowDeleting" msprop:Generator_RowChangingName="FleetInvoiceRowChanging" msprop:Generator_RowEvHandlerName="FleetInvoiceRowChangeEventHandler" msprop:Generator_RowDeletedName="FleetInvoiceRowDeleted" msprop:Generator_UserTableName="FleetInvoice" msprop:Generator_RowChangedName="FleetInvoiceRowChanged" msprop:Generator_RowEvArgName="FleetInvoiceRowChangeEvent" msprop:Generator_RowClassName="FleetInvoiceRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="gce_enq_id" msprop:Generator_ColumnVarNameInTable="columngce_enq_id" msprop:Generator_ColumnPropNameInRow="gce_enq_id" msprop:Generator_ColumnPropNameInTable="gce_enq_idColumn" msprop:Generator_UserColumnName="gce_enq_id" type="xs:string" minOccurs="0" />
+              <xs:element name="outmeter" msprop:Generator_ColumnVarNameInTable="columnoutmeter" msprop:Generator_ColumnPropNameInRow="outmeter" msprop:Generator_ColumnPropNameInTable="outmeterColumn" msprop:Generator_UserColumnName="outmeter" type="xs:decimal" minOccurs="0" />
+              <xs:element name="inmeter" msprop:Generator_ColumnVarNameInTable="columninmeter" msprop:Generator_ColumnPropNameInRow="inmeter" msprop:Generator_ColumnPropNameInTable="inmeterColumn" msprop:Generator_UserColumnName="inmeter" type="xs:decimal" minOccurs="0" />
+              <xs:element name="chk_oth_chrg" msprop:Generator_ColumnVarNameInTable="columnchk_oth_chrg" msprop:Generator_ColumnPropNameInRow="chk_oth_chrg" msprop:Generator_ColumnPropNameInTable="chk_oth_chrgColumn" msprop:Generator_UserColumnName="chk_oth_chrg" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mstf_own_add1" msprop:Generator_ColumnVarNameInTable="columnmstf_own_add1" msprop:Generator_ColumnPropNameInRow="mstf_own_add1" msprop:Generator_ColumnPropNameInTable="mstf_own_add1Column" msprop:Generator_UserColumnName="mstf_own_add1" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_own_add2" msprop:Generator_ColumnVarNameInTable="columnmstf_own_add2" msprop:Generator_ColumnPropNameInRow="mstf_own_add2" msprop:Generator_ColumnPropNameInTable="mstf_own_add2Column" msprop:Generator_UserColumnName="mstf_own_add2" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_add_full_day" msprop:Generator_ColumnVarNameInTable="columnmstf_add_full_day" msprop:Generator_ColumnPropNameInRow="mstf_add_full_day" msprop:Generator_ColumnPropNameInTable="mstf_add_full_dayColumn" msprop:Generator_UserColumnName="mstf_add_full_day" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_add_half_day" msprop:Generator_ColumnVarNameInTable="columnmstf_add_half_day" msprop:Generator_ColumnPropNameInRow="mstf_add_half_day" msprop:Generator_ColumnPropNameInTable="mstf_add_half_dayColumn" msprop:Generator_UserColumnName="mstf_add_half_day" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_add_air_ret" msprop:Generator_ColumnVarNameInTable="columnmstf_add_air_ret" msprop:Generator_ColumnPropNameInRow="mstf_add_air_ret" msprop:Generator_ColumnPropNameInTable="mstf_add_air_retColumn" msprop:Generator_UserColumnName="mstf_add_air_ret" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_model" msprop:Generator_ColumnVarNameInTable="columnmstf_model" msprop:Generator_ColumnPropNameInRow="mstf_model" msprop:Generator_ColumnPropNameInTable="mstf_modelColumn" msprop:Generator_UserColumnName="mstf_model" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_regno" msprop:Generator_ColumnVarNameInTable="columnmstf_regno" msprop:Generator_ColumnPropNameInRow="mstf_regno" msprop:Generator_ColumnPropNameInTable="mstf_regnoColumn" msprop:Generator_UserColumnName="mstf_regno" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_cost" msprop:Generator_ColumnVarNameInTable="columnmstf_cost" msprop:Generator_ColumnPropNameInRow="mstf_cost" msprop:Generator_ColumnPropNameInTable="mstf_costColumn" msprop:Generator_UserColumnName="mstf_cost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="mstf_own_nm" msprop:Generator_ColumnVarNameInTable="columnmstf_own_nm" msprop:Generator_ColumnPropNameInRow="mstf_own_nm" msprop:Generator_ColumnPropNameInTable="mstf_own_nmColumn" msprop:Generator_UserColumnName="mstf_own_nm" type="xs:string" minOccurs="0" />
+              <xs:element name="mstf_reason" msprop:Generator_ColumnVarNameInTable="columnmstf_reason" msprop:Generator_ColumnPropNameInRow="mstf_reason" msprop:Generator_ColumnPropNameInTable="mstf_reasonColumn" msprop:Generator_UserColumnName="mstf_reason" type="xs:string" minOccurs="0" />
+              <xs:element name="fromdate" msprop:Generator_ColumnVarNameInTable="columnfromdate" msprop:Generator_ColumnPropNameInRow="fromdate" msprop:Generator_ColumnPropNameInTable="fromdateColumn" msprop:Generator_UserColumnName="fromdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="todate" msprop:Generator_ColumnVarNameInTable="columntodate" msprop:Generator_ColumnPropNameInRow="todate" msprop:Generator_ColumnPropNameInTable="todateColumn" msprop:Generator_UserColumnName="todate" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,349 @@
+﻿@model FF.BusinessObjects.ToursNew.MST_EMPLOYEE_NEW_TBS
+
+@{
+    ViewBag.Title = FF.Resources.Resource.txtEmpTitle;
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+    
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/Employee.js?@val"></script>
+}
+<div class="add-emp-cls">
+<div class="container1 op-btns">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="page-title">Employee Creation</div>
+        </div>
+        <div class="col-md-8">
+            <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-emp-clear-data" />
+            <input type="submit" value="Create" class="btn btn-default btn-default-style btn-emp-save-data" />
+        </div>
+        </div>
+</div>
+@using (Html.BeginForm("EmployeeCreation", "Employee", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-emp-det", role = "form", @id = "emply-crte-frm" }))
+{
+    <div class="demopage">
+        <div class="container1">
+            <div class="panel-sep">
+                <div class="panel panel-heading">@FF.Resources.Resource.txtBasDet</div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtEmpcd</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(m => m.MEMP_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img emp-cd-search" title="Search">
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtActive</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.MEMP_ACT, new List<SelectListItem> { new SelectListItem { Value = "1", Text = "Active" }, new SelectListItem { Value = "0", Text = "Deactive" } }, null, new { @class = "form-control cus-act-dropdown" })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtTitle</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.MEMP_TITLE, new List<SelectListItem>(), "Title", new { @class = "form-control cus-typ-dropdown" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtNicNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_NIC, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "12" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtFName</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(m => m.MEMP_FIRST_NAME, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "64" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDobNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_DOB, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtLName</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_LAST_NAME, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "50" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtDoj</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_DOJ, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtAdd</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(m => m.MEMP_LIVING_ADD_1, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "100" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtPh</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_TEL_HOME_NO, new { htmlAttributes = new { @class = "form-control", maxlength = "10" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label"></label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_LIVING_ADD_2, new { htmlAttributes = new { @class = "form-control", maxlength = "100" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtEml</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_EMAIL, new { htmlAttributes = new { @class = "form-control", maxlength = "50" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtMob</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_MOBI_NO, new { htmlAttributes = new { @class = "form-control", maxlength = "10" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtEmpSrc</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.MEMP_CAT_SUBCD, new List<SelectListItem> { new SelectListItem { Text = "Company", Value = "Company" }, new SelectListItem { Text = "External", Value = "External" } }, null, new { @class = "form-control source-dropdown" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtEmpTyp</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownListFor(m => m.MEMP_CAT_CD, new List<SelectListItem>(), "Type", new { @class = "form-control emp-type-dropdown" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">Emp. Cost</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_COST, new { htmlAttributes = new { @class = "form-control", maxlength = "10" ,placeholder="0.00"} })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+                        @*<ul class="rtabs">
+                            <li><a href="#view1">@FF.Resources.Resource.txtBasDet</a></li>
+                        </ul>
+                        <div class="panel-container">
+                            <div id="view1" class="tab-content-cls">
+                                
+                            </div>
+                        </div>*@
+                    </div>
+            <div class="panel-sep driver-detail-panel-set">
+                <div class="panel panel-heading">@FF.Resources.Resource.txtDriverDet</div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtLicNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_LIC_NO, new { htmlAttributes = new { @class = "form-control", maxlength = "50" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <div class="col-md-4">Driver</div>
+                                    <div class="col-md-4"><input type="radio" class="MEMP_ANAL1" name="MEMP_ANAL1" id="MEMP_ANAL1" value="L"> Local</div>
+                                    <div class="col-md-4"><input type="radio" class="MEMP_ANAL1" name="MEMP_ANAL1" id="MEMP_ANAL1" value="I">International</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtLisionExpDte</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_LIC_EXDT, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtBrndLiNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_TOU_LIC, new { htmlAttributes = new { @class = "form-control", maxlength = "50" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtVehiNo</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownList("vehino", new List<SelectListItem>(), "Type", new { @class = "form-control vehi-no-dropdown" })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">Other Type</label>
+                                    <div class="col-lg-7">
+                                        @Html.DropDownList("MEMP_ANAL2", new List<SelectListItem>(), "Type", new { @class = "form-control vehi-no-dropdown" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtFromDte</label>
+                                    <div class="col-lg-7">
+                                        @Html.Editor("from-date", new { htmlAttributes = new { @class = "form-control txt-from-date", @readonly = "readonly" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtToDte</label>
+                                    <div class="col-lg-7">
+                                        @Html.Editor("to-date", new { htmlAttributes = new { @class = "form-control txt-to-date with-search", @readonly = "readonly" } })
+                                        <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img  add-vehicle-data" title="Add">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <table class="vehicle-allocation-table table">
+                                    <tr class="table-hed">
+                                        <th>Vehicle No</th>
+                                        <th>Driver</th>
+                                        <th>Driver Code</th>
+                                        <th>From Date</th>
+                                        <th>To Date</th>
+                                        <th>Allocation Id</th>
+                                        <th>Operation</th>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                        @*<ul class="rtabs">
+                            <li><a href="#view2">@FF.Resources.Resource.txtDriverDet</a></li>
+                        </ul>
+                        <div class="panel-container driver-det-pnl">
+                            <div id="view2" class="tab-content-cls">
+                                
+                            </div>
+                        </div>*@
+                    </div>
+            <div class="panel-sep">
+                <div class="panel panel-heading">@FF.Resources.Resource.txtEmrCont</div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtCntPersn</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_CON_PER, new { htmlAttributes = new { @class = "form-control", maxlength = "100" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-6 form-group">
+                                    <label class="col-lg-4 control-label">@FF.Resources.Resource.txtConMob</label>
+                                    <div class="col-lg-7">
+                                        @Html.EditorFor(model => model.MEMP_CON_PER_MOB, new { htmlAttributes = new { @class = "form-control", maxlength = "15" } })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                        @*<ul class="rtabs">
+                            <li><a href="#view3">@FF.Resources.Resource.txtEmrCont</a></li>
+                        </ul>
+                        <div class="panel-container">
+                            <div id="view2" class="tab-content-cls">
+                                
+                            </div>
+                        </div>*@
+                    </div>
+            <div class="panel-sep">
+                <div class="panel panel-heading">@FF.Resources.Resource.txtAttSbu</div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label class="col-lg-4 control-label">@FF.Resources.Resource.txtSbu</label>
+                                <div class="col-lg-7">
+                                    @Html.TextBox("profitcenter", "", new { @class = "form-control txt-prof-center with-search", @readonly = "readonly" })
+                                    <img src="~/Resources/Images/Search-icon.png" class="search-img profit-center-search" title="Search">
+                                    <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img  add-prof-cen-data" title="Add">
+                                </div>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label class="col-lg-4 control-label">Language</label>
+                                <div class="col-lg-6">
+                                    @Html.DropDownList("language", new List<SelectListItem>(), "Type", new { @class = "form-control vehi-no-dropdown" })
+                                </div>
+                                    <div class="col-lg-1">
+                                        <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img  add-lang-data" title="Add">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5 form-group table-wrap">
+                                <table class="profit-center-table">
+                                    <tr class="table-hed">
+                                        <th>@FF.Resources.Resource.txtSbu</th>
+                                        <th>@FF.Resources.Resource.txtOper</th>
+                                    </tr>
+
+                                </table>
+                            </div>
+                            <div class="col-md-5 form-group table-wrap">
+                                <table class="language-table">
+                                    <tr class="table-hed">
+                                        <th>Languages</th>
+                                        <th>Operation</th>
+                                    </tr>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                        @*<ul class="rtabs">
+                            <li><a href="#view4">@FF.Resources.Resource.txtAttSbu</a></li>
+                        </ul>
+                        <div class="panel-container">
+                            <div id="view4" class="tab-content-cls">
+                                
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+                }
+</div>

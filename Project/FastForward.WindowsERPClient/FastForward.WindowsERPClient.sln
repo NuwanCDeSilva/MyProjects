@@ -1,0 +1,100 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.WindowsERPClient", "FF.WindowsERPClient\FF.WindowsERPClient.csproj", "{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398} = {F8646414-0C9C-49BB-9DA3-3923BF78A398}
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590} = {2D8AB82F-4AF2-49E7-8B34-41496020C590}
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E} = {C4447AA5-C0E1-4DDB-A32E-CA31826A034E}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.Interfaces", "..\FastForward.Services\FF.Interfaces\FF.Interfaces.csproj", "{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.BusinessObjects", "..\FastForward.Services\FF.BusinessObjects\FF.BusinessObjects.csproj", "{2D8AB82F-4AF2-49E7-8B34-41496020C590}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BarcodeLib", "..\BarcodeLib\BarcodeLib.csproj", "{F8646414-0C9C-49BB-9DA3-3923BF78A398}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{2B6A0DF2-DF2F-4947-854C-1729C81535A3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.200:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\FastForward.Services\\FF.Interfaces\\FF.Interfaces.csproj
+		SccProjectName1 = ../FastForward.Services/FF.Interfaces
+		SccLocalPath1 = ..\\FastForward.Services\\FF.Interfaces
+		SccProjectUniqueName2 = ..\\FastForward.Services\\FF.BusinessObjects\\FF.BusinessObjects.csproj
+		SccProjectName2 = ../FastForward.Services/FF.BusinessObjects
+		SccLocalPath2 = ..\\FastForward.Services\\FF.BusinessObjects
+		SccProjectUniqueName3 = FF.WindowsERPClient\\FF.WindowsERPClient.csproj
+		SccProjectName3 = FF.WindowsERPClient
+		SccLocalPath3 = FF.WindowsERPClient
+		SccProjectUniqueName4 = ..\\BarcodeLib\\BarcodeLib.csproj
+		SccProjectName4 = ../BarcodeLib
+		SccLocalPath4 = ..\\BarcodeLib
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Debug|x86.ActiveCfg = Debug|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Debug|x86.Build.0 = Debug|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Release|Any CPU.ActiveCfg = Release|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Release|Mixed Platforms.Build.0 = Release|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Release|x86.ActiveCfg = Release|x86
+		{492F6CA6-9BD3-42AA-B01F-F193C0EF3FCF}.Release|x86.Build.0 = Release|x86
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{C4447AA5-C0E1-4DDB-A32E-CA31826A034E}.Release|x86.ActiveCfg = Release|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2D8AB82F-4AF2-49E7-8B34-41496020C590}.Release|x86.ActiveCfg = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x86.ActiveCfg = Debug|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Debug|x86.Build.0 = Debug|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|Mixed Platforms.Build.0 = Release|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x86.ActiveCfg = Release|x86
+		{F8646414-0C9C-49BB-9DA3-3923BF78A398}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

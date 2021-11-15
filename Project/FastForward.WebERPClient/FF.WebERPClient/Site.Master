@@ -1,0 +1,112 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FF.WebERPClient.SiteMaster" %>
+<%@ Register Src="UserControls/uc_MsgInfo.ascx" TagName="uc_MsgInfo" TagPrefix="uc1" %>
+<%@ Register Src="UserControls/uc_MainMenu.ascx" TagName="uc_MainMenu" TagPrefix="uc2" %>
+<%@ Register Src="UserControls/uc_CommonSearch.ascx" TagName="uc_CommonSearch" TagPrefix="uc4" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Fast Forward - Enterprise Management System</title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="MainStyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body onLoad="history.go(+1)">
+    <form runat="server">
+    <%-- SCRIPT MANAGER --%>
+    <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" AsyncPostBackTimeout="600">
+            <Services>
+                <asp:ServiceReference Path="~/LocalWebServices/CommonSearchWebServive.asmx" />
+                <asp:ServiceReference Path="~/LocalWebServices/CustomSessionProvider.asmx" />
+            </Services>
+     </asp:ScriptManager>
+    <div class="page">
+        <div class="header">
+            <div class="title">
+              <%--  <h1>
+                    Fast Forward - Enterprise Management System</h1>--%>
+            </div>
+            <div class="loginDisplay logindisplayadd" >
+                <asp:LoginView ID="HeadLoginView" runat="server" EnableViewState="false">
+                    <AnonymousTemplate>
+                        [ <a href="~/Login.aspx" id="HeadLoginStatus" runat="server" 
+                            style="color: #FFFFFF" >Log In</a> ]
+                    </AnonymousTemplate>
+                    <LoggedInTemplate>
+                        Welcome <span class="bold">
+                            <asp:LoginName ID="HeadLoginName" runat="server" CssClass="HeadLoginNameColor"  />
+                        </span>! [
+                        <asp:LoginStatus ID="HeadLoginStatus" runat="server" LogoutAction="Redirect" LogoutText="Log Out"
+                            LogoutPageUrl="~/Login.aspx" CssClass="HeadLoginNameColor"/>
+                        ]
+                    </LoggedInTemplate>
+                </asp:LoginView>
+            </div>
+            <div class="clear hideSkiplink">
+              <%--  <asp:XmlDataSource ID="MainMenuXmlDataSource" runat="server" XPath="/Home/*" DataFile="~/SiteMapXML.xml">
+                </asp:XmlDataSource>--%>
+                <uc2:uc_MainMenu ID="uc_MainMenu1" runat="server" />
+            </div>
+        </div>
+     
+        <div class="msgdisplaydivCss">
+            <div style="float: left; width: 65%; height: 30px">
+            <%--Added By Prabhath on 14/07/2012--%>
+                <asp:UpdateProgress ID="UpdateProgress1" runat="server">
+                    <ProgressTemplate><div class="colorblack"><img src="../Images/Loading.gif" alt="" class="img22x22"  />Progressing...</div></ProgressTemplate>
+                </asp:UpdateProgress>                
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+
+                        <uc1:uc_MsgInfo ID="uc_MasterMsgInfo" runat="server" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+            <div class="sm1">
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+                        <div class="sm2" id="divProfitCenters" runat="server">
+                            <div class="sm3">
+                                Profit Center :&nbsp;</div>
+                            <div>
+                                <asp:TextBox ID="txtMasterProfitCenters" runat="server" Width="50px" ViewStateMode="Enabled"
+                                    EnableViewState="true" Enabled="False" ClientIDMode="Static" Font-Names="Tahoma"></asp:TextBox>
+                                <asp:ImageButton ID="imgbtnSearchProfitCenter" runat="server" ImageUrl="~/Images/icon_search.png"
+                                    OnClick="imgbtnSearchProfitCenter_Click" ImageAlign="Middle" />
+                            </div>
+                        </div>
+                        <div class="sm4" id="divLocations" runat="server">
+                            <div class="sm3">
+                                Location :&nbsp;</div>
+                            <div>
+                                <asp:TextBox ID="txtMasterUserLocation" runat="server" Width="50px" ViewStateMode="Enabled"
+                                    EnableViewState="true" Enabled="False" ClientIDMode="Static" Font-Names="Tahoma"></asp:TextBox>
+                                <asp:ImageButton ID="imgbtnSearchLocation" runat="server" ImageUrl="~/Images/icon_search.png"
+                                    OnClick="imgbtnSearchLocation_Click" ImageAlign="Middle"  />
+                            </div>
+                        </div>
+                        <uc4:uc_CommonSearch ID="uc_CommonSearchMaster" runat="server" ClientIDMode="Static" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+        </div>
+        <div  class="sitemaincontentdiv" >
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+    <div class="footer"></div>
+
+    </form>
+ 
+    <script type="text/javascript">
+            //Disabling the Back Button (Chamal 26-06-2012)--------------------------------------------------------//
+            function preventBack() { window.history.forward(); }
+            setTimeout("preventBack()", 0);
+            window.onunload = function () { null };
+            //--------------------------------------------------------Disabling the Back Button//
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Alert";
+}
+
+<link href="~/Content/jquery.alerts.css" rel="stylesheet" />
+@section Scripts{
+    <script src="~/Scripts/Common/fleet2.js"></script>
+    <script src="~/Scripts/Common/Fleet.js"></script>
+    <script src="~/Scripts/Common/lightbox.js"></script>
+<script src="~/Scripts/jquery.alerts.js"></script>
+<script src="~/Scripts/jquery.ui.draggable.js"></script>
+}
+<div class="alert alert-success">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Success!</strong> Successful Submission!!...
+</div>
+<script>
+   
+   // setSuccesssMsg("Cpmplete");
+   alert("Successful Submission");
+    // document.location.reload("FleetDefinition/Index");
+   // jAlert('This is a custom alert box', 'Alert Dialog');
+    window.location.href = "/FleetDefinition/Index";
+</script>

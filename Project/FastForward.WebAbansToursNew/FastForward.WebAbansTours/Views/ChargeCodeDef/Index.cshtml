@@ -1,0 +1,413 @@
+﻿@{
+    ViewBag.Title = "ChargeCode";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+
+    <script src="~/Scripts/Common/ChargeCode.js?@val"></script>
+}
+<div class="add-emp-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Package Definition</div>
+            </div>
+            <div class="col-md-8">
+                <input type="button" value="Clear" class="btn btn-default btn-default-style btn-cd-clear-data" />
+                <input type="button" value="Save" class="btn btn-default btn-default-style btn-cd-save-data" />
+            </div>
+        </div>
+    </div>
+    <div class="demopage">
+        <div class="container1">
+@using (Html.BeginForm("SaveExcelData", "ChargeCodeDef", FormMethod.Post, new { enctype = "multipart/form-data", @id = "imp-data" }))
+{
+            <div class="panel-container">
+                <div id="view1" class="tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label class="col-md-6 control-label">Charge Type</label>
+                                <div class="col-md-6">
+                                    @Html.DropDownList("ChargeCode", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group">
+                                <label class="col-md-3 control-label">Upload File</label>
+                                <div class="col-md-3">
+                                    <input type="file" name="UploadedFile" id="UploadedFile" class="form-control-file" required/>
+                                </div>
+                                <div class="col-md-1">
+                                    <input type="button"  value="Submit" class="btn btn-xs btn-default imprt-cd-data" />
+                                </div>
+                              @if (ViewBag.Alert != null)
+                              {
+                                <div class="col-md-4 alert alert-success">
+                                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                                    <strong>@ViewBag.Alert</strong>
+                                </div>
+                              }
+                                    
+                              
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+}
+@using (Html.BeginForm("SaveAirChageCodes", "ChargeCodeDef", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal air-travel", role = "form", @id = "air-travel" }))
+    {
+            <div class="code-with-air">
+                <div class="panel panel-default">
+                    <div class="panel panel-heading airtvl-tab-title" >Air Travel</div>
+                    <div class="panel-container">
+                        <div class="panel panel-body tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Code</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search required-field" id="SAC_CD" name="SAC_CD" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img air-code-search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Currency</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("SAC_CUR", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Service Provider</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("SAC_SCV_BY", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="SAC_RT" name="SAC_RT" value="0.00" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Class</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("SAC_CLS", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Is Child</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("SAC_IS_CHILD", new List<SelectListItem>(), "Select Type", new { @class = "form-control required-field" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">From Date</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="SAC_FRM_DT" name="SAC_FRM_DT" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">To Date</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="SAC_TO_DT" name="SAC_TO_DT" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Ticket Details</label>
+                                        <div class="col-md-6">
+                                            <textarea class="form-control required-field" id="SAC_TIC_DESC" name="SAC_TIC_DESC"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Aditional Details</label>
+                                        <div class="col-md-6">
+                                            <textarea class="form-control required-field" id="SAC_ADD_DESC" name="SAC_ADD_DESC"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">From</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search required-field" id="SAC_FROM" name="SAC_FROM" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img from-town-search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Type</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="SAC_TP" name="SAC_TP" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">To</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search required-field" id="SAC_TO" name="SAC_TO" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img to-town-search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Applicable Tax Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="SAC_TAX_RT" name="SAC_TAX_RT" placeholder="0.00%" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class ="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Ticket Type</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("SAC_TCKT_TP", new List<SelectListItem>(), "-Select-", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+}
+@using (Html.BeginForm("SaveTravelChageCodes", "ChargeCodeDef", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal tr-travel", role = "form", @id = "tr-travel" }))
+    {
+            <div class="code-with-travel">
+                <div class="panel panel-default">
+                    <div class="panel panel-heading trvl-tab-title">Travel</div>
+                    <div class="panel-container">
+                        <div class="panel panel-body tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Rate Type</label>
+                                        <div class="col-md-6">
+                                            @*<input type="text" class="form-control" id="STC_RT_TP" name="STC_RT_TP" />*@
+                                            @Html.DropDownList("STC_RT_TP", new List<SelectListItem>(), "-Select-", new { @class = "form-control required-field" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Code</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search required-field" id="STC_CD" name="STC_CD" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img trns-code-search">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Description</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="STC_DESC" name="STC_DESC" />
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Vehicle Type</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="STC_VEH_TP" name="STC_VEH_TP" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Service By</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("STC_SER_BY", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Class</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("STC_CLS", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">From Km</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="STC_FRM_KM" name="STC_FRM_KM" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">To Km</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="STC_TO_KM" name="STC_TO_KM" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Valid From</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="STC_FRM_DT" name="STC_FRM_DT" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Valid To</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="STC_TO_DT" name="STC_TO_DT" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="STC_RT" name="STC_RT" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Aditional Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="STC_AD_RT" name="STC_AD_RT" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">From</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search required-field" id="STC_FRM" name="STC_FRM" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img trn-frtwn-search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Currency</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("STC_CURR", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">To</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search required-field" id="STC_TO" name="STC_TO" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img trn-totwn-search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Applicable Tax Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="STC_TAX_RT" name="STC_TAX_RT" placeholder="0.00%" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+}
+@using (Html.BeginForm("SaveMSCData", "ChargeCodeDef", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal msc-travel", role = "form", @id = "msc-travel" }))
+    {
+            <div class="code-with-msc">
+                <div class="panel panel-default">
+                    <div class="panel panel-heading mesc-tab-title">Miscellaneous</div>
+                    <div class="panel-container">
+                        <div class="panel panel-body tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row other-chrg-mes">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Parent Charge Code</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search" id="SSM_PARENT_CD" name="SSM_PARENT_CD" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img paret-code-search">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Code</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control with-search required-field" id="SSM_CD" name="SSM_CD" />
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img msc-code-search">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Description</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="SSM_DESC" name="SSM_DESC" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Service Provider</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("SSM_SER_PRO", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Rate Type</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="SSM_RT_TP" name="SSM_RT_TP" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Valid From</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control required-field" id="SSM_FRM_DT" name="SSM_FRM_DT" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Valid To</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="SSM_TO_DT" name="SSM_TO_DT" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Currency</label>
+                                        <div class="col-md-6">
+                                            @Html.DropDownList("SSM_CUR", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="SSM_RT" name="SSM_RT" value="0.00" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Applicable Tax Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="SSM_TAX_RT" name="SSM_TAX_RT" placeholder="0.00%" />
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group other-chrg-mes">
+                                        <label class="col-md-6 control-label">Per Day Rate</label>
+                                        <div class="col-md-6">
+                                            <input type="text" class="form-control" id="SSM_PERDAY_RTE" name="SSM_PERDAY_RTE" placeholder="0.00" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+}
+            </div>
+        </div>
+    </div>

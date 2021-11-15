@@ -1,0 +1,418 @@
+﻿.floatRight {
+    float:right;
+}
+
+.fontsize12 {
+    font-size:10px;
+    font-weight:bolder;
+}
+
+.fontsize15 {
+    font-size:15px !important;
+}
+
+.labelText1 {
+    height: 16px;
+    font-family: "Tahoma", Verdana, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 11px;
+}
+
+.defaultpanelheader{
+    font-size:10px;
+}
+
+.mainpnlmargin{
+    margin-top:8px;
+}
+
+.ControlText {
+    height: 20px;
+    font-family: "Tahoma", Verdana, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.panelscoll{
+ overflow: scroll;
+ /*height:200px;*/
+ height:160px;
+ width: 245px;
+}
+
+.panelfootermargin{
+margin-top:-18px;
+}
+
+.optioncontrols {
+    height: 16px;
+    font-family: "Tahoma", Verdana, Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 10px;
+}
+
+.logincopyrightlabel{
+text-align:center;
+}
+
+.masterlabelmargin{
+    margin-left:-12px;
+}
+.form-control {
+    padding: 0 12px;
+    border-radius: 0;
+    background-image: none;
+     transition: none;
+     width: 112px;
+}
+.labelText1.logincopyrightlabel {
+    font-size: 8px;
+}
+div#main {
+    margin-left: 14px;
+    width: 275px;
+}
+.masterlabelmargin span {
+    font-size:9px;
+}
+.masterlabelmargin a {
+    font-size:12px;
+}
+.btn-primary.form-control {
+    margin-left: 23px;
+    margin-top: 2px;
+    width: 75px;
+    height: 25px;
+    font-size: 12px;
+}
+.btn-info.form-control {
+    margin-left: 23px;
+    margin-top: 2px;
+    width: 75px;
+    height: 20px;
+    font-size:11px;
+}
+.settings-panel-body .btn-info.form-control {
+    margin-left: 23%;
+    margin-top: 2px;
+    width: 135px;
+    height: 18px;
+}
+#btnlogin {
+     margin-left: 35%;
+}
+
+#BodyContent_btnselect {
+    margin-left:30%;
+}
+.col-sm-12.def-buttn-blk input#BodyContent_btnscan {
+    float: left;
+    margin-right:1px;
+    width:70px;
+   margin-left:0;
+    z-index:100;
+}
+.col-sm-12.def-buttn-blk input#BodyContent_btnsetings {
+    float: left;
+    margin-left: 0;
+    width:70px;
+}
+
+.btn-info.form-control.chg-loc-pge-btn {
+    margin-left: 3px;
+    width:100px;
+}
+#BodyContent_grdlocation tbody tr {
+    font-size: 8px;
+}
+.alert {
+    border: 1px solid transparent;
+    border-radius: 0;
+    margin-bottom: 0;
+    padding: 2px;
+    height: 20px;
+}
+#divalert {
+    font-size:8px;
+}
+.panel-heading.fontsize12.logincopyrightlabel {
+    height: 17px;
+}
+.col-sm-12.labelText1.masterlabelmargin > span#lbllp {
+    margin-left: 16px;
+}
+.btn-info.form-control.button-create-job {
+    width: 107px;
+    margin-left: 5px;
+    float:left;
+}
+.btn-info.form-control.button-create-job#BodyContent_btncurrjob {
+        margin-left:6%;
+        width: 125px;
+}
+#BodyContent_btnfindloc {
+    /*margin-top:6px;
+    margin-bottom:3px;*/
+    /*float: right;*/
+    height: 20px;
+    width: 39px;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    vertical-align: middle;
+}
+.btn-info.form-control.bttn-loading-bay {
+    margin-left: 3px;
+    width: 116px;
+}
+#BodyContent_btnchangeloc.bttn-loading-bay {
+    margin-left:5%;
+}
+.btn-info.form-control.button-scan-item {
+    width: 150px;
+    margin-left:29%;
+}
+#BodyContent_grdloadingbay tr {
+    font-size: 8px;
+}
+
+.labelText1.label-chk-all {
+    margin: 0;
+    padding: 0;
+    width: 65px;
+    float: left;
+}
+.ControlText {
+    font-family: "Tahoma",Verdana,Arial,Helvetica Neue,Helvetica,sans-serif;
+    font-size: 10px;
+    height: 18px;
+}
+.badge {
+    border-radius: 0;
+    font-size: 9px;
+    line-height: 1;
+    min-width: 10px;
+    padding: 2px 2px;
+}
+.badge.colourd {
+    background-color: #007568;
+}
+.alert.alert-danger {
+    font-size: 9px;
+}
+.set-in-row #BodyContent_txtitemcode,.set-in-row span ,.set-in-row select,.set-in-row #BodyContent_txtBinCode{
+    float:left;
+    margin-right: 2px;
+     width: 32px;
+}
+.set-in-row #BodyContent_txtitemcode,
+.set-in-row #BodyContent_ddlbincode,
+.set-in-row #BodyContent_ddlitmstatus,
+.set-in-row #BodyContent_txtserialnumber1,
+.set-in-row-only #BodyContent_txtqty,
+.set-in-row-only #BodyContent_txtbarcode,
+.set-in-row #BodyContent_txtBinCode
+{
+           width: 110px;
+        padding-left:1px;
+}
+.set-in-row-only div {
+    float: left;
+    /*margin-right: 24px;*/
+}
+
+.row-button .btn-info.form-control.remove-margin {
+    margin:1px;
+    float:left;
+    width: 48px;
+}
+.row-button .btn-info.form-control.remove-margin.sp-margin {
+    margin-left: 26px;
+}
+#BodyContent_grdscanneditems .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+    padding: 2px;
+}
+#BodyContent_grdscanneditems .labelText1 {
+    font-size:9px;
+}
+.btn-info.form-control.button-chkscn-stc {
+    margin-left: 35%;
+}
+.labelText1.label.label-default.sp-margin {
+    margin-right: 4px;
+}
+.display-bx .label {
+    border-radius: 0;
+    font-size: 9px;
+    padding: 1px;
+}
+#BodyContent_grdjobs td ,#BodyContent_grdjobs th{
+    font-size: 9px;
+}
+
+.group-button #BodyContent_btnselect,
+.group-button #BodyContent_btnchangeloc,
+.group-button #BodyContent_btnback {
+    float:left;
+    margin:1px;
+}
+.group-button #BodyContent_btnselect,
+.group-button #BodyContent_btnchangeloc,
+.group-button #BodyContent_btnback {
+     padding: 0;
+    width: 56px;
+}
+.button-cur-job #BodyContent_btncurrjob,
+.button-cur-job #BodyContent_btnback {
+    float:left;
+    margin:1px;
+}
+.button-cur-job #BodyContent_btncurrjob.sp-margin {
+    margin-left: 12px;
+}
+#BodyContent_dvcreatejobnumber .set-in-row .labelText1,#BodyContent_dvoutjobs .set-in-row .labelText1 {
+    float:left;
+}
+#BodyContent_dvcreatejobnumber .labelText1 ,#BodyContent_dvoutjobs .labelText1{
+    width:58px;
+}
+#BodyContent_dvcreatejobnumber .labelText1.with-set-def,#BodyContent_dvoutjobs .labelText1.with-set-def{
+    width:235px;
+}
+.btn-info.form-control.chg-loc-pge-btn {
+    float: left;
+}
+#BodyContent_btnchangeloc.chg-loc-pge-btn {
+    margin-left:13%;
+}
+.btn-info.form-control.bttn-loading-bay {
+    float: left;
+}
+.group-button #BodyContent_btnselect {
+    margin-left:25%;
+}
+#BodyContent_dvcreatejobnumber .label-chk-rgh,#BodyContent_dvoutjobs .label-chk-rgh{
+    margin-left: 0;
+    padding-left: 0;
+    width: 150px;
+    float: left;
+}
+#BodyContent_btItmCdClk {
+    display:none;
+}
+#BodyContent_dvcreatejobnumber #BodyContent_btnback,#BodyContent_dvoutjobs #BodyContent_btnback {
+ float: right;
+    margin-left: 4px;
+    width: 45px;
+}
+#BodyContent_dvcreatejobnumber #BodyContent_btnfinish,#BodyContent_dvoutjobs #BodyContent_btnfinish{
+ float: right;
+    margin-left: 4px;
+    width: 48px;
+}
+#BodyContent_dvcreatejobnumber .panel-heading.defaultpanelheader,#BodyContent_dvoutjobs .panel-heading.defaultpanelheader {
+    padding-bottom: 8px;
+    height: 30px;
+}
+.paddin-top {
+    padding-top:5px;
+}
+.paddin-top .col-sm-12.panelscoll {
+    padding: 0;
+}
+.show-btn {
+    font-size: 10px;
+}
+.col-sm-12.serch-box {
+    margin-bottom: 4px;
+}
+.col-sm-9.labelText1.inside-val {
+    width: 190px;
+}
+.panel-body.default-pnl-bdy {
+    height: 100px;
+}
+.location-body {
+   height: 245px;
+}
+.panel-body.scn-jobs-view {
+    min-height: 203px;
+}
+.col-sm-12.set-height {
+    height: 21px;
+}
+.col-sm-6.labelText1.login-pge-lbl {
+    width: 80px;
+}
+.form-control.ControlText.login-pge-txt {
+    width: 140px;
+}
+.form-control.ControlText.login-pge-drop {
+    width: 140px;
+}
+.col-sm-6.labelText1.login-pge-lbl-lp {
+    width: 250px;
+}
+#BodyContent_ddlbay.login-pge-drop-lp {
+    width: 140px !important;
+    padding: 0;
+}
+.col-sm-12.labelText1.def-lbl-txt {
+    width: 128px;
+    height: 20px;
+}
+#BodyContent_ddltypes.def-lbl-drop {
+    width: 140px !important;
+    height:22px;
+}
+.panel-body.default-pnl-bdy {
+    height: 90px;
+    position:relative;
+}
+.panel-body.lodby-panel {
+    height: 85px;
+    padding-top: 15px;
+    position: relative;
+}
+.create-job-pnl {
+    height: 135px;
+}
+.panel-heading.defaultpanelheader {
+    height: 25px;
+}
+.panel-heading.defaultpanelheader {
+    height: 25px;
+}
+.col-sm-12.def-buttn-blk.def-btn-h {
+    height: 25px;
+}
+#BodyContent_ddldoctype {
+    width: 124px;
+}
+.col-sm-6.labelText1.cre-jb-sel-doc {
+    width: 110px;
+}
+.panel-body.pnl-bdy-cre-jb {
+    height: 108px;
+    position: absolute;
+}
+.col-sm-6.labelText1.curjb-sele {
+    width: 108px;
+    height:25px;
+}
+.panel-body.curjb-pnl {
+    height: 265px;
+}
+#BodyContent_itmCdPnl .col-sm-6.labelText1 {
+    width: 110px;
+}
+.panel-body {
+    position: relative;
+}
+.cre-jb-lbl {
+    float: left;
+    width: 115px;
+}
+.labelText1.lbltxt-set {
+    width: 62px !important;
+}

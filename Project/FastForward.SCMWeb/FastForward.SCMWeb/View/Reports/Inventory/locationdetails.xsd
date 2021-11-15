@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="locationdetails" targetNamespace="http://tempuri.org/locationdetails.xsd" xmlns:mstns="http://tempuri.org/locationdetails.xsd" xmlns="http://tempuri.org/locationdetails.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="locationdetails" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="locationdetails" msprop:Generator_UserDSName="locationdetails">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Param" msprop:Generator_TableClassName="ParamDataTable" msprop:Generator_TableVarName="tableParam" msprop:Generator_TablePropName="Param" msprop:Generator_RowDeletingName="ParamRowDeleting" msprop:Generator_RowChangingName="ParamRowChanging" msprop:Generator_RowEvHandlerName="ParamRowChangeEventHandler" msprop:Generator_RowDeletedName="ParamRowDeleted" msprop:Generator_UserTableName="Param" msprop:Generator_RowChangedName="ParamRowChanged" msprop:Generator_RowEvArgName="ParamRowChangeEvent" msprop:Generator_RowClassName="ParamRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Company" msprop:Generator_ColumnVarNameInTable="columnCompany" msprop:Generator_ColumnPropNameInRow="Company" msprop:Generator_ColumnPropNameInTable="CompanyColumn" msprop:Generator_UserColumnName="Company" type="xs:string" minOccurs="0" />
+              <xs:element name="Location" msprop:Generator_ColumnVarNameInTable="columnLocation" msprop:Generator_ColumnPropNameInRow="Location" msprop:Generator_ColumnPropNameInTable="LocationColumn" msprop:Generator_UserColumnName="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="Channel" msprop:Generator_ColumnVarNameInTable="columnChannel" msprop:Generator_ColumnPropNameInRow="Channel" msprop:Generator_ColumnPropNameInTable="ChannelColumn" msprop:Generator_UserColumnName="Channel" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="LocationData" msprop:Generator_TableClassName="LocationDataDataTable" msprop:Generator_TableVarName="tableLocationData" msprop:Generator_TablePropName="LocationData" msprop:Generator_RowDeletingName="LocationDataRowDeleting" msprop:Generator_RowChangingName="LocationDataRowChanging" msprop:Generator_RowEvHandlerName="LocationDataRowChangeEventHandler" msprop:Generator_RowDeletedName="LocationDataRowDeleted" msprop:Generator_UserTableName="LocationData" msprop:Generator_RowChangedName="LocationDataRowChanged" msprop:Generator_RowEvArgName="LocationDataRowChangeEvent" msprop:Generator_RowClassName="LocationDataRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ml_ope_cd" msprop:Generator_ColumnVarNameInTable="columnml_ope_cd" msprop:Generator_ColumnPropNameInRow="ml_ope_cd" msprop:Generator_ColumnPropNameInTable="ml_ope_cdColumn" msprop:Generator_UserColumnName="ml_ope_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_loc_cd" msprop:Generator_ColumnVarNameInTable="columnml_loc_cd" msprop:Generator_ColumnPropNameInRow="ml_loc_cd" msprop:Generator_ColumnPropNameInTable="ml_loc_cdColumn" msprop:Generator_UserColumnName="ml_loc_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_loc_desc" msprop:Generator_ColumnVarNameInTable="columnml_loc_desc" msprop:Generator_ColumnPropNameInRow="ml_loc_desc" msprop:Generator_ColumnPropNameInTable="ml_loc_descColumn" msprop:Generator_UserColumnName="ml_loc_desc" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_add1" msprop:Generator_ColumnVarNameInTable="columnml_add1" msprop:Generator_ColumnPropNameInRow="ml_add1" msprop:Generator_ColumnPropNameInTable="ml_add1Column" msprop:Generator_UserColumnName="ml_add1" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_add2" msprop:Generator_ColumnVarNameInTable="columnml_add2" msprop:Generator_ColumnPropNameInRow="ml_add2" msprop:Generator_ColumnPropNameInTable="ml_add2Column" msprop:Generator_UserColumnName="ml_add2" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_cate_1" msprop:Generator_ColumnVarNameInTable="columnml_cate_1" msprop:Generator_ColumnPropNameInRow="ml_cate_1" msprop:Generator_ColumnPropNameInTable="ml_cate_1Column" msprop:Generator_UserColumnName="ml_cate_1" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_cate_2" msprop:Generator_ColumnVarNameInTable="columnml_cate_2" msprop:Generator_ColumnPropNameInRow="ml_cate_2" msprop:Generator_ColumnPropNameInTable="ml_cate_2Column" msprop:Generator_UserColumnName="ml_cate_2" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_cate_3" msprop:Generator_ColumnVarNameInTable="columnml_cate_3" msprop:Generator_ColumnPropNameInRow="ml_cate_3" msprop:Generator_ColumnPropNameInTable="ml_cate_3Column" msprop:Generator_UserColumnName="ml_cate_3" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_province_cd" msprop:Generator_ColumnVarNameInTable="columnml_province_cd" msprop:Generator_ColumnPropNameInRow="ml_province_cd" msprop:Generator_ColumnPropNameInTable="ml_province_cdColumn" msprop:Generator_UserColumnName="ml_province_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_distric_cd" msprop:Generator_ColumnVarNameInTable="columnml_distric_cd" msprop:Generator_ColumnPropNameInRow="ml_distric_cd" msprop:Generator_ColumnPropNameInTable="ml_distric_cdColumn" msprop:Generator_UserColumnName="ml_distric_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_town_cd" msprop:Generator_ColumnVarNameInTable="columnml_town_cd" msprop:Generator_ColumnPropNameInRow="ml_town_cd" msprop:Generator_ColumnPropNameInTable="ml_town_cdColumn" msprop:Generator_UserColumnName="ml_town_cd" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_tel" msprop:Generator_ColumnVarNameInTable="columnml_tel" msprop:Generator_ColumnPropNameInRow="ml_tel" msprop:Generator_ColumnPropNameInTable="ml_telColumn" msprop:Generator_UserColumnName="ml_tel" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_fax" msprop:Generator_ColumnVarNameInTable="columnml_fax" msprop:Generator_ColumnPropNameInRow="ml_fax" msprop:Generator_ColumnPropNameInTable="ml_faxColumn" msprop:Generator_UserColumnName="ml_fax" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_email" msprop:Generator_ColumnVarNameInTable="columnml_email" msprop:Generator_ColumnPropNameInRow="ml_email" msprop:Generator_ColumnPropNameInTable="ml_emailColumn" msprop:Generator_UserColumnName="ml_email" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_contact" msprop:Generator_ColumnVarNameInTable="columnml_contact" msprop:Generator_ColumnPropNameInRow="ml_contact" msprop:Generator_ColumnPropNameInTable="ml_contactColumn" msprop:Generator_UserColumnName="ml_contact" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_act" msprop:Generator_ColumnVarNameInTable="columnml_act" msprop:Generator_ColumnPropNameInRow="ml_act" msprop:Generator_ColumnPropNameInTable="ml_actColumn" msprop:Generator_UserColumnName="ml_act" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_mobi" msprop:Generator_ColumnVarNameInTable="columnml_mobi" msprop:Generator_ColumnPropNameInRow="ml_mobi" msprop:Generator_ColumnPropNameInTable="ml_mobiColumn" msprop:Generator_UserColumnName="ml_mobi" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_comm_dt" msprop:Generator_ColumnVarNameInTable="columnml_comm_dt" msprop:Generator_ColumnPropNameInRow="ml_comm_dt" msprop:Generator_ColumnPropNameInTable="ml_comm_dtColumn" msprop:Generator_UserColumnName="ml_comm_dt" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_app_stk_val" msprop:Generator_ColumnVarNameInTable="columnml_app_stk_val" msprop:Generator_ColumnPropNameInRow="ml_app_stk_val" msprop:Generator_ColumnPropNameInTable="ml_app_stk_valColumn" msprop:Generator_UserColumnName="ml_app_stk_val" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_buffer_grd" msprop:Generator_ColumnVarNameInTable="columnml_buffer_grd" msprop:Generator_ColumnPropNameInRow="ml_buffer_grd" msprop:Generator_ColumnPropNameInTable="ml_buffer_grdColumn" msprop:Generator_UserColumnName="ml_buffer_grd" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_fwsale_qty" msprop:Generator_ColumnVarNameInTable="columnml_fwsale_qty" msprop:Generator_ColumnPropNameInRow="ml_fwsale_qty" msprop:Generator_ColumnPropNameInTable="ml_fwsale_qtyColumn" msprop:Generator_UserColumnName="ml_fwsale_qty" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_def_pc" msprop:Generator_ColumnVarNameInTable="columnml_def_pc" msprop:Generator_ColumnPropNameInRow="ml_def_pc" msprop:Generator_ColumnPropNameInTable="ml_def_pcColumn" msprop:Generator_UserColumnName="ml_def_pc" type="xs:string" minOccurs="0" />
+              <xs:element name="ml_bank_grnt_val" msprop:Generator_ColumnVarNameInTable="columnml_bank_grnt_val" msprop:Generator_ColumnPropNameInRow="ml_bank_grnt_val" msprop:Generator_ColumnPropNameInTable="ml_bank_grnt_valColumn" msprop:Generator_UserColumnName="ml_bank_grnt_val" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

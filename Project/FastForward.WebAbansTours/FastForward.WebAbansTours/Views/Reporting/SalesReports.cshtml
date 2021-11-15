@@ -1,0 +1,174 @@
+﻿@{
+    ViewBag.Title = "Sales Reports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/SalesReports.js?@val"></script>
+}
+
+<div class="sales-rpt-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Sales Report</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-sls-rpt-clear" />
+                <input type="submit" value="View" class="btn btn-default btn-default-style btn-sls-rpt-down" />
+            </div>
+            </div>
+    </div>
+    @using (Html.BeginForm("Download", "Reporting", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "frm-reporting" }))
+    {
+        <div class="demopage">
+            <div class="container1">
+                <div class="col-md-2 set-border">
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Report</div>
+                            <div class="panel panel-body">
+                                <div class="col-md-12"><input type="radio" name="REPORT_TYPE" id="REPORT_TYPE" value="rptdailysales"> Daily Sales Report</div>
+                                <div class="col-md-12"><input type="radio" name="REPORT_TYPE" id="REPORT_TYPE" value="rptreceiptdtl"> Receipt Summary</div>
+                                @*<div class="col-md-12"><input type="radio" name="REPORT_TYPE" id="REPORT_TYPE" value="rptsalescomm"> Commission Report </div>*@
+                                <div class="col-md-12"><input type="radio" name="REPORT_TYPE" id="REPORT_TYPE" value="DebtorSettlement"> Debtors Statement</div>
+                                <div class="col-md-12"><input type="radio" name="REPORT_TYPE" id="REPORT_TYPE" value="rptdailysales_dtl"> Daily sales Service wise</div>
+                                <div class="col-md-12"><input type="radio" name="REPORT_TYPE" id="REPORT_TYPE" value="pendinginquiry"> Enquiry Status</div>
+                                <div class="col-md-12"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-10">
+                    <div class="panel panel-default">
+                        <div class="panel panel-heading">Parameter Details</div>
+                        <div class="panel panel-body">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel panel-heading">
+                                            <div class="col-md-8">Company</div>
+                                            <div class="col-md-4 normal-font">
+                                                <div class="col-md-3">@Html.CheckBox("chkmultiple")</div>
+                                                <div class="col-md-8 normal-font">Multiple</div>
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-body">
+                                            <div class="company-tbl">
+                                                <table class="compny-display-tbl table">
+                                                    <tr class="table-hed">
+                                                        <th>@Html.CheckBox("chkAllCompany")</th>
+                                                        <th>Code</th>
+                                                        <th>Description</th>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel panel-heading">Profit Center</div>
+                                        <div class="panel panel-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Channel
+                                                </div>
+                                                <div class="col-md-6">
+                                                    @Html.Editor("Channel", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img channel-search" title="Search">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Sub Channel
+                                                </div>
+                                                <div class="col-md-6">
+                                                    @Html.Editor("SubChannel", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img subchannel-search" title="Search">
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Prof Cen
+                                                </div>
+                                                <div class="col-md-6">
+                                                    @Html.Editor("ProfCen", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img prof-cen-search" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <img class="arrow-right add-prof-center" src="~/Resources/Images/rightarrow.png">
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="set-border-corner col-md-12">
+                                        <div class="prof-cen-tbl">
+                                            <table class="profcen-display-tbl table">
+                                                <tr class="table-hed">
+                                                    <th>@Html.CheckBox("chkAllProfCenter")</th>
+                                                    <th>Code</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel panel-heading">
+                                            Date Criteria
+                                        </div>
+                                        <div class="panel panel-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    From Date
+                                                </div>
+                                                <div class="col-md-6">
+                                                    @Html.Editor("FromDate", new { htmlAttributes = new { @class = "form-control"} })
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    To Date
+                                                </div>
+                                                <div class="col-md-6">
+                                                    @Html.Editor("ToDate", new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel panel-heading">
+                                            Customer
+                                        </div>
+                                        <div class="panel panel-body">
+                                            <div class="row">
+                                                <div class="col-md-4">
+                                                    Customer
+                                                </div>
+                                                <div class="col-md-6">
+                                                    @Html.Editor("Customer", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img sales-cus-search" title="Search">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

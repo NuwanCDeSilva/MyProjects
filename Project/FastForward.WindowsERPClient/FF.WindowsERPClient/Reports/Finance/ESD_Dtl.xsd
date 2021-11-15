@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="ESD_Dtl" targetNamespace="http://tempuri.org/ESD_Dtl.xsd" xmlns:mstns="http://tempuri.org/ESD_Dtl.xsd" xmlns="http://tempuri.org/ESD_Dtl.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="ESD_Dtl" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="ESD_Dtl" msprop:Generator_UserDSName="ESD_Dtl">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_UserTableName="param" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="period" msdata:Caption="profitcenter" msprop:Generator_ColumnVarNameInTable="columnperiod" msprop:Generator_ColumnPropNameInRow="period" msprop:Generator_ColumnPropNameInTable="periodColumn" msprop:Generator_UserColumnName="period" type="xs:string" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ESD_DTL" msprop:Generator_TableClassName="ESD_DTLDataTable" msprop:Generator_TableVarName="tableESD_DTL" msprop:Generator_TablePropName="ESD_DTL" msprop:Generator_RowDeletingName="ESD_DTLRowDeleting" msprop:Generator_UserTableName="ESD_DTL" msprop:Generator_RowChangingName="ESD_DTLRowChanging" msprop:Generator_RowEvHandlerName="ESD_DTLRowChangeEventHandler" msprop:Generator_RowDeletedName="ESD_DTLRowDeleted" msprop:Generator_RowEvArgName="ESD_DTLRowChangeEvent" msprop:Generator_RowChangedName="ESD_DTLRowChanged" msprop:Generator_RowClassName="ESD_DTLRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COM_CODE" msprop:Generator_ColumnVarNameInTable="columnCOM_CODE" msprop:Generator_ColumnPropNameInRow="COM_CODE" msprop:Generator_ColumnPropNameInTable="COM_CODEColumn" msprop:Generator_UserColumnName="COM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="COM_DESC" msprop:Generator_ColumnVarNameInTable="columnCOM_DESC" msprop:Generator_ColumnPropNameInRow="COM_DESC" msprop:Generator_ColumnPropNameInTable="COM_DESCColumn" msprop:Generator_UserColumnName="COM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POWERED_BY" msprop:Generator_ColumnVarNameInTable="columnPOWERED_BY" msprop:Generator_ColumnPropNameInRow="POWERED_BY" msprop:Generator_ColumnPropNameInTable="POWERED_BYColumn" msprop:Generator_UserColumnName="POWERED_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="PC_CODE" msprop:Generator_ColumnVarNameInTable="columnPC_CODE" msprop:Generator_ColumnPropNameInRow="PC_CODE" msprop:Generator_ColumnPropNameInTable="PC_CODEColumn" msprop:Generator_UserColumnName="PC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="PC_DESC" msprop:Generator_ColumnVarNameInTable="columnPC_DESC" msprop:Generator_ColumnPropNameInRow="PC_DESC" msprop:Generator_ColumnPropNameInTable="PC_DESCColumn" msprop:Generator_UserColumnName="PC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="EMP_CODE" msprop:Generator_ColumnVarNameInTable="columnEMP_CODE" msprop:Generator_ColumnPropNameInRow="EMP_CODE" msprop:Generator_ColumnPropNameInTable="EMP_CODEColumn" msprop:Generator_UserColumnName="EMP_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="EMP_NAME" msprop:Generator_ColumnVarNameInTable="columnEMP_NAME" msprop:Generator_ColumnPropNameInRow="EMP_NAME" msprop:Generator_ColumnPropNameInTable="EMP_NAMEColumn" msprop:Generator_UserColumnName="EMP_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="FDATE" msprop:Generator_ColumnVarNameInTable="columnFDATE" msprop:Generator_ColumnPropNameInRow="FDATE" msprop:Generator_ColumnPropNameInTable="FDATEColumn" msprop:Generator_UserColumnName="FDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TDATE" msprop:Generator_ColumnVarNameInTable="columnTDATE" msprop:Generator_ColumnPropNameInRow="TDATE" msprop:Generator_ColumnPropNameInTable="TDATEColumn" msprop:Generator_UserColumnName="TDATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="OP_BAL" msprop:Generator_ColumnVarNameInTable="columnOP_BAL" msprop:Generator_ColumnPropNameInRow="OP_BAL" msprop:Generator_ColumnPropNameInTable="OP_BALColumn" msprop:Generator_UserColumnName="OP_BAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOT_CONTR" msprop:Generator_ColumnVarNameInTable="columnTOT_CONTR" msprop:Generator_ColumnPropNameInRow="TOT_CONTR" msprop:Generator_ColumnPropNameInTable="TOT_CONTRColumn" msprop:Generator_UserColumnName="TOT_CONTR" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOT_INT" msprop:Generator_ColumnVarNameInTable="columnTOT_INT" msprop:Generator_ColumnPropNameInRow="TOT_INT" msprop:Generator_ColumnPropNameInTable="TOT_INTColumn" msprop:Generator_UserColumnName="TOT_INT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOT_ADJ" msprop:Generator_ColumnVarNameInTable="columnTOT_ADJ" msprop:Generator_ColumnPropNameInRow="TOT_ADJ" msprop:Generator_ColumnPropNameInTable="TOT_ADJColumn" msprop:Generator_UserColumnName="TOT_ADJ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOT_CLBAL" msprop:Generator_ColumnVarNameInTable="columnTOT_CLBAL" msprop:Generator_ColumnPropNameInRow="TOT_CLBAL" msprop:Generator_ColumnPropNameInTable="TOT_CLBALColumn" msprop:Generator_UserColumnName="TOT_CLBAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ESD_MONTH" msprop:Generator_ColumnVarNameInTable="columnESD_MONTH" msprop:Generator_ColumnPropNameInRow="ESD_MONTH" msprop:Generator_ColumnPropNameInTable="ESD_MONTHColumn" msprop:Generator_UserColumnName="ESD_MONTH" type="xs:string" minOccurs="0" />
+              <xs:element name="ESD_YEAR" msprop:Generator_ColumnVarNameInTable="columnESD_YEAR" msprop:Generator_ColumnPropNameInRow="ESD_YEAR" msprop:Generator_ColumnPropNameInTable="ESD_YEARColumn" msprop:Generator_UserColumnName="ESD_YEAR" type="xs:string" minOccurs="0" />
+              <xs:element name="ESD_ESD" msprop:Generator_ColumnVarNameInTable="columnESD_ESD" msprop:Generator_ColumnPropNameInRow="ESD_ESD" msprop:Generator_ColumnPropNameInTable="ESD_ESDColumn" msprop:Generator_UserColumnName="ESD_ESD" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ESD_OPBAL" msprop:Generator_ColumnVarNameInTable="columnESD_OPBAL" msprop:Generator_ColumnPropNameInRow="ESD_OPBAL" msprop:Generator_ColumnPropNameInTable="ESD_OPBALColumn" msprop:Generator_UserColumnName="ESD_OPBAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ESD_ADJ" msprop:Generator_ColumnVarNameInTable="columnESD_ADJ" msprop:Generator_ColumnPropNameInRow="ESD_ADJ" msprop:Generator_ColumnPropNameInTable="ESD_ADJColumn" msprop:Generator_UserColumnName="ESD_ADJ" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ESD_INT" msprop:Generator_ColumnVarNameInTable="columnESD_INT" msprop:Generator_ColumnPropNameInRow="ESD_INT" msprop:Generator_ColumnPropNameInTable="ESD_INTColumn" msprop:Generator_UserColumnName="ESD_INT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ESD_CLBAL" msprop:Generator_ColumnVarNameInTable="columnESD_CLBAL" msprop:Generator_ColumnPropNameInRow="ESD_CLBAL" msprop:Generator_ColumnPropNameInTable="ESD_CLBALColumn" msprop:Generator_UserColumnName="ESD_CLBAL" type="xs:decimal" minOccurs="0" />
+              <xs:element name="MANAGER" msprop:Generator_ColumnVarNameInTable="columnMANAGER" msprop:Generator_ColumnPropNameInRow="MANAGER" msprop:Generator_ColumnPropNameInTable="MANAGERColumn" msprop:Generator_UserColumnName="MANAGER" type="xs:string" minOccurs="0" />
+              <xs:element name="DESIGNATION" msprop:Generator_ColumnVarNameInTable="columnDESIGNATION" msprop:Generator_ColumnPropNameInRow="DESIGNATION" msprop:Generator_ColumnPropNameInTable="DESIGNATIONColumn" msprop:Generator_UserColumnName="DESIGNATION" type="xs:string" minOccurs="0" />
+              <xs:element name="ESD_MONTHN" msprop:Generator_ColumnVarNameInTable="columnESD_MONTHN" msprop:Generator_ColumnPropNameInRow="ESD_MONTHN" msprop:Generator_ColumnPropNameInTable="ESD_MONTHNColumn" msprop:Generator_UserColumnName="ESD_MONTHN" type="xs:short" minOccurs="0" />
+              <xs:element name="ESD_YEARN" msprop:Generator_ColumnVarNameInTable="columnESD_YEARN" msprop:Generator_ColumnPropNameInRow="ESD_YEARN" msprop:Generator_ColumnPropNameInTable="ESD_YEARNColumn" msprop:Generator_UserColumnName="ESD_YEARN" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,145 @@
+﻿@{
+    ViewBag.Title = "Arrears Release Scheme";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/ArrearsReleaseScheme.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Arrears Release Scheme Definition</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+                <div class="panel panel-heading"></div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Channel</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="chanel" name="chanel" class="form-control with-search" readonly>
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  channel-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Profit Center</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="location" name="location" class="form-control with-search" readonly>
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  loc-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Effect From</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="valuefrom" name="valuefrom" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Effect To</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="valueto" name="valueto" class="form-control with-search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Definition Type</label>
+                                    <div class="col-md-8">
+                                        @Html.DropDownList("deftype", new List<SelectListItem> { new SelectListItem { Value = "0", Text = "--Select--" }, new SelectListItem { Value = "SchemeType", Text = "SchemeType" }, new SelectListItem { Value = "Scheme", Text = "Scheme" } }, null, new { @class = "form-control" })
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  defcode-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">No of monthly rentals</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="rental" name="rental" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Account creation From</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="accfrom" name="accfrom" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Account creation To</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="accto" name="accto" class="form-control with-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="col-md-1">
+                                        <img src="~/Resources/Images/arrow_down.png" class="search-img add-acc">
+                                    </div>
+                                </div>
+                                @*<div class="col-md-3">
+                                    <label class="col-lg-4 control-label">Code</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="defcode" name="defcode" class="form-control with-search" readonly>
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  defcode-search">
+                                    </div>
+                                </div>*@
+
+                                @*<div class="col-md-3">
+                                    <div class="col-md-1">
+                                        <img src="~/Resources/Images/arrow_down.png" class="search-img add-acc">
+                                    </div>
+                                </div>*@
+                            </div>
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-3 row item-range-scroll3">
+                                        <div class="panel panel-heading">
+                                            <div class="col-md-6">Code</div>
+                                            <div class="col-md-6">
+                                                @*<div class="col-md-3">@Html.CheckBox("chkmultiple")</div>
+                    <div class="normal-font">Multiple</div>*@
+                                            </div>
+                                        </div>
+                                        <div class="panel panel-body company-tbl">
+                                            <table class="compny-display-tbl table">
+                                                <tr class="table-hed">
+                                                    <th>@Html.CheckBox("chkAllCompany")</th>
+                                                    <th>Code</th>
+                                                    <th>Description</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="comm-comm-list-div-scroll">
+                                            <table class="table table-striped table-hover acc-data-row">
+                                                <tr>
+                                                    <th style="color: black; font-size: x-small">Def. Code</th>
+                                                    <th style="color: black; font-size: x-small">Effect From</th>
+                                                    <th style="color: black; font-size: x-small">Effect To</th>
+                                                    <th style="color: black; font-size: x-small">No of monthly rentals</th>
+                                                    <th style="color: black; font-size: x-small">Channel</th>
+                                                    <th style="color: black; font-size: x-small">Profit Center</th>
+                                                    <th style="color: black; font-size: x-small">Acc. Creation From</th>
+                                                    <th style="color: black; font-size: x-small">Acc. Creation To</th>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</div>
+

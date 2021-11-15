@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Accounts Uploads";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/AccountsUploads.js?@val"></script>
+}
+<div class="add-emp-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Accounts Upload</div>
+            </div>
+            <div class="col-md-8">
+                <input type="button" value="Clear" class="btn btn-default btn-default-style btn-accounts-upload-clear-data" />
+                <input type="button" value="Upload Accounts" class="btn btn-default btn-default-style btn-accounts-upload-data" />
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("GetFile", "AccountsUploads", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "accounts-upload-frm" }))
+    {
+        <div class="demopage">
+            <div class="container1">
+                <div class="panel-sep">
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Accounts Upload</div>
+                            <div class="panel panel-body tab-content-cls">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Start Date</label>
+                                            <div class="col-md-8">
+                                                @Html.Editor("st_date", new { htmlAttributes = new { @class = "form-control required-field" } })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">End Date</label>
+                                            <div class="col-md-8">
+                                                @Html.Editor("end_date", new { htmlAttributes = new { @class = "form-control required-field" } })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-lg-4 control-label">Type</label>
+                                            <div class="col-md-8">
+                                                @Html.DropDownList("pay_type", new List<SelectListItem>(), "Select", new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+                                    </div>

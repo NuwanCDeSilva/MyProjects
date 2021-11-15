@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Basic.master.cs" Inherits="FF.WebERPClient.Basic" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head  runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <link href="Styles/Site.css" rel="stylesheet" type="text/css" />
+    <link href="MainStyleSheet.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page">
+        <div class="header">
+            <div class="title" style="background-image:url('Styles/Banner.jpg'); height:58px;">
+                <%--<h1>
+                    Fast Forward - Supply Chain Management System - 2</h1>--%>
+            </div>
+           
+            <div class="hideSkiplink">
+                &nbsp;
+            </div>
+        </div>
+        <div class="basicmaincontentdiv">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <div class="footer">
+       <%-- &nbsp;&nbsp; <b>2012 © Abans IT (Pvt) Ltd. All rights reserved.</b>--%>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,1329 @@
+
+/*#table-container {
+  position: relative;
+  width: auto;
+  height: 100px;
+  overflow: auto;
+  background-color: #FFF;
+  border: 1px solid #596380;
+  padding: 0 10px 0 0;
+}*/
+
+
+.hideIT {
+     display: none;
+ }
+
+/*menu*/
+#mnMainMenu a.static {
+    padding-left: 15px !Important;
+    padding-right: 15px !Important;
+}
+.checkbox{
+
+
+    padding-right:50px;
+}
+
+.menupopup {
+    min-width: 200px !important;
+    padding-right: 10px !important;
+    left: -200px !important;
+    top: 130% !important;
+}
+
+.menupopup2 {
+    min-width: 300px !important;
+    padding-right: 10px !important;
+    left: -250px !important;
+    top: 130% !important;
+}
+
+.textBox1 {
+    width: 100%;
+    line-height: 1px;
+}
+
+.modalBackground {
+    height: 100%;
+    background-color: #EBEBEB;
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+    position: fixed !important;
+}
+
+.setpossition {
+    position: fixed !important;
+    top: 25%;
+    left: 25%;
+}
+
+.DatetextBox1 {
+    width: 800%;
+}
+
+.setLineHeight {
+    line-height: 1px;
+}
+
+
+.Images {
+    margin: 0 !important;
+    padding-right: 1px !important;
+    padding-bottom: 1px !important;
+    padding-right: 1px !important;
+    padding-top: 1px !important;
+    width: 18px;
+}
+
+.buttonSmall {
+    width: 26px !important;
+    height: 18px !important;
+    font-size: 10px;
+    vertical-align: central;
+    line-height: 1px;
+}
+
+.margin-top1 {
+  margin-top:1px;
+}
+.margin-top-3 {
+  margin-top:-3px;
+}
+/*height*/
+.height5 {
+    height: 5px;
+}
+
+.height10 {
+    height: 10px;
+}
+
+.height16 {
+    height: 16px;
+}
+
+.height20 {
+    height: 20px;
+}
+
+.height22 {
+    height: 22px;
+}
+
+.height30 {
+    height: 30px;
+}
+
+.height42 {
+    height: 42px;
+}
+
+.height45 {
+    height: 45px;
+}
+
+.height50 {
+    height: 50px;
+}
+
+.height70 {
+    height: 70px;
+}
+
+.height44 {
+    height: 30px;
+}
+
+.height55 {
+    height: 55px;
+}
+
+.height59 {
+    height: 59px;
+}
+
+.height60 {
+    height: 60px;
+}
+
+.height80 {
+    height: 80px !important;
+}
+
+.height85 {
+    height: 85px;
+}
+.height100 {
+    height: 100px;
+}
+.height120 {
+    height: 120px;
+}
+
+.height130 {
+    height: 130px;
+}
+
+.height140 {
+    height: 140px;
+}
+
+.height150 {
+    height: 150px;
+}
+
+.height170 {
+    height: 170px;
+}
+
+.height175 {
+    height: 175px;
+}
+
+.height190 {
+    height: 190px;
+}
+
+.height200 {
+    height: 200px;
+}
+
+.height230 {
+    height: 230px;
+}
+
+.height250 {
+    height: 250px;
+}
+
+.height300 {
+    height: 300px;
+}
+
+.height350 {
+    height: 320px;
+}
+
+.height375 {
+    height: 375px;
+}
+
+.height400 {
+    height: 400px;
+}
+
+.height450 {
+    height: 450px;
+}
+
+.height500 {
+    height: 500px;
+}
+
+.height515 {
+    height: 515px;
+}
+
+.height525 {
+    height: 525px;
+}
+
+.height550 {
+    height: 550px;
+}
+
+.height600 {
+    height: 600px;
+}
+/*margin*/
+.marginLeftRight5 {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.margintop-5 {
+    margin-top: -5px;
+}
+
+.margintop-7 {
+    margin-top: -7px;
+}
+
+.marginbottom5 {
+    margin-bottom: 5px;
+}
+
+.margintop0 {
+    margin-top: 0px;
+}
+
+.marginBottom0 {
+    margin-bottom: 0px;
+}
+
+.Paddingtop {
+    padding-top: 10px;
+}
+
+.LogingTextbox {
+    height: 30px;
+    background: transparent;
+    color: #000;
+    font-size:larger;
+}
+/*font*/
+
+.fontsize12 {
+    font-size: 12px !important;
+    /*color: #7E1974;*/
+}
+
+.fontsize16 {
+    font-size: 16px;
+    font-weight: bolder;
+    /*color: #7E1974;*/
+}
+
+.fontsize15 {
+    font-size: 15px !important;
+    /*color: #7E1974;*/
+}
+
+.fontsize18 {
+    font-size: 18px !important;
+    /*color: #7E1974;*/
+}
+
+.fontsize20 {
+    font-size: 20px !important;
+    /*color: #7E1974;*/
+}
+
+
+
+/*Right*/
+.right5 {
+    right: 5px;
+}
+
+/*padding*/
+.padding0 {
+    padding: 0px;
+}
+
+.paddingLeft0 {
+    padding-left: 0px;
+}
+
+.paddingLeft5 {
+    padding-left: 5px;
+}
+.padding3 {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.paddingLeft3 {
+    padding-left: 3px;
+}
+.paddingLeft10 {
+    padding-left: 10px;
+}
+
+.paddingRight0 {
+    padding-right: 0px;
+}
+.padding03 {
+    padding-right: 3px;
+    padding-left: 0px;
+}
+
+.paddingRight5 {
+    padding-right: 5px;
+}
+
+.paddingbottom0 {
+    padding-bottom: 0px;
+}
+.paddingbottom1 {
+    padding-bottom: 1px;
+}
+
+.paddingtop0 {
+    padding-top: 0px;
+}
+
+.paddingtop5 {
+    padding-top: 5px;
+}
+
+.paddingtopbottom0 {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.paddingRight15 {
+    padding-right: 15px;
+}
+
+.paddingLeft15 {
+    padding-left: 15px;
+}
+
+.paddingLeft20 {
+    padding-left: 15px;
+}
+
+.paddingLeft25 {
+    padding-left: 15px;
+}
+
+.paddingLeft30 {
+    padding-left: 15px;
+}
+
+.paddingLeft35 {
+    padding-left: 15px;
+}
+
+/*search*/
+.search1 {
+    font-size: 24px;
+    padding-right: 5px;
+    padding-top: 20px;
+}
+
+.search2 {
+    font-size: 15px;
+}
+
+.search3 {
+    font-size: 20px;
+    padding-right: 10px;
+    padding-top: 10px;
+}
+
+.search4 {
+    font-size: 20px;
+    padding-right: 7px;
+    padding-top: 4px;
+}
+
+
+/*Color*/
+.Color1 {
+    color: #A513D0;
+}
+
+/*Color*/
+.fontWeight900 {
+    font-weight: 900;
+}
+
+/*button*/
+.buttonRow {
+    height: 35px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+    .buttonRow span {
+        font-size: 20px;
+        padding-right: 5px;
+    }
+
+.buttonLogout {
+    height: 25px;
+}
+
+    .buttonLogout span {
+        font-size: 20px;
+        padding-right: 5px;
+    }
+
+.buttoncolor {
+    color: #808080 !important;
+    float: right;
+}
+
+.buttoncolorleft {
+    color: #808080 !important;
+    float: left;
+}
+
+.buttonUndocolor {
+    color: #7E1974 !important;
+    float: right;
+}
+
+.buttonUndocolorLeft {
+    color: #7E1974 !important;
+    float: left;
+}
+
+/*float*/
+.floatRight {
+    float: right;
+}
+
+.floatleft {
+    float: left;
+}
+
+.divcolor {
+    color: #808080 !important;
+}
+
+/*Text*/
+.labelText1 {
+    padding-right: 0px;
+    padding-top: 3px;
+    height: 22px;
+}
+
+.labelText2 {
+    padding-left: 0px;
+    padding-top: 3px;
+    height: 22px;
+}
+
+.textAlignRight {
+    text-align: right;
+}
+
+.textAlignLeft {
+    text-align: left;
+}
+
+textarea {
+    resize: none;
+}
+
+/*Rukshan*/
+.vertical-center {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -150px;
+    margin-left: -250px;
+}
+
+/*panel*/
+.panelheading1 {
+    padding: 3px 10px;
+}
+
+/*Modalpopup Rukshan */
+.Mheight {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 663px;
+    height: 387px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 10px;
+}
+
+.Mheight2 {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 350px;
+    height: 180px;
+    overflow-y: scroll;
+}
+
+.Mheight3 {
+    padding-top: 10px;
+    padding-left: 10px;
+    width: 1200px;
+    height: 450px;
+    overflow-y: scroll;
+}
+
+.panelscollSmall {
+    height: 50px;
+}
+
+.panelscollbar {
+    overflow-y: scroll;
+}
+
+.panelscollsmall {
+    overflow-y: scroll;
+    height:50px;
+}
+
+.panelscollmedium{
+    overflow-y: scroll;
+    height:95px;
+}
+
+.panelscoll {
+    overflow-y: scroll;
+    height: 100px;
+}
+
+.panelscoll1 {
+    overflow-y: scroll;
+    height: 125px;
+}
+
+.panelscoll2 {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.panelscoll275 {
+    overflow-y: scroll;
+    height: 275px;
+}
+
+.panelscoll250 {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+.panelscoll3 {
+    overflow-y: scroll;
+    height: 530px;
+}
+/*Rukshan*/
+.panelscoll4 {
+    overflow-y: scroll;
+    height: 350px;
+}
+
+.panelscoll5 {
+    overflow-y: scroll;
+    height: 200px;
+}
+
+.panelscoll6 {
+    overflow-y: scroll;
+    height: 175px;
+}
+
+.panelscoll150 {
+    overflow-y: scroll;
+    height: 150px;
+}
+
+.panelscoll75 {
+    overflow-y: scroll;
+    height: 75px;
+}
+
+/*Rukshan*/
+/*Location H*/
+.Lwidth {
+    width: 4px;
+}
+
+.Textboxwidth80 {
+    width: 80px;
+}
+
+.Dwidth {
+    width: 350px;
+}
+.width25 {
+    width: 25px;
+}
+.width525 {
+    width: 525px;
+}
+
+.width600 {
+    width: 680px;
+}
+
+.width700 {
+    width: 700px;
+}
+
+.width850 {
+    width: 850px;
+}
+
+.width800 {
+    width: 800px;
+}
+
+.width900 {
+    width: 900px;
+}
+
+.width950 {
+    width: 950px;
+}
+
+.width1330 {
+    width: 1330px;
+}
+
+.width250 {
+    width: 250px;
+}
+.width450 {
+    width: 450px;
+}
+.width1085 {
+    width: 1085px;
+}
+
+.width1300 {
+    width: 1300px;
+}
+.width40 {
+    width: 40px;
+}
+.width50 {
+    width: 50px;
+}
+.width70 {
+    width: 70px;
+}
+.width100 {
+    width: 100px;
+}
+.width125 {
+    width: 125px;
+}
+.width150 {
+    width: 150px;
+}
+.Textboxwidth {
+    width: 100px;
+}
+
+
+/*grid view page space*/
+.cssPager td {
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+/*grid view Scroll*/
+.GridScroll {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    max-height: 140px !important;
+    width: 99%;
+    padding-right: 0px;
+}
+
+.GridScroll120 {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 120px !important;
+    width: 98%;
+    padding-right: 0px;
+}
+
+.GridScroll130 {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 130px !important;
+    width: 98%;
+    padding-right: 5px;
+}
+
+.GridScroll155 {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 155px !important;
+    width: 98%;
+    padding-right: 5px;
+}
+
+.GridScroll170 {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 170px !important;
+    width: 98%;
+    padding-right: 0px;
+}
+
+.GridScroll175 {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    height: 175px !important;
+    width: 98%;
+    padding-right: 0px;
+}
+
+.GridScroll230 {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    max-height: 230px !important;
+    width: 99%;
+    padding-right: 0px;
+}
+
+.GridScrollWith50 {
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    max-height: 140px !important;
+    width: 50%;
+    padding-right: 0px;
+}
+
+.OrderPeriod {
+    height: 65px !important;
+    overflow-y: auto;
+    margin-bottom: 15px !important;
+}
+
+    .OrderPeriod table > tbody > tr > td {
+        padding: 0px !important;
+    }
+
+.yearmonthselector {
+    margin-top: -26px;
+    margin-left: 183px;
+}
+
+
+.panelscollOrderEntry {
+    overflow-y: scroll;
+    height: 270px;
+}
+
+.panelHeadingInfoBar {
+    height: 28px;
+    font-weight: bold;
+}
+
+.paneldefaultheightorderplan {
+    height: 175px;
+}
+
+.panelscrollheaderOPItems {
+    margin-top: -12px;
+}
+
+.POPupResultspanelscroll {
+    height: 245px;
+}
+
+.panelscollPRN {
+    overflow-y: scroll;
+    height: 335px;
+}
+
+.GridColumnHide {
+    opacity: 0;
+}
+
+.oprefnotxtbox {
+    margin-left: -27px;
+}
+
+.oprefnotxtboxDUP {
+    margin-left: -80px;
+}
+
+
+.opremarksnotxtbox {
+    margin-left: -12px;
+    width: 545px;
+}
+
+.ddlmonthcss {
+    margin-left: 8px;
+}
+
+.ordvaliditydiv {
+    margin-left: 15px;
+}
+
+.ordvaliditysubdiv {
+    margin-left: -14px;
+}
+
+.ddlyearcontrol {
+    margin-left: -18px;
+}
+
+.tradetermddl {
+    width: 218px;
+    margin-left: -27px;
+}
+
+.suppliersptaxpnl {
+    width: 265px;
+    margin-left: 15px;
+}
+
+.suppliercurgrdpossition {
+    margin-top: -160px;
+    height: 155px;
+}
+
+.supplierleftgrids {
+    width: 510px;
+}
+
+.pnlscrollsupplier {
+    height: 80px;
+}
+
+.mainpnl {
+    height: 560px;
+}
+
+.itmfstsearchpnlhieght {
+    height: 310px;
+}
+
+.itemsgridheight {
+    height: 135px;
+}
+
+.suppliercodetxt {
+    width: 177px;
+    margin-left: 73px;
+}
+
+.supsubgridmargin {
+    margin-top: -4px;
+}
+
+.supdetailpnlheight {
+    height: 351px;
+}
+
+.salesinvoregdetaillbl {
+    width: 100px;
+    margin-left: -60px;
+    margin-top: 6px;
+}
+
+.salesinvoaddresstxt {
+    width: 553px;
+}
+
+.salesinvfirstpnl {
+    height: 55px;
+}
+
+.dropdownmenusalesorder {
+    margin-left: 56px;
+    margin-top: 30px;
+}
+
+.dropdownmenuMRN {
+    margin-left: 60px;
+    margin-top: 17px;
+}
+
+.prnlbldescription {
+    margin-top: -18px;
+    width: 500px;
+    margin-left: 72px;
+}
+
+/*Errors And Success Msg*/
+.toast-container {
+    width: 280px;
+    z-index: 1000002;
+
+}
+
+
+* html .toast-container {
+    position: absolute;
+}
+
+.toast-item {
+    height: auto;
+    background: #333;
+    opacity: 0.9;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    color: #eee;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 6px;
+    padding-right: 6px;
+    overflow:no-display;
+    font-family: lucida Grande;
+    font-size: 14px;
+    border: 2px solid #999;
+    display: block;
+    position: relative;
+    margin: 0 0 12px 0;
+}
+
+    .toast-item p {
+        text-align: left;
+        margin-left: 50px;
+        margin-top: 15px;
+    }
+
+.toast-item-close {
+    background: url(../images/icons/close.gif);
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 7px;
+    right: 7px;
+}
+
+.toast-item-image {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    left: 10px;
+}
+
+.toast-item-image-notice {
+    background: url(../images/icons/notice.png);
+}
+
+.toast-item-image-success {
+    background: url(../images/icons/success.png);
+}
+
+.toast-item-image-warning {
+    background: url(../images/icons/warning.png);
+}
+
+.toast-item-image-error {
+    background: url(../images/icons/error.png);
+}
+
+
+/**
+ * toast types
+ *
+ * pattern: toast-type-[valumages/error.png);
+}
+
+
+/**
+ * toast types
+ *
+ * pattern: toast-type-[value]
+ * where 'value' is the real value of the plugin option 'type'
+ *
+ */
+.toast-type-notice {
+    color: white;
+}
+
+.toast-type-success {
+    color: white;
+}
+
+.toast-type-warning {
+    color: white;
+    border-color: #FCBD57;
+}
+
+.toast-type-error {
+    color: white;
+    border-color: #B32B2B;
+}
+
+/**
+ * positions
+ *
+ * pattern: toast-position-[value]
+ * where 'value' is the real value of the plugin option 'position'
+ *
+ */
+.toast-position-top-left {
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+.toast-position-top-center {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    margin-left: -140px;
+    z-index: 1000002;
+}
+
+.toast-position-top-right {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+}
+
+.toast-position-middle-left {
+    position: fixed;
+    left: 20px;
+    top: 50%;
+    margin-top: -40px;
+}
+
+.toast-position-middle-center {
+    position: fixed;
+    left: 50%;
+    margin-left: -140px;
+    margin-top: -40px;
+    top: 50%;
+}
+
+.toast-position-middle-right {
+    position: fixed;
+    right: 20px;
+    margin-left: -140px;
+    margin-top: -40px;
+    top: 50%;
+}
+
+
+.stockchangeseqnomargin {
+    margin-left: -155px;
+}
+
+.GeneralDetailGrd {
+    height: 130px;
+}
+
+.documenttypemargin {
+    margin-left: 5px;
+}
+
+.buttonrowitemchange {
+    margin-left: 907px;
+}
+
+.stockinwardsearchbutton {
+    margin-top: -8px;
+    margin-left: 30px;
+}
+
+.stockinwardlabels {
+    margin-top: 3px;
+}
+
+.stockinwarpendinggrid {
+    height: 75px;
+}
+
+.tempchkboxmargin {
+    margin-top: -2px;
+}
+
+.inwardentrymakercheckerbuttons {
+    margin-left: -120px;
+}
+
+.prncalcelbutton {
+    margin-top: -15px;
+    margin-left: 30px;
+}
+
+.mrnbuttonrowmargin {
+    margin-left: 1090px;
+}
+
+.mrnalertdiv {
+    height: 58px;
+}
+
+.mrnadropdownbuttons {
+    margin-left: -92px;
+}
+
+.mrnadropdownbuttonsapprove {
+    margin-left: -112px;
+}
+
+.gridHeaderAlignRight {
+    text-align: right;
+}
+.gridHeaderAlignCenter {
+    text-align: center;
+}
+.mrnbulkcancelsearchbtn {
+    margin-left: 115px;
+    margin-top: -20px;
+}
+
+.crnbuttonrowmargin {
+    margin-left: 880px;
+}
+
+.crnreqsearchbuttonmargin {
+    margin-left: 300px;
+    margin-top: -23px;
+}
+
+.panelscollCRN {
+    overflow-y: scroll;
+    height: 100px;
+}
+
+.crnaddbuttonlocation {
+    margin-left: -90px;
+}
+
+.crnaddallbtn {
+    margin-left: 100px;
+    margin-top: 15px;
+}
+
+.crnsearchallbtn {
+    margin-left: 100px;
+    margin-top: 10px;
+}
+
+.crnsearchbtn {
+    margin-left: 1180px;
+    margin-top: -30px;
+}
+
+.crnswaparea {
+    margin-left: 150px;
+}
+
+.crnSb {
+    margin-left: 165px;
+    margin-top:-5px;
+}
+
+.PDButtons {
+    margin-left: 880px;
+}
+
+.PBActChkBox {
+    margin-left: -60px;
+}
+
+.PDButtonsPC {
+    margin-left: 1085px;
+}
+
+.MRNINTRBlkCancelbtn {
+    margin-left: -92px;
+}
+
+.RadioBtnStace input[type="radio"] {
+    margin-left: 10px;
+    margin-right: 1px;
+}
+
+.MRNINTRBlkCancelbtn {
+    margin-left: -92px;
+}
+
+.AODReceiptAppBtn {
+    margin-left: 10px;
+}
+
+.textDiable {
+    color: #808080 !important;
+}
+
+.panelscollheight50 {
+    overflow-y: scroll;
+    height: 65px;
+}
+
+.rolecreationdelbuttonassign {
+    margin-left: 57px;
+    margin-top: -55px;
+}
+
+.rolecreationaddbtnassign {
+    margin-left: -10px;
+    margin-top:-55px;
+}
+
+.rolecreationdelbuttonassignPC {
+    margin-left: 75px;
+    margin-top: -55px;
+}
+
+.grid_label_right_align {
+    margin-left: -55px;
+}
+/*
+#mnMainMenu a.popout {
+    background-image:url(../../images/icons/addicon.png) !Important;
+
+}
+
+
+.level1 {
+    color: black;
+    width: auto;
+    height: auto;
+    border: 1px rgb(89,89,89) solid;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=27)";
+    filter: alpha(opacity=27);
+    -moz-opacity: 0.27;
+    -khtml-opacity: 0.27;
+    border-radius: 1px;
+}
+
+.hoverstyle {
+    font-weight: bold;
+}
+
+.level2 {
+    color: black;
+    font-size: 12px;
+    height: 25px;
+    padding-right: 100px;
+    width: auto;
+    background-color: white;
+}
+
+.level3 {
+    color: black;
+    font-size: 12px;
+    height: 25px;
+    padding-right: 100px;
+    width: auto;
+    background-color: white;
+}
+
+.hoverstyle {
+    font-weight: bold;
+}
+
+.level4 {
+    color: black;
+    font-size: 12px;
+    height: 25px;
+    padding-right: 100px;
+    width: auto;
+    background-color: white;
+}
+*/
+a#fgtPasswd {
+    text-decoration:underline;
+    cursor:pointer;
+}
+#btnReset.btn.btn-primary {
+    margin-top: 9px;
+}
+.resetPanel {
+    margin-top: 16px;
+}
+#divForgotPassword .row-margin-cls,#divResetPw .row-margin-cls {
+    margin-bottom: 7px;
+}
+
+
+.twstsasa object {
+    width: 800px ;
+}
+
+.txtUppercase {
+    text-transform: uppercase;
+}
+
+.txtLowercase {
+    text-transform: lowercase;
+}

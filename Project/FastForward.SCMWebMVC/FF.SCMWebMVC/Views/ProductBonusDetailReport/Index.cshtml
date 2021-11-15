@@ -1,0 +1,60 @@
+﻿@{
+    ViewBag.Title = "Product Bonus Detail Report";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/ProductBonusDetailReport.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Product Bonus Details Report</div>
+    </div>
+    <div class="col-md-6" style="width:540px">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data">
+        <input type="button" value="View" class="btn btn-default btn-default-style btn-view-data">
+        <input type="button" value="Detail" class="btn btn-default btn-default-style btn-detail-data">
+    </div>
+</div>
+
+
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading"></div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="col-md-2 control-label">Circular Number</label>
+                                <div class="col-md-5">
+                                    <input type="text" id="schnumber" name="schnumber" class="form-control with-search" maxlength="50">
+                                    <img src="/Resources/Images/Search-icon.png" class="search-img  schnumber-search">
+                                </div>
+
+                                <div><input type="text" id="HiddenSchemeNumber" hidden="hidden" /></div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label class="col-md-2 control-label">Scheme Code</label>
+                                <div class="col-md-5">
+                                    <input type="text" id="circode" name="circode" class="form-control with-search" maxlength="50">
+                                    <img src="/Resources/Images/Search-icon.png" class="search-img  circular-search">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="col-md-2 control-label">Date</label>
+                                <select class="form-control" id="datescir" name="datescir"></select>
+                            </div>
+                        </div>                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+

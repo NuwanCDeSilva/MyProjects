@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="FIFO_Not_Followed" targetNamespace="http://tempuri.org/FIFO_Not_Followed.xsd" xmlns:mstns="http://tempuri.org/FIFO_Not_Followed.xsd" xmlns="http://tempuri.org/FIFO_Not_Followed.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="FIFO_Not_Followed" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="FIFO_Not_Followed" msprop:Generator_UserDSName="FIFO_Not_Followed">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_UserTableName="param" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="asatdate" msdata:Caption="todate" msprop:Generator_ColumnVarNameInTable="columnasatdate" msprop:Generator_ColumnPropNameInRow="asatdate" msprop:Generator_ColumnPropNameInTable="asatdateColumn" msprop:Generator_UserColumnName="asatdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="itemcode" msprop:Generator_ColumnVarNameInTable="columnitemcode" msprop:Generator_ColumnPropNameInRow="itemcode" msprop:Generator_ColumnPropNameInTable="itemcodeColumn" msprop:Generator_UserColumnName="itemcode" type="xs:string" minOccurs="0" />
+              <xs:element name="itemstatus" msprop:Generator_ColumnVarNameInTable="columnitemstatus" msprop:Generator_ColumnPropNameInRow="itemstatus" msprop:Generator_ColumnPropNameInTable="itemstatusColumn" msprop:Generator_UserColumnName="itemstatus" type="xs:string" minOccurs="0" />
+              <xs:element name="brand" msprop:Generator_ColumnVarNameInTable="columnbrand" msprop:Generator_ColumnPropNameInRow="brand" msprop:Generator_ColumnPropNameInTable="brandColumn" msprop:Generator_UserColumnName="brand" type="xs:string" minOccurs="0" />
+              <xs:element name="model" msprop:Generator_ColumnVarNameInTable="columnmodel" msprop:Generator_ColumnPropNameInRow="model" msprop:Generator_ColumnPropNameInTable="modelColumn" msprop:Generator_UserColumnName="model" type="xs:string" minOccurs="0" />
+              <xs:element name="cat1" msprop:Generator_ColumnVarNameInTable="columncat1" msprop:Generator_ColumnPropNameInRow="cat1" msprop:Generator_ColumnPropNameInTable="cat1Column" msprop:Generator_UserColumnName="cat1" type="xs:string" minOccurs="0" />
+              <xs:element name="cat2" msprop:Generator_ColumnVarNameInTable="columncat2" msprop:Generator_ColumnPropNameInRow="cat2" msprop:Generator_ColumnPropNameInTable="cat2Column" msprop:Generator_UserColumnName="cat2" type="xs:string" minOccurs="0" />
+              <xs:element name="cat3" msprop:Generator_ColumnVarNameInTable="columncat3" msprop:Generator_ColumnPropNameInRow="cat3" msprop:Generator_ColumnPropNameInTable="cat3Column" msprop:Generator_UserColumnName="cat3" type="xs:string" minOccurs="0" />
+              <xs:element name="fdate" msprop:Generator_ColumnVarNameInTable="columnfdate" msprop:Generator_ColumnPropNameInRow="fdate" msprop:Generator_ColumnPropNameInTable="fdateColumn" msprop:Generator_UserColumnName="fdate" type="xs:string" minOccurs="0" />
+              <xs:element name="tdate" msprop:Generator_ColumnVarNameInTable="columntdate" msprop:Generator_ColumnPropNameInRow="tdate" msprop:Generator_ColumnPropNameInTable="tdateColumn" msprop:Generator_UserColumnName="tdate" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FIFO_NOT_FOLLOWED" msprop:Generator_TableClassName="FIFO_NOT_FOLLOWEDDataTable" msprop:Generator_TableVarName="tableFIFO_NOT_FOLLOWED" msprop:Generator_TablePropName="FIFO_NOT_FOLLOWED" msprop:Generator_RowDeletingName="FIFO_NOT_FOLLOWEDRowDeleting" msprop:Generator_UserTableName="FIFO_NOT_FOLLOWED" msprop:Generator_RowChangingName="FIFO_NOT_FOLLOWEDRowChanging" msprop:Generator_RowEvHandlerName="FIFO_NOT_FOLLOWEDRowChangeEventHandler" msprop:Generator_RowDeletedName="FIFO_NOT_FOLLOWEDRowDeleted" msprop:Generator_RowEvArgName="FIFO_NOT_FOLLOWEDRowChangeEvent" msprop:Generator_RowChangedName="FIFO_NOT_FOLLOWEDRowChanged" msprop:Generator_RowClassName="FIFO_NOT_FOLLOWEDRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COMPANY" msprop:Generator_ColumnVarNameInTable="columnCOMPANY" msprop:Generator_ColumnPropNameInRow="COMPANY" msprop:Generator_ColumnPropNameInTable="COMPANYColumn" msprop:Generator_UserColumnName="COMPANY" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_DESC" msprop:Generator_ColumnVarNameInTable="columnMC_DESC" msprop:Generator_ColumnPropNameInRow="MC_DESC" msprop:Generator_ColumnPropNameInTable="MC_DESCColumn" msprop:Generator_UserColumnName="MC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_IT_POWERED" msprop:Generator_ColumnVarNameInTable="columnMC_IT_POWERED" msprop:Generator_ColumnPropNameInRow="MC_IT_POWERED" msprop:Generator_ColumnPropNameInTable="MC_IT_POWEREDColumn" msprop:Generator_UserColumnName="MC_IT_POWERED" type="xs:string" minOccurs="0" />
+              <xs:element name="LOC" msprop:Generator_ColumnVarNameInTable="columnLOC" msprop:Generator_ColumnPropNameInRow="LOC" msprop:Generator_ColumnPropNameInTable="LOCColumn" msprop:Generator_UserColumnName="LOC" type="xs:string" minOccurs="0" />
+              <xs:element name="ML_LOC_DESC" msprop:Generator_ColumnVarNameInTable="columnML_LOC_DESC" msprop:Generator_ColumnPropNameInRow="ML_LOC_DESC" msprop:Generator_ColumnPropNameInTable="ML_LOC_DESCColumn" msprop:Generator_UserColumnName="ML_LOC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEM_CODE" msprop:Generator_ColumnVarNameInTable="columnITEM_CODE" msprop:Generator_ColumnPropNameInRow="ITEM_CODE" msprop:Generator_ColumnPropNameInTable="ITEM_CODEColumn" msprop:Generator_UserColumnName="ITEM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEM_DESC" msprop:Generator_ColumnVarNameInTable="columnITEM_DESC" msprop:Generator_ColumnPropNameInRow="ITEM_DESC" msprop:Generator_ColumnPropNameInTable="ITEM_DESCColumn" msprop:Generator_UserColumnName="ITEM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MODEL" msprop:Generator_ColumnVarNameInTable="columnMODEL" msprop:Generator_ColumnPropNameInRow="MODEL" msprop:Generator_ColumnPropNameInTable="MODELColumn" msprop:Generator_UserColumnName="MODEL" type="xs:string" minOccurs="0" />
+              <xs:element name="MIS_DESC" msprop:Generator_ColumnVarNameInTable="columnMIS_DESC" msprop:Generator_ColumnPropNameInRow="MIS_DESC" msprop:Generator_ColumnPropNameInTable="MIS_DESCColumn" msprop:Generator_UserColumnName="MIS_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="ITEM_STATUS" msprop:Generator_ColumnVarNameInTable="columnITEM_STATUS" msprop:Generator_ColumnPropNameInRow="ITEM_STATUS" msprop:Generator_ColumnPropNameInTable="ITEM_STATUSColumn" msprop:Generator_UserColumnName="ITEM_STATUS" type="xs:string" minOccurs="0" />
+              <xs:element name="QTY" msprop:Generator_ColumnVarNameInTable="columnQTY" msprop:Generator_ColumnPropNameInRow="QTY" msprop:Generator_ColumnPropNameInTable="QTYColumn" msprop:Generator_UserColumnName="QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ITS_SER_1" msprop:Generator_ColumnVarNameInTable="columnITS_SER_1" msprop:Generator_ColumnPropNameInRow="ITS_SER_1" msprop:Generator_ColumnPropNameInTable="ITS_SER_1Column" msprop:Generator_UserColumnName="ITS_SER_1" type="xs:string" minOccurs="0" />
+              <xs:element name="ITS_WARR_NO" msprop:Generator_ColumnVarNameInTable="columnITS_WARR_NO" msprop:Generator_ColumnPropNameInRow="ITS_WARR_NO" msprop:Generator_ColumnPropNameInTable="ITS_WARR_NOColumn" msprop:Generator_UserColumnName="ITS_WARR_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITS_SER_2" msprop:Generator_ColumnVarNameInTable="columnITS_SER_2" msprop:Generator_ColumnPropNameInRow="ITS_SER_2" msprop:Generator_ColumnPropNameInTable="ITS_SER_2Column" msprop:Generator_UserColumnName="ITS_SER_2" type="xs:string" minOccurs="0" />
+              <xs:element name="ITH_DOC_TP" msprop:Generator_ColumnVarNameInTable="columnITH_DOC_TP" msprop:Generator_ColumnPropNameInRow="ITH_DOC_TP" msprop:Generator_ColumnPropNameInTable="ITH_DOC_TPColumn" msprop:Generator_UserColumnName="ITH_DOC_TP" type="xs:string" minOccurs="0" />
+              <xs:element name="ITH_DOC_NO" msprop:Generator_ColumnVarNameInTable="columnITH_DOC_NO" msprop:Generator_ColumnPropNameInRow="ITH_DOC_NO" msprop:Generator_ColumnPropNameInTable="ITH_DOC_NOColumn" msprop:Generator_UserColumnName="ITH_DOC_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ITH_DOC_DATE" msprop:Generator_ColumnVarNameInTable="columnITH_DOC_DATE" msprop:Generator_ColumnPropNameInRow="ITH_DOC_DATE" msprop:Generator_ColumnPropNameInTable="ITH_DOC_DATEColumn" msprop:Generator_UserColumnName="ITH_DOC_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ITH_OTH_DOCNO" msprop:Generator_ColumnVarNameInTable="columnITH_OTH_DOCNO" msprop:Generator_ColumnPropNameInRow="ITH_OTH_DOCNO" msprop:Generator_ColumnPropNameInTable="ITH_OTH_DOCNOColumn" msprop:Generator_UserColumnName="ITH_OTH_DOCNO" type="xs:string" minOccurs="0" />
+              <xs:element name="FIFO_SER_REM" msprop:Generator_ColumnVarNameInTable="columnFIFO_SER_REM" msprop:Generator_ColumnPropNameInRow="FIFO_SER_REM" msprop:Generator_ColumnPropNameInTable="FIFO_SER_REMColumn" msprop:Generator_UserColumnName="FIFO_SER_REM" type="xs:string" minOccurs="0" />
+              <xs:element name="fifo_ser_1" msprop:Generator_ColumnVarNameInTable="columnfifo_ser_1" msprop:Generator_ColumnPropNameInRow="fifo_ser_1" msprop:Generator_ColumnPropNameInTable="fifo_ser_1Column" msprop:Generator_UserColumnName="fifo_ser_1" type="xs:string" minOccurs="0" />
+              <xs:element name="fifo_doc" msprop:Generator_ColumnVarNameInTable="columnfifo_doc" msprop:Generator_ColumnPropNameInRow="fifo_doc" msprop:Generator_ColumnPropNameInTable="fifo_docColumn" msprop:Generator_UserColumnName="fifo_doc" type="xs:string" minOccurs="0" />
+              <xs:element name="FIFO_DOC_DATE" msprop:Generator_ColumnVarNameInTable="columnFIFO_DOC_DATE" msprop:Generator_ColumnPropNameInRow="FIFO_DOC_DATE" msprop:Generator_ColumnPropNameInTable="FIFO_DOC_DATEColumn" msprop:Generator_UserColumnName="FIFO_DOC_DATE" type="xs:dateTime" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

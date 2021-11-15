@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="receiptPrint" targetNamespace="http://tempuri.org/receiptPrint.xsd" xmlns:mstns="http://tempuri.org/receiptPrint.xsd" xmlns="http://tempuri.org/receiptPrint.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="receiptPrint" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="receiptPrint" msprop:Generator_UserDSName="receiptPrint">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="salesDetails" msprop:Generator_TableClassName="salesDetailsDataTable" msprop:Generator_TableVarName="tablesalesDetails" msprop:Generator_RowChangedName="salesDetailsRowChanged" msprop:Generator_TablePropName="salesDetails" msprop:Generator_RowDeletingName="salesDetailsRowDeleting" msprop:Generator_RowChangingName="salesDetailsRowChanging" msprop:Generator_RowEvHandlerName="salesDetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="salesDetailsRowDeleted" msprop:Generator_RowClassName="salesDetailsRow" msprop:Generator_UserTableName="salesDetails" msprop:Generator_RowEvArgName="salesDetailsRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SIR_PREFIX" msprop:Generator_ColumnVarNameInTable="columnSIR_PREFIX" msprop:Generator_ColumnPropNameInRow="SIR_PREFIX" msprop:Generator_ColumnPropNameInTable="SIR_PREFIXColumn" msprop:Generator_UserColumnName="SIR_PREFIX" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_RECEIPT_NO" msprop:Generator_ColumnVarNameInTable="columnSIR_RECEIPT_NO" msprop:Generator_ColumnPropNameInRow="SIR_RECEIPT_NO" msprop:Generator_ColumnPropNameInTable="SIR_RECEIPT_NOColumn" msprop:Generator_UserColumnName="SIR_RECEIPT_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_RECEIPT_TYPE" msprop:Generator_ColumnVarNameInTable="columnSIR_RECEIPT_TYPE" msprop:Generator_ColumnPropNameInRow="SIR_RECEIPT_TYPE" msprop:Generator_ColumnPropNameInTable="SIR_RECEIPT_TYPEColumn" msprop:Generator_UserColumnName="SIR_RECEIPT_TYPE" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_DEBTOR_NAME" msprop:Generator_ColumnVarNameInTable="columnSIR_DEBTOR_NAME" msprop:Generator_ColumnPropNameInRow="SIR_DEBTOR_NAME" msprop:Generator_ColumnPropNameInTable="SIR_DEBTOR_NAMEColumn" msprop:Generator_UserColumnName="SIR_DEBTOR_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_DEBTOR_ADD_1" msprop:Generator_ColumnVarNameInTable="columnSIR_DEBTOR_ADD_1" msprop:Generator_ColumnPropNameInRow="SIR_DEBTOR_ADD_1" msprop:Generator_ColumnPropNameInTable="SIR_DEBTOR_ADD_1Column" msprop:Generator_UserColumnName="SIR_DEBTOR_ADD_1" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_DEBTOR_ADD_2" msprop:Generator_ColumnVarNameInTable="columnSIR_DEBTOR_ADD_2" msprop:Generator_ColumnPropNameInRow="SIR_DEBTOR_ADD_2" msprop:Generator_ColumnPropNameInTable="SIR_DEBTOR_ADD_2Column" msprop:Generator_UserColumnName="SIR_DEBTOR_ADD_2" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_MOB_NO" msprop:Generator_ColumnVarNameInTable="columnSIR_MOB_NO" msprop:Generator_ColumnPropNameInRow="SIR_MOB_NO" msprop:Generator_ColumnPropNameInTable="SIR_MOB_NOColumn" msprop:Generator_UserColumnName="SIR_MOB_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_ANAL_3" msprop:Generator_ColumnVarNameInTable="columnSIR_ANAL_3" msprop:Generator_ColumnPropNameInRow="SIR_ANAL_3" msprop:Generator_ColumnPropNameInTable="SIR_ANAL_3Column" msprop:Generator_UserColumnName="SIR_ANAL_3" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_TOT_SETTLE_AMT" msprop:Generator_ColumnVarNameInTable="columnSIR_TOT_SETTLE_AMT" msprop:Generator_ColumnPropNameInRow="SIR_TOT_SETTLE_AMT" msprop:Generator_ColumnPropNameInTable="SIR_TOT_SETTLE_AMTColumn" msprop:Generator_UserColumnName="SIR_TOT_SETTLE_AMT" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_DEBTOR_CD" msprop:Generator_ColumnVarNameInTable="columnSIR_DEBTOR_CD" msprop:Generator_ColumnPropNameInRow="SIR_DEBTOR_CD" msprop:Generator_ColumnPropNameInTable="SIR_DEBTOR_CDColumn" msprop:Generator_UserColumnName="SIR_DEBTOR_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="SIR_RECEIPT_DATE" msprop:Generator_ColumnVarNameInTable="columnSIR_RECEIPT_DATE" msprop:Generator_ColumnPropNameInRow="SIR_RECEIPT_DATE" msprop:Generator_ColumnPropNameInTable="SIR_RECEIPT_DATEColumn" msprop:Generator_UserColumnName="SIR_RECEIPT_DATE" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SIR_REMARKS" msprop:Generator_ColumnVarNameInTable="columnSIR_REMARKS" msprop:Generator_ColumnPropNameInRow="SIR_REMARKS" msprop:Generator_ColumnPropNameInTable="SIR_REMARKSColumn" msprop:Generator_UserColumnName="SIR_REMARKS" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ProfitCenter" msprop:Generator_TableClassName="ProfitCenterDataTable" msprop:Generator_TableVarName="tableProfitCenter" msprop:Generator_RowChangedName="ProfitCenterRowChanged" msprop:Generator_TablePropName="ProfitCenter" msprop:Generator_RowDeletingName="ProfitCenterRowDeleting" msprop:Generator_RowChangingName="ProfitCenterRowChanging" msprop:Generator_RowEvHandlerName="ProfitCenterRowChangeEventHandler" msprop:Generator_RowDeletedName="ProfitCenterRowDeleted" msprop:Generator_RowClassName="ProfitCenterRow" msprop:Generator_UserTableName="ProfitCenter" msprop:Generator_RowEvArgName="ProfitCenterRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPC_DESC" msprop:Generator_ColumnVarNameInTable="columnMPC_DESC" msprop:Generator_ColumnPropNameInRow="MPC_DESC" msprop:Generator_ColumnPropNameInTable="MPC_DESCColumn" msprop:Generator_UserColumnName="MPC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_ADD_1" msprop:Generator_ColumnVarNameInTable="columnMPC_ADD_1" msprop:Generator_ColumnPropNameInRow="MPC_ADD_1" msprop:Generator_ColumnPropNameInTable="MPC_ADD_1Column" msprop:Generator_UserColumnName="MPC_ADD_1" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_ADD_2" msprop:Generator_ColumnVarNameInTable="columnMPC_ADD_2" msprop:Generator_ColumnPropNameInRow="MPC_ADD_2" msprop:Generator_ColumnPropNameInTable="MPC_ADD_2Column" msprop:Generator_UserColumnName="MPC_ADD_2" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_TEL" msprop:Generator_ColumnVarNameInTable="columnMPC_TEL" msprop:Generator_ColumnPropNameInRow="MPC_TEL" msprop:Generator_ColumnPropNameInTable="MPC_TELColumn" msprop:Generator_UserColumnName="MPC_TEL" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_FAX" msprop:Generator_ColumnVarNameInTable="columnMPC_FAX" msprop:Generator_ColumnPropNameInRow="MPC_FAX" msprop:Generator_ColumnPropNameInTable="MPC_FAXColumn" msprop:Generator_UserColumnName="MPC_FAX" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="mst_rec_tp" msprop:Generator_TableClassName="mst_rec_tpDataTable" msprop:Generator_TableVarName="tablemst_rec_tp" msprop:Generator_RowChangedName="mst_rec_tpRowChanged" msprop:Generator_TablePropName="mst_rec_tp" msprop:Generator_RowDeletingName="mst_rec_tpRowDeleting" msprop:Generator_RowChangingName="mst_rec_tpRowChanging" msprop:Generator_RowEvHandlerName="mst_rec_tpRowChangeEventHandler" msprop:Generator_RowDeletedName="mst_rec_tpRowDeleted" msprop:Generator_RowClassName="mst_rec_tpRow" msprop:Generator_UserTableName="mst_rec_tp" msprop:Generator_RowEvArgName="mst_rec_tpRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MSRT_DESC" msprop:Generator_ColumnVarNameInTable="columnMSRT_DESC" msprop:Generator_ColumnPropNameInRow="MSRT_DESC" msprop:Generator_ColumnPropNameInTable="MSRT_DESCColumn" msprop:Generator_UserColumnName="MSRT_DESC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

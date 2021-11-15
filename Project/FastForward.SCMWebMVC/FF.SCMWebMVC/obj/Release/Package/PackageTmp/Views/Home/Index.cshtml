@@ -1,0 +1,12 @@
+﻿
+@{
+    ViewBag.Title = "Home";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts {
+    <script src="~/Scripts/Common/Home.js?@val"></script>
+}
+
+<div class="demopage">
+</div>

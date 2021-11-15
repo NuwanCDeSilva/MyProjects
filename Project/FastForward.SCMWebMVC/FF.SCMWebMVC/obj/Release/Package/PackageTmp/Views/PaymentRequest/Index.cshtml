@@ -1,0 +1,237 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/PaymentRequest.js?@val"></script>
+}
+@section style{
+    <link href="~/Content/PaymentRequest.css?@val" rel="stylesheet" />
+}
+<div class="row">
+    <div class="op-btns">
+        <div class="col-md-4">
+            <div class="page-title">Payment Request</div>
+        </div>
+        <div class="col-md-8">
+            <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+            <input type="button" value="Schedule" class="btn btn-default btn-default-style btn-schedule-data" />
+            <input type="button" value="Pre Payment" class="btn btn-default btn-default-style btn-prepay-data" />
+            <input type="button" value="Save" class="btn btn-default btn-default-style btn-save-data" />
+            <input type="button" value="Reject" class="btn btn-default btn-default-style btn-reject-data" />
+            <input type="button" value="Process" class="btn btn-default btn-default-style btn-process-data" />
+            <input type="button" value="Approve" class="btn btn-default btn-default-style btn-approve-data" />
+            <input type="button" value="Upload" class="btn btn-default btn-default-style btn-upload-data" />
+        </div>
+    </div>
+</div>
+<div class="demopage">
+    @*<div class="container1">
+            <div class="panel panel-default row margintop5">
+                <div class="panel panel-heading">Excel Upload</div>
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-sm-1">Excel File</div>
+                                <div class="col-sm-3">@Html.Editor("UploadExcel", new { htmlAttributes = new { @class = "form-control no-padding", @type = "file" } }) </div>
+                                <div class="col-sm-1"><input type="button" value="Upload" class="btn btn-default btn-sm btn-default-style btn-upload-data" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+    <div class="panel panel-default row">
+        <div class="panel panel-heading">Payment Details</div>
+        <div class="panel-container">
+            <div class="panel panel-body tab-content-cls">
+                <div class="form-horizontal">
+                    @using (Html.BeginForm("savePaymentRequest", "PaymentRequest", FormMethod.Post, new { id = "parreqfrm" }))
+                    {
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-3">Request Type</div>
+                                <div class="col-sm-6">
+                                    <select class="form-control" id="DropdownReqTp" name="DropdownReqTp">
+                                        <option value="PTTYCSH">Petty Cash</option>
+                                        <option value="PROTRA">Procument Trading</option>
+                                        <option value="PROFIXAZT">Procument Fix Assests</option>
+                                        <option value="PROMISS">Procument Missalanious</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">Request Number</div>
+                                <div class="col-sm-6">@Html.Editor("ReqNo", new { htmlAttributes = new { @class = "form-control", @type = "Text", @readonly = "readonly" } })</div>
+                                <div class="col-sm-1 fixsearchwidth"><img class="srch-icon srch-req-no plus" src="~/Resources/Images/Account/search.png" alt="" width="20" height="20"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">Creditor</div>
+                                <div class="col-sm-6">@Html.Editor("Creditor", new { htmlAttributes = new { @class = "form-control", @type = "Text" } })</div>
+                                <div class="col-sm-1 fixsearchwidth"><img class="srch-icon rch-creacc-no plus" src="~/Resources/Images/Account/search.png" alt="" width="20" height="20"></div>
+                                @*<div class="col-sm-2 cred-name">--</div>*@
+                            </div>    
+                            <div class="row">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-6 cred-name">--</div>
+                            </div>                                     
+                            <div class="row">
+                                <div class="col-sm-3">Payment Type</div>
+                                <div class="col-sm-6">@Html.Editor("PayType", new { htmlAttributes = new { @class = "form-control", @type = "Text" } })</div>
+                                <div class="col-sm-1 fixsearchwidth"><img class="srch-icon srch-pay-tp plus" src="~/Resources/Images/Account/search.png" alt="" width="20" height="20"></div>
+                            </div>
+                            
+                            
+                            <div class="row">
+                                <div class="col-sm-3">Description</div>
+                                <div class="col-sm-6">@Html.TextArea("description", new { @class = "form-control", @type = "Text" })</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">Refference Number</div>
+                                <div class="col-sm-6">@Html.Editor("RefNo", new { htmlAttributes = new { @class = "form-control", @type = "Text", @readonly = "readonly" } })</div>
+                                <div class="col-sm-1 fixsearchwidth"><img class="srch-icon srch-ref-no plus" src="~/Resources/Images/Account/search.png" alt="" width="20" height="20"></div>
+                                <div class="po-item-table">
+                                    <table class="po-det-disp">
+                                        <tr class="po-dhr-clm">
+                                            <th class="po-grd-data">PO #</th>
+                                            <th class="po-grd-crd number">Cost</th>
+                                            <th class="po-grd-slct number">Tax</th>
+                                            <th class="po-grd-slct"></th>
+                                        </tr>
+                                    </table>
+                                </div>
+                            
+                            </div>   
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-3">Request Date</div>
+                                <div class="col-sm-6">@Html.Editor("ReqDate", new { htmlAttributes = new { @class = "form-control", @type = "Text", @readonly = "readonly" } })</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">Gross Amount</div>
+                                <div class="col-sm-6">@Html.Editor("GrosAmt", new { htmlAttributes = new { @class = "form-control right-align", @type = "Text", @maxlength = "10" } })</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">Tax</div>
+                                <div class="col-sm-6">@Html.Editor("Tax", new { htmlAttributes = new { @class = "form-control right-align", @type = "Text", @maxlength = "10" } })</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">Net Amount</div>
+                                <div class="col-sm-6">@Html.Editor("NetAmt", new { htmlAttributes = new { @class = "form-control right-align", @type = "Text", @readonly = "readonly" } })</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-3">Difference</div>
+                                <div class="col-sm-6 difference"><label class="right-align">0.00</label></div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="pending-item-table">
+                                <table>
+                                    <tr class="grid-dhr-clm">
+                                        <th class="grd-slct"></th>
+                                        <th class="grd-data">Request</th>
+                                        <th class="grd-data">Date</th>
+                                        <th class="grd-crd">Creditor</th>
+                                        <th class="grd-slct">Status</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <div class="col-sm-2">Tax Code</div>
+                                <div class="col-sm-3">@Html.Editor("TaxCode", new { htmlAttributes = new { @class = "form-control", @type = "Text", @readonly = "readonly" } })</div>
+                                <div class="col-sm-1 fixsearchwidth"><img class="srch-icon tax-search plus" src="~/Resources/Images/Account/search.png" alt="" width="20" height="20"></div>
+                                <div class="col-sm-2">Amount</div>
+                                <div class="col-sm-3">@Html.Editor("TaxAmount", new { htmlAttributes = new { @class = "form-control", @type = "Text" } })</div>
+                                <div class="col-sm-1">
+                                    <img class="add-tax-data plus" src="/Resources/Images/Account/Dpwnarrow.png" alt="" width="20" height="20">
+                                </div>
+                            </div>
+                            <div class="itm-tax-table">
+                                <table>
+                                    <tr class="grid-tax-clm">
+                                        <th class="grd-data-seq hidden"></th>
+                                        <th class="grd-data">Code</th>
+                                        <th class="grd-crd number">Rate</th>
+                                        <th class="grd-data number">Amount</th>
+                                        <th class="grd-slct"></th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="new-acc-col">
+                                <table class="acc-detail-tbl">
+                                    <tr class="grid-dhr-clm">
+                                        <th class="nodisplay">Item Line</th>
+                                        <th style="width:160px;">Code</th>
+                                        <th style="width:150px;">Description</th>
+                                        <th class="right-align" style="width:200px;">
+                                        <div class="acc-total"></div>Amount</th>
+                                        @*<th class="center-align" style="width:40px;"></th>*@
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    }
+                    <div class="clearfix">
+                        <div class="row">
+                            <div class="col-sm-1">Account Number</div>
+                            <div class="col-sm-2">@Html.Editor("AccNo", new { htmlAttributes = new { @class = "form-control", @type = "Text" } })</div>
+                            <div class="col-sm-1 fixsearchwidth"><img class="srch-icon rch-debtacc-no plus" src="~/Resources/Images/Account/search.png" alt="" width="20" height="20"></div>
+                            @*<div class="col-sm-2 debitor-name">--</div>*@
+                            <div class="col-sm-2 direction-name">
+                                <div>Credit</div>
+                                <input type="checkbox" class="iscredit">
+                            </div>
+                            @*<div class="col-sm-1">Amount</div>
+                                <div class="col-sm-2">@Html.Editor("AccAmount", new { htmlAttributes = new { @class = "form-control right-align", @type = "Text" } })</div>
+                                <div class="col-sm-1 fixsearchwidth"><img class="add-account plus" src="~/Resources/Images/Account/Dpwnarrow.png" alt="" width="20" height="20"></div>*@
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-1"></div>
+                            <div class="col-sm-2 debitor-name">--</div>
+                        </div>
+                        @*<div class="col-sm-12">
+                                <img class="add-account plus" src="~/Content/images/plusMark.png" alt="" width="20" height="20">
+                            </div>*@
+                    </div>
+                    <div class="clearfix">
+                        <div class="col-md-8">
+                            <form id="dynamin-val-form">
+                                <div class="template-itemval">
+
+                                </div>
+                                <div class="item-table">
+                                    <table class="dynamic-table"></table>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div id='myModalRejReq' class='modal fade in'>
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="se-pre-con"></div>
+                                <div class="Title panel-heading">
+                                    <div class="alignleft panel-title">Reason for reject request<div class="rejreq-no"></div></div>
+                                </div>
+                                <div id='myModalContentRej'>
+                                    <div class="container">
+                                        <div class="col-sm-2">@Html.TextArea("RejectReason", new { @class = "form-control", @type = "Text", @maxlength = "200" })</div>
+                                    </div>
+                                </div>
+                                <input type="button" value="Reject" class="btn btn-default btn-default-style btn-rejectapp-data" />
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

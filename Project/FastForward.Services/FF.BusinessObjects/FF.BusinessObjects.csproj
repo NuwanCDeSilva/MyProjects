@@ -1,0 +1,1221 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2D8AB82F-4AF2-49E7-8B34-41496020C590}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FF.BusinessObjects</RootNamespace>
+    <AssemblyName>FF.BusinessObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\UtilityApp\FastForward.APIPool\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ACCOUNT_TAX.cs" />
+    <Compile Include="Account\COMMON_CLS.cs" />
+    <Compile Include="Account\COMMON_SEARCH.cs" />
+    <Compile Include="Account\MST_ACC_TAX.cs" />
+    <Compile Include="Account\MST_BUSENTITY_TAX.cs" />
+    <Compile Include="Account\MST_PAY_DET.cs" />
+    <Compile Include="Account\MST_PAY_HDR.cs" />
+    <Compile Include="Account\MST_PAY_REQ_DET.cs" />
+    <Compile Include="Account\MST_PAY_REQ_HDR.cs" />
+    <Compile Include="Account\MST_PAY_REQ_REF.cs" />
+    <Compile Include="Account\PUR_SEARCH.cs" />
+    <Compile Include="Account\REF_CHT_ACC.cs" />
+    <Compile Include="Account\REF_OBJ.cs" />
+    <Compile Include="Account\REF_OBJ_LIST_DET.cs" />
+    <Compile Include="Account\REF_OBJ_TEMPITMFRM.cs" />
+    <Compile Include="Account\REF_TEMP_SAVE.cs" />
+    <Compile Include="Account\REF_TMPLT_DET.cs" />
+    <Compile Include="Account\REF_TMPLT_HED.cs" />
+    <Compile Include="Account\REF_TMPLT_ITM_VALUE.cs" />
+    <Compile Include="Account\REF_TMPLT_VALUE.cs" />
+    <Compile Include="Account\REF_TMP_OBJHEDDET.cs" />
+    <Compile Include="Account\SAR_PAY_TP.cs" />
+    <Compile Include="Account\SEC_SYSTEM_MENU.cs" />
+    <Compile Include="Account\SRCH_ACC_DET.cs" />
+    <Compile Include="Account\SRCH_PAY_REQ.cs" />
+    <Compile Include="Account\SRCH_TEMP_SRCH.cs" />
+    <Compile Include="Asycuda\ASY_ALT_HEADER_DTLS.cs" />
+    <Compile Include="Asycuda\ASY_CUSDEC_HS_ITM.cs" />
+    <Compile Include="Asycuda\ASY_CUSDEC_ITEM_DTLS_MODEL.cs" />
+    <Compile Include="Asycuda\ASY_CUSDEC_ITM.cs" />
+    <Compile Include="Asycuda\ASY_CUSDEC_MODEL.cs" />
+    <Compile Include="Asycuda\ASY_DB_SOURCE.cs" />
+    <Compile Include="Asycuda\ASY_DOC_GRUP.cs" />
+    <Compile Include="Asycuda\ASY_DOC_SEARCH_HEAD.cs" />
+    <Compile Include="Asycuda\ASY_DOC_TP.cs" />
+    <Compile Include="Asycuda\ASY_HEADER_DTLS.cs" />
+    <Compile Include="Asycuda\ASY_IMP_CUSDEC_HDR.cs" />
+    <Compile Include="Asycuda\ASY_IMP_CUSDEC_ITM.cs" />
+    <Compile Include="Asycuda\ASY_UOM_DET.cs" />
+    <Compile Include="Asycuda\ASY_XML_TAG.cs" />
+    <Compile Include="Asycuda\MST_UOM_CATE.cs" />
+    <Compile Include="BITool\AgentPort.cs" />
+    <Compile Include="BITool\AGING_DET.cs" />
+    <Compile Include="BITool\BANK_SEARCH.cs" />
+    <Compile Include="BITool\BIItemsMod.cs" />
+    <Compile Include="BITool\BI_TRGT_SALE.cs" />
+    <Compile Include="BITool\BMT_HPTERM_HEAD.cs" />
+    <Compile Include="BITool\BMT_REF_HEAD.cs" />
+    <Compile Include="BITool\BMT_SALE.cs" />
+    <Compile Include="BITool\BM_SALE_DETAILS.cs" />
+    <Compile Include="BITool\BOND_BALANCE.cs" />
+    <Compile Include="BITool\BOND_BALANCE_AAL.cs" />
+    <Compile Include="BITool\BRAND_MNGR_SEARCH_HEAD.cs" />
+    <Compile Include="BITool\BRAND_SEARCH_HEAD.cs" />
+    <Compile Include="BITool\BRND_NEW_STUS.cs" />
+    <Compile Include="BITool\CashFlow.cs" />
+    <Compile Include="BITool\CHANL_WISE_SALES.cs" />
+    <Compile Include="BITool\CIRCULAR_NO_SEARCH.cs" />
+    <Compile Include="BITool\CUSTOMER_SALES.cs" />
+    <Compile Include="BITool\CUSTOMER_SEARCH.cs" />
+    <Compile Include="BITool\DeliverSale.cs" />
+    <Compile Include="BITool\DeliveryItemDetails.cs" />
+    <Compile Include="BITool\Deliver_forcst_data.cs" />
+    <Compile Include="BITool\DELI_SALE.cs" />
+    <Compile Include="BITool\DELI_SALE_NEW.cs" />
+    <Compile Include="BITool\DTTableConversion.cs" />
+    <Compile Include="BITool\Exchange_Reversal.cs" />
+    <Compile Include="BITool\EXECUTIVE_SEARCH.cs" />
+    <Compile Include="BITool\Ex_Rev_Data.cs" />
+    <Compile Include="BITool\FMI_CATWISE.cs" />
+    <Compile Include="BITool\FMI_CHANNELWISE.cs" />
+    <Compile Include="BITool\FMI_PROVINCEWISE.cs" />
+    <Compile Include="BITool\Forcstdata.cs" />
+    <Compile Include="BITool\GLB_PROFITABILITY.cs" />
+    <Compile Include="BITool\GPAnalysis.cs" />
+    <Compile Include="BITool\GV_SEARCH_HEAD.cs" />
+    <Compile Include="BITool\HPFilter.cs" />
+    <Compile Include="BITool\HPSCHCATE_SEARCH.cs" />
+    <Compile Include="BITool\INVENTORY_SHIPMENT.cs" />
+    <Compile Include="BITool\INVENTORY_SHIPMENT_SI.cs" />
+    <Compile Include="BITool\INVOICE_MAIN_TYPE.cs" />
+    <Compile Include="BITool\HP_ACC_COMP.cs" />
+    <Compile Include="BITool\INVOICE_TYPE_SEARCH.cs" />
+    <Compile Include="BITool\INVTURNOVR.cs" />
+    <Compile Include="BITool\ITEM_BI_AGE.cs" />
+    <Compile Include="BITool\ITEM_BRAND_SEARCH.cs" />
+    <Compile Include="BITool\ITEM_MODEL_SEARCH.cs" />
+    <Compile Include="BITool\ITEM_SALE_SUMM.cs" />
+    <Compile Include="BITool\ITEM_SEARCH.cs" />
+    <Compile Include="BITool\ITM_ASAT_BAL.cs" />
+    <Compile Include="BITool\ITM_CUR_AGE_DET.cs" />
+    <Compile Include="BITool\ITM_NEW_ARRIVAL.cs" />
+    <Compile Include="BITool\ITM_STUS_SEARCH_HEAD.cs" />
+    <Compile Include="BITool\ITService.cs" />
+    <Compile Include="BITool\LOC_SEARCH.cs" />
+    <Compile Include="BITool\MAIN_CAT2_SEARCH.cs" />
+    <Compile Include="BITool\MAIN_CAT3_SEARCH.cs" />
+    <Compile Include="BITool\MAIN_CAT_SEARCH.cs" />
+    <Compile Include="BITool\MST_LOYALTY_SEARCH.cs" />
+    <Compile Include="BITool\MST_ITMSTS_SEARCH.cs" />
+    <Compile Include="BITool\MST_MNGR_SEARCH.cs" />
+    <Compile Include="BITool\MST_TEAML_SEARCH.cs" />
+    <Compile Include="BITool\MSR_ADMINT_SEARCH.cs" />
+    <Compile Include="BITool\MSR_PROMOTOR_SEARCH.cs" />
+    <Compile Include="BITool\MSR_TOWN_SEARCH.cs" />
+    <Compile Include="BITool\MST_BRND_ALLOC.cs" />
+    <Compile Include="BITool\MST_CHNL_SEARH_HEAD.cs" />
+    <Compile Include="BITool\MST_DIST_SEARCH.cs" />
+    <Compile Include="BITool\MST_SEGMANT.cs" />
+    <Compile Include="BITool\PC_WISE_SALES.cs" />
+    <Compile Include="BITool\ProductEvl.cs" />
+    <Compile Include="BITool\ProfitAnalicer.cs" />
+    <Compile Include="BITool\ProfitCenterPerformanceFilter.cs" />
+    <Compile Include="BITool\PROVINCES_LIST.cs" />
+    <Compile Include="BITool\RatioData.cs" />
+    <Compile Include="BITool\ref_bud_ele_form.cs" />
+    <Compile Include="BITool\SalesInventoryAge.cs" />
+    <Compile Include="BITool\SALES_MNGR_SEARCH_HEAD.cs" />
+    <Compile Include="BITool\SALE_BAL_DETAILS.cs" />
+    <Compile Include="BITool\SARFORPD_SEARCH_HEAD.cs" />
+    <Compile Include="BITool\SAR_FOR_DET.cs" />
+    <Compile Include="BITool\SAR_FOR_HED.cs" />
+    <Compile Include="BITool\SAR_FOR_PD.cs" />
+    <Compile Include="BITool\LOC_HIRCH_SEARCH_HEAD.cs" />
+    <Compile Include="BITool\SEARCH_FAST_MOVING_DET.cs" />
+    <Compile Include="BITool\SEARCH_SLOW_MOVING_DET.cs" />
+    <Compile Include="BITool\SerJobDesc.cs" />
+    <Compile Include="BITool\SER_HIS.cs" />
+    <Compile Include="BITool\Sim_Company.cs" />
+    <Compile Include="BITool\Sim_Pc.cs" />
+    <Compile Include="BITool\SI_BAL_DET.cs" />
+    <Compile Include="BITool\STOCK_BALANCE.cs" />
+    <Compile Include="BITool\TARGET_ALIGNMENT.cs" />
+    <Compile Include="BITool\TOWN_SEARCH.cs" />
+    <Compile Include="BITool\USR_DEF_TEMP.cs" />
+    <Compile Include="Commission\ACCCODESEARCH.cs" />
+    <Compile Include="Commission\ArrearsAccDetails.cs" />
+    <Compile Include="Commission\ArrearsPC.cs" />
+    <Compile Include="Commission\BTU_SEARCH.cs" />
+    <Compile Include="Commission\Commission_pc.cs" />
+    <Compile Include="Commission\Comm_recinv.cs" />
+    <Compile Include="Commission\EMP_SEARCH_HEAD_SCM.cs" />
+    <Compile Include="Commission\hpr_hand_over_ac.cs" />
+    <Compile Include="Commission\hpr_hand_over_ac_log.cs" />
+    <Compile Include="Commission\hpt_arr_acc.cs" />
+    <Compile Include="Commission\hpt_arr_acc_det.cs" />
+    <Compile Include="Commission\hpt_col_bonus_vou.cs" />
+    <Compile Include="Commission\Invoice_Commission.cs" />
+    <Compile Include="Commission\Item_Value_Commission.cs" />
+    <Compile Include="Commission\LOCATIONSEARCH.cs" />
+    <Compile Include="Commission\Override_Commission.cs" />
+    <Compile Include="Commission\PoductBonusData.cs" />
+    <Compile Include="Commission\RBH_FRMDT_TODT.cs" />
+    <Compile Include="Commission\ref_bonus_det.cs" />
+    <Compile Include="Commission\REF_BONUS_HDR.cs" />
+    <Compile Include="Commission\ref_bonus_loc.cs" />
+    <Compile Include="Commission\REF_BONUS_SCHEME.cs" />
+    <Compile Include="Commission\ref_comm_add_trgt.cs" />
+    <Compile Include="Commission\ref_comm_collect_ovrt.cs" />
+    <Compile Include="Commission\ref_comm_det.cs" />
+    <Compile Include="Commission\ref_comm_emp.cs" />
+    <Compile Include="Commission\ref_comm_hdr.cs" />
+    <Compile Include="Commission\ref_comm_mngr.CS" />
+    <Compile Include="Commission\ref_comm_mngr_targt.CS" />
+    <Compile Include="Commission\ref_comm_pc.cs" />
+    <Compile Include="Commission\ref_comm_spc_ovr.cs" />
+    <Compile Include="Commission\ref_comm_target.cs" />
+    <Compile Include="Commission\ref_comm_target_ovrt.cs" />
+    <Compile Include="Commission\ref_comm_trgt_comm.cs" />
+    <Compile Include="Commission\ref_eli_comm_targ.cs" />
+    <Compile Include="Commission\Sar_Type.cs" />
+    <Compile Include="Commission\SHWRMMAN_SEARCH.cs" />
+    <Compile Include="CustService\Cusdec_Goods_decl.cs" />
+    <Compile Include="CustService\ServiceTechAlocSupervice.cs" />
+    <Compile Include="CustService\scv_jobcus_feed.cs" />
+    <Compile Include="CustService\SunAccountBusEntity.cs" />
+    <Compile Include="CustService\TBS_IMG_UPLOAD.cs" />
+    <Compile Include="CustService\WorkingSheetData.cs" />
+    <Compile Include="CustService\WorkSheetHS.cs" />
+    <Compile Include="Enadoc\DocSearchParam.cs" />
+    <Compile Include="Enadoc\REF_ENADOC_DOCS.cs" />
+    <Compile Include="Financial\FineCharges.cs" />
+    <Compile Include="Financial\gnt_cred_stmnt_det.cs" />
+    <Compile Include="Financial\gnt_cred_stmnt_adj.cs" />
+    <Compile Include="Financial\gnt_cred_stmnt_hdr.cs" />
+    <Compile Include="Financial\BOIProc.cs" />
+    <Compile Include="Financial\CreditNoteHdr.cs" />
+    <Compile Include="Financial\CreditNotes.cs" />
+    <Compile Include="Financial\DebitNoteHdr.cs" />
+    <Compile Include="Financial\DebitNotes.cs" />
+    <Compile Include="Financial\IMP_CST_ELEREF_DET.cs" />
+    <Compile Include="Financial\imp_cst_shp_bnk.cs" />
+    <Compile Include="Financial\log_sunupload.cs" />
+    <Compile Include="Financial\LocPurSun.cs" />
+    <Compile Include="Financial\MstRecSubTp.cs" />
+    <Compile Include="Financial\mst_proc.cs" />
+    <Compile Include="Financial\mst_proc_ele.cs" />
+    <Compile Include="Financial\OrderPlanExcelUploader.cs" />
+    <Compile Include="Financial\PAYMENT_SUB_TYPES.cs" />
+    <Compile Include="Financial\Payment_Types.cs" />
+    <Compile Include="Financial\PAY_SCHEDULE_DETAILS.cs" />
+    <Compile Include="Financial\PAY_SCH_HDR.cs" />
+    <Compile Include="Financial\PAY_SCH_OWNER_DET.cs" />
+    <Compile Include="Financial\Penalty_Invoice.cs" />
+    <Compile Include="Financial\ReceiptEntryExcel.cs" />
+    <Compile Include="Financial\ref_acc_sgrp.cs" />
+    <Compile Include="Financial\Ref_Bill_Collet.cs" />
+    <Compile Include="Financial\ref_cht_acc.cs" />
+    <Compile Include="Financial\ref_cht_accgrp.cs" />
+    <Compile Include="Financial\RENT_SCH_SEARCH.cs" />
+    <Compile Include="Financial\SalesTarget.cs" />
+    <Compile Include="Financial\SAT_ADJ_CRCD.cs" />
+    <Compile Include="Financial\sat_settl_discount.cs" />
+    <Compile Include="Financial\SCH_COL_DET.cs" />
+    <Compile Include="Financial\SCH_PAY_COLUMN.cs" />
+    <Compile Include="Financial\SHEDULE_INSTALLEMENTS.cs" />
+    <Compile Include="Financial\SunAALRec.cs" />
+    <Compile Include="Financial\SunAccountall.cs" />
+    <Compile Include="Financial\SunAuto.cs" />
+    <Compile Include="Financial\Suncreditnote.cs" />
+    <Compile Include="Financial\SUNINVHDR.cs" />
+    <Compile Include="Financial\SunLC.cs" />
+    <Compile Include="Financial\SUNRECIEPTHDR.cs" />
+    <Compile Include="Financial\SUN_JURNAL.cs" />
+    <Compile Include="Financial\Sun_tp_acc.cs" />
+    <Compile Include="Financial\TobondItemQty.cs" />
+    <Compile Include="Financial\TradingBase.cs" />
+    <Compile Include="Financial\TradingInterest.cs" />
+    <Compile Include="General\Mst_Sys_Para.cs" />
+    <Compile Include="General\ApprovalData.cs" />
+    <Compile Include="General\ApprovalHistory.cs" />
+    <Compile Include="General\ApprovalItemStatus.cs" />
+    <Compile Include="General\ApprovalPermission.cs" />
+    <Compile Include="General\ApprovalPriceBook.cs" />
+    <Compile Include="General\ApprovalRemarkLog.cs" />
+    <Compile Include="General\Mst_Movsubtp.cs" />
+    <Compile Include="General\ApprovalReqCategory.cs" />
+    <Compile Include="General\ApproveHistoryDetails.cs" />
+    <Compile Include="General\ApproveItemDetail.cs" />
+    <Compile Include="General\BankAccountFacility.cs" />
+    <Compile Include="General\BankBinCodes.cs" />
+    <Compile Include="General\BillOfQuantityExcelUpload.cs" />
+    <Compile Include="General\BMT_INV_BAL_COM.cs" />
+    <Compile Include="General\BMT_INV_BAL_GIT.cs" />
+    <Compile Include="General\BonusDefinition.cs" />
+    <Compile Include="Financial\BonusVoucher.cs" />
+    <Compile Include="General\BusEntityTypes.cs" />
+    <Compile Include="General\CusdecSubTypes.cs" />
+    <Compile Include="CustService\BRServiceApproval.cs" />
+    <Compile Include="CustService\ImageUpload.cs" />
+    <Compile Include="CustService\MasterServiceEmployee.cs" />
+    <Compile Include="CustService\MST_BUSPRIT_LVL.cs" />
+    <Compile Include="CustService\MST_BUSPRIT_TASK.cs" />
+    <Compile Include="CustService\MST_ITM_CAT_COMP.cs" />
+    <Compile Include="CustService\MST_ScvEmpCate.cs" />
+    <Compile Include="CustService\MST_SCV_ADHOC_MAIL.cs" />
+    <Compile Include="CustService\RCC_Det.cs" />
+    <Compile Include="CustService\Refund_credit_definition.cs" />
+    <Compile Include="CustService\scv_agr_cha.cs" />
+    <Compile Include="CustService\SCV_AGR_COVER_ITM.cs" />
+    <Compile Include="CustService\SCV_AGR_HDR.cs" />
+    <Compile Include="CustService\SCV_AGR_ITM.cs" />
+    <Compile Include="CustService\scv_agr_payshed.cs" />
+    <Compile Include="CustService\scv_agr_ses.cs" />
+    <Compile Include="CustService\SCV_ALRT_EMP.cs" />
+    <Compile Include="CustService\SCV_ALRT_LVL.cs" />
+    <Compile Include="CustService\SCV_JOB_SATIS.cs" />
+    <Compile Include="CustService\SCV_MSGPORTAL_MAILS.cs" />
+    <Compile Include="CustService\scv_prit_task.cs" />
+    <Compile Include="CustService\SCV_SUPP_CLAIM_REC.cs" />
+    <Compile Include="CustService\SCV_TRANS_LOG.cs" />
+    <Compile Include="CustService\Service_Alert_Log.cs" />
+    <Compile Include="CustService\Service_Appove.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Category.cs" />
+    <Compile Include="CustService\Service_Chanal_parameter.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Charge.cs" />
+    <Compile Include="CustService\Service_Close_Type.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Confirm_detail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_confirm_Header.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Cost_sheet.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Defect_Types.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Enquiry.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Estimate_Header.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Estimate_Item.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Estimate_Tax.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Gate_Pass_HDR.cs" />
+    <Compile Include="CustService\Service_Job_Charges.cs" />
+    <Compile Include="CustService\Service_Job_Defects.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_job_Det.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Job_Det_Sub.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_JOB_HDR.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Job_StageLog.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Job_Tech_Comments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_job_visit_Technician.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_OldPartRemove.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Pending_Jobs.cs" />
+    <Compile Include="CustService\Service_Purchase_Approval.cs" />
+    <Compile Include="CustService\Service_Reminder.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Reminder_Template.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Request_Defects.cs" />
+    <Compile Include="CustService\Service_Req_Def.cs" />
+    <Compile Include="CustService\Service_Req_Det_Sub.cs" />
+    <Compile Include="CustService\Service_TechAllocation.cs" />
+    <Compile Include="CustService\Service_Tech_Aloc_Hdr_log.cs" />
+    <Compile Include="Financial\CusdecCommon.cs" />
+    <Compile Include="Financial\CustomsProcedureCodes.cs" />
+    <Compile Include="Financial\DenomiDet.cs" />
+    <Compile Include="Financial\DenomiSum.cs" />
+    <Compile Include="Financial\DGCAccounts.cs" />
+    <Compile Include="Financial\ImpCusdecCost.cs" />
+    <Compile Include="Financial\ImpCusdecDutySum.cs" />
+    <Compile Include="Financial\ImpCusdecHdr.cs" />
+    <Compile Include="Financial\ImpCusdecItm.cs" />
+    <Compile Include="Financial\ImpCusdecItmCost.cs" />
+    <Compile Include="Financial\ImpoertCostElement.cs" />
+    <Compile Include="Financial\ImportCostCatergoryMaster.cs" />
+    <Compile Include="Financial\ImportCostSegmentMaster.cs" />
+    <Compile Include="Financial\ImportCostType.cs" />
+    <Compile Include="Financial\ImportFINPay.cs" />
+    <Compile Include="Financial\ImportPIDetails.cs" />
+    <Compile Include="Financial\ImportPIHeader.cs" />
+    <Compile Include="Financial\ImportPIKit.cs" />
+    <Compile Include="Financial\ImportsBLContainer.cs" />
+    <Compile Include="Financial\ImportsBLCost.cs" />
+    <Compile Include="Financial\ImportsBLHeader.cs" />
+    <Compile Include="Financial\ImportsBLItems.cs" />
+    <Compile Include="Financial\ImportsBLSInvoice.cs" />
+    <Compile Include="Financial\ImportsCostElement.cs" />
+    <Compile Include="Financial\ImportsCostElementItem.cs" />
+    <Compile Include="Financial\ImportsCostHeader.cs" />
+    <Compile Include="Financial\ImportsCostItem.cs" />
+    <Compile Include="Financial\ImpAstDet.cs" />
+    <Compile Include="Financial\ImpAstHeader.cs" />
+    <Compile Include="Financial\ImportsSettleDetails.cs" />
+    <Compile Include="Financial\ImportsSettleHeader.cs" />
+    <Compile Include="Financial\imp_cst_ele_ref.cs" />
+    <Compile Include="Financial\IMP_PI_COST.cs" />
+    <Compile Include="Financial\IntReq.cs" />
+    <Compile Include="Financial\IntReqItm.cs" />
+    <Compile Include="Financial\MST_CONTAINER_TP.cs" />
+    <Compile Include="Financial\MST_COST_ELE.cs" />
+    <Compile Include="Financial\OrderPlanHeader.cs" />
+    <Compile Include="Financial\OrderPlanItem.cs" />
+    <Compile Include="Financial\OrderPlanKitItem.cs" />
+    <Compile Include="Financial\OrderFinancingAmd.cs" />
+    <Compile Include="Financial\OrderFinancingcost.cs" />
+    <Compile Include="Financial\Order_Financing.cs" />
+    <Compile Include="Financial\PIOrderFinancing.cs" />
+    <Compile Include="General\BusEntityItem.cs" />
+    <Compile Include="General\BusEntityTax.cs" />
+    <Compile Include="General\CusdecTypes.cs" />
+    <Compile Include="General\DemurrageTracker.cs" />
+    <Compile Include="General\Employee.cs" />
+    <Compile Include="General\ExcelUploadErr.cs" />
+    <Compile Include="General\Expense_Limit_Alloc.cs" />
+    <Compile Include="General\FleetVehicleMaster.cs" />
+    <Compile Include="General\GetPCCategory.cs" />
+    <Compile Include="General\Gift_Voucher_Pages.cs" />
+    <Compile Include="General\GradeMaster.cs" />
+    <Compile Include="General\hpr_ars_rls_sch.cs" />
+    <Compile Include="General\hpr_disr_pc_defn.cs" />
+    <Compile Include="General\hpr_disr_val_ref.cs" />
+    <Compile Include="General\hpr_sch_det.cs" />
+    <Compile Include="General\hpr_sch_tp.cs" />
+    <Compile Include="General\HsCode.cs" />
+    <Compile Include="General\HsCodeClaim.cs" />
+    <Compile Include="General\INT_BATCH.cs" />
+    <Compile Include="General\INT_HDR.cs" />
+    <Compile Include="General\InvoiceCustomer.cs" />
+    <Compile Include="General\ItemKitComponent.cs" />
+    <Compile Include="General\ITM_PLU.cs" />
+    <Compile Include="General\LoadingBay.cs" />
+    <Compile Include="General\MasterBufferChannel.cs" />
+    <Compile Include="General\MasterBusinessOfficeEntry.cs" />
+    <Compile Include="General\MasterCustomerEmployee.cs" />
+    <Compile Include="General\MasterItemsBlock.cs" />
+    <Compile Include="General\MasterKitComFineItem.cs" />
+    <Compile Include="General\MasterLocationNew.cs" />
+    <Compile Include="General\MasterPCTax.cs" />
+    <Compile Include="General\MasterProfitCenter_LocationEmployee.cs" />
+    <Compile Include="General\MasterStatus.cs" />
+    <Compile Include="General\Master_Channal.cs" />
+    <Compile Include="General\Master_Employee.cs" />
+    <Compile Include="General\MgrCreation.cs" />
+    <Compile Include="General\mst_busentity_customer.cs" />
+    <Compile Include="General\MST_ITM.cs" />
+    <Compile Include="General\mst_itm_tax_structure_det.cs" />
+    <Compile Include="General\mst_itm_tax_structure_hdr.cs" />
+    <Compile Include="General\MST_SRCH_ITM.cs" />
+    <Compile Include="General\MST_TAX_CD.cs" />
+    <Compile Include="General\MyAbans.cs" />
+    <Compile Include="General\OtpAuthentication.cs" />
+    <Compile Include="General\PcAllowBanks.cs" />
+    <Compile Include="General\PcList.cs" />
+    <Compile Include="General\PendingExchgAppHead.cs" />
+    <Compile Include="General\PLU_SEARCH_ITM.cs" />
+    <Compile Include="General\PopupCollector.cs" />
+    <Compile Include="General\ReferenceDetails.cs" />
+    <Compile Include="General\ReferenceDetailsLog.cs" />
+    <Compile Include="General\RefPrdMt.cs" />
+    <Compile Include="General\REF_ALERT_SETUP.cs" />
+    <Compile Include="General\REF_BIN_ASSIGN.cs" />
+    <Compile Include="General\RepConditionType.cs" />
+    <Compile Include="General\RouteHeader.cs" />
+    <Compile Include="General\RouteSchedule.cs" />
+    <Compile Include="General\RouteShowRooms.cs" />
+    <Compile Include="General\RouteWareHouse.cs" />
+    <Compile Include="General\Sign_On.cs" />
+    <Compile Include="General\SmsApi.cs" />
+    <Compile Include="General\SMS_OUT.cs" />
+    <Compile Include="General\SpecDetail.cs" />
+    <Compile Include="General\SupplierCurrency.cs" />
+    <Compile Include="General\SupplierItem.cs" />
+    <Compile Include="General\SupplierPort.cs" />
+    <Compile Include="General\SupplierWiseNBT.cs" />
+    <Compile Include="General\TempPopup.cs" />
+    <Compile Include="General\Transport.cs" />
+    <Compile Include="General\TransportMethod.cs" />
+    <Compile Include="General\TransportParty.cs" />
+    <Compile Include="General\UnitConvert.cs" />
+    <Compile Include="General\VehicleRegCompany.cs" />
+    <Compile Include="General\WarrantyAmendRequest.cs" />
+    <Compile Include="HP\glb_hp_rec_age.cs" />
+    <Compile Include="HP\PromotComDet.cs" />
+    <Compile Include="HP\PromotComHdr.cs" />
+    <Compile Include="HP\PromotComItem.cs" />
+    <Compile Include="HP\PromotComParty.cs" />
+    <Compile Include="HP\PromotComSaleTp.cs" />
+    <Compile Include="HP\PromotComSch.cs" />
+    <Compile Include="HP\SchemetypeCom.cs" />
+    <Compile Include="InventoryNew\AdjesmentDet.cs" />
+    <Compile Include="InventoryNew\Adjloctype.cs" />
+    <Compile Include="InventoryNew\AODTrackerHDRdata.cs" />
+    <Compile Include="InventoryNew\AuditJobItem.cs" />
+    <Compile Include="InventoryNew\AuditJobSerial.cs" />
+    <Compile Include="InventoryNew\AuditMemebers.cs" />
+    <Compile Include="InventoryNew\AUD_CHARGES.cs" />
+    <Compile Include="InventoryNew\BinItemQty.cs" />
+    <Compile Include="InventoryNew\CompoSubItem.cs" />
+    <Compile Include="InventoryNew\GRAN_ALWSTUS.cs" />
+    <Compile Include="InventoryNew\BLtracker.cs" />
+    <Compile Include="InventoryNew\BusinessEntityVal.cs" />
+    <Compile Include="InventoryNew\CatwithItems.cs" />
+    <Compile Include="InventoryNew\DisposalCurrStatus.cs" />
+    <Compile Include="InventoryNew\DisposalItem.cs" />
+    <Compile Include="InventoryNew\FA_Inventory_Req_Hdr.cs" />
+    <Compile Include="InventoryNew\FA_Inventory_Req_Itm.cs" />
+    <Compile Include="InventoryNew\DisposalHeader.cs" />
+    <Compile Include="InventoryNew\DisposalLocation.cs" />
+    <Compile Include="InventoryNew\INR_AVG_COST.cs" />
+    <Compile Include="InventoryNew\INR_AVG_COST_GIT.cs" />
+    <Compile Include="InventoryNew\INR_SERMSTCOST.cs" />
+    <Compile Include="InventoryNew\INT_BATCHLOGICOST.cs" />
+    <Compile Include="InventoryNew\int_war_print_auth.cs" />
+    <Compile Include="InventoryNew\InventoryAllocateDetails.cs" />
+    <Compile Include="InventoryNew\InventoryDoShedule.cs" />
+    <Compile Include="InventoryNew\InventoryItemSimilarITM.cs" />
+    <Compile Include="InventoryNew\InventoryReqItemBal.cs" />
+    <Compile Include="InventoryNew\InventorySearchItemsAll.cs" />
+    <Compile Include="InventoryNew\InvReportPara.cs" />
+    <Compile Include="InventoryNew\ItemPrefix.cs" />
+    <Compile Include="InventoryNew\ItemStatus_Change_def.cs" />
+    <Compile Include="InventoryNew\MasterAssetParameter.cs" />
+    <Compile Include="InventoryNew\MasterColor.cs" />
+    <Compile Include="InventoryNew\MasterInsuHistory.cs" />
+    <Compile Include="InventoryNew\MasterItemModel.cs" />
+    <Compile Include="InventoryNew\MasterSubLocation.cs" />
+    <Compile Include="InventoryNew\MasterUOM.cs" />
+    <Compile Include="General\REF_ITM_CATE1.cs" />
+    <Compile Include="General\REF_ITM_CATE3.cs" />
+    <Compile Include="General\REF_ITM_CATE4.cs" />
+    <Compile Include="General\REF_ITM_CATE5.cs" />
+    <Compile Include="General\SEC_SYSTEM_MENU_SUB.cs" />
+    <Compile Include="HP\HPPrmotorCommDef.cs" />
+    <Compile Include="InventoryNew\LogMasterItemWarranty.cs" />
+    <Compile Include="InventoryNew\ModelCatAndTypes.cs" />
+    <Compile Include="InventoryNew\ModelClsDef.cs" />
+    <Compile Include="InventoryNew\ModelPic.cs" />
+    <Compile Include="InventoryNew\Model_Specific.cs" />
+    <Compile Include="InventoryNew\mst_commodel.cs" />
+    <Compile Include="InventoryNew\mst_com_itm.cs" />
+    <Compile Include="InventoryNew\MST_COM_LOGI_COST.cs" />
+    <Compile Include="InventoryNew\mst_itm_channlwara.cs" />
+    <Compile Include="InventoryNew\mst_itm_com_reorder.cs" />
+    <Compile Include="InventoryNew\mst_itm_container.cs" />
+    <Compile Include="InventoryNew\mst_itm_cust.cs" />
+    <Compile Include="InventoryNew\mst_itm_fg_cost.cs" />
+    <Compile Include="InventoryNew\mst_itm_max_serNo.cs" />
+    <Compile Include="InventoryNew\mst_itm_mrn_com.cs" />
+    <Compile Include="InventoryNew\mst_itm_pc_warr.cs" />
+    <Compile Include="InventoryNew\mst_itm_redeem_com.cs" />
+    <Compile Include="InventoryNew\mst_itm_replace.cs" />
+    <Compile Include="InventoryNew\mst_itm_sevpd.cs" />
+    <Compile Include="InventoryNew\mst_sup_itm.cs" />
+    <Compile Include="InventoryNew\PhysicalStockVerificationHdr.cs" />
+    <Compile Include="InventoryNew\ProductionFinGood.cs" />
+    <Compile Include="InventoryNew\ProductionLine.cs" />
+    <Compile Include="InventoryNew\ProductionPlaneDetails.cs" />
+    <Compile Include="InventoryNew\Production_ref.cs" />
+    <Compile Include="InventoryNew\PurchaseOrderAlloc.cs" />
+    <Compile Include="InventoryNew\PurchaseOrderSerial.cs" />
+    <Compile Include="InventoryNew\PurchaseReq.cs" />
+    <Compile Include="InventoryNew\PurchseOrderPrint.cs" />
+    <Compile Include="InventoryNew\ReservationItemsrep.cs" />
+    <Compile Include="InventoryNew\SerialMasterLog.cs" />
+    <Compile Include="InventoryNew\Service_Replacement_Hstry.cs" />
+    <Compile Include="CustService\Service_Req_Det.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Req_Hdr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_stockReturn.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_SupplierWarrantyClaim.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_supp_claim_itm.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Tech_Aloc_Hdr.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_Tech_Comment.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_TempIssue.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_VisitComments.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_warranty_Approval.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_WCN_Detail.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CustService\Service_WCN_Hdr.cs" />
+    <Compile Include="CustService\Sms_Ref_Log.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Financial\ArrearsDateDef.cs" />
+    <Compile Include="Financial\BankRealDet.cs" />
+    <Compile Include="Financial\ChequeReturn.cs" />
+    <Compile Include="Financial\DayEnd.cs" />
+    <Compile Include="Financial\Deposit_Bank_Pc_wise.cs" />
+    <Compile Include="Financial\ExcessRemitTypes.cs" />
+    <Compile Include="Financial\ExcessShortDet.cs" />
+    <Compile Include="Financial\ExcessShortHeader.cs" />
+    <Compile Include="Financial\ExcessShortTrans..cs" />
+    <Compile Include="Financial\GnrWeek.cs" />
+    <Compile Include="Financial\InterVoucherDetails.cs" />
+    <Compile Include="Financial\PBonusVouDedc.cs" />
+    <Compile Include="Financial\PBonusVouDetail.cs" />
+    <Compile Include="Financial\PBonusVouHeader.cs" />
+    <Compile Include="Financial\RemAdjTypes.cs" />
+    <Compile Include="Financial\RemitanceAdjustment.cs" />
+    <Compile Include="Financial\RemitanceStatus.cs" />
+    <Compile Include="Financial\RemitanceSumHeading.cs" />
+    <Compile Include="Financial\RemitanceSummaryDetail.cs" />
+    <Compile Include="Financial\RemSection.cs" />
+    <Compile Include="Financial\RemSumDefinitions.cs" />
+    <Compile Include="Financial\ReturnChequeCalInterest.cs" />
+    <Compile Include="Financial\ScanPhysicalDocReceiveDet.cs" />
+    <Compile Include="Financial\Short_Banking.cs" />
+    <Compile Include="Financial\VoucherDefinition.cs" />
+    <Compile Include="Financial\VoucherHeader.cs" />
+    <Compile Include="Financial\VoucherPrintingExpenseDefinition.cs" />
+    <Compile Include="General\AllowFunction.cs" />
+    <Compile Include="General\BackDates.cs" />
+    <Compile Include="General\ComboBoxObject.cs" />
+    <Compile Include="General\CommonEnums.cs" />
+    <Compile Include="General\DirectIssueLocation.cs" />
+    <Compile Include="General\ESDBal.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="General\ESDTxn.cs" />
+    <Compile Include="General\GroupBussinessEntity.cs" />
+    <Compile Include="General\IncentiveSchIncDet.cs" />
+    <Compile Include="General\IncentiveSchInc.cs" />
+    <Compile Include="General\IncentiveSch.cs" />
+    <Compile Include="General\IncentiveSchMode.cs" />
+    <Compile Include="General\IncentiveSchPB.cs" />
+    <Compile Include="General\IncentiveSchSerial.cs" />
+    <Compile Include="General\IncentiveSchPersn.cs" />
+    <Compile Include="General\CreditSaleDocsDetail.cs" />
+    <Compile Include="General\CreditSaleDocsHeader.cs" />
+    <Compile Include="General\Day_End_Log.cs" />
+    <Compile Include="General\DocCheckList.cs" />
+    <Compile Include="General\IncentiveSchDet.cs" />
+    <Compile Include="General\IncentiveSchPC.cs" />
+    <Compile Include="General\IncentiveSchStkTp.cs" />
+    <Compile Include="General\InSMS.cs" />
+    <Compile Include="General\InsuarancePolicy.cs" />
+    <Compile Include="General\InsuItem.cs" />
+    <Compile Include="General\ItemConditionCategori.cs" />
+    <Compile Include="General\ItemConditionSetup.cs" />
+    <Compile Include="General\Log_Common_File.cs" />
+    <Compile Include="General\MasterArea.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="General\MasterBankBranch.cs" />
+    <Compile Include="General\MasterDistrictProvince.cs" />
+    <Compile Include="General\ManualDoc.cs" />
+    <Compile Include="General\ManualDocDetail.cs" />
+    <Compile Include="General\ManualDocPages.cs" />
+    <Compile Include="General\MasterGiftVoucherCategory.cs" />
+    <Compile Include="General\MasterGiftVoucherCategoryDetail.cs" />
+    <Compile Include="General\MasterItemSubCate.cs" />
+    <Compile Include="General\MasterItemTaxClaim.cs" />
+    <Compile Include="General\MasterLocation_remove.cs" />
+    <Compile Include="General\MasterBusinessCompany.cs" />
+    <Compile Include="General\MasterCompany.cs" />
+    <Compile Include="General\MasterCurrency.cs" />
+    <Compile Include="General\MasterDepartment.cs" />
+    <Compile Include="General\MasterLocation.cs" />
+    <Compile Include="General\MasterOutsideParty.cs" />
+    <Compile Include="General\MasterProfitCenter.cs" />
+    <Compile Include="General\MasterReceiptDivision.cs" />
+    <Compile Include="General\MasterRegion.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="General\MasterSubType.cs" />
+    <Compile Include="General\MasterTown.cs" />
+    <Compile Include="General\MasterType.cs" />
+    <Compile Include="General\MasterUserCategory.cs" />
+    <Compile Include="General\MasterVehicalInsuranceDefinition.cs" />
+    <Compile Include="General\MasterVehicalInsuranceDefinitionNew.cs" />
+    <Compile Include="General\MasterVehicalInsurancePolicy.cs" />
+    <Compile Include="General\MasterZone.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="General\MsgInformation.cs" />
+    <Compile Include="General\Notification.cs" />
+    <Compile Include="General\Notification_OthShpCollecitons.cs" />
+    <Compile Include="General\OutSMS.cs" />
+    <Compile Include="General\PayTypeRestrict.cs" />
+    <Compile Include="General\PendingApproval.cs" />
+    <Compile Include="General\PopupCollect.cs" />
+    <Compile Include="General\Reprint_Docs.cs" />
+    <Compile Include="General\RequestAppAddDet.cs" />
+    <Compile Include="General\RequestAppAddDetLog.cs" />
+    <Compile Include="General\RequestApprovalDetail.cs" />
+    <Compile Include="General\RequestApprovalHeader.cs" />
+    <Compile Include="General\RequestApprovalHeaderLog.cs" />
+    <Compile Include="General\RequestApprovalSerials.cs" />
+    <Compile Include="General\RequestApprovalSerialsLog.cs" />
+    <Compile Include="General\SignOn.cs" />
+    <Compile Include="General\VehicalInsuranceClaim.cs" />
+    <Compile Include="General\VehicalInsurancePay.cs" />
+    <Compile Include="General\VehicalRegistration.cs" />
+    <Compile Include="General\VehicalRegistrationDefnition.cs" />
+    <Compile Include="General\VehicleInsuarance.cs" />
+    <Compile Include="HP\AccountAgreement.cs" />
+    <Compile Include="HP\AccountAgreementContact.cs" />
+    <Compile Include="HP\AccountAgreementDoc.cs" />
+    <Compile Include="HP\AccountAgreementProduct.cs" />
+    <Compile Include="HP\AccountAgreementScheme.cs" />
+    <Compile Include="HP\AccountAgreementStartDate.cs" />
+    <Compile Include="HP\AccountRestriction.cs" />
+    <Compile Include="HP\CashConversionDefinition.cs" />
+    <Compile Include="HP\CollectionBonusAdjusment.cs" />
+    <Compile Include="HP\DisregardPCDefinition.cs" />
+    <Compile Include="HP\DisregardValueDefinition.cs" />
+    <Compile Include="HP\EarlyClosingDiscount.cs" />
+    <Compile Include="HP\ECDVoucher.cs" />
+    <Compile Include="HP\GroupSaleCustomer.cs" />
+    <Compile Include="HP\GroupSaleHeader.cs" />
+    <Compile Include="HP\HandlingOverAccount.cs" />
+    <Compile Include="HP\HpAccountChecklistDet.cs" />
+    <Compile Include="HP\HPAccountChecklistHdr.cs" />
+    <Compile Include="HP\HPAccountSummaryValues.cs" />
+    <Compile Include="HP\HpAccRestriction.cs" />
+    <Compile Include="HP\HPAddSchemePara.cs" />
+    <Compile Include="HP\HPAdjustmentTypes.cs" />
+    <Compile Include="HP\HPAgreementTracker.cs" />
+    <Compile Include="HP\HPGurantorParam.cs" />
+    <Compile Include="HP\HPInsuranceScheme.cs" />
+    <Compile Include="HP\HPResheScheme.cs" />
+    <Compile Include="HP\Hpr_SysParameter.cs" />
+    <Compile Include="HP\MonthEndHeadder.cs" />
+    <Compile Include="InventoryNew\ApprovalStatus.cs" />
+    <Compile Include="InventoryNew\AuditRemark.cs" />
+    <Compile Include="InventoryNew\AuditRemarkValue.cs" />
+    <Compile Include="InventoryNew\AuditReportStatus.cs" />
+    <Compile Include="InventoryNew\AuditStatus.cs" />
+    <Compile Include="InventoryNew\GiftVoucherItems.cs" />
+    <Compile Include="InventoryNew\GiftVoucherPages.cs" />
+    <Compile Include="InventoryNew\InventoryAdhocDetail.cs" />
+    <Compile Include="InventoryNew\InventoryAdhocHeader.cs" />
+    <Compile Include="InventoryNew\InventoryBatchN.cs" />
+    <Compile Include="InventoryNew\InventoryBatchRefN.cs" />
+    <Compile Include="InventoryNew\InventoryCategorySubItem.cs" />
+    <Compile Include="InventoryNew\InventoryCommonRequest.cs" />
+    <Compile Include="InventoryNew\InventoryCommonRequestDetail.cs" />
+    <Compile Include="InventoryNew\InventoryCostRate.cs" />
+    <Compile Include="InventoryNew\InventoryHeader.cs" />
+    <Compile Include="InventoryNew\InventoryItem.cs" />
+    <Compile Include="InventoryNew\InventoryLocation.cs" />
+    <Compile Include="InventoryNew\InventoryRequest.cs" />
+    <Compile Include="InventoryNew\InventoryRequestItem.cs" />
+    <Compile Include="InventoryNew\InventoryRequestSerials.cs" />
+    <Compile Include="InventoryNew\InventorySerialMaster.cs" />
+    <Compile Include="InventoryNew\InventorySerialN.cs" />
+    <Compile Include="InventoryNew\InventorySerialRefN.cs" />
+    <Compile Include="InventoryNew\InventorySubSerialMaster.cs" />
+    <Compile Include="InventoryNew\InventoryWarrantyDetail.cs" />
+    <Compile Include="InventoryNew\InventoryWarrantySubDetail.cs" />
+    <Compile Include="InventoryNew\LogMasterItemTax.cs" />
+    <Compile Include="InventoryNew\MasterAutoNumber.cs" />
+    <Compile Include="InventoryNew\MasterBinLocation.cs" />
+    <Compile Include="InventoryNew\MasterBusinessEntity.cs" />
+    <Compile Include="InventoryNew\MasterBusinessEntityInfo.cs" />
+    <Compile Include="InventoryNew\MasterBusinessEntitySalesType.cs" />
+    <Compile Include="InventoryNew\MasterCompanyItem.cs" />
+    <Compile Include="InventoryNew\MasterCompanyItemStatus.cs" />
+    <Compile Include="InventoryNew\MasterItem.cs" />
+    <Compile Include="InventoryNew\MasterItemBlock.cs" />
+    <Compile Include="InventoryNew\MasterItemBrand.cs" />
+    <Compile Include="InventoryNew\MasterItemComponent.cs" />
+    <Compile Include="InventoryNew\MasterItemSimilar.cs" />
+    <Compile Include="InventoryNew\MasterItemStatus.cs" />
+    <Compile Include="InventoryNew\MasterItemTax.cs" />
+    <Compile Include="InventoryNew\MasterItemWarrantyPeriod.cs" />
+    <Compile Include="InventoryNew\MasterLocationPriorityHierarchy.cs" />
+    <Compile Include="InventoryNew\MasterLocationPriorityHierarchyLog.cs" />
+    <Compile Include="InventoryNew\MasterRCCDef.cs" />
+    <Compile Include="InventoryNew\PhsicalStockVerificationMain.cs" />
+    <Compile Include="InventoryNew\PhysicalStockVerificationItem.cs" />
+    <Compile Include="InventoryNew\PhysicalStockVerificationSerial.cs" />
+    <Compile Include="InventoryNew\PurchaseOrder.cs" />
+    <Compile Include="InventoryNew\PurchaseOrderDelivery.cs" />
+    <Compile Include="InventoryNew\PurchaseOrderDetail.cs" />
+    <Compile Include="InventoryNew\RCC.cs" />
+    <Compile Include="General\MasterProfitCenterCharges.cs" />
+    <Compile Include="InventoryNew\RCCLocations.cs" />
+    <Compile Include="InventoryNew\ScmMovCost.cs" />
+    <Compile Include="InventoryNew\ScmMovHeader.cs" />
+    <Compile Include="InventoryNew\ScmMovItem.cs" />
+    <Compile Include="InventoryNew\ScmMovSerial.cs" />
+    <Compile Include="InventoryNew\DispCurrentLocation.cs" />
+    <Compile Include="InventoryNew\StcAdjExcelItem.cs" />
+    <Compile Include="InventoryNew\TechnicianAllocation.cs" />
+    <Compile Include="InventoryNew\TmpValidation.cs" />
+    <Compile Include="InventoryNew\WarehouseAisle.cs" />
+    <Compile Include="InventoryNew\WarehouseBin.cs" />
+    <Compile Include="InventoryNew\warehouseBinItems.cs" />
+    <Compile Include="InventoryNew\WarehouseLevel.cs" />
+    <Compile Include="InventoryNew\WarehouseRow.cs" />
+    <Compile Include="InventoryNew\warehouseStorageFacility.cs" />
+    <Compile Include="InventoryNew\WarehouseZone.cs" />
+    <Compile Include="InventoryNew\MasterItemAllocate.cs" />
+    <Compile Include="InventoryNew\WarehseItemSetup.cs" />
+    <Compile Include="MessagePortal\DocumentOutItmModel.cs" />
+    <Compile Include="MessagePortal\Service_Message.cs" />
+    <Compile Include="MessagePortal\Service_Message_Template.cs" />
+    <Compile Include="mst_model_replace.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="General\TempPickManualDocDet.cs" />
+    <Compile Include="General\RequestApprovalDetailLog.cs" />
+    <Compile Include="ReptObj\RptWarehousStockBalance.cs" />
+    <Compile Include="ReptObj\Temp_aod_rec.cs" />
+    <Compile Include="Rpc\User.cs" />
+    <Compile Include="Rpc\UserStatus.cs" />
+    <Compile Include="SaleDisDefinition.cs" />
+    <Compile Include="Sales\AuditAccountableCash.cs" />
+    <Compile Include="Sales\AuditCashVeriDenomination.cs" />
+    <Compile Include="Sales\AuditCashVeriDetail.cs" />
+    <Compile Include="Sales\AuditCashVeriDocument.cs" />
+    <Compile Include="Sales\AuditCashVeriMain.cs" />
+    <Compile Include="Sales\BlackListCustomers.cs" />
+    <Compile Include="Sales\EventItems.cs" />
+    <Compile Include="Sales\EventRegistry.cs" />
+    <Compile Include="Sales\InvoicedEventItems.cs" />
+    <Compile Include="Sales\MobilePrefix.cs" />
+    <Compile Include="Sales\mst_busentity_add_cus.cs" />
+    <Compile Include="Sales\SAR_PB_CIREFFECT.cs" />
+    <Compile Include="Sales\BrandManager.cs" />
+    <Compile Include="Sales\CashCommissionDetailRef.cs" />
+    <Compile Include="Sales\CashCommissionHeaderRef.cs" />
+    <Compile Include="Sales\CashDiscountItemPara.cs" />
+    <Compile Include="Sales\CashGeneralDicountDef.cs" />
+    <Compile Include="Sales\CashGeneralEntiryDiscountDef.cs" />
+    <Compile Include="Sales\CashPromotionDiscountDetail.cs" />
+    <Compile Include="Sales\CashPromotionDiscountHeader.cs" />
+    <Compile Include="Sales\CashPromotionDiscountItem.cs" />
+    <Compile Include="Sales\CashPromotionDiscountLocation.cs" />
+    <Compile Include="Sales\CashSalesRev_History.cs" />
+    <Compile Include="Sales\CashSales_Out_RevItems.cs" />
+    <Compile Include="Sales\CashSales_Out_Rev_Items_Details.cs" />
+    <Compile Include="Sales\CctTransLog.cs" />
+    <Compile Include="Sales\CollectionBonusDefinition.cs" />
+    <Compile Include="Sales\Datarow.cs" />
+    <Compile Include="Sales\Datarow1.cs" />
+    <Compile Include="Sales\DiscountReqLog.cs" />
+    <Compile Include="Sales\INR_LOC.cs" />
+    <Compile Include="Sales\INR_RES.cs" />
+    <Compile Include="Sales\INR_RES_DET.cs" />
+    <Compile Include="Sales\INR_RES_LOG .cs" />
+    <Compile Include="Sales\INT_REQ.cs" />
+    <Compile Include="Sales\INT_REQ_ITM.cs" />
+    <Compile Include="Sales\INT_REQ_SER .cs" />
+    <Compile Include="Sales\mst_busentity_itm.cs" />
+    <Compile Include="Sales\MST_PROMOTOR.cs" />
+    <Compile Include="Sales\Circular_Schemes.cs" />
+    <Compile Include="Sales\PrefixDefine.cs" />
+    <Compile Include="Sales\PrefixMaster.cs" />
+    <Compile Include="Sales\PromotionVoucherPara.cs" />
+    <Compile Include="Sales\PromoVouRedeemPB.cs" />
+    <Compile Include="Sales\ReceiptAddDetails.cs" />
+    <Compile Include="Sales\SalesForecastingCalendar.cs" />
+    <Compile Include="Sales\SalesForecastingCalendarCom.cs" />
+    <Compile Include="Sales\SalesForecastingDetail.cs" />
+    <Compile Include="Sales\SalesForecastingHeader.cs" />
+    <Compile Include="Sales\SalesForecastingMasterPeriod.cs" />
+    <Compile Include="Sales\SalesForecastingPeriod.cs" />
+    <Compile Include="Sales\SalesOrderHeader.cs" />
+    <Compile Include="Sales\SalesOrderItems.cs" />
+    <Compile Include="Sales\SalesOrderItemTax.cs" />
+    <Compile Include="Sales\SalesOrderSer.cs" />
+    <Compile Include="Sales\SarDocumentPriceDefn.cs" />
+    <Compile Include="Sales\SAR_DOC_CHANNEL_PRICE_DEFN.cs" />
+    <Compile Include="Sales\SAR_DOC_CHANNEL_PRICE_DEFN_LOG.cs" />
+    <Compile Include="Sales\sar_pb_def.cs" />
+    <Compile Include="Sales\sar_pb_def_det.cs" />
+    <Compile Include="Sales\SatProjectDetails.cs" />
+    <Compile Include="Sales\SatProjectHeader.cs" />
+    <Compile Include="Sales\SatProjectKitDetails.cs" />
+    <Compile Include="Sales\SunItem.cs" />
+    <Compile Include="Security\Main_menu_items.cs" />
+    <Compile Include="Security\User_Resign_Bulk.cs" />
+    <Compile Include="Services\ServiceAreaS.cs" />
+    <Compile Include="Services\StrategicBusinessUnits.cs" />
+    <Compile Include="Services\Warr_Replacement_Det.cs" />
+    <Compile Include="TempObject\TmpServiceWorkingProcess.cs" />
+    <Compile Include="ToursNew\Cus_chg_cds.cs" />
+    <Compile Include="ToursNew\DEPO_AMT_DATA.cs" />
+    <Compile Include="ToursNew\DEPO_AMT_SEARCH_HED.cs" />
+    <Compile Include="ToursNew\DriverAllocationHome.cs" />
+    <Compile Include="ToursNew\FleetAlert.cs" />
+    <Compile Include="ToursNew\GEN_CUS_ENQ_DRIVER.cs" />
+    <Compile Include="ToursNew\GEN_CUS_ENQ_FLEET.cs" />
+    <Compile Include="ToursNew\MST_ADVAN_REF_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_BANKACC_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_BUSCOM_BANKBRANCH_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_BUSCOM_BANK_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_CHANNEL_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_CHARG_CODE_AIRTVL_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_CHARG_CODE_MSCELNS_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_CHARG_CODE_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_CHKINOUT.cs" />
+    <Compile Include="ToursNew\MST_COMPANIES_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_COST_SHEET_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_COUNTRY.cs" />
+    <Compile Include="ToursNew\MST_COUNTRY_SEARCH.cs" />
+    <Compile Include="ToursNew\MST_CREDIT_NOTE_REF_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_CURRENCY_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_CUSTOMER_TYPE.cs" />
+    <Compile Include="ToursNew\MST_DIVISION_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_EMPLOYEE_NEW_TBS.cs" />
+    <Compile Include="ToursNew\MST_EMPLOYEE_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_ENQUIRY_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_FAC_LOC.cs" />
+    <Compile Include="ToursNew\MST_FAC_LOC_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_FLEET.cs" />
+    <Compile Include="ToursNew\MST_FLEET_ALLOC.cs" />
+    <Compile Include="ToursNew\MST_FLEET_DRIVER.cs" />
+    <Compile Include="ToursNew\Mst_Fleet_driver_new.cs" />
+    <Compile Include="ToursNew\MST_FLEET_NEW.cs" />
+    <Compile Include="ToursNew\MST_FLEET_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_GIFTVOUCHER_ISSSUE_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_GIFTVOUCHER_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_LOGSHEET_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_GNR_ACC.cs" />
+    <Compile Include="ToursNew\MST_LOYALTYCARD_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_OUTSTANDING_INVOICE_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_PCADDPARA.cs" />
+    <Compile Include="ToursNew\MST_PROFIT_CENTER_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_PROF_CEN_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_PR_DET.cs" />
+    <Compile Include="ToursNew\MST_PR_HDR.cs" />
+    <Compile Include="ToursNew\MST_PR_HED_DET.cs" />
+    <Compile Include="ToursNew\MST_RECEIPT_INVOICE_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_RECEIPT_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_RECEIPT_TYPE_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_SERVICE_CODE_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_SER_PROVIDER_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_ST_PAX_DET.cs" />
+    <Compile Include="ToursNew\MST_SUBCHANNEL_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\MST_TEMP_MESSAGES.cs" />
+    <Compile Include="ToursNew\MST_TITLE.cs" />
+    <Compile Include="ToursNew\MST_TRANSPORT_ENQUIRY_SEARCH_HEAD.cs" />
+    <Compile Include="ToursNew\SearchEnqSEQ.cs" />
+    <Compile Include="ToursNew\SEARCH_MST_EMP.cs" />
+    <Compile Include="ToursNew\ST_CUST_FEEDBACK.cs" />
+    <Compile Include="ToursNew\ST_ENQ_CHARGES.cs" />
+    <Compile Include="ToursNew\ST_MENU.cs" />
+    <Compile Include="ToursNew\ST_PKG_TP.cs" />
+    <Compile Include="ToursNew\ST_SATIS_QUEST.cs" />
+    <Compile Include="ToursNew\ST_SATIS_RESULT.cs" />
+    <Compile Include="ToursNew\ST_SATIS_VAL.cs" />
+    <Compile Include="ToursNew\ST_VEHICLE_TP.cs" />
+    <Compile Include="ToursNew\TransportCharges.cs" />
+    <Compile Include="ToursNew\TransportEnq.cs" />
+    <Compile Include="Tours\FleetAllocDaily.cs" />
+    <Compile Include="Tours\GEN_CUST_ENQSER.cs" />
+    <Compile Include="Tours\MST_ENQSUBTP.cs" />
+    <Compile Include="Tours\invoiceCenter.cs" />
+    <Compile Include="Sales\LOG_INTREQITM.cs" />
+    <Compile Include="Sales\LOG_INTREQSER.cs" />
+    <Compile Include="Sales\PromotionVoucherItems.cs" />
+    <Compile Include="Sales\CustomerPassoprt.cs" />
+    <Compile Include="Sales\DiscountVoucerTypes.cs" />
+    <Compile Include="Sales\EliteCommission.cs" />
+    <Compile Include="Sales\EliteCommissionAdditional.cs" />
+    <Compile Include="Sales\EliteCommissionDefinition.cs" />
+    <Compile Include="Sales\EliteCommissionDetail.cs" />
+    <Compile Include="Sales\EliteCommissionIgnore.cs" />
+    <Compile Include="Sales\EliteCommissionInvoice.cs" />
+    <Compile Include="Sales\EliteCommissionItem.cs" />
+    <Compile Include="Sales\EliteCommissionPrty.cs" />
+    <Compile Include="Sales\EliteCommissionSalesTypes.cs" />
+    <Compile Include="Sales\EliteCommissionSlab.cs" />
+    <Compile Include="Sales\ExtendWaraParam.cs" />
+    <Compile Include="Sales\GntManualDocument.cs" />
+    <Compile Include="Sales\HireSalesReversal_Det.cs" />
+    <Compile Include="Sales\HpAccount.cs" />
+    <Compile Include="Sales\HPAccountLog.cs" />
+    <Compile Include="Sales\HpAdditionalServiceCharges.cs" />
+    <Compile Include="Sales\HpAdjustment.cs" />
+    <Compile Include="Sales\HpCashConversionDefinition.cs" />
+    <Compile Include="Sales\HpCustomer.cs" />
+    <Compile Include="Sales\HpInsurance.cs" />
+    <Compile Include="Sales\HpInsuranceDefinition.cs" />
+    <Compile Include="Sales\HpOtherCharges.cs" />
+    <Compile Include="Sales\HpProofDoc.cs" />
+    <Compile Include="Sales\HPReminder.cs" />
+    <Compile Include="Sales\HPReminderSMS.cs" />
+    <Compile Include="Sales\HpRevertDetail.cs" />
+    <Compile Include="Sales\HpRevertHeader.cs" />
+    <Compile Include="Sales\HPR_FlagBank.cs" />
+    <Compile Include="Sales\HpScheduleDetailLog.cs" />
+    <Compile Include="Sales\HpSchemeDefinition.cs" />
+    <Compile Include="Sales\HpSchemeDefinitionLog.cs" />
+    <Compile Include="Sales\HpSchemeDefinitionProcess.cs" />
+    <Compile Include="Sales\HpSchemeDetails.cs" />
+    <Compile Include="Sales\HpSchemeDetailsLog.cs" />
+    <Compile Include="Sales\HpSchemeSheduleDefinition.cs" />
+    <Compile Include="Sales\HpSchemeType.cs" />
+    <Compile Include="Sales\HpServiceCharges.cs" />
+    <Compile Include="Sales\HpSheduleDetails.cs" />
+    <Compile Include="Sales\HpSystemParameters.cs" />
+    <Compile Include="Sales\HpTransaction.cs" />
+    <Compile Include="Sales\InterCompanySalesParameter.cs" />
+    <Compile Include="Sales\InvoiceLoyalty.cs" />
+    <Compile Include="Sales\InvoiceVoucher.cs" />
+    <Compile Include="Sales\LogPriceDef.cs" />
+    <Compile Include="Sales\LoyaltyCustomerSpecification.cs" />
+    <Compile Include="Sales\LoyaltyMemberLog.cs" />
+    <Compile Include="Sales\LoyaltyMemeber.cs" />
+    <Compile Include="Sales\LoyaltyPointDefinition.cs" />
+    <Compile Include="Sales\LoyaltyPointDiscount.cs" />
+    <Compile Include="Sales\LoyaltyPointRedeemDefinition.cs" />
+    <Compile Include="Sales\LoyaltyPriorityCode.cs" />
+    <Compile Include="Sales\LoyaltyType.cs" />
+    <Compile Include="Sales\ManegerCreation.cs" />
+    <Compile Include="Sales\MasterAdditionalProductBonus.cs" />
+    <Compile Include="Sales\MasterBankAccount.cs" />
+    <Compile Include="Sales\MasterExchangeRate.cs" />
+    <Compile Include="Sales\MasterInvoiceType.cs" />
+    <Compile Include="Sales\MasterPartyHierachy.cs" />
+    <Compile Include="Sales\MasterProofDocs.cs" />
+    <Compile Include="Sales\MasterSalesPriorityHierarchy.cs" />
+    <Compile Include="Sales\MasterSalesPriorityHierarchyLog.cs" />
+    <Compile Include="Sales\PaymentType.cs" />
+    <Compile Include="Sales\PriceCategoryRef.cs" />
+    <Compile Include="Sales\PriceDefinitionUserRestriction.cs" />
+    <Compile Include="Sales\PriceDetailRestriction.cs" />
+    <Compile Include="Sales\PriceProfitCenterPromotion.cs" />
+    <Compile Include="Sales\PriceTypeRef.cs" />
+    <Compile Include="Sales\PriortyPriceBook.cs" />
+    <Compile Include="Sales\PromoVoucherDefinition.cs" />
+    <Compile Include="Sales\QoutationDetails.cs" />
+    <Compile Include="Sales\QuotationHeader.cs" />
+    <Compile Include="ReptObj\ReptPickHeader.cs" />
+    <Compile Include="ReptObj\ReptPickItems.cs" />
+    <Compile Include="ReptObj\ReptPickSerials.cs" />
+    <Compile Include="ReptObj\ReptPickSerialsSub.cs" />
+    <Compile Include="Sales\CustomerAccountRef.cs" />
+    <Compile Include="Sales\InvoiceItem.cs" />
+    <Compile Include="Sales\InvoiceHeader.cs" />
+    <Compile Include="Sales\InvoiceItemTax.cs" />
+    <Compile Include="Sales\InvoicePaymentMethodRef.cs" />
+    <Compile Include="Sales\InvoicePaymentTypeRef.cs" />
+    <Compile Include="Sales\InvoiceSerial.cs" />
+    <Compile Include="Sales\InvoiceTax.cs" />
+    <Compile Include="Sales\PaymentTypeRef.cs" />
+    <Compile Include="Sales\PriceBookLevelRef.cs" />
+    <Compile Include="Sales\PriceBookRef.cs" />
+    <Compile Include="Sales\PriceCombinedItemRef.cs" />
+    <Compile Include="Sales\PriceDefinitionRef.cs" />
+    <Compile Include="Sales\PriceDetailRef.cs" />
+    <Compile Include="Sales\PriceSerialRef.cs" />
+    <Compile Include="Sales\QuotationItemTax.cs" />
+    <Compile Include="Sales\QuotationSerial.cs" />
+    <Compile Include="Sales\ReceiptItemDetails.cs" />
+    <Compile Include="Sales\ReceiptWaraExtend.cs" />
+    <Compile Include="Sales\RecieptHeader.cs" />
+    <Compile Include="Sales\RecieptItem.cs" />
+    <Compile Include="Sales\ReminderLetter.cs" />
+    <Compile Include="Sales\SaleCommission.cs" />
+    <Compile Include="Sales\SalesPromotor.cs" />
+    <Compile Include="Sales\SalesTargetDetail.cs" />
+    <Compile Include="Sales\SalesTargetHeadder.cs" />
+    <Compile Include="Sales\SalesTargetProfitCenter.cs" />
+    <Compile Include="Sales\TempCommonBooks.cs" />
+    <Compile Include="Security\LoginUser.cs" />
+    <Compile Include="Security\SecurityPolicy.cs" />
+    <Compile Include="Security\PriorityHierarchy.cs" />
+    <Compile Include="Security\RequestApproveCycleDefinition.cs" />
+    <Compile Include="Security\SecApproveUserPerm.cs" />
+    <Compile Include="Security\SecRoleLocation.cs" />
+    <Compile Include="Security\SecRoleLocChanel.cs" />
+    <Compile Include="Security\SecRolePC.cs" />
+    <Compile Include="Security\SecRolePcChannel.cs" />
+    <Compile Include="Security\SecUserPerm.cs" />
+    <Compile Include="Security\SystemAppLevelParam.cs" />
+    <Compile Include="Security\SystemMenus.cs" />
+    <Compile Include="Security\SystemRole.cs" />
+    <Compile Include="Security\SystemRoleOption.cs" />
+    <Compile Include="Security\SystemUser.cs" />
+    <Compile Include="Security\SystemOption.cs" />
+    <Compile Include="Security\SystemUserCompany.cs" />
+    <Compile Include="Security\SystemUserLoc.cs" />
+    <Compile Include="Security\SystemUserRole.cs" />
+    <Compile Include="Security\SystemUserProf.cs" />
+    <Compile Include="Security\SystemUserRoleMenu.cs" />
+    <Compile Include="Security\UserRequestApprovePermission.cs" />
+    <Compile Include="Services\JobTasks.cs" />
+    <Compile Include="Services\MasterItemService.cs" />
+    <Compile Include="Services\SCMServiceJobDefects.cs" />
+    <Compile Include="Services\SCMServiceJobDetails.cs" />
+    <Compile Include="Services\SCMServiceJobHeader.cs" />
+    <Compile Include="Services\SCMServiceRequestDefect.cs" />
+    <Compile Include="Services\SCMServiceRequestDetails.cs" />
+    <Compile Include="Services\SCMServiceRequestHeader.cs" />
+    <Compile Include="Services\SCMServiceSchedule.cs" />
+    <Compile Include="Services\SCMServiceStageLog.cs" />
+    <Compile Include="Services\ServiceChnlDetails.cs" />
+    <Compile Include="Services\ServiceCostSheet.cs" />
+    <Compile Include="Services\ServiceJobAlloc.cs" />
+    <Compile Include="Services\ServiceJobDefect.cs" />
+    <Compile Include="Services\ServiceJobDetail.cs" />
+    <Compile Include="Services\ServiceJobHeader.cs" />
+    <Compile Include="Services\ServiceJobShedule.cs" />
+    <Compile Include="Services\ServiceJobStageLog.cs" />
+    <Compile Include="Services\ServiceTaskLocations.cs" />
+    <Compile Include="Tours\Enums.cs" />
+    <Compile Include="Tours\GEN_CUST_ENQ.cs" />
+    <Compile Include="Tours\GEN_ENQLOG.cs" />
+    <Compile Include="Tours\MST_COST_CATE.cs" />
+    <Compile Include="ToursNew\MST_CUS_SEARCH_HEAD.cs" />
+    <Compile Include="Tours\Mst_empcate.cs" />
+    <Compile Include="Tours\MST_EMPLOYEE_TBS.cs" />
+    <Compile Include="Tours\MST_ENQTP.cs" />
+    <Compile Include="Tours\MST_FACBY.cs" />
+    <Compile Include="Tours\MST_LANGUAGE.cs" />
+    <Compile Include="Tours\MST_LANGUAGES.cs" />
+    <Compile Include="Tours\MST_PCEMP.cs" />
+    <Compile Include="Tours\MST_TIMEEXPECT.cs" />
+    <Compile Include="ToursNew\MST_TOWN_SEARCH_HEAD.cs" />
+    <Compile Include="Tours\MST_VEH_TP.cs" />
+    <Compile Include="Tours\QUO_COST_DET.cs" />
+    <Compile Include="Tours\QUO_COST_HDR.cs" />
+    <Compile Include="Tours\ref_Title.cs" />
+    <Compile Include="Tours\SR_AIR_CHARGE.cs" />
+    <Compile Include="Tours\SR_PAY_LOG.cs" />
+    <Compile Include="Tours\SR_SER_MISS.cs" />
+    <Compile Include="Tours\SR_TRANS_CHA.cs" />
+    <Compile Include="Tours\ST_AIRTCKT_TYPS.cs" />
+    <Compile Include="Tours\TR_LOGSHEET_DET.cs" />
+    <Compile Include="Tours\TR_LOGSHEET_HDR.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="HP\InventoryNew\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

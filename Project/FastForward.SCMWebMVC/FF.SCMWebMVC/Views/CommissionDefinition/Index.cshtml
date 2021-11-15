@@ -1,0 +1,821 @@
+﻿@{
+    ViewBag.Title = "Commission Definition";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts {
+    <script src="~/Scripts/Common/CommissionDefinition.js?@val"></script>
+}
+<div class="op-btns">
+    <div class="col-md-6">
+        <div class="page-title">Commission Definition</div>
+    </div>
+    <div class="col-md-6">
+        <input type="button" value="Clear" class="btn btn-default btn-default-style btn-clear-data" />
+        <input type="button" value="Save" class="btn btn-default btn-default-style btn-comm-save-data" />
+    </div>
+</div>
+<div class="demopage">
+    <div class="container1">
+        <div class="panel panel-default row">
+            <div class="panel panel-heading"></div>
+            <div class="panel-container">
+                <div class="panel panel-body tab-content-cls">
+                    <div class="form-horizontal">
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <label class="col-lg-4 control-label">Profit Center</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="ProfitCenter" name="ProfitCenter" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  profit-center-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <img src="~/Resources/Images/arrow_down.png" class="search-img add-pc">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <label class="col-lg-4 control-label">Chanel</label>
+                                    <div class="col-md-8">
+                                        <input type="text" id="chanel" name="chanel" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  channel-search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-10">
+                                    <label class="col-lg-8 control-label">With AVG Target</label>
+                                    <div class="col-md-4">
+                                        <input type="checkbox" id="chkavgtarget" name="chkavgtarget" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="comm-pc-div-scroll">
+                                        <table class="table table-striped table-hover pc-row">
+                                            <tr>
+                                                <th style="color: black; font-size: x-small">PC</th>
+                                                <th style="color: black; font-size: x-small">AVG</th>
+                                                <th style="color: black; font-size: x-small">Option</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-3 control-label">Code</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="commcode" name="commcode" class="form-control with-search" readonly>
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  commission-search">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-3 control-label">From Date</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="fromdate" name="fromdate" class="form-control" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-3 control-label">To Date</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="todate" name="todate" class="form-control" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-3 control-label">Sale</label>
+                                    <div class="col-md-1">
+                                        <input type="radio" id="rdbsale" name="radsaletype" class="form-control" checked>
+                                    </div>
+                                    <label class="col-lg-4 control-label">Dilivered</label>
+                                    <div class="col-md-1">
+                                        <input type="radio" id="rddiliver" name="radsaletype2" class="form-control" checked>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-3 control-label">GP</label>
+                                    <div class="col-md-1">
+                                        <input type="radio" id="rdbgp" name="radsaletype" class="form-control">
+                                    </div>
+                                    <label class="col-lg-4 control-label">Without Reversal</label>
+                                    <div class="col-md-1">
+                                        <input type="radio" id="rdbwithrev" name="radsaletype2" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-3 control-label">Qty</label>
+                                    <div class="col-md-1">
+                                        <input type="radio" id="rdbqty" name="radsaletype" class="form-control">
+                                    </div>
+                                    <label class="col-lg-4 control-label">Total Inv</label>
+                                    <div class="col-md-1">
+                                        <input type="radio" id="rdbtotinv" name="radsaletype2" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-6 control-label">Target Base Rate</label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkistargetbaserate" name="chkistargetbaserate" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-6 control-label">Target Base Override</label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkistargetbaseover" name="chkistargetbaseover" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-6 control-label">Collection Base Override</label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkiscollectbaseover" name="chkiscollectbaseover" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-6 control-label">For AC/BTU </label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkbtuitems" name="chkbtuitems" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-6 control-label">Elite Commission Definition</label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkelitecomm" name="chkelitecomm" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label class="col-lg-6 control-label">Elite Additional Commission</label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkeliteaddcomm" name="chkeliteaddcomm" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="col-lg-3 control-label">Collection(Rec)</label>
+                                    <div class="col-md-3">
+                                        <input type="radio" id="rdcollrec" name="radcollecttype" class="form-control" checked>
+                                    </div>
+                                    <label class="col-lg-3 control-label">Collection(Inv)</label>
+                                    <div class="col-md-3">
+                                        <input type="radio" id="rdcollinv" name="radcollecttype" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="col-lg-3 control-label">Override</label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkoverride" name="chkoverride" class="form-control ">
+                                    </div>
+                                    <label class="col-lg-3 control-label">Active</label>
+                                    <div class="col-md-1">
+                                        <input type="checkbox" id="chkactive" name="chkactive" class="form-control" checked="checked">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <label class="col-lg-3 control-label">St Period</label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="overstperiod" name="overstperiod" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <label class="col-lg-5 control-label">End Period</label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="overendpeiod" name="overendpeiod" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-5 control-label">Inv.Btu</label>
+                                    <div class="col-md-7">
+
+                                        <input type="checkbox" id="checkisinvrtbtu" name="checkisinvrtbtu" class="form-control">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="col-lg-3 control-label">Employee</label>
+                                    <label class="col-lg-2 control-label efp-cd"></label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="overemp" name="overemp" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img  emp-search">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="col-lg-5 control-label">Commission(%)</label>
+                                    <div class="col-md-7">
+                                        <input type="text" id="overcommission" name="overcommission" class="form-control with-search">
+                                        <img src="~/Resources/Images/arrow_down.png" class="search-img add-over-comm">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="comm-over-div-scroll">
+                                        <table class="table table-striped table-hover over-comm-row">
+                                            <tr>
+                                                <th style="color: black; font-size: x-small">Employee</th>
+                                                <th style="color: black; font-size: x-small">Setl Days</th>
+                                                <th style="color: black; font-size: x-small">Ovrt</th>
+                                                <th style="color: black; font-size: x-small">Commission(%)</th>
+                                                <th style="color: black; font-size: x-small">Option</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="panel panel-default row">
+            <div class="panel panel-heading">
+                Item/Value Definition
+                <div class="panel-container">
+                    <div class="panel panel-body tab-content-cls">
+                        <div class="form-horizontal">
+                            <div class="row">
+                                <div class="col-md-1">
+                                    <label class="col-lg-8 control-label">Qty Wise</label>
+                                    <div class="col-md-2">
+                                        <input type="radio" id="chkqtywise" name="chkvaloption" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <label class="col-lg-9 control-label">Value Wise</label>
+                                    <div class="col-md-2">
+                                        <input type="radio" id="chkvaluewise" name="chkvaloption" class="form-control" checked>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Code</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="itemcode" name="itemcode" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img search-item-cd">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Model</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="model" name="model" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img search-model-cd">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Brand</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="brand" name="brand" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img search-brand-cd">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Cat 1</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="cat1" name="cat1" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img search-cat1-cd">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Cat 2</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="cat2" name="cat2" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img search-cat2-cd">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">InvTp</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="invtype" name="invtype" class="form-control with-search">
+                                        <img src="~/Resources/Images/Search-icon.png" class="search-img search-inv-tp">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Min</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="minvalue" name="minvalue" class="form-control ">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Max</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="maxtvalue" name="maxtvalue" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Period(st)</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="settstartdays" name="settstartdays" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">To(end) </label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="settenddays" name="settenddays" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <label class="col-lg-3 control-label">Commiss(%)</label>
+                                    <div class="col-md-9">
+                                        <input type="text" id="valcommisiion" name="valcommisiion" class="form-control with-search">
+                                        <img src="~/Resources/Images/arrow_down.png" class="search-img add-val-comm">
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12 form-group item-range-scroll">
+                                <table class="commi-item-table table">
+                                    <tr class="table-hed">
+                                        <th>Item <br> Code</th>
+                                        <th>Model</th>
+                                        <th>Brand</th>
+                                        <th>Cat1</th>
+                                        <th>Cat2</th>
+                                        <th>Inv <br>Type</th>
+                                        <th>Value</th>
+                                        <th>Settl <br> Days</th>
+                                        <th>(%)</th>
+                                        <th>Option</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="modal fade my-popup-div" id="addChgcdPop" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="cus-title">Target Base Commission Rate Definition</h4>
+                </div>
+                <div class="row form-horizontal margin-set-pop">
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-6 control-label">Exc Code</label>
+                        <div class="col-md-12">
+                            @Html.Editor("exc_cd", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/Search-icon.png" class="search-img search-exc">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Target Range(%)</label>
+                        <div class="col-md-12">
+                            @Html.Editor("st_range_val", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Target Range(%)</label>
+                        <div class="col-md-12">
+                            @Html.Editor("end_range_val", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Commission Rate</label>
+                        <div class="col-md-12">
+                            @Html.Editor("comm_rate", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/arrow_down.png" class="search-img add-target-comm">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 form-group item-range-scroll">
+                        <table class="target-base-comm table">
+                            <tr class="table-hed">
+                                <th>Exec</th>
+                                <th>Range(%) </th>
+                                <th>Rate(%)</th>
+                                <th>Opt</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-default-style btn-cus-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade my-popup-div" id="addtagetovrt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="cus-title">Target Base Override</h4>
+                </div>
+                <div class="row form-horizontal margin-set-pop">
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-6 control-label">Emp Code</label>
+                        <label class="col-lg-6 control-label efp-cd2"></label>
+                        <div class="col-md-12">
+                            @Html.Editor("emp_cd_ov", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/Search-icon.png" class="search-img search-target-emp">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Target Range(%)</label>
+                        <div class="col-md-12">
+                            @Html.Editor("st_range_val1", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Target Range(%)</label>
+                        <div class="col-md-12">
+                            @Html.Editor("end_range_val1", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Commission Rate</label>
+                        <div class="col-md-12">
+                            @Html.Editor("comm_rate1", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/arrow_down.png" class="search-img add-target-ovrt">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 form-group item-range-scroll">
+                        <table class="target-base-ovt table">
+                            <tr class="table-hed">
+                                <th>Emp Cd</th>
+                                <th>Range(%) </th>
+                                <th>Rate(%)</th>
+                                <th>Opt</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-default-style btn-cus-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade my-popup-div" id="addcollectionovrt" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="cus-title">Collection Base Override</h4>
+                </div>
+                <div class="row form-horizontal margin-set-pop">
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-6 control-label">Emp Code</label>
+                        <label class="col-lg-6 control-label efp-cd3"></label>
+                        <div class="col-md-12">
+                            @Html.Editor("emp_cd_ov2", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/Search-icon.png" class="search-img search-collect-emp">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-6 control-label">Inv Type</label>
+                        <div class="col-md-12">
+                            @Html.Editor("inv_type2", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/Search-icon.png" class="search-img search-coll-invtype">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Target Range</label>
+                        <div class="col-md-12">
+                            @Html.Editor("st_range_val2", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Target Range</label>
+                        <div class="col-md-12">
+                            @Html.Editor("end_range_val2", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-horizontal margin-set-pop">
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Settl Dates</label>
+                        <div class="col-md-12">
+                            @Html.Editor("sett_st_date", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Settl Dates</label>
+                        <div class="col-md-12">
+                            @Html.Editor("sett_end_date", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Commission Rate</label>
+                        <div class="col-md-12">
+                            @Html.Editor("comm_rate2", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/arrow_down.png" class="search-img add-collect-base-ovt">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-10 form-group item-range-scroll">
+                        <table class="collect-base-ovt table">
+                            <tr class="table-hed">
+                                <th>Emp Cd</th>
+                                <th>Inv Type</th>
+                                <th>Range(%) </th>
+                                <th>Rate(%)</th>
+                                <th>Date Range</th>
+                                <th>Opt</th>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="col-md-1"></div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-default-style btn-cus-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade my-popup-div" id="addbtuitems" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="cus-title">AC/BTU Items</h4>
+                </div>
+                <div class="row form-horizontal margin-set-pop">
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-6 control-label">BTU Range</label>
+                        <div class="col-md-12">
+                            @Html.Editor("btu_code", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            @*<img src="~/Resources/Images/Search-icon.png" class="search-img search-btu-cd">*@
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-6 control-label">BTU Range</label>
+                        <div class="col-md-12">
+                            @Html.Editor("btu_code2", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            @*<img src="~/Resources/Images/Search-icon.png" class="search-img search-btu-cd">*@
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-6 control-label">Category</label>
+                        <div class="col-md-12">
+                            @Html.Editor("btu_cat", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/Search-icon.png" class="search-img search-btu_cat">
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Item Type</label>
+                        <div class="col-md-12">
+                            @Html.DropDownList("btu_item_type", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Start Val</label>
+                        <div class="col-md-12">
+                            @Html.Editor("btu_st_val", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                </div>
+                <div class="row form-horizontal margin-set-pop">
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">End Val</label>
+                        <div class="col-md-12">
+                            @Html.Editor("btu_end_val", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-3 form-group">
+                        <label class="col-md-12 control-label">Commission Rate</label>
+                        <div class="col-md-12">
+                            @Html.Editor("btu_commission", new { htmlAttributes = new { @class = "form-control with-search" } })
+                            <img src="~/Resources/Images/arrow_down.png" class="search-img add-btu-val">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-default-style btn-cus-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal fade my-popup-div" id="elitecommission" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width:1200px">
+            <div class="modal-content" style="overflow: auto;">
+                <div class="modal-header ">
+                    <h4 class="modal-title">Elite Manager/Excecutive Commission Definition</h4>
+                </div>
+                <div class="col-md-12 row" style="margin-top:10px">
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">PC</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elitepc" name="elitepc" class="form-control with-search">
+                            <img src="~/Resources/Images/Search-icon.png" class="search-img  el-profit-center-search">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Type</label>
+                        <div class="col-md-9">
+                            @Html.DropDownList("elicommtype", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Month</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elmonth" name="elmonth" class="form-control with-search">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Target</label>
+                        <div class="col-md-9">
+                            <input type="text" id="eltarget" name="eltarget" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 row" style="margin-top:10px">
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">From(%)</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elfrom" name="elfrom" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">To(%)</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elto" name="elto" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Mng-Comm</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elmngcomm" name="elmngcomm" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Exc-Comm</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elexccomm" name="elexccomm" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-12 row" style="margin-top:10px">
+
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Ovr Cashi</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elovcashi" name="elovcashi" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Ovr Help</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elovrhelp" name="elovrhelp" class="form-control with-search" value="0">
+                            <img src="~/Resources/Images/arrow_down.png" class="search-img add-eli-comm-val">
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="col-md-12 row" style="margin-top:10px">
+                        <table class="eli-tar-tbl table">
+                            <tr class="table-hed">
+                                <th>PC</th>
+                                <th>Type</th>
+                                <th>Month</th>
+                                <th>Target</th>
+                                <th>From(%)</th>
+                                <th>TO(%)</th>
+                                <th>Manager</th>
+                                <th>Excec</th>
+                                <th>Cashi</th>
+                                <th>Helper</th>
+                                <th></th>
+                            </tr>
+                        </table>
+                    </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-default-style btn-cashflow-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade my-popup-div" id="eliteaddcommission" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document" style="width:1200px">
+            <div class="modal-content" style="overflow: auto;">
+                <div class="modal-header ">
+                    <h4 class="modal-title">Elite Additional Commission Definition</h4>
+                </div>
+                <div class="col-md-12 row" style="margin-top:10px">
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">PC</label>
+                        <div class="col-md-9">
+                            <input type="text" id="eliteaddpc" name="eliteaddpc" class="form-control with-search">
+                            <img src="~/Resources/Images/Search-icon.png" class="search-img  el-add-profit-center-search">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Slab</label>
+                        <div class="col-md-9">
+                            <input type="text" id="elslab" name="elslab" class="form-control with-search" value="1">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">From</label>
+                        <div class="col-md-9">
+                            <input type="text" id="eladdfrom" name="eladdfrom" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">To</label>
+                        <div class="col-md-9">
+                            <input type="text" id="eladdto" name="eladdto" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 row" style="margin-top:10px">
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Commission</label>
+                        <div class="col-md-9">
+                            <input type="text" id="eladdcomm" name="eladdcomm" class="form-control with-search" value="0">
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Type</label>
+                        <div class="col-md-9">
+                            @Html.DropDownList("elicommaddtype", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="col-lg-3 control-label">Gap</label>
+                        <div class="col-md-9">
+                            <input type="text" id="eladdcommgp" name="eladdcommgp" class="form-control with-search" value="0">
+                            <img src="~/Resources/Images/arrow_down.png" class="search-img add-eli-addi-comm-val">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-12 row" style="margin-top:10px">
+                    <table class="eli-addcomm-tbl table">
+                        <tr class="table-hed">
+                            <th>PC</th>
+                            <th>Slab</th>
+                            <th>From</th>
+                            <th>To</th>
+                            <th>Commission</th>
+                            <th>Type</th>
+                            <th>Gap</th>
+                            <th></th>
+                        </tr>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-default-style btn-cashflow-close" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+
+    </div>

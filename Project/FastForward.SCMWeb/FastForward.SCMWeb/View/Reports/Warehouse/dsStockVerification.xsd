@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsStockVerification" targetNamespace="http://tempuri.org/dsStockVerification.xsd" xmlns:mstns="http://tempuri.org/dsStockVerification.xsd" xmlns="http://tempuri.org/dsStockVerification.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsStockVerification" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsStockVerification" msprop:Generator_UserDSName="dsStockVerification">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="StockVerify" msprop:Generator_TableClassName="StockVerifyDataTable" msprop:Generator_TableVarName="tableStockVerify" msprop:Generator_TablePropName="StockVerify" msprop:Generator_RowDeletingName="StockVerifyRowDeleting" msprop:Generator_RowChangingName="StockVerifyRowChanging" msprop:Generator_RowEvHandlerName="StockVerifyRowChangeEventHandler" msprop:Generator_RowDeletedName="StockVerifyRowDeleted" msprop:Generator_UserTableName="StockVerify" msprop:Generator_RowChangedName="StockVerifyRowChanged" msprop:Generator_RowEvArgName="StockVerifyRowChangeEvent" msprop:Generator_RowClassName="StockVerifyRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Itemcode" msprop:Generator_ColumnVarNameInTable="columnItemcode" msprop:Generator_ColumnPropNameInRow="Itemcode" msprop:Generator_ColumnPropNameInTable="ItemcodeColumn" msprop:Generator_UserColumnName="Itemcode" type="xs:string" minOccurs="0" />
+              <xs:element name="Description" msprop:Generator_ColumnVarNameInTable="columnDescription" msprop:Generator_ColumnPropNameInRow="Description" msprop:Generator_ColumnPropNameInTable="DescriptionColumn" msprop:Generator_UserColumnName="Description" type="xs:string" minOccurs="0" />
+              <xs:element name="SysQty" msprop:Generator_ColumnVarNameInTable="columnSysQty" msprop:Generator_ColumnPropNameInRow="SysQty" msprop:Generator_ColumnPropNameInTable="SysQtyColumn" msprop:Generator_UserColumnName="SysQty" type="xs:int" minOccurs="0" />
+              <xs:element name="serial" msprop:Generator_ColumnVarNameInTable="columnserial" msprop:Generator_ColumnPropNameInRow="serial" msprop:Generator_ColumnPropNameInTable="serialColumn" msprop:Generator_UserColumnName="serial" type="xs:string" minOccurs="0" />
+              <xs:element name="variances" msprop:Generator_ColumnVarNameInTable="columnvariances" msprop:Generator_ColumnPropNameInRow="variances" msprop:Generator_ColumnPropNameInTable="variancesColumn" msprop:Generator_UserColumnName="variances" type="xs:string" minOccurs="0" />
+              <xs:element name="seriqty" msprop:Generator_ColumnVarNameInTable="columnseriqty" msprop:Generator_ColumnPropNameInRow="seriqty" msprop:Generator_ColumnPropNameInTable="seriqtyColumn" msprop:Generator_UserColumnName="seriqty" type="xs:int" minOccurs="0" />
+              <xs:element name="SysSerial" msprop:Generator_ColumnVarNameInTable="columnSysSerial" msprop:Generator_ColumnPropNameInRow="SysSerial" msprop:Generator_ColumnPropNameInTable="SysSerialColumn" msprop:Generator_UserColumnName="SysSerial" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

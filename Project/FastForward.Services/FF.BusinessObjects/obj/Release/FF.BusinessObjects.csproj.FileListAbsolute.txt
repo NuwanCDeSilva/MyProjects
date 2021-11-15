@@ -1,0 +1,5 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BusinessObjects\bin\Release\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BusinessObjects\bin\Release\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BusinessObjects\obj\Release\FF.BusinessObjects.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BusinessObjects\obj\Release\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.BusinessObjects\obj\Release\FF.BusinessObjects.pdb

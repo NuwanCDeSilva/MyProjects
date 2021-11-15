@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Doc_chk_list" targetNamespace="http://tempuri.org/Doc_chk_list.xsd" xmlns:mstns="http://tempuri.org/Doc_chk_list.xsd" xmlns="http://tempuri.org/Doc_chk_list.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Doc_chk_list" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Doc_chk_list" msprop:Generator_UserDSName="Doc_chk_list">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_UserTableName="param" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="heading_1" msdata:Caption="fromdate" msprop:Generator_ColumnVarNameInTable="columnheading_1" msprop:Generator_ColumnPropNameInRow="heading_1" msprop:Generator_ColumnPropNameInTable="heading_1Column" msprop:Generator_UserColumnName="heading_1" type="xs:string" minOccurs="0" />
+              <xs:element name="period" msdata:Caption="todate" msprop:Generator_ColumnVarNameInTable="columnperiod" msprop:Generator_ColumnPropNameInRow="period" msprop:Generator_ColumnPropNameInTable="periodColumn" msprop:Generator_UserColumnName="period" type="xs:string" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="week" msprop:Generator_ColumnVarNameInTable="columnweek" msprop:Generator_ColumnPropNameInRow="week" msprop:Generator_ColumnPropNameInTable="weekColumn" msprop:Generator_UserColumnName="week" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="DOC_CHK_LIST" msprop:Generator_TableClassName="DOC_CHK_LISTDataTable" msprop:Generator_TableVarName="tableDOC_CHK_LIST" msprop:Generator_TablePropName="DOC_CHK_LIST" msprop:Generator_RowDeletingName="DOC_CHK_LISTRowDeleting" msprop:Generator_RowChangingName="DOC_CHK_LISTRowChanging" msprop:Generator_RowEvHandlerName="DOC_CHK_LISTRowChangeEventHandler" msprop:Generator_RowDeletedName="DOC_CHK_LISTRowDeleted" msprop:Generator_UserTableName="DOC_CHK_LIST" msprop:Generator_RowChangedName="DOC_CHK_LISTRowChanged" msprop:Generator_RowEvArgName="DOC_CHK_LISTRowChangeEvent" msprop:Generator_RowClassName="DOC_CHK_LISTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COM_CODE" msprop:Generator_ColumnVarNameInTable="columnCOM_CODE" msprop:Generator_ColumnPropNameInRow="COM_CODE" msprop:Generator_ColumnPropNameInTable="COM_CODEColumn" msprop:Generator_UserColumnName="COM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="COM_DESC" msprop:Generator_ColumnVarNameInTable="columnCOM_DESC" msprop:Generator_ColumnPropNameInRow="COM_DESC" msprop:Generator_ColumnPropNameInTable="COM_DESCColumn" msprop:Generator_UserColumnName="COM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POWERED_BY" msprop:Generator_ColumnVarNameInTable="columnPOWERED_BY" msprop:Generator_ColumnPropNameInRow="POWERED_BY" msprop:Generator_ColumnPropNameInTable="POWERED_BYColumn" msprop:Generator_UserColumnName="POWERED_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="PC_CODE" msprop:Generator_ColumnVarNameInTable="columnPC_CODE" msprop:Generator_ColumnPropNameInRow="PC_CODE" msprop:Generator_ColumnPropNameInTable="PC_CODEColumn" msprop:Generator_UserColumnName="PC_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="PC_DESC" msprop:Generator_ColumnVarNameInTable="columnPC_DESC" msprop:Generator_ColumnPropNameInRow="PC_DESC" msprop:Generator_ColumnPropNameInTable="PC_DESCColumn" msprop:Generator_UserColumnName="PC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="SR_SENT_DT" msprop:Generator_ColumnVarNameInTable="columnSR_SENT_DT" msprop:Generator_ColumnPropNameInRow="SR_SENT_DT" msprop:Generator_ColumnPropNameInTable="SR_SENT_DTColumn" msprop:Generator_UserColumnName="SR_SENT_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="POD_NO" msprop:Generator_ColumnVarNameInTable="columnPOD_NO" msprop:Generator_ColumnPropNameInRow="POD_NO" msprop:Generator_ColumnPropNameInTable="POD_NOColumn" msprop:Generator_UserColumnName="POD_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="RCVD_DT" msprop:Generator_ColumnVarNameInTable="columnRCVD_DT" msprop:Generator_ColumnPropNameInRow="RCVD_DT" msprop:Generator_ColumnPropNameInTable="RCVD_DTColumn" msprop:Generator_UserColumnName="RCVD_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="RCVD_BY" msprop:Generator_ColumnVarNameInTable="columnRCVD_BY" msprop:Generator_ColumnPropNameInRow="RCVD_BY" msprop:Generator_ColumnPropNameInTable="RCVD_BYColumn" msprop:Generator_UserColumnName="RCVD_BY" type="xs:string" minOccurs="0" />
+              <xs:element name="TOT_REP" msprop:Generator_ColumnVarNameInTable="columnTOT_REP" msprop:Generator_ColumnPropNameInRow="TOT_REP" msprop:Generator_ColumnPropNameInTable="TOT_REPColumn" msprop:Generator_UserColumnName="TOT_REP" type="xs:short" minOccurs="0" />
+              <xs:element name="PENDING" msprop:Generator_ColumnVarNameInTable="columnPENDING" msprop:Generator_ColumnPropNameInRow="PENDING" msprop:Generator_ColumnPropNameInTable="PENDINGColumn" msprop:Generator_UserColumnName="PENDING" type="xs:short" minOccurs="0" />
+              <xs:element name="REC_RENDING" msprop:Generator_ColumnVarNameInTable="columnREC_RENDING" msprop:Generator_ColumnPropNameInRow="REC_RENDING" msprop:Generator_ColumnPropNameInTable="REC_RENDINGColumn" msprop:Generator_UserColumnName="REC_RENDING" type="xs:short" minOccurs="0" />
+              <xs:element name="TOT_REC" msprop:Generator_ColumnVarNameInTable="columnTOT_REC" msprop:Generator_ColumnPropNameInRow="TOT_REC" msprop:Generator_ColumnPropNameInTable="TOT_RECColumn" msprop:Generator_UserColumnName="TOT_REC" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastForward.WebAPI", "FastForward.WebAPI\FastForward.WebAPI.csproj", "{E27D15F4-0C48-4C57-A61E-E0B191005439}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.200:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = FastForward.WebAPI\\FastForward.WebAPI.csproj
+		SccProjectName1 = FastForward.WebAPI
+		SccLocalPath1 = FastForward.WebAPI
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E27D15F4-0C48-4C57-A61E-E0B191005439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E27D15F4-0C48-4C57-A61E-E0B191005439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E27D15F4-0C48-4C57-A61E-E0B191005439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E27D15F4-0C48-4C57-A61E-E0B191005439}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

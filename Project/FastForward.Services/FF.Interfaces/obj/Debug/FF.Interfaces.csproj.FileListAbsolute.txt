@@ -1,0 +1,12 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\FF.Interfaces.dll.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\PagedList.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\PagedList.Mvc.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\PagedList.xml
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\bin\PagedList.Mvc.xml
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\obj\Debug\FF.Interfaces.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\obj\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForward.Services\FF.Interfaces\obj\Debug\FF.Interfaces.pdb

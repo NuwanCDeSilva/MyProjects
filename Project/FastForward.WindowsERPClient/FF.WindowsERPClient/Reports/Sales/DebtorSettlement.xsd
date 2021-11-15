@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DebtorSettlement" targetNamespace="http://tempuri.org/DebtorSettlement.xsd" xmlns:mstns="http://tempuri.org/DebtorSettlement.xsd" xmlns="http://tempuri.org/DebtorSettlement.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DebtorSettlement" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DebtorSettlement" msprop:Generator_UserDSName="DebtorSettlement">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="mst_com" msprop:Generator_TableClassName="mst_comDataTable" msprop:Generator_TableVarName="tablemst_com" msprop:Generator_TablePropName="mst_com" msprop:Generator_RowDeletingName="mst_comRowDeleting" msprop:Generator_UserTableName="mst_com" msprop:Generator_RowChangingName="mst_comRowChanging" msprop:Generator_RowEvHandlerName="mst_comRowChangeEventHandler" msprop:Generator_RowDeletedName="mst_comRowDeleted" msprop:Generator_RowEvArgName="mst_comRowChangeEvent" msprop:Generator_RowChangedName="mst_comRowChanged" msprop:Generator_RowClassName="mst_comRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MC_IT_POWERED" msprop:Generator_ColumnVarNameInTable="columnMC_IT_POWERED" msprop:Generator_ColumnPropNameInRow="MC_IT_POWERED" msprop:Generator_ColumnPropNameInTable="MC_IT_POWEREDColumn" msprop:Generator_UserColumnName="MC_IT_POWERED" type="xs:string" minOccurs="0" />
+              <xs:element name="MC_CD" msprop:Generator_ColumnVarNameInTable="columnMC_CD" msprop:Generator_ColumnPropNameInRow="MC_CD" msprop:Generator_ColumnPropNameInTable="MC_CDColumn" msprop:Generator_UserColumnName="MC_CD" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="glob_debt_settle" msprop:Generator_TableClassName="glob_debt_settleDataTable" msprop:Generator_TableVarName="tableglob_debt_settle" msprop:Generator_TablePropName="glob_debt_settle" msprop:Generator_RowDeletingName="glob_debt_settleRowDeleting" msprop:Generator_UserTableName="glob_debt_settle" msprop:Generator_RowChangingName="glob_debt_settleRowChanging" msprop:Generator_RowEvHandlerName="glob_debt_settleRowChangeEventHandler" msprop:Generator_RowDeletedName="glob_debt_settleRowDeleted" msprop:Generator_RowEvArgName="glob_debt_settleRowChangeEvent" msprop:Generator_RowChangedName="glob_debt_settleRowChanged" msprop:Generator_RowClassName="glob_debt_settleRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DS_COM" msprop:Generator_ColumnVarNameInTable="columnDS_COM" msprop:Generator_ColumnPropNameInRow="DS_COM" msprop:Generator_ColumnPropNameInTable="DS_COMColumn" msprop:Generator_UserColumnName="DS_COM" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_PC" msprop:Generator_ColumnVarNameInTable="columnDS_PC" msprop:Generator_ColumnPropNameInRow="DS_PC" msprop:Generator_ColumnPropNameInTable="DS_PCColumn" msprop:Generator_UserColumnName="DS_PC" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_INVNO" msprop:Generator_ColumnVarNameInTable="columnDS_INVNO" msprop:Generator_ColumnPropNameInRow="DS_INVNO" msprop:Generator_ColumnPropNameInTable="DS_INVNOColumn" msprop:Generator_UserColumnName="DS_INVNO" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_INV_DT" msprop:Generator_ColumnVarNameInTable="columnDS_INV_DT" msprop:Generator_ColumnPropNameInRow="DS_INV_DT" msprop:Generator_ColumnPropNameInTable="DS_INV_DTColumn" msprop:Generator_UserColumnName="DS_INV_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CUST_CD" msprop:Generator_ColumnVarNameInTable="columnDS_CUST_CD" msprop:Generator_ColumnPropNameInRow="DS_CUST_CD" msprop:Generator_ColumnPropNameInTable="DS_CUST_CDColumn" msprop:Generator_UserColumnName="DS_CUST_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_CUST_NAME" msprop:Generator_ColumnVarNameInTable="columnDS_CUST_NAME" msprop:Generator_ColumnPropNameInRow="DS_CUST_NAME" msprop:Generator_ColumnPropNameInTable="DS_CUST_NAMEColumn" msprop:Generator_UserColumnName="DS_CUST_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_INV_VAL" msprop:Generator_ColumnVarNameInTable="columnDS_INV_VAL" msprop:Generator_ColumnPropNameInRow="DS_INV_VAL" msprop:Generator_ColumnPropNameInTable="DS_INV_VALColumn" msprop:Generator_UserColumnName="DS_INV_VAL" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_SET_DT" msprop:Generator_ColumnVarNameInTable="columnDS_SET_DT" msprop:Generator_ColumnPropNameInRow="DS_SET_DT" msprop:Generator_ColumnPropNameInTable="DS_SET_DTColumn" msprop:Generator_UserColumnName="DS_SET_DT" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_SET_REF" msprop:Generator_ColumnVarNameInTable="columnDS_SET_REF" msprop:Generator_ColumnPropNameInRow="DS_SET_REF" msprop:Generator_ColumnPropNameInTable="DS_SET_REFColumn" msprop:Generator_UserColumnName="DS_SET_REF" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_SET_VAL" msprop:Generator_ColumnVarNameInTable="columnDS_SET_VAL" msprop:Generator_ColumnPropNameInRow="DS_SET_VAL" msprop:Generator_ColumnPropNameInTable="DS_SET_VALColumn" msprop:Generator_UserColumnName="DS_SET_VAL" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_SET_MODE" msprop:Generator_ColumnVarNameInTable="columnDS_SET_MODE" msprop:Generator_ColumnPropNameInRow="DS_SET_MODE" msprop:Generator_ColumnPropNameInTable="DS_SET_MODEColumn" msprop:Generator_UserColumnName="DS_SET_MODE" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_TOT_BAL" msprop:Generator_ColumnVarNameInTable="columnDS_TOT_BAL" msprop:Generator_ColumnPropNameInRow="DS_TOT_BAL" msprop:Generator_ColumnPropNameInTable="DS_TOT_BALColumn" msprop:Generator_UserColumnName="DS_TOT_BAL" type="xs:string" minOccurs="0" />
+              <xs:element name="DS_USER" msprop:Generator_ColumnVarNameInTable="columnDS_USER" msprop:Generator_ColumnPropNameInRow="DS_USER" msprop:Generator_ColumnPropNameInTable="DS_USERColumn" msprop:Generator_UserColumnName="DS_USER" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

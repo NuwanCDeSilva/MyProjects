@@ -1,0 +1,59 @@
+﻿#pftaddresse {
+   margin-left: -24px;
+   width:650px;
+}
+
+#date {
+ margin-left: -24px;
+
+}
+
+#advancefromdate {
+float:left;
+}
+#advancetodate {
+float:left;
+}
+#rentfromdate {
+float:left;
+}
+#renttodate {
+float:left;
+}
+
+.floatleft {
+float:left;
+
+}
+
+.floatright {
+float:right;
+
+}
+.marglefttextbox {
+margin-left:-150px;
+}
+
+.classleftmarg {
+margin-left:15px;
+}
+
+.classmargingleft {
+margin-left:-190px;
+}
+
+
+.glyphiconiconlarge {
+    font-size: 20px;
+}
+
+.hideclass {
+display:none;
+}
+.op-btns div > input {
+    margin-left: 0;
+}
+
+.panel-container > div {
+   background:white;
+}

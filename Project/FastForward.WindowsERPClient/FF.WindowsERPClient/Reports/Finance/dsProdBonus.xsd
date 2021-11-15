@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsProdBonus" targetNamespace="http://tempuri.org/dsProdBonus.xsd" xmlns:mstns="http://tempuri.org/dsProdBonus.xsd" xmlns="http://tempuri.org/dsProdBonus.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ConnectionString1" IsAppSettingsProperty="true" Modifier="Assembly" Name="ConnectionString1 (Settings)" ParameterPrefix=":" PropertyReference="ApplicationSettings.FF.WindowsERPClient.Properties.Settings.GlobalReference.Default.ConnectionString1" Provider="Oracle.DataAccess.Client" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsProdBonus" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsProdBonus" msprop:Generator_UserDSName="dsProdBonus">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="GNT_INC_CALC" msprop:Generator_TableClassName="GNT_INC_CALCDataTable" msprop:Generator_TableVarName="tableGNT_INC_CALC" msprop:Generator_TablePropName="GNT_INC_CALC" msprop:Generator_RowDeletingName="GNT_INC_CALCRowDeleting" msprop:Generator_UserTableName="GNT_INC_CALC" msprop:Generator_RowChangingName="GNT_INC_CALCRowChanging" msprop:Generator_RowEvHandlerName="GNT_INC_CALCRowChangeEventHandler" msprop:Generator_RowDeletedName="GNT_INC_CALCRowDeleted" msprop:Generator_RowEvArgName="GNT_INC_CALCRowChangeEvent" msprop:Generator_RowChangedName="GNT_INC_CALCRowChanged" msprop:Generator_RowClassName="GNT_INC_CALCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="IC_FROM" msprop:Generator_ColumnVarNameInTable="columnIC_FROM" msprop:Generator_ColumnPropNameInRow="IC_FROM" msprop:Generator_ColumnPropNameInTable="IC_FROMColumn" msprop:Generator_UserColumnName="IC_FROM" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IC_TO" msprop:Generator_ColumnVarNameInTable="columnIC_TO" msprop:Generator_ColumnPropNameInRow="IC_TO" msprop:Generator_ColumnPropNameInTable="IC_TOColumn" msprop:Generator_UserColumnName="IC_TO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="IC_REF" msprop:Generator_ColumnVarNameInTable="columnIC_REF" msprop:Generator_ColumnPropNameInRow="IC_REF" msprop:Generator_ColumnPropNameInTable="IC_REFColumn" msprop:Generator_UserColumnName="IC_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IC_CIRC" msprop:Generator_ColumnVarNameInTable="columnIC_CIRC" msprop:Generator_ColumnPropNameInRow="IC_CIRC" msprop:Generator_ColumnPropNameInTable="IC_CIRCColumn" msprop:Generator_UserColumnName="IC_CIRC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IC_LINE" msprop:Generator_ColumnVarNameInTable="columnIC_LINE" msprop:Generator_ColumnPropNameInRow="IC_LINE" msprop:Generator_ColumnPropNameInTable="IC_LINEColumn" msprop:Generator_UserColumnName="IC_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IC_APP_PARTY" msprop:Generator_ColumnVarNameInTable="columnIC_APP_PARTY" msprop:Generator_ColumnPropNameInRow="IC_APP_PARTY" msprop:Generator_ColumnPropNameInTable="IC_APP_PARTYColumn" msprop:Generator_UserColumnName="IC_APP_PARTY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IC_PARTY_NAME" msprop:Generator_ColumnVarNameInTable="columnIC_PARTY_NAME" msprop:Generator_ColumnPropNameInRow="IC_PARTY_NAME" msprop:Generator_ColumnPropNameInTable="IC_PARTY_NAMEColumn" msprop:Generator_UserColumnName="IC_PARTY_NAME" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IC_CONFIRM" msprop:Generator_ColumnVarNameInTable="columnIC_CONFIRM" msprop:Generator_ColumnPropNameInRow="IC_CONFIRM" msprop:Generator_ColumnPropNameInTable="IC_CONFIRMColumn" msprop:Generator_UserColumnName="IC_CONFIRM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="IC_CUR_PC" msprop:Generator_ColumnVarNameInTable="columnIC_CUR_PC" msprop:Generator_ColumnPropNameInRow="IC_CUR_PC" msprop:Generator_ColumnPropNameInTable="IC_CUR_PCColumn" msprop:Generator_UserColumnName="IC_CUR_PC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INC_CRE_WHEN" msprop:Generator_ColumnVarNameInTable="columnINC_CRE_WHEN" msprop:Generator_ColumnPropNameInRow="INC_CRE_WHEN" msprop:Generator_ColumnPropNameInTable="INC_CRE_WHENColumn" msprop:Generator_UserColumnName="INC_CRE_WHEN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INC_MOD_BY" msprop:Generator_ColumnVarNameInTable="columnINC_MOD_BY" msprop:Generator_ColumnPropNameInRow="INC_MOD_BY" msprop:Generator_ColumnPropNameInTable="INC_MOD_BYColumn" msprop:Generator_UserColumnName="INC_MOD_BY" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INC_MOD_WHEN" msprop:Generator_ColumnVarNameInTable="columnINC_MOD_WHEN" msprop:Generator_ColumnPropNameInRow="INC_MOD_WHEN" msprop:Generator_ColumnPropNameInTable="INC_MOD_WHENColumn" msprop:Generator_UserColumnName="INC_MOD_WHEN" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="INC_SESSION_ID" msprop:Generator_ColumnVarNameInTable="columnINC_SESSION_ID" msprop:Generator_ColumnPropNameInRow="INC_SESSION_ID" msprop:Generator_ColumnPropNameInTable="INC_SESSION_IDColumn" msprop:Generator_UserColumnName="INC_SESSION_ID" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MPC_DESC" msprop:Generator_ColumnVarNameInTable="columnMPC_DESC" msprop:Generator_ColumnPropNameInRow="MPC_DESC" msprop:Generator_ColumnPropNameInTable="MPC_DESCColumn" msprop:Generator_UserColumnName="MPC_DESC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GNT_INC_CALC_DT" msprop:Generator_TableClassName="GNT_INC_CALC_DTDataTable" msprop:Generator_TableVarName="tableGNT_INC_CALC_DT" msprop:Generator_TablePropName="GNT_INC_CALC_DT" msprop:Generator_RowDeletingName="GNT_INC_CALC_DTRowDeleting" msprop:Generator_UserTableName="GNT_INC_CALC_DT" msprop:Generator_RowChangingName="GNT_INC_CALC_DTRowChanging" msprop:Generator_RowEvHandlerName="GNT_INC_CALC_DTRowChangeEventHandler" msprop:Generator_RowDeletedName="GNT_INC_CALC_DTRowDeleted" msprop:Generator_RowEvArgName="GNT_INC_CALC_DTRowChangeEvent" msprop:Generator_RowChangedName="GNT_INC_CALC_DTRowChanged" msprop:Generator_RowClassName="GNT_INC_CALC_DTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ICD_FROM" msprop:Generator_ColumnVarNameInTable="columnICD_FROM" msprop:Generator_ColumnPropNameInRow="ICD_FROM" msprop:Generator_ColumnPropNameInTable="ICD_FROMColumn" msprop:Generator_UserColumnName="ICD_FROM" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICD_TO" msprop:Generator_ColumnVarNameInTable="columnICD_TO" msprop:Generator_ColumnPropNameInRow="ICD_TO" msprop:Generator_ColumnPropNameInTable="ICD_TOColumn" msprop:Generator_UserColumnName="ICD_TO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICD_REF" msprop:Generator_ColumnVarNameInTable="columnICD_REF" msprop:Generator_ColumnPropNameInRow="ICD_REF" msprop:Generator_ColumnPropNameInTable="ICD_REFColumn" msprop:Generator_UserColumnName="ICD_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICD_CIRC" msprop:Generator_ColumnVarNameInTable="columnICD_CIRC" msprop:Generator_ColumnPropNameInRow="ICD_CIRC" msprop:Generator_ColumnPropNameInTable="ICD_CIRCColumn" msprop:Generator_UserColumnName="ICD_CIRC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICD_LINE" msprop:Generator_ColumnVarNameInTable="columnICD_LINE" msprop:Generator_ColumnPropNameInRow="ICD_LINE" msprop:Generator_ColumnPropNameInTable="ICD_LINEColumn" msprop:Generator_UserColumnName="ICD_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICD_HLINE" msprop:Generator_ColumnVarNameInTable="columnICD_HLINE" msprop:Generator_ColumnPropNameInRow="ICD_HLINE" msprop:Generator_ColumnPropNameInTable="ICD_HLINEColumn" msprop:Generator_UserColumnName="ICD_HLINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICD_DLINE" msprop:Generator_ColumnVarNameInTable="columnICD_DLINE" msprop:Generator_ColumnPropNameInRow="ICD_DLINE" msprop:Generator_ColumnPropNameInTable="ICD_DLINEColumn" msprop:Generator_UserColumnName="ICD_DLINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICD_CUR_PC" msprop:Generator_ColumnVarNameInTable="columnICD_CUR_PC" msprop:Generator_ColumnPropNameInRow="ICD_CUR_PC" msprop:Generator_ColumnPropNameInTable="ICD_CUR_PCColumn" msprop:Generator_UserColumnName="ICD_CUR_PC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICD_ITM_TP" msprop:Generator_ColumnVarNameInTable="columnICD_ITM_TP" msprop:Generator_ColumnPropNameInRow="ICD_ITM_TP" msprop:Generator_ColumnPropNameInTable="ICD_ITM_TPColumn" msprop:Generator_UserColumnName="ICD_ITM_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICD_ITM" msprop:Generator_ColumnVarNameInTable="columnICD_ITM" msprop:Generator_ColumnPropNameInRow="ICD_ITM" msprop:Generator_ColumnPropNameInTable="ICD_ITMColumn" msprop:Generator_UserColumnName="ICD_ITM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICD_QTY" msprop:Generator_ColumnVarNameInTable="columnICD_QTY" msprop:Generator_ColumnPropNameInRow="ICD_QTY" msprop:Generator_ColumnPropNameInTable="ICD_QTYColumn" msprop:Generator_UserColumnName="ICD_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICD_VAL" msprop:Generator_ColumnVarNameInTable="columnICD_VAL" msprop:Generator_ColumnPropNameInRow="ICD_VAL" msprop:Generator_ColumnPropNameInTable="ICD_VALColumn" msprop:Generator_UserColumnName="ICD_VAL" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GNT_INC_CALC_INC" msprop:Generator_TableClassName="GNT_INC_CALC_INCDataTable" msprop:Generator_TableVarName="tableGNT_INC_CALC_INC" msprop:Generator_TablePropName="GNT_INC_CALC_INC" msprop:Generator_RowDeletingName="GNT_INC_CALC_INCRowDeleting" msprop:Generator_UserTableName="GNT_INC_CALC_INC" msprop:Generator_RowChangingName="GNT_INC_CALC_INCRowChanging" msprop:Generator_RowEvHandlerName="GNT_INC_CALC_INCRowChangeEventHandler" msprop:Generator_RowDeletedName="GNT_INC_CALC_INCRowDeleted" msprop:Generator_RowEvArgName="GNT_INC_CALC_INCRowChangeEvent" msprop:Generator_RowChangedName="GNT_INC_CALC_INCRowChanged" msprop:Generator_RowClassName="GNT_INC_CALC_INCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ICI_FROM" msprop:Generator_ColumnVarNameInTable="columnICI_FROM" msprop:Generator_ColumnPropNameInRow="ICI_FROM" msprop:Generator_ColumnPropNameInTable="ICI_FROMColumn" msprop:Generator_UserColumnName="ICI_FROM" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICI_TO" msprop:Generator_ColumnVarNameInTable="columnICI_TO" msprop:Generator_ColumnPropNameInRow="ICI_TO" msprop:Generator_ColumnPropNameInTable="ICI_TOColumn" msprop:Generator_UserColumnName="ICI_TO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICI_REF" msprop:Generator_ColumnVarNameInTable="columnICI_REF" msprop:Generator_ColumnPropNameInRow="ICI_REF" msprop:Generator_ColumnPropNameInTable="ICI_REFColumn" msprop:Generator_UserColumnName="ICI_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICI_CIRC" msprop:Generator_ColumnVarNameInTable="columnICI_CIRC" msprop:Generator_ColumnPropNameInRow="ICI_CIRC" msprop:Generator_ColumnPropNameInTable="ICI_CIRCColumn" msprop:Generator_UserColumnName="ICI_CIRC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICI_HLINE" msprop:Generator_ColumnVarNameInTable="columnICI_HLINE" msprop:Generator_ColumnPropNameInRow="ICI_HLINE" msprop:Generator_ColumnPropNameInTable="ICI_HLINEColumn" msprop:Generator_UserColumnName="ICI_HLINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_LINE" msprop:Generator_ColumnVarNameInTable="columnICI_LINE" msprop:Generator_ColumnPropNameInRow="ICI_LINE" msprop:Generator_ColumnPropNameInTable="ICI_LINEColumn" msprop:Generator_UserColumnName="ICI_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_DLINE" msprop:Generator_ColumnVarNameInTable="columnICI_DLINE" msprop:Generator_ColumnPropNameInRow="ICI_DLINE" msprop:Generator_ColumnPropNameInTable="ICI_DLINEColumn" msprop:Generator_UserColumnName="ICI_DLINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_IS_ALT_INC" msprop:Generator_ColumnVarNameInTable="columnICI_IS_ALT_INC" msprop:Generator_ColumnPropNameInRow="ICI_IS_ALT_INC" msprop:Generator_ColumnPropNameInTable="ICI_IS_ALT_INCColumn" msprop:Generator_UserColumnName="ICI_IS_ALT_INC" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_ALT" msprop:Generator_ColumnVarNameInTable="columnICI_ALT" msprop:Generator_ColumnPropNameInRow="ICI_ALT" msprop:Generator_ColumnPropNameInTable="ICI_ALTColumn" msprop:Generator_UserColumnName="ICI_ALT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_INC_TP" msprop:Generator_ColumnVarNameInTable="columnICI_INC_TP" msprop:Generator_ColumnPropNameInRow="ICI_INC_TP" msprop:Generator_ColumnPropNameInTable="ICI_INC_TPColumn" msprop:Generator_UserColumnName="ICI_INC_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICI_MAIN_ITM" msprop:Generator_ColumnVarNameInTable="columnICI_MAIN_ITM" msprop:Generator_ColumnPropNameInRow="ICI_MAIN_ITM" msprop:Generator_ColumnPropNameInTable="ICI_MAIN_ITMColumn" msprop:Generator_UserColumnName="ICI_MAIN_ITM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICI_MAIN_QTY" msprop:Generator_ColumnVarNameInTable="columnICI_MAIN_QTY" msprop:Generator_ColumnPropNameInRow="ICI_MAIN_QTY" msprop:Generator_ColumnPropNameInTable="ICI_MAIN_QTYColumn" msprop:Generator_UserColumnName="ICI_MAIN_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_MAIN_AMT" msprop:Generator_ColumnVarNameInTable="columnICI_MAIN_AMT" msprop:Generator_ColumnPropNameInRow="ICI_MAIN_AMT" msprop:Generator_ColumnPropNameInTable="ICI_MAIN_AMTColumn" msprop:Generator_UserColumnName="ICI_MAIN_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_MAIN_DESC" msprop:Generator_ColumnVarNameInTable="columnICI_MAIN_DESC" msprop:Generator_ColumnPropNameInRow="ICI_MAIN_DESC" msprop:Generator_ColumnPropNameInTable="ICI_MAIN_DESCColumn" msprop:Generator_UserColumnName="ICI_MAIN_DESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICI_ALT_ITM" msprop:Generator_ColumnVarNameInTable="columnICI_ALT_ITM" msprop:Generator_ColumnPropNameInRow="ICI_ALT_ITM" msprop:Generator_ColumnPropNameInTable="ICI_ALT_ITMColumn" msprop:Generator_UserColumnName="ICI_ALT_ITM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICI_ALT_QTY" msprop:Generator_ColumnVarNameInTable="columnICI_ALT_QTY" msprop:Generator_ColumnPropNameInRow="ICI_ALT_QTY" msprop:Generator_ColumnPropNameInTable="ICI_ALT_QTYColumn" msprop:Generator_UserColumnName="ICI_ALT_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_ALT_DESC" msprop:Generator_ColumnVarNameInTable="columnICI_ALT_DESC" msprop:Generator_ColumnPropNameInRow="ICI_ALT_DESC" msprop:Generator_ColumnPropNameInTable="ICI_ALT_DESCColumn" msprop:Generator_UserColumnName="ICI_ALT_DESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ICI_ALT_AMT" msprop:Generator_ColumnVarNameInTable="columnICI_ALT_AMT" msprop:Generator_ColumnPropNameInRow="ICI_ALT_AMT" msprop:Generator_ColumnPropNameInTable="ICI_ALT_AMTColumn" msprop:Generator_UserColumnName="ICI_ALT_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICI_CUR_PC" msprop:Generator_ColumnVarNameInTable="columnICI_CUR_PC" msprop:Generator_ColumnPropNameInRow="ICI_CUR_PC" msprop:Generator_ColumnPropNameInTable="ICI_CUR_PCColumn" msprop:Generator_UserColumnName="ICI_CUR_PC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GNR_INC_SCH_INC" msprop:Generator_TableClassName="GNR_INC_SCH_INCDataTable" msprop:Generator_TableVarName="tableGNR_INC_SCH_INC" msprop:Generator_TablePropName="GNR_INC_SCH_INC" msprop:Generator_RowDeletingName="GNR_INC_SCH_INCRowDeleting" msprop:Generator_UserTableName="GNR_INC_SCH_INC" msprop:Generator_RowChangingName="GNR_INC_SCH_INCRowChanging" msprop:Generator_RowEvHandlerName="GNR_INC_SCH_INCRowChangeEventHandler" msprop:Generator_RowDeletedName="GNR_INC_SCH_INCRowDeleted" msprop:Generator_RowEvArgName="GNR_INC_SCH_INCRowChangeEvent" msprop:Generator_RowChangedName="GNR_INC_SCH_INCRowChanged" msprop:Generator_RowClassName="GNR_INC_SCH_INCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="INCI_REF" msprop:Generator_ColumnVarNameInTable="columnINCI_REF" msprop:Generator_ColumnPropNameInRow="INCI_REF" msprop:Generator_ColumnPropNameInTable="INCI_REFColumn" msprop:Generator_UserColumnName="INCI_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCI_CIRC" msprop:Generator_ColumnVarNameInTable="columnINCI_CIRC" msprop:Generator_ColumnPropNameInRow="INCI_CIRC" msprop:Generator_ColumnPropNameInTable="INCI_CIRCColumn" msprop:Generator_UserColumnName="INCI_CIRC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCI_LINE" msprop:Generator_ColumnVarNameInTable="columnINCI_LINE" msprop:Generator_ColumnPropNameInRow="INCI_LINE" msprop:Generator_ColumnPropNameInTable="INCI_LINEColumn" msprop:Generator_UserColumnName="INCI_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCI_DT_LINE" msprop:Generator_ColumnVarNameInTable="columnINCI_DT_LINE" msprop:Generator_ColumnPropNameInRow="INCI_DT_LINE" msprop:Generator_ColumnPropNameInTable="INCI_DT_LINEColumn" msprop:Generator_UserColumnName="INCI_DT_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCI_IS_ALT_INC" msprop:Generator_ColumnVarNameInTable="columnINCI_IS_ALT_INC" msprop:Generator_ColumnPropNameInRow="INCI_IS_ALT_INC" msprop:Generator_ColumnPropNameInTable="INCI_IS_ALT_INCColumn" msprop:Generator_UserColumnName="INCI_IS_ALT_INC" type="xs:short" minOccurs="0" />
+              <xs:element name="INCI_ALT" msprop:Generator_ColumnVarNameInTable="columnINCI_ALT" msprop:Generator_ColumnPropNameInRow="INCI_ALT" msprop:Generator_ColumnPropNameInTable="INCI_ALTColumn" msprop:Generator_UserColumnName="INCI_ALT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCI_INC_TP" msprop:Generator_ColumnVarNameInTable="columnINCI_INC_TP" msprop:Generator_ColumnPropNameInRow="INCI_INC_TP" msprop:Generator_ColumnPropNameInTable="INCI_INC_TPColumn" msprop:Generator_UserColumnName="INCI_INC_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GNR_INC_SCH_INC_DT" msprop:Generator_TableClassName="GNR_INC_SCH_INC_DTDataTable" msprop:Generator_TableVarName="tableGNR_INC_SCH_INC_DT" msprop:Generator_TablePropName="GNR_INC_SCH_INC_DT" msprop:Generator_RowDeletingName="GNR_INC_SCH_INC_DTRowDeleting" msprop:Generator_UserTableName="GNR_INC_SCH_INC_DT" msprop:Generator_RowChangingName="GNR_INC_SCH_INC_DTRowChanging" msprop:Generator_RowEvHandlerName="GNR_INC_SCH_INC_DTRowChangeEventHandler" msprop:Generator_RowDeletedName="GNR_INC_SCH_INC_DTRowDeleted" msprop:Generator_RowEvArgName="GNR_INC_SCH_INC_DTRowChangeEvent" msprop:Generator_RowChangedName="GNR_INC_SCH_INC_DTRowChanged" msprop:Generator_RowClassName="GNR_INC_SCH_INC_DTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="INCID_REF" msprop:Generator_ColumnVarNameInTable="columnINCID_REF" msprop:Generator_ColumnPropNameInRow="INCID_REF" msprop:Generator_ColumnPropNameInTable="INCID_REFColumn" msprop:Generator_UserColumnName="INCID_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCID_CIRC" msprop:Generator_ColumnVarNameInTable="columnINCID_CIRC" msprop:Generator_ColumnPropNameInRow="INCID_CIRC" msprop:Generator_ColumnPropNameInTable="INCID_CIRCColumn" msprop:Generator_UserColumnName="INCID_CIRC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCID_LINE" msprop:Generator_ColumnVarNameInTable="columnINCID_LINE" msprop:Generator_ColumnPropNameInRow="INCID_LINE" msprop:Generator_ColumnPropNameInTable="INCID_LINEColumn" msprop:Generator_UserColumnName="INCID_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCID_INC_LINE" msprop:Generator_ColumnVarNameInTable="columnINCID_INC_LINE" msprop:Generator_ColumnPropNameInRow="INCID_INC_LINE" msprop:Generator_ColumnPropNameInTable="INCID_INC_LINEColumn" msprop:Generator_UserColumnName="INCID_INC_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCID_ALT" msprop:Generator_ColumnVarNameInTable="columnINCID_ALT" msprop:Generator_ColumnPropNameInRow="INCID_ALT" msprop:Generator_ColumnPropNameInTable="INCID_ALTColumn" msprop:Generator_UserColumnName="INCID_ALT" type="xs:short" minOccurs="0" />
+              <xs:element name="INCID_IS_ALT_ITM" msprop:Generator_ColumnVarNameInTable="columnINCID_IS_ALT_ITM" msprop:Generator_ColumnPropNameInRow="INCID_IS_ALT_ITM" msprop:Generator_ColumnPropNameInTable="INCID_IS_ALT_ITMColumn" msprop:Generator_UserColumnName="INCID_IS_ALT_ITM" type="xs:short" minOccurs="0" />
+              <xs:element name="INCID_ITM" msprop:Generator_ColumnVarNameInTable="columnINCID_ITM" msprop:Generator_ColumnPropNameInRow="INCID_ITM" msprop:Generator_ColumnPropNameInTable="INCID_ITMColumn" msprop:Generator_UserColumnName="INCID_ITM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCID_QTY" msprop:Generator_ColumnVarNameInTable="columnINCID_QTY" msprop:Generator_ColumnPropNameInRow="INCID_QTY" msprop:Generator_ColumnPropNameInTable="INCID_QTYColumn" msprop:Generator_UserColumnName="INCID_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCID_AMOUNT" msprop:Generator_ColumnVarNameInTable="columnINCID_AMOUNT" msprop:Generator_ColumnPropNameInRow="INCID_AMOUNT" msprop:Generator_ColumnPropNameInTable="INCID_AMOUNTColumn" msprop:Generator_UserColumnName="INCID_AMOUNT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCID_DESC" msprop:Generator_ColumnVarNameInTable="columnINCID_DESC" msprop:Generator_ColumnPropNameInRow="INCID_DESC" msprop:Generator_ColumnPropNameInTable="INCID_DESCColumn" msprop:Generator_UserColumnName="INCID_DESC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCID_DT_LINE" msprop:Generator_ColumnVarNameInTable="columnINCID_DT_LINE" msprop:Generator_ColumnPropNameInRow="INCID_DT_LINE" msprop:Generator_ColumnPropNameInTable="INCID_DT_LINEColumn" msprop:Generator_UserColumnName="INCID_DT_LINE" type="xs:long" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="GNR_INC_SCH_DT" msprop:Generator_TableClassName="GNR_INC_SCH_DTDataTable" msprop:Generator_TableVarName="tableGNR_INC_SCH_DT" msprop:Generator_TablePropName="GNR_INC_SCH_DT" msprop:Generator_RowDeletingName="GNR_INC_SCH_DTRowDeleting" msprop:Generator_UserTableName="GNR_INC_SCH_DT" msprop:Generator_RowChangingName="GNR_INC_SCH_DTRowChanging" msprop:Generator_RowEvHandlerName="GNR_INC_SCH_DTRowChangeEventHandler" msprop:Generator_RowDeletedName="GNR_INC_SCH_DTRowDeleted" msprop:Generator_RowEvArgName="GNR_INC_SCH_DTRowChangeEvent" msprop:Generator_RowChangedName="GNR_INC_SCH_DTRowChanged" msprop:Generator_RowClassName="GNR_INC_SCH_DTRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="INCD_REF" msprop:Generator_ColumnVarNameInTable="columnINCD_REF" msprop:Generator_ColumnPropNameInRow="INCD_REF" msprop:Generator_ColumnPropNameInTable="INCD_REFColumn" msprop:Generator_UserColumnName="INCD_REF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_CIRC" msprop:Generator_ColumnVarNameInTable="columnINCD_CIRC" msprop:Generator_ColumnPropNameInRow="INCD_CIRC" msprop:Generator_ColumnPropNameInTable="INCD_CIRCColumn" msprop:Generator_UserColumnName="INCD_CIRC" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_LINE" msprop:Generator_ColumnVarNameInTable="columnINCD_LINE" msprop:Generator_ColumnPropNameInRow="INCD_LINE" msprop:Generator_ColumnPropNameInTable="INCD_LINEColumn" msprop:Generator_UserColumnName="INCD_LINE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCD_SALE_TP" msprop:Generator_ColumnVarNameInTable="columnINCD_SALE_TP" msprop:Generator_ColumnPropNameInRow="INCD_SALE_TP" msprop:Generator_ColumnPropNameInTable="INCD_SALE_TPColumn" msprop:Generator_UserColumnName="INCD_SALE_TP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_ALT" msprop:Generator_ColumnVarNameInTable="columnINCD_ALT" msprop:Generator_ColumnPropNameInRow="INCD_ALT" msprop:Generator_ColumnPropNameInTable="INCD_ALTColumn" msprop:Generator_UserColumnName="INCD_ALT" type="xs:short" minOccurs="0" />
+              <xs:element name="INCD_IS_ALT_ITM" msprop:Generator_ColumnVarNameInTable="columnINCD_IS_ALT_ITM" msprop:Generator_ColumnPropNameInRow="INCD_IS_ALT_ITM" msprop:Generator_ColumnPropNameInTable="INCD_IS_ALT_ITMColumn" msprop:Generator_UserColumnName="INCD_IS_ALT_ITM" type="xs:short" minOccurs="0" />
+              <xs:element name="INCD_ALLOW_SER" msprop:Generator_ColumnVarNameInTable="columnINCD_ALLOW_SER" msprop:Generator_ColumnPropNameInRow="INCD_ALLOW_SER" msprop:Generator_ColumnPropNameInTable="INCD_ALLOW_SERColumn" msprop:Generator_UserColumnName="INCD_ALLOW_SER" type="xs:short" minOccurs="0" />
+              <xs:element name="INCD_IS_VAL_RANGE" msprop:Generator_ColumnVarNameInTable="columnINCD_IS_VAL_RANGE" msprop:Generator_ColumnPropNameInRow="INCD_IS_VAL_RANGE" msprop:Generator_ColumnPropNameInTable="INCD_IS_VAL_RANGEColumn" msprop:Generator_UserColumnName="INCD_IS_VAL_RANGE" type="xs:short" minOccurs="0" />
+              <xs:element name="INCD_ALL_STK_TP" msprop:Generator_ColumnVarNameInTable="columnINCD_ALL_STK_TP" msprop:Generator_ColumnPropNameInRow="INCD_ALL_STK_TP" msprop:Generator_ColumnPropNameInTable="INCD_ALL_STK_TPColumn" msprop:Generator_UserColumnName="INCD_ALL_STK_TP" type="xs:short" minOccurs="0" />
+              <xs:element name="INCD_IS_COMB_ITM" msprop:Generator_ColumnVarNameInTable="columnINCD_IS_COMB_ITM" msprop:Generator_ColumnPropNameInRow="INCD_IS_COMB_ITM" msprop:Generator_ColumnPropNameInTable="INCD_IS_COMB_ITMColumn" msprop:Generator_UserColumnName="INCD_IS_COMB_ITM" type="xs:short" minOccurs="0" />
+              <xs:element name="INCD_MAIN_CAT" msprop:Generator_ColumnVarNameInTable="columnINCD_MAIN_CAT" msprop:Generator_ColumnPropNameInRow="INCD_MAIN_CAT" msprop:Generator_ColumnPropNameInTable="INCD_MAIN_CATColumn" msprop:Generator_UserColumnName="INCD_MAIN_CAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_CAT" msprop:Generator_ColumnVarNameInTable="columnINCD_CAT" msprop:Generator_ColumnPropNameInRow="INCD_CAT" msprop:Generator_ColumnPropNameInTable="INCD_CATColumn" msprop:Generator_UserColumnName="INCD_CAT" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_BRAND" msprop:Generator_ColumnVarNameInTable="columnINCD_BRAND" msprop:Generator_ColumnPropNameInRow="INCD_BRAND" msprop:Generator_ColumnPropNameInTable="INCD_BRANDColumn" msprop:Generator_UserColumnName="INCD_BRAND" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_MODEL" msprop:Generator_ColumnVarNameInTable="columnINCD_MODEL" msprop:Generator_ColumnPropNameInRow="INCD_MODEL" msprop:Generator_ColumnPropNameInTable="INCD_MODELColumn" msprop:Generator_UserColumnName="INCD_MODEL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_ITM" msprop:Generator_ColumnVarNameInTable="columnINCD_ITM" msprop:Generator_ColumnPropNameInRow="INCD_ITM" msprop:Generator_ColumnPropNameInTable="INCD_ITMColumn" msprop:Generator_UserColumnName="INCD_ITM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="INCD_VAL_FROM" msprop:Generator_ColumnVarNameInTable="columnINCD_VAL_FROM" msprop:Generator_ColumnPropNameInRow="INCD_VAL_FROM" msprop:Generator_ColumnPropNameInTable="INCD_VAL_FROMColumn" msprop:Generator_UserColumnName="INCD_VAL_FROM" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCD_VAL_TO" msprop:Generator_ColumnVarNameInTable="columnINCD_VAL_TO" msprop:Generator_ColumnPropNameInRow="INCD_VAL_TO" msprop:Generator_ColumnPropNameInTable="INCD_VAL_TOColumn" msprop:Generator_UserColumnName="INCD_VAL_TO" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCD_COMEN_DT" msprop:Generator_ColumnVarNameInTable="columnINCD_COMEN_DT" msprop:Generator_ColumnPropNameInRow="INCD_COMEN_DT" msprop:Generator_ColumnPropNameInTable="INCD_COMEN_DTColumn" msprop:Generator_UserColumnName="INCD_COMEN_DT" type="xs:long" minOccurs="0" />
+              <xs:element name="INCD_COMEN_LINE" msprop:Generator_ColumnVarNameInTable="columnINCD_COMEN_LINE" msprop:Generator_ColumnPropNameInRow="INCD_COMEN_LINE" msprop:Generator_ColumnPropNameInTable="INCD_COMEN_LINEColumn" msprop:Generator_UserColumnName="INCD_COMEN_LINE" type="xs:long" minOccurs="0" />
+              <xs:element name="INCD_IS_OTH_QTY" msprop:Generator_ColumnVarNameInTable="columnINCD_IS_OTH_QTY" msprop:Generator_ColumnPropNameInRow="INCD_IS_OTH_QTY" msprop:Generator_ColumnPropNameInTable="INCD_IS_OTH_QTYColumn" msprop:Generator_UserColumnName="INCD_IS_OTH_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCD_ACTUAL_QTY" msprop:Generator_ColumnVarNameInTable="columnINCD_ACTUAL_QTY" msprop:Generator_ColumnPropNameInRow="INCD_ACTUAL_QTY" msprop:Generator_ColumnPropNameInTable="INCD_ACTUAL_QTYColumn" msprop:Generator_UserColumnName="INCD_ACTUAL_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="INCD_OTH_QTY" msprop:Generator_ColumnVarNameInTable="columnINCD_OTH_QTY" msprop:Generator_ColumnPropNameInRow="INCD_OTH_QTY" msprop:Generator_ColumnPropNameInTable="INCD_OTH_QTYColumn" msprop:Generator_UserColumnName="INCD_OTH_QTY" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="param" msprop:Generator_TableClassName="paramDataTable" msprop:Generator_TableVarName="tableparam" msprop:Generator_TablePropName="param" msprop:Generator_RowDeletingName="paramRowDeleting" msprop:Generator_UserTableName="param" msprop:Generator_RowChangingName="paramRowChanging" msprop:Generator_RowEvHandlerName="paramRowChangeEventHandler" msprop:Generator_RowDeletedName="paramRowDeleted" msprop:Generator_RowEvArgName="paramRowChangeEvent" msprop:Generator_RowChangedName="paramRowChanged" msprop:Generator_RowClassName="paramRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="user" msprop:Generator_ColumnVarNameInTable="columnuser" msprop:Generator_ColumnPropNameInRow="user" msprop:Generator_ColumnPropNameInTable="userColumn" msprop:Generator_UserColumnName="user" type="xs:string" minOccurs="0" />
+              <xs:element name="fromdate" msprop:Generator_ColumnVarNameInTable="columnfromdate" msprop:Generator_ColumnPropNameInRow="fromdate" msprop:Generator_ColumnPropNameInTable="fromdateColumn" msprop:Generator_UserColumnName="fromdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="todate" msprop:Generator_ColumnVarNameInTable="columntodate" msprop:Generator_ColumnPropNameInRow="todate" msprop:Generator_ColumnPropNameInTable="todateColumn" msprop:Generator_UserColumnName="todate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="profitcenter" msprop:Generator_ColumnVarNameInTable="columnprofitcenter" msprop:Generator_ColumnPropNameInRow="profitcenter" msprop:Generator_ColumnPropNameInTable="profitcenterColumn" msprop:Generator_UserColumnName="profitcenter" type="xs:string" minOccurs="0" />
+              <xs:element name="comp" msprop:Generator_ColumnVarNameInTable="columncomp" msprop:Generator_ColumnPropNameInRow="comp" msprop:Generator_ColumnPropNameInTable="compColumn" msprop:Generator_UserColumnName="comp" type="xs:string" minOccurs="0" />
+              <xs:element name="compaddr" msprop:Generator_ColumnVarNameInTable="columncompaddr" msprop:Generator_ColumnPropNameInRow="compaddr" msprop:Generator_ColumnPropNameInTable="compaddrColumn" msprop:Generator_UserColumnName="compaddr" type="xs:string" minOccurs="0" />
+              <xs:element name="groupLocation" msprop:Generator_ColumnVarNameInTable="columngroupLocation" msprop:Generator_ColumnPropNameInRow="groupLocation" msprop:Generator_ColumnPropNameInTable="groupLocationColumn" msprop:Generator_UserColumnName="groupLocation" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="gnt_inc_calc_inv" msprop:Generator_TableClassName="gnt_inc_calc_invDataTable" msprop:Generator_TableVarName="tablegnt_inc_calc_inv" msprop:Generator_TablePropName="gnt_inc_calc_inv" msprop:Generator_RowDeletingName="gnt_inc_calc_invRowDeleting" msprop:Generator_UserTableName="gnt_inc_calc_inv" msprop:Generator_RowChangingName="gnt_inc_calc_invRowChanging" msprop:Generator_RowEvHandlerName="gnt_inc_calc_invRowChangeEventHandler" msprop:Generator_RowDeletedName="gnt_inc_calc_invRowDeleted" msprop:Generator_RowEvArgName="gnt_inc_calc_invRowChangeEvent" msprop:Generator_RowChangedName="gnt_inc_calc_invRowChanged" msprop:Generator_RowClassName="gnt_inc_calc_invRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ICIV_FROM" msprop:Generator_ColumnVarNameInTable="columnICIV_FROM" msprop:Generator_ColumnPropNameInRow="ICIV_FROM" msprop:Generator_ColumnPropNameInTable="ICIV_FROMColumn" msprop:Generator_UserColumnName="ICIV_FROM" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICIV_TO" msprop:Generator_ColumnVarNameInTable="columnICIV_TO" msprop:Generator_ColumnPropNameInRow="ICIV_TO" msprop:Generator_ColumnPropNameInTable="ICIV_TOColumn" msprop:Generator_UserColumnName="ICIV_TO" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICIV_REF" msprop:Generator_ColumnVarNameInTable="columnICIV_REF" msprop:Generator_ColumnPropNameInRow="ICIV_REF" msprop:Generator_ColumnPropNameInTable="ICIV_REFColumn" msprop:Generator_UserColumnName="ICIV_REF" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_CIRC" msprop:Generator_ColumnVarNameInTable="columnICIV_CIRC" msprop:Generator_ColumnPropNameInRow="ICIV_CIRC" msprop:Generator_ColumnPropNameInTable="ICIV_CIRCColumn" msprop:Generator_UserColumnName="ICIV_CIRC" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_LINE" msprop:Generator_ColumnVarNameInTable="columnICIV_LINE" msprop:Generator_ColumnPropNameInRow="ICIV_LINE" msprop:Generator_ColumnPropNameInTable="ICIV_LINEColumn" msprop:Generator_UserColumnName="ICIV_LINE" type="xs:int" minOccurs="0" />
+              <xs:element name="ICIV_HLINE" msprop:Generator_ColumnVarNameInTable="columnICIV_HLINE" msprop:Generator_ColumnPropNameInRow="ICIV_HLINE" msprop:Generator_ColumnPropNameInTable="ICIV_HLINEColumn" msprop:Generator_UserColumnName="ICIV_HLINE" type="xs:int" minOccurs="0" />
+              <xs:element name="ICIV_DLINE" msprop:Generator_ColumnVarNameInTable="columnICIV_DLINE" msprop:Generator_ColumnPropNameInRow="ICIV_DLINE" msprop:Generator_ColumnPropNameInTable="ICIV_DLINEColumn" msprop:Generator_UserColumnName="ICIV_DLINE" type="xs:int" minOccurs="0" />
+              <xs:element name="ICIV_INV_NO" msprop:Generator_ColumnVarNameInTable="columnICIV_INV_NO" msprop:Generator_ColumnPropNameInRow="ICIV_INV_NO" msprop:Generator_ColumnPropNameInTable="ICIV_INV_NOColumn" msprop:Generator_UserColumnName="ICIV_INV_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_INV_DT" msprop:Generator_ColumnVarNameInTable="columnICIV_INV_DT" msprop:Generator_ColumnPropNameInRow="ICIV_INV_DT" msprop:Generator_ColumnPropNameInTable="ICIV_INV_DTColumn" msprop:Generator_UserColumnName="ICIV_INV_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICIV_DO_NO" msprop:Generator_ColumnVarNameInTable="columnICIV_DO_NO" msprop:Generator_ColumnPropNameInRow="ICIV_DO_NO" msprop:Generator_ColumnPropNameInTable="ICIV_DO_NOColumn" msprop:Generator_UserColumnName="ICIV_DO_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_DO_DT" msprop:Generator_ColumnVarNameInTable="columnICIV_DO_DT" msprop:Generator_ColumnPropNameInRow="ICIV_DO_DT" msprop:Generator_ColumnPropNameInTable="ICIV_DO_DTColumn" msprop:Generator_UserColumnName="ICIV_DO_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ICIV_REV_INV" msprop:Generator_ColumnVarNameInTable="columnICIV_REV_INV" msprop:Generator_ColumnPropNameInRow="ICIV_REV_INV" msprop:Generator_ColumnPropNameInTable="ICIV_REV_INVColumn" msprop:Generator_UserColumnName="ICIV_REV_INV" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_ITM_TP" msprop:Generator_ColumnVarNameInTable="columnICIV_ITM_TP" msprop:Generator_ColumnPropNameInRow="ICIV_ITM_TP" msprop:Generator_ColumnPropNameInTable="ICIV_ITM_TPColumn" msprop:Generator_UserColumnName="ICIV_ITM_TP" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_ITM" msprop:Generator_ColumnVarNameInTable="columnICIV_ITM" msprop:Generator_ColumnPropNameInRow="ICIV_ITM" msprop:Generator_ColumnPropNameInTable="ICIV_ITMColumn" msprop:Generator_UserColumnName="ICIV_ITM" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_QTY" msprop:Generator_ColumnVarNameInTable="columnICIV_QTY" msprop:Generator_ColumnPropNameInRow="ICIV_QTY" msprop:Generator_ColumnPropNameInTable="ICIV_QTYColumn" msprop:Generator_UserColumnName="ICIV_QTY" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICIV_AMT" msprop:Generator_ColumnVarNameInTable="columnICIV_AMT" msprop:Generator_ColumnPropNameInRow="ICIV_AMT" msprop:Generator_ColumnPropNameInTable="ICIV_AMTColumn" msprop:Generator_UserColumnName="ICIV_AMT" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ICIV_PC" msprop:Generator_ColumnVarNameInTable="columnICIV_PC" msprop:Generator_ColumnPropNameInRow="ICIV_PC" msprop:Generator_ColumnPropNameInTable="ICIV_PCColumn" msprop:Generator_UserColumnName="ICIV_PC" type="xs:string" minOccurs="0" />
+              <xs:element name="ICIV_ACC_NO" msprop:Generator_ColumnVarNameInTable="columnICIV_ACC_NO" msprop:Generator_ColumnPropNameInRow="ICIV_ACC_NO" msprop:Generator_ColumnPropNameInTable="ICIV_ACC_NOColumn" msprop:Generator_UserColumnName="ICIV_ACC_NO" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="MST_PC" msprop:Generator_TableClassName="MST_PCDataTable" msprop:Generator_TableVarName="tableMST_PC" msprop:Generator_TablePropName="MST_PC" msprop:Generator_RowDeletingName="MST_PCRowDeleting" msprop:Generator_UserTableName="MST_PC" msprop:Generator_RowChangingName="MST_PCRowChanging" msprop:Generator_RowEvHandlerName="MST_PCRowChangeEventHandler" msprop:Generator_RowDeletedName="MST_PCRowDeleted" msprop:Generator_RowEvArgName="MST_PCRowChangeEvent" msprop:Generator_RowChangedName="MST_PCRowChanged" msprop:Generator_RowClassName="MST_PCRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="MPC_CD" msprop:Generator_ColumnVarNameInTable="columnMPC_CD" msprop:Generator_ColumnPropNameInRow="MPC_CD" msprop:Generator_ColumnPropNameInTable="MPC_CDColumn" msprop:Generator_UserColumnName="MPC_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="MPC_DESC" msprop:Generator_ColumnVarNameInTable="columnMPC_DESC" msprop:Generator_ColumnPropNameInRow="MPC_DESC" msprop:Generator_ColumnPropNameInTable="MPC_DESCColumn" msprop:Generator_UserColumnName="MPC_DESC" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

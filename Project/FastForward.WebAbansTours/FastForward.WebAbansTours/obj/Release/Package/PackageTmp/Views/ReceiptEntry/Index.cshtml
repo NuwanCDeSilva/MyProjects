@@ -1,0 +1,424 @@
+﻿@model FF.BusinessObjects.RecieptHeaderTBS
+
+@{
+    ViewBag.Title = "Receipt Entry";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/Payment.js?@val"></script>
+    <script src="~/Scripts/Common/DataEntry.js?@val"></script>
+    <script src="~/Scripts/Common/ReceiptEntry.js?@val"></script>
+}
+<div class="Receipt-entry-cls">
+    <div class="container1 op-btns">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="page-title">Receipt Entry</div>
+            </div>
+            <div class="col-md-8">
+                <input type="submit" value="Clear" class="btn btn-default btn-default-style btn-Receipt-entry-clear-data" />
+                <input type="submit" value="Save" class="btn btn-default btn-default-style btn-Receipt-entry-save-data" />
+                <input type="submit" value="Print" class="btn btn-default btn-default-style btn-print-receipt" />
+            </div>
+            </div>
+    </div>
+    @using (Html.BeginForm("CreateReceiptEntry", "ReceiptEntry", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-recp-enty-det", role = "form", @id = "Receipt-entry-crte-frm" }))
+    {
+        <div class="demopage">
+            <div class="container1">
+                <div class="row">
+                    <div class="panel-sep col-lg-12">
+                        <ul class="rtabs">
+                            <li><a href="#viewreceiptentry">Receipt Entry</a></li>
+                        </ul>
+                        <div class="panel-container">
+                            <div id="viewcostsheet" class="tab-content-cls">
+                                <div class="form-horizontal">
+                                    <div class="row search-unallow-recpt">
+                                        <div class="col-md-9 form-group">
+                                        </div>
+                                        <div class="col-md-3 form-group">
+                                            <div class="col-md-1">
+                                                @Html.CheckBox("CheckUnallocated", new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                            <label class="col-md-8 control-label">Search un-allocated receipts</label>
+
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <div class="col-md-4">
+                                                <div class="col-md-6">
+                                                    <label class="col-md-12 control-label">Receipt Type</label>
+                                                    <div class="col-md-12">
+                                                        @Html.EditorFor(model => model.Sir_receipt_type, new { htmlAttributes = new { @class = "form-control with-search required-field", Value = "ADVAN" } })
+                                                        <img src="~/Resources/Images/Search-icon.png" class="search-img recpt-typ-search" title="Search">
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label class="col-md-12 control-label">Division</label>
+                                                    <div class="col-md-12">
+                                                        @Html.Editor("Division", new { htmlAttributes = new { @class = "form-control with-search required-field" } })
+                                                        <img src="~/Resources/Images/Search-icon.png" class="search-img division-search" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-6">
+                                                    <label class="col-md-12 control-label">Date</label>
+                                                    <div class="col-md-12">
+                                                        @Html.EditorFor(model => model.Sir_receipt_date, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+
+                                                    </div>
+
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <label class="col-md-12 control-label">Receipt No</label>
+                                                    <div class="col-md-12">
+                                                        @Html.EditorFor(model => model.Sir_receipt_no, new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                        <img src="~/Resources/Images/Search-icon.png" class="search-img recpt-num-search" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="col-md-2 hide">
+                                                    <div class="col-md-6">
+                                                        <label class="col-md-12 control-label">Manual</label>
+                                                        <div class="col-md-12">
+                                                            @Html.RadioButton("CheckManSys", "1", true)
+                                                        </div>
+
+                                                    </div>
+                                                    <div class="col-md-6">
+                                                        <label class="col-md-12 control-label">System</label>
+                                                        <div class="col-md-12">
+                                                            @Html.RadioButton("CheckManSys", "0")
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-2 hide">
+                                                    <label class="col-md-12 control-label">Prefix</label>
+                                                    @Html.DropDownListFor(model => model.Sir_prefix, new List<SelectListItem>(), "-Select-", new { @class = "form-control prefix-dropdown" })
+                                                </div>
+                                                <div class="col-md-6 com-cls">
+                                                    <label class="col-md-12 control-label">Reference</label>
+                                                    <div class="col-md-12  clear-padding-this">
+                                                        @Html.EditorFor(model => model.Sir_manual_ref_no, new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                        <img src="~/Resources/Images/Search-icon.png" class="search-img recpt-enq-search" title="Search">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel-sep col-md-6">
+                    <ul class="rtabs">
+                        <li><a href="#viewrecivefrm">Recive From</a></li>
+                    </ul>
+                    <div class="panel-container">
+                        <div id="viewrecivefrm" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-md-2 control-label">Code</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Sir_debtor_cd, new { htmlAttributes = new { @class = "form-control  with-search required-field" } })
+                                            <img src="~/Resources/Images/Search-icon.png" class="search-img cust-recipt-search" title="Search">
+                                            <img src="~/Resources/Images/Add-cust.png" class="search-img  add-cust-recipt-data" title="Create Customer">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-md-2 control-label">Name</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Sir_debtor_name, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <label class="col-md-2 control-label">Address</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Sir_debtor_add_1, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 form-group">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Sir_debtor_add_2, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-4 control-label">NIC</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Sir_nic_no, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-4 control-label">Mobile</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Sir_mob_no, new { htmlAttributes = new { @class = "form-control" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-4 control-label">District</label>
+                                        <div class="col-md-8">
+                                            @Html.DropDownListFor(m => m.Sir_anal_1, new List<SelectListItem>(), "-Select-", new { @class = "form-control district-dropdown" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-4 control-label">Province</label>
+                                        <div class="col-md-8">
+                                            @Html.EditorFor(model => model.Sir_anal_2, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="panel-sep col-md-6">
+                    <ul class="rtabs">
+                        <li><a href="#viewsetledet">Settlement Details </a></li>
+                    </ul>
+                    <div class="panel-container">
+                        <div id="viewsetledet" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="row gvisu-panel-reciept">
+                                    <div class="col-md-12 form-group">
+                                        <ul class="rtabs">
+                                            <li><a href="#viewvoudet">Gift Voucher Details </a></li>
+                                        </ul>
+                                        <div class="panel-container">
+                                            <div id="viewvoudet" class="tab-content-cls">
+                                                <div class="form-horizontal">
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Code</label>
+                                                            <div class="col-md-8">
+                                                                @Html.Editor("VoucherCode", new { htmlAttributes = new { @class = "form-control  with-search" } })
+                                                                <img src="~/Resources/Images/Search-icon.png" class="search-img gift-vouch-search" title="Search">
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Book</label>
+                                                            <div class="col-md-8">
+                                                                @Html.DropDownList("VoucherBook", new List<SelectListItem>(), "-Select-", new { @class = "form-control vou-book-dropdown" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Pages From</label>
+                                                            <div class="col-md-8">
+                                                                <label class="col-md-4 control-label pages-from-label">--</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Pages To</label>
+                                                            <div class="col-md-8">
+                                                                @Html.DropDownList("PagesTo", new List<SelectListItem>(), "-Select-", new { @class = "form-control pages-to-dropdown" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label"># Issued Pages</label>
+                                                            <div class="col-md-8">
+                                                                <label class="col-md-4 control-label num-issu-pages-label">--</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Page Value</label>
+                                                            <div class="col-md-8">
+                                                                @Html.Editor("PageValue", new { htmlAttributes = new { @class = "form-control" } })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Issue as FOC</label>
+                                                            <div class="col-md-8">
+                                                                @Html.CheckBox("IssueAsFoc", new { @class = "form-control" })
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Total Value</label>
+                                                            <div class="col-md-8">
+                                                                @Html.Editor("TotalValue", new { htmlAttributes = new { @class = "form-control",@readonly="readonly" } })
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-6">
+                                                            <label class="col-md-4 control-label">Expire On</label>
+                                                            <div class="col-md-8">
+                                                                @Html.Editor("ExpireOnDt", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                                <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img add-voucher-data" title="Add">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row debt-panel-reciept">
+                                    <div class="col-md-12 form-group">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <label class="col-md-3 control-label">Invoice</label>
+                                                <div class="col-md-9">
+                                                    @Html.Editor("InvoiceAdd", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img invoice-receipt-search" title="Search">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <label class="col-md-4 control-label">Amount</label>
+                                                <div class="col-md-8">
+                                                    @Html.Editor("InvAmount", new { htmlAttributes = new { @class = "form-control InvAmount-cls", @placeholder = "0.00", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <label class="col-md-8 control-label">Oth. SR</label>
+                                                <div class="col-md-2">
+                                                    @Html.CheckBox("OthSr", new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <div class="col-md-12">
+                                                    @Html.Editor("OthSrVal", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img other-sr-search" title="Search">
+                                                </div>
+                                               
+                                                @*<img src="~/Resources/Images/arrow_down.png" class="arrow-down-img add-debt-val" title="Add">*@
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="row cust-pay-panel-reciept">
+                                    <div class="col-md-6 form-group">
+                                        <label class="col-md-6 control-label">Customer Payment</label>
+                                        <div class="col-md-6">
+                                            @Html.Editor("CustPayment", new { htmlAttributes = new { @class = "form-control  with-search required-field", @placeholder = "0.00" } })
+                                            <img src="~/Resources/Images/arrow_down.png" class="arrow-down-img add-cost-data" title="Add">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 form-group set-padding other-part-cls">
+                                        <div class="row">
+                                            <div class="col-md-12">@Html.CheckBox("OtherParty", false, new { htmlAttributes = new { @class = "form-control" } })<b> Other Party</b></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label class="col-md-4 control-label">Agent</label>
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(Model => Model.Sir_oth_partycd, new { htmlAttributes = new { @class = "form-control with-search required-field", @readonly = "readonly" } })
+                                                    <img src="~/Resources/Images/Search-icon.png" class="search-img oth-party-search" title="Search">
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12">
+                                                <label class="col-md-4 control-label">Name</label>
+                                                <div class="col-md-8">
+                                                    @Html.EditorFor(Model => Model.Sir_oth_partyname, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel-sep col-md-12">
+                    @Html.Partial("~/Views/Shared/_Payment.cshtml")
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel-sep col-md-12">
+                    <ul class="rtabs no-width">
+                        <li><a href="#viewgftvoudet">Gift Voucher Details </a></li>
+                        <li><a href="#viewaddidet">Additional Details </a></li>
+                    </ul>
+                    <div class="panel-container">
+                        <div id="viewgftvoudet" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                <table class="giftvoc-listing-table table">
+                                    <tr class="table-hed">
+                                        <th>Code</th>
+                                        <th>Book</th>
+                                        <th>Page</th>
+                                        <th>Prefix</th>
+                                        <th>Valid From</th>
+                                        <th>Valid To</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div id="viewaddidet" class="tab-content-cls">
+                            <div class="form-horizontal">
+                                <div class="col-md-12 form-group">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Note</label>
+                                            <div class="col-md-8">
+                                                @Html.TextAreaFor(model => model.Sir_remarks, new { @class = "form-control",maxLength="200" })
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Sales Executive</label>
+                                            <div class="col-md-8">
+                                                @Html.EditorFor(model => model.Sir_anal_4, new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                <img src="~/Resources/Images/Search-icon.png" class="search-img sales-ex-search" title="Search">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="col-md-4 control-label">Total Receipt Amount</label>
+                                            <div class="col-md-8">
+                                                @Html.Editor("TotalAmount", new { htmlAttributes = new { @class = "form-control" } })
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+    <div class="customer-create-popup">
+        @Html.Partial("~/Views/Shared/_Customer.cshtml")
+    </div>
+</div>

@@ -1,0 +1,200 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FF.AbansTours.SiteMaster" %>
+
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
+<%@ Register Src="UserControls/uc_CommonSearch.ascx" TagName="uc_CommonSearch" TagPrefix="uc4" %>
+<!DOCTYPE html>
+<html lang="en">
+<head id="head" runat="server">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/webIcon.png">
+    <title>Abans Tours - Management System</title>
+    <!-- Bootstrap core CSS -->
+    <link href="js/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="js/jquery.gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" href="fonts/font-awesome-4/css/font-awesome.min.css">
+    <%-- <link rel="stylesheet" type="text/css" href="js/jquery.codemirror/lib/codemirror.css">
+    <link rel="stylesheet" type="text/css" href="js/jquery.codemirror/theme/ambiance.css">
+    <link rel="stylesheet" href="js/jquery.vectormaps/jquery-jvectormap-1.2.2.css"
+        type="text/css" media="screen" />--%>
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/StyleSheet.css" rel="stylesheet" type="text/css" />
+
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="cl-wrapper">
+        <div class="cl-sidebar">
+            <div class="cl-toggle">
+                <i class="fa fa-bars"></i>
+            </div>
+            <div class="cl-navblock">
+                <div class="menu-space">
+                    <div class="content">
+                        <div class="sidebar-logo">
+                            <div class="logo">
+                                <a href="http://www.abanstours.lk/" style="text-align: center">Abans Tours </a>
+                            </div>
+                        </div>
+                        <div class="side-user">
+                            <div class="avatar">
+                                <img src="../images/avatar6.png" alt="" />
+                            </div>
+                        </div>
+                        <ul class="cl-vnavigation" style="list-style: none;">
+                            <li class="active"><a href="../Default.aspx"><i class="fa fa-home"></i><span>Main Page</span></a></li>
+                            <li><a href="../Enquiry.aspx"><i class="fa fa-smile-o"></i><span>New Enquiry</span></a></li>
+
+                            <li><a><i class="fa fa-folder"></i><span>Transactions</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="../Invoice.aspx"><i class="fa fa-list-alt"></i><span>Invoice</span></a> </li>
+                                    <li><a href="../ReceiptEnrty.aspx"><i class="fa fa-list-alt"></i><span>Receipt Entry</span></a></li>
+                                    <li><a href="../Sales/VehicleAllocation.aspx"><i class="fa fa-list-alt"></i><span>Fleet Schedule</span></a>
+                                    <li><a href="../Sales/LogSheet.aspx"><i class="fa fa-list-alt"></i><span>Log Sheet</span></a></li>
+                                    <li><a href="../Sales/Payment.aspx"><i class="fa fa-list-alt"></i><span>Payment</span></a></li>
+                                    <li><a href="../Sales/TransportInvoice.aspx"><i class="fa fa-list-alt"></i><span>Transport Invoice</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-folder"></i><span>Master Setup</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="../DataEnty/CustomerCreation.aspx"><i class="fa fa-list-alt"></i><span>Customers</span></a></li>
+                                    <li><a href="../ChargeCodeDetails.aspx"><i class="fa fa-list-alt"></i><span>Charge Codes</span></a></li>
+                                    <li><a href="../AddEmployee.aspx"><i class="fa fa-list-alt"></i><span>Add Employee</span></a></li>
+                                    <li><a href="../AddFleet.aspx"><i class="fa fa-list-alt"></i><span>Add Fleet</span></a></li>
+                                    <li><a href="../AllocateDriverVehicle.aspx"><i class="fa fa-list-alt"></i><span>Driver Allocation</span></a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-folder"></i><span>Enquiry</span></a>
+                                <ul class="sub-menu">
+                                    <li><a href="../DriverInquiry.aspx"><i class="fa fa-list-alt"></i><span>Trip Tracker Enquiry</span></a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-right collapse-button" style="padding: 7px 9px;">
+                    <%--   <input type="text" class="form-control search" placeholder="Search Trainee..." />--%>
+                    <button id="sidebar-collapse" class="btn btn-default" style="">
+                        <i style="color: #fff;" class="fa fa-angle-left"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div>
+            <!-- TOP NAVBAR -->
+            <form id="form1" runat="server">
+                <%-- SCRIPT MANAGER --%>
+                <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePageMethods="true" AsyncPostBackTimeout="600">
+                    <Services>
+                        <asp:ServiceReference Path="LocalWebServices/CommonSearchWebServive.asmx" />
+                        <asp:ServiceReference Path="LocalWebServices/CustomSessionProvider.asmx" />
+                    </Services>
+                </asp:ScriptManager>
+                <div id="head-nav" class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right user-nav">
+                                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                    <ContentTemplate>
+                                        User :<asp:LinkButton ID="lblUser" runat="server" OnClick="lblUser_Click" Style="color: Green">LinkButton</asp:LinkButton>
+                                        &nbsp; &nbsp;Company :<asp:Label ID="lblCompany" runat="server" Text="Label"></asp:Label>
+                                        &nbsp; &nbsp;Profit Center :
+                                    <asp:LinkButton ID="lblPC" runat="server" OnClick="lblPC_Click">LinkButton</asp:LinkButton>
+                                        &nbsp; &nbsp;Location :
+                                    <asp:LinkButton ID="lblLoc" runat="server" OnClick="lblLoc_Click">LinkButton</asp:LinkButton>
+                                        &nbsp; &nbsp;&nbsp; &nbsp;
+                                    <asp:LinkButton ID="lblLogOut" runat="server" OnClick="lblLogOut_Click" Style="color: Red">[ Log Out ] </asp:LinkButton>
+                                        <asp:ConfirmButtonExtender ID="ConfirmButtonExtender1" runat="server" TargetControlID="lblPC"
+                                            ConfirmText="Do you want to change profic center?" ConfirmOnFormSubmit="false">
+                                        </asp:ConfirmButtonExtender>
+                                        <asp:ConfirmButtonExtender ID="ConfirmButtonExtender2" runat="server" TargetControlID="lblLoc"
+                                            ConfirmText="Do you want to change location?" ConfirmOnFormSubmit="false">
+                                        </asp:ConfirmButtonExtender>
+                                        <asp:ConfirmButtonExtender ID="ConfirmButtonExtender3" runat="server" TargetControlID="lblUser"
+                                            ConfirmText="Do you want to Change the user?" ConfirmOnFormSubmit="false">
+                                        </asp:ConfirmButtonExtender>
+                                        <asp:ConfirmButtonExtender ID="ConfirmButtonExtender4" runat="server" TargetControlID="lblLogOut"
+                                            ConfirmText="Do you want to log off?" ConfirmOnFormSubmit="false">
+                                        </asp:ConfirmButtonExtender>
+                                    </ContentTemplate>
+                                </asp:UpdatePanel>
+                            </ul>
+                        </div>
+                        <!--/.nav-collapse animate-collapse -->
+                    </div>
+                </div>
+                <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                    <ContentTemplate>
+                        <uc4:uc_CommonSearch ID="uc_CommonSearchMaster" runat="server" ClientIDMode="Static" />
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+                <div style="text-align: left;">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="text/javascript" src="../js/jquery.js"></script>
+    <script type="text/javascript" src="../js/jquery.cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../js/jquery.pushmenu/js/jPushMenu.js"></script>
+    <script type="text/javascript" src="../js/jquery.nanoscroller/jquery.nanoscroller.js"></script>
+    <script type="text/javascript" src="../js/jquery.sparkline/jquery.sparkline.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.ui/jquery-ui.js"></script>
+    <script type="text/javascript" src="../js/jquery.gritter/js/jquery.gritter.js"></script>
+
+
+    <script type="text/javascript" src="../js/behaviour/core.js"></script>
+    <script type="text/javascript">
+        var link = $('link[href="css/style.css"]');
+
+        if ($.cookie("css")) {
+            link.attr("href", 'css/skin-' + $.cookie("css") + '.css');
+        }
+
+        $(function () {
+            $("#color-switcher .toggle").click(function () {
+                var s = $(this).parent();
+                if (s.hasClass("open")) {
+                    s.animate({ 'margin-right': '-109px' }, 400).toggleClass("open");
+                } else {
+                    s.animate({ 'margin-right': '0' }, 400).toggleClass("open");
+                }
+            });
+
+            $("#color-switcher .color").click(function () {
+                var color = $(this).data("color");
+                $("body").fadeOut(function () {
+                    //link.attr('href','css/skin-' + color + '.css');
+                    $.cookie("css", color, { expires: 365, path: '/' });
+                    window.location.href = "";
+                    $(this).fadeIn("slow");
+                });
+            });
+        });
+    </script>
+    <%-- <script type="text/javascript" src="js/jquery.codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="js/jquery.codemirror/mode/xml/xml.js"></script>
+    <script type="text/javascript" src="js/jquery.codemirror/mode/css/css.js"></script>
+    <script type="text/javascript" src="js/jquery.codemirror/mode/htmlmixed/htmlmixed.js"></script>
+    <script type="text/javascript" src="js/jquery.codemirror/addon/edit/matchbrackets.js"></script>
+    <script type="text/javascript" src="js/jquery.vectormaps/jquery-jvectormap-1.2.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.vectormaps/maps/jquery-jvectormap-world-mill-en.js"></script>
+        <script type="text/javascript" src="..js/behaviour/dashboard.js"></script>--%>
+    <!-- Bootstrap core JavaScript
+================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <%--    <script type="text/javascript" src="..js/behaviour/voice-commands.js"></script>--%>
+    <%--    <script type="text/javascript" src="..js/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.flot/jquery.flot.js"></script>
+    <script type="text/javascript" src="js/jquery.flot/jquery.flot.pie.js"></script>
+    <script type="text/javascript" src="js/jquery.flot/jquery.flot.resize.js"></script>
+    <script type="text/javascript" src="js/jquery.flot/jquery.flot.labels.js"></script>--%>
+</body>
+</html>

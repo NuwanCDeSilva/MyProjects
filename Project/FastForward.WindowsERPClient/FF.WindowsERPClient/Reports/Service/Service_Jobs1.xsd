@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="Service_Jobs1" targetNamespace="http://tempuri.org/Service_Jobs1.xsd" xmlns:mstns="http://tempuri.org/Service_Jobs1.xsd" xmlns="http://tempuri.org/Service_Jobs1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="Service_Jobs1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Service_Jobs1" msprop:Generator_UserDSName="Service_Jobs1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="SERVICE_JOB" msprop:Generator_TableClassName="SERVICE_JOBDataTable" msprop:Generator_TableVarName="tableSERVICE_JOB" msprop:Generator_TablePropName="SERVICE_JOB" msprop:Generator_RowDeletingName="SERVICE_JOBRowDeleting" msprop:Generator_UserTableName="SERVICE_JOB" msprop:Generator_RowChangingName="SERVICE_JOBRowChanging" msprop:Generator_RowEvHandlerName="SERVICE_JOBRowChangeEventHandler" msprop:Generator_RowDeletedName="SERVICE_JOBRowDeleted" msprop:Generator_RowEvArgName="SERVICE_JOBRowChangeEvent" msprop:Generator_RowChangedName="SERVICE_JOBRowChanged" msprop:Generator_RowClassName="SERVICE_JOBRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="GNI_SERIAL" msprop:Generator_ColumnVarNameInTable="columnGNI_SERIAL" msprop:Generator_ColumnPropNameInRow="GNI_SERIAL" msprop:Generator_ColumnPropNameInTable="GNI_SERIALColumn" msprop:Generator_UserColumnName="GNI_SERIAL" type="xs:string" minOccurs="0" />
+              <xs:element name="SER2" msprop:Generator_ColumnVarNameInTable="columnSER2" msprop:Generator_ColumnPropNameInRow="SER2" msprop:Generator_ColumnPropNameInTable="SER2Column" msprop:Generator_UserColumnName="SER2" type="xs:string" minOccurs="0" />
+              <xs:element name="REGNO" msprop:Generator_ColumnVarNameInTable="columnREGNO" msprop:Generator_ColumnPropNameInRow="REGNO" msprop:Generator_ColumnPropNameInTable="REGNOColumn" msprop:Generator_UserColumnName="REGNO" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_WARA_NO" msprop:Generator_ColumnVarNameInTable="columnGNI_WARA_NO" msprop:Generator_ColumnPropNameInRow="GNI_WARA_NO" msprop:Generator_ColumnPropNameInTable="GNI_WARA_NOColumn" msprop:Generator_UserColumnName="GNI_WARA_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_WARA_PERIOD" msprop:Generator_ColumnVarNameInTable="columnGNI_WARA_PERIOD" msprop:Generator_ColumnPropNameInRow="GNI_WARA_PERIOD" msprop:Generator_ColumnPropNameInTable="GNI_WARA_PERIODColumn" msprop:Generator_UserColumnName="GNI_WARA_PERIOD" type="xs:short" minOccurs="0" />
+              <xs:element name="GNI_WARA_REM" msprop:Generator_ColumnVarNameInTable="columnGNI_WARA_REM" msprop:Generator_ColumnPropNameInRow="GNI_WARA_REM" msprop:Generator_ColumnPropNameInTable="GNI_WARA_REMColumn" msprop:Generator_UserColumnName="GNI_WARA_REM" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_DO_NO" msprop:Generator_ColumnVarNameInTable="columnGNI_DO_NO" msprop:Generator_ColumnPropNameInRow="GNI_DO_NO" msprop:Generator_ColumnPropNameInTable="GNI_DO_NOColumn" msprop:Generator_UserColumnName="GNI_DO_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_DO_DT" msprop:Generator_ColumnVarNameInTable="columnGNI_DO_DT" msprop:Generator_ColumnPropNameInRow="GNI_DO_DT" msprop:Generator_ColumnPropNameInTable="GNI_DO_DTColumn" msprop:Generator_UserColumnName="GNI_DO_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GNI_DO_LOC" msprop:Generator_ColumnVarNameInTable="columnGNI_DO_LOC" msprop:Generator_ColumnPropNameInRow="GNI_DO_LOC" msprop:Generator_ColumnPropNameInTable="GNI_DO_LOCColumn" msprop:Generator_UserColumnName="GNI_DO_LOC" type="xs:string" minOccurs="0" />
+              <xs:element name="ML_LOC_DESC" msprop:Generator_ColumnVarNameInTable="columnML_LOC_DESC" msprop:Generator_ColumnPropNameInRow="ML_LOC_DESC" msprop:Generator_ColumnPropNameInTable="ML_LOC_DESCColumn" msprop:Generator_UserColumnName="ML_LOC_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_INV_NO" msprop:Generator_ColumnVarNameInTable="columnGNI_INV_NO" msprop:Generator_ColumnPropNameInRow="GNI_INV_NO" msprop:Generator_ColumnPropNameInTable="GNI_INV_NOColumn" msprop:Generator_UserColumnName="GNI_INV_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_INV_DT" msprop:Generator_ColumnVarNameInTable="columnGNI_INV_DT" msprop:Generator_ColumnPropNameInRow="GNI_INV_DT" msprop:Generator_ColumnPropNameInTable="GNI_INV_DTColumn" msprop:Generator_UserColumnName="GNI_INV_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GNI_CUS" msprop:Generator_ColumnVarNameInTable="columnGNI_CUS" msprop:Generator_ColumnPropNameInRow="GNI_CUS" msprop:Generator_ColumnPropNameInTable="GNI_CUSColumn" msprop:Generator_UserColumnName="GNI_CUS" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_CUS_ADD" msprop:Generator_ColumnVarNameInTable="columnGNI_CUS_ADD" msprop:Generator_ColumnPropNameInRow="GNI_CUS_ADD" msprop:Generator_ColumnPropNameInTable="GNI_CUS_ADDColumn" msprop:Generator_UserColumnName="GNI_CUS_ADD" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_ALLOC" msprop:Generator_ColumnVarNameInTable="columnGNI_ALLOC" msprop:Generator_ColumnPropNameInRow="GNI_ALLOC" msprop:Generator_ColumnPropNameInTable="GNI_ALLOCColumn" msprop:Generator_UserColumnName="GNI_ALLOC" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_SERVICE_LOC" msprop:Generator_ColumnVarNameInTable="columnGNI_SERVICE_LOC" msprop:Generator_ColumnPropNameInRow="GNI_SERVICE_LOC" msprop:Generator_ColumnPropNameInTable="GNI_SERVICE_LOCColumn" msprop:Generator_UserColumnName="GNI_SERVICE_LOC" type="xs:string" minOccurs="0" />
+              <xs:element name="ML_LOC_DESC_1" msprop:Generator_ColumnVarNameInTable="columnML_LOC_DESC_1" msprop:Generator_ColumnPropNameInRow="ML_LOC_DESC_1" msprop:Generator_ColumnPropNameInTable="ML_LOC_DESC_1Column" msprop:Generator_UserColumnName="ML_LOC_DESC_1" type="xs:string" minOccurs="0" />
+              <xs:element name="SJB_JOBNO" msprop:Generator_ColumnVarNameInTable="columnSJB_JOBNO" msprop:Generator_ColumnPropNameInRow="SJB_JOBNO" msprop:Generator_ColumnPropNameInTable="SJB_JOBNOColumn" msprop:Generator_UserColumnName="SJB_JOBNO" type="xs:string" minOccurs="0" />
+              <xs:element name="SJB_DT" msprop:Generator_ColumnVarNameInTable="columnSJB_DT" msprop:Generator_ColumnPropNameInRow="SJB_DT" msprop:Generator_ColumnPropNameInTable="SJB_DTColumn" msprop:Generator_UserColumnName="SJB_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GNI_JOB_STUS" msprop:Generator_ColumnVarNameInTable="columnGNI_JOB_STUS" msprop:Generator_ColumnPropNameInRow="GNI_JOB_STUS" msprop:Generator_ColumnPropNameInTable="GNI_JOB_STUSColumn" msprop:Generator_UserColumnName="GNI_JOB_STUS" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_JOB_NO" msprop:Generator_ColumnVarNameInTable="columnGNI_JOB_NO" msprop:Generator_ColumnPropNameInRow="GNI_JOB_NO" msprop:Generator_ColumnPropNameInTable="GNI_JOB_NOColumn" msprop:Generator_UserColumnName="GNI_JOB_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_JOB_DT" msprop:Generator_ColumnVarNameInTable="columnGNI_JOB_DT" msprop:Generator_ColumnPropNameInRow="GNI_JOB_DT" msprop:Generator_ColumnPropNameInTable="GNI_JOB_DTColumn" msprop:Generator_UserColumnName="GNI_JOB_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="GNI_ITM_CD" msprop:Generator_ColumnVarNameInTable="columnGNI_ITM_CD" msprop:Generator_ColumnPropNameInRow="GNI_ITM_CD" msprop:Generator_ColumnPropNameInTable="GNI_ITM_CDColumn" msprop:Generator_UserColumnName="GNI_ITM_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_ITM_DESC" msprop:Generator_ColumnVarNameInTable="columnGNI_ITM_DESC" msprop:Generator_ColumnPropNameInRow="GNI_ITM_DESC" msprop:Generator_ColumnPropNameInTable="GNI_ITM_DESCColumn" msprop:Generator_UserColumnName="GNI_ITM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_MODEL" msprop:Generator_ColumnVarNameInTable="columnGNI_MODEL" msprop:Generator_ColumnPropNameInRow="GNI_MODEL" msprop:Generator_ColumnPropNameInTable="GNI_MODELColumn" msprop:Generator_UserColumnName="GNI_MODEL" type="xs:string" minOccurs="0" />
+              <xs:element name="GNI_BRND" msprop:Generator_ColumnVarNameInTable="columnGNI_BRND" msprop:Generator_ColumnPropNameInRow="GNI_BRND" msprop:Generator_ColumnPropNameInTable="GNI_BRNDColumn" msprop:Generator_UserColumnName="GNI_BRND" type="xs:string" minOccurs="0" />
+              <xs:element name="COM_CODE" msprop:Generator_ColumnVarNameInTable="columnCOM_CODE" msprop:Generator_ColumnPropNameInRow="COM_CODE" msprop:Generator_ColumnPropNameInTable="COM_CODEColumn" msprop:Generator_UserColumnName="COM_CODE" type="xs:string" minOccurs="0" />
+              <xs:element name="COM_DESC" msprop:Generator_ColumnVarNameInTable="columnCOM_DESC" msprop:Generator_ColumnPropNameInRow="COM_DESC" msprop:Generator_ColumnPropNameInTable="COM_DESCColumn" msprop:Generator_UserColumnName="COM_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="POWEREDBY" msprop:Generator_ColumnVarNameInTable="columnPOWEREDBY" msprop:Generator_ColumnPropNameInRow="POWEREDBY" msprop:Generator_ColumnPropNameInTable="POWEREDBYColumn" msprop:Generator_UserColumnName="POWEREDBY" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

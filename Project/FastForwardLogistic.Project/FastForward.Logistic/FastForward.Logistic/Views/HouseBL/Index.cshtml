@@ -1,0 +1,693 @@
+﻿@model FF.BusinessObjects.Genaral.trn_bl_header
+
+@{
+    ViewBag.Title = "House BL";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    @*<script src="~/Scripts/Common/HouseBL.js"></script>*@
+    <script src="~/Scripts/Common/HouseBL.js?@val"></script>
+}
+<div class="content-wrapper">
+    <input type="hidden" id="prfSession" data-value="@Request.RequestContext.HttpContext.Session["UserDefProf"]" />
+    <input type="hidden" id="chnlSession" data-value="@Request.RequestContext.HttpContext.Session["UserDefChnl"]" />
+    <section class="content-header">
+        <h1>
+            House B/L Entry
+            <small>Form</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="http://www.google.lk"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"> House B/L Entry</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content clearfix">
+        <!-- button container set begin -->
+        <div class="col-md-12 text-right btn-scroll-top ">
+            <button class="btn btn-sm btn-green-fullbg btn-save">
+                <i class="glyphicon glyphicon-ok-circle"></i>
+                Save
+            </button>
+            <button class="btn btn-sm btn-red-fullbg btn-clear">
+                <i class="glyphicon glyphicon-refresh"></i> Clear
+            </button>
+        </div>
+        <!-- button container set end-->
+        <!-- left side begin-->
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", @id = "draftbldata-data" }))
+        {
+
+            <div class="row">
+                <div class="col-md-6">
+                    <!-- customer details begin -->
+                    <div class="box">
+                        <!-- /.box-header -->
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">B/L Details</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <!-- /.form-group -->
+                                    <label>House B/L ID</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_h_doc_no, new { htmlAttributes = new { @class = "form-control m_bl_text" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat btn-house-bl"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <!-- /.form-group -->
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Job No</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.EditorFor(model => model.Bl_job_no, new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat btn-search-jobno"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-md-3">
+                                    <label>Pouch ID</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_pouch_no, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-pouch-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+                              
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Date</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            @Html.EditorFor(model => model.Bl_doc_dt, new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+
+                                <div class="col-md-3">
+                                    <label>Draft BL ID</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_d_doc_no, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat btn-draft-blid"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <!-- /.col -->
+
+                                <div class="col-lg-3">
+                                    <label>Master BL ID</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_m_doc_no, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat  btn-manual-bl"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Manual Draft B/L Ref</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.bl_manual_d_ref, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat bl-no-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Manual House B/L Ref</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.bl_manual_h_ref, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat blh-no-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Manual Master B/L Ref</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.bl_manual_m_ref, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat blm-no-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Seq No</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.EditorFor(model => model.bl_or_seq, new { htmlAttributes = new { @class = "form-control"} })
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                    <!-- customer details begin -->
+
+                    <!-- customer details begin -->
+                    <div class="box">
+                        <!-- /.box-header -->
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Trading Parties</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label>Customer</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_cus_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-cust_search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <table class="table table-bordered table-hover dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll823 have-scroll tbl-cus-name">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Shipper</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_shipper_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-shipper"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <table class="table table-bordered table-hover dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll823 have-scroll tbl-shipp-name">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Consignee</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_consignee_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-consignee"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <table class="table table-bordered table-hover dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll823 have-scroll tbl-cons-name">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <!-- /.col -->
+                                <div class="col-md-3">
+                                    <label>Notify Party</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_ntfy_party_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-notify-party"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <table class="table table-bordered table-hover dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll823 have-scroll tbl-notify-name">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3">
+                                    <label>Agent</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_agent_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-agent"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <table class="table table-bordered table-hover dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll823 have-scroll tbl-agent-name">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col-md-3">
+                                    <label id="carriersl">Carrier</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Bl_ship_line_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-carrier"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                    <table class="table table-bordered table-hover dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll823 have-scroll tbl-carr-name">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+
+                    
+                    <!-- /.box -->
+                </div>
+                <!-- left side end-->
+                <!-- right side begin-->
+                <div class="col-lg-6">
+
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Shipment Details</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Freight Charge</label>
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.Bl_freight_charg, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Pay Mode </label>
+                                                @Html.DropDownListFor(model => model.bl_pay_mode, new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Packages</label>
+                                                <div class="form-group">
+                                                    <div class="col-md-6 padding-ls">
+                                                        @Html.Editor("bld_package_nos", new { htmlAttributes = new { @class = "form-control", @style = "text-align: right;" } })
+
+                                                    </div>
+                                                    <div class="col-md-5 padding-ls margin-left-2">
+                                                        <div class="input-group input-group-sm">
+                                                            @Html.EditorFor(model => model.bl_pack_uom, new { htmlAttributes = new { @class = "form-control" } })
+                                                            <span class="input-group-btn">
+                                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-pack-uom"><i class="glyphicon glyphicon-search"></i></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Gross Wheight</label>
+                                                <div class="form-group">
+                                                    <div class="col-md-6 padding-ls">
+                                                        @Html.Editor("bld_grs_weight", new { htmlAttributes = new { @class = "form-control", @style = "text-align: right;" } })
+                                                    </div>
+                                                    <div class="col-md-5 padding-ls margin-left-2">
+                                                        <div class="input-group input-group-sm">
+                                                            @Html.Editor("bld_grs_weight_uom", new { htmlAttributes = new { @class = "form-control", @Value = "KGS" } })
+                                                            <span class="input-group-btn">
+                                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat grss-whgt-uom"><i class="glyphicon glyphicon-search"></i></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Net Weight</label>
+                                                <div class="form-group">
+                                                    <div class="col-md-6 padding-ls">
+                                                        @Html.Editor("bld_net_weight", new { htmlAttributes = new { @class = "form-control", @style = "text-align: right;" } })
+                                                    </div>
+                                                    <div class="col-md-5 padding-ls margin-left-2">
+                                                        <div class="input-group input-group-sm">
+                                                            @Html.Editor("bld_net_weight_uom", new { htmlAttributes = new { @class = "form-control", @Value = "KGS" } })
+                                                            <span class="input-group-btn">
+                                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-net-uom"><i class="glyphicon glyphicon-search"></i></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Measurment</label>
+                                                <div class="form-group">
+                                                    <div class="col-md-6 padding-ls">
+                                                        @Html.Editor("bld_measure", new { htmlAttributes = new { @class = "form-control", @style = "text-align: right;" } })
+                                                    </div>
+                                                    <div class="col-md-5 padding-ls margin-left-2">
+                                                        <div class="input-group input-group-sm">
+                                                            @Html.Editor("bld_measure_uom", new { htmlAttributes = new { @class = "form-control", @Value = "CBM" } })
+                                                            <span class="input-group-btn">
+                                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-mesure-uom"><i class="glyphicon glyphicon-search"></i></button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Load Port</label>
+                                                <div class="input-group input-group-sm">
+                                                    @Html.EditorFor(model => model.Bl_port_load, new { htmlAttributes = new { @class = "form-control" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-load-port"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Discharge Port</label>
+                                                <div class="input-group input-group-sm">
+                                                    @Html.EditorFor(model => model.Bl_port_discharge, new { htmlAttributes = new { @class = "form-control", @Value = "LKCMB" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-dis-port"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Final Destination</label>
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.Bl_palce_del, new { htmlAttributes = new { @class = "form-control", @Value = "COLOMBO" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Place Receipt</label>
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.Bl_palce_rec, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Move In Type</label>
+                                                <div class="form-group">
+                                                    @Html.DropDownListFor(model => model.Bl_load_in_tp, new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label id="movecargotype">Move Out Type</label>
+                                                @Html.DropDownListFor(model => model.Bl_load_out_tp, new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label id="vesselflight">Flight</label>
+                                                <div class="input-group input-group-sm">
+                                                    @Html.EditorFor(model => model.Bl_vessal_no, new { htmlAttributes = new { @class = "form-control" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-flight"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Voyage</label>
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.Bl_voage_no, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Voyage Date</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    @Html.EditorFor(model => model.Bl_voage_dt, new { htmlAttributes = new { @class = "form-control pull-right datepic", @style = "width:90px;" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>ETA</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    @Html.EditorFor(model => model.Bl_est_time_arr, new { htmlAttributes = new { @class = "form-control pull-right datepic", @style = "width:90px;" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>ETD</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    @Html.EditorFor(model => model.Bl_est_time_dep, new { htmlAttributes = new { @class = "form-control pull-right datepic", @style = "width:90px;" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Expiry Date</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    @Html.EditorFor(model => model.bl_expires_dt, new { htmlAttributes = new { @class = "form-control pull-right datepic", @style = "width:90px;" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>Terminal ID</label>
+                                                <div class="input-group input-group-sm">
+                                                    @Html.EditorFor(model => model.bl_terminal, new { htmlAttributes = new { @class = "form-control" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-terminal"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>VSL Operator</label>
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.bl_vsl_oper, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <label>CNTR Operator</label>
+                                                <div class="form-group">
+                                                    @Html.EditorFor(model => model.bl_cntr_oper, new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+
+                                        </div>
+                                        <div class="row">
+
+                                        </div>
+                                        <div class="row">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label>Remarks</label>
+                                    <div class="form-group">
+                                        @Html.TextAreaFor(model => model.Bl_rmk, new { rows = 2 })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- /.box -->
+                    <!-- contact details end -->
+                    <div class="box">
+                        <!-- /.box-header -->
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Goods Details</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Description of goods</label>
+                                        @Html.TextArea("bld_desc_goods", new { rows = 2 })
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Marks And Numbers</label>
+                                        @Html.TextArea("bld_mark_nos", new { rows = 2 })
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+
+
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Container Details</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>Container No</label>
+                                        @Html.Editor("blct_cont_no", new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Seal No</label>
+                                        @Html.Editor("blct_seal_no", new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Cont Type</label>
+                                        @Html.DropDownList("blct_con_tp", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>No of Pks</label>
+                                        @Html.Editor("blct_pack", new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Is Cont. Full</label>
+                                        @*@Html.Editor("blct_fully_empty", new { htmlAttributes = new { @class = "form-control" } })*@
+                                        @Html.DropDownList("blct_fully_empty", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                    </div>
+                                </div>
+                                <div>
+                                    <input id="contaddbtn" type="button" class="btn btn-sm btn-green-fullbg margin-top10 btn-add-container" value="Add" />
+                                    <input id="contupdatebtn" type="button" class="btn btn-sm btn-green-fullbg margin-top10 btn-update-container" value="Add" />
+                                </div>
+
+                                <div class="col-md-12">
+                                    <hr>
+                                    <table class="table table-bordered table-hover dataTable tbl-container">
+                                        <thead>
+                                            <tr>
+                                                <th>Container No</th>                                                
+                                                <th>Seal No</th>
+                                                <th>Cont Type</th>
+                                                <th>No of Pks</th>
+                                                <th>Is Cont. Full</th> <!--Line added by Chathura on 16-sep-2017-->
+                                                <th></th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- right side end-->
+            </div>
+        <!-- row end -->
+        }
+    </section>
+    <!-- end main section -->
+</div>
+<!-- /.content-wrapper -->

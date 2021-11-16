@@ -1,0 +1,627 @@
+﻿@{
+    ViewBag.Title = "Customer Analysis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/jquery.canvasjs.min.js"></script>
+    <script src="~/Scripts/Plugins/mapdata.js"></script>
+    <script src="~/Scripts/Plugins/countrymap.js"></script>
+    <script src="~/Scripts/Plugins/mapdatareg.js"></script>
+    <script src="~/Scripts/Plugins/countrymap.js"></script>
+    <script src="~/Scripts/Common/CustomerAnalysis.js?@val"></script>
+    <script src="~/Scripts/Common/mjs.js?@val"></script>
+    <script src="~/Scripts/Common/Site.js"></script>
+}
+@section Styles
+{
+    <link rel="stylesheet" href="~/Content/AgentAnalysis.css?@val">
+    <link href="~/Content/SideMenu.css?@val" rel="stylesheet" />
+    <link href="~/Content/CustomerAnalysis.css?@val" rel="stylesheet" />
+}
+<style>
+    text {
+        display: none;
+    }
+
+    #mapregion {
+        display: none;
+    }
+
+    .map-type {
+        height: 45px;
+    }
+
+    .search-align {
+        display: inline-block;
+        margin-left: 5px;
+    }
+</style>
+@* dilshan *@
+<div id="salesReportModel" class="modal fade" role="dialog">
+    <div class="modal-dialog" id="sale-model-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" id="sale-model-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">Customer</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row" style="margin-bottom:5px;">
+                    <div class="col-lg-12">
+                        @using (Html.BeginForm("Export", "CustomerAnalysis", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-exportdata", role = "form" }))
+                        {
+                            <div class="btn-disply-export"><input type="submit" formtarget="_blank" value="Export" class="btn btn-sm btn-default-style export-btn  bg-purple" /></div>
+                        }
+                        <div style="margin-right:10px" class="float-right"><input id="smstoallbtn" type="submit" value="Send SMS to all" class="btn btn-sm btn-default-style  bg-purple sms-send user-def-rep" style="margin-right:5px;float:right" /></div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="result-tbl">
+                        <table class="result-display-tbl table">
+                            <tr class="table-hed tbl-hd-nu">
+                                @* <th colspan="11" scope="col" class="invodet align-center">Invoice Details</th>*@
+                                <th colspan="9" scope="col" class="align-center">Customer Details</th>
+                            </tr>
+                            <tr class="table-hed tbl-hd-nu">
+                                <th scope="col">Code</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Address</th>
+                                <th scope="col">Mobile</th>
+                                <th scope="col">Email</th>
+                                <th scope="col">customer town</th>
+                                <th scope="col">Nationality</th>
+                                <th scope="col">SMS</th>
+                                @*<th scope="col">Province</th>*@
+                            </tr>
+                        </table>
+                    </div>
+
+
+                </div>
+                @*<div id="loadingImg"></div>
+                    <div class="col-md-12">
+                        <div class="row">
+
+                        </div>
+                    </div>*@
+                <div class="pagination cls-pge-footer">
+                    <div class="cls-page-num pmain">
+                        <div class="left-align col-lg-1 topmarg5">Page :</div>
+                        <div class="right-align col-lg-6 cls-pages cls-pagesnu"><div id="pagingAnalysis"></div></div>
+                    </div>
+                    <div class="cls-pge-cunt pagem">
+                        <div class="left-align col-lg-6">
+                            Records per page :
+                        </div>
+                        <div class="right-align col-lg-3">
+                            <select name="noPage" class="cls-no-Page">
+                                <option value="10">10</option>
+                                <option value="25">25</option>
+                                <option value="50">50</option>
+                                <option value="100">100</option>
+                                <option value="500">500</option>
+                                <option value="1000">1000</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="smsModal" class="modal fade" tyle="z-index:9999">
+    <div class="modal-dialog" id="sale-model-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" id="sale-model-content" style="height:300px;width:500px;float:right;margin-top:20px">
+            <div class="modal-header" style="background-color:#a8dcc5">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">Send SMS</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row margin-bottom-1">
+
+                    <div class="col-md-5">
+                        <label>Mobile Number</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control report-head" id="mobileNumber" />
+                    </div>
+
+                </div>
+                <div class="row margin-bottom-1">
+
+                    <div class="col-md-5">
+                        <label>User Name</label>
+                    </div>
+                    <div class="col-md-7">
+                        <input type="text" class="form-control report-head" id="customerName" />
+                    </div>
+
+                </div>
+                <div class="row margin-bottom-1">
+
+                    <div class="col-md-5">
+                        <label>Message</label>
+                        <label>(Maxiumum length is 160)</label>
+                    </div>
+                    <div class="col-md-7">
+                        <textarea rows="3" cols="50" maxlength="160" class="form-control" id="sms"></textarea>
+
+                    </div>
+                </div>
+                <div class="row margin-bottom-1">
+
+                    <div class="col-md-5">
+
+                    </div>
+                    <div class="col-md-7 float-right">
+                        @using (Html.BeginForm("SendSMS", "CustomerAnalysis", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-exportdata", role = "form" }))
+                        {
+                            <div class="btn-disply-export"><input type="submit" formtarget="_blank" value="Send" class="btn btn-default-style sms-btn  bg-purple" /></div>
+                        }
+                    </div>
+
+                </div>
+
+                @*<input type="text" class="form-control report-head" id="mobileNumber"/>
+
+
+
+                    <div class="row">
+
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+<div id="smsModalAll" class="modal fade" style="z-index:9999">
+    <div class="modal-dialog" id="sale-model-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" id="sale-model-content" style="height:300px;width:500px;float:right;margin-top:20px">
+            <div class="modal-header" style="background-color:#a8dcc5">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">Send SMS</h5>
+            </div>
+            <div class="modal-body">
+
+
+                <div class="row margin-bottom-1">
+
+                    <div class="col-md-5">
+                        <label>Message</label>
+                        <label>(Maxiumum length is 160)</label>
+                    </div>
+                    <div class="col-md-7">
+                        <textarea rows="3" cols="50" maxlength="160" class="form-control" id="smstoall"></textarea>
+
+                    </div>
+                </div>
+                <div class="row margin-bottom-1">
+
+                    <div class="col-md-5">
+
+                    </div>
+                    <div class="col-md-7 float-right">
+                        @using (Html.BeginForm("SendSMStoAll", "CustomerAnalysis", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-exportdata", role = "form" }))
+                        {
+                            <div class="btn-disply-export"><input type="submit" formtarget="_blank" value="Send" class="btn btn-default-style sms-btn-all  bg-purple" /></div>
+                        }
+                    </div>
+
+                </div>
+
+                @*<input type="text" class="form-control report-head" id="mobileNumber"/>
+
+
+
+                    <div class="row">
+
+                    </div>*@
+            </div>
+        </div>
+    </div>
+</div>
+<div id="salesReportModelinv" class="modal fade" role="dialog" style="z-index:9996">
+    <div class="modal-dialog" id="sale-model-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content" id="sale-model-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h5 class="modal-title">Invoice</h5>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    @using (Html.BeginForm("Export", "CustomerAnalysis", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal frm-exportdata", role = "form" }))
+                    {
+                        <div class="btn-disply-export"><input type="submit" formtarget="_blank" value="Export" class="btn btn-default-style export-btn  bg-purple" /></div>
+                    }
+                    <div style="margin-right:10px" class="float-right"><input type="submit" id="smstoallinvbtn" value="Send SMS to all" class="btn btn-default-style  bg-purple sms-send user-def-rep" style="margin-right:5px;float:right" /></div>
+                </div>
+                <div id="loadingImg"></div>
+                <div class="col-md-12">
+
+                    <div class="row">
+                        <div class="result-tbl">
+                            <table class="result-display-tbl table">
+                                <tr class="table-hed tbl-hd-nu">
+                                    <th colspan="9" scope="col" class="align-center">Invoice Details</th>
+                                    <th colspan="9" scope="col" class="align-center">Customer Details</th>
+                                </tr>
+                                <tr class="table-hed tbl-hd-nu">
+                                    <th scope="col">Profit Center</th>
+                                    <th scope="col">PC Town</th>
+                                    <th scope="col" class="hidefield">Item</th>
+                                    <th scope="col" class="hidefield">Model</th>
+                                    <th scope="col" class="hidefield">Brand</th>
+                                    <th scope="col" class="hidefield">Category 1</th>
+                                    <th scope="col" class="hidefield">Category 2</th>
+                                    <th scope="col" class="hidefield">Category 3</th>
+                                    <th scope="col">Invoice No</th>
+                                    <th scope="col">Date</th>
+                                    <th scope="col" class="float-right">Invoice Amount</th>
+                                    <th scope="col">Code</th>
+                                    <th scope="col">Name</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Mobile</th>
+                                    <th scope="col">Email</th>
+                                    <th scope="col">customer town</th>
+                                    <th scope="col">Nationality</th>
+                                    @*<th scope="col">District</th>
+                                        <th scope="col">Province</th>*@
+
+                                </tr>
+                            </table>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="pagination cls-pge-footer">
+                <div class="cls-page-num pmain">
+                    <div class="left-align col-lg-1 topmarg5">Page :</div>
+                    <div class="right-align col-lg-6 cls-pages cls-pagesnu"><div id="pagingAnalysisinv"></div></div>
+                </div>
+                <div class="cls-pge-cunt pagem">
+                    <div class="left-align col-lg-6">
+                        Records per page :
+                    </div>
+                    <div class="right-align col-lg-3">
+                        <select name="noPage" class="cls-no-Pageinv">
+                            <option value="10">10</option>
+                            <option value="25">25</option>
+                            <option value="50">50</option>
+                            <option value="100">100</option>
+                            <option value="500">500</option>
+                            <option value="1000">1000</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@* dilshan *@
+@using (Html.BeginForm("getCustomerInvDetails", "CustomerAnalysis", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Get, new { @class = "form-horizontal frm-filterdata", role = "form", @id = "filterdata-frm" }))
+{
+    <div class="content-wrapper">
+
+        <section class="content-header">
+            <h1>
+                Customer Analysis
+                <small>Form</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+                <li class="active">Customer Analysis</li>
+            </ol>
+        </section>
+        <!-- Main content -->
+        <section class="content clearfix">
+            <!-- button container set begin -->
+            <div class="col-md-12 text-right btn-scroll-top ">
+                <button class="btn btn-sm btn-yellow-fullbg btn-display-det">
+                    <i class="glyphicon glyphicon-ok-circle"></i>
+                    Display
+                </button>
+                <button class="btn btn-sm btn-red-fullbg clear-inv">
+                    <i class="glyphicon glyphicon-refresh"></i> Clear
+                </button>
+            </div>
+            <div>
+                <div class="col-md-8">
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title form-headding">COMPANY</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- /.box-body -->
+                            <div class="box-body">
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label class="fixed-label">Company</label>
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <span class="input-group-btn search-align">
+                                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn new-btn-padding btn-default cus-company-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-12 text-c txt-blue line-height-14 " id="ccompanyChip">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title form-headding">HIERARCHY</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- /.box-body -->
+                            <div class="box-body">
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label class="fixed-label">Mode of Shipment</label>
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <span class="input-group-btn search-align">
+                                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn new-btn-padding btn-default cus-mode-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-12 text-c txt-blue line-height-14 " id="cmodeChip">
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label class="fixed-label">Type of Shipment</label>
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <span class="input-group-btn search-align">
+                                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn new-btn-padding btn-default cus-pc-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-12 text-c txt-blue line-height-14 " id="cpcChip">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title form-headding">SALES</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+
+                            <!-- /.box-body -->
+                            <div class="box-body">
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label class="fixed-label">Customer</label>
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <span class="input-group-btn search-align">
+                                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn new-btn-padding btn-default cus-cd-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-12 text-c txt-blue line-height-14 " id="ccustomerChip">
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <label class="fixed-label">Amount</label>
+
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <div class="col-md-7">@Html.Editor("CheckAmount", new { htmlAttributes = new { @class = "form-control", maxLength = "10", @Value = "10000" } })</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <label class="fixed-label">Sales From</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    @Html.Editor("SalesFrom", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-10">
+                                                <label class="fixed-label">Sales To</label>
+                                                <div class="input-group date">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-calendar"></i>
+                                                    </div>
+                                                    @Html.Editor("SalesTo", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="box">
+                            <div class="box-header with-border">
+                                <h3 class="box-title form-headding">CUSTOMER SEGMENTATION</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                </div>
+                            </div>
+                            @{
+    List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+         {
+             Text = "Select",
+             Value = ""
+         });
+                            }
+                            <!-- /.box-body -->
+                            <div class="box-body">
+                                <div hidden>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label>Age</label>
+                                            </div>
+                                            @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                            <div class="col-md-7">@Html.DropDownList("CheckAge", listItems, new { @class = "form-control" })</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div hidden>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label>Salary</label>
+                                            </div>
+                                            @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                            <div class="col-md-7 margin-top-5">@Html.DropDownList("CheckSalary", listItems, new { @class = "form-control" })</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label class="fixed-label">Customer Town</label>
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <span class="input-group-btn search-align">
+                                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn new-btn-padding btn-default cus-town-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-12 text-c txt-blue line-height-14 " id="ctownChip">
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-12">
+                                                <label class="fixed-label">District</label>
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <span class="input-group-btn search-align">
+                                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn new-btn-padding btn-default cus-District-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-12 text-c txt-blue line-height-14 " id="cdistrictChip">
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <div class="col-md-11">
+                                                <label class="fixed-label">Province</label>
+                                                @*@Html.EditorFor(m => m.MBE_TP, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "8" } })*@
+                                                <span class="input-group-btn search-align">
+                                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn new-btn-padding btn-default cus-Province-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                </span>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="=row">
+                                    <div class="col-md-12 text-c txt-blue line-height-14 " id="cprovinceChip">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="map-type">
+                        <div class="col-md-2 no-padding">
+                            <div class="padding-ls radiobtn"><input checked="checked" type="radio" name="maptype" class="maptype" value="district" id="district"> <label class="mah_radio_label" for="district"><b>District</b></label></div>
+                        </div>
+                        <div class="col-md-2 no-padding">
+                            <div class="radiobtn padding-ls"><input type="radio" name="maptype" class="maptype" value="region" id="region"><label class="mah_radio_label" for="region"><b>Region</b></label></div>
+                        </div>
+
+                        <div class="col-md-3 float-right" hidden>
+                            <input id="tempbtn" value="Export" class="btn btn-sm btn-default-style gap bg-purple" style="margin-right:5px;float:right" />
+                        </div>
+
+                        <div class="col-md-3 float-right" hidden>
+                            <input id="tempbtn" value="Send Message to all" class="btn btn-sm btn-default-style gap bg-purple" style="margin-right:5px;float:right" />
+                        </div>
+
+                    </div>
+                    <div id="map"></div>
+                    <div id="mapregion"></div>
+                </div>
+            </div>
+        </section>
+        <!-- end main section -->
+    </div>
+}

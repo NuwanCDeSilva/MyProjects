@@ -1,0 +1,51 @@
+﻿body {
+}
+
+
+.sec_nav {
+
+margin-top:25px;
+}
+
+.top-buffer { margin-top:5px; }
+
+.hiddentext {
+display:none;
+}
+
+.floatright {
+float:right;
+margin-right:10px;
+margin-top:10px;
+}
+
+
+.displayinline {
+display:inline;
+}
+
+.errotext{
+    font-size:15px;
+    color:red;
+    margin-left:10px;
+}
+
+.widthreduce {
+    height:15px;
+
+}
+
+.addtable {
+margin-right:90px;
+float:right;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.hide {
+display:none;
+}
+
+#example_tree li {cursor: pointer}

@@ -1,0 +1,26 @@
+﻿.no-display,#SettlementSeq{
+    display:none;
+}
+.select-rec{
+    color:blue;
+}
+.select-rec:hover{
+    cursor:pointer;
+    text-decoration:underline;
+}
+.special-colour{
+    background-color:seashell;
+}
+.right-align{
+    text-align:right;
+}
+.btn-update-data{
+    display:none;
+}
+.app-text {
+    color: olivedrab;
+    padding-left: 14px;
+}
+.setlement-row :hover{
+    cursor:pointer;
+}

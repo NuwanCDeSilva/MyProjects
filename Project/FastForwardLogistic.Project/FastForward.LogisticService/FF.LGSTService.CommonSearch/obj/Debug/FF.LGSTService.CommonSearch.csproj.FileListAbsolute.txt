@@ -1,0 +1,17 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.LGSTService.CommonSearch.exe.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.LGSTService.CommonSearch.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.LGSTService.CommonSearch.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.BusinessLogicLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\Oracle.DataAccess.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.BusinessLogicLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\bin\Debug\FF.DataAccessLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\obj\Debug\FF.LGSTService.CommonSearch.ProjectInstaller.resources
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\obj\Debug\FF.LGSTService.CommonSearch.csproj.GenerateResource.Cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\obj\Debug\FF.LGSTService.CommonSearch.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\obj\Debug\FF.LGSTService.CommonSearch.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.CommonSearch\obj\Debug\FF.LGSTService.CommonSearch.csprojResolveAssemblyReference.cache

@@ -1,0 +1,8 @@
+﻿.chartset > div#portContainer {
+    float: left;
+    margin-left:12px;
+}
+.chartset > div#agentContainer {
+    float: left;
+    margin-left:12px;
+}

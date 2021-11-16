@@ -1,0 +1,517 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Freight Forwarding System</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.6 -->
+    <link rel="stylesheet" href="~/Content/theme/bootstrap/css/bootstrap.min.css">
+    <link href="~/Content/theme/css/datepicker.css" rel="stylesheet" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/Content/theme/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="~/Content/theme/css/ionicons.min.css">
+    <link rel="stylesheet" href="~/Content/lightbox.css">
+    <link rel="stylesheet" href="~/Content/theme/css/site.css">
+    <link rel="stylesheet" href="~/Content/theme/css/mstyle.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    @RenderSection("Styles", required: false)
+    <link rel="icon"
+          type="image/png"
+          href="~/Images/favicon.png">
+</head>
+<body class="sidebar-mini skin-red-light fixed">
+    <div class="wrapper">
+        <header class="main-header">
+
+            <!-- Header Navbar: style can be found in header.less -->
+            <nav class="navbar navbar-static-top">
+                <!-- Sidebar toggle button-->
+                <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                    <span class="sr-only">Toggle navigation</span>
+                </a>
+                <!-- Navbar Right Menu -->
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+@{
+                        <li class="normal-li"><i class="fa fa-building"></i>ABL:</li>
+                        <li class="normal-li">
+
+                            @if (Session.Count > 0 && Session["UserCompanyCode"].ToString() != null)
+                            {
+                                <div class="val-field" style="cursor: pointer;">
+                                    @Session["UserCompanyCode"].ToString()
+                                </div>
+                            }
+
+                        </li>
+
+                        <!--Added by Chathura on 13-Sep-2017-->
+                        <li class="normal-li"><i class="fa fa-ship"></i>Mode of Shipment:</li>
+                        <li class="normal-li">
+                            @if (Session.Count > 0 && Session["UserDefChnl"].ToString() != null)
+                            {
+                                <div class="val-field2" style="cursor: pointer;">
+                                    @Session["UserDefChnl"].ToString()
+                                </div>
+                            }
+
+                        </li>
+
+                        <li class="normal-li"><i class="fa fa-money"></i>Type of Shipment:</li>
+                        <li class="normal-li">
+                            @if (Session.Count > 0 && Session["UserDefProf"].ToString() != null)
+                            {
+                                <div class="val-field1" style="cursor: pointer;">
+                                    @Session["UserDefProf"].ToString()
+                                </div>
+                            }
+                        </li>
+
+
+
+                        @*@{
+                            <li class="sbu-cls">
+
+                                @if (Session.Count > 0 && Session["UserCompanyCode"].ToString() != null)
+                                {
+                                    <div class="text-field">
+                                        Company :
+                                    </div>
+                                    <div class="val-field">
+                                        @Session["UserCompanyCode"].ToString()
+                                    </div>
+                                }
+
+                            </li>
+                            <li class="pc-cls">
+                                @if (Session.Count > 0 && Session["UserDefProf"].ToString() != null)
+                                {
+                                    <div class="text-field">
+                                        Profit Center :
+                                    </div>
+                                    <div class="val-field">
+                                        @Session["UserDefProf"].ToString()
+                                    </div>
+                                }
+                            </li>
+                        }*@
+
+                        <!-- Notifications: style can be found in dropdown.less -->
+                        <li class="dropdown notifications-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <span class="label label-warning">10</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 10 notifications</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                                                page and may cause design problems
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-users text-red"></i> 5 new members joined
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <i class="fa fa-user text-red"></i> You changed your username
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="footer"><a href="#">View all</a></li>
+                            </ul>
+                        </li>
+                        <!-- Tasks: style can be found in dropdown.less -->
+                        <li class="dropdown tasks-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-flag-o"></i>
+                                <span class="label label-danger">9</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="header">You have 9 tasks</li>
+                                <li>
+                                    <!-- inner menu: contains the actual data -->
+                                    <ul class="menu">
+                                        <li>
+                                            <!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Design some buttons
+                                                    <small class="pull-right">20%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">20% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end task item -->
+                                        <li>
+                                            <!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Create a nice theme
+                                                    <small class="pull-right">40%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">40% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end task item -->
+                                        <li>
+                                            <!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Some task I need to do
+                                                    <small class="pull-right">60%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">60% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end task item -->
+                                        <li>
+                                            <!-- Task item -->
+                                            <a href="#">
+                                                <h3>
+                                                    Make beautiful transitions
+                                                    <small class="pull-right">80%</small>
+                                                </h3>
+                                                <div class="progress xs">
+                                                    <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                                                        <span class="sr-only">80% Complete</span>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <!-- end task item -->
+                                    </ul>
+                                </li>
+                                <li class="footer">
+                                    <a href="#">View all tasks</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- User Account: style can be found in dropdown.less -->
+                        <li class="dropdown user user-menu">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <img src="~/Content/theme/img/user_black.png" class="user-image" alt="User Image">
+                                <span class="hidden-xs">@Session["UserName"].ToString()</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="user-body">
+                                    <div class="row">
+                                        <div class="col-xs-12 text-center">
+                                            <a href="#" class="btn btn-warning btn-block btn-flat">Change Your Password</a>
+                                            <a href="#" class="btn btn-danger btn-block btn-flat logout-link-cls">Sign out</a>
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </li>
+                            </ul>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+}
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- Sidebar user panel -->
+                <div class="user-panel">
+                    <div class="pull-left image">
+                        <img src="~/Content/theme/img/user.png" alt="User Image">
+                    </div>
+                    <div class="pull-left info">
+                        <p class="p-md">@Session["UserName"].ToString()</p>
+                        <a href="#"><i class="fa fa-circle text-danger"></i> Online</a>
+                    </div>
+                </div>
+                <!-- search form -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="Search...">
+                        <span class="input-group-btn">
+                            <button type="submit" name="search" id="search-btn" class="btn btn-flat">
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <!-- sidebar menu: : style can be found in sidebar.less -->
+                <ul class="sidebar-menu">
+                    @{
+                        if (Session["Menu"] != null)
+                        {
+                            @Html.Raw(Session["Menu"].ToString())
+                        }
+                    }
+
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- end side bar with logo -->
+        @RenderBody()
+        <div class="page-loadin"><img src="~/Content/theme/img/loading.gif"></div>
+        <hr />
+        <!-- footer begin -->
+        <footer class="main-footer clearfix">
+            <strong>Copyright &copy; 2017 <a href="#">Abans Logistic</a>.</strong> All rights
+            reserved.
+        </footer>
+        <!-- footer end -->
+        <div class="control-sidebar-bg"></div>
+        <a id="myBtn" href="#" class="btn btn-primary btn-lg back-to-top" role="button" title="Click to return on the top page" data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+    </div>
+    <!-- modal for view begin -->
+    <!-- modal for view begin -->
+    <div id="modalview" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title serch-panel-title">Title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Select</label>
+                            <select name="en_module" class="form-control filter-key-cls">
+                                <option></option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pull-right">
+                        <div class="form-group">
+                            <label>Search code</label>
+                            <input type="text" name="shcode" id="KeyWord" class="form-control" placeholder="Enter ...">
+                        </div>
+                    </div>
+                    <div class="col-md-12 yscroll table-responsive">
+                        <table id="searpanel" class="table table-bordered table-hover dataTable cls-search-pnl">
+                            <thead>
+                                <tr class="coloured"></tr>
+                            </thead>
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="box-footer clearfix">
+                    @*<ul class="pagination pagination-sm no-margin pull-left">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>*@
+                    <div class="pagination pagination-sm no-margin pull-left">
+                        <div class="cls-page-num">
+                            <div class="right-align cls-pages"><div id="paging"></div></div>
+                        </div>
+                    </div>
+                    <div class="form-group pull-right">
+                        <label>No of Record</label>
+                        <select name="Key" class="margin8 cls-select-page-cont">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                            <option>250</option>
+                            <option>500</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-sm btn btn-default close-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- modal for view end -->
+    <!-- modal for view end -->
+
+    <!--Modal for Date filtered search  CMC -->
+    <div id="modalviewdf" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header bg-danger">
+                    <button type="button" class="close text-white" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title serch-panel-title">Title</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>From: </label>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                @Html.Editor("fromdate", new { htmlAttributes = new { @class = "form-control pull-right datepic", @Style = "width:90px;" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>To: </label>
+                            <div class="input-group date">
+                                <div class="input-group-addon">
+                                    <i class="fa fa-calendar"></i>
+                                </div>
+                                @Html.Editor("todate", new { htmlAttributes = new { @class = "form-control pull-right datepic", @Style = "width:90px;" } })
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="form-group">
+                            <label>Select</label>
+                            <select name="en_moduledf" class="form-control filter-key-clsdf">
+                                <option></option>
+                                <option>option 2</option>
+                                <option>option 3</option>
+                                <option>option 4</option>
+                                <option>option 5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-3 pull-right">                        
+                        <div class="form-group">
+                            <label>Search code</label>
+                            <div class="input-group input-group-sm">
+                                <input type="text" name="shcodedf" id="KeyWorddf" class="form-control" placeholder="Enter ...">
+                                <span class="input-group-btn">
+                                    <button type="button" class="btn btn-default btn-green-fullbg btn-flat btn-sm btn-search-df"><i class="glyphicon glyphicon-search"></i></button>
+                                </span>
+                            </div>                        
+                        </div>                        
+                    </div>
+                    <div class="col-md-12 yscroll table-responsive">
+                        <table id="searpanel"  class="table table-bordered table-hover dataTable cls-search-pnl">
+                            <thead>
+                                <tr class="coloured"></tr>
+                            </thead>
+                            <tbody></tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div class="box-footer clearfix">
+                    @*<ul class="pagination pagination-sm no-margin pull-left">
+                            <li><a href="#">&laquo;</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">&raquo;</a></li>
+                        </ul>*@
+                    <div class="pagination pagination-sm no-margin pull-left">
+                        <div class="cls-page-num">
+                            <div class="right-align cls-pages"><div id="pagingdf"></div></div>
+                        </div>
+                    </div>
+                    <div class="form-group pull-right">
+                        <label>No of Record</label>
+                        <select name="Key" class="margin8 cls-select-page-contdf">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                            <option>100</option>
+                            <option>250</option>
+                            <option>500</option>
+                        </select>
+                    </div>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-sm btn btn-default close-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--/End Modal for date filtered search-->
+
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")*@
+    <!-- ./wrapper -->
+    <!-- jQuery 2.2.3 -->
+    <script src="~/Content/theme/js/jquery-2.2.3.min.js"></script>
+    <!-- Bootstrap 3.3.6 -->
+    <script src="~/Content/theme/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Content/theme/js/bootstrap-datepicker.js"></script>
+    <script src="~/Content/theme/js/jquery.slimscroll.min.js"></script>
+    <script src="~/Content/theme/js/app.min.js"></script>
+    <script src="~/Content/theme/js/site.js"></script>
+    <script src="~/Scripts/Common/jquery.bootpag.min.js"></script>
+    <script src="~/Scripts/Common/CommonSearch.js"></script>
+    <script src="~/Scripts/Common/CommonSearchDateFiltered.js"></script>
+    <script src="~/Scripts/Common/lightbox.js"></script>
+    <script src="~/Scripts/Common/Site.js"></script>
+    <script>
+        $('.datepic').datepicker({
+            autoclose: true,
+            format: 'dd/M/yyyy',
+            onClose: function () {
+                this.focus();
+            }
+        });
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

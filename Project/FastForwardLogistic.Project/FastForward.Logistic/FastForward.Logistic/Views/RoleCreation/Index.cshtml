@@ -1,0 +1,589 @@
+﻿@{
+    ViewBag.Title = "Role Creation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/RoleCreation.js?@val"></script>
+}
+@section Styles {
+    <link href="~/Content/RoleCreation.css?@val" rel="stylesheet" type="text/css" />
+}
+
+
+<div class="content-wrapper">
+    <section class="content-header text-left">
+        <h1>
+            Role Creation
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"> Role Creation</li>
+        </ol>
+    </section>
+
+    <section class="sec_nav">
+        <ul id="myTab" class="nav nav-tabs">
+
+            <li class="active">
+                <a href="#RoleCreation" data-toggle="tab">Role Creation</a>
+            </li>
+
+            <li>
+                <a href="#GrantPrivileges" data-toggle="tab">Grant Privileges</a>
+            </li>
+
+            <li>
+                <a href="#ViewRoleUsers" data-toggle="tab">View Role Users</a>
+            </li>
+
+            <li>
+                <a href="#GrantRoleOptions" data-toggle="tab">Grant Role Options</a>
+            </li>
+
+            <li>
+                <a href="#ModeOfShipment" data-toggle="tab">Mode of Shipment</a>
+            </li>
+
+            <li>
+                <a href="#TypeOfShipment" data-toggle="tab">Type of Shipment</a>
+            </li>
+
+        </ul>
+    </section>
+
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="RoleCreation">
+            <section id="RoleCreation">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Role Details
+                        </div>
+                        <div class="panel-body">
+
+                            <div class="row">
+                                <a onclick="" class="floatright" id="updateico">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                    <div id="choiceupdate">Update</div>
+                                </a>
+                            </div>
+
+
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"></div>
+                                    <div class="panel-body">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                Company
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.DropDownList("CompanyList", new List<SelectListItem>(), "Select Type", new { @class = "form-control CompanyList" })
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Role ID
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="input-group input-group-sm">
+
+                                                    @Html.Editor("role_id", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default role_id_search"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Role Name
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.Editor("role_name", new { htmlAttributes = new { @class = "form-control "} })
+                                            </div>
+                                        </div>
+
+
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Create New
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.CheckBox("IsNew", false)
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Role Description
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.Editor("role_description", new { htmlAttributes = new { @class = "form-control " } })
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Active
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.CheckBox("IsActive", false, new { @disabled = "disabled" })
+                                            </div>
+                                        </div>
+                                        <div id="hiddentextid" class="hiddentext"> </div>
+                                        <button type="button" id="addtable" class="btn btn-default btn-sm addtable">Load</button>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <div class="col-lg-12">
+
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-11">
+                                                <table class="table table-bordered table-hover" id="userrolelist-table">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Company</th>
+                                                            <th>Role Id</th>
+                                                            <th>Description</th>
+                                                            <th>Created By</th>
+                                                            <th class="float-right">Modified By</th>
+                                                            <th class="float-right">Modified Date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody class="tbody-scroll180 port-data"></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="tab-pane" id="GrantPrivileges">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Role Details/Options
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <a onclick="" class="floatright" id="saveoptionicopriv">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                <div id="saveoption">Grant</div>
+                            </a>
+                        </div>
+
+                        @*left side*@
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"></div>
+                                    <div class="panel-body">
+                                        <div class="col-lg-8">
+                                            <div class="box-body">
+                                                @Html.Raw(ViewBag.MenuAll)
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            @*right side*@
+                            <div class="col-md-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading"></div>
+                                    <div class="panel-body">
+                                        <div class="form-group">
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    Company
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.DropDownList("CompanyList_grant_privilage", new List<SelectListItem>(), "Select Type", new { @class = "form-control CompanyList" })
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Role ID
+                                                </div>
+                                                <div class="col-md-5">
+                                                    <div class="input-group input-group-sm">
+
+                                                        @Html.Editor("role_id_grant_privilage", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default role_id_search_grant_privilage"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Role Name
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("role_name_grant_privilage", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Role Description
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("role_description_grant_privilage", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Active
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.CheckBox("IsActiveGrantprivilage", false)
+                                                </div>
+                                            </div>
+                                            <div id="hiddencompanyidpriv" class="hiddentext"> </div>
+                                            @Html.Hidden("RedirectToPage", Url.Action("Index", "RoleCreation"))
+                                            <button type="button" id="addtablegrantprivi" class="btn btn-default btn-sm addtable">Load</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="tab-pane" id="ViewRoleUsers">
+            <div class="panel panel-default">
+                <div class="panel-heading">Users/Menus for Role</div>
+
+                <div class="panel-body">
+                    <div class="col-md-4 ">
+                        <div class="panel panel-default">
+                            <div class="panel-heading"></div>
+                            <div class="panel-body">
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        Company
+                                    </div>
+                                    <div class="col-md-8">
+                                        @Html.DropDownList("CompanyList_view_role", new List<SelectListItem>(), "Select Type", new { @class = "form-control CompanyList" })
+                                    </div>
+                                </div>
+
+
+                                <div class="row top-buffer">
+                                    <div class="col-md-4">
+                                        Role ID
+                                    </div>
+                                    <div class="col-md-8">
+
+                                        <div class="input-group input-group-sm">
+
+                                            @Html.Editor("role_id_view_role", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default role_id_search_view_role "><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="row top-buffer">
+                                    <div class="col-md-4">
+                                        Role Description
+                                    </div>
+                                    <div class="col-md-8">
+                                        @Html.Editor("role_description_view_role", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                    </div>
+                                    <div id="hiddencompanyid" class="hiddentext"> </div>
+                                    <button type="button" class="floatright" id="add_us_table">load</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Users For Role
+                            </div>
+                            <div class="panel-body">
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table class="table table-bordered table-hover" id="user-role-details-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Company</th>
+                                                        <th>User ID</th>
+                                                        <th>User Name</th>
+                                                        <th style="font-size:8px">Description</th>
+                                                        <th class="float-right">Mobile</th>
+                                                        <th class="float-right"> Phone</th>
+                                                        <th class="float-right"> Domain ID</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tbody-scroll180 port-data"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                Menus For Role
+                            </div>
+                            <div class="panel-body">
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <table class="table table-bordered table-hover" id="menu-role-details-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Company</th>
+                                                        <th>Role ID</th>
+                                                        <th>Role Name</th>
+                                                        <th>Menu Name</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tbody-scroll180 port-data"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="tab-pane" id="GrantRoleOptions">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Role Details/Options
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <a onclick="" class="floatright" id="saveoptionico">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                <div id="saveoption">Save</div>
+                            </a>
+                        </div>
+                        @*left side*@
+                        <div class="col-md-6">
+                            <div class="panel panel-default">
+                                <div class="panel-heading"></div>
+                                <div class="panel-body">
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                Company
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.DropDownList("CompanyList_grant_role", new List<SelectListItem>(), "Select Type", new { @class = "form-control CompanyList" })
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Role ID
+                                            </div>
+                                            <div class="col-md-5">
+                                                <div class="input-group input-group-sm">
+
+                                                    @Html.Editor("role_id_grant_role", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default role_id_search_grant_role"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Role Name
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.Editor("role_name_grant_role", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Role Description
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.Editor("role_description_grant_role", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                            </div>
+                                        </div>
+
+                                        <div class="row top-buffer">
+                                            <div class="col-md-3">
+                                                Active
+                                            </div>
+                                            <div class="col-md-7">
+                                                @Html.CheckBox("IsActiveGrantRole", false, new { @disabled = "disabled" })
+                                            </div>
+                                        </div>
+                                        <div id="hiddencompanyidgr" class="hiddentext"> </div>
+                                        <button type="button" id="addtablegrandroletable" class="btn btn-default btn-sm addtable">Load</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                        </div>
+                        @*right side*@
+                        <div class="col-md-6">
+                            <div class="col-lg-12">
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-11">
+                                            <table class="table table-bordered table-hover" id="option-list-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th>Option ID</th>
+                                                        <th>Title</th>
+                                                        <th>Description</th>
+                                                        <th>Created By</th>
+                                                        <th>Created Date</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="tbody-scroll180 port-data"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="ModeOfShipment">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Mode of shipments</div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <a onclick="" class="floatright" id="updateicoshipment">
+                                <span class="glyphicon glyphicon-edit" aria-hidden="true" style="font-size:20px" id="glyphiconiconshipment"></span>
+                                <div id="choiceupdateshipment">Update</div>
+                            </a>
+                        </div>
+                        @*left side*@
+                        <div class="col-md-6">
+
+  
+                            <div class="panel panel-default">
+
+                                <div class="panel-heading"></div>
+                                <div class="panel-body">
+
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            Company
+                                        </div>
+                                        <div class="col-md-7">
+                                            @Html.DropDownList("CompanyListShipment", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+
+                                    <div class="row top-buffer">
+                                        <div class="col-md-5">
+                                            Create New
+                                        </div>
+                                        <div class="col-md-7">
+                                            @Html.CheckBox("IsNewShipment", false)
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 top-buffer">
+                                            Mode Name
+                                        </div>
+                                        <div class="col-md-7">
+                                            @Html.Editor("mode_name", new { htmlAttributes = new { @class = "form-control top-buffer", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-5 top-buffer">
+                                            Mode Description
+                                        </div>
+                                        <div class="col-md-7">
+                                            @Html.Editor("mode_description", new { htmlAttributes = new { @class = "form-control top-buffer", @readonly = "readonly" } })
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <button type="button" id="addtableshipment" class="btn btn-default btn-sm floatright">Load</button>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        @*right side*@
+                        <div class="col-md-6">
+                            <table class="table table-bordered table-hover" id="shipmentlist_table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Company</th>
+                                        <th>Mode Of Shipment</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody-scroll180 port-data"></tbody>
+                            </table>                          
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane" id="TypeOfShipment">
+        asdasda
+    </div>
+
+
+</div>
+</div>
+

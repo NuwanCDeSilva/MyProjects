@@ -1,0 +1,6 @@
+﻿<ctn_segment>
+  <Ctn_reference>@ctnref</Ctn_reference>
+  <Number_of_packages>@ctnnumofpkg</Number_of_packages>
+  <Type_of_container>@ctntypofcon</Type_of_container>
+  <Empty_Full>@ctnemtful</Empty_Full>
+</ctn_segment>

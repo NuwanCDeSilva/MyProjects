@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "House BL XML Download";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/Download.js?@val"></script>
+}
+
+
+<div class="content-wrapper">
+
+    <section class="content clearfix">
+
+        
+        @using (Html.BeginForm("Download", "HouseBLDownload", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @id = "download", @target = "_blank" }))
+        {
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">House BL</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Master BL Number</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("MasterBLNumber", new { htmlAttributes = new { @class = "form-control required-field" } })
+
+                                        <div class="col-md-12 text-right btn-scroll-top ">
+                                            <button class="btn btn-sm btn-green-fullbg btn-gethbl-data">
+                                                <i class="glyphicon glyphicon-ok-circle"></i>Get House BL
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>House BL Number</label>
+                                <div class="input-group input-group-sm">
+                                    <div class="hsublnumber">
+                                        <table class="bl-display-tbl">
+
+                                        </table>
+                                    </div>
+                                    <div class="col-md-6 text-right btn-scroll-top ">
+                                        <button class="btn btn-sm btn-green-fullbg btn-download-data">
+                                            <i class="glyphicon glyphicon-ok-circle"></i>Download
+                                        </button>
+                                    </div>
+                                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                </div>
+        }
+    </section>
+</div>

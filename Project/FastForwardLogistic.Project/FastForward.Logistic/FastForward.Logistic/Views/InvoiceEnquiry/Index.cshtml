@@ -1,0 +1,191 @@
+﻿@model FF.BusinessObjects.trn_inv_hdr
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section scripts
+{
+@*<script src="~/Scripts/Common/InvoiceEnquiry.js"></script>*@
+<script src="~/Scripts/Common/InvoiceEnquiry.js?@val"></script>
+}
+
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <h1>
+            Invoice Enquiry
+            <small>Form</small>
+        </h1>
+        @*<ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"> Invoice Enquiry</li>
+        </ol>*@
+    </section>
+    <!-- Main content -->
+    <section class="content clearfix">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", @id = "InvEnquiry-frm" }))
+        {
+            <!-- button container set end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- customer details begin -->
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Searching Parameters</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Mode of shipment</label>
+                                        <div class="form-group">
+                                            @Html.DropDownList("sh_mode", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Type of shipment</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("shipment_type", new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat search-ty-sh-no"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Customer Code</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("cus_cd", new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-cust_search"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>Job #</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("Jb_jb_no", new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat search-job-no"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>HBL #</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("Bl_h_doc_no", new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-house-bl"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding-top:10px">
+                                    <input type="button" class="btn btn-sm btn-ash-fullbg search-Inv-list" value="Search" />
+                                    <input type="button" class="btn btn-sm btn-ash-fullbg clear-data" value="Clear" />
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+
+        <!-- button container set end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- customer details begin -->
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Invoice Header</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered table-hover dataTable inv-Enquiry-Hdr">
+                                        <thead>
+                                            <tr>
+                                                <th>Job No</th>
+                                                <th>Invoice No</th>
+                                                <th>Customer Code</th>
+                                                <th>DBL</th>
+                                                <th>HBL</th>
+                                                <th>MBL</th>
+                                                <th>Invoice Date</th>
+                                                <th>Type</th>
+                                                <th>Sub Type</th>
+                                                <th>Invoice Amount</th>
+                                                <th>Settlement</th>
+                                                <th>Balance</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll222"></tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Invoice Details</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered table-hover dataTable inv-Enquiry-Dtl">
+                                        <thead>
+                                            <tr>
+                                                <th>Element</th>
+                                                <th>Description</th>
+                                                <th>Currency</th>
+                                                <th>Exchange Rate</th>
+                                                <th>Invoice Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll"></tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+        }
+    </section>
+    <!-- end main section -->
+</div>
+<!-- /.content-wrapper -->

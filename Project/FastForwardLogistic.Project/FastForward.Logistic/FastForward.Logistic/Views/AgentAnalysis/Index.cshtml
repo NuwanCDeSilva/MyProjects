@@ -1,0 +1,122 @@
+﻿
+@{
+    ViewBag.Title = "Agent Analysis";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/jquery.canvasjs.min.js"></script>
+    <script src="~/Scripts/Common/AgentAnalysis.js?@val"></script>
+}
+@section Styles
+{
+    <link rel="stylesheet" href="~/Content/AgentAnalysis.css?@val">
+}
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <h1>
+            Agent Analysis
+            <small>Form</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Agent Analysis</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content clearfix">
+        <!-- button container set begin -->
+        <div class="col-md-12 text-right btn-scroll-top ">
+            <button class="btn btn-sm btn-yellow-fullbg btn-display-det">
+                <i class="glyphicon glyphicon-ok-circle"></i>
+                Display
+            </button>
+            <button class="btn btn-sm btn-red-fullbg clear-inv">
+                <i class="glyphicon glyphicon-refresh"></i> Clear
+            </button>
+        </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="box">
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>From Date</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            @Html.Editor("FromDate", new { htmlAttributes = new { @class = "form-control  pull-right datepic" } })
+                                            @*<input type="text" name="settle-date" class="form-control pull-right datepic">*@
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                    <!-- /.form group -->
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>To Date</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            @Html.Editor("ToDate", new { htmlAttributes = new { @class = "form-control  pull-right datepic" } })
+                                            @*<input type="text" name="settle-date" class="form-control pull-right datepic">*@
+                                        </div>
+                                        <!-- /.input group -->
+                                    </div>
+                                    <!-- /.form group -->
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-11">
+                                    <table class="table table-bordered table-hover dataTable set-itmdet">
+                                        <thead>
+                                            <tr>
+                                                <th>From Port</th>
+                                                <th>Port Description</th>
+                                                <th>Agent Code</th>
+                                                <th>Agent Description</th>
+                                                <th class="float-right"># of Shipments</th>
+                                                <th class="float-right"># of Containers</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll180 port-data"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="row">
+            <div class="chartset">
+                <div id="portContainer" style="width:48%;height:550px;"></div>
+                <div id="agentContainer" style="width:48%;height:550px;"></div>
+            </div>
+        </div>
+        <div id="myModalPop" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title"></h4>
+                    </div>
+                    <div class="modal-body">
+                        <div id="chartContainer"></div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- end main section -->
+</div>
+

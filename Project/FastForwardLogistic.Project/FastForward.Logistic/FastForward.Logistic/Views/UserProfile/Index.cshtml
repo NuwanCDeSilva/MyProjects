@@ -1,0 +1,485 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/UserProfile.js?@val"></script>
+}
+@section Styles {
+    <link href="~/Content/RoleCreation.css?@val" rel="stylesheet" type="text/css" />
+}
+
+<div class="content-wrapper">
+    <section class="content-header text-left">
+        <h1>
+            User Profile
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"> Create User</li>
+        </ol>
+    </section>
+
+    <section class="sec_nav">
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active">
+                <a href="#CreateUser" data-toggle="tab">Create User</a>
+            </li>
+
+            <li>
+                <a href="#AssignCompany" data-toggle="tab">Assign Company</a>
+            </li>
+        </ul>
+    </section>
+
+    <div class="tab-content clearfix">
+        <div class="tab-pane active" id="CreateUser">
+            <section id="RoleCreation">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <a onclick="" class="floatright" id="refreshico">
+                                    <span class="glyphicon glyphicon-refresh" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                    <div id="choiceclear">Clear</div>
+                                </a>
+
+                                <a onclick="" class="floatright" id="updateico">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                    <div id="choiceupdate">Update</div>
+                                </a>
+                                <a onclick="" class="floatright" id="createico">
+                                    <span class="glyphicon glyphicon-save" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                    <div id="choicesave">Save</div>
+                                </a>
+
+
+                            </div>
+@using (Html.BeginForm("Save_User_Details", "UserProfile", FormMethod.Post, new { enctype = "multipart/form-data", @id = "userdetails-frm" }))
+{
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">User Details</div>
+                                        <div class="panel-body">
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    User ID
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("user_id", new { htmlAttributes = new { @class = "form-control with-search"} })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default user_id_seach"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Full Name
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("full_name", new { htmlAttributes = new { @class = "form-control " } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Description
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("description", new { htmlAttributes = new { @class = "form-control " } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Password
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Password("password")
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Confirm Password
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Password("confirm_password")
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Advance user details</div>
+                                        <div class="panel-body">
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Designation
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("designation_id", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default designation_id_seach"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Department
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("department_id", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default department_id_seach"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Employee ID
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("employee_id", new { htmlAttributes = new {@type = "number", @class = "form-control ", maxlength = "7" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Emp. Code
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("emp_code", new { htmlAttributes = new { @class = "form-control " } })
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-4">
+                                                    Domain User
+                                                </div>
+                                                <div class="col-md-1">
+                                                    @Html.CheckBox("IsDomain", false)
+                                                </div>
+
+                                                <div class="col-md-4">
+                                                    Windows Authenticate
+                                                </div>
+                                                <div class="col-md-3">
+                                                    @Html.CheckBox("IsWindowsAuth", false)
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Domain ID
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("domain_id", new { htmlAttributes = new { @class = "form-control " } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    SUN User ID
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("sun_user_id", new { htmlAttributes = new { @class = "form-control " } })
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Domain Details</div>
+                                        <div class="panel-body">
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Name
+                                                </div>
+                                                <div class="col-md-9">
+                                                    @Html.Editor("domain_name", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Title
+                                                </div>
+                                                <div class="col-md-9">
+                                                    @Html.Editor("domain_title", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Department
+                                                </div>
+                                                <div class="col-md-9">
+                                                    @Html.Editor("domain_department", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-5">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">User Contact</div>
+                                        <div class="panel-body">
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    E-Mail
+                                                </div>
+                                                <div class="col-md-9">
+                                                    @Html.Editor("email", new { htmlAttributes = new { @class = "form-control" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Mobile No.
+                                                </div>
+                                                <div class="col-md-9">
+                                                    @Html.Editor("mobile_no", new { htmlAttributes = new {@type="text", @class = "form-control required-field" ,maxlength = "12"} })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Phone No.
+                                                </div>
+                                                <div class="col-md-9">
+                                                    @Html.Editor("phone_no", new { htmlAttributes = new {@type="text", @class = "form-control required-field", maxlength = "12" } })
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Status</div>
+                                        <div class="panel-body">
+                                            <div class="row top-buffer">
+                                                <div class="col-md-12">
+                                                    <input type="radio" name="status" value="Active" id="Active"> Active
+                                                    <input type="radio" name="status" value="Inactive" id="Inactive"> Inactive
+                                                    <input type="radio" name="status" value="Locked" id="Locked"> Locked
+                                                    <input type="radio" name="status" value="PermanentlyDisable" id="PermanentlyDisable"> Permanently disable
+                                                </div>
+                                                <div class="col-md-12">
+                                                    @Html.TextArea("se_act_rmk", null, new { @class = "form-control" })
+
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Other Details</div>
+                                        <div class="panel-body">
+                                            <div class="row top-buffer">
+                                                <div class="col-md-11">
+                                                    Allow user to change password
+                                                </div>
+                                                <div class="col-md-1">
+                                                    @Html.CheckBox("IsAllowToChangePassword", false)
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-11">
+                                                    User must change password at next login
+                                                </div>
+                                                <div class="col-md-1">
+                                                    @Html.CheckBox("IsUserMustChangeNxtLog", false)
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        @*Assign Company*@
+        <div class="tab-pane" id="AssignCompany">
+                       <section id="RoleCreation">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <a onclick="" class="floatright" id="refreshicoasi">
+                                    <span class="glyphicon glyphicon-refresh" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                    <div id="choiceclear">Clear</div>
+                                </a>
+
+                                <a onclick="" class="floatright" id="deleteicoasi">
+                                    <span class="glyphicon glyphicon-edit" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                    <div id="choiceupdate">Delete</div>
+                                </a>
+                                <a onclick="" class="floatright" id="createicoasi">
+                                    <span class="glyphicon glyphicon-save" aria-hidden="true" style="font-size:20px" id="glyphiconicon"></span>
+                                    <div id="choicesave">Save</div>
+                                </a>
+
+
+                            </div>
+@using (Html.BeginForm("Save_User_Company_Details", "UserProfile", FormMethod.Post, new { enctype = "multipart/form-data", @id = "usercompanydetails-frm" }))
+{
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">User Details</div>
+                                        <div class="panel-body">
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    User ID
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("user_id_asi", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default user_id_asi_search"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Full Name
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("full_name_asi", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Description
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("description_asi", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Designation
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("designation_asi", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Department
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("department_asi", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Emp. ID
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("empid_asi", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <button type="button" id="addtableassingcom" class="btn btn-default btn-sm addtable">Load</button>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="panel panel-default">
+                                        <div class="panel-heading">Advance user details</div>
+                                        <div class="panel-body">
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Company
+                                                </div>
+                                                <div class="col-md-9">
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("company_id_asi", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default company_id_asi_search"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+                                                <div class="col-md-3">
+                                                    Description
+                                                </div>
+                                                <div class="col-md-7">
+                                                    @Html.Editor("description_company_asi", new { htmlAttributes = new { @class = "form-control ", @readonly = "readonly" } })
+                                                </div>
+                                            </div>
+
+                                            <div class="row top-buffer">
+
+                                                <div class="col-md-4">
+                                                    Default Company
+                                                </div>
+                                                <div class="col-md-1">
+                                                    @Html.CheckBox("IsDefault", false)
+                                                </div>
+
+                                                <div class="col-md-3">
+                                                    Active
+                                                </div>
+                                                <div class="col-md-1">
+                                                    @Html.CheckBox("IsActiveC", false)
+                                                </div>
+
+                                            </div>
+                                            </div>
+
+                                    </div>
+                                    <table class="table table-bordered table-hover" id="company-details-table">
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th>Company Code </th>
+                                                <th>Description</th>
+                                                <th>Is Default</th>
+                                                <th>Active</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll180 port-data"></tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+}
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>

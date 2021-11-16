@@ -1,0 +1,495 @@
+﻿
+@{
+    ViewBag.Title = "Petty Cash Settlement";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    <script src="~/Scripts/Common/PettyCashSettlement.js?@val"></script>
+    <script src="~/Scripts/Common/PaymentRefund.js"></script>
+}
+@section Styles {
+    <link href="~/Content/PettyCashSettlement.css?@val" rel="stylesheet" type="text/css" />
+}
+<div class="content-wrapper">
+
+    <section class="content-header">
+        <h1>
+            Petty cash settlement
+            <small>Form</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Petty Cash Settlement</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content clearfix">
+        <!-- button container set begin -->
+        <div class="col-md-12 text-right btn-scroll-top ">
+            <button class="btn btn-sm btn-green-fullbg save-form">
+                <i class="glyphicon glyphicon-ok-circle"></i>
+                Save
+            </button>
+            <button class="btn btn-sm btn-ash-fullbg btn-update-data">
+                <i class="glyphicon glyphicon-pencil"></i> Update
+            </button>
+
+            <button class="btn btn-sm btn-red-fullbg clear-form">
+                <i class="glyphicon glyphicon-refresh"></i> Clear
+            </button>
+        </div>
+    @using (Html.BeginForm("SaveData", "PettyCashSettlement", FormMethod.Post, new { enctype = "multipart/form-data", @id = "pettcashset-frm" }))
+    {
+        <input type="hidden" id="permissonSession" data-value="@Request.RequestContext.HttpContext.Session["permissonSession"]" />
+        <!-- button container set end-->
+        <div class="row">
+            <div class="col-lg-6">
+                <!-- customer details begin -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Petty Cash Settlement</h3>
+                        <label class="app-text"></label>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Settlement No</label>
+                                    <div class="input-group input-group-sm">
+                                        @*<input type="text" name="settlement-no" class="form-control">*@
+                                        @Html.Editor("SettlementNo", new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.Editor("SettlementSeq", new { htmlAttributes = new { @class = "form-control no-display" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat srch-settlement"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Settle Date</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        @Html.Editor("SettlementDate", new { htmlAttributes = new { @class = "form-control  pull-right datepic" } })
+                                        @*<input type="text" name="settle-date" class="form-control pull-right datepic">*@
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Manual Ref</label>
+                                    <div class="input-group input-group-sm">
+                                        @*<input type="text" name="manual-ref" class="form-control">*@
+                                        @Html.Editor("ManRef", new { htmlAttributes = new { @class = "form-control", @style = "width: 170px;" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Payment Date</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        @Html.Editor("payDt", new { htmlAttributes = new { @class = "form-control  pull-right datepic" } })
+                                        @*<input type="text" name="pay-date" class="form-control pull-right datepic">*@
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Profit Center</label>
+                                    <div class="input-group input-group-sm">
+                                        @*<input type="text" name="profit-center" class="form-control">*@
+                                        @Html.Editor("ProfitCenter", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly", @Value = Session["UserDefProf"].ToString() } })
+                                        @*<span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat pc-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>*@
+                                        <div class="form-group">
+                                            <label class="pc-desc pt-scan">-</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Job No</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Bl_job_no", new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat btn-search-jobno"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <label class="btn btn-sm btn-block btn-red-fullbg btn-refund_cls" style="width:120px;" id="btn-refund_cls">
+                                    Refund Cancel
+                                </label> 
+                            </div>
+                            
+                            <!-- /.col -->
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <label>Remarks</label>
+                                    @*<textarea name="remarks" class="height56"></textarea>*@
+                                    @Html.TextArea("Remarks", new { @class = "form-control height56", @maxlength = "150" })
+                                </div>
+                            </div>
+                            
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+
+            </div>
+            <div class="col-lg-6">
+                <!-- contact details begin -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Pending Settlement</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>From Date</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        @Html.Editor("FromDt", new { htmlAttributes = new { @class = "form-control  pull-right datepic", @style = "width:90px;" } })
+                                        @*<input type="text" name="from-date" class="form-control pull-right datepic">*@
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>To Date</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        @Html.Editor("ToDt", new { htmlAttributes = new { @class = "form-control  pull-right datepic", @style = "width:90px;" } })
+                                        @*<input type="text" name="to-date" class="form-control pull-right datepic">*@
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                            </div>
+                            
+
+                            <div class="col-md-1 col-xs-6 margintop2-5">
+                                <button class="btn btn-sm-min btn-yellow-fullbg load-pendingset">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </button>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Job No</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Bl_job_no1", new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat btn-search-jobno1"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            
+                            <div class="col-md-11">
+                                <table class="table table-bordered table-hover dataTable have-scroll pendingreq-tbl">
+                                    <thead>
+                                        <tr>
+                                            <th class="no-display">Seq</th>
+                                            <th>Req.No</th>
+                                            <th>Manual Ref</th>
+                                            <th>Job No</th>
+                                            <th>Req. Date</th>
+                                            <th style="width:30px;"></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="tbody-scroll-ptc"></tbody>
+                                </table>
+                            </div>
+                            <div class="col-md-1 margintop1-3">
+                                @*<button class="btn btn-sm-min btn-green-fullbg">
+                                    <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                                </button>*@
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+                <!-- contact details end -->
+
+            </div>
+        </div>
+        <div class="row" id="petty-cash-con">
+            <div class="col-lg-12">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Settlement element details</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+
+                        <div class="col-md-1 col-xs-12 ">
+                            <label>Request</label>
+                            <div class="input-group input-group-sm">
+                                @*<input type="text" name="request" class="form-control">*@
+                                @Html.Editor("Request", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-1-3 col-xs-12 padding-right-1">
+                            <label>Job No</label>
+                            <div class="input-group input-group-sm">
+                                @*<input type="text" name="sh_jobno" class="form-control">*@
+                                @Html.Editor("JobNo", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                @*<span class="input-group-btn">
+                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-search"></i></button>
+                                </span>*@
+                            </div>
+                        </div>
+                        <div class="col-md-1-1 col-xs-12 padding-ls-1 no-display">
+                            <label>Line Number</label>
+                            @*<input type="text" name="settle_amount" class="form-control">*@
+                            @Html.Editor("LineNo", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                        </div>
+                        <div class="col-md-1 col-xs-12 padding-ls-1">
+                            <label>Element</label>
+                            <div class="input-group input-group-sm">
+                                @*<input type="text" name="sh_element" class="form-control">*@
+                                @Html.Editor("CstEle", new { htmlAttributes = new { @class = "form-control" } })
+                                <span class="input-group-btn">
+                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat cst-ele-srch"><i class="glyphicon glyphicon-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-2 col-xs-12 padding-ls-1">
+                            <label>Description </label>
+                            @*<input type="text" name="sh_desc" class="form-control">*@
+                            @Html.Editor("CstEleDesc", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+
+                        <div class="col-md-1-1 col-xs-12 padding-ls-1">
+                            <label>Request Amount</label>
+                            @Html.Editor("ReqAmt", new { htmlAttributes = new { @class = "form-control right-align", @readonly = "readonly" } })
+                        </div>
+
+                        
+                        <div class="col-md-1-1 col-xs-12 padding-ls-1">
+                            <label>Settle Amount</label>
+                            @*<input type="text" name="settle_amount" class="form-control">*@
+                            @Html.Editor("SetAmt", new { htmlAttributes = new { @class = "form-control right-align" } })
+                        </div>
+
+                        <div class="col-md-1">
+                            <div class="form-group">
+                                <label>Receipt Att</label>
+                                <select name="rec-tpe" class="form-control" id="ReceiptAttr">
+                                    <option></option>
+                                    <option value="1">TRUE</option>
+                                    <option value="0">FALSE</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-md-1-1 col-xs-12 padding-ls-1">
+                            <label>Remarks</label>
+                            @*<input type="text" name="sh_comment" class="form-control">*@
+                            @Html.Editor("jobRmk", new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+
+                        <div class="col-md-0-5 col-xs-12 padding-ls-1">
+                            <label>Tel/Lc/Veh</label>
+                            <div class="input-group input-group-sm">
+                                @*<input type="text" name="tel_lc_veh" class="form-control">*@
+                                @Html.Editor("VehLcTel", new { htmlAttributes = new { @class = "form-control" } })
+                                <span class="input-group-btn">
+                                    <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat vehlcph-search"><i class="glyphicon glyphicon-search"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="col-md-0-1 col-xs-12 margintop1-3">
+                            @*<button class="btn btn-sm-min btn-green-fullbg">
+                                <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                            </button>*@
+                            <button class="btn btn-sm-min btn-green-fullbg add-setlement">
+                                <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                            </button>
+                        </div>
+                        <div class="col-md-12"><hr></div>
+                        <div class="col-md-11">
+                            <table class="table table-bordered table-hover dataTable set-itmdet">
+                                <thead>
+                                    <tr>
+                                        <th style="width:40px;" id="selectOrDetails">Select</th>
+                                        <th style="width:130px;">Request No</th>
+                                        <th style="width:120px;">Job No</th>
+                                        <th class="no-display">Item Line</th>
+                                        <th style="width:80px;">Element</th>
+                                        <th style="width:140px;">Description</th>
+                                        <th class="right-align">Request Amount (LKR)</th>
+                                        <th class="right-align"> Settle Amount (LKR)</th>
+                                        <th>Receipt Att</th>
+                                        <th>Remarks</th>
+                                        <th>Tel/Lc/Veh</th>
+                                        <th style="width:30px;"></th>
+                                        <th class="no-display">Set Line</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="tbody-scroll180">
+
+                                </tbody>
+                            </table>
+                            <div class="col-md-4 paddingl6">
+                                <label>Request Element</label>
+                            </div>
+                            <div class="col-md-6 text-right pull-right">
+                                <div class="col-md-4">
+                                    Total Amount (LKR)
+                                    @Html.Editor("TotReqAmt", new { htmlAttributes = new { @class = "form-control right-align" ,@readonly="readonly"} })
+                                    @*<input type="text" name="req-el1" class="form-control">*@
+                                </div>
+                                <div class="col-md-4">
+                                    Settlement Amount (LKR)
+                                    @*<input type="text" name="req-el2" class="form-control">*@
+                                    @Html.Editor("TotSettleAmt", new { htmlAttributes = new { @class = "form-control right-align", @readonly = "readonly" } })
+                                </div>
+                                <div class="col-md-4">
+                                    Balance Amount (LKR)
+                                    @Html.Editor("TxtBalanceAmount", new { htmlAttributes = new { @class = "form-control right-align", @readonly = "readonly" } })
+                                    @*<input type="text" name="req-el1" class="form-control">*@
+                                </div>
+                                <hidden><label style="display:none;" class="tot-amount-val"></label></hidden>
+                            </div>
+                        </div>
+                        <div class="col-md-1 padding-right10">
+                            <button class="btn btn-sm btn-green-fullbg btn-block print-job-btn">
+                                <i class="fa fa-print" aria-hidden="true"></i>
+                                Print
+                            </button>
+                            <button class="btn btn-block  hvr-sweep-to-left hvr-sweep-to-left-yellow btn-yellow" id="btnApp1">
+                                Approve 1
+                            </button>
+                            <button class="btn btn-block hvr-sweep-to-left hvr-sweep-to-left-ash btn-ash" id="btnApp2">
+                                Approve 2
+                            </button>
+                            <button class="btn btn-block  hvr-sweep-to-left hvr-sweep-to-left-green btn-green" id="btnApp3">
+                                Approve 3
+                            </button>
+                            <button class="btn btn-sm btn-block btn-red-fullbg reject-btn">
+                                <i class="fa fa-times" aria-hidden="true"></i>
+                                Reject
+                            </button>
+                            <label class="btn btn-sm btn-block btn-green-fullbg" id="btnRefund">
+                                Refund
+                            </label>     
+                            <label class="btn btn-sm btn-block btn-green-fullbg" id="btnRefundAll">
+                                Refund All
+                            </label>                         
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        }
+
+        <div class="row form-group" style="padding-left:10px; padding-right: 10px;">
+            <div id="refunddetails">
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Refund Details</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="col-md-4 form-group">
+                                    <label>Debtor Code</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Sar_debtor_cd", new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-cust_search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 form-group">
+                                    <label>Manual Refund Ref</label>
+                                    <div class="input-group input-group-sm">
+                                        @*<input type="text" name="manual-ref" class="form-control">*@
+                                        @Html.Editor("ManRefRef", new { htmlAttributes = new { @class = "form-control", @style = "width: 250px;" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered table-hover dataTable refund-table">
+                                        <thead>
+                                            <tr>
+                                                <th>Settlement No</th>
+                                                <th>Request No</th>
+                                                <th>Job No</th>
+                                                <th>Refund Amount</th>
+                                                <th style="width:30px;"></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll180"></tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="btn btn-sm btn-block btn-green-fullbg" id="btnRefundSave" style="width: 85px;">
+                                    Save Refund
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row form-group" style="padding-left:30px; padding-right: 30px;">
+            <div id="paysettle" class="panel-sep row">
+                @Html.Partial("~/Views/Shared/_PaymentRefund.cshtml")
+            </div>
+        </div>
+        
+
+    </section>
+    <!-- end main section -->
+</div>
+<!-- /.content-wrapper -->
+

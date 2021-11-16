@@ -1,0 +1,236 @@
+﻿@model FF.BusinessObjects.Sales.MST_VESSEL
+
+@{
+    ViewBag.Title = "Reference Creation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    @*<script src="~/Scripts/Common/ReferenceDetails.js"></script>*@
+    <script src="~/Scripts/Common/ReferenceDetails.js?@val"></script>
+}
+
+<div class="content-wrapper">
+
+    <section class="content-header text-left">
+        <h1>
+            Reference Creation
+            @*<small>Form</small>*@
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"> Reference Creation</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content clearfix">
+
+        <!-- button container set begin -->
+        <div class="col-md-12 text-right btn-scroll-top ">
+            <button class="btn btn-sm btn-green-fullbg btn-emp-save-data">
+                <i class="glyphicon glyphicon-ok-circle"></i>Save
+            </button>
+            <button class="btn btn-sm btn-ash-fullbg btn-emp-update-data">
+                <i class="glyphicon glyphicon-pencil"></i> Update
+            </button>
+
+            <button class="btn btn-sm btn-red-fullbg btn-emp-clear-data">
+                <i class="glyphicon glyphicon-refresh"></i> Clear
+            </button>
+        </div>
+       @using (Html.BeginForm("ReferenceCreation", "ReferenceDetails", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @id = "emply-crte-frm" }))
+        {
+        <!-- button container set end-->
+        <!-- left side begin-->
+            <form id="emply-crte-frm">
+                <div class="col-lg-12">
+                    <!-- Tab begin -->
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a data-toggle="tab" href="#Vessel"><h5>Vessel / Flight Setup</h5></a></li>
+                        <li><a data-toggle="tab" href="#CostElement"><h5>Revenue / Cost Element</h5></a></li>
+                        <li><a data-toggle="tab" href="#PortSetup"><h5>Port Setup</h5></a></li>
+                    </ul>
+                    <!-- Tab details begin -->
+                    <div class="tab-content">
+                        <div id="Vessel" class="tab-pane fade in active">
+                            <!-- Vessel details begin -->
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title form-headding">Vessel / Flight Details</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Vessel/Flight Code</label>
+                                                <div class="input-group input-group-sm">
+                                                    @*<input type="text" name="cus_type" id="custp_id" class="form-control">*@
+                                                    @Html.EditorFor(m => m.VM_VESSAL_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flight"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Vessel/Flight Description</label>
+                                                @*<input type="text" name="MBE_CD" id="cuscd_id" class="form-control">*@
+                                                @Html.EditorFor(m => m.VM_VESSAL_NAME, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "100" } })
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-2">
+                                            <!-- /.form-group -->
+                                            <div class="form-group">
+                                                <label>Active/ Inactive</label>
+                                                @*<input type="text" name="cus_name" id="cusnm_id" class="form-control" placeholder="Enter ...">*@
+                                                @Html.DropDownListFor(m => m.VM_ACT, new List<SelectListItem> { new SelectListItem { Value = "2", Text = "Select" }, new SelectListItem { Value = "1", Text = "Active" }, new SelectListItem { Value = "0", Text = "Inactive" } }, null, new { @class = "form-control cus-act-dropdown" })
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
+
+                        <div id="CostElement" class="tab-pane fade">
+                            <!-- CostElement details begin -->
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title form-headding">Revenue / Cost Element Details</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Cost Element Code</label>
+                                                <div class="input-group input-group-sm">
+                                                    @*<input type="text" name="cus_type" id="custp_id" class="form-control">*@
+                                                    @Html.EditorFor(m => m.MCE_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default cst-ele-srch"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Description</label>
+                                                @Html.EditorFor(m => m.MCE_DESC, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "100" } })
+                                                @*<input type="text" name="MBE_CD" id="cuscd_id" class="form-control">*@
+                                                @*@Html.DropDownListFor(m => m.ESEP_TITLE, new List<SelectListItem> { new SelectListItem { Value = "Mr.", Text = "Mr." }, new SelectListItem { Value = "Miss.", Text = "Miss." }, new SelectListItem { Value = "Mrs.", Text = "Mrs." }, new SelectListItem { Value = "Dr.", Text = "Dr." }, new SelectListItem { Value = "Ms.", Text = "Ms." } }, null, new { @class = "form-control cus-act-dropdown" })*@
+
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-2">
+                                            <!-- /.form-group -->
+                                            <div class="form-group">
+                                                <label>Active/ Inactive</label>
+                                                @Html.DropDownListFor(m => m.MCE_ACT, new List<SelectListItem> { new SelectListItem { Value = "2", Text = "Select" }, new SelectListItem { Value = "1", Text = "Active" }, new SelectListItem { Value = "0", Text = "Inactive" } }, null, new { @class = "form-control cus-act-dropdown" })
+                                                @*@Html.EditorFor(m => m.ESEP_FIRST_NAME, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "64" } })*@
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                        <div class="col-md-2">
+                                            <!-- /.form-group -->
+                                            <div class="form-group">
+                                                <label>Account No</label>
+                                                @Html.EditorFor(m => m.MCE_ACC_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "15" } })
+                                                @*@Html.DropDownListFor(m => m.MCE_ACT, new List<SelectListItem> { new SelectListItem { Value = "1", Text = "Active" }, new SelectListItem { Value = "0", Text = "Deactive" } }, null, new { @class = "form-control cus-act-dropdown" })*@
+                                                @*@Html.EditorFor(m => m.ESEP_FIRST_NAME, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "64" } })*@
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                        <div class="col-md-2">
+                                            <!-- /.form-group -->
+                                            <div class="form-group">
+                                                <label>Element Type</label>
+                                                @Html.DropDownListFor(m => m.MCE_COST_REV_STS, new List<SelectListItem> { new SelectListItem { Value = "0", Text = "Select" }, new SelectListItem { Value = "REV", Text = "Revenue" }, new SelectListItem { Value = "COS", Text = "Cost" } }, null, new { @class = "form-control cus-act-dropdown" })
+                                                @*@Html.EditorFor(m => m.ESEP_FIRST_NAME, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "64" } })*@
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
+
+                        <div id="PortSetup" class="tab-pane fade">
+                            <!-- PortSetup details begin -->
+                            <div class="box">
+                                <div class="box-header with-border">
+                                    <h3 class="box-title form-headding">Port Setup Details</h3>
+                                    <div class="box-tools pull-right">
+                                        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    </div>
+                                </div>
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Port Setup Code</label>
+                                                <div class="input-group input-group-sm">
+                                                    @*<input type="text" name="cus_type" id="custp_id" class="form-control">*@
+                                                    @Html.EditorFor(m => m.PA_PRT_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                                    <span class="input-group-btn">
+                                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-load-port"><i class="glyphicon glyphicon-search"></i></button>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label>Description</label>
+
+                                                @*<input type="text" name="MBE_CD" id="cuscd_id" class="form-control">*@
+                                                @Html.EditorFor(m => m.PA_PRT_NAME, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "100" } })
+
+                                            </div>
+                                        </div>
+                                        <!-- /.col -->
+                                        <div class="col-md-2">
+                                            <!-- /.form-group -->
+                                            <div class="form-group">
+                                                <label>Active/ Inactive</label>
+                                                @*<input type="text" name="cus_name" id="cusnm_id" class="form-control" placeholder="Enter ...">*@
+                                                @Html.DropDownListFor(m => m.PA_ACT, new List<SelectListItem> { new SelectListItem { Value = "2", Text = "Select" }, new SelectListItem { Value = "1", Text = "Active" }, new SelectListItem { Value = "0", Text = "Inactive" } }, null, new { @class = "form-control cus-act-dropdown" })
+                                            </div>
+                                            <!-- /.form-group -->
+                                        </div>
+                                    </div>
+                                    <!-- /.row -->
+                                </div>
+                                <!-- /.box-body -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        }
+
+    </section>
+    <!-- end main section -->
+</div>
+<!-- /.content-wrapper -->

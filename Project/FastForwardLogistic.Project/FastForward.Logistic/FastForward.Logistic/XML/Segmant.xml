@@ -1,0 +1,44 @@
+﻿<Bol_segment>
+  <Bol_id>
+    <Bol_reference>@bolref</Bol_reference>
+    <Line_number>@lineno</Line_number>
+    <Bol_nature>@bmlnet</Bol_nature>
+    <Bol_type_code>@bmltyp</Bol_type_code>
+  </Bol_id>
+  <Consolidated_Cargo>@concrgo</Consolidated_Cargo>
+  <Load_unload_place>
+    <Place_of_loading_code>@plcoflod</Place_of_loading_code>
+    <Place_of_unloading_code>@plcofunlod</Place_of_unloading_code>
+  </Load_unload_place>
+  <Traders_segment>
+    <Carrier>
+      <Carrier_code>@carcd</Carrier_code>
+      <Carrier_name>@carnme</Carrier_name>
+      <Carrier_address>@caradd</Carrier_address>
+    </Carrier>
+    <Exporter>
+      <Exporter_name>@expnme</Exporter_name>
+      <Exporter_address>@expadd</Exporter_address>
+    </Exporter>
+    <Notify>
+      <Notify_name>@ntfynme</Notify_name>
+      <Notify_address>@ntfyadd</Notify_address>
+    </Notify>
+    <Consignee>
+      <Consignee_name>@consnme</Consignee_name>
+      <Consignee_address>@consadd</Consignee_address>
+    </Consignee>
+  </Traders_segment>
+ @Container
+  <Goods_segment>
+    <Number_of_packages>@gdnumofpkg</Number_of_packages>
+    <Package_type_code>@gdnpkgtycd</Package_type_code>
+    <Gross_mass>@grsmas</Gross_mass>
+    <Shipping_marks>@shipmks</Shipping_marks>
+    <Goods_description>@godsdesc </Goods_description>
+    <Volume_in_cubic_meters>@volcubmet</Volume_in_cubic_meters>
+    <Num_of_ctn_for_this_bol>@volctnbol</Num_of_ctn_for_this_bol>
+    <Information>@info</Information>
+  </Goods_segment>
+  <Value_segment> </Value_segment>
+</Bol_segment>

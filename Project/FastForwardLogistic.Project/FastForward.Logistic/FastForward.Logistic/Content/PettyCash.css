@@ -1,0 +1,16 @@
+﻿.cons-grp, .pay-grp ,.btn-emp-update-data,.no-display,.print-job-btn,.reject-btn {
+    display: none;
+}
+.pendingreq-tbl tr.new-row :hover{
+    cursor:pointer;
+}
+#RequestSeq{
+    display:none;
+}
+.right-align{
+    text-align:right;
+}
+.app-text {
+    color: olivedrab;
+    padding-left: 14px;
+}

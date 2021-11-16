@@ -1,0 +1,17 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.LGSTService.Security.exe.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.LGSTService.Security.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.LGSTService.Security.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.BusinessLogicLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\Oracle.DataAccess.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.BusinessLogicLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\bin\Debug\FF.DataAccessLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\obj\Debug\FF.LGSTService.Security.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\obj\Debug\FF.LGSTService.Security.ProjectInstaller.resources
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\obj\Debug\FF.LGSTService.Security.csproj.GenerateResource.Cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\obj\Debug\FF.LGSTService.Security.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Security\obj\Debug\FF.LGSTService.Security.pdb

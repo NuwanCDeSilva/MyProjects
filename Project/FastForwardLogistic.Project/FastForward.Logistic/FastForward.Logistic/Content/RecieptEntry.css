@@ -1,0 +1,16 @@
+﻿.settleInvoice {
+    /*height: 30px;*/
+    /*overflow-y: scroll;*/
+}
+.other-part-cls,.search-unallow-recpt{
+    display:none;
+}
+.remove_invoce:hover{
+    cursor:pointer;
+}
+.set-padding{
+    margin-left:5px;
+}
+.update-rec{
+    display:none;
+}

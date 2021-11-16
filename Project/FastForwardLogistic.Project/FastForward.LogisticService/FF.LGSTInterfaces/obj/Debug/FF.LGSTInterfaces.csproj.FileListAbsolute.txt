@@ -1,0 +1,7 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTInterfaces\bin\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTInterfaces\bin\Debug\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTInterfaces\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTInterfaces\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTInterfaces\obj\Debug\FF.LGSTInterfaces.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTInterfaces\obj\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTInterfaces\obj\Debug\FF.Interfaces.pdb

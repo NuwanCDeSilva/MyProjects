@@ -1,0 +1,360 @@
+﻿@model FF.BusinessObjects.Sales.RecieptHeader
+
+@{
+    ViewBag.Title = "Reciept Entry";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+<script src="~/Scripts/Common/RecieptEntry.js?@val"></script>
+<script src="~/Scripts/Common/Payment.js?@val"></script>
+}
+@section Styles {
+    <link href="~/Content/RecieptEntry.css?@val" rel="stylesheet" type="text/css" />
+}
+<div class="content-wrapper">
+
+
+    <section class="content-header">
+        <h1>
+            Receipt
+            <small>Entry</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active">Receipt</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content clearfix">
+        <!-- button container set begin -->
+        <div class="col-md-12 text-right btn-scroll-top ">
+            @*<button class="btn btn-sm process-status">
+                Status : Processing...
+            </button>*@
+            <!--Added by Chathura on 21-sep-2017-->
+            <p class="btn btn-sm btn-red-fullbg cancel-rec">
+                <i class="glyphicon glyphicon-ban-circle"></i>
+                Cancel
+            </p>
+            
+            <p class="btn btn-sm btn-green-fullbg save-rec">
+                <i class="glyphicon glyphicon-ok-circle"></i>
+                Save
+            </p>
+            <button class="btn btn-sm btn-green-fullbg update-rec">
+                <i class="glyphicon glyphicon-ok-circle"></i>
+                Update
+            </button>
+            <button class="btn btn-sm btn-blue-fullbg">
+                <i class="glyphicon glyphicon-print"></i>
+                Print
+            </button>
+
+
+            <button class="btn btn-sm btn-red-fullbg clear-rec">
+                <i class="glyphicon glyphicon-refresh"></i> Clear
+            </button>
+
+        </div>
+@using (Html.BeginForm(null,null, FormMethod.Post, new { enctype = "multipart/form-data", @id = "rec-data" }))
+{
+        <!-- button container set end-->
+        <div class="row">
+            <div class="col-lg-4">
+                <!-- customer details begin -->
+                <div class="box h182">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Receipt Entry</h3>
+                        <label class="app-text"></label>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Reciept Type</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Sar_receipt_type, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat recpt-typ-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Company</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Sar_com_cd, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.Logincompany, @readonly = "readonly" } })
+                                        @*<span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>*@
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Division</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Division", new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat division-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Profit Center</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.EditorFor(model => model.Sar_profit_center_cd, new { htmlAttributes = new { @class = "form-control", @Value = @ViewBag.Loginpc, @readonly = "readonly" } })
+                                        @*<span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>*@
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-8">
+                                <div class="form-group">
+                                    <label>Manual Ref</label>
+                                    @Html.EditorFor(model => model.Sar_manual_ref_no, new { htmlAttributes = new { @class = "form-control" } })
+                                </div>
+                            </div>
+
+
+                            
+
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+
+                                <div class="form-group">
+                                    <label>Date</label>
+
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        @Html.EditorFor(model => model.Sar_receipt_date, new { htmlAttributes = new { disabled = true, @class = "form-control pull-right datepic" } })
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                                <!-- /.form group -->
+
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+            </div>
+
+            <div class="col-lg-4">
+                <!-- contact details begin -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 id="cus_heading" class="box-title form-headding">&nbsp;</h3>
+                        <label class="app-text"></label>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row search-unallow-recpt">
+                            <div class="col-md-6 form-group set-padding">
+                                <div class="col-md-12">@Html.CheckBox("Unallow", false, new { htmlAttributes = new { @class = "form-control" } })<b> Unallocated Receipt</b></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Debtor Code</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.EditorFor(model => model.Sar_debtor_cd, new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-cust_search"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <table class="table table-bordered table-hover dataTable">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll823 have-scroll tbl-cus-name">
+                                            <tr>
+                                                <td></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Vehicle No / LC No</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("VehLcTel", new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat vehlcph-search"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Receipt No</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.EditorFor(model => model.Sar_receipt_no, new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat recpt-num-search"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+
+                </div>
+                <!-- /.box -->
+                <!-- contact details end -->
+
+
+            </div>
+
+            <div class="col-lg-4">
+
+                <!-- contact details begin -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Settlement Details</h3>
+                        <label class="app-text"></label>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row other-part-cls">
+                            <div class="col-md-6 form-group set-padding">
+                                <div class="col-md-12">@Html.CheckBox("OtherPcChk", false, new { htmlAttributes = new { @class = "form-control" } })<b> Other Type of Shipment</b></div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="form-group">
+                                    <label>Invoice No</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("InvoiceNo", new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat inv-no-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="col-md-7 padding-ls">
+                                <div class="col-md-6 padding-rls">
+                                    <div class="form-group">
+                                        <label>Amount</label>
+                                        <div class="input-group">
+                                            @Html.Editor("Ammountdup", new { htmlAttributes = new { disabled = true, @class = "form-control" } })
+                                          
+                                        </div>
+                                       
+                                    </div>
+
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-7 padding-ls">
+                                <div class="col-md-6 padding-rls">
+                                    <div class="form-group">
+                                        <label>Settle Amount</label>
+                                        <div class="input-group">
+                                            @Html.Editor("Ammount", new { htmlAttributes = new { @class = "form-control" } })
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                                <div class="col-md-1 padding-rls">
+                                    <label></label>
+                                    <input type="button" value="Add" class="btn btn-sm-min btn-green-fullbg add-inv-amount-btn">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settleInvoice">
+                            <table class="table table-bordered table-hover dataTable stlinv-table">
+                                <thead>
+                                    <tr>
+                                        <th style="width:50px;"> Invoice #</th>
+                                        <th style="width:36px;">Invoice Amount</th>
+                                        <th style="width:36px;">Settle Amount</th>
+                                        <th style="width:10px;"></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                                @*<tbody class="tbody-scroll-invln"></tbody>*@
+
+                            </table>
+                            
+                        </div>
+                        <div class="col-md-6 padding-rls unalow-unit">
+                            <label>Used :</label>
+                            <label class="usedamt">0.00</label>
+                        </div>
+                        <div class="col-md-6 padding-rls unalow-unit">
+                            <label>Balance :</label>
+                            <label class="balamt">0.00</label>
+
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+
+                </div>
+                <!-- /.box -->
+                <!-- contact details end -->
+
+
+            </div>
+
+            
+        </div>
+}
+        <div class="panel-sep row">
+            @Html.Partial("~/Views/Shared/_Payment.cshtml")
+        </div>
+        
+    </section>
+    <!-- end main section -->
+</div>
+<!-- /.content-wrapper -->

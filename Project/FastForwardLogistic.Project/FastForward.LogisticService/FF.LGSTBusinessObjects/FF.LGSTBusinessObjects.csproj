@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7ECE91BF-35DD-4FD7-9626-91BFE628CA9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FF.BusinessObjects</RootNamespace>
+    <AssemblyName>FF.BusinessObjects</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\..\FastForward.Logistic\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Simplify.Resources">
+      <HintPath>..\..\FastForward.Logistic\packages\Simplify.Resources.1.0.0\lib\net40\Simplify.Resources.dll</HintPath>
+    </Reference>
+    <Reference Include="Simplify.Windows.Forms, Version=1.0.0.0, Culture=neutral, PublicKeyToken=76e7d56d397d79b9, processorArchitecture=MSIL">
+      <HintPath>..\..\FastForward.Logistic\packages\Simplify.Windows.Forms.1.0.0\lib\net40\Simplify.Windows.Forms.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.PSD, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\FastForward.Logistic\packages\System.Drawing.PSD.0.1.0\lib\net40\System.Drawing.PSD.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowFormExtended, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\FastForward.Logistic\packages\WindowFormExtended.1.0.0\lib\WindowFormExtended.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Genaral\BLData.cs" />
+    <Compile Include="Genaral\BL_DOC_NO.cs" />
+    <Compile Include="Genaral\CustomerBasicData.cs" />
+    <Compile Include="Genaral\custype.cs" />
+    <Compile Include="Genaral\cus_code_api.cs" />
+    <Compile Include="Genaral\cus_details.cs" />
+    <Compile Include="Genaral\cus_invoices.cs" />
+    <Compile Include="Genaral\FTW_VEHICLE_NO.cs" />
+    <Compile Include="Genaral\GET_CUS_BASIC_DATA.cs" />
+    <Compile Include="Genaral\HBLSelectedData.cs" />
+    <Compile Include="Genaral\HouseBLAll.cs" />
+    <Compile Include="Genaral\InvoiceCom.cs" />
+    <Compile Include="Genaral\MainServices.cs" />
+    <Compile Include="Genaral\MasterAutoNumber.cs" />
+    <Compile Include="Genaral\MasterExchangeRate.cs" />
+    <Compile Include="Genaral\mst_busentity_grup.cs" />
+    <Compile Include="Genaral\mst_bus_entity_tp.cs" />
+    <Compile Include="Genaral\MST_COM.cs" />
+    <Compile Include="Genaral\mst_country.cs" />
+    <Compile Include="Genaral\mst_country_low.cs" />
+    <Compile Include="Genaral\MST_CUR.cs" />
+    <Compile Include="Genaral\Mst_empcate.cs" />
+    <Compile Include="Genaral\MST_EMPLOYEES.cs" />
+    <Compile Include="Genaral\MST_SHIPMENTS.cs" />
+    <Compile Include="Genaral\MST_TITLE.cs" />
+    <Compile Include="Genaral\OutSMS.cs" />
+    <Compile Include="Genaral\OptionId_Details.cs" />
+    <Compile Include="Genaral\PendingServiceRequest.cs" />
+    <Compile Include="Genaral\PortAgentDet.cs" />
+    <Compile Include="Genaral\ROLE_MENU_BRID.cs" />
+    <Compile Include="Genaral\trn_bl_cont_det.cs" />
+    <Compile Include="Genaral\trn_bl_det.cs" />
+    <Compile Include="Genaral\trn_bl_header.cs" />
+    <Compile Include="Genaral\trn_jb_cus_det.cs" />
+    <Compile Include="Genaral\trn_jb_hdr.cs" />
+    <Compile Include="Genaral\trn_job_serdet.cs" />
+    <Compile Include="Genaral\TRN_MOD_MAX_APPLVL.cs" />
+    <Compile Include="Genaral\trn_req_cus_det.cs" />
+    <Compile Include="Genaral\trn_req_hdr.cs" />
+    <Compile Include="Genaral\trn_req_serdet.cs" />
+    <Compile Include="Genaral\UsersRoleData.cs" />
+    <Compile Include="Genaral\USER_COMPANY_LIST.cs" />
+    <Compile Include="Genaral\USER_ROLE.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Sales\BlackListCustomers.cs" />
+    <Compile Include="Sales\CUSTOMER_SALES.cs" />
+    <Compile Include="Sales\FTW_MES_TP.cs" />
+    <Compile Include="Sales\GiftVoucherPages.cs" />
+    <Compile Include="Sales\LogMasterItemTax.cs" />
+    <Compile Include="Sales\LoyaltyMemeber.cs" />
+    <Compile Include="Sales\LoyaltyPointRedeemDefinition.cs" />
+    <Compile Include="Sales\MasterItem.cs" />
+    <Compile Include="Sales\MasterItemTax.cs" />
+    <Compile Include="Sales\MasterOutsideParty.cs" />
+    <Compile Include="Sales\MasterReceiptDivision.cs" />
+    <Compile Include="Sales\MST_BUSENTITY.cs" />
+    <Compile Include="Sales\mst_item_tax.cs" />
+    <Compile Include="Search\MST_DEPARTMENT.cs" />
+    <Compile Include="Search\MST_DESIGNATION.cs" />
+    <Compile Include="Search\MST_USERS.cs" />
+    <Compile Include="Sales\MST_VESSEL.cs" />
+    <Compile Include="Sales\PaymentType.cs" />
+    <Compile Include="Sales\PayReqUploads.cs" />
+    <Compile Include="Sales\PetyCashUpload.cs" />
+    <Compile Include="Sales\RecieptHeader.cs" />
+    <Compile Include="Sales\RecieptItem.cs" />
+    <Compile Include="Sales\sat_hdr.cs" />
+    <Compile Include="Sales\sat_itm.cs" />
+    <Compile Include="Sales\SEARCH_INVOICE_BAL.cs" />
+    <Compile Include="Sales\SunAccountall.cs" />
+    <Compile Include="Sales\SUNINVHDR.cs" />
+    <Compile Include="Sales\SunLC.cs" />
+    <Compile Include="Sales\SUNRECIEPTHDR.cs" />
+    <Compile Include="Sales\SUN_JURNAL.cs" />
+    <Compile Include="Sales\Sun_pc.cs" />
+    <Compile Include="Sales\trn_inv_det.cs" />
+    <Compile Include="Sales\trn_inv_hdr.cs" />
+    <Compile Include="Sales\trn_inv_itmtax.cs" />
+    <Compile Include="Sales\TRN_JOB_COST.cs" />
+    <Compile Include="Sales\TRN_PETTYCASH_REQ_DTL.cs" />
+    <Compile Include="Sales\TRN_PETTYCASH_SETTLE_DTL.cs" />
+    <Compile Include="Sales\TRN_PETTYCASH_SETTLE_HDR.cs" />
+    <Compile Include="Search\BL_NUM_SEARCH_DBL.cs" />
+    <Compile Include="Search\BL_NUM_SEARCH_MBL.cs" />
+    <Compile Include="Search\CONS_SEARCH_HEAD.cs" />
+    <Compile Include="Sales\MST_EMP.cs" />
+    <Compile Include="Sales\MST_PROFIT_CENTER.cs" />
+    <Compile Include="Sales\MST_REQ_TYPE.cs" />
+    <Compile Include="Sales\TRN_PETTYCASH_REQ_HDR.cs" />
+    <Compile Include="Search\BL_NUM_SEARCH.cs" />
+    <Compile Include="Search\ComboBoxObject.cs" />
+    <Compile Include="Search\EntityType.cs" />
+    <Compile Include="Search\FIELD_SEARCH.cs" />
+    <Compile Include="Search\FIELD_SEARCH2.cs" />
+    <Compile Include="Search\FIELD_SEARCH_DF.cs" />
+    <Compile Include="Search\FIELD_SEARCH_DF_HBL.cs" />
+    <Compile Include="Search\FTW_VEHICLE_NO_SEARCH.cs" />
+    <Compile Include="Search\Job_No_Search.cs" />
+    <Compile Include="Search\JOB_NUM_SEARCH.cs" />
+    <Compile Include="Search\CustomerSearchObject.cs" />
+    <Compile Include="Sales\MST_COST_ELEMENT.cs" />
+    <Compile Include="Search\MST_BANKACC_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_BUSCOM_BANKBRANCH_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_BUSCOM_BANK_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_COM_SEARCH.cs" />
+    <Compile Include="Search\MST_COST_ELEMENT_SEARCH.cs" />
+    <Compile Include="Search\MST_COUNTRY_SEARCH.cs" />
+    <Compile Include="Search\MST_CUR_SEARCH.cs" />
+    <Compile Include="Search\MST_CUS_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_DISTRICT_SEARCH.cs" />
+    <Compile Include="Search\MST_DIVISION_SEARCH.cs" />
+    <Compile Include="Search\MST_EMPLOYEE_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_MS_SEARCH.cs" />
+    <Compile Include="Search\MST_PC_SEARCH.cs" />
+    <Compile Include="Search\MST_PROVINCE_SEARCH.cs" />
+    <Compile Include="Search\MST_RECEIPT_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_RECEIPT_TYPE_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_TOWN_SEARCH_HEAD.cs" />
+    <Compile Include="Search\MST_USERROLEID_SEARCH.cs" />
+    <Compile Include="Search\PAY_TP_SEARCH.cs" />
+    <Compile Include="Search\Pay_type.cs" />
+    <Compile Include="Search\PETTYCASH_SETTLE_SEARCH.cs" />
+    <Compile Include="Search\SEARCH_INVOICE.cs" />
+    <Compile Include="Search\SEARCH_MESURE_TP.cs" />
+    <Compile Include="Search\PETTYCASH_REQHDR_SRCHHED.cs" />
+    <Compile Include="Search\SEARCH_PORT.cs" />
+    <Compile Include="Search\SEARCH_VESSEL.cs" />
+    <Compile Include="Search\USER_SEARCH.cs" />
+    <Compile Include="Security\SystemUserChannel.cs" />
+    <Compile Include="Search\TYPE_OF_SHIPMENT.cs" />
+    <Compile Include="Search\UOM_SEARCH.cs" />
+    <Compile Include="Security\LoginUser.cs" />
+    <Compile Include="Security\MasterCompany.cs" />
+    <Compile Include="Security\MasterDepartment.cs" />
+    <Compile Include="Security\MasterLocation.cs" />
+    <Compile Include="Security\MasterProfitCenter.cs" />
+    <Compile Include="Security\PriceDefinitionRef.cs" />
+    <Compile Include="Security\SecurityPolicy.cs" />
+    <Compile Include="Security\SEC_SYSTEM_MENU.cs" />
+    <Compile Include="Security\SEC_SYS_ROLE.cs" />
+    <Compile Include="Security\SEC_USER_ROLE_MENU.cs" />
+    <Compile Include="Security\SystemUser.cs" />
+    <Compile Include="Security\SystemUserCompany.cs" />
+    <Compile Include="Security\SystemUserLoc.cs" />
+    <Compile Include="Security\SystemUserProf.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

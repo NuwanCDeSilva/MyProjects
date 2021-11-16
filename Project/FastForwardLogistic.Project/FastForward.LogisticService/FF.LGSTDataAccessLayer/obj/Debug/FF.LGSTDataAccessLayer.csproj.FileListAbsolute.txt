@@ -1,0 +1,8 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\bin\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\bin\Debug\FF.DataAccessLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\bin\Debug\Oracle.DataAccess.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\obj\Debug\FF.LGSTDataAccessLayer.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\obj\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTDataAccessLayer\obj\Debug\FF.DataAccessLayer.pdb

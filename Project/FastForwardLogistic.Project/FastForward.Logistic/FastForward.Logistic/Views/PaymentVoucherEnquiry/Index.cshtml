@@ -1,0 +1,197 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section scripts
+{
+    @*<script src="~/Scripts/Common/PaymentVoucherEnquiry.js"></script>*@
+    <script src="~/Scripts/Common/PaymentVoucherEnquiry.js?@val"></script>
+}
+
+<div class="content-wrapper">
+    <section class="content-header">
+        <h1>
+            Payment Voucher Enquiry
+            <small>Form</small>
+        </h1>
+    </section>
+    <!-- Main content -->
+    <section class="content clearfix">
+        @using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data", @id = "InvEnquiry-frm" }))
+        {
+            <!-- button container set end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- customer details begin -->
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Searching Parameters</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>From Date</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            @Html.Editor("FrmDate", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>To Date</label>
+                                        <div class="input-group date">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar"></i>
+                                            </div>
+                                            @Html.Editor("ToDate", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>By Request No</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("RequestNo", new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.Editor("RequestSeq", new { htmlAttributes = new { @class = "form-control hide" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat search-Req-no"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="form-group">
+                                        <label>By Job No</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("JobNo", new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-job-search"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>By Man. Ref. No</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("man_ref_no", new { htmlAttributes = new { @class = "form-control" } })
+                                            @*<span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat search-Ref-no"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>*@
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                    <div class="form-group">
+                                        <label>By Profit Center</label>
+                                        <div class="input-group input-group-sm">
+                                            @Html.Editor("ProfitCenter", new { htmlAttributes = new { @class = "form-control" } })
+                                            <span class="input-group-btn">
+                                                <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-pro-cnt"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-2" style="padding-top:10px">
+                                    <input type="button" class="btn btn-sm btn-ash-fullbg search-list" value="Search" />
+                                    <input type="button" class="btn btn-sm btn-ash-fullbg clear-data" value="Clear" />
+                                </div>
+                                <!-- /.col -->
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+
+        <!-- button container set end-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- customer details begin -->
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Voucher Header</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered table-hover dataTable Vou-Enquiry-Hdr">
+                                        <thead>
+                                            <tr>
+                                                <th>Req. No</th>
+                                                <th>Req. Date</th>
+                                                <th>Man. Ref No</th>
+                                                <th>Profit Center</th>
+                                                <th>Req. By</th>
+                                                <th>Job No</th>
+                                                <th>Status</th>
+                                                <th>Pay to</th>
+                                                <th></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll222"></tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+
+                    <div class="box">
+                        <div class="box-header with-border">
+                            <h3 class="box-title form-headding">Voucher Details</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                            </div>
+                        </div>
+                        <!-- /.box-header -->
+                        <div class="box-body">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <table class="table table-bordered table-hover dataTable Vou-Enquiry-Dtl">
+                                        <thead>
+                                            <tr>
+                                                <th>Line No</th>
+                                                <th>Element Code</th>
+                                                <th>Description</th>
+                                                <th>Currency Code</th>
+                                                <th>Amount</th>
+                                                <th>Comments</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="tbody-scroll"></tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                            <!-- /.row -->
+                        </div>
+                        <!-- /.box-body -->
+                    </div>
+                    <!-- /.box -->
+                </div>
+            </div>
+        }
+    </section>
+    <!-- end main section -->
+</div>
+<!-- /.content-wrapper -->

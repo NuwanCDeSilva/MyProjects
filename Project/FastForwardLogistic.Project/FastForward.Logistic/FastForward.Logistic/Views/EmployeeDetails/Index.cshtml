@@ -1,0 +1,395 @@
+﻿@model FF.BusinessObjects.Sales.MST_EMP
+
+@{
+    ViewBag.Title = "Employee Creation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+@section Scripts
+{
+    @*<script src="~/Scripts/Common/EmployeeDetails.js"></script>*@
+    <script src="~/Scripts/Common/EmployeeDetails.js?@val"></script>
+}
+
+<div class="content-wrapper">
+
+    <section class="content-header text-left">
+        <h1>
+            Employee Creation
+            @*<small>Form</small>*@
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="/Home"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active"> Employee Creation</li>
+        </ol>
+    </section>
+
+    <!-- Main content -->
+    <section class="content clearfix">
+
+        <!-- button container set begin -->
+        <div class="col-md-12 text-right btn-scroll-top ">
+            <button class="btn btn-sm btn-green-fullbg btn-emp-save-data">
+                <i class="glyphicon glyphicon-ok-circle"></i>Save
+            </button>
+            <button class="btn btn-sm btn-ash-fullbg btn-emp-update-data">
+                <i class="glyphicon glyphicon-pencil"></i> Update
+            </button>
+
+            <button class="btn btn-sm btn-red-fullbg btn-emp-clear-data">
+                <i class="glyphicon glyphicon-refresh"></i> Clear
+            </button>
+        </div>
+@using (Html.BeginForm("EmployeeCreation", "EmployeeDetails", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { enctype = "multipart/form-data", @id = "emply-crte-frm" }))
+{ 
+        <!-- button container set end-->
+        <!-- left side begin-->
+        <form id="emply-crte-frm">
+            <div class="col-lg-6">
+                <!-- customer details begin -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Employee Details</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Employee Code</label>
+                                    <div class="input-group input-group-sm">
+                                        @*<input type="text" name="cus_type" id="custp_id" class="form-control">*@
+                                        @Html.EditorFor(m => m.ESEP_EPF, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default emp-cd-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Employee Title</label>
+                                    
+                                        @*<input type="text" name="MBE_CD" id="cuscd_id" class="form-control">*@
+                                        @*@Html.EditorFor(m => m.MEMP_TITLE, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })*@
+                                        @*@Html.DropDownListFor(m => m.ESEP_TITLE, new List<SelectListItem>(), "Title", new { @class = "form-control cus-typ-dropdown" })*@
+                                        @Html.DropDownListFor(m => m.ESEP_TITLE, new List<SelectListItem> { new SelectListItem { Value = "Mr.", Text = "Mr." }, new SelectListItem { Value = "Miss.", Text = "Miss." }, new SelectListItem { Value = "Mrs.", Text = "Mrs." }, new SelectListItem { Value = "Dr.", Text = "Dr." }, new SelectListItem { Value = "Ms.", Text = "Ms." } }, null, new { @class = "form-control cus-act-dropdown" })
+                                        @*<span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default cus-cd-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>*@
+                                    
+
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>First Name</label>
+                                    @*<input type="text" name="cus_name" id="cusnm_id" class="form-control" placeholder="Enter ...">*@
+                                    @Html.EditorFor(m => m.ESEP_FIRST_NAME, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "64" } })
+                                </div>
+                                <!-- /.form-group -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Last Name</label>                                 
+                                        @*<input type="text" name="br-code" id="cusbr_id" class="form-control">*@
+                                        @Html.EditorFor(m => m.ESEP_LAST_NAME, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "20" } })
+
+                                        @*@Html.EditorFor(m => m.MBE_BR_NO, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })*@
+                                </div>
+                            </div>
+                            <!-- /.col -->
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Address Line1</label>
+                                    @*<input type="text" name="tin-code" id="custin_id" class="form-control" placeholder="Enter ...">*@
+                                    @Html.EditorFor(m => m.ESEP_LIVING_ADD_1, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "64" } })
+                                </div>
+                            </div>
+                            <!-- /.col -->
+
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Address Line2</label>
+                                    
+                                        @*<input type="text" name="dl_no" id="cusdl_id" class="form-control">*@
+                                        @Html.EditorFor(m => m.ESEP_LIVING_ADD_2, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                        @*<span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default cus-dl-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>*@
+                                    
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Mobile</label>
+                                    
+                                        @*<input type="text" name="nic" id="cusnic_id" class="form-control">*@
+                                        @Html.EditorFor(m => m.ESEP_MOBI_NO, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "12" } })
+                                    
+                                </div>
+
+
+                                <!-- /.form-group -->
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Emp. Type</label>
+                                        @*<input type="text" name="pass_no" id="cuspp_id" class="form-control">*@
+                                        @*@Html.EditorFor(m => m.MEMP_CAT_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })*@
+                                        @Html.DropDownListFor(m => m.ESEP_CAT_CD, new List<SelectListItem>(), "Type", new { @class = "form-control emp-type-dropdown" })
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+                <!-- customer details begin -->
+                <!-- tax details begin -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Driver Details</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Driving Licence No</label>
+                                <div class="form-group margin-top5">
+                                    @Html.EditorFor(m => m.ESEP_DL_NO, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                    
+                                    @*@Html.CheckBoxFor(model => model.MBE_IS_TAX, new { htmlAttributes = new { @class = "form-control" } })*@
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- /.col -->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>License issue Date</label>
+                                @*<input type="text" name="tax-range" id="custaxrg_id" class="form-control" placeholder="Enter ...">*@
+                                @*@Html.EditorFor(m => m.MBE_TAX_NO, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })*@
+                                @Html.EditorFor(m => m.ESEP_DL_ISSDT, new { htmlAttributes = new { @class = "form-control pull-right datepic", maxlength = "12" } })
+                            </div>
+
+                        </div>
+                        <!-- /.col -->
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>License Exp Date</label>
+                                @*<input type="text" name="svat" id="cussvat_id" class="form-control" placeholder="Enter ...">*@
+                                <div class="form-group margin-top5">
+                                @*@Html.CheckBox("cussvat_id", new { @checked = "checked" })*@
+                                @*@Html.CheckBoxFor(m => m.MBE_IS_SVAT, new { htmlAttributes = new { @class = "form-control" } })*@
+                                    @Html.EditorFor(m => m.ESEP_DL_EXPDT, new { htmlAttributes = new { @class = "form-control pull-right datepic", maxlength = "12" } })
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.col -->
+
+
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Driver Class</label>
+                                @*<input type="text" name="svatcode" id="cussvatcd_id" class="form-control" placeholder="Enter ...">*@
+                                @Html.EditorFor(m => m.ESEP_DL_CLASS, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                            </div>
+                        </div>
+                        <!-- /.col -->
+                        @*<div class="col-md-4">
+                            <div class="form-group">
+                                <label>Tax Excepted</label>
+                                <div class="form-group margin-top5">
+                                    @Html.CheckBox("custaxex_id", new { @checked = "checked" })*@
+                                    @*@Html.CheckBoxFor(m => m.MBE_TAX_EX, new { htmlAttributes = new { @class = "form-control" } })*@
+                                @*</div>
+                            </div>
+                        </div>*@
+                        @*<div class="col-md-4">
+                             /.form-group 
+                            <div class="form-group">
+                                <label>Currency</label>
+                                <div class="input-group input-group-sm">
+                                    @Html.Editor("Currency", new { htmlAttributes = new { @class = "form-control" } })*@
+                                    @*@Html.EditorFor(m => m.MBE_CUR_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })*@
+                                    @*<span class="input-group-btn">
+                                        <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat curency-search"><i class="glyphicon glyphicon-search"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                             /.form-group 
+                        </div>*@
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+                <!-- tax details end -->
+                <!-- segmentation begin -->
+                @*<div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Segmentation</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <textarea class="form-control" id="cusseg_id" rows="5"></textarea>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+                </div>*@
+                <!-- /.box -->
+                <!-- segmentation end -->
+            </div>
+            <!-- left side end-->
+            <!-- right side begin-->
+            <div class="col-lg-6">
+                <!-- customer details begin -->
+                <div class="box">
+                    <div class="box-header with-border">
+                        <h3 class="box-title form-headding">Basic Details</h3>
+                        <div class="box-tools pull-right">
+                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                        </div>
+                    </div>
+                    <!-- /.box-header -->
+                    <div class="box-body">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Active</label>
+                                    
+                                        @*@Html.Editor("country", new { htmlAttributes = new { @class = "form-control" } })*@
+                                        @*@Html.EditorFor(m => m.MEMP_ACT, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })*@
+                                        @Html.DropDownListFor(m => m.ESEP_ACT, new List<SelectListItem> { new SelectListItem { Value = "1", Text = "Active" }, new SelectListItem { Value = "0", Text = "Deactive" } }, null, new { @class = "form-control cus-act-dropdown" })
+                                    
+                                    @*@Html.DropDownListFor(m => m.mcu_desc, new List<SelectListItem>(), "Type", new { @class = "form-control emp-type-dropdown" })*@
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>NIC</label>
+                                    @*<input type="text" name="email" id="cusemail_id" class="form-control" placeholder="Enter ...">*@
+                                    @Html.EditorFor(m => m.ESEP_NIC, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>DOB</label>
+                                    @*<input type="text" name="mob" id="cusmob_id" class="form-control" placeholder="Enter ...">*@
+                                    @Html.EditorFor(m => m.ESEP_DOB, new { htmlAttributes = new { @class = "form-control pull-right datepic", maxlength = "12" } })
+
+                                </div>
+                            </div>
+                            <!-- /.col -->
+                            <div class="col-md-4">
+                                <!-- /.form-group -->
+                                <div class="form-group">
+                                    <label>Date Of Join</label>
+                                    @*<input type="text" name="address" id="cusadd_id" class="form-control input-lg" placeholder="Enter ...">*@
+                                    @Html.EditorFor(m => m.ESEP_DOJ, new { htmlAttributes = new { @class = "form-control pull-right datepic", maxlength = "20" } })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    @*<input type="text" name="town" id="custwn_id" class="form-control" placeholder="Enter ...">*@
+                                        @*@Html.Editor("town", new { htmlAttributes = new { @class = "form-control" } })*@
+                                        @Html.EditorFor(m => m.ESEP_TEL_HOME_NO, new { htmlAttributes = new { @class = "form-control required-field", maxlength = "30" } })
+                                    @*@Html.EditorFor(m => m.MBE_TOWN_CD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "30" } })*@
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Email</label>
+                                    @*<input type="text" name="dist" id="curdist_id" class="form-control" placeholder="Enter ...">*@
+                                    @*@Html.Editor("Mbe_distric_cd", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })*@
+                                    @Html.EditorFor(m => m.ESEP_EMAIL, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Emp. Source</label>
+                                    @*<input type="text" name="province" id="cuspro_id" class="form-control" placeholder="Enter ...">*@
+                                    @*@Html.Editor("Province", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })*@
+                                    @*@Html.EditorFor(m => m.MEMP_CAT_SUBCD, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "20" } })*@
+                                    @Html.DropDownListFor(m => m.ESEP_CAT_SUBCD, new List<SelectListItem> { new SelectListItem { Text = "Company", Value = "Company" }, new SelectListItem { Text = "External", Value = "External" } }, null, new { @class = "form-control source-dropdown" })
+                                </div>
+                            </div>
+                            @*<div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Emp. Cost</label>*@
+                                    @*<input type="text" name="web" id="cusweb_id" class="form-control" placeholder="Enter ...">*@
+                                    @*@Html.EditorFor(m => m.MEMP_COST, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "40" } })
+                                </div>
+                            </div>*@
+                            <!-- /.col -->
+                            @*<div class="col-md-4">--------------------------
+                                <div class="form-group">
+                                    <label>Phone</label>
+                                    <div class="input-group input-group-sm">
+                                        <input type="text" name="phone" id="cusphn_id" class="form-control">*@
+                                        @*@Html.EditorFor(m => m.MBE_TEL, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "12" } })*@
+                                        @*<span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default cus-tel-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>----------------------------------------
+                            </div>*@
+                            <!-- /.col -->
+                            <!-- /.col -->
+                            <!-- /.form-group -->
+                            @*<div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Conact Person</label>
+                                    <input type="text" name="contact-person" id="cuscntctper_id" class="form-control" placeholder="Enter ...">*@
+                                    @*@Html.EditorFor(m => m.MBE_FAX, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "40" } })*@
+                                @*</div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Fax</label>
+                                    <input name="fax" type="text" id="cusfax_id" class="form-control" placeholder="Enter ...">*@
+                                    @*@Html.EditorFor(m => m.MBE_FAX, new { htmlAttributes = new { @class = "form-control with-search required-field", maxlength = "40" } })*@
+                                @*</div>-----------------------------
+                            </div>*@
+                        </div>
+                        <!-- /.row -->
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+                <!-- /.box -->
+                <!-- contact details end -->
+                <!-- /.box -->
+
+                    <!-- /.box -->
+                </div>
+            </form>
+}
+
+            <!-- right side end-->
+        </section>
+        <!-- end main section -->
+    </div>
+    <!-- /.content-wrapper -->

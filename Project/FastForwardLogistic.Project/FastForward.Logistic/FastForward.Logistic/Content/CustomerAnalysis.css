@@ -1,0 +1,185 @@
+﻿.parentdv .mnutlt {
+    width:100%;
+}
+#sale-model-content {
+    width: 950px;
+    height: 455px;
+    margin: 0px auto;
+}
+
+.modal-dialog {
+/*width:100%;*/
+}
+
+.no-padding{
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.gap {
+    border:2px solid #fff;
+}
+
+#tempbtn {
+background:#ccc !important;
+}
+.fixwidth {
+    float: left;
+    width: 137px;
+}
+.row.filterval-cls {
+    margin-top: 42px;
+}
+
+.send-sms {
+    padding: 0px 4px;
+    font-size: 11px;
+    line-height: 1.5;
+    border-radius: 10px;
+    background: #479c87;
+    color: #fff;
+}
+
+.modal-body {
+    position: relative;
+    padding: 8px 20px;
+}
+
+.modal-header {
+    padding: 10px 15px;
+}
+.send-sms :hover {
+    background: #4dcbac;
+}
+    .result-display-tbl th, .result-display-tbl-all th {
+        background-color: #C296C3;
+        color: #333;
+        font-size: 12px;
+        font-weight: 500;
+        text-align: left;
+    }
+.result-tbl .new-row {
+    font-size: 10px;
+}
+.result-tbl .table thead > tr > th,.result-tbl .table tbody > tr > th,.result-tbl .table tfoot > tr > th,.result-tbl .table thead > tr > td,.result-tbl .table tbody > tr > td,.result-tbl .table tfoot > tr > td {
+    border: 3px solid #fff;
+    line-height: 1.42857;
+    padding: 5px;
+    vertical-align: top;
+}
+.result-tbl tr.new-row:nth-child(even)
+{
+    background-color: #f2f2f2;
+}
+.btn.btn-default-style.export-btn {
+    display: none;
+    float: right;
+}
+.display-nonecls{
+    display:none;
+}
+.result-tbl-with-py{
+    display:none;
+}
+.result-tbl-with-py,.result-tbl {
+    height: 320px;
+    overflow-y: scroll;
+}
+.pagination.bootpag {
+    font-size: 9px;
+}
+.pagination.bootpag a{
+    padding: 7px;
+}
+
+.pagination {
+    display: inline-block;
+    padding-left: 0;
+    margin: 0px 0;
+    border-radius: 4px;
+}
+
+.pmain {
+    width:70%;display:inline
+}
+.pagem {
+width:30%;display:inline;float:right;
+}
+
+.topmarg5 {
+margin-top:0.5%;
+}
+.closebtn {
+cursor: pointer;
+font-weight: bold;
+color: black;
+font-size: 18px;
+margin-left: 15px;
+}
+
+.closebtn:hover {
+    color: #000;
+}
+
+.line-height-43{
+    line-height: 43px;
+}
+
+.float-right {
+float:right;
+}
+
+#wrapper {
+    padding-left: 0px;
+}
+    label {
+font-size:11px;
+}
+.line-height-14 {
+line-height: 14px;
+}
+
+.txt-blue {
+color:#184ab0 !important;
+}
+.fixed-label {
+min-width:145px;
+}
+
+.new-btn-padding {
+padding: 3px 6px!important;
+}
+b {
+font-size:10px;
+}
+.text-c {
+    color: #a59b9b;
+    font-weight: 600;
+}
+
+.mah_home_btn {
+    background-color: transparent;
+    border-color: transparent;
+    width: 100%;
+}
+
+.mah_home {
+    background-color: transparent;
+    float: left;
+}
+    .text-d{
+line-height: 26px;
+}
+.no-display{
+    display:none;
+}
+
+.margin-bottom-1 {
+margin-bottom:1%;
+}
+#sale-model-content{
+    float:none!important;
+}
+#salesReportModel .modal-dialog,#salesReportModelinv .modal-dialog{
+    width: 74%;
+}

@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<Awbolds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Master_bol>
+    <Customs_office_code>@cusofcd</Customs_office_code>
+    <Voyage_number>@vygno</Voyage_number>
+    <Date_of_departure>@dteofdp</Date_of_departure>
+    <Reference_number>@refnum</Reference_number>
+  </Master_bol>
+  @segmant
+</Awbolds>

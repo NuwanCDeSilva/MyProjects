@@ -1,0 +1,17 @@
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.LGSTService.Sales.exe.config
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.LGSTService.Sales.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.LGSTService.Sales.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.BusinessLogicLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.Interfaces.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.BusinessObjects.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.DataAccessLayer.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\Oracle.DataAccess.dll
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.BusinessLogicLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.Interfaces.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.BusinessObjects.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\bin\Debug\FF.DataAccessLayer.pdb
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\obj\Debug\FF.LGSTService.Sales.csprojResolveAssemblyReference.cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\obj\Debug\FF.LGSTService.Sales.ProjectInstaller.resources
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\obj\Debug\FF.LGSTService.Sales.csproj.GenerateResource.Cache
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\obj\Debug\FF.LGSTService.Sales.exe
+D:\Abans Projects\Workspace1\FastForwardERP.Project\FastForwardLogistic.Project\FastForward.LogisticService\FF.LGSTService.Sales\obj\Debug\FF.LGSTService.Sales.pdb

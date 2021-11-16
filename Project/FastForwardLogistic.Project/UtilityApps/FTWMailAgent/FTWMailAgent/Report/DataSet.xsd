@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DataSet" targetNamespace="http://tempuri.org/DataSet.xsd" xmlns:mstns="http://tempuri.org/DataSet.xsd" xmlns="http://tempuri.org/DataSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet" msprop:Generator_UserDSName="DataSet">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="PENSETDET" msprop:Generator_TableClassName="PENSETDETDataTable" msprop:Generator_TableVarName="tablePENSETDET" msprop:Generator_TablePropName="PENSETDET" msprop:Generator_RowDeletingName="PENSETDETRowDeleting" msprop:Generator_RowChangingName="PENSETDETRowChanging" msprop:Generator_RowEvHandlerName="PENSETDETRowChangeEventHandler" msprop:Generator_RowDeletedName="PENSETDETRowDeleted" msprop:Generator_UserTableName="PENSETDET" msprop:Generator_RowChangedName="PENSETDETRowChanged" msprop:Generator_RowEvArgName="PENSETDETRowChangeEvent" msprop:Generator_RowClassName="PENSETDETRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="TPRH_REQ_NO" msprop:Generator_ColumnVarNameInTable="columnTPRH_REQ_NO" msprop:Generator_ColumnPropNameInRow="TPRH_REQ_NO" msprop:Generator_ColumnPropNameInTable="TPRH_REQ_NOColumn" msprop:Generator_UserColumnName="TPRH_REQ_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="TPRH_MANUAL_REF" msprop:Generator_ColumnVarNameInTable="columnTPRH_MANUAL_REF" msprop:Generator_ColumnPropNameInRow="TPRH_MANUAL_REF" msprop:Generator_ColumnPropNameInTable="TPRH_MANUAL_REFColumn" msprop:Generator_UserColumnName="TPRH_MANUAL_REF" type="xs:string" minOccurs="0" />
+              <xs:element name="TPRH_REQ_DT" msprop:Generator_ColumnVarNameInTable="columnTPRH_REQ_DT" msprop:Generator_ColumnPropNameInRow="TPRH_REQ_DT" msprop:Generator_ColumnPropNameInTable="TPRH_REQ_DTColumn" msprop:Generator_UserColumnName="TPRH_REQ_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="TPRH_REMARKS" msprop:Generator_ColumnVarNameInTable="columnTPRH_REMARKS" msprop:Generator_ColumnPropNameInRow="TPRH_REMARKS" msprop:Generator_ColumnPropNameInTable="TPRH_REMARKSColumn" msprop:Generator_UserColumnName="TPRH_REMARKS" type="xs:string" minOccurs="0" />
+              <xs:element name="MRT_DESC" msprop:Generator_ColumnVarNameInTable="columnMRT_DESC" msprop:Generator_ColumnPropNameInRow="MRT_DESC" msprop:Generator_ColumnPropNameInTable="MRT_DESCColumn" msprop:Generator_UserColumnName="MRT_DESC" type="xs:string" minOccurs="0" />
+              <xs:element name="PENDAYS" msprop:Generator_ColumnVarNameInTable="columnPENDAYS" msprop:Generator_ColumnPropNameInRow="PENDAYS" msprop:Generator_ColumnPropNameInTable="PENDAYSColumn" msprop:Generator_UserColumnName="PENDAYS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="FILTER" msprop:Generator_TableClassName="FILTERDataTable" msprop:Generator_TableVarName="tableFILTER" msprop:Generator_TablePropName="FILTER" msprop:Generator_RowDeletingName="FILTERRowDeleting" msprop:Generator_RowChangingName="FILTERRowChanging" msprop:Generator_RowEvHandlerName="FILTERRowChangeEventHandler" msprop:Generator_RowDeletedName="FILTERRowDeleted" msprop:Generator_UserTableName="FILTER" msprop:Generator_RowChangedName="FILTERRowChanged" msprop:Generator_RowEvArgName="FILTERRowChangeEvent" msprop:Generator_RowClassName="FILTERRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="COM" msprop:Generator_ColumnVarNameInTable="columnCOM" msprop:Generator_ColumnPropNameInRow="COM" msprop:Generator_ColumnPropNameInTable="COMColumn" msprop:Generator_UserColumnName="COM" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PENINV" msprop:Generator_TableClassName="PENINVDataTable" msprop:Generator_TableVarName="tablePENINV" msprop:Generator_RowChangedName="PENINVRowChanged" msprop:Generator_TablePropName="PENINV" msprop:Generator_RowDeletingName="PENINVRowDeleting" msprop:Generator_RowChangingName="PENINVRowChanging" msprop:Generator_RowEvHandlerName="PENINVRowChangeEventHandler" msprop:Generator_RowDeletedName="PENINVRowDeleted" msprop:Generator_RowClassName="PENINVRow" msprop:Generator_UserTableName="PENINV" msprop:Generator_RowEvArgName="PENINVRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SAH_INV_NO" msprop:Generator_ColumnVarNameInTable="columnSAH_INV_NO" msprop:Generator_ColumnPropNameInRow="SAH_INV_NO" msprop:Generator_ColumnPropNameInTable="SAH_INV_NOColumn" msprop:Generator_UserColumnName="SAH_INV_NO" type="xs:string" minOccurs="0" />
+              <xs:element name="SAH_DT" msprop:Generator_ColumnVarNameInTable="columnSAH_DT" msprop:Generator_ColumnPropNameInRow="SAH_DT" msprop:Generator_ColumnPropNameInTable="SAH_DTColumn" msprop:Generator_UserColumnName="SAH_DT" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="SAH_CUS_CD" msprop:Generator_ColumnVarNameInTable="columnSAH_CUS_CD" msprop:Generator_ColumnPropNameInRow="SAH_CUS_CD" msprop:Generator_ColumnPropNameInTable="SAH_CUS_CDColumn" msprop:Generator_UserColumnName="SAH_CUS_CD" type="xs:string" minOccurs="0" />
+              <xs:element name="SAH_CUS_ADD1" msprop:Generator_ColumnVarNameInTable="columnSAH_CUS_ADD1" msprop:Generator_ColumnPropNameInRow="SAH_CUS_ADD1" msprop:Generator_ColumnPropNameInTable="SAH_CUS_ADD1Column" msprop:Generator_UserColumnName="SAH_CUS_ADD1" type="xs:string" minOccurs="0" />
+              <xs:element name="SAH_CUS_NAME" msprop:Generator_ColumnVarNameInTable="columnSAH_CUS_NAME" msprop:Generator_ColumnPropNameInRow="SAH_CUS_NAME" msprop:Generator_ColumnPropNameInTable="SAH_CUS_NAMEColumn" msprop:Generator_UserColumnName="SAH_CUS_NAME" type="xs:string" minOccurs="0" />
+              <xs:element name="SAH_ANAL_7" msprop:Generator_ColumnVarNameInTable="columnSAH_ANAL_7" msprop:Generator_ColumnPropNameInRow="SAH_ANAL_7" msprop:Generator_ColumnPropNameInTable="SAH_ANAL_7Column" msprop:Generator_UserColumnName="SAH_ANAL_7" type="xs:decimal" minOccurs="0" />
+              <xs:element name="SAH_ANAL_8" msprop:Generator_ColumnVarNameInTable="columnSAH_ANAL_8" msprop:Generator_ColumnPropNameInRow="SAH_ANAL_8" msprop:Generator_ColumnPropNameInTable="SAH_ANAL_8Column" msprop:Generator_UserColumnName="SAH_ANAL_8" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PENDAYS" msprop:Generator_ColumnVarNameInTable="columnPENDAYS" msprop:Generator_ColumnPropNameInRow="PENDAYS" msprop:Generator_ColumnPropNameInTable="PENDAYSColumn" msprop:Generator_UserColumnName="PENDAYS" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

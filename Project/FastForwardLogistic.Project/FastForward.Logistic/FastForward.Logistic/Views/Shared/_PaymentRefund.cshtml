@@ -1,0 +1,223 @@
+﻿@model FF.BusinessObjects.Sales.RecieptItemTBS
+
+@{
+    Layout = null;
+    
+}          
+<!-- Crcd main begin -->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title form-headding">Payments Details</h3>
+                <div class="box-tools pull-right">
+                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                </div>
+            </div>
+            <div class="box-body">
+                <div class="row">
+                    <div class="col-md-2">
+                        <div class="form-group">
+                            <label>Pay Mode</label>
+                            @Html.DropDownListFor(m => m.Sird_pay_tp, new List<SelectListItem>(), "Select Pay Mode", new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="col-md-1 col-xs-12 padding-ls-1">
+                        <label>Amount</label>
+                        <div class="input-group input-group-sm">
+                            @Html.EditorFor(m => m.Sird_settle_amt, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                    <div class="col-md-0-1 col-xs-12 margintop1-3">
+                        <button class="btn btn-sm-min btn-green-fullbg add-price-amount-btn">
+                            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="pay-mode-panel cheque-panel">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Cheque No</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Cheque_ref_no", new { htmlAttributes = new { @class = "form-control", @maxlength = "6" } })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label>Cheque Date</label>
+                                <div class="input-group date">
+                                    <div class="input-group-addon">
+                                        <i class="fa fa-calendar"></i>
+                                    </div>
+                                    @Html.Editor("Cheque_dt", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Bank</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("cheque-bank", new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.Hidden("Cheque_bnk_cd", null, new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat chk-bnk-acc-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Branch</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Cheque_branch_cd", new { htmlAttributes = new { @class = "form-control", @readonly = "readonly" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat chk-bnk-branch-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        <div class="pay-mode-panel crcd-panel">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Card No</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Cred_crd_ref_no", new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Card Type</label>
+                                    @Html.DropDownList("Cred-card-typ", new List<SelectListItem>(), "Select Type", new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Bank</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Cred_crd_bank", new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.Hidden("Cred_crd_bank_value", null, new { htmlAttributes = new { @class = "form-control" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat cred-crd-bnksearch"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Batch</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Cred_crd_batch", new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group margin-top20">
+                                    @Html.CheckBox("Cred_crd_ofline", new { htmlAttributes = new { } }) Online
+                                    @Html.CheckBox("Cred_crd_online", new { htmlAttributes = new { } }) Offline
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Card Expiry Date</label>
+                                    <div class="input-group date">
+                                        <div class="input-group-addon">
+                                            <i class="fa fa-calendar"></i>
+                                        </div>
+                                        @Html.Editor("Cread-crd-expire-dt", new { htmlAttributes = new { @class = "form-control pull-right datepic", @readonly = "readonly" } })
+                                    </div>
+                                    <!-- /.input group -->
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <label>Mid Code :</label>
+                                <label class="mid-code-cls"></label>
+                            </div>
+                        </div>
+                        <div class="form-horizontal pay-mode-panel cash-panel">
+                                <div class="col-md-4">
+                                    <label>Deposit Bank</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Deposit_bank_cd", new { htmlAttributes = new { @class = "form-control with-search", @readonly = "readonly" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat bnk-acc-search"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Branch</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Deposit_branch_cd", new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="form-horizontal pay-mode-panel debt-panel">
+                                <div class="col-md-4">
+                                    <label>Debit Card No</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Debt_crd_no", new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label>Bank</label>
+                                    <div class="input-group input-group-sm">
+                                        @Html.Editor("Debt_bank_name", new { htmlAttributes = new { @class = "form-control with-search" } })
+                                        <span class="input-group-btn">
+                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat debt-bnksearch"><i class="glyphicon glyphicon-search"></i></button>
+                                        </span>
+                                        @Html.Hidden("Debt_bank_cd", null, new { htmlAttributes = new { @class = "form-control" } })
+                                    </div>
+                                </div>
+                        </div>
+                        </div>
+                    <div class="col-md-12"><hr></div>
+                    <div class="col-md-10">
+                        <div class="col-md-6">
+                            <table class="table table-bordered table-hover dataTable payment-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Pay Type</th>
+                                        <th>Bank</th>
+                                        <th>Branch</th>
+                                        <th>Card Type</th>
+                                        <th>Cheque No</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                        <!-- common begin -->
+                        <div class="col-md-6">
+
+                        </div>
+                        <!-- common end -->
+                    </div>
+                    <div class="col-md-2">
+                        <div class="col-md-12">
+                            <div class="col-md-12 title-dark">Paid Amount</div>
+                            <label class="col-md-12 green-p tot-paid-amount-val">0.00</label>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-12 title-dark">Balance Amount</div>
+                            <label class="col-md-6 red-p bal-amount-val">0.00</label>
+                            <label class="col-md-6 red-p tot-amount-val" style="display: none !important;">0.00</label> <!--Edited by Chathura on 20-sep-2017-->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+

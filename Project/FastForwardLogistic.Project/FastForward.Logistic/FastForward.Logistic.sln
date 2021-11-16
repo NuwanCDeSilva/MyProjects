@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastForward.Logistic", "FastForward.Logistic\FastForward.Logistic.csproj", "{C179D78E-37DB-4F62-8981-7D334B922C95}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.LGSTInterfaces", "..\FastForward.LogisticService\FF.LGSTInterfaces\FF.LGSTInterfaces.csproj", "{DF0E1950-5EEE-4EDC-85CB-B2F2C49E41A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FF.LGSTBusinessObjects", "..\FastForward.LogisticService\FF.LGSTBusinessObjects\FF.LGSTBusinessObjects.csproj", "{7ECE91BF-35DD-4FD7-9626-91BFE628CA9E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{12E7D712-1042-4A37-9195-6C683E3C89B3}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://192.168.1.200:8080/tfs/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ..\\FastForward.LogisticService\\FF.LGSTInterfaces\\FF.LGSTInterfaces.csproj
+		SccProjectName1 = ../FastForward.LogisticService/FF.LGSTInterfaces
+		SccLocalPath1 = ..\\FastForward.LogisticService\\FF.LGSTInterfaces
+		SccProjectUniqueName2 = ..\\FastForward.LogisticService\\FF.LGSTBusinessObjects\\FF.LGSTBusinessObjects.csproj
+		SccProjectName2 = ../FastForward.LogisticService/FF.LGSTBusinessObjects
+		SccLocalPath2 = ..\\FastForward.LogisticService\\FF.LGSTBusinessObjects
+		SccProjectUniqueName3 = FastForward.Logistic\\FastForward.Logistic.csproj
+		SccProjectName3 = FastForward.Logistic
+		SccLocalPath3 = FastForward.Logistic
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C179D78E-37DB-4F62-8981-7D334B922C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C179D78E-37DB-4F62-8981-7D334B922C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C179D78E-37DB-4F62-8981-7D334B922C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C179D78E-37DB-4F62-8981-7D334B922C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF0E1950-5EEE-4EDC-85CB-B2F2C49E41A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF0E1950-5EEE-4EDC-85CB-B2F2C49E41A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF0E1950-5EEE-4EDC-85CB-B2F2C49E41A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF0E1950-5EEE-4EDC-85CB-B2F2C49E41A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7ECE91BF-35DD-4FD7-9626-91BFE628CA9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7ECE91BF-35DD-4FD7-9626-91BFE628CA9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7ECE91BF-35DD-4FD7-9626-91BFE628CA9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7ECE91BF-35DD-4FD7-9626-91BFE628CA9E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

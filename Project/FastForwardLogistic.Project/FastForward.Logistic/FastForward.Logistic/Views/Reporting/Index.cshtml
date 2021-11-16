@@ -1,0 +1,384 @@
+﻿@{
+    ViewBag.Title = "OperationReports";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var val = System.Web.Configuration.WebConfigurationManager.AppSettings["SiteVersion"].ToString();
+}
+
+@section Scripts
+{
+    <script src="~/Scripts/Common/OperationReports.js?@val"></script>
+}
+@using (Html.BeginForm("RequestPrint", "Reporting", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form", @id = "frm-report", @target = "_blank" }))
+{
+    <div class="sales-rpt-cls" style="padding-top:55px; padding-left:125px">
+        <div class="container1 op-btns">
+            <div class="row">
+                <div class="col-md-4" style="padding-left:75px">
+                    <div class="page-title"><strong>Operation Reports</strong></div>
+                </div>
+                <div class="col-md-8" style="padding-left:700px">
+                    <input type="button" value="Clear" class="btn btn-default btn-default-style btn-sls-rpt-clear" />
+                    <input type="submit" value="View" class="btn btn-default btn-default-style btn-opr-rpt-down" />
+                </div>
+            </div>
+        </div>
+
+        <div class="demopage">
+            <div class="container1">
+                <div class="col-md-3 set-border" style="padding-left:70px">
+                    <div class="row">
+                        <div class="panel panel-default">
+                            <div class="panel panel-heading">Report</div>
+                            <div class="panel panel-body">
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="manifest_Letter" value="manifest_Letter"> Manifest Letter</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="cargo_manifest" value="cargo_manifest"> Cargo Manifest</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="delivery_order" value="delivery_order"> Delivery Order</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="draft" value="draft"> Draft</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="house" value="house"> House</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="salesWithGP" value="salesWithGP"> Sales With GP</div>
+                                @*<div class="col-md-12"><input type="radio" name="rad_select" id="debtorsOutstanding" value="debtorsOutstanding"> Debtors Outstanding</div>*@
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="cashOutstanding" value="cashOutstanding"> Cash Outstanding</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="colsumrpt" value="colsumrpt"> Collection Summary Report</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="InvoiceAuditTrail" value="InvoiceAuditTrail"> Invoice Audit Trail</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="FrightArrivalNotice" value="FrightArrivalNotice"> Freight Arrival Notice</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="debtorsOutstandingReport" value="debtorsOutstandingReport"> Debtors Outstanding Report</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="debtorsOutstandingReportSumm" value="debtorsOutstandingReportSumm"> Debtors Outstanding Summery</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="jobStatusReport" value="jobStatusReport"> Job Status Report</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="IRDReport" value="IRDReport"> IRD Report</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="MarketingReport" value="MarketingReport"> Marketing Report</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="OutstandingReport" value="OutstandingReport"> Outstanding Report</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="InvoiceViseReport" value="InvoiceViseReport"> Invoice Wise Report</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="CostOfSales" value="CostOfSales"> Cost Of Sales For Closed Job</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="GPReport" value="GPReport"> GP report of Finalized/Closed jobs</div>
+                                <div class="col-md-12"><input type="radio" name="rad_select" id="PendingAdv" value="PendingAdv"> Pending Adv & Sup. Payment</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="panel panel-default">
+                        <div class="panel panel-heading">Parameter Details</div>
+                        <div class="panel panel-body">
+
+                         
+
+                            <div class="col-lg-8">
+                                <!-- contact details begin -->
+                                <div class="box">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title form-headding">Parameter Details</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="row">
+                                         @*   <a href="~/Views/Reporting/Index.cshtml">~/Views/Reporting/Index.cshtml</a>*@
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>From Date</label>
+                                                    <div class="input-group date">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                        @Html.Editor("FromDate", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                                    </div>
+                                                    <!-- /.input group -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>To Date</label>
+                                                    <div class="input-group date">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                        @Html.Editor("ToDate", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                                    </div>
+                                                    <!-- /.input group -->
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Master BL No</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("Bl_m_doc_no", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat btn-manual-bl"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+
+
+                                                    @*@Html.Editor("DocNo", new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter ..." } })*@
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-3">
+                                                <div class="form-group">
+                                                    <label>House BL No</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("Bl_h_doc_no", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat btn-house-bl"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+
+                             
+                                            </div>
+                                            <div class="col-lg-2">
+                                            <div class="form-group">
+                                                <label style="margin-left:15px;">Job No</label>
+                                                <div class="input-group input-group-sm">
+                                                    <input id="job-number" type="text" name="job-number" class="form-control" style="margin-left:15px; width:120px;" />
+
+                                                </div>
+                                            </div>
+                                                </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Invoice No</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @*@Html.EditorFor(model => model.Tih_inv_no, new { htmlAttributes = new { @class = "form-control" } })*@
+                                                        @Html.Editor("invno", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalviewdf" class="btn btn-default btn-flat inv-no-search"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Customer</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("cus_cd", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-cust_search"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                  <div class="form-group">
+                                                    <label>By Profit Center</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("ProfitCenter", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-pro-cnt"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+
+                                                <div class="form-group">
+                                                    <label>Customer Type</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("CusType", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-custype-srch"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Payment Type</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("PayType", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-paytype-srch"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Create User</label>
+                                                    <div class="input-group input-group-sm">
+                                                        @Html.Editor("CreateUser", new { htmlAttributes = new { @class = "form-control" } })
+                                                        <span class="input-group-btn">
+                                                            <button type="button" data-toggle="modal" data-target="#modalview" class="btn btn-default btn-flat btn-creusr-srch"><i class="glyphicon glyphicon-search"></i></button>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            @*   <a href="~/Views/Reporting/Index.cshtml">~/Views/Reporting/Index.cshtml</a>*@
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>As At Date</label>
+                                                    <div class="input-group date">
+                                                        <div class="input-group-addon">
+                                                            <i class="fa fa-calendar"></i>
+                                                        </div>
+                                                        @Html.Editor("AsAtDate", new { htmlAttributes = new { @class = "form-control pull-right datepic" } })
+                                                    </div>
+                                                    <!-- /.input group -->
+                                                </div>
+                                            </div>
+                                            <div class="col-md-1"></div>
+                                            <div class="col-md-5">
+                                                <div class="form-group">
+                                                    <label>Doc No</label>
+                                                    @Html.Editor("DocNo", new { htmlAttributes = new { @class = "form-control", @placeholder = "Enter ..." } })
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- contact details end -->
+                            </div>
+
+                            <div class="col-lg-4" style="display:none" id="rptOption">
+                                <!-- contact details begin -->
+                                <div class="box">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title form-headding">Report Option</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="sales_man" value="sales_man" checked="checked"> Sales Man Wise</div>
+                                            @*<div class="col-md-12"><input type="radio" name="rpt_select" id="cus_wise" value="cus_wise"> Customer Wise</div>*@
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="pro_wise" value="pro_wise"> Product Wise</div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- contact details end -->
+                            </div>
+
+                            <div class="col-lg-4" style="display:none" id="rptJobOption">
+                                <!-- contact details begin -->
+                                <div class="box">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title form-headding">Job Status</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="pending" value="pending" checked="checked"> Pending</div>
+                                            @*<div class="col-md-12"><input type="radio" name="rpt_select" id="cus_wise" value="cus_wise"> Customer Wise</div>*@
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="close" value="close"> Close</div>
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="notinvoiced" value="notinvoiced"> Not Invoiced</div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- contact details end -->
+                            </div>
+
+                            <div class="col-lg-4" style="display:none" id="rptMarketingOption">
+                                <!-- contact details begin -->
+                                <div class="box">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title form-headding">Report Option</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="salesman" value="salesman" checked="checked"> Sales Man Wise</div>
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="customer" value="customer"> Customer Wise</div>
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="product" value="product"> Product Wise</div>
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="agent" value="agent"> Agent Wise</div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- contact details end -->
+                            </div>
+
+                            @* Dilan 17-01-2019 *@
+                            <div class="col-lg-4" style="display:none" id="rptJobOptionType">
+                                <!-- contact details begin -->
+                                <div class="box">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title form-headding">Job Status Type</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="InvoiceDate" value="InvoiceDate"> Invoiced Date</div>
+                                            @*<div class="col-md-12"><input type="radio" name="rpt_select" id="cus_wise" value="cus_wise"> Customer Wise</div>*@
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="JobCloseDate" value="JobCloseDate"> Job Closed Date</div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- contact details end -->
+                            </div>
+
+                            <div class="col-lg-4" style="display:none" id="rptJobOptionTypeSub">
+                                <!-- contact details begin -->
+                                <div class="box">
+                                    <div class="box-header with-border">
+                                        <h3 class="box-title form-headding">Job Status</h3>
+                                        <div class="box-tools pull-right">
+                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                        </div>
+                                    </div>
+                                    <!-- /.box-header -->
+                                    <div class="box-body">
+                                        <div class="row">
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="InvoiceDatePending" value="InvoiceDatePending"> Pending</div>
+                                            @*<div class="col-md-12"><input type="radio" name="rpt_select" id="cus_wise" value="cus_wise"> Customer Wise</div>*@
+                                            <div class="col-md-12"><input type="radio" name="rpt_select" id="InvoiceDateClose" value="InvoiceDateClose"> Close</div>
+                                        </div>
+                                        <!-- /.row -->
+                                    </div>
+                                    <!-- /.box-body -->
+                                </div>
+                                <!-- /.box -->
+                                <!-- contact details end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+}
+
+
